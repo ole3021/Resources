@@ -1,0 +1,39 @@
+@colortext: #000;
+@colortextinverted: #FFF;
+@colorbrand: #34a451;
+@colorlight: #c9cbd5;
+@colorerror: #d54340;
+@colorsuccess: lighten(@colorbrand, 30%);
+@ff: Helvetica, Tahoma;
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: @ff;
+  font-size: 18px;
+  color: @colortext;
+}
+a {
+  color: @colorbrand;
+  cursor: pointer;
+}
+hr {
+  border-top: 0.1em solid @colorlight;
+  border-bottom: none;
+}
+.right {
+  float: right;
+}
+
+.box-sizing(@type: border-box) {
+  -webkit-box-sizing: @type;
+  -moz-box-sizing:    @type;
+  box-sizing:         @type;
+}
+.drop-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+  -webkit-box-shadow: @x @y @blur @spread rgba(0, 0, 0, @alpha);
+  -moz-box-shadow:  @x @y @blur @spread rgba(0, 0, 0, @alpha);
+  box-shadow:   @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}

@@ -1,0 +1,14 @@
+<header>
+  <navigation></navigation>
+</header>
+<div class="hero">
+  <h1>Chat</h1>
+</div>
+<form>
+  <div class="chat-output" data-component="output">{{{output}}}</div>
+  {{#if socketConnected}}
+  <input type="text" value="{{text}}" />
+  <a href="#" on-click="send" class="button">Send</a>
+  {{/if}}
+</form>
+<appfooter />

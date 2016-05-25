@@ -1,0 +1,36 @@
+body{width:100%;height:100%;margin:0;padding:0;font-family:Helvetica,Tahoma;font-size:18px;color:#000}
+a{color:#34a451;cursor:pointer}
+a.button{text-decoration:none;border:none;background:#34a451;color:#fff;padding:.4em 2em;font-size:1em;border-bottom:.2em solid #287d3e;outline:0;cursor:pointer;border-radius:2px}
+hr{border-top:.1em solid #c9cbd5;border-bottom:none}
+.right{float:right}
+.cf::after{clear:both;display:table;content:" "}
+.m-right{margin:0 1em 0 0}
+.green-button{border:none;background:#34a451;color:#fff;padding:.4em 2em;font-size:1em;border-bottom:.2em solid #287d3e;outline:0;cursor:pointer;border-radius:2px}
+.green-button-active{border-bottom:.1em solid #287d3e;border-top:.1em solid #34a451;transform:translate(0,2px)}
+.container{max-width:80%;margin:0 auto}
+@media all and (max-width:600px){.container{max-width:100%;padding:0 1em}}
+header{margin:0 0 .8em;padding:0;background:#94dda7;border-bottom:.2em solid #287d3e}
+header nav{margin:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+header nav ul{margin:0;padding:0;list-style-type:none}
+header nav ul::after{content:" ";display:table;clear:both}
+header nav ul li{float:left}
+header nav ul li a{display:block;text-decoration:none;color:#000;padding:1em;font-size:.8em}
+header nav ul li a:hover{background:#34a451}
+footer{font-size:.6em;margin:3em 0}
+form{background:#FFF;padding:2em;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-box-shadow:0 2px 3px 2px rgba(0,0,0,.25);-moz-box-shadow:0 2px 3px 2px rgba(0,0,0,.25);box-shadow:0 2px 3px 2px rgba(0,0,0,.25)}
+form label{display:block}
+form input[type=date],form input[type=file],form input[type=password],form input[type=text],form select,form textarea{display:block;width:100%;margin:.2em 0 1em;font-size:1em;font-family:Helvetica,Tahoma;padding:.4em;border:2px solid #c9cbd5;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+form input[type=file]{border:1px solid #d7d9e0}
+form input[type=button]{border:none;background:#34a451;color:#fff;padding:.4em 2em;font-size:1em;border-bottom:.2em solid #287d3e;outline:0;cursor:pointer;border-radius:2px}
+form input[type=button].attention{background:#d54340;color:#fff;border-bottom:.2em solid #b92c29}
+form input[type=button]:active{border-bottom:.1em solid #287d3e;border-top:.1em solid #34a451;transform:translate(0,2px)}
+form .error{font-size:.9em;padding:1em;margin:0 0 1em;background:#d54340;color:#fff}
+form .success{font-size:.9em;padding:1em;margin:0 0 1em;background:#94dda7}
+.friends-list{background:#FFF;padding:2em;margin:2em 0 0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-box-shadow:0 2px 3px 2px rgba(0,0,0,.25);-moz-box-shadow:0 2px 3px 2px rgba(0,0,0,.25);box-shadow:0 2px 3px 2px rgba(0,0,0,.25)}
+.friends-list::after{content:" ";display:table;clear:both}
+.friend-list-item{width:50%;float:left;padding:1em 0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.friend-list-item h2{margin:0 0 .4em;padding:0;font-size:1.3em}
+.friend-list-item input[type=button]{border:none;background:#34a451;color:#fff;padding:.4em 2em;font-size:1em;border-bottom:.2em solid #287d3e;outline:0;cursor:pointer;border-radius:2px}
+.friend-list-item input[type=button]:active{border-bottom:.1em solid #287d3e;border-top:.1em solid #34a451;transform:translate(0,2px)}
+.content-item{background:#FFF;padding:2em;margin:2em 0 0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-box-shadow:0 2px 3px 2px rgba(0,0,0,.25);-moz-box-shadow:0 2px 3px 2px rgba(0,0,0,.25);box-shadow:0 2px 3px 2px rgba(0,0,0,.25)}
+.content-item img{max-width:100%}

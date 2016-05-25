@@ -1,0 +1,14 @@
+<nav>
+  <ul>
+    <li><a on-click="goto:home">Home</a></li>
+    {{#if !isLogged }}
+      <li><a on-click="goto:register">Register</a></li>
+      <li><a on-click="goto:login">Login</a></li>
+    {{else}}
+      <li class="right"><a on-click="goto:logout">Logout</a></li>
+      <li class="right"><a on-click="goto:profile">Profile</a></li>
+      <li class="right"><a on-click="goto:find-friends">Find friends</a></li>
+      <li class="right"><a on-click="goto:pages">Pages</a></li>
+    {{/if}}
+  </ul>
+</nav>

@@ -1,0 +1,7 @@
+{
+	"name": "another-module",
+	"version": "0.0.1",
+	"dependencies": {
+		"my-awesome-nodejs-module": "0.0.1"
+	}
+}

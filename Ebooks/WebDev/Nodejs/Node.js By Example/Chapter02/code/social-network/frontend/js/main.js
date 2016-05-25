@@ -1,0 +1,1 @@
+var template = require('./core/templates.js');

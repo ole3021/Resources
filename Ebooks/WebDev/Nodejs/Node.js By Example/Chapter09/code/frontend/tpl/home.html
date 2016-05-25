@@ -1,0 +1,59 @@
+<header>
+  <navigation></navigation>
+</header>
+<div class="hero">
+  {{#if posting === true}}
+    <form enctype="multipart/form-data" method="post">
+      <h3>What is on your mind?</h3>
+      {{#if error && error != ''}}
+        <div class="error">{{error}}</div>
+      {{/if}}
+      {{#if success && success != ''}}
+        <div class="success">{{{success}}}</div>
+      {{/if}}
+      <label>Text</label>
+      <textarea value="{{text}}"></textarea>
+      {{#if friends.length > 0}}
+        <p>Tag friends:
+        {{#each friends:index}}
+          <label>
+            <input type="checkbox" name="{{taggedFriends}}" value="{{friends[index].id}}" />
+            {{friends[index].firstName}} {{friends[index].lastName}}
+          </label>
+        {{/each}}
+        </p>
+      {{/if}}
+      <input type="file" name="file" />
+      <input type="button" value="Post" on-click="post" />
+    </form>
+    {{#each posts:index}}
+      <div class="content-item">
+        <h2>{{posts[index].userName}}</h2>
+        <p>{{posts[index].text}}</p>
+        {{#if posts[index].via}}
+        <small>via {{posts[index].via}}</small>
+        {{/if}}
+        {{#if posts[index].taggedFriends.length > 0}}
+          <p>
+            <small>
+              Tagged: {{posts[index].taggedFriends.join(', ')}}
+            </small>
+          </p>
+        {{/if}}
+        <p>
+        <input type="button" value="Like ({{posts[index].numberOfLikes}})" on-click="like:{{posts[index].id}}" />
+        {{#if !posts[index].ownPost}}
+        <input type="button" value="Share" on-click="share:{{posts[index].id}}" />
+        {{/if}}
+        </p>
+        {{#if posts[index].file}}
+        <br /><br />
+        <img src="/static/uploads/{{posts[index].file}}" />
+        {{/if}}
+      </div>
+    {{/each}}
+  {{else}}
+    <h1>Node.js by example</h1>
+  {{/if}}
+</div>
+<appfooter />

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Node.js by example</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Node.js by examples">
+  <meta name="author" content="Packt">
+
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <link rel="stylesheet" href="/node_modules/mocha/mocha.css" />
+
+</head>
+
+<body>
+  <div class="container"></div>
+
+  <div id="mocha"></div>
+  <script src="/node_modules/mocha/mocha.js"></script>
+  <script src="/node_modules/chai/chai.js"></script>
+  <script>
+    mocha.ui('bdd');
+    mocha.reporter('html');
+    expect = chai.expect;
+  </script>
+  <script src="/tests/spec.js"></script>
+  <script>
+    window.onAppReady = function() {
+      if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
+      else { mocha.run(); }
+    }
+  </script>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/static/js/ractive.js"></script>
+  <script src="/static/js/app.js"></script>
+
+</body>
+</html>

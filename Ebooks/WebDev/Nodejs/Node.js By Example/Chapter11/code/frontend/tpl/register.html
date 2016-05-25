@@ -1,0 +1,25 @@
+<header>
+  <navigation></navigation>
+</header>
+<div class="hero">
+  <h1>Register</h1>
+</div>
+<form>
+  {{#if error && error != ''}}
+    <div class="error">{{error}}</div>
+  {{/if}}
+  {{#if success && success != ''}}
+    <div class="success">{{{success}}}</div>
+  {{else}}
+    <label for="first-name">First name</label>
+    <input type="text" id="first-name" value="{{firstName}}"/>
+    <label for="last-name">Last name</label>
+    <input type="text" id="last-name" value="{{lastName}}" />
+    <label for="email">Email</label>
+    <input type="text" id="email" value="{{email}}" />
+    <label for="password">Password</label>
+    <input type="password" id="password" value="{{password}}" />
+    <input type="button" value="register" on-click="register" />
+  {{/if}}
+</form>
+<appfooter />

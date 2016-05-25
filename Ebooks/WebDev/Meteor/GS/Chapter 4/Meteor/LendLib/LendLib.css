@@ -1,0 +1,38 @@
+/* CSS declarations go here */
+#lendlib{
+	width:535px;
+	margin:0 auto;
+}
+#categorybuttons{
+	width:100%;
+}
+#lending_list{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+#lending_list li{
+	list-style:none;
+	margin:5px;
+}
+#lending_list li.lending_item:hover{
+	background-color:#fc6;
+	color:#630;
+}
+#lending_item{
+	vertical-align:middle;
+}
+#add_item{
+	padding-left:5px;
+}
+#btnAddItem{
+	padding:10px;
+	border-radius:5px;
+}
+#btnAddItem:hover{
+	background-color:#B7F099;
+}
+#edit_lendee{
+	padding-top:0;
+	margin-top:-2px;
+}

@@ -1,0 +1,78 @@
+<header>
+  <navigation></navigation>
+</header>
+{{#if pageId}}
+  <div class="hero">
+    <h1>{{pageTitle}}</h1>
+    <p>{{pageDescription}}</p>
+  </div>
+  {{#if showEvents}}
+    <form enctype="multipart/form-data" method="post">
+    <a href="/pages/{{pageId}}" class="button m-right right">View comments</a>
+      <h3>Add new event</h3>
+      {{#if error && error != ''}}
+        <div class="error">{{error}}</div>
+      {{/if}}
+      {{#if success && success != ''}}
+        <div class="success">{{{success}}}</div>
+      {{/if}}
+      <label for="text">Title</label>
+      <textarea value="{{text}}"></textarea>
+      <label for="date">Date</label>
+      <input type="date" value="{{date}}" />
+      <input type="button" value="Create" on-click="add-event" />
+    </form>
+    {{#each events:index}}
+      <div class="content-item">
+        <h2>{{events[index].eventDate}} / {{events[index].text}}</h2>
+        <p>Created by {{events[index].userName}}</p>
+      </div>
+    {{/each}}
+  {{else}}
+    <form enctype="multipart/form-data" method="post">
+      <a href="/pages/{{pageId}}/events" class="button right">View events</a>
+      <h3>Add a comment for this page</h3>
+      {{#if error && error != ''}}
+        <div class="error">{{error}}</div>
+      {{/if}}
+      {{#if success && success != ''}}
+        <div class="success">{{{success}}}</div>
+      {{/if}}
+      <label for="text">Text</label>
+      <textarea value="{{text}}"></textarea>
+      <input type="button" value="Post" on-click="add-comment" />
+    </form>
+    {{#each comments:index}}
+      <div class="content-item">
+        <h2>{{comments[index].userName}}</h2>
+        <p>{{comments[index].text}}</p>
+      </div>
+    {{/each}}
+  {{/if}}
+{{else}}
+  <div class="hero">
+    <form enctype="multipart/form-data" method="post">
+      <h3>Add a new page</h3>
+      {{#if error && error != ''}}
+        <div class="error">{{error}}</div>
+      {{/if}}
+      {{#if success && success != ''}}
+        <div class="success">{{{success}}}</div>
+      {{/if}}
+      <label for="text">Title</label>
+      <textarea value="{{title}}"></textarea>
+      <label for="text">Description</label>
+      <textarea value="{{description}}"></textarea>
+      <input type="button" value="Create" on-click="create" />
+    </form>
+  </div>
+  {{#each pages:index}}
+    <div class="content-item">
+      <h2>{{pages[index].title}}</h2>
+      <p><small>Created by {{pages[index].userName}}</small></p>
+      <p>{{pages[index].description}}</p>
+      <p><a href="/pages/{{pages[index].id}}" class="button">Visit the page</a></p>
+    </div>
+  {{/each}}
+{{/if}}
+<appfooter />

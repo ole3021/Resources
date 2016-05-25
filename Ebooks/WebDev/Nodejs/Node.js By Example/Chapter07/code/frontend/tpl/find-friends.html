@@ -1,0 +1,31 @@
+<header>
+  <navigation></navigation>
+</header>
+<div class="hero">
+  <h1>Find friends</h1>
+</div>
+<form onsubmit="return false;">
+  {{#if loading}}
+    <p>Loading. Please wait.</p>
+  {{else}}
+    <label for="friend-name">Please, type the name of your friend:</label>
+    <input type="text" id="friend-name" value="{{friendName}}"/>
+    <input type="button" value="Find" on-click="find" />
+  {{/if}}
+</form>
+{{#if foundFriends !== null}}
+  <div class="friends-list">
+    {{#each foundFriends}}
+      <div class="friend-list-item">
+        <h2>{{firstName}} {{lastName}}</h2>
+        <input type="button" value="Add as a friend" on-click="add:{{id}}"/>
+      </div>
+    {{/each}}
+  </div>
+{{/if}}
+{{#if message !== ''}}
+  <div class="friends-list">
+    <p>{{{message}}}</p>
+  </div>
+{{/if}}
+<appfooter />

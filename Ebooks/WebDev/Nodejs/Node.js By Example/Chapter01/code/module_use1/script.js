@@ -1,0 +1,1 @@
+require('my-awesome-nodejs-module');

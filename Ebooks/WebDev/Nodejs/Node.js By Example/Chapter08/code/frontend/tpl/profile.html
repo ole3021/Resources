@@ -1,0 +1,38 @@
+<header>
+  <navigation></navigation>
+</header>
+<div class="hero">
+  <h1>Profile</h1>
+</div>
+<form>
+  {{#if error && error != ''}}
+    <div class="error">{{{error}}}</div>
+  {{/if}}
+  {{#if success && success != ''}}
+    <div class="success">{{{success}}}</div>
+  {{/if}}
+
+  <label for="first-name">First name</label>
+  <input type="text" id="first-name" value="{{firstName}}"/>
+  <label for="last-name">Last name</label>
+  <input type="text" id="last-name" value="{{lastName}}" />
+  <label for="password">Change password</label>
+  <input type="password" id="password" value="{{password}}" />
+
+  <input type="button" value="update" on-click="updateProfile" />
+  <input type="button" value="delete account" on-click="deleteProfile" class="right attention"/>
+
+</form>
+{{#if friends.length > 0}}
+  <div class="hero">
+    <h1>Friends</h1>
+  </div>
+  <div class="friends-list">
+    {{#each friends:index}}
+      <div class="friend-list-item">
+        <h2>{{friends[index].firstName}} {{friends[index].lastName}}</h2>
+      </div>
+    {{/each}}
+  </div>
+{{/if}}
+<appfooter />

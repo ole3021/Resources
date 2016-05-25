@@ -1,0 +1,50 @@
+form {
+  background: #FFF;
+  padding: 2em;
+  .box-sizing();
+  .drop-shadow(0px, 2px, 3px, 2px);
+}
+form label {
+  display: block;
+}
+form input[type="text"], 
+form input[type="password"],
+form input[type="file"],
+form select,
+form textarea {
+  display: block;
+  width: 100%;
+  margin: 0.2em 0 1em 0;
+  font-size: 1em;
+  font-family: @ff;
+  padding: 0.4em;
+  border: 2px solid @colorlight;
+  .box-sizing();
+}
+form input[type="file"] {
+  border: 1px solid lighten(@colorlight, 5%);
+}
+form input[type="button"] {
+  .green-button();
+}
+form input[type="button"].attention {
+  background: @colorerror;
+  color: @colortextinverted;
+  border-bottom: .2em solid darken(@colorerror, 10%);
+}
+form input[type="button"]:active {
+  .green-button-active();
+}
+form .error {
+  font-size: .9em;
+  padding: 1em;
+  margin: 0 0 1em 0;
+  background: @colorerror;
+  color: @colortextinverted;
+}
+form .success {
+  font-size: .9em;
+  padding: 1em;
+  margin: 0 0 1em 0;
+  background: @colorsuccess;
+}

@@ -1,0 +1,15 @@
+{
+  "name": "nodejsbyexample",
+  "version": "0.0.1",
+  "description": "The new social network",
+  "author": "Krasimir Tsonev",
+  "dependencies": {
+    "grunt": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*"
+  },
+  "scripts": {
+    "start": "node ./backend/index.js"
+  }
+}

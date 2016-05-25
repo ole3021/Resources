@@ -1,0 +1,33 @@
+header {
+  margin: 0 0 .8em 0;
+  padding: 0;
+  background: lighten(@colorbrand, 30%);
+  border-bottom: .2em solid darken(@colorbrand, 10%);
+}
+header nav {
+  margin: 0;
+  .box-sizing();
+}
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+header nav ul::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+header nav ul li {
+  float: left;
+}
+header nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: @colortext;
+  padding: 1em;
+  font-size: .8em;
+}
+header nav ul li a:hover {
+  background: @colorbrand;
+}
