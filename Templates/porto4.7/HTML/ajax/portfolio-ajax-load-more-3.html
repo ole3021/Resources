@@ -1,0 +1,72 @@
+<li class="col-md-3 col-sm-6 col-xs-12 isotope-item logos">
+	<div class="portfolio-item">
+		<a href="portfolio-single-small-slider.html">
+			<span class="thumb-info thumb-info-lighten">
+				<span class="thumb-info-wrapper">
+					<img src="img/projects/project-23.jpg" class="img-responsive" alt="">
+					<span class="thumb-info-title">
+						<span class="thumb-info-inner">Business Folders</span>
+						<span class="thumb-info-type">Logo</span>
+					</span>
+					<span class="thumb-info-action">
+						<span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
+					</span>
+				</span>
+			</span>
+		</a>
+	</div>
+</li>
+<li class="col-md-3 col-sm-6 col-xs-12 isotope-item websites">
+	<div class="portfolio-item">
+		<a href="portfolio-single-small-slider.html">
+			<span class="thumb-info thumb-info-lighten">
+				<span class="thumb-info-wrapper">
+					<img src="img/projects/project-24.jpg" class="img-responsive" alt="">
+					<span class="thumb-info-title">
+						<span class="thumb-info-inner">Tablet Screen</span>
+						<span class="thumb-info-type">Website</span>
+					</span>
+					<span class="thumb-info-action">
+						<span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
+					</span>
+				</span>
+			</span>
+		</a>
+	</div>
+</li>
+<li class="col-md-3 col-sm-6 col-xs-12 isotope-item medias">
+	<div class="portfolio-item">
+		<a href="portfolio-single-small-slider.html">
+			<span class="thumb-info thumb-info-lighten">
+				<span class="thumb-info-wrapper">
+					<img src="img/projects/project-25.jpg" class="img-responsive" alt="">
+					<span class="thumb-info-title">
+						<span class="thumb-info-inner">Black Watch</span>
+						<span class="thumb-info-type">Media</span>
+					</span>
+					<span class="thumb-info-action">
+						<span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
+					</span>
+				</span>
+			</span>
+		</a>
+	</div>
+</li>
+<li class="col-md-3 col-sm-6 col-xs-12 isotope-item websites">
+	<div class="portfolio-item">
+		<a href="portfolio-single-small-slider.html">
+			<span class="thumb-info thumb-info-lighten">
+				<span class="thumb-info-wrapper">
+					<img src="img/projects/project-26.jpg" class="img-responsive" alt="">
+					<span class="thumb-info-title">
+						<span class="thumb-info-inner">Monitor Mockup</span>
+						<span class="thumb-info-type">Website</span>
+					</span>
+					<span class="thumb-info-action">
+						<span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
+					</span>
+				</span>
+			</span>
+		</a>
+	</div>
+</li>

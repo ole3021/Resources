@@ -1,0 +1,237 @@
+// Name:            Table
+//
+// Component:       `table`
+//
+// Modifiers:       `table-default`
+//                  `table-primary`
+//                  `table-success`
+//                  `table-info`
+//                  `table-warning`
+//                  `table-danger`
+//                  `table-dark`
+//                  `table-gray`
+//                  `table-bordered`
+//
+// ========================================================================
+
+// Component: Table
+// ========================================================================
+
+.table {
+  color: @gray-dark;
+  > thead > tr > th, > tfoot > tr > th {
+    font-weight: @font-weight-medium;
+    color: @gray-darker;
+  }
+  > thead > tr > th {
+    border-bottom: 1px solid @table-border-color;
+  }
+  > tbody + tbody {
+    border-top: 1px solid @table-border-color;
+  }
+  a {
+    text-decoration: underline;
+  }
+
+  th, td {
+    > .checkbox-custom:only-child {
+      margin-top: 0;
+      margin-bottom: 0;
+      text-align: center;
+    }
+  }
+  .success,
+  .warning,
+  .danger,
+  .info {
+    color: @color-white;
+    a {
+      color: @color-white;
+    }
+  }
+
+  .cell-30 {
+    width: 30px;
+  }
+  .cell-40 {
+    width: 40px;
+  }
+  .cell-50 {
+    width: 50px;
+  }
+  .cell-60 {
+    width: 60px;
+  }
+  .cell-80 {
+    width: 80px;
+  }
+  .cell-100 {
+    width: 100px;
+  }
+  .cell-120 {
+    width: 120px;
+  }
+  .cell-130 {
+    width: 130px;
+  }
+  .cell-150 {
+    width: 150px;
+  }
+  .cell-180 {
+    width: 180px;
+  }
+  .cell-200 {
+    width: 200px;
+  }
+  .cell-250 {
+    width: 250px;
+  }
+  .cell-300 {
+    width: 300px;
+  }
+}
+
+
+// Color Modifier
+// ========================================================================
+
+.table-primary,
+.table-success,
+.table-info,
+.table-warning,
+.table-danger,
+.table-dark {
+  thead tr {
+    color: @inverse;
+  }
+}
+
+// Modifier: `table-default`
+// -------------------------
+
+.table-default {
+  thead tr {
+    // color: @gray-darker;
+    background: @bg-color-base;
+  }
+}
+
+// Modifier: `table-primary`
+// -------------------------
+
+.table-primary {
+  thead tr {
+    background: @brand-primary;
+  }
+}
+
+// Modifier: `table-success`
+// -------------------------
+
+.table-success {
+  thead tr {
+    background: @brand-success;
+  }
+}
+
+// Modifier: `table-info`
+// -------------------------
+
+.table-info {
+  thead tr {
+    background: @brand-info;
+  }
+}
+
+// Modifier: `table-warning`
+// -------------------------
+
+.table-warning {
+  thead tr {
+    background: @brand-warning;
+  }
+}
+
+// Modifier: `table-danger`
+// -------------------------
+
+.table-danger {
+  thead tr {
+    background: @brand-danger;
+  }
+}
+
+// Modifier: `table-dark`
+// -------------------------
+
+.table-dark {
+  thead tr {
+    background: @gray-darker;
+  }
+}
+
+// Modifier: `table-gray`
+// -------------------------
+
+.table-gray {
+  thead tr {
+    color: @gray-darker;
+    background: @gray-light;
+  }
+}
+
+// Modifier: `table-bordered`
+// ========================================================================
+
+.table-bordered {
+  > thead > tr {
+    > th,
+    > td {
+      border-bottom-width: 1px;
+    }
+  }
+  > thead:first-child {
+    > tr:first-child {
+      > th {
+        border: 1px solid @table-border-color;
+      }
+    }
+  }
+}
+
+// Modifier: `table-section`
+// ========================================================================
+.table-section {
+  & + tbody {
+    display: none
+  }
+
+  &-arrow {
+    .make-icon();
+    text-align: center;
+    position: relative;
+    font-family: '@{zmdi-font-name}';
+
+    transition: transform 0.15s;
+
+    .make-icon();
+
+    &:before {
+      content: '@{zmdi-var-chevron-down}';
+    }
+  }
+
+  &.active {
+    tr {
+      background-color: @table-bg-active;
+    }
+
+    + tbody {
+      display: table-row-group;
+    }
+
+    .table-section-arrow {
+      .rotate(-180deg);
+    }
+  }
+}

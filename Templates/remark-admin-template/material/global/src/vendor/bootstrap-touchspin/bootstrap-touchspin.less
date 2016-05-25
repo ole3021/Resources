@@ -1,0 +1,81 @@
+@import "vars.less";
+
+// bootstrap-touchspin
+// =============================================================
+.bootstrap-touchspin .input-group-btn-vertical {
+  position: relative;
+  white-space: nowrap;
+  width: 1%;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.bootstrap-touchspin .input-group-btn-vertical > .btn {
+  display: block;
+  float: none;
+  width: 100%;
+  max-width: 100%;
+  padding: 9px 16px 8px;
+  margin-left: -1px;
+  position: relative;
+}
+
+.bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-up {
+  border-radius: 0;
+  border-top-right-radius: @input-border-radius;
+  border-bottom: none;
+}
+
+.bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-down {
+  // margin-top: -1px;
+  border-radius: 0;
+  border-bottom-right-radius: @input-border-radius;
+  padding: 8px 16px;
+}
+
+.bootstrap-touchspin .input-group-btn-vertical i {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1px;
+  bottom: 0;
+  font-size: 10px;
+  font-weight: @font-weight-normal;
+}
+
+.bootstrap-touchspin .input-group-btn .btn {
+  font-family: @font-family-monospace;
+  padding: 6px 16px;
+}
+
+.bootstrap-touchspin-postfix.input-group-addon {
+  broder-left: 0;
+  border-left: none;
+}
+
+.bootstrap-touchspin-prefix.input-group-addon {
+  broder-right: 0;
+  border-right: none;
+}
+
+.bootstrap-touchspin {
+  input[name="touchSpinVertical"] {
+    border-radius: @input-border-radius 0 0 @input-border-radius !important;
+  }
+
+  .input-group-btn:first-child > .btn, 
+  .input-group-btn:first-child > .btn-group {
+    margin-right: -1px;
+  }
+
+  .input-group-addon:not(:first-child):not(:last-child), 
+  .input-group-btn:not(:first-child):not(:last-child) {
+    border-left: none;
+    border-right: none;
+    > .btn {
+      border-left: none;
+      border-right: none;
+    }
+  } 
+
+}

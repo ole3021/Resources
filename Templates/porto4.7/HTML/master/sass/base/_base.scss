@@ -1,0 +1,32 @@
+html {
+	direction: $dir;
+	overflow-x: hidden;
+	box-shadow: none !important;
+}
+
+body {
+	background-color: $light-bg;
+	color: $color-font-default;
+	font-family: $font-primary;
+	font-size: $body-font-size + 0px;
+	line-height: $body-line-height + 0px;
+	margin: 0;
+
+	a {
+		outline: none !important;
+	}
+
+}
+
+li {
+	line-height: 24px;
+}
+
+/* Responsive */
+@media (max-width: 479px) {
+
+	body {
+		font-size: 13px;
+	}
+
+}

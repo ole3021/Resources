@@ -1,0 +1,131 @@
+// Name:      Blocks
+//
+// Component:     `blocks`
+//
+// Modifiers:     `blocks-2`
+//                `blocks-3`
+//                `blocks-4`
+//                `blocks-5`
+//                `blocks-6`
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@blocks-grid-gutter-width:            @grid-gutter-width;
+@blocks-margin-bottom:             @line-height-computed;
+
+// Component: Blocks
+// ========================================================================
+a:focus {
+  outline: none;
+}
+
+.blocks, [class*="blocks-"] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  .make-block-row();
+
+  & > li {
+    margin-bottom: @blocks-margin-bottom;
+
+    .make-blocks-column();
+  }
+
+  &.no-space {
+    margin: 0;
+
+    > li {
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.blocks-2 > li:nth-child(2n+3),
+.blocks-3 > li:nth-child(3n+4),
+.blocks-4 > li:nth-child(4n+5),
+.blocks-5 > li:nth-child(5n+6),
+.blocks-6 > li:nth-child(6n+7),
+.block-first {
+  clear: both;
+}
+
+// Size Modifier
+// ========================================================================
+.blocks-100 > li { .make-blocks-column-width(1); }
+.blocks-2   > li { .make-blocks-column-width(2); }
+.blocks-3   > li { .make-blocks-column-width(3); }
+.blocks-4   > li { .make-blocks-column-width(4); }
+.blocks-5   > li { .make-blocks-column-width(5); }
+.blocks-6   > li { .make-blocks-column-width(6); }
+
+.blocks-xs-100  > li { .make-blocks-media-column-width(1, @screen-xs-min); }
+.blocks-xs-2    > li { .make-blocks-media-column-width(2, @screen-xs-min); }
+.blocks-xs-3    > li { .make-blocks-media-column-width(3, @screen-xs-min); }
+.blocks-xs-4    > li { .make-blocks-media-column-width(4, @screen-xs-min); }
+.blocks-xs-5    > li { .make-blocks-media-column-width(5, @screen-xs-min); }
+.blocks-xs-6    > li { .make-blocks-media-column-width(6, @screen-xs-min); }
+
+.blocks-sm-100  > li { .make-blocks-media-column-width(1, @screen-sm-min); }
+.blocks-sm-2    > li { .make-blocks-media-column-width(2, @screen-sm-min); }
+.blocks-sm-3    > li { .make-blocks-media-column-width(3, @screen-sm-min); }
+.blocks-sm-4    > li { .make-blocks-media-column-width(4, @screen-sm-min); }
+.blocks-sm-5    > li { .make-blocks-media-column-width(5, @screen-sm-min); }
+.blocks-sm-6    > li { .make-blocks-media-column-width(6, @screen-sm-min); }
+
+.blocks-md-100  > li { .make-blocks-media-column-width(1, @screen-md-min); }
+.blocks-md-2    > li { .make-blocks-media-column-width(2, @screen-md-min); }
+.blocks-md-3    > li { .make-blocks-media-column-width(3, @screen-md-min); }
+.blocks-md-4    > li { .make-blocks-media-column-width(4, @screen-md-min); }
+.blocks-md-5    > li { .make-blocks-media-column-width(5, @screen-md-min); }
+.blocks-md-6    > li { .make-blocks-media-column-width(6, @screen-md-min); }
+
+.blocks-lg-100  > li { .make-blocks-media-column-width(1, @screen-lg-min); }
+.blocks-lg-2    > li { .make-blocks-media-column-width(2, @screen-lg-min); }
+.blocks-lg-3    > li { .make-blocks-media-column-width(3, @screen-lg-min); }
+.blocks-lg-4    > li { .make-blocks-media-column-width(4, @screen-lg-min); }
+.blocks-lg-5    > li { .make-blocks-media-column-width(5, @screen-lg-min); }
+.blocks-lg-6    > li { .make-blocks-media-column-width(6, @screen-lg-min); }
+
+.blocks-xlg-100 > li { .make-blocks-media-column-width(1, @screen-xlg-min); }
+.blocks-xlg-2   > li { .make-blocks-media-column-width(2, @screen-xlg-min); }
+.blocks-xlg-3   > li { .make-blocks-media-column-width(3, @screen-xlg-min); }
+.blocks-xlg-4   > li { .make-blocks-media-column-width(4, @screen-xlg-min); }
+.blocks-xlg-5   > li { .make-blocks-media-column-width(5, @screen-xlg-min); }
+.blocks-xlg-6   > li { .make-blocks-media-column-width(6, @screen-xlg-min); }
+
+// Mixins
+// ========================================================================
+.make-block-row(@gutter: @blocks-grid-gutter-width) {
+  margin-left:  ceil((@gutter / -2));
+  margin-right: floor((@gutter / -2));
+  .clearfix();
+}
+
+.make-blocks-column(@gutter: @blocks-grid-gutter-width){
+  position: relative;
+  float: left;
+
+  min-height: 1px;
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+}
+
+.make-blocks-column-width(@columns){
+  // width: percentage((1 / @columns));
+  @rate: ((1 / @columns));
+  width: percentage(@rate);
+}
+
+.make-blocks-media-column-width(@columns, @screen-min) {
+  @media (min-width: @screen-min) {
+    // width: percentage((1 / @columns));
+    @rate: ((1 / @columns));
+    width: percentage(@rate);
+  }
+}

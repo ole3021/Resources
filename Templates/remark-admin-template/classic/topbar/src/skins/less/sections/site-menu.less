@@ -1,0 +1,265 @@
+.css-menubar {
+
+  .site-menu {
+    //Status Color
+    &-item {
+      &:hover {
+        background-color: @site-menu-sub-open-bg;
+
+        > a {
+          color: @site-menu-sub-open-color;
+
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+      &.active {
+        &:hover {
+          > a {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+
+    &-section {
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .site-menubar-light {
+    .site-menu {
+      &-item {
+        &:hover {
+          background-color: @site-menu-light-sub-open-bg;
+
+          > a {
+            color: @site-menu-light-sub-open-color;
+
+            &:hover {
+              background-color: transparent;
+            }
+          }
+        }
+
+        &.active {
+          &:hover {
+            > a {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+
+      &-section {
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+.site-menu {
+  .dropdown-menu {
+    background-color: @site-menubar-bg;
+  }
+
+
+  &-item {
+    &.has-sub {
+      > a {
+        &:focus {
+          color: inherit;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+
+  //Status Color
+  &-item {
+    > a {
+      color: inherit;
+
+      &:hover {
+        color: @site-menu-top-hover-color;
+        background-color: @site-menu-top-hover-bg;
+      }
+    }
+
+    &.open {
+      background-color: @site-menu-sub-open-bg;
+
+      > a {
+        color: @site-menu-sub-open-color;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+
+    &.active {
+      > a {
+        color: @site-menu-top-active-color;
+        background-color: @site-menu-sub-active-bg;
+      }
+
+      &.open {
+        > a {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  &-section {
+    > header {
+      border-bottom-color: @site-menu-section-header-border-color;
+    }
+
+    &.open {
+      background-color: transparent;
+    }
+  }
+}
+
+.site-menubar-light {
+  .site-menu {
+    .dropdown-menu {
+      background-color: @site-menubar-light-bg;
+    }
+
+    &-item {
+      > a {
+        color: inherit;
+
+        &:hover {
+          color: @site-menu-light-top-hover-color;
+          background-color: @site-menu-light-top-hover-bg;
+        }
+      }
+
+      &.open {
+        background-color: @site-menu-light-sub-open-bg;
+
+        > a {
+          color: @site-menu-light-sub-open-color;
+
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+
+      &.active {
+        > a {
+          color: @site-menu-light-top-active-color;
+          background-color: @site-menu-light-sub-active-bg;
+        }
+
+        &.open {
+          > a {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+
+    &-section {
+      > header {
+        border-bottom-color: @site-menu-light-section-header-border-color;
+      }
+
+      &.open {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: @screen-xs-max) {
+  .site-menu {
+    //Status Color
+    &-section {
+      > header {
+        &:hover {
+          color: @site-menu-top-hover-color;
+          background-color: @site-menu-top-hover-bg;
+        }
+      }
+
+      &.open {
+        background-color: @site-menu-sub-open-bg;
+
+        > header {
+          color: @site-menu-sub-open-color;
+
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+
+      &.active {
+        > header {
+          color: @site-menu-sub-active-color;
+          background-color: @site-menu-sub-active-bg;
+        }
+
+        &.open {
+          > header {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .site-menubar-light {
+    .site-menu {
+      .dropdown-menu {
+        background-color: transparent;
+      }
+
+      &-section {
+        > header {
+          &:hover {
+            color: @site-menu-light-top-hover-color;
+            background-color: @site-menu-light-top-hover-bg;
+          }
+        }
+
+        &.open {
+          background-color: @site-menu-light-sub-open-bg;
+
+          > header {
+            color: @site-menu-light-sub-open-color;
+
+            &:hover {
+              background-color: transparent;
+            }
+          }
+        }
+
+        &.active {
+          > header {
+            color: @site-menu-light-sub-active-color;
+            background-color: @site-menu-light-sub-active-bg;
+          }
+
+          &.open {
+            > header {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+}

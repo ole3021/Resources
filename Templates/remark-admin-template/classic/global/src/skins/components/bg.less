@@ -1,0 +1,91 @@
+// Name:            Background color
+//
+// Component:       `background-color`
+//
+// Modifiers:       `bg-white`
+//                  `bg-primary`
+//                  `bg-success`
+//                  `bg-info`
+//                  `bg-warning`
+//                  `bg-danger`
+//                  `bg-dark`
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@bg-white-color:   @text-color;
+@bg-white-bg:      @color-white;
+
+@bg-primary-color: @inverse;
+@bg-primary-bg:    @brand-primary;
+
+@bg-success-color: @inverse;
+@bg-success-bg:    @brand-success;
+
+@bg-info-color:    @inverse;
+@bg-info-bg:       @brand-info;
+
+@bg-warning-color: @inverse;
+@bg-warning-bg:    @brand-warning;
+
+@bg-danger-color:  @inverse;
+@bg-danger-bg:     @brand-danger;
+
+@bg-dark-color:    @inverse;
+@bg-dark-bg:       @brand-dark;
+
+// Component: Background color
+// ========================================================================
+
+.bg-white {
+  color: @bg-white-color;
+  background-color: @bg-white-bg;
+}
+
+.bg-primary {
+  .bg-variant(@bg-primary-color, @bg-primary-bg);
+}
+
+.bg-success {
+  .bg-variant(@bg-success-color, @bg-success-bg);
+}
+
+.bg-info {
+  .bg-variant(@bg-info-color, @bg-info-bg);
+}
+
+.bg-warning {
+  .bg-variant(@bg-warning-color, @bg-warning-bg);
+}
+
+.bg-danger {
+  .bg-variant(@bg-danger-color, @bg-danger-bg);
+}
+
+.bg-dark {
+  .bg-variant(@bg-dark-color, @bg-dark-bg);
+}
+
+
+// Mixins
+// ========================================================================
+
+.bg-variant(@color, @bg) {
+  color: @color;
+  background-color: @bg;
+
+  &:hover {
+    background-color: lighten(@bg, 10%);
+  }
+
+  a,
+  a& {
+    color: @color;
+
+    &:hover {
+      color: @color;
+    }
+  }
+}

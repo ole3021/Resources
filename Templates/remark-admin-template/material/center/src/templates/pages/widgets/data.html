@@ -1,0 +1,1181 @@
+---
+title: Data Widgets
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/tasklist/tasklist.css">
+  {{/content}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/widgets/data.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/peity/jquery.peity.min.js"></script>
+    <script src="{{global}}/vendor/masonry/masonry.pkgd.min.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/peity.js"></script>
+    <script src="{{global}}/js/components/tasklist.js"></script>
+    <script src="{{global}}/js/components/masonry.js"></script>
+  {{/content}}
+
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/charts/peity.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title">Data Widgets</h1>
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li><a href="javascript:void(0)">Widgets</a></li>
+          <li class="active">Data</li>
+        </ol>
+        <div class="page-header-actions">
+          <button type="button" class="btn btn-sm btn-primary btn-round">
+            <span class="text hidden-xs">Settings</span>
+            <i class="icon md-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <div class="page-content container-fluid">
+        <div class="row" data-plugin="masonry">
+          <div class="col-md-6 col-xs-12 masonry-item">
+            <!-- Panel To Do List -->
+            <div class="panel" id="todo-list">
+              <div class="panel-heading">
+                <h3 class="panel-title">To Do List</h3>
+              </div>
+              <ul class="list-task list-group" data-role="tasklist">
+                <li class="list-group-item task-done" data-role="task">
+                  <div class="checkbox-custom checkbox-primary">
+                    <input type="checkbox" id="inputSchedule" name="inputCheckboxesSchedule" checked>
+                    <label for="inputSchedule">
+                      <i class="icon md-calendar" aria-hidden="true"></i>
+                      <span>Schedule meeting</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="list-group-item" data-role="task">
+                  <div class="checkbox-custom checkbox-primary">
+                    <input type="checkbox" id="inputCall" name="inputCheckboxesCall">
+                    <label for="inputCall">
+                      <i class="icon md-notifications" aria-hidden="true"></i>
+                      <span>Call clients for follow-up</span>
+                      <span class="label label-danger">Today</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="list-group-item" data-role="task">
+                  <div class="checkbox-custom checkbox-primary">
+                    <input type="checkbox" id="inputBook" name="inputCheckboxesBook">
+                    <label for="inputBook">
+                      <i class="icon md-calendar" aria-hidden="true"></i>
+                      <span>Book flight for holiday</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="list-group-item" data-role="task">
+                  <div class="checkbox-custom checkbox-primary">
+                    <input type="checkbox" id="inputForward" name="inputCheckboxesForward">
+                    <label for="inputForward">
+                      <span>Forward important tasks</span>
+                      <span class="label label-primary">2 weeks</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="list-group-item" data-role="task">
+                  <div class="checkbox-custom checkbox-primary">
+                    <input type="checkbox" id="inputRecieve" name="inputCheckboxesRecieve">
+                    <label for="inputRecieve">
+                      <span>Recieve shipment</span>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- End Panel To Do List -->
+          </div>
+
+          <div class="col-md-6 col-xs-12 masonry-item">
+            <!-- Panel Message -->
+            <div class="panel" id="messge">
+              <div class="panel-heading">
+                <div class="panel-actions">
+                  <a class="text-action" href="javascript:void(0)"><i class="icon md-edit" aria-hidden="true"></i></a>
+                </div>
+                <h3 class="panel-title">Message</h3>
+              </div>
+              <div class="panel-body">
+                <ul class="list-group list-group-full">
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <span class="avatar avatar-online">
+                          <img src="{{global}}/portraits/1.jpg" alt="">
+                          <i></i>
+                        </span>
+                      </div>
+                      <div class="media-body">
+                        <h5 class="list-group-item-heading">
+                          <small class="pull-right">3 days ago</small>
+                          Herman Beck
+                        </h5>
+                        <p class="list-group-item-text">Cogitemus tempora tibique probabo...</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <span class="avatar avatar-online">
+                          <img src="{{global}}/portraits/2.jpg" alt="">
+                          <i></i>
+                        </span>
+                      </div>
+                      <div class="media-body">
+                        <h5 class="list-group-item-heading">
+                          <small class="pull-right">3 days ago</small>
+                          Mary Adams
+                        </h5>
+                        <p class="list-group-item-text">Praeter ingenii illa novum...</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <span class="avatar avatar-busy">
+                          <img src="{{global}}/portraits/3.jpg" alt="">
+                          <i></i>
+                        </span>
+                      </div>
+                      <div class="media-body">
+                        <h5 class="list-group-item-heading">
+                          <small class="pull-right">3 days ago</small>
+                          Caleb Richards
+                        </h5>
+                        <p class="list-group-item-text">Exquisitis officii tantalo etsi...</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <span class="avatar avatar-off">
+                          <img src="{{global}}/portraits/4.jpg" alt="">
+                          <i></i>
+                        </span>
+                      </div>
+                      <div class="media-body">
+                        <h5 class="list-group-item-heading">
+                          <small class="pull-right">3 days ago</small>
+                          June Lane
+                        </h5>
+                        <p class="list-group-item-text">Artes adamare deorum obiecta...</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- End Panel Message -->
+          </div>
+
+          <div class="col-md-6 col-xs-12 masonry-item">
+            <!-- Panel Subscribe -->
+            <div class="panel">
+              <div class="panel-heading">
+                <h3 class="panel-title">Subscribe</h3>
+              </div>
+              <div class="panel-body">
+                <form class="form-group">
+                  <input type="text" class="form-control" name="name" autocomplete="off" placeholder="Name">
+                </form>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" autocomplete="off" placeholder="Email Address">
+                </div>
+                <div class="form-group">
+                  <button type="button" class="btn btn-primary">Subscribe</button>
+                </div>
+              </div>
+            </div>
+            <!-- End Panel Subscribe -->
+          </div>
+
+          <div class="col-md-6 col-xs-12 masonry-item">
+            <!-- Panel Daily Feed -->
+            <div class="panel" id="daily-feed">
+              <div class="panel-heading">
+                <h3 class="panel-title">Daily feed
+                  <span class="pull-right label label-round label-warning">10 Messages</span>
+                </h3>
+              </div>
+              <div class="panel-body">
+                <ul class="list-group list-group-dividered list-group-full">
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-online" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/5.jpg" alt=""><i></i></a>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">
+                          <small class="pull-right">5m ago</small>
+                          <a class="name">Edward Fletcher</a> posted a new blog.
+                        </h4>
+                        <small>Today 5:50 pm - 12.04.2015</small>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-off" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/6.jpg" alt=""><i></i></a>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">
+                          <small class="pull-right">2h ago</small>
+                          <a class="name">Justin Martin</a> posted message on
+                          <a class="name">Crystal Bates</a> site.
+                        </h4>
+                        <small>Today 2:55 pm - 12.04.2015</small>
+                        <div class="actions margin-top-10">
+                          <button type="button" class="btn btn-danger btn-xs"><i class="icon md-thumb-up" aria-hidden="true"></i>Like</button>
+                          <button type="button" class="btn btn-danger btn-xs"><i class="icon md-favorite" aria-hidden="true"></i>Love</button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-away" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/7.jpg" alt=""><i></i></a>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">
+                          <small class="pull-right">6h ago</small>
+                          <a class="name">Terrance Arnold</a> posted message on
+                          <a class="name">Nathan Watts</a> site.
+                        </h4>
+                        <small>Today 12:00 am - 12.04.2015</small>
+                        <div class="content well">
+                          Aspernatur ad aspernari sapienter constringendos conspiratione locatus. Ii maiores
+                          aequo tollit, profecta iucundo pueros assentior velit
+                          circumcisaque error fastidium nostros. Utuntur deserunt
+                          solvantur.
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-busy" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/8.jpg" alt=""><i></i></a>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">
+                          <small class="pull-right">20h ago</small>
+                          <a class="name">Heather Harper</a> started following
+                          <a class="name">Terrance Arnold</a>.
+                        </h4>
+                        <small>Yesterday 9:00 pm - 11.04.2015</small>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <button type="button" class="btn btn-block btn-primary"><i class="icon md-chevron-down margin-right-5" aria-hidden="true"></i>Show
+                  More</button>
+              </div>
+            </div>
+            <!-- End Panel Daily Feed -->
+          </div>
+
+          <div class="col-md-6 col-xs-12 masonry-item">
+            <!-- Panel Tickets -->
+            <div class="panel">
+              <div class="panel-heading">
+                <h3 class="panel-title">Tickets</h3>
+              </div>
+              <div class="panel-body">
+                <ul class="list-group list-group-dividered list-group-full">
+                  <li class="list-group-item">
+                    <small class="label label-round label-info pull-right">Completed</small>
+                    <p><a class="hightlight" href="javascript:void(0)">Server unavaible</a>
+                      <span>[13060]</span>
+                    </p>
+                    <small>Opened by
+                      <a class="hightlight" href="javascript:void(0)">
+                        <span class="avatar avatar-xs">
+                          <img src="{{global}}/portraits/1.jpg" alt="">
+                        </span>
+                        <span>Herman Beck</span>
+                      </a>
+                      <time datetime="2015-07-01T08:55">2 hours ago</time>
+                    </small>
+                  </li>
+                  <li class="list-group-item">
+                    <small class="label label-round label-warning pull-right">Pendening</small>
+                    <p><a class="hightlight" href="javascript:void(0)">Mobile App Problem</a>
+                      <span>[13061]</span>
+                    </p>
+                    <small>Opened by
+                      <a class="hightlight" href="javascript:void(0)">
+                        <span class="avatar avatar-xs">
+                          <img src="{{global}}/portraits/2.jpg" alt="">
+                        </span>
+                        <span>Mary Adams</span>
+                      </a>
+                      <time datetime="2015-07-01T07:55">1 hour ago</time>
+                    </small>
+                  </li>
+                  <li class="list-group-item">
+                    <small class="label label-round label-primary pull-right">In progress</small>
+                    <p><a class="hightlight" href="javascript:void(0)">IE8 problem</a>
+                      <span>[13062]</span>
+                    </p>
+                    <small>Opened by
+                      <a class="hightlight" href="javascript:void(0)">
+                        <span class="avatar avatar-xs">
+                          <img src="{{global}}/portraits/3.jpg" alt="">
+                        </span>
+                        <span>Caleb Richards</span>
+                      </a>
+                      <time datetime="2015-06-28T21:05">3 days ago</time>
+                    </small>
+                  </li>
+                  <li class="list-group-item">
+                    <small class="label label-round label-danger pull-right">Rejected</small>
+                    <p><a class="hightlight" href="javascript:void(0)">Respoonsive problem</a>
+                      <span>[13063]</span>
+                    </p>
+                    <small>Opened by
+                      <a class="hightlight" href="javascript:void(0)">
+                        <span class="avatar avatar-xs">
+                          <img src="{{global}}/portraits/4.jpg" alt="">
+                        </span>
+                        <span>June Lane</span>
+                      </a>
+                      <time datetime="2015-06-27T13:05">4 days ago</time>
+                    </small>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- End Panel Tickets -->
+          </div>
+
+          <div class="col-md-6 col-xs-12 masonry-item">
+            <!-- Panel Sales -->
+            <div class="panel">
+              <div class="panel-heading">
+                <h3 class="panel-title">Sales</h3>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-hover table-striped">
+                  <thead>
+                    <tr>
+                      <th>ID #</th>
+                      <th>Buyers</th>
+                      <th>Product Name</th>
+                      <th>Price</th>
+                      <th>Popularity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Priscilla Riley</td>
+                      <td>Mobie Phone</td>
+                      <td>$955</td>
+                      <td>
+                        <span data-plugin="peityBar">2,3,2,-1,-3,-2,2,3,5,4</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Josephine Reynolds</td>
+                      <td>Air Conditioner</td>
+                      <td>$42</td>
+                      <td>
+                        <span data-plugin="peityBar">2,-1,-3,-2,2,3,5,2,5,3</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Wilma Gray</td>
+                      <td>Jacket</td>
+                      <td>$300</td>
+                      <td>
+                        <span data-plugin="peityBar">1,-3,-2,1,3,5,3,2,4,2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Lloyd Snyder</td>
+                      <td>Projection Machine</td>
+                      <td>$228</td>
+                      <td>
+                        <span data-plugin="peityBar">5,3,2,-1,-3,-2,2,3,5,2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Shane Collins</td>
+                      <td>Milk Powder</td>
+                      <td>$120</td>
+                      <td>
+                        <span data-plugin="peityBar">2,3,2,-1,-3,-2,-3,-1,1,3</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>Jenny Brown</td>
+                      <td>Buffet Dinner</td>
+                      <td>$70</td>
+                      <td>
+                        <span data-plugin="peityBar">3,1,2,-2,-3,-2,2,3,4,2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>Hunter Holland</td>
+                      <td>Literature</td>
+                      <td>$880</td>
+                      <td>
+                        <span data-plugin="peityBar">2,3,2,-1,-4,-2,2,1,3,1</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>Hunter Holland</td>
+                      <td>RC Cars</td>
+                      <td>$479</td>
+                      <td>
+                        <span data-plugin="peityBar">-1,-3,-2,-1,3,1,2,-3,-5,-3</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>9</td>
+                      <td>Hunter Holland</td>
+                      <td>SLR Camera</td>
+                      <td>$150</td>
+                      <td>
+                        <span data-plugin="peityBar">5,2,1,-1,-2,-2,2,4,2,-1</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>10</td>
+                      <td>Tim Shelton</td>
+                      <td>Down Coat</td>
+                      <td>$68</td>
+                      <td>
+                        <span data-plugin="peityBar">3,2,-1,-3,-2,2,5,2,-2,-3</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="panel-footer">
+                <a class="grey-600" href="javascript:void(0)"><i class="icon md-info blue-600 margin-right-10" aria-hidden="true"></i>Show more details.</a>
+              </div>
+            </div>
+            <!-- End Panel Sales -->
+          </div>
+
+          <!-- <div class="clearfix visible-lg-block"></div> -->
+
+          <div class="col-md-6 col-xs-12 masonry-item">
+            <!-- Panel Tasks -->
+            <div class="panel">
+              <div class="panel-heading">
+                <h3 class="panel-title">Last Orders</h3>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-hover table-striped">
+                  <thead>
+                    <tr>
+                      <th>Order #</th>
+                      <th>Order Time</th>
+                      <th>Amount (USD)</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>568968</td>
+                      <td>5/29/2015 3:29 PM</td>
+                      <td>$321.33</td>
+                      <td>
+                        <span class="label label-success">Shipped</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>568967</td>
+                      <td>5/29/2015 3:20 PM</td>
+                      <td>$234.34</td>
+                      <td>
+                        <span class="label label-warning">Pending</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>568966</td>
+                      <td>5/29/2015 3:03 PM</td>
+                      <td>$724.17</td>
+                      <td>
+                        <span class="label label-info">Processing</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>568965</td>
+                      <td>5/29/2015 3:00 PM</td>
+                      <td>$23.71</td>
+                      <td>
+                        <span class="label label-danger">Delivered</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>568964</td>
+                      <td>5/29/2015 2:49 PM</td>
+                      <td>$8345.23</td>
+                      <td>
+                        <span class="label label-success">Shipped</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>568963</td>
+                      <td>5/29/2015 2:23 PM</td>
+                      <td>$245.12</td>
+                      <td>
+                        <span class="label label-info">Processing</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>568962</td>
+                      <td>5/29/2015 2:15 PM</td>
+                      <td>$5663.54</td>
+                      <td>
+                        <span class="label label-danger">Delivered</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>568961</td>
+                      <td>5/29/2015 2:13 PM</td>
+                      <td>$943.45</td>
+                      <td>
+                        <span class="label label-success">Shipped</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- End Panel Tasks -->
+          </div>
+
+          <div class="col-md-6 col-xs-12 masonry-item">
+            <!-- Panel Projects -->
+            <div class="panel" id="projects">
+              <div class="panel-heading">
+                <h3 class="panel-title">Projects</h3>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <td>Projects</td>
+                      <td>Completed</td>
+                      <td>Date</td>
+                      <td>Actions</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>The sun climbing plan</td>
+                      <td>
+                        <span data-plugin="peityPie" data-skin="red">7/10</span>
+                      </td>
+                      <td>Jan 1, 2015</td>
+                      <td>
+                        <button type="button" class="btn btn-sm btn-icon btn-pure btn-default"
+                        data-toggle="tooltip" data-original-title="Edit">
+                          <i class="icon md-wrench" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-icon btn-pure btn-default"
+                        data-toggle="tooltip" data-original-title="Delete">
+                          <i class="icon md-close" aria-hidden="true"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Lunar probe project</td>
+                      <td>
+                        <span data-plugin="peityPie" data-skin="blue">3/10</span>
+                      </td>
+                      <td>Feb 12, 2015</td>
+                      <td>
+                        <button type="button" class="btn btn-sm btn-icon btn-pure btn-default"
+                        data-toggle="tooltip" data-original-title="Edit">
+                          <i class="icon md-wrench" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-icon btn-pure btn-default"
+                        data-toggle="tooltip" data-original-title="Delete">
+                          <i class="icon md-close" aria-hidden="true"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Dream successful plan</td>
+                      <td>
+                        <span data-plugin="peityPie" data-skin="green">9/10</span>
+                      </td>
+                      <td>Apr 9, 2015</td>
+                      <td>
+                        <button type="button" class="btn btn-sm btn-icon btn-pure btn-default"
+                        data-toggle="tooltip" data-original-title="Edit">
+                          <i class="icon md-wrench" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-icon btn-pure btn-default"
+                        data-toggle="tooltip" data-original-title="Delete">
+                          <i class="icon md-close" aria-hidden="true"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Office automatization</td>
+                      <td>
+                        <span data-plugin="peityPie" data-skin="orange">5/10</span>
+                      </td>
+                      <td>May 15, 2015</td>
+                      <td>
+                        <button type="button" class="btn btn-sm btn-icon btn-pure btn-default"
+                        data-toggle="tooltip" data-original-title="Edit">
+                          <i class="icon md-wrench" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-icon btn-pure btn-default"
+                        data-toggle="tooltip" data-original-title="Delete">
+                          <i class="icon md-close" aria-hidden="true"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Open strategy</td>
+                      <td>
+                        <span data-plugin="peityPie" data-skin="brown">2/10</span>
+                      </td>
+                      <td>Jun 2, 2015</td>
+                      <td>
+                        <button type="button" class="btn btn-sm btn-icon btn-pure btn-default"
+                        data-toggle="tooltip" data-original-title="Edit">
+                          <i class="icon md-wrench" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-icon btn-pure btn-default"
+                        data-toggle="tooltip" data-original-title="Delete">
+                          <i class="icon md-close" aria-hidden="true"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- End Panel Projects -->
+          </div>
+
+          <div class="col-md-6 col-xs-12 masonry-item">
+            <!-- Panel Projects Status -->
+            <div class="panel">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  Projects Status
+                  <span class="badge badge-info">5</span>
+                </h3>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <td>ID</td>
+                      <td>Project</td>
+                      <td>Status</td>
+                      <td class="text-left">Progress</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>619</td>
+                      <td>The sun climbing plan</td>
+                      <td>
+                        <span class="label label-primary">Developing</span>
+                      </td>
+                      <td>
+                        <span data-plugin="peityLine">5,3,2,-1,-3,-2,2,3,5,2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>620</td>
+                      <td>Lunar probe project</td>
+                      <td>
+                        <span class="label label-warning">Design</span>
+                      </td>
+                      <td>
+                        <span data-plugin="peityLine">1,-1,0,2,3,1,-1,1,4,2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>621</td>
+                      <td>Dream successful plan</td>
+                      <td>
+                        <span class="label label-info">Testing</span>
+                      </td>
+                      <td>
+                        <span data-plugin="peityLine">2,3,-1,-3,-1,0,2,4,5,3</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>622</td>
+                      <td>Office automatization</td>
+                      <td>
+                        <span class="label label-danger">Canceled</span>
+                      </td>
+                      <td>
+                        <span data-plugin="peityLine">1,-2,0,2,4,5,3,2,4,2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>623</td>
+                      <td>Open strategy</td>
+                      <td>
+                        <span class="label label-default">Reply waiting</span>
+                      </td>
+                      <td>
+                        <span data-plugin="peityLine">4,2,-1,-3,-2,1,3,5,2,4</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- End Panel Projects Stats -->
+          </div>
+
+          <div class="col-md-6 col-xs-12 masonry-item">
+            <!-- Panel Followers -->
+            <div class="panel" id="followers">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <i class="icon md-check" aria-hidden="true"></i> Followers
+                </h3>
+              </div>
+              <div class="panel-body">
+                <ul class="list-group list-group-dividered list-group-full">
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-online" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/9.jpg" alt="">
+                          <i></i>
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <div class="pull-right">
+                          <button type="button" class="btn btn-info btn-sm">Follow</button>
+                        </div>
+                        <div><a class="name" href="javascript:void(0)">Willard Wood</a></div>
+                        <small>@heavybutterfly920</small>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-away" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/10.jpg" alt="">
+                          <i></i>
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <div class="pull-right">
+                          <button type="button" class="btn btn-success btn-default btn-sm"><i class="icon md-check" aria-hidden="true"></i>Following</button>
+                        </div>
+                        <div><a class="name" href="javascript:void(0)">Ronnie Ellis</a></div>
+                        <small>@kingronnie24</small>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-busy" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/11.jpg" alt="">
+                          <i></i>
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <div class="pull-right">
+                          <button type="button" class="btn btn-info btn-sm">Follow</button>
+                        </div>
+                        <div><a class="name" href="javascript:void(0)">Gwendolyn Wheeler</a></div>
+                        <small>@perttygirl66</small>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-off" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/12.jpg" alt="">
+                          <i></i>
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <div class="pull-right">
+                          <button type="button" class="btn btn-info btn-sm">Follow</button>
+                        </div>
+                        <div><a class="name" href="javascript:void(0)">Daniel Russell</a></div>
+                        <small>@danieltiger08</small>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- End Panel Followers -->
+          </div>
+
+          <div class="col-md-6 col-xs-12 masonry-item">
+            <!-- Panel Chat -->
+            <div class="panel" id="chat">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <i class="icon md-comment-text" aria-hidden="true"></i> Chat
+                </h3>
+              </div>
+              <div class="panel-body">
+                <div class="chats">
+                  <div class="chat">
+                    <div class="chat-body">
+                      <div class="chat-content" data-toggle="tooltip" title="11:37:08 am">
+                        <p>Good morning, sir.</p>
+                        <p>What can I do for you?</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chat">
+                    <div class="chat-body chat-right">
+                      <div class="chat-content" data-toggle="tooltip" title="11:39:57 am">
+                        <p>Well, I am just looking around.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chat">
+                    <div class="chat-body">
+                      <div class="chat-content" data-toggle="tooltip" title="11:40:10 am">
+                        <p>If necessary, please ask me.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-footer">
+                <form>
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Say something">
+                    <span class="input-group-btn">
+                      <button class="btn btn-primary" type="button">Send</button>
+                    </span>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- End Panel Chat -->
+          </div>
+
+          <!-- <div class="clearfix visible-lg-block"></div> -->
+
+          <div class="col-md-6 col-xs-12 masonry-item">
+            <!-- Panel Last threads -->
+            <div class="panel">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="panel-title-icon icon md-comments" aria-hidden="true"></i>                  Last threads</h3>
+              </div>
+              <div class="panel-body">
+                <ul class="list-group list-group-dividered list-group-full">
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-online" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/15.jpg" alt="">
+                          <i></i>
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <small class="pull-right">20 hours ago</small>
+                        <h4 class="media-heading">Indoctum legendum legimus. Faciam mei</h4>
+                        <small>started by <a href="javascript:void(0)" title="">Crystal Bates</a>                          in <a class="label label-outline label-default" href="javascript:void(0)"
+                          title="">Best Practices</a></small>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-away" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/16.jpg" alt="">
+                          <i></i>
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <small class="pull-right">20 hours ago</small>
+                        <h4 class="media-heading">Armatum volunt, medium iudex ponderum</h4>
+                        <small>started by <a href="javascript:void(0)" title="">Ramon Dunn</a>                          in <a class="label label-outline label-default" href="javascript:void(0)"
+                          title="">Announcements</a></small>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-busy" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/17.jpg" alt="">
+                          <i></i>
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <small class="pull-right">20 hours ago</small>
+                        <h4 class="media-heading">Minuit conectitur intellegaturque doloribus mei</h4>
+                        <small>started by <a href="javascript:void(0)" title="">Scott Sanders</a>                          in <a class="label label-outline label-default" href="javascript:void(0)"
+                          title="">Bug Reporting</a></small>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-off" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/18.jpg" alt="">
+                          <i></i>
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <small class="pull-right">20 hours ago</small>
+                        <h4 class="media-heading">Supplicii nominavi studiose sequimur vidisse.</h4>
+                        <small>started by <a href="javascript:void(0)" title="">Nina Wells</a>                          in <a class="label label-outline label-default" href="javascript:void(0)"
+                          title="">Feature Requests</a></small>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-online" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/19.jpg" alt="">
+                          <i></i>
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <small class="pull-right">20 hours ago</small>
+                        <h4 class="media-heading">Amentur pellat sinat commemorandis Vivatur.</h4>
+                        <small>started by <a href="javascript:void(0)" title="">Beverly Grant</a>                          in <a class="label label-outline label-default" href="javascript:void(0)"
+                          title="">General Discussion</a></small>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-online" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/20.jpg" alt="">
+                          <i></i>
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <small class="pull-right">20 hours ago</small>
+                        <h4 class="media-heading">Huc valetudinis putem, suscipiet verum</h4>
+                        <small>started by <a href="javascript:void(0)" title="">Marvin Nelson</a>                          in <a class="label label-outline label-default" href="javascript:void(0)"
+                          title="">Bug Reproting</a></small>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- End Panel Last threads -->
+          </div>
+
+          <div class="col-md-6 col-xs-12 masonry-item">
+            <!-- Panel Last comments -->
+            <div class="panel">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="panel-title-icon icon md-comment" aria-hidden="true"></i>                  Last comments</h3>
+              </div>
+              <div class="panel-body">
+                <ul class="list-group list-group-dividered list-group-full">
+                  <li class="list-group-item">
+                    <div class="media comment">
+                      <div class="media-left">
+                        <a class="avatar avatar-online" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/6.jpg" alt="...">
+                          <i></i>
+                        </a>
+                      </div>
+                      <div class="media-body comment-body">
+                        <a class="comment-author">Crystal Bates</a>
+                        <div class="comment-meta">
+                          <span class="date">Just now</span>
+                        </div>
+                        <div class="comment-content">
+                          <p>Tantas earum numeris, scribi innumerabiles quietae clariora.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media comment">
+                      <div class="media-left">
+                        <a class="avatar avatar-busy" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/7.jpg" alt="...">
+                          <i></i>
+                        </a>
+                      </div>
+                      <div class="media-body comment-body">
+                        <a class="comment-author">Nathan Watts</a>
+                        <div class="comment-meta">
+                          <span class="date">38 minutes ago</span>
+                        </div>
+                        <div class="comment-content">
+                          <p>Metum quieti agatur ut sequitur delectatio accusamus.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media comment">
+                      <div class="media-left">
+                        <a class="avatar avatar-online" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/8.jpg" alt="...">
+                          <i></i>
+                        </a>
+                      </div>
+                      <div class="media-body comment-body">
+                        <a class="comment-author">Heather Harper</a>
+                        <div class="comment-meta">
+                          <span class="date">2 hours ago</span>
+                        </div>
+                        <div class="comment-content">
+                          <p>Incorrupte torquatum animi nudus, pendet fugiamus pariter.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media comment">
+                      <div class="media-left">
+                        <a class="avatar avatar-away" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/9.jpg" alt="...">
+                          <i></i>
+                        </a>
+                      </div>
+                      <div class="media-body comment-body">
+                        <a class="comment-author">Willard Wood</a>
+                        <div class="comment-meta">
+                          <span class="date">1 day ago</span>
+                        </div>
+                        <div class="comment-content">
+                          <p>Opes oculis forte omnisque virtute caecilii ceterorum.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- End Panel Last comments -->
+          </div>
+
+          <div class="col-md-6 col-xs-12 masonry-item">
+            <!-- Panel Twitter Feed -->
+            <div class="panel">
+              <div class="panel-heading">
+                <h3 class="panel-title">Twitter Feed</h3>
+              </div>
+              <div class="panel-body">
+                <div class="form-group">
+                  <textarea class="form-control" placeholder="Enter here for tweet..." rows="3"></textarea>
+                </div>
+                <a href="javascript:void(0)" class="btn btn-primary btn-sm pull-right">Tweet</a>
+                <div class="clearfix"></div>
+                <hr class="margin-bottom-10" />
+                <ul class="list-group list-group-dividered list-group-full">
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-online" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/16.jpg" alt="...">
+                          <i></i>
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <small class="text-muted pull-right">Just now</small>
+                        <h4 class="media-heading">@Ramon Dunn</h4>
+                        <div>Lorem ipsum Veniam aliquip culpa laboris minim tempor labore
+                          commodo officia veniam non in in in.</div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-busy" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/17.jpg" alt="...">
+                          <i></i>
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <small class="text-muted pull-right">38 minutes ago</small>
+                        <h4 class="media-heading">@Scott Sanders</h4>
+                        <div>Lorem ipsum Laborum sit laborum cillum proident dolore
+                          culpa reprehenderit qui enim labore do mollit in.</div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-online" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/18.jpg" alt="...">
+                          <i></i>
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <small class="text-muted pull-right">2 hours ago</small>
+                        <h4 class="media-heading">@Nina Wells</h4>
+                        <div>Lorem ipsum Culpa mollit ex mollit magna dolore dolore
+                          dolore tempor velit magna enim ad dolore dolore dolore.</div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <span class="text-info">163K users active</span>
+              </div>
+            </div>
+            <!-- End Panel Last comments -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

@@ -1,0 +1,32 @@
+@import "vars.less";
+
+.page-code-editor {
+  .page {
+    height: calc(100% - 44px);
+
+    &-main,
+    &-content {
+      padding: 0;
+      height: 100%;
+    }
+
+    // &-aside {
+    //   overflow-y: auto;
+    // }
+  }
+
+  .treeview {
+    .list-group-item.node-selected {
+
+      &, & .node-icon {
+        color: @brand-primary;
+      }
+
+      background-color: @gray-lightest;
+    }
+  }
+
+  .CodeMirror {
+    height: 100%;
+  }
+}

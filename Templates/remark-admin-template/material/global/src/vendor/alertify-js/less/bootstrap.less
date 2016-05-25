@@ -1,0 +1,148 @@
+
+
+.alertify {
+  background-color: @alertify-bg;
+  border: 1px solid @alertify-border-color;
+  border-radius: @alertify-border-radius;
+  box-shadow: @alertify-shadow;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.alertify-dialog {
+  padding: 0;
+}
+
+.alertify-inner {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.alertify-message {
+  padding: 15px;
+  margin: 0;
+}
+
+.alertify-text-wrapper {
+  padding: 0 15px;
+}
+
+.alertify-text {
+  color: @text-color;
+  border-radius: @border-radius-base;
+  padding: 8px;
+  background-color: @alertify-bg;
+  border: 1px solid #CCC;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+.alertify-text:focus {
+  border-color: rgba(82,168,236,.8);
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+}
+
+.alertify-buttons {
+  margin: 0 15px;
+  padding: 14px 0 15px;
+  // border-top: 1px solid @border-color-base;
+  border-radius: 0 0 @alertify-border-radius @alertify-border-radius;
+  box-shadow: inset 0 1px 0 #FFF;
+  text-align: right;
+}
+
+.alertify-button,
+.alertify-button:hover,
+.alertify-button:focus,
+.alertify-button:active {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: @font-weight-normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+
+  .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @btn-border-radius-base);
+  .user-select(none);
+}
+
+.alertify-button:focus {
+  outline: none;
+}
+.alertify-button:active {
+  position: relative;
+}
+
+.alertify-button-cancel {
+  color: @btn-warning-color;
+  background-color: @btn-warning-bg;
+  border-color: @btn-warning-border;
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+    .tab-focus();
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @btn-warning-hover-bg;
+    border-color: @btn-warning-hover-border;
+  }
+
+  &:active {
+    background-color: @btn-warning-active-bg;
+    border-color: @btn-warning-active-border;
+  }
+}
+
+.alertify-button-ok {
+  color: @btn-success-color;
+  background-color: @btn-success-bg;
+  border-color: @btn-success-border;
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+    .tab-focus();
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @btn-success-hover-bg;
+    border-color: @btn-success-hover-border;
+  }
+
+  &:active {
+    background-color: @btn-success-active-bg;
+    border-color: @btn-success-active-border;
+  }
+}
+
+.alertify-log {
+  background: @brand-info-hover;
+  padding: 15px 14px 15px;
+  border-radius: @border-radius-base;
+  color: #fff;
+  border: 1px solid rgba(0, 0, 0, .1);
+}
+.alertify-log-error {
+  color: #fff;
+  background: @brand-warning-hover;
+  border: 1px solid rgba(0, 0, 0, .1);
+}
+.alertify-log-success {
+  color: #fff;
+  background: @brand-success-hover;
+  border: 1px solid rgba(0, 0, 0, .1);
+}

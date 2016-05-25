@@ -1,0 +1,30 @@
+@import "vars.less";
+
+.page-register {
+  &:before {
+    background-image: url("../../images/login.jpg");
+  }
+
+  a {
+    color: @color-primary-200;
+  }
+
+  form {
+    width: 340px;
+    margin: @line-height-computed auto;
+  }
+
+  .form-control,
+  .floating-label,
+  .form-control:focus + .floating-label {
+    color: @gray-light;
+  }
+}
+
+@media(max-width: 480px) {
+  .page-register {
+    form {
+      width: auto;
+    }
+  }
+}

@@ -1,0 +1,152 @@
+---
+title: Form Editable
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/x-editable/x-editable.css">
+    <link rel="stylesheet" href="{{global}}/vendor/x-editable/address.css">
+    <link rel="stylesheet" href="{{global}}/vendor/typeahead-js/typeahead.css">
+    <link rel="stylesheet" href="{{global}}/vendor/select2/select2.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/x-editable/bootstrap-editable.js"></script>
+    <script src="{{global}}/vendor/typeahead-js/bloodhound.min.js"></script>
+    <script src="{{global}}/vendor/typeahead-js/typeahead.jquery.min.js"></script>
+    <script src="{{global}}/vendor/x-editable/address.js"></script>
+    <script src="{{global}}/vendor/select2/select2.min.js"></script>
+    <script src="{{global}}/vendor/moment/moment.min.js"></script>
+  {{/content}}
+
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/forms/editable.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title">Form Editable</h1>
+        <ol class="breadcrumb">
+          <li><a href="{{dest '/index.html'}}">Home</a></li>
+          <li><a href="javascript:void(0)">Forms</a></li>
+          <li class="active">Editable</li>
+        </ol>
+        <div class="page-header-actions">
+          <a class="btn btn-sm btn-default btn-outline btn-round" href="http://github.com/vitalets/x-editable"
+          target="_blank">
+            <i class="icon wb-link" aria-hidden="true"></i>
+            <span class="hidden-xs">Official Website</span>
+          </a>
+        </div>
+      </div>
+      <div class="page-content">
+        <!-- Panel X-Editable -->
+        <div class="panel">
+          <header class="panel-heading">
+            <h3 class="panel-title">
+              X-Editable
+              <span class="panel-desc">Click to edit.</span>
+            </h3>
+          </header>
+          <div class="panel-body">
+            <button class="btn btn-primary btn-outline margin-bottom-10" id="editableEnable"
+            type="button">enable / disable</button>
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped" id="editableUser">
+                <tbody>
+                  <tr>
+                    <td style="width:35%">Simple text field</td>
+                    <td style="width:65%">
+                      <a id="editableSuperuser" href="javascript:void(0)" data-type="text" data-pk="1"
+                      data-title="Enter username">superuser</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Empty text field, required</td>
+                    <td>
+                      <a id="editableFirstname" href="javascript:void(0)" data-type="text" data-pk="1"
+                      data-placement="right" data-placeholder="Required" data-title="Enter your firstname"></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Select, local array, custom display</td>
+                    <td>
+                      <a id="editableSex" href="javascript:void(0)" data-type="select" data-pk="1" data-value=""
+                      data-title="Select sex"></a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Datepicker</td>
+                    <td>
+                      <span class="notready">not implemented for Bootstrap 3 yet</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Combodate (date)</td>
+                    <td>
+                      <a id="editableDob" href="javascript:void(0)" data-type="combodate" data-value="1984-05-15"
+                      data-format="YYYY-MM-DD" data-viewformat="DD/MM/YYYY" data-template="D / MMM / YYYY"
+                      data-pk="1" data-title="Select Date of birth"></a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Combodate (datetime)</td>
+                    <td>
+                      <a id="editableEvent" href="javascript:void(0)" data-type="combodate" data-template="D MMM YYYY  HH:mm"
+                      data-format="YYYY-MM-DD HH:mm" data-viewformat="MMM D, YYYY, HH:mm"
+                      data-pk="1" data-title="Setup event date and time"></a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Textarea, buttons below. Submit by <i>ctrl+enter</i></td>
+                    <td>
+                      <a id="editableComments" href="javascript:void(0)" data-type="textarea" data-pk="1"
+                      data-placeholder="Your comments here..." data-title="Enter comments">awesome user!</a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Twitter typeahead.js</td>
+                    <td>
+                      <a id="editableState2" href="javascript:void(0)" data-pk="1" data-placement="right"
+                      data-title="Start typing State.."></a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Checklist</td>
+                    <td>
+                      <a id="editableFruits" href="javascript:void(0)" data-type="checklist" data-value="2,3"
+                      data-title="Select fruits"></a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Custom input, several fields</td>
+                    <td>
+                      <a id="editableAddress" href="javascript:void(0)" data-type="address" data-pk="1"
+                      data-title="Please, fill address"></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel X-Editable -->
+
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

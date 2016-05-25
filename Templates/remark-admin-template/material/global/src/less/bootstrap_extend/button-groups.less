@@ -1,0 +1,52 @@
+// Name:            Button groups
+//
+// Component:       `btn-group`
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@btn-group-shadow:            @btn-shadow;
+
+// Component: Button groups
+// ========================================================================
+
+.btn-group {
+  .dropdown-menu {
+    > li {
+      > a {
+        padding: 6px 40px 6px 15px;
+        
+        .badge {
+          position: absolute;
+          right: 15px;
+          margin-top: 2px;
+        }
+      }
+    }
+  }
+
+  &,
+  &-vertical {
+    box-shadow: @btn-group-shadow;
+
+    > .btn,
+    .btn-group,
+    .btn-group-vertical {
+      box-shadow: none;
+    }
+  }
+
+  &-flat {
+    box-shadow: none;
+  }
+}
+
+.btn-group.open .dropdown-toggle {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, .05);
+}
+
+.btn-group:focus .dropdown-toggle {
+  transition: .25s;
+}

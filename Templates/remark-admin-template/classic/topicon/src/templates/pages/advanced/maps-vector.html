@@ -1,0 +1,178 @@
+---
+title: Vector Maps
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/jvectormap/jquery-jvectormap.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/jvectormap/jquery.jvectormap.min.js"></script>
+    <script src="{{global}}/vendor/jvectormap/maps/jquery-jvectormap-au-mill-en.js"></script>
+    <script src="{{global}}/vendor/jvectormap/maps/jquery-jvectormap-ca-lcc-en.js"></script>
+    <script src="{{global}}/vendor/jvectormap/maps/jquery-jvectormap-de-mill-en.js"></script>
+    <script src="{{global}}/vendor/jvectormap/maps/jquery-jvectormap-fr-mill-en.js"></script>
+    <script src="{{global}}/vendor/jvectormap/maps/jquery-jvectormap-uk-mill-en.js"></script>
+    <script src="{{global}}/vendor/jvectormap/maps/jquery-jvectormap-us-merc-en.js"></script>
+    <script src="{{global}}/vendor/jvectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="{{global}}/vendor/jvectormap/maps/jquery-jvectormap-za-mill-en.js"></script>
+    <script src="{{global}}/vendor/jvectormap/maps/jquery-jvectormap-europe-mill-en.js"></script>
+    <script src="{{global}}/vendor/jvectormap/maps/jquery-jvectormap-us-ny-newyork-mill-en.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/jvectormap.js"></script>
+  {{/content}}
+
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <ol class="breadcrumb">
+          <li><a href="{{dest '/index.html'}}">Home</a></li>
+          <li class="active">Advanced UI</li>
+        </ol>
+        <h1 class="page-title">Vector Maps</h1>
+        <div class="page-header-actions">
+          <a class="btn btn-sm btn-inverse btn-round" href="http://jvectormap.com/" target="_blank">
+            <i class="icon wb-link" aria-hidden="true"></i>
+            <span class="hidden-xs">Official Website</span>
+          </a>
+        </div>
+      </div>
+      <div class="page-content">
+        <!-- Panel jvectormap -->
+        <div class="panel">
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-md-6">
+                <!-- Example World -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Whole World</h4>
+                  <div class="example">
+                    <div class="height-300" data-plugin="vectorMap" data-map="world_mill_en"></div>
+                  </div>
+                </div>
+                <!-- End Example World -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example New York City -->
+                <div class="example-wrap">
+                  <h4 class="example-title">New York City</h4>
+                  <div class="example">
+                    <div class="height-300" data-plugin="vectorMap" data-map="us-ny-newyork_mill_en"></div>
+                  </div>
+                </div>
+                <!-- End Example New York City -->
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="col-md-6">
+                <!-- Example Canada -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Canada</h4>
+                  <div class="example">
+                    <div class="height-300" data-plugin="vectorMap" data-map="ca_lcc_en"></div>
+                  </div>
+                </div>
+                <!-- End Example Canada -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Usa -->
+                <div class="example-wrap">
+                  <h4 class="example-title">USA</h4>
+                  <div class="example">
+                    <div class="height-300" data-plugin="vectorMap" data-map="us_merc_en"></div>
+                  </div>
+                </div>
+                <!-- End Example Usa -->
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="col-md-6">
+                <!-- Example United Kingdom -->
+                <div class="example-wrap">
+                  <h4 class="example-title">UK</h4>
+                  <div class="example">
+                    <div class="height-300" data-plugin="vectorMap" data-map="uk_mill_en"></div>
+                  </div>
+                </div>
+                <!-- End Example United Kingdom -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Australia -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Australia</h4>
+                  <div class="example">
+                    <div class="height-300" data-plugin="vectorMap" data-map="au_mill_en"></div>
+                  </div>
+                </div>
+                <!-- End Example Australia -->
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="col-md-6">
+                <!-- Example South Africa -->
+                <div class="example-wrap">
+                  <h4 class="example-title">South Africa</h4>
+                  <div class="example">
+                    <div class="height-300" data-plugin="vectorMap" data-map="za_mill_en"></div>
+                  </div>
+                </div>
+                <!-- End Example South Africa -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Germany -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Germany</h4>
+                  <div class="example">
+                    <div class="height-300" data-plugin="vectorMap" data-map="de_mill_en"></div>
+                  </div>
+                </div>
+                <!-- End Example Germany -->
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="col-md-6">
+                <!-- Example France -->
+                <div class="example-wrap">
+                  <h4 class="example-title">France</h4>
+                  <div class="example">
+                    <div class="height-300" data-plugin="vectorMap" data-map="fr_mill_en"></div>
+                  </div>
+                </div>
+                <!-- End Example France -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Europe -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Europe</h4>
+                  <div class="example">
+                    <div class="height-300" data-plugin="vectorMap" data-map="europe_mill_en"></div>
+                  </div>
+                </div>
+                <!-- End Example Europe -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel jvectormap -->
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

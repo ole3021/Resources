@@ -1,0 +1,121 @@
+
+// Variables
+// ========================================================================
+@blockquote-font-size:             20px;
+@blockquote-color:                 @gray-darker;
+@blockquote-styles-padding:        15px 20px;
+
+@blockquote-success-border:        @brand-success;
+@blockquote-info-border:           @brand-info;
+@blockquote-warning-border:        @brand-warning;
+@blockquote-danger-border:         @brand-danger;
+
+// Component: Typography
+// ========================================================================
+
+// Headings
+// -------------------------
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  text-shadow: @headings-text-shadow;
+}
+
+// Emphasis & misc
+// -------------------------
+
+mark,
+.mark {
+  color: @state-warning-text;
+}
+
+// Drop Cap
+// -------------------------
+
+.drop-cap {
+  color: @gray-base;
+
+  &-reversed {
+    color: @inverse;
+    background-color: @gray-base;
+  }
+}
+
+
+// Text Modifier
+// ========================================================================
+
+// Modifier: `text-primary`
+// -------------------------
+
+.text-primary {
+  .text-emphasis-variant(@brand-primary);
+}
+
+// Modifier: `text-success`
+// -------------------------
+
+.text-success {
+  .text-emphasis-variant(@brand-success);
+}
+
+// Modifier: `text-info`
+// -------------------------
+
+.text-info {
+  .text-emphasis-variant(@brand-info);
+}
+
+// Modifier: `text-warning`
+// -------------------------
+
+.text-warning {
+  .text-emphasis-variant(@brand-warning);
+}
+
+// Modifier: `text-danger`
+// -------------------------
+
+.text-danger {
+  .text-emphasis-variant(@brand-danger);
+}
+
+
+// Component: Blockquote
+// ========================================================================
+
+blockquote {
+  color: @blockquote-color;
+  border-left-width: 2px;
+}
+
+
+.blockquote-reverse {
+  border-right-width: 2px;
+}
+
+.blockquote {
+  border-left-width: 4px;
+
+  &.blockquote-reverse {
+    border-right-width: 4px;
+  }
+
+  &-success {
+    .blockquote-variant(@blockquote-success-border);
+  }
+  &-info {
+    .blockquote-variant(@blockquote-info-border);
+  }
+  &-warning {
+    .blockquote-variant(@blockquote-warning-border);
+  }
+  &-danger {
+    .blockquote-variant(@blockquote-danger-border);
+  }
+}
+
+
+.blockquote-variant(@border) {
+  background-color: fade(@border, 10%);
+  border-color: @border;
+}

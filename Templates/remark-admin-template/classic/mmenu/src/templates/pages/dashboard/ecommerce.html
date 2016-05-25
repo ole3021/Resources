@@ -1,0 +1,288 @@
+---
+title: Ecommerce Dashboard
+body_class: ecommerce_dashboard
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/chartist-js/chartist.css">
+    <link rel="stylesheet" href="{{global}}/vendor/aspieprogress/asPieProgress.css">
+    <link rel="stylesheet" href="{{global}}/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css">
+  {{/content}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/dashboard/ecommerce.css">
+  {{/content}}
+
+
+  {{#content "fonts" mode="prepend"}}
+    <link rel="stylesheet" href="{{global}}/fonts/font-awesome/font-awesome.css">
+  {{/content}}
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/chartist-js/chartist.min.js"></script>
+    <script src="{{global}}/vendor/aspieprogress/jquery-asPieProgress.js"></script>
+    <script src="{{global}}/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.min.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/aspieprogress.js"></script>
+  {{/content}}
+
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/dashboard/ecommerce.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title font-size-26 font-weight-100">Ecommerce Overview</h1>
+      </div>
+      <div class="page-content container-fluid">
+        <div class="row" data-plugin="matchHeight" data-by-row="true">
+          <!-- First Row -->
+          <div class="col-lg-3 col-sm-6 col-xs-12 info-panel">
+            <div class="widget widget-shadow">
+              <div class="widget-content bg-white padding-20">
+                <button type="button" class="btn btn-floating btn-sm btn-warning">
+                  <i class="icon wb-shopping-cart"></i>
+                </button>
+                <span class="margin-left-15 font-weight-400">ORDERS</span>
+                <div class="content-text text-center margin-bottom-0">
+                  <i class="text-danger icon wb-triangle-up font-size-20">
+                          </i>
+                  <span class="font-size-40 font-weight-100">399</span>
+                  <p class="blue-grey-400 font-weight-100 margin-0">+45% From previous month</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-xs-12 info-panel">
+            <div class="widget widget-shadow">
+              <div class="widget-content bg-white padding-20">
+                <button type="button" class="btn btn-floating btn-sm btn-danger">
+                  <i class="icon fa-dollar"></i>
+                </button>
+                <span class="margin-left-15 font-weight-400">INCOM</span>
+                <div class="content-text text-center margin-bottom-0">
+                  <i class="text-success icon wb-triangle-down font-size-20">
+                          </i>
+                  <span class="font-size-40 font-weight-100">$18,628</span>
+                  <p class="blue-grey-400 font-weight-100 margin-0">+45% From previous month</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-xs-12 info-panel">
+            <div class="widget widget-shadow">
+              <div class="widget-content bg-white padding-20">
+                <button type="button" class="btn btn-floating btn-sm btn-success">
+                  <i class="icon wb-eye"></i>
+                </button>
+                <span class="margin-left-15 font-weight-400">VISITORS</span>
+                <div class="content-text text-center margin-bottom-0">
+                  <i class="text-danger icon wb-triangle-up font-size-20">
+                          </i>
+                  <span class="font-size-40 font-weight-100">23,456</span>
+                  <p class="blue-grey-400 font-weight-100 margin-0">+25% From previous month</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-xs-12 info-panel">
+            <div class="widget widget-shadow">
+              <div class="widget-content bg-white padding-20">
+                <button type="button" class="btn btn-floating btn-sm btn-primary">
+                  <i class="icon wb-user"></i>
+                </button>
+                <span class="margin-left-15 font-weight-400">CUSTOMERS</span>
+                <div class="content-text text-center margin-bottom-0">
+                  <i class="text-danger icon wb-triangle-up font-size-20">
+                          </i>
+                  <span class="font-size-40 font-weight-100">4,367</span>
+                  <p class="blue-grey-400 font-weight-100 margin-0">+25% From previous month</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End First Row -->
+
+          <!-- second Row -->
+          <div class="col-ms-12 col-xs-12 col-md-12" id="ecommerceChartView">
+            <div class="widget widget-shadow">
+              <div class="widget-header padding-20">
+                <div class="btn-group dropdown chart-menu">
+                  <button type="button" class="btn btn-outline btn-default dropdown-toggle" data-toggle="dropdown">
+                    PRODUCTS SALES
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu animate" role="menu">
+                    <li role="presentation">
+                      <a href="#" role="menuitem">Sales</a>
+                    </li>
+                    <li role="presentation">
+                      <a href="#" role="menuitem">Total sales</a>
+                    </li>
+                    <li role="presentation">
+                      <a href="#" role="menuitem">profit</a>
+                    </li>
+                  </ul>
+                </div>
+                <ul class="nav nav-pills nav-pills-rounded chart-action" data-plugin="nav-tabs">
+                  <li class="active"><a data-toggle="tab" href="#scoreLineToDay">Day</a></li>
+                  <li><a data-toggle="tab" href="#scoreLineToWeek">Week</a></li>
+                  <li><a data-toggle="tab" href="#scoreLineToMonth">Month</a></li>
+                </ul>
+              </div>
+              <div class="widget-content tab-content bg-white padding-20">
+                <div class="ct-chart tab-pane active" id="scoreLineToDay"></div>
+                <div class="ct-chart tab-pane" id="scoreLineToWeek"></div>
+                <div class="ct-chart tab-pane" id="scoreLineToMonth"></div>
+              </div>
+            </div>
+          </div>
+          <!-- End Second Row -->
+
+          <!-- Third Row -->
+          <!-- Third Left -->
+          <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" id="ecommerceRecentOrder">
+            <div class="widget widget-shadow table-row">
+              <div class="widget-header padding-20">
+                <div class="btn-group dropdown table-menu">
+                  <button type="button" class="btn btn-outline btn-default dropdown-toggle" data-toggle="dropdown">
+                    RECENT ORDER
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu animate" role="menu">
+                    <li role="presentation">
+                      <a href="#" role="menuitem">Sales</a>
+                    </li>
+                    <li role="presentation">
+                      <a href="#" role="menuitem">Total sales</a>
+                    </li>
+                    <li role="presentation">
+                      <a href="#" role="menuitem">profit</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="widget-content bg-white table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Image</th>
+                      <th>Product</th>
+                      <th>Customer</th>
+                      <th>Purchased On</th>
+                      <th>Status</th>
+                      <th>Tracking No#</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <img src="../../../global/products/imac.png" alt="iMac" />
+                      </td>
+                      <td>iMac</td>
+                      <td>Russell</td>
+                      <td>22/08/2015</td>
+                      <td>
+                        <span class="label label-success font-weight-100">Paid</span>
+                      </td>
+                      <td>#98BC85SD84</td>
+
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="../../../global/products/iphone.png" alt="iPhone"
+                        />
+                      </td>
+                      <td>iPhone</td>
+                      <td>Carol</td>
+                      <td>15/07/2015</td>
+                      <td>
+                        <span class="label label-warning font-weight-100">Pending</span>
+                      </td>
+                      <td>#98SA3C9SC</td>
+
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="../../../global/products/applewatch.png" alt="apple_watch"
+                        />
+                      </td>
+                      <td>apple Watch</td>
+                      <td>Austin Pena</td>
+                      <td>10/07/2015</td>
+                      <td>
+                        <span class="label label-success font-weight-100">Paid</span>
+                      </td>
+                      <td>#98BC85SD84</td>
+
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="../../../global/products/macmouse.png" alt="mac_mouse"
+                        />
+                      </td>
+                      <td>mac Mouse</td>
+                      <td>Randy</td>
+                      <td>22/04/2015</td>
+                      <td>
+                        <span class="label label-default font-weight-100">Failed</span>
+                      </td>
+                      <td>#98SA3C9SC</td>
+
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- End Third Left -->
+
+          <!-- Third Right -->
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" id="ecommerceRevenue">
+            <div class="widget widget-shadow text-center padding-top-10">
+              <h3 class="widget-header blue-grey-700 font-size-14">REVENUE</h3>
+              <div class="widget-content bg-white">
+                <div class="ct-chart barChart"></div>
+                <div class="pie-view">
+                  <div class="col-lg-6 col-sm-6 col-xs-6 pie-left text-center">
+                    <h5 class="blue-grey-500 font-size-14 font-weight-100">GROS REVENUE</h5>
+                    <p class="font-size-20 blue-grey-700">
+                      9,362,74
+                    </p>
+                    <div class="pie-progress pie-progress-sm" data-plugin="pieProgress" data-valuemax="100"
+                    data-valuemin="0" data-barcolor="#a58add" data-size="100" data-barsize="4"
+                    data-goal="60" aria-valuenow="60" role="progressbar">
+                      <span class="pie-progress-number">60%</span>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-sm-6 col-xs-6 pie-right text-center">
+                    <h5 class="blue-grey-500 font-size-14 font-weight-100">NET REVENUE</h5>
+                    <p class="font-size-20 blue-grey-700">
+                      6,734,58
+                    </p>
+                    <div class="pie-progress pie-progress-sm" data-plugin="pieProgress" data-valuemax="100"
+                    data-valuemin="0" data-barcolor="#77d6e1" data-size="100" data-barsize="4"
+                    data-goal="78" aria-valuenow="78" role="progressbar">
+                      <span class="pie-progress-number">78%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Third Right -->
+          <!-- End Third Row -->
+        </div>
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

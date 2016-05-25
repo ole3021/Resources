@@ -1,0 +1,35 @@
+
+.site-menubar {
+  background: @site-menubar-bg;
+  color: @site-menubar-color;
+  &.site-menubar-dark {
+    background: @site-menubar-dark-bg;
+  }
+}
+
+.site-menubar-footer {
+  background-color: @site-menubar-footer-bg;
+
+  > a {
+    color: @site-menubar-footer-color;
+    background-color: @site-menubar-footer-link-bg;
+    &:hover,
+    &:focus {
+      background-color: @site-menubar-footer-link-hover-bg;
+    }
+  }
+}
+
+.site-menubar-dark {
+  .site-menubar-footer {
+    background-color: @site-menubar-dark-footer-bg;
+    
+    > a {
+      background-color: @site-menubar-dark-footer-link-bg;
+      &:hover,
+      &:focus {
+        background-color: @site-menubar-dark-footer-link-hover-bg;
+      }
+    }
+  }
+}

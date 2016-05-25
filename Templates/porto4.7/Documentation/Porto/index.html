@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<!-- Basic -->
+		<meta charset="utf-8">
+		<title>Porto - Responsive HTML5 Template - Documentation</title>		
+		<meta name="keywords" content="HTML5 Template" />
+		<meta name="description" content="Porto - Responsive HTML5 Template - Documentation">
+		<meta name="author" content="okler.net">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Web Fonts  -->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.css">
+		<link rel="stylesheet" href="assets/vendor/fontawesome/css/font-awesome.css">
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="assets/css/docs.css">
+
+	</head>
+	<body data-spy="scroll" data-target=".nav-docs" data-offset="50">
+
+		<header>
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container-full">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<div class="top">
+							<ul>
+								<li>
+									<img class="logo" height="30" src="assets/img/logo.png" alt="Porto">
+								</li>
+								<li>
+									<span>Version: <strong class="version">4.7.0</strong></span>
+								</li>
+								<li class="hidden-xs">
+									<span>Created: <strong><i class="fa fa-calendar"></i> 02/15/2013</strong></span>
+								</li>
+								<li class="hidden-xs">
+									<span>Latest Update: <strong><i class="fa fa-calendar"></i> 04/26/2016</strong></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div id="navbar" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a target="_blank" href="http://www.okler.net/forums/forums/template-porto/faqs/">FAQ's</a></li>
+							<li><a target="_blank" href="http://www.okler.net/open-a-ticket/">Open a Ticket</a></li>
+							<li><a target="_blank" href="http://themeforest.net/item/porto-responsive-html5-template/4106987/support?ref=Okler#new_item_support_inquiry_form">Contact Us</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			
+			<div class="jumbotron">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-md-offset-2 logo-main">
+							<img src="assets/img/logo-main.png" alt="Porto">
+						</div>
+						<div class="col-md-4 col-md-offset-1">
+							<h1>Documentation</h1>
+							<ul>
+								<li>
+									<span>Version: <strong class="version">4.7.0</strong></span>
+								</li>
+								<li>
+									<span>Created: <strong><i class="fa fa-calendar"></i> 02/15/2013</strong></span>
+								</li>
+								<li>
+									<span>Latest Update: <strong><i class="fa fa-calendar"></i> 04/26/2016</strong></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 center">
+							<p class="lead">Thank you for purchasing the <strong>#1 selling</strong> HTML Site template on ThemeForest. <br> If you have any questions that are beyond the scope of this help file, please feel free to email via our user page contact form or to our support forum at <a target="_blank" href="http://www.okler.net/">http://www.okler.net.</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<aside id="sidebar" class="sidebar">
+			<div class="nav-docs">
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#tips">Tips</a></li>
+					<li><a href="#files_structure">Files Structure</a></li>
+					<li><a href="#javascript">Javascript</a></li>
+					<li><a href="#html_structure">HTML Structure</a></li>
+					<li><a href="#css_structure">CSS Structure</a></li>
+					<li><a href="#customization_styles">Customization &amp; Styles</a></li>
+					<li><a href="#skin">Skin</a></li>
+					<li><a href="#RTL">RTL</a></li>
+					<li><a href="#icons">Icons</a></li>
+					<li><a href="#lightbox">Lightbox</a></li>
+					<li><a href="#video_background">Video Background</a></li>
+					<li><a href="#newsletter">Newsletter</a></li>
+					<li><a href="#twitter_feed">Twitter Feed</a></li>
+					<li><a href="#effects">Effects</a></li>
+					<li><a href="#admin_extension">Admin Extension</a></li>
+					<li><a href="#source_credits">Source &amp; Credits</a></li>
+					<li><a href="#changelog">Changelog</a></li>
+				</ul>
+			</div>
+		</aside>
+		<div id="main" class="main">
+
+			<section id="tips">
+				<h2>Tips</h2>
+				<div class="alert alert-tip push-top" role="alert">Most of the questions are already answered in the FAQ's: <a target="_blank" href="http://www.okler.net/forums/forums/template-porto/faqs/">http://www.okler.net/forums/forums/template-porto/faqs/</a></div>
+				<div class="alert alert-tip" role="alert"><strong>Due to local security restrictions, some things will not work locally, especially in Chrome. But everything will work once the files have been uploaded to your website/server.</strong></div>
+				<div class="alert alert-tip" role="alert">Use Firebug or Chrome Developer Tools.</div>
+				<div class="alert alert-tip" role="alert">Do not start from scratch, use an existing page from the demo and modify it to learn how it works.</div>
+				<div class="alert alert-tip" role="alert">Getting an error message? Someone might have seen it too, try a google search for a quick fix.</div>
+				<div class="alert alert-tip" role="alert">Explore the live demo for pages ideas and sample code.</div>
+			</section>
+
+			<section id="files_structure">
+				<h2>Files Structure</h2>
+				<ul>
+					<li><code>/HTML</code>
+						<ul>
+							<li><code>/css</code> (Template CSS)</li>
+							<li><code>/fonts</code> (Font Faces, Font Awesome, etc..)</li>
+							<li>
+								<code>/skins</code>
+								<ul>
+									<li><code>default.css</code></li>
+									<li><code>...</code> (Create your own skin)</li>
+								</ul>
+							</li>
+							<li><code>/img</code> (All Images)</li>
+							<li><code>/js</code> (Template JS)</li>
+							<li><code>/views</code> (JS to run in specific pages. I.E: Home or Contact Us)</li>
+							<li><code>/master</code> (You don't need to include that folder in your project, it has only the Style Switcher functions)</li>
+							<li><code>/php</code> (PHP Helpers - I.E: Contact Us form.)</li>
+							<li><code>/vendor</code> (All external libs. We keep all of them in this folder to make updates easily.)</li>
+							<li><code>/video</code> (All Videos)</li>
+						</li>
+					</li>
+				</ul>
+			</section>
+
+			<section id="javascript">
+				<h2>Javascript</h2>
+
+				<p>It's possible to change the JS settings by extending the defaults from the template, that way is so much easier to update the theme changing only one JS file.<br>Here are a few samples on how to do that:</p><br>
+
+				<h4>Changing Settings</h4><br>
+
+				1) <strong>Changing the "scroll to top" icon:</strong>
+				(js/custom.js)
+<pre>
+$.extend(theme.PluginScrollToTop.defaults, {
+	iconClass: 'fa fa-chevron-up'
+});
+</pre>
+				<br><br>
+
+				2) <strong>Changing the "word rotate" default delay:</strong>
+				(js/custom.js)
+<pre>
+$.extend(theme.PluginWordRotate.defaults, {
+	delay: 3000
+});
+</pre>
+				<br><br>
+
+				You can find all the defaults of the plugins and partials in the file js/theme.js as you can see here:
+				<br><img class="img-responsive" src="assets/img/20141001-3wm-114kb.jpg" />
+
+				<br><br>
+
+				<h4>Changing Plugins Options</h4><br>
+
+				The template includes a very simple way to configure the elements that are initialized automatically, such as the sliders, you just need to put the settings in the "data-plugin-options" attribute, as you can see below:
+
+<pre>
+&lt;div class=&quot;slider&quot; data-plugin-revolution-slider data-plugin-options=&#39;{&quot;startheight&quot;: 700}&#39;&gt;
+</pre>
+
+				<br>It works the same way for most of the plugins included in the template: owlCarousel, Word Rotate, Twitter Feed, etc...
+
+				<br><br><br>
+
+				<strong>If you want to disable the auto initialization you can just add a class "manual" or remove the data-plugin-* attribute:</strong>
+
+<pre>
+&lt;div class=&quot;slider manual&quot; id=&quot;myRevolutionSlider&quot;&gt;
+</pre>
+
+				<br>So now you can initialize that using the standard JS mode:
+
+<pre>
+$(document).ready(function() {
+	$('#myRevolutionSlider').revolution({
+		delay:9000,
+		startwidth:960,
+		...
+		...
+	});
+});
+</pre>
+
+				<br><br>
+
+				<h4>Remove/Disable a Plugin or Partial</h4><br>
+
+				If you want to remove/disable a plugin or partial that has a "initialize" function completely, follow this example:
+				(js/custom.js)
+<pre>
+theme.PluginScrollToTop.initialize = function() {};
+</pre>
+
+				<br>You can find all the available plugins and partials in the file js/theme.init.js as you can see here:
+				<br><img class="img-responsive" src="assets/img/20141001-s5i-168kb.jpg" />
+
+				<br><br><br>
+
+				<h4>Manually Initializing a Plugin</h4>
+
+				Some of the plugins/elements are initialized automatically, if you want to disabled that and call the plugin via Javascript, follow these steps:
+				 
+
+				<br><br>FROM (HTML):
+
+<pre>
+&lt;div class=&quot;owl-carousel&quot; data-plugin-options=&#39;{&quot;items&quot;: 6, &quot;singleItem&quot;: false, &quot;autoPlay&quot;: true}&#39;&gt;
+</pre>
+
+				TO (HTML):
+
+<pre>
+&lt;div class=&quot;owl-carousel manual&quot; id=&quot;owl-example&quot;&gt;
+</pre>
+
+				(Javascript):
+<pre>
+$(document).ready(function() {
+	$("#owl-example").owlCarousel({
+		"items": 6,
+		"singleItem": false,
+		"autoPlay": true
+	});
+});
+</pre>
+
+			</section>
+
+			<section id="html_structure">
+				<h2>HTML Structure</h2>
+				<p>The template is based on <strong>Bootstrap 3</strong> Framework - <a href="http://getbootstrap.com">http://getbootstrap.com</a></p>
+				<p>Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases.</p>
+				<br><br>
+<pre>
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-md-12&quot;&gt;
+		Level 1 column
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;col-md-6&quot;&gt;Level 2&lt;/div&gt;
+			&lt;div class=&quot;col-md-6&quot;&gt;Level 2&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<br>
+<p>If you need more information, please visit this site: <a href="http://getbootstrap.com/css/#grid">http://getbootstrap.com/css/#grid</a></p>
+
+			</section>
+
+			<section id="css_structure">
+				<h2>CSS Structure</h2>
+				<p>The organization of the CSS is one of our priorities.</p>
+				<p>These are the CSS file we're using in the template:</p><br>
+				<ul>
+					<li><code>theme.css</code> - (The basic layout structure styles)</li>
+					<li><code>theme-elements.css</code> - (Elements such as sliders, boxes, titles, etc...)</li>
+					<li><code>theme-shop.css</code> - (Shop Pages styles)</li>
+					<li><code>theme-blog.css</code> (Blog Pages styles)</li>
+					<li><code>theme-animate.css</code> (CSS Animations)</li>
+					<li><code>custom.css</code> (Add all customizations into this file)</li>
+					<li><code>ie.css</code> (Internet Explorer fixes)</li>
+				</ul>
+
+				<br><br>
+
+				<h3>CSS Helper Classes</h3><br>
+				<h4>Text Helpers</h4><br>
+				<table width="100%" class="table table-bordered table-striped">
+					<thead>
+						<tr>
+							<th>
+								Class</th>
+							<th>
+								Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								.text-xs</td>
+							<td>
+								Change text font-size</td>
+						</tr>
+						<tr>
+							<td>
+								.text-sm</td>
+							<td>
+								Change text font-size</td>
+						</tr>
+						<tr>
+							<td>
+								.text-md</td>
+							<td>
+								Change text font-size</td>
+						</tr>
+						<tr>
+							<td>
+								.text-lg</td>
+							<td>
+								Change text font-size</td>
+						</tr>
+						<tr>
+							<td>
+								.text-xl</td>
+							<td>
+								Change text font-size</td>
+						</tr>
+						<tr>
+							<td>
+								.text-primary</td>
+							<td>
+								Changes text color to the primary color</td>
+						</tr>
+						<tr>
+							<td>
+								.text-primary-inverse</td>
+							<td>
+								Changes text color to the primary color inverse</td>
+						</tr>
+						<tr>
+							<td>
+								.text-dark</td>
+							<td>
+								Changes text color to dark version</td>
+						</tr>
+						<tr>
+							<td>
+								.text-dark-inverse</td>
+							<td>
+								Changes text color to dark version inverse</td>
+						</tr>
+						<tr>
+							<td>
+								.text-weight-light</td>
+							<td>
+								Change text weight</td>
+						</tr>
+						<tr>
+							<td>
+								.text-weight-normal</td>
+							<td>
+								Change text weight</td>
+						</tr>
+						<tr>
+							<td>
+								.text-weight-semibold</td>
+							<td>
+								Change text weight</td>
+						</tr>
+						<tr>
+							<td>
+								.text-weight-bold</td>
+							<td>
+								Change text weight</td>
+						</tr>
+						<tr>
+							<td>
+								.text-uppercase</td>
+							<td>
+								Uppercase text</td>
+						</tr>
+						<tr>
+							<td>
+								.text-lowercase</td>
+							<td>
+								Lowercase text</td>
+						</tr>
+						<tr>
+							<td>
+								.text-capitalize</td>
+							<td>
+								Capitalize text</td>
+						</tr>
+					</tbody>
+				</table>
+				<br><h4>Spacements</h4>
+				<table width="100%" class="table table-bordered table-striped">
+					<thead>
+						<tr>
+							<th>
+								Class</th>
+							<th>
+								Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								.m-none</td>
+							<td>
+								Changes all margins to none</td>
+						</tr>
+						<tr>
+							<td>
+								.m-auto</td>
+							<td>
+								Changes margin to 0 auto</td>
+						</tr>
+						<tr>
+							<td>
+								.m-xs</td>
+							<td>
+								Changes all margins</td>
+						</tr>
+						<tr>
+							<td>
+								.m-sm</td>
+							<td>
+								Changes all margins</td>
+						</tr>
+						<tr>
+							<td>
+								.m-md</td>
+							<td>
+								Changes all margins</td>
+						</tr>
+						<tr>
+							<td>
+								.m-lg</td>
+							<td>
+								Changes all margins</td>
+						</tr>
+						<tr>
+							<td>
+								.m-xl</td>
+							<td>
+								Changes all margins</td>
+						</tr>
+						<tr>
+							<td>
+								.m-xlg</td>
+							<td>
+								Changes all margins</td>
+						</tr>
+						<tr>
+							<td>
+								.mt-none</td>
+							<td>
+								Changes margin-top to none</td>
+						</tr>
+						<tr>
+							<td>
+								.mt-xs</td>
+							<td>
+								Changes margin-top</td>
+						</tr>
+						<tr>
+							<td>
+								.mt-sm</td>
+							<td>
+								Changes margin-top</td>
+						</tr>
+						<tr>
+							<td>
+								.mt-md</td>
+							<td>
+								Changes margin-top</td>
+						</tr>
+						<tr>
+							<td>
+								.mt-lg</td>
+							<td>
+								Changes margin-top</td>
+						</tr>
+						<tr>
+							<td>
+								.mt-xl</td>
+							<td>
+								Changes margin-top</td>
+						</tr>
+						<tr>
+							<td>
+								.mt-xlg</td>
+							<td>
+								Changes margin-top</td>
+						</tr>
+						<tr>
+							<td>
+								.mb-none</td>
+							<td>
+								Changes margin-bottom to none</td>
+						</tr>
+						<tr>
+							<td>
+								.mb-xs</td>
+							<td>
+								Changes margin-bottom</td>
+						</tr>
+						<tr>
+							<td>
+								.mb-sm</td>
+							<td>
+								Changes margin-bottom</td>
+						</tr>
+						<tr>
+							<td>
+								.mb-md</td>
+							<td>
+								Changes margin-bottom</td>
+						</tr>
+						<tr>
+							<td>
+								.mb-lg</td>
+							<td>
+								Changes margin-bottom</td>
+						</tr>
+						<tr>
+							<td>
+								.mb-xl</td>
+							<td>
+								Changes margin-bottom</td>
+						</tr>
+						<tr>
+							<td>
+								.mb-xlg</td>
+							<td>
+								Changes margin-bottom</td>
+						</tr>
+						<tr>
+							<td>
+								.mr-none</td>
+							<td>
+								Changes margin-left to none</td>
+						</tr>
+						<tr>
+							<td>
+								.ml-xs</td>
+							<td>
+								Changes margin-left</td>
+						</tr>
+						<tr>
+							<td>
+								.ml-sm</td>
+							<td>
+								Changes margin-left</td>
+						</tr>
+						<tr>
+							<td>
+								.ml-md</td>
+							<td>
+								Changes margin-left</td>
+						</tr>
+						<tr>
+							<td>
+								.ml-lg</td>
+							<td>
+								Changes margin-left</td>
+						</tr>
+						<tr>
+							<td>
+								.ml-xl</td>
+							<td>
+								Changes margin-left</td>
+						</tr>
+						<tr>
+							<td>
+								.ml-xlg</td>
+							<td>
+								Changes margin-left</td>
+						</tr>
+						<tr>
+							<td>
+								.mr-none</td>
+							<td>
+								Changes margin-right to none</td>
+						</tr>
+						<tr>
+							<td>
+								.mr-xs</td>
+							<td>
+								Changes margin-right</td>
+						</tr>
+						<tr>
+							<td>
+								.mr-sm</td>
+							<td>
+								Changes margin-right</td>
+						</tr>
+						<tr>
+							<td>
+								.mr-md</td>
+							<td>
+								Changes margin-right</td>
+						</tr>
+						<tr>
+							<td>
+								.mr-lg</td>
+							<td>
+								Changes margin-right</td>
+						</tr>
+						<tr>
+							<td>
+								.mr-xl</td>
+							<td>
+								Changes margin-right</td>
+						</tr>
+						<tr>
+							<td>
+								.mr-xlg</td>
+							<td>
+								Changes margin-right</td>
+						</tr>
+						<tr>
+							<td>
+								.p-none</td>
+							<td>
+								Changes all paddings to none</td>
+						</tr>
+						<tr>
+							<td>
+								.p-auto</td>
+							<td>
+								Changes padding to 0 auto</td>
+						</tr>
+						<tr>
+							<td>
+								.p-xs</td>
+							<td>
+								Changes all paddings</td>
+						</tr>
+						<tr>
+							<td>
+								.p-sm</td>
+							<td>
+								Changes all paddings</td>
+						</tr>
+						<tr>
+							<td>
+								.p-md</td>
+							<td>
+								Changes all paddings</td>
+						</tr>
+						<tr>
+							<td>
+								.p-lg</td>
+							<td>
+								Changes all paddings</td>
+						</tr>
+						<tr>
+							<td>
+								.p-xl</td>
+							<td>
+								Changes all paddings</td>
+						</tr>
+						<tr>
+							<td>
+								.p-xlg</td>
+							<td>
+								Changes all paddings</td>
+						</tr>
+						<tr>
+							<td>
+								.pt-none</td>
+							<td>
+								Changes padding-top to none</td>
+						</tr>
+						<tr>
+							<td>
+								.pt-xs</td>
+							<td>
+								Changes padding-top</td>
+						</tr>
+						<tr>
+							<td>
+								.pt-sm</td>
+							<td>
+								Changes padding-top</td>
+						</tr>
+						<tr>
+							<td>
+								.pt-md</td>
+							<td>
+								Changes padding-top</td>
+						</tr>
+						<tr>
+							<td>
+								.pt-lg</td>
+							<td>
+								Changes padding-top</td>
+						</tr>
+						<tr>
+							<td>
+								.pt-xl</td>
+							<td>
+								Changes padding-top</td>
+						</tr>
+						<tr>
+							<td>
+								.pt-xlg</td>
+							<td>
+								Changes padding-top</td>
+						</tr>
+						<tr>
+							<td>
+								.pb-none</td>
+							<td>
+								Changes padding-bottom to none</td>
+						</tr>
+						<tr>
+							<td>
+								.pb-xs</td>
+							<td>
+								Changes padding-bottom</td>
+						</tr>
+						<tr>
+							<td>
+								.pb-sm</td>
+							<td>
+								Changes padding-bottom</td>
+						</tr>
+						<tr>
+							<td>
+								.pb-md</td>
+							<td>
+								Changes padding-bottom</td>
+						</tr>
+						<tr>
+							<td>
+								.pb-lg</td>
+							<td>
+								Changes padding-bottom</td>
+						</tr>
+						<tr>
+							<td>
+								.pb-xl</td>
+							<td>
+								Changes padding-bottom</td>
+						</tr>
+						<tr>
+							<td>
+								.pb-xlg</td>
+							<td>
+								Changes padding-bottom</td>
+						</tr>
+						<tr>
+							<td>
+								.pr-none</td>
+							<td>
+								Changes padding-left to none</td>
+						</tr>
+						<tr>
+							<td>
+								.pl-xs</td>
+							<td>
+								Changes padding-left</td>
+						</tr>
+						<tr>
+							<td>
+								.pl-sm</td>
+							<td>
+								Changes padding-left</td>
+						</tr>
+						<tr>
+							<td>
+								.pl-md</td>
+							<td>
+								Changes padding-left</td>
+						</tr>
+						<tr>
+							<td>
+								.pl-lg</td>
+							<td>
+								Changes padding-left</td>
+						</tr>
+						<tr>
+							<td>
+								.pl-xl</td>
+							<td>
+								Changes padding-left</td>
+						</tr>
+						<tr>
+							<td>
+								.pl-xlg</td>
+							<td>
+								Changes padding-left</td>
+						</tr>
+						<tr>
+							<td>
+								.pr-none</td>
+							<td>
+								Changes padding-right to none</td>
+						</tr>
+						<tr>
+							<td>
+								.pr-xs</td>
+							<td>
+								Changes padding-right</td>
+						</tr>
+						<tr>
+							<td>
+								.pr-sm</td>
+							<td>
+								Changes padding-right</td>
+						</tr>
+						<tr>
+							<td>
+								.pr-md</td>
+							<td>
+								Changes padding-right</td>
+						</tr>
+						<tr>
+							<td>
+								.pr-lg</td>
+							<td>
+								Changes padding-right</td>
+						</tr>
+						<tr>
+							<td>
+								.pr-xl</td>
+							<td>
+								Changes padding-right</td>
+						</tr>
+						<tr>
+							<td>
+								.pr-xlg</td>
+							<td>
+								Changes padding-right</td>
+						</tr>
+					</tbody>
+				</table>
+				<br>
+				<h4>Others</h4>
+				<table width="100%" class="table table-bordered table-striped">
+					<thead>
+						<tr>
+							<th>
+								Class</th>
+							<th>
+								Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								.ib</td>
+							<td>
+								Changes display to inline-block and set vertical-align to top</td>
+						</tr>
+						<tr>
+							<td>
+								.va-middle</td>
+							<td>
+								Changes vertical-align to middle</td>
+						</tr>
+						<tr>
+							<td>
+								.bg-primary</td>
+							<td>
+								Changes background and text color to inverse color of background</td>
+						</tr>
+						<tr>
+							<td>
+								.bg-secondary</td>
+							<td>
+								Changes background and text color to inverse color of background</td>
+						</tr>
+						<tr>
+							<td>
+								.bg-tertiary</td>
+							<td>
+								Changes background and text color to inverse color of background</td>
+						</tr>
+						<tr>
+							<td>
+								.bg-quartenary</td>
+							<td>
+								Changes background and text color to inverse color of background</td>
+						</tr>
+						<tr>
+							<td>
+								.bg-success</td>
+							<td>
+								Changes background and text color to inverse color of background</td>
+						</tr>
+						<tr>
+							<td>
+								.bg-warning</td>
+							<td>
+								Changes background and text color to inverse color of background</td>
+						</tr>
+						<tr>
+							<td>
+								.bg-danger</td>
+							<td>
+								Changes background and text color to inverse color of background</td>
+						</tr>
+						<tr>
+							<td>
+								.bg-info</td>
+							<td>
+								Changes background and text color to inverse color of background</td>
+						</tr>
+						<tr>
+							<td>
+								.bg-dark</td>
+							<td>
+								Changes background and text color to inverse color of background</td>
+						</tr>
+						<tr>
+						</tr>
+					</tbody>
+				</table>
+
+			</section>
+
+			<section id="customization_styles">
+				<h2>Customization &amp; Styles</h2>
+				<br>
+				<h4>Colors</h4>
+				<p>
+					The style switcher was made to support unlimited skin colors, for that we use <strong>Less </strong>(<a href="http://www.lesscss.org/">http://www.lesscss.org/</a>) to process the CSS dinamically in the demo and show the color right away.
+					<br>You don't need to use LESS in your project, after you done customizing your skin you may want to grab the generated code and save it in a file in the folder:<strong> /css/skins/(skin-name).css</strong><br>
+					 &nbsp;
+					<br><a href="#skin">Learn More: How to change the Skin</a><br><br>
+				</p>
+				<h4>Layout Style (Normal/Boxed)</h4>
+				<p> The template has two different layout modes, Wide and Boxed. The wide one is the default option, if you want to use the Boxed version, add the following class in the &lt;html&gt;:
+				</p>
+<pre>
+&lt;html class=&quot;boxed&quot;&gt;
+</pre>
+					<br>
+					 You can also customize the background color or image.<br>
+					 &nbsp;
+				</p>
+				<h4>Background Color (Light/Dark)</h4>
+				<p> The template has two different background colors, Light and Dark. The light one is the default option, if you want to use the Dark version, add the following class in the &lt;html&gt;:
+				</p>
+<pre>
+&lt;html class=&quot;dark&quot;&gt;
+</pre>
+					 &nbsp;
+				</p>
+				<h4>Fonts</h4>
+				<p> To change the embedded font, please take a look in the head part of the website and you will find this tag:
+				</p>
+<pre>
+&lt;link href=&quot;http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+</pre>
+					 To change the font, first go to http://www.google.com/webfonts choose a font and use the generated code.
+				</p><br>
+
+			</section>
+
+
+			<section id="skin">
+				<h2>Skin</h2>
+				<p>You can generate your own skin color:</p> <br><br> <img src="assets/img/20150729-3sj-435kb.jpg" /><br><br>
+
+				<img src="assets/img/20130227-3jo-39kb.jpg" /><br><br>
+
+				<p>Copy that and save as a css skin file (css/skins/default.css)</p>
+
+			</section>
+
+			<section id="RTL">
+				<h2>RTL</h2>
+				<p>To activate the RTL mode please follow the steps:</p><br>
+
+				1) Add the "dir" attribute in the HTML tag:
+				<br><img src="assets/img/20150102-4g7-48kb.jpg" class="img-responsive" /><br><br>
+
+				2) Add the Bootstrap RTL version after the default Bootstrap file in the HTML:
+
+				<br><img src="assets/img/20150102-839-169kb.jpg" class="img-responsive" /><br><br>
+
+				3) <strong>Copy all the files</strong> from the folder: <code>HTML/master/rtl/css</code> to the default css folder <code>HTML/css</code>.
+
+				4) Add the "rtl-" prefix in the files:
+
+				<br><img src="assets/img/2015-05-14_14-16.jpg" class="img-responsive" /><br><br>
+
+			</section>
+
+			<section id="icons">
+				<h2>Icons</h2>
+				<p><strong>Font Awesome</strong> is a @font-face iconset that you can change size and color of the icons using CSS.<br><br>
+					If you need more information, please visit this site: <a href="http://fontawesome.io/">http://fontawesome.io/</a>
+				</p>
+<pre>
+&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;
+...
+</pre>
+			</section>
+
+
+
+			<section id="lightbox">
+				<h2>Lightbox</h2>
+				<p>The lightbox is driven by <strong>Magnific Popup </strong>script.</p>
+
+<br><strong>Here's an example of usage:</strong></p>
+
+<pre>
+&lt;a class=&quot;img-thumbnail lightbox&quot; title=&quot;Open Lightbox&quot; href=&quot;img/projects/project-4.jpg&quot; data-plugin-options=&#39;{&quot;type&quot;:&quot;image&quot;}&#39;&gt;
+	&lt;img class=&quot;img-responsive&quot; src=&quot;img/projects/project-4.jpg&quot;&gt;
+&lt;/a&gt;
+</pre>
+
+				<p>For more information check the <a target="_blank" href="http://dimsemenov.com/plugins/magnific-popup/documentation.html">documentation</a>.</p>
+				<p><a target="_blank" href="http://dimsemenov.com/plugins/magnific-popup/">http://dimsemenov.com/plugins/magnific-popup/</a></p>
+			</section>
+
+			<section id="video_background">
+				<h2>Video Background</h2>
+
+<p>The video background are driven by the Vide Plugin - <a target="_blank" href="https://github.com/VodkaBears/Vide">https://github.com/VodkaBears/Vide</a><br>
+<br>
+<strong>Here's an example of usage:</strong></p>
+
+<pre>
+&lt;section class=&quot;video&quot; data-video-path=&quot;video/dark&quot; data-plugin-video-background data-plugin-options=&#39;{&quot;posterType&quot;: &quot;jpg&quot;, &quot;position&quot;: &quot;50% 50%&quot;}&#39;&gt;
+</pre>
+
+<p>
+Prepare your video in several formats like '.webm', '.mp4' for cross browser compatability, also add a poster with <code>.jpg</code>, <code>.png</code> or <code>.gif</code> extension and set in the attribute data-video-path.</p>
+
+			</section>
+
+			<section id="newsletter">
+				<h2>Newsletter</h2>
+
+				If you want to use the newsletter you need to have a MailChimp account (the funcional Newsletter works only with MailChimp - <a href="http://mailchimp.com/" rel="nofollow">http://mailchimp.com/</a>).
+
+				Once you have the MailChimp account you have to configure the subscription file with your APIKey, ListID and set the Datacenter. Open the file <code>/php/newsletter-subscribe.php</code> and change the variables:<br><br>
+
+<pre>
+$apiKey = 'your-api-key';
+</pre>
+-How get your Mailchimp API KEY - <a href="http://kb.mailchimp.com/article/where-can-i-find-my-api-key" rel="nofollow">http://kb.mailchimp.com/article/where-can-i-find-my-api-key</a>
+<br><br><br>
+<pre>
+$listId = 'your-list-id';
+</pre>
+				- How to get your Mailchimp LIST ID - <a href="http://kb.mailchimp.com/article/how-can-i-find-my-list-id" rel="nofollow">http://kb.mailchimp.com/article/how-can-i-find-my-list-id</a>
+
+			</section>
+
+			<section id="twitter_feed">
+				<h2>Twitter Feed</h2>
+				1) Open up the HTML files and put your twitter username.
+				<br><br><img class="img-responsive" src="assets/img/20141001-c40-78kb.jpg" />
+
+				<br><br>2) Go to: <strong>https://apps.twitter.com/</strong>
+
+				<br><br>3) Click on "Create new APP":
+				<br><img class="img-responsive" src="assets/img/20140416-ck6-11kb.jpg" />
+
+				<br><br>4) Enter the information about your website:
+				<br><img class="img-responsive" src="assets/img/20140416-kgh-63kb.jpg" />
+				<br><img class="img-responsive" src="assets/img/20140416-uou-100kb.jpg" />
+
+				<br><br>5) Click in the API Keys tab and in the button <strong>"Create my access token"</strong>:
+				<br><img class="img-responsive" src="assets/img/20140416-w1w-71kb.jpg" />
+
+				<strong>(Wait 1 minute and refresh the page)</strong>
+
+				<br><br>6) Get the keys and put in the file: <strong>php/twitter-feed.php</strong>:
+				<br><img class="img-responsive" src="assets/img/20140416-3g1-137kb.jpg" />
+
+			</section>
+
+			<section id="effects">
+				<h2>Effects</h2>
+				<p>You can add some Animations / Transitions to the elements which fires when an element scrolls into view, it's pretty simple to use and you can add it in any element.<br>
+					&nbsp;</p>
+				<p><strong>Usage:</strong></p>
+
+<pre>
+&lt;div data-appear-animation=&quot;bounceIn&quot; data-appear-animation-delay=&quot;200&quot;&gt;
+...
+&lt;/div&gt;
+</pre>
+
+				<br><p>Heads up: The Attribute <strong>data-appear-animation-delay</strong> is <strong>Optional </strong>and is set in <strong>Miliseconds</strong>.</p>
+				<p>The animation can be set to:</p>
+				<br><ul>
+					<li>flash</li>
+					<li>shake</li>
+					<li>bounce</li>
+					<li>tada</li>
+					<li>swing</li>
+					<li>wobble</li>
+					<li>wiggle</li>
+					<li>pulse</li>
+					<li>fadeIn</li>
+					<li>fadeInUp</li>
+					<li>fadeInDown</li>
+					<li>fadeInLeft</li>
+					<li>fadeInRight</li>
+					<li>fadeInUpBig</li>
+					<li>fadeInDownBig</li>
+					<li>fadeInLeftBig</li>
+					<li>fadeInRightBig</li>
+					<li>bounceIn</li>
+					<li>bounceInUp</li>
+					<li>bounceInDown</li>
+					<li>bounceInLeft</li>
+					<li>bounceInRight</li>
+					<li>rotateIn</li>
+					<li>rotateInUpLeft</li>
+					<li>rotateInDownLeft</li>
+					<li>rotateInUpRight</li>
+					<li>rotateInDownRight</li>
+				</ul>
+			</section>
+
+			<section id="admin_extension">
+				<h2>Admin Extension</h2>
+				<a target="_blank" href="http://www.okler.net/forums/topic/how-to-integrate-porto-admin-extension-on-porto/">View Topic: How to integrate Porto Admin Extension on Porto</a>
+			</section>
+
+			<section id="source_credits">
+				<h2>Source &amp; Credits</h2><br>
+				<div role="alert" class="alert alert-warning">
+					The images included in preview are for demonstration purposes and should always be replaced with your own work.
+				</div>
+				<ul>
+					<li>
+						<strong>Images:</strong>
+						<ul>
+							<li>Photodune: <a href="http://photodune.net/" target="_blank">http://photodune.net/</a></li>
+							<li>Subtle Patterns: <a href="http://subtlepatterns.com/<br><br>" target="_blank">http://subtlepatterns.com/<br><br></a></li>
+						</ul>
+					</li>
+					<li>
+						<strong>Fonts:</strong>
+						<ul>
+							<li>Google Fonts - <a href="http://www.google.com/webfonts" target="_blank">http://www.google.com/webfonts</a></li>
+							<li>Icons Font-face - <a href="http://fontawesome.io/<br><br>" target="_blank">http://fontawesome.io/<br><br></a></li>
+						</ul>
+					</li>
+					<li>
+						<strong>Scripts:</strong>
+						<ul>
+							<li>jQuery - <a href="http://www.jquery.com/" target="_blank">http://www.jquery.com/</a></li>
+							<li>Bootstrap 3 - <a href="http://getbootstrap.com/" target="_blank">http://getbootstrap.com/</a></li>
+							<li>Revolution Slider - <a href="http://codecanyon.net/item/slider-revolution-responsive-jquery-plugin/2580848" target="_blank">http://codecanyon.net/item/slider-revolution-responsive-jquery-plugin/2580848</a></li>
+							<li>Nivo Slider - <a href="http://dev7studios.com/nivo-slider/" target="_blank">http://dev7studios.com/nivo-slider/</a></li>
+							<li>Isotope Jquery plugin - <a href="http://isotope.metafizzy.co" target="_blank">http://isotope.metafizzy.co</a></li>
+							<li>Modernizr - <a href="http://modernizr.com/" target="_blank">http://modernizr.com/</a></li>
+							<li>jQuery gMap 2 - Google Maps API V3 - <a href="http://labs.mario.ec/jquery-gmap/" target="_blank">http://labs.mario.ec/jquery-gmap/</a></li>
+							<li>Owl Carousel - <a href="http://www.owlgraphic.com/owlcarousel2/" target="_blank">http://www.owlgraphic.com/owlcarousel2/</a></li>
+							<li>Respond.js - <a href="https://github.com/scottjehl/Respond" target="_blank">https://github.com/scottjehl/Respond</a></li>
+							<li>Twitter JS Api - <a href="http://code.google.com/p/twitterjs/" target="_blank">http://code.google.com/p/twitterjs/</a></li>
+							<li>Jquery Flickr Plugin - <a href="http://www.newmediacampaigns.com/page/jquery-flickr-plugin" target="_blank">http://www.newmediacampaigns.com/page/jquery-flickr-plugin</a></li>
+							<li>Jquery Easing - <a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">http://gsgd.co.uk/sandbox/jquery/easing/</a></li>
+							<li>Magnific Popup - <a href="http://dimsemenov.com/plugins/magnific-popup/" target="_blank">http://dimsemenov.com/plugins/magnific-popup/</a></li>
+							<li>Jquery Validate - <a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/" target="_blank">http://bassistance.de/jquery-plugins/jquery-plugin-validation/</a></li>
+							<li>Jquery Cookie - <a href="https://github.com/carhartl/jquery-cookie" target="_blank">https://github.com/carhartl/jquery-cookie</a></li>
+							<li>Stellar.JS- <a href="http://markdalgleish.com/projects/stellar.js/" target="_blank">http://markdalgleish.com/projects/stellar.js/</a></li>
+							<li>Jquery Appear - <a href="https://github.com/bas2k/jquery.appear/" target="_blank">https://github.com/bas2k/jquery.appear/</a></li>
+							<li>Vide - <a href="https://github.com/VodkaBears/Vide" target="_blank">https://github.com/VodkaBears/Vide</a></li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section id="changelog">
+				<h2>Changelog</h2>
+				<a target="_blank" href="http://www.okler.net/forums/topic/porto-changelog/">View Changelog</a>
+			</section>
+		</div>
+
+		<!-- Vendor -->
+		<script src="assets/vendor/jquery/jquery.js"></script>
+		<script src="assets/vendor/bootstrap/bootstrap.js"></script>
+		<script src="assets/js/docs.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,23 @@
+@import "vars.less";
+@mfglabs-font-path: '.';
+@mfglabs-css-prefix:     ml;
+@mfglabs-font-family:    'MFG Labs iconset';
+
+@font-face {
+  font-family: '@{mfglabs-font-family}';
+  src: url('@{mfglabs-font-path}/mfglabsiconset-webfont.eot');
+  src: url('@{mfglabs-font-path}/mfglabsiconset-webfont.eot?#iefix') format('embedded-opentype'),
+       url('@{mfglabs-font-path}/mfglabsiconset-webfont.woff') format('woff'),
+       url('@{mfglabs-font-path}/mfglabsiconset-webfont.ttf') format('truetype'),
+       url('@{mfglabs-font-path}/mfglabsiconset-webfont.svg#mfg_labs_iconsetregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="@{mfglabs-css-prefix}-"],
+[class*=" @{mfglabs-css-prefix}-"] {
+  font-family: '@{mfglabs-font-family}';
+  .make-icon();
+}
+
+@import "_mfglabs-icons.less";

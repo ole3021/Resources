@@ -1,0 +1,46 @@
+---
+title: 503
+body_class: page-error page-error-503 layout-full
+---
+
+{{#extend "layout-blank"}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/pages/errors.css">
+  {{/content}}
+
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition vertical-align text-center" data-animsition-in="fade-in"
+    data-animsition-out="fade-out">
+      <div class="page-content vertical-align-middle">
+        <header>
+          <h1 class="animation-slide-top">503</h1>
+          <p>Page Not Found !</p>
+        </header>
+        <p class="error-advise">YOU SEEM TO BE TRYING TO FIND HIS WAY HOME</p>
+        <a class="btn btn-primary btn-round" href="{{dest '/index.html'}}">GO TO HOME PAGE</a>
+
+        <footer class="page-copyright">
+          <p>WEBSITE BY amazingSurge</p>
+          <p>© 2015. All RIGHT RESERVED.</p>
+          <div class="social">
+            <a href="javascript:void(0)">
+              <i class="icon bd-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0)">
+              <i class="icon bd-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0)">
+              <i class="icon bd-dribbble" aria-hidden="true"></i>
+            </a>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

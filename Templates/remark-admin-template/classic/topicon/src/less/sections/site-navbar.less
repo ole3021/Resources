@@ -1,0 +1,99 @@
+
+.site-navbar {
+  // @padding: %(~"calc((100% - %d) / 2  + 10px)", @site-container-width-lg);
+  // padding-left: @padding !important;
+  // padding-right: @padding !important;
+
+  // .navbar-right {
+  //   margin-right: 0;
+  // }
+
+  .navbar-header {
+    .navbar-brand-logo {
+      height: 24px;
+    }
+
+    .navbar-brand-logo-normal {
+      display: none;
+    }
+
+    .navbar-brand {
+      font-family: @brand-font-family;
+      cursor: pointer;
+    }
+
+    @media (min-width: @screen-sm-min) {
+      width: @brand-width;
+    }
+  }
+
+  .navbar-container {
+    @media (min-width: @screen-sm-min) {
+      margin-left: @brand-width;
+
+      #toggleMenubar {
+        display: none;
+      }
+    }
+
+    background-color: transparent;
+
+    @media (max-width: @screen-xs-max) {
+      background-color: @inverse;
+    }
+  }
+
+  &.navbar-inverse {
+    .navbar-header {
+      .hamburger {
+        &:before,
+        &:after,
+        .hamburger-bar {
+          background-color: @site-navbar-header-color;
+        }
+      }
+
+      .navbar-brand-logo {
+        &-normal {
+          display: inline-block;
+        }
+
+        &-special {
+          display: none;
+        }
+      }
+    }
+
+    .navbar-container {
+      background-color: transparent;
+      @media (max-width: @screen-xs-max) {
+        background-color: @inverse;
+      }
+    }
+
+    @media (max-width: @screen-xs-max) {
+      .navbar-toolbar > li > a {
+        color: inherit;
+      }
+    }
+  }
+}
+
+.site-navbar {
+  @media screen and (min-width: @screen-xlg) {
+    padding-left: %(~"calc((100% - %d) / 2 + 10px)", @site-container-width-xlg) !important;
+    padding-right: %(~"calc((100% - %d) / 2 + 30px)", @site-container-width-xlg) !important;
+  }
+  @media (min-width: @screen-lg) and (max-width: @screen-lg-max) {
+    padding-left: %(~"calc((100% - %d) / 2 + 10px)", @site-container-width-lg) !important;
+    padding-right: %(~"calc((100% - %d) / 2 + 30px)", @site-container-width-lg) !important;
+  }
+  @media (min-width: @screen-md) and (max-width: @screen-md-max) {
+    padding-left: %(~"calc((100% - %d) / 2 + 10px)", @site-container-width-md) !important;
+    padding-right: %(~"calc((100% - %d) / 2 + 30px)", @site-container-width-md) !important;
+  }
+  @media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
+    padding-left: %(~"calc((100% - %d) / 2 + 10px)", @site-container-width-sm) !important;
+    padding-right: %(~"calc((100% - %d) / 2 + 30px)", @site-container-width-sm) !important;
+  }
+}

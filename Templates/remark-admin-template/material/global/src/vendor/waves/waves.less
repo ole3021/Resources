@@ -1,0 +1,116 @@
+@import "vars.less";
+
+.waves-effect {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    
+    .waves-ripple {
+        position: absolute;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin-top:-50px;
+        margin-left:-50px;
+        opacity: 0;
+        background: rgba(0,0,0,0.2);
+        @gradient: rgba(0,0,0,0.2) 0,rgba(0,0,0,.3) 40%,rgba(0,0,0,.4) 50%,rgba(0,0,0,.5) 60%,rgba(255,255,255,0) 70%;
+        background: -webkit-radial-gradient(@gradient);
+        background: -o-radial-gradient(@gradient);
+        background: -moz-radial-gradient(@gradient);
+        background: radial-gradient(@gradient);
+        transition: all 0.5s ease-out;
+        -webkit-transition-property: -webkit-transform, opacity;
+        -moz-transition-property: -moz-transform, opacity;
+        -o-transition-property: -o-transform, opacity;
+        transition-property: transform, opacity;
+        .transform(scale(0) translate(0,0));
+        pointer-events: none;
+    }
+
+    &.waves-light .waves-ripple {
+        background: rgba(255,255,255,0.4);
+        @gradient: rgba(255,255,255,0.2) 0,rgba(255,255,255,.3) 40%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 60%,rgba(255,255,255,0) 70%;
+        background: -webkit-radial-gradient(@gradient);
+        background: -o-radial-gradient(@gradient);
+        background: -moz-radial-gradient(@gradient);
+        background: radial-gradient(@gradient);
+    }
+    
+    &.waves-classic .waves-ripple {
+        background: rgba(0,0,0,0.1);
+    }
+    
+    &.waves-classic.waves-light .waves-ripple {
+        background: rgba(255,255,255,0.4);
+    }
+
+    &.waves-red .waves-ripple {
+        background-color: fade(@color-red-100, 70%);
+    }
+
+    &.waves-purple .waves-ripple {
+        background-color: fade(@color-purple-100, 70%);
+    }
+
+    &.waves-light-blue .waves-ripple {
+        background-color: fade(@color-light-blue-100, 70%);
+    }
+
+    &.waves-teal .waves-ripple {
+        background-color: fade(@color-teal-100, 70%);
+    }
+
+    &.waves-green .waves-ripple {
+        background-color: fade(@color-green-100, 70%);
+    }
+
+    &.waves-yellow .waves-ripple {
+        background-color: fade(@color-yellow-100, 70%);
+    }
+
+    &.waves-orange .waves-ripple {
+        background-color: fade(@color-orange-100, 70%);
+    }
+
+    &.waves-brown .waves-ripple {
+        background-color: fade(@color-brown-100, 70%);
+    }
+}
+
+
+.waves-notransition {
+    transition: none ~'!important';
+}
+
+.waves-button, 
+.waves-circle,
+.waves-round,
+.waves-float {
+    .transform(translateZ(0));
+}
+
+.waves-circle {
+    border-radius: 50%;
+}
+
+.waves-float {
+    -webkit-mask-image: none;
+    transition: all 300ms;
+}
+
+.waves-block {
+    display: block;
+}
+
+/* Firefox Bug: link not triggered */
+a.waves-effect .waves-ripple {
+    z-index: -1;
+}

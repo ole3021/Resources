@@ -1,0 +1,49 @@
+@import "vars.less";
+
+
+.color-box {
+  width: 20px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.btn.btn-direction {
+  width: 174px;
+}
+
+.btn-pill-left,
+.btn-pill-right {
+  width: 120px;
+}
+
+.text-active,
+.active > .text,
+.active > .auto .text {
+  display: none !important;
+}
+
+.active > .text-active,
+.active > .auto .text-active {
+  display: inline-block !important;
+}
+
+.active .icon {
+  line-height: 1;
+}
+
+.example-primary-hover {
+  background-color: @brand-primary-hover;
+  border-color: @brand-primary-hover;
+}
+
+.example-default-hover {
+  background-color: @brand-default-hover;
+  border-color: @brand-default-hover;
+}
+
+
+@media screen and (max-width: 768px) {
+  .btn-group-justified .btn {
+    min-height: 50px;
+  }
+}

@@ -1,0 +1,76 @@
+// Name:            Pagination
+//
+// Component:       `pagination`
+//
+// Modifiers:       `pagination-gap`
+//                  `pagination-no-border`
+//                  `pagination-lg`
+//                  `pagination-sm`
+//
+// Markup:
+//
+// <!-- pagination -->
+// <ul class="pagination">
+//     <li class="previous"><a href=""></a></li>
+//     <li><a href="#">1</a></li>
+//     <li><a href="#">2</a></li>
+//     <li class="next"><a href=""></a></li>
+// </ul>
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+@pagination-link-padding:                   9px 15px;
+@pagination-gap-hover-border:               @brand-primary;
+
+@pagination-lg-font-size:                   16px;
+@pagination-lg-padding-horizontal:          17px;
+
+@pagination-small-font-size:                @font-size-base;
+@pagination-small-padding-horizontal:       11px;
+
+// Component: Pagination
+// ========================================================================
+
+.pagination {
+
+  > .disabled {
+    > span,
+    > span:hover,
+    > span:focus,
+    > a,
+    > a:hover,
+    > a:focus {
+      color: @pagination-disabled-color;
+      background-color: @pagination-disabled-bg;
+      border-color: @pagination-disabled-border;
+    }
+  }
+}
+
+// Modifier: `pagination-gap`
+// -------------------------
+
+.pagination-gap {
+  > li {
+    > a {
+      &:hover {
+        background-color: transparent;
+        border-color: @pagination-gap-hover-border;
+      }
+    }
+  }
+}
+
+
+// Modifier: `pagination-no-border`
+// -------------------------
+
+.pagination-no-border {
+  > li {
+    > a {
+      border: none;
+    }
+  }
+}

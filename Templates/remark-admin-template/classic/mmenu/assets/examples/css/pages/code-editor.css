@@ -1,0 +1,22 @@
+.page-code-editor .mm-page {
+  height: -webkit-calc(100% - 44px);
+  height:         calc(100% - 44px);
+}
+.page-code-editor .mm-page .page {
+  height: 100%;
+}
+.page-code-editor .mm-page .page-main,
+.page-code-editor .mm-page .page-content {
+  height: 100%;
+  padding: 0;
+}
+.page-code-editor .treeview .list-group-item.node-selected {
+  background-color: #f3f7f9;
+}
+.page-code-editor .treeview .list-group-item.node-selected,
+.page-code-editor .treeview .list-group-item.node-selected .node-icon {
+  color: #62a8ea;
+}
+.page-code-editor .CodeMirror {
+  height: 100%;
+}

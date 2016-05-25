@@ -1,0 +1,37 @@
+.visible-xlg {
+  .responsive-invisibility();
+}
+
+.visible-xlg-block,
+.visible-xlg-inline,
+.visible-xlg-inline-block {
+  display: none !important;
+}
+
+.visible-xlg {
+  @media (min-width: @screen-xlg-min) {
+    .responsive-visibility();
+  }
+}
+
+.visible-xlg-block {
+  @media (min-width: @screen-xlg-min) {
+    display: block !important;
+  }
+}
+.visible-xlg-inline {
+  @media (min-width: @screen-xlg-min) {
+    display: inline !important;
+  }
+}
+.visible-xlg-inline-block {
+  @media (min-width: @screen-lg-min) {
+    display: inline-block !important;
+  }
+}
+
+.hidden-xlg {
+  @media (min-width: @screen-xlg-min) {
+    .responsive-invisibility();
+  }
+}

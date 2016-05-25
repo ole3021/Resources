@@ -1,0 +1,182 @@
+// Name:            Tooltip
+//
+// Component:       `tooltip`
+//
+// Modifiers:       `tooltip-primary`
+//                  `tooltip-success`
+//                  `tooltip-info`
+//                  `tooltip-warning`
+//                  `tooltip-danger`
+//                  `tooltip-rotate`
+//                  `tooltip-scale`
+//
+// Markup:
+//
+// <!-- tooltip -->
+// <div class="tooltip">
+//   <div class="tooltip-arrow"></div>
+//   <div class="tooltip-inner"></div>
+// </div>
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@tooltip-arrow-width:                  8px;
+
+@tooltip-primary-color:                @inverse;
+@tooltip-primary-bg:                   @brand-primary;
+
+@tooltip-success-color:                @inverse;
+@tooltip-success-bg:                   @brand-success;
+
+@tooltip-info-color:                   @inverse;
+@tooltip-info-bg:                      @brand-info;
+
+@tooltip-warning-color:                @inverse;
+@tooltip-warning-bg:                   @brand-warning;
+
+@tooltip-danger-color:                 @inverse;
+@tooltip-danger-bg:                    @brand-danger;
+
+// Component: Tooltip
+// ========================================================================
+
+.tooltip-inner {
+  padding: 6px 12px;
+}
+
+// Color Modifier
+// ========================================================================
+
+// Modifier: `tooltip-primary`
+// -------------------------
+
+.tooltip-primary {
+  .tooltip-variant(@tooltip-primary-color; @tooltip-primary-bg);
+}
+
+// Modifier: `tooltip-success`
+// -------------------------
+
+.tooltip-success {
+  .tooltip-variant(@tooltip-success-color; @tooltip-success-bg);
+}
+
+// Modifier: `tooltip-info`
+// -------------------------
+
+.tooltip-info {
+  .tooltip-variant(@tooltip-info-color; @tooltip-info-bg);
+}
+
+// Modifier: `tooltip-warning`
+// -------------------------
+
+.tooltip-warning {
+  .tooltip-variant(@tooltip-warning-color; @tooltip-warning-bg);
+}
+
+// Modifier: `tooltip-danger`
+// -------------------------
+
+.tooltip-danger {
+  .tooltip-variant(@tooltip-danger-color; @tooltip-danger-bg);
+}
+
+// Modifier: `tooltip-rotate`
+// ========================================================================
+
+.tooltip-rotate {
+  + .tooltip {
+    animation: tooltip-rotate3d 1s ease 0.1s forwards;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes tooltip-rotate3d {
+  0% {
+      opacity: 0;
+      -webkit-transform: rotate(15deg);
+              transform: rotate(15deg);
+  }
+  100% {
+      opacity: 1;
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+  }
+}
+
+
+@keyframes tooltip-rotate3d {
+  0% {
+      opacity: 0;
+      transform: rotate(15deg);
+  }
+  100% {
+      opacity: 1;
+      transform: rotate(0deg);
+  }
+}
+
+// Modifier: `tooltip-scale`
+// ========================================================================
+
+.tooltip-scale {
+  + .tooltip {
+    animation: tooltip-scale3d 1s ease 0s forwards;
+  }
+}
+
+@-webkit-keyframes tooltip-scale3d {
+  0% {
+      opacity: 0;
+      -webkit-transform: scale3d(0.7, 0.3, 1) translate(50%, 50%);
+              transform: scale3d(0.7, 0.3, 1) translate(50%, 50%);
+  }
+  100% {
+      opacity: 1;
+      -webkit-transform: scale3d(1, 1, 1) translate(50%, 50%);
+              transform: scale3d(1, 1, 1) translate(50%, 50%);
+  }
+}
+
+@keyframes tooltip-scale3d {
+  0% {
+      opacity: 0;
+      transform: scale3d(0.7, 0.3, 1) translate(50%, 50%);
+  }
+  100% {
+      opacity: 1;
+      transform: scale3d(1, 1, 1) translate(50%, 50%);
+  }
+}
+
+// Mixins
+// ========================================================================
+
+.tooltip-variant(@color; @bg) {
+  & + .tooltip {
+    .tooltip-inner {
+      color: @color;
+      background-color: @bg;
+    }
+
+    &.top .tooltip-arrow {
+      border-top-color: @bg;
+    }
+
+    &.right .tooltip-arrow {
+      border-right-color: @bg;
+    }
+
+    &.bottom .tooltip-arrow {
+      border-bottom-color: @bg;
+    }
+
+    &.left .tooltip-arrow {
+      border-left-color: @bg;
+    }
+  }
+}

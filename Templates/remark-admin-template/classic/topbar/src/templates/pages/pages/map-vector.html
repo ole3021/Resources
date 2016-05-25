@@ -1,0 +1,40 @@
+---
+title: Vector Maps
+body_class: page-map page-map-full
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/jvectormap/jquery-jvectormap.css">
+  {{/content}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/pages/map.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/jvectormap/jquery.jvectormap.min.js"></script>
+    <script src="{{global}}/vendor/jvectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/jvectormap.js"></script>
+  {{/content}}
+
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/pages/map-vector.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div id="world-map"></div>
+    </div>
+    <!-- End Page -->
+
+
+  {{/content}}
+{{/extend}}

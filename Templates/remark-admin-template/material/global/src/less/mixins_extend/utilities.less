@@ -1,0 +1,19 @@
+.text-truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: normal; /* for IE */
+  white-space: nowrap;
+}
+
+.text-break() {
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.text-nowrap() {
+  white-space: nowrap;
+}

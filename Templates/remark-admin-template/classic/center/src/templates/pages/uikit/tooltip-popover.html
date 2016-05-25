@@ -1,0 +1,762 @@
+---
+title: Tooltip &amp; Popover
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/webui-popover/webui-popover.css">
+    <link rel="stylesheet" href="{{global}}/vendor/toolbar/toolbar.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/webui-popover/jquery.webui-popover.min.js"></script>
+    <script src="{{global}}/vendor/toolbar/jquery.toolbar.min.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/webui-popover.js"></script>
+    <script src="{{global}}/js/components/toolbar.js"></script>
+  {{/content}}
+
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/uikit/tooltip-popover.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li class="active">Basic UI</li>
+        </ol>
+        <h1 class="page-title">Tooltip &amp; Popover</h1>
+        <div class="page-header-actions">
+          <button type="button" class="btn btn-sm btn-icon btn-inverse btn-round" data-toggle="tooltip"
+          data-original-title="Edit">
+            <i class="icon wb-pencil" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-sm btn-icon btn-inverse btn-round" data-toggle="tooltip"
+          data-original-title="Refresh">
+            <i class="icon wb-refresh" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-sm btn-icon btn-inverse btn-round" data-toggle="tooltip"
+          data-original-title="Setting">
+            <i class="icon wb-settings" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <div class="page-content">
+        <!-- Panel Tooltips -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Tooltips</h3>
+          </div>
+
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-lg-6">
+                <!-- Example Static Tooltip -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Static Tooltip</h4>
+                  <p>Four options are available: top, right, bottom, and left aligned.</p>
+                  <div class="example example-tooltip">
+                    <div class="tooltip bottom" role="tooltip">
+                      <div class="tooltip-arrow"></div>
+                      <div class="tooltip-inner">
+                        Top Tooltip
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="example example-tooltip">
+                    <div class="tooltip top" role="tooltip">
+                      <div class="tooltip-arrow"></div>
+                      <div class="tooltip-inner">
+                        Bottom Tooltip
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="example example-tooltip">
+                    <div class="tooltip right" role="tooltip">
+                      <div class="tooltip-arrow"></div>
+                      <div class="tooltip-inner">
+                        Left Tooltip
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="example example-tooltip">
+                    <div class="tooltip left" role="tooltip">
+                      <div class="tooltip-arrow"></div>
+                      <div class="tooltip-inner">
+                        Right Tooltip
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Static Tooltip -->
+              </div>
+
+              <div class="col-lg-6">
+                <!-- Example Color -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Color</h4>
+                  <p>Five information situations are available: use the class <code>primary</code>,
+                    <code>success</code>, <code>warning</code>, <code>info</code>,
+                    <code>danger</code> .</p>
+                  <div class="example example-tooltip">
+                    <button type="button" class="btn btn-primary tooltip-primary sr-only" title="">Primary</button>
+                    <div class="tooltip top" role="tooltip">
+                      <div class="tooltip-arrow"></div>
+                      <div class="tooltip-inner">
+                        Primary
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="example example-tooltip">
+                    <button type="button" class="btn btn-success tooltip-success sr-only" title="">Success</button>
+                    <div class="tooltip top" role="tooltip">
+                      <div class="tooltip-arrow"></div>
+                      <div class="tooltip-inner">
+                        Success
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="example example-tooltip">
+                    <button type="button" class="btn btn-info tooltip-info sr-only" title="">Info</button>
+                    <div class="tooltip top" role="tooltip">
+                      <div class="tooltip-arrow"></div>
+                      <div class="tooltip-inner">
+                        Info
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="example example-tooltip">
+                    <button type="button" class="btn btn-warning tooltip-warning sr-only" title="">Warning</button>
+                    <div class="tooltip top" role="tooltip">
+                      <div class="tooltip-arrow"></div>
+                      <div class="tooltip-inner">
+                        Warning
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="example example-tooltip">
+                    <button type="button" class="btn btn-danger tooltip-danger sr-only" title="">Danger</button>
+                    <div class="tooltip top" role="tooltip">
+                      <div class="tooltip-arrow"></div>
+                      <div class="tooltip-inner">
+                        Danger
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Color -->
+              </div>
+            </div>
+
+            <div class="row row-lg">
+              <div class="col-lg-6">
+                <!-- Example Triggers Click -->
+                <div class="example-wrap margin-lg-0">
+                  <h4 class="example-title">Triggers Click</h4>
+                  <p>You can select the action that triggers the tooltip either by
+                    adding the <code>data-trigger=&quot;click&quot;</code> attribute
+                    or by setting the trigger parameter via Javascript.</p>
+                  <div class="example">
+                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right"
+                    data-trigger="click" data-original-title="Click to tooltip"
+                    title="">Click to tooltip</button>
+                  </div>
+                </div>
+                <!-- End Example Triggers Click -->
+              </div>
+
+              <div class="col-lg-6">
+                <!-- Example Animation -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Animation</h4>
+                  <p>Apply two CSS style rotate and scale transition to the tooltip
+                    when you click the button.</p>
+                  <div class="example example-buttons">
+                    <button type="button" class="btn btn-primary tooltip-primary tooltip-rotate" data-toggle="tooltip"
+                    data-placement="left" data-original-title="Tooltip on left"
+                    title="">Rotate</button>
+                    <button type="button" class="btn btn-success tooltip-success tooltip-scale" data-toggle="tooltip"
+                    data-placement="top" data-original-title="Tooltip on top" title="">Scale</button>
+                  </div>
+                </div>
+                <!-- End Example Animation -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel Tooltips -->
+
+        <!-- Panel Popover -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Popover
+              <small><a class="example-plugin-link" href="https://github.com/sandywalker/webui-popover"
+                target="_blank">official website</a></small>
+            </h3>
+          </div>
+
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-sm-12">
+                <!-- Example Static Popover -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Static Popover</h4>
+                  <p>Four options are available: top, right, bottom, and left aligned.</p>
+                  <div class="example example-popover">
+                    <div class="popover bottom">
+                      <div class="arrow"></div>
+                      <h3 class="popover-title">Popover Bottom</h3>
+                      <div class="popover-content">
+                        <p>Sed posuere consectetur est at lobortis. Aenean eu leo
+                          quam.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="example example-popover">
+                    <div class="popover top">
+                      <div class="arrow"></div>
+                      <h3 class="popover-title">Popover Top</h3>
+                      <div class="popover-content">
+                        <p>Sed posuere consectetur est at lobortis. Aenean eu leo
+                          quam.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="example example-popover">
+                    <div class="popover right">
+                      <div class="arrow"></div>
+                      <h3 class="popover-title">Popover Right</h3>
+                      <div class="popover-content">
+                        <p>Sed posuere consectetur est at lobortis. Aenean eu leo
+                          quam.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="example example-popover">
+                    <div class="popover left">
+                      <div class="arrow"></div>
+                      <h3 class="popover-title">Popover Left</h3>
+                      <div class="popover-content">
+                        <p>Sed posuere consectetur est at lobortis. Aenean eu leo
+                          quam.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Static Popover -->
+              </div>
+            </div>
+
+            <div class="row row-lg">
+              <div class="col-sm-12">
+                <!-- Example Color -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Color</h4>
+                  <p>Five information situations are available: use the class <code>primary</code>,
+                    <code>success</code>, <code>warning</code>, <code>info</code>,
+                    <code>danger</code> .</p>
+                  <div class="example example-popover">
+                    <button type="button" class="btn btn-primary popover-primary sr-only">
+                      Primary
+                    </button>
+                    <div class="popover top">
+                      <div class="arrow"></div>
+                      <h3 class="popover-title">Primary</h3>
+                      <div class="popover-content">
+                        <p>Sed posuere consectetur est at lobortis. Aenean eu leo
+                          quam.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="example example-popover">
+                    <button type="button" class="btn btn-success popover-success sr-only">
+                      Success
+                    </button>
+                    <div class="popover top">
+                      <div class="arrow"></div>
+                      <h3 class="popover-title">Success</h3>
+                      <div class="popover-content">
+                        <p>Sed posuere consectetur est at lobortis. Aenean eu leo
+                          quam.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="example example-popover">
+                    <button type="button" class="btn btn-info popover-info sr-only">
+                      Info
+                    </button>
+                    <div class="popover top">
+                      <div class="arrow"></div>
+                      <h3 class="popover-title">Info</h3>
+                      <div class="popover-content">
+                        <p>Sed posuere consectetur est at lobortis. Aenean eu leo
+                          quam.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="example example-popover">
+                    <button type="button" class="btn btn-warning popover-warning sr-only">
+                      Warning
+                    </button>
+                    <div class="popover top">
+                      <div class="arrow"></div>
+                      <h3 class="popover-title">Warning</h3>
+                      <div class="popover-content">
+                        <p>Sed posuere consectetur est at lobortis. Aenean eu leo
+                          quam.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="example example-popover">
+                    <button type="button" class="btn btn-danger popover-danger sr-only">
+                      Danger
+                    </button>
+                    <div class="popover top">
+                      <div class="arrow"></div>
+                      <h3 class="popover-title">Danger</h3>
+                      <div class="popover-content">
+                        <p>Sed posuere consectetur est at lobortis. Aenean eu leo
+                          quam.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Color -->
+              </div>
+            </div>
+
+            <div class="row row-lg">
+              <div class="col-lg-6">
+                <!-- Example Triggers Click -->
+                <div class="example-wrap margin-lg-0">
+                  <h4 class="example-title">Triggers Click</h4>
+                  <p>You can select the action that triggers the popover either by
+                    adding the <code>data-trigger=&quot;focus / hover&quot;</code>                    attribute or by setting the trigger parameter via Javascript.</p>
+                  <div class="example example-buttons">
+                    <button class="btn btn-danger" data-content="And here's some amazing content. It's very engaging. Right?"
+                    data-trigger="focus" data-toggle="popover" data-original-title="Focus to trigger"
+                    tabindex="0" title="" type="button">Focus to trigger</button>
+                    <button class="btn btn-danger" data-content="And here's some amazing content. It's very engaging. Right?"
+                    data-trigger="hover" data-toggle="popover" data-original-title="Hover to trigger"
+                    tabindex="0" title="" type="button">Hover to trigger</button>
+                  </div>
+                </div>
+                <!-- End Example Triggers Click -->
+              </div>
+
+              <div class="col-lg-6">
+                <!-- Example Animation -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Animation</h4>
+                  <p>Apply two CSS style rotate and scale transition to the popover
+                    when you click the button.</p>
+                  <div class="example example-buttons">
+                    <button type="button" class="btn btn-primary popover-primary popover-rotate" data-toggle="popover"
+                    data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                    data-placement="left" data-original-title="Primary" title="">
+                      Rotate
+                    </button>
+                    <button type="button" class="btn btn-success popover-success popover-scale" data-toggle="popover"
+                    data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                    data-placement="top" data-original-title="Success" title="">
+                      Scale
+                    </button>
+                  </div>
+                </div>
+                <!-- End Example Animation -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel Popover -->
+
+        <!-- Panel WebUI Popover -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">WebUI Popover
+              <small><a class="example-plugin-link" href="https://github.com/sandywalker/webui-popover"
+                target="_blank">official website</a></small>
+            </h3>
+          </div>
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-sm-6">
+                <!-- Example Auto Detect Placement -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Auto Detect Placement</h4>
+                  <p>Auto detect the placement, always poped in page, can be contrained
+                    by horizontal or vertical</p>
+                  <div class="example example-buttons">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <a class="btn btn-primary" href="javascript:void(0)" data-plugin="webuiPopover"
+                        data-title="WebUI Popover" data-content="&lt;p&gt;Sed posuere consectetur est at lobortis. Aenean eu leo quam.&lt;/p&gt;">Auto</a>
+                      </div>
+                      <div class="col-sm-4">
+                        <a class="btn btn-primary" href="javascript:void(0)" data-plugin="webuiPopover"
+                        data-title="WebUI Popover" data-content="&lt;p&gt;Sed posuere consectetur est at lobortis. Aenean eu leo quam.&lt;/p&gt;">Auto</a>
+                      </div>
+                      <div class="col-sm-4">
+                        <a class="btn btn-primary" href="javascript:void(0)" data-plugin="webuiPopover"
+                        data-title="WebUI Popover" data-content="&lt;p&gt;Sed posuere consectetur est at lobortis. Aenean eu leo quam.&lt;/p&gt;">Auto</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Auto Detect Placement -->
+              </div>
+
+              <div class="col-sm-6">
+                <!-- Example Pop With Animation -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Pop With Animation</h4>
+                  <p>Set animation by data-attribute or code</p>
+                  <div class="example example-buttons">
+                    <a class="btn btn-primary" href="javascript:void(0)" data-plugin="webuiPopover"
+                    data-title="WebUI Popover" data-content="&lt;p&gt;Sed posuere consectetur est at lobortis. Aenean eu leo quam.&lt;/p&gt;"
+                    data-animation="pop">Pop</a>
+                    <a class="btn btn-primary" href="javascript:void(0)" data-plugin="webuiPopover"
+                    data-title="WebUI Popover" data-content="&lt;p&gt;Sed posuere consectetur est at lobortis. Aenean eu leo quam.&lt;/p&gt;"
+                    data-animation="fade">Fade</a>
+                  </div>
+                </div>
+                <!-- End Example Pop With Animation -->
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="col-sm-6">
+                <!-- Example Delayed show/hide -->
+                <div class="example-wrap margin-sm-0">
+                  <h4 class="example-title">Delayed show/hide</h4>
+                  <p>Control delay show/hide by data-attribute or code</p>
+                  <div class="example example-buttons">
+                    <a class="btn btn-primary" href="javascript:void(0)" data-plugin="webuiPopover"
+                    data-trigger="hover" data-placement="right" data-delay-show="300"
+                    data-delay-hide="1000" data-title="WebUI Popover" data-content="&lt;p&gt;Sed posuere consectetur est at lobortis. Aenean eu leo quam.&lt;/p&gt;">Delay Show</a>
+                    <a class="btn btn-primary" href="javascript:void(0)" data-plugin="webuiPopover"
+                    data-trigger="hover" data-placement="left" data-delay-show="0"
+                    data-delay-hide="1000" data-title="WebUI Popover" data-content="&lt;p&gt;Sed posuere consectetur est at lobortis. Aenean eu leo quam.&lt;/p&gt;">Delay Hide</a>
+                  </div>
+                </div>
+                <!-- End Example Delayed show/hide -->
+              </div>
+
+              <div class="col-sm-6">
+                <!-- Example Delayed show/hide -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Advanced examples</h4>
+                  <p>Table in popover, larget content, async mode, iframe mode</p>
+                  <div class="example example-buttons">
+                    <!-- Pop with table -->
+                    <a class="btn btn-primary" id="examplePopWithTable" href="javascript:void(0)">Pop with table</a>
+                    <div class="hidden" id="examplePopoverTable">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- End Pop with table -->
+
+                    <!-- Pop with List -->
+                    <a class="btn btn-primary" id="examplePopWithList" href="javascript:void(0)">Pop with list</a>
+                    <div class="hidden" id="examplePopoverList">
+                      <ul class="list-group list-group-bordered">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Morbi leo risus</li>
+                        <li class="list-group-item">Porta ac consectetur ac</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                      </ul>
+                    </div>
+                    <!-- End Pop with List -->
+
+                    <!-- Pop Large Content -->
+                    <a class="btn btn-primary" id="examplePopWithLargeContent" href="javascript:void(0)">Pop large content</a>
+                    <div class="hidden" id="examplePopoverLargeContent">
+                      <p>Enim duis veniam reprehenderit esse qui cillum aute aute.
+                        Proident fugiat est dolor laboris magna sunt labore exercitation
+                        pariatur. Irure nisi magna cillum voluptate ipsum id. Qui
+                        ullamco sunt ut magna dolore amet. Qui pariatur elit ea
+                        esse deserunt et esse incididunt laboris. Occaecat commodo
+                        ullamco ea quis culpa reprehenderit ex qui cupidatat. Velit
+                        in anim aliquip adipisicing labore id.</p>
+                      <p>Proident culpa do amet non fugiat aliquip incididunt ex magna.
+                        Pariatur fugiat occaecat veniam nulla culpa dolor ut. Duis
+                        enim nulla tempor sit fugiat duis ea dolore eu. Consectetur
+                        magna sunt dolore velit. Veniam sit eu voluptate commodo.
+                        Quis incididunt fugiat magna nostrud enim irure. Fugiat
+                        sunt culpa Lorem ad cillum deserunt.</p>
+                      <p>Elit cupidatat elit aliquip nulla. Adipisicing amet labore
+                        ipsum dolore ipsum. Ad consectetur est elit nulla excepteur
+                        Lorem dolore. Irure laboris Lorem do culpa eu irure in
+                        fugiat. Tempor aliqua id est dolore reprehenderit nostrud
+                        id fugiat dolor. Veniam veniam eu nisi sint voluptate et
+                        aliquip consequat. Irure eiusmod qui consequat nostrud
+                        nisi.</p>
+                      <p>Anim pariatur et in adipisicing sint aliqua et qui. Consequat
+                        do occaecat sit labore anim deserunt dolor adipisicing.
+                        Esse cupidatat duis est incididunt fugiat elit officia
+                        cillum. Do ullamco adipisicing cillum aliqua tempor occaecat
+                        pariatur elit. Aute eu voluptate excepteur voluptate. Ea
+                        laboris cupidatat aute qui consectetur eiusmod adipisicing
+                        reprehenderit. Esse incididunt exercitation deserunt magna
+                        sunt.</p>
+                    </div>
+                    <!-- End Pop Large Content -->
+                    <a class="btn btn-primary" data-url="http://getbootstrap.com" data-width="500"
+                    data-height="350" data-padding="false" data-closeable="true"
+                    data-title="Iframe example" data-type="iframe" href="javascript:void(0)"
+                    data-plugin="webuiPopover">Pop iframe</a>
+                  </div>
+                </div>
+                <!-- End Example Delayed show/hide -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel WebUI Popover -->
+
+        <!-- Panel Toolbar.js -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Toolbar.js
+              <small><a class="example-plugin-link" href="http://paulkinzett.github.com/toolbarTooltips"
+                target="_blank">official website</a></small>
+            </h3>
+          </div>
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-sm-6">
+                <!-- Example Default -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Default</h4>
+                  <div class="example example-buttons">
+                    <div class="toolbar-icons hidden" id="user-options">
+                      <a href="javascript:void(0)"><i class="icon wb-user" aria-hidden="true"></i></a>
+                      <a href="javascript:void(0)"><i class="icon wb-star" aria-hidden="true"></i></a>
+                      <a href="javascript:void(0)"><i class="icon wb-edit" aria-hidden="true"></i></a>
+                      <a href="javascript:void(0)"><i class="icon wb-trash" aria-hidden="true"></i></a>
+                      <a href="javascript:void(0)"><i class="icon wb-bookmark" aria-hidden="true"></i></a>
+                    </div>
+                    <button type="button" class="btn btn-icon btn-dark btn-pure" data-plugin="toolbar"
+                    data-toolbar="#user-options">
+                      <i class="icon wb-settings" aria-hidden="true"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-icon btn-default btn-outline" data-plugin="toolbar"
+                    data-toolbar="#user-options">
+                      <i class="icon wb-settings" aria-hidden="true"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-icon btn-default btn-outline btn-round" data-plugin="toolbar"
+                    data-toolbar="#user-options">
+                      <i class="icon wb-settings" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+                <!-- End Example Default -->
+              </div>
+
+              <div class="col-sm-6">
+                <!-- Example Colorful -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Colorful</h4>
+                  <div class="example example-buttons">
+                    <button type="button" class="btn btn-icon btn-primary btn-outline btn-round" data-plugin="toolbar"
+                    data-toolbar="#user-options" data-toolbar-style="primary">
+                      <i class="icon wb-settings" aria-hidden="true"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-icon btn-danger btn-outline btn-round" data-plugin="toolbar"
+                    data-toolbar="#user-options" data-toolbar-style="danger">
+                      <i class="icon wb-settings" aria-hidden="true"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-icon btn-warning btn-outline btn-round" data-plugin="toolbar"
+                    data-toolbar="#user-options" data-toolbar-style="warning">
+                      <i class="icon wb-settings" aria-hidden="true"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-icon btn-info btn-outline btn-round" data-plugin="toolbar"
+                    data-toolbar="#user-options" data-toolbar-style="info">
+                      <i class="icon wb-settings" aria-hidden="true"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-icon btn-success btn-outline btn-round" data-plugin="toolbar"
+                    data-toolbar="#user-options" data-toolbar-style="success">
+                      <i class="icon wb-settings" aria-hidden="true"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-icon btn-dark btn-outline btn-round" data-plugin="toolbar"
+                    data-toolbar="#user-options" data-toolbar-style="dark">
+                      <i class="icon wb-settings" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+                <!-- End Example Colorful -->
+              </div>
+
+              <div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+
+              <div class="col-sm-6">
+                <!-- Example Customizable -->
+                <div class="example-wrap margin-sm-0">
+                  <h4 class="example-title">Customizable</h4>
+                  <div class="example example-buttons">
+                    <div class="toolbar-icons hidden" id="set-01-options">
+                      <a href="javascript:void(0)"><i class="icon wb-print" aria-hidden="true"></i></a>
+                      <a href="javascript:void(0)"><i class="icon wb-download" aria-hidden="true"></i></a>
+                      <a href="javascript:void(0)"><i class="icon wb-trash" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="toolbar-icons hidden" id="set-02-options">
+                      <a href="javascript:void(0)"><i class="icon bd-google-plus" aria-hidden="true"></i></a>
+                      <a href="javascript:void(0)"><i class="icon bd-facebook" aria-hidden="true"></i></a>
+                      <a href="javascript:void(0)"><i class="icon bd-twitter" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="toolbar-icons hidden" id="set-03-options">
+                      <a href="javascript:void(0)"><i class="icon wb-pause" aria-hidden="true"></i></a>
+                      <a href="javascript:void(0)"><i class="icon wb-play" aria-hidden="true"></i></a>
+                      <a href="javascript:void(0)"><i class="icon wb-stop" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="toolbar-icons hidden" id="set-04-options">
+                      <a href="javascript:void(0)"><i class="icon wb-star" aria-hidden="true"></i></a>
+                      <a href="javascript:void(0)"><i class="icon wb-star-half" aria-hidden="true"></i></a>
+                      <a href="javascript:void(0)"><i class="icon wb-star-outline" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="toolbar-icons hidden" id="set-05-options">
+                      <a href="javascript:void(0)"><i class="icon wb-reply" aria-hidden="true"></i></a>
+                      <a href="javascript:void(0)"><i class="icon wb-share" aria-hidden="true"></i></a>
+                      <a href="javascript:void(0)"><i class="icon wb-bookmark" aria-hidden="true"></i></a>
+                      <a href="javascript:void(0)"><i class="icon wb-flag" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="toolbar-icons hidden" id="set-06-options">
+                      <a href="javascript:void(0)"><i class="icon wb-align-justify" aria-hidden="true"></i></a>
+                      <a href="javascript:void(0)"><i class="icon wb-align-left" aria-hidden="true"></i></a>
+                      <a href="javascript:void(0)"><i class="icon wb-align-center" aria-hidden="true"></i></a>
+                      <a href="javascript:void(0)"><i class="icon wb-align-right" aria-hidden="true"></i></a>
+                    </div>
+
+                    <button class="btn btn-primary btn-icon btn-outline btn-round" data-plugin="toolbar"
+                    data-toolbar="#set-01-options" data-toolbar-event="click" data-toolbar-style="primary"
+                    type="button"><i class="icon wb-settings" aria-hidden="true"></i></button>
+
+                    <button class="btn btn-danger btn-icon btn-outline btn-round" data-plugin="toolbar"
+                    data-toolbar="#set-02-options" data-toolbar-style="danger"
+                    type="button"><i class="icon wb-share" aria-hidden="true"></i></button>
+
+                    <button class="btn btn-warning btn-icon btn-outline btn-round" data-plugin="toolbar"
+                    data-toolbar="#set-03-options" data-toolbar-style="warning"
+                    data-toolbar-position="left" type="button"><i class="icon wb-play" aria-hidden="true"></i></button>
+
+                    <button class="btn btn-info btn-icon btn-outline btn-round" data-plugin="toolbar"
+                    data-toolbar="#set-04-options" data-toolbar-style="info" data-toolbar-position="right"
+                    type="button"><i class="icon wb-star" aria-hidden="true"></i></button>
+
+                    <button class="btn btn-success btn-icon btn-outline btn-round" data-plugin="toolbar"
+                    data-toolbar="#set-05-options" data-toolbar-style="success"
+                    data-toolbar-position="top" type="button"><i class="icon wb-settings" aria-hidden="true"></i></button>
+
+                    <button class="btn btn-default btn-icon btn-outline btn-round" data-plugin="toolbar"
+                    data-toolbar="#set-06-options" data-toolbar-style="default"
+                    data-toolbar-position="bottom" type="button"><i class="icon wb-align-justify" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+                <!-- End Example Customizable -->
+              </div>
+
+              <div class="col-sm-6">
+                <!-- Example Animations -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Animations</h4>
+                  <div class="example example-buttons">
+                    <button class="btn btn-primary btn-icon btn-outline btn-round" data-plugin="toolbar"
+                    data-toolbar="#set-05-options" data-toolbar-animation="standard"
+                    data-toolbar-event="click" data-toolbar-style="primary" type="button"><i class="icon wb-settings" aria-hidden="true"></i></button>
+
+                    <button class="btn btn-danger btn-icon btn-outline btn-round" data-plugin="toolbar"
+                    data-toolbar="#set-05-options" data-toolbar-animation="flip"
+                    data-toolbar-style="danger" type="button"><i class="icon wb-settings" aria-hidden="true"></i></button>
+
+                    <button class="btn btn-warning btn-icon btn-outline btn-round" data-plugin="toolbar"
+                    data-toolbar="#set-05-options" data-toolbar-animation="grow"
+                    data-toolbar-style="warning" type="button"><i class="icon wb-settings" aria-hidden="true"></i></button>
+
+                    <button class="btn btn-info btn-icon btn-outline btn-round" data-plugin="toolbar"
+                    data-toolbar="#set-05-options" data-toolbar-animation="flyin"
+                    data-toolbar-style="info" type="button"><i class="icon wb-settings" aria-hidden="true"></i></button>
+
+                    <button class="btn btn-success btn-icon btn-outline btn-round" data-plugin="toolbar"
+                    data-toolbar="#set-05-options" data-toolbar-animation="bounce"
+                    data-toolbar-style="success" type="button"><i class="icon wb-settings" aria-hidden="true"></i></button>
+
+                    <button class="btn btn-dark btn-icon btn-outline btn-round" data-plugin="toolbar"
+                    data-toolbar="#set-05-options" data-toolbar-animation="grow"
+                    data-toolbar-style="dark" type="button"><i class="icon wb-settings" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+                <!-- End Example Animations -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel Toolbar.js -->
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

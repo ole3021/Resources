@@ -1,0 +1,43 @@
+
+
+.site-footer {
+  padding: @site-footer-vertical-padding @page-horizontal-padding;
+  background-color:  @site-footer-bg;
+  border-top: 1px solid @site-footer-divider-color;
+  height: @site-footer-height;
+  .box-shadow(@site-footer-shadow);
+
+  .clearfix();
+
+  &-legal {
+    float: left;
+  }
+
+  &-actions {
+    float: right;
+  }
+
+  &-right {
+    float: right;
+  }
+
+  .scroll-to-top {
+    color: @text-color;
+
+    &, &:hover, &:active {
+      text-decoration: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    height: @site-footer-xs-height;
+  }
+
+  &-legal, &-right, &-actions {
+    @media (max-width: 480px) {
+      display: block;
+      float: none;
+      text-align: center;
+    }
+  }
+}

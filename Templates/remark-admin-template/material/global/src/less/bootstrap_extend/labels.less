@@ -1,0 +1,189 @@
+// Name:            labels
+//
+// Component:       `label`
+//
+// Modifiers:       `label-outline`
+//                  `label-primary`
+//                  `label-success`
+//                  `label-info`
+//                  `label-warning`
+//                  `label-danger`
+//                  `label-dark`
+//                  `label-lg`
+//                  `label-sm`
+//                  `label-radius`
+//
+// Markup:
+//
+// <!-- label -->
+// <span class="label">...</span>
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@label-bg:                    @bg-color-base;
+@label-border-radius:         0.3em;
+@label-padding:               .25em .6em .25em;
+
+@label-default-color:         @text-color;
+// @label-default-font-size:     @font-size-base;
+
+@label-lg-font-size:          16px;
+
+@label-sm-font-size:          10px;
+@label-sm-padding:            .1em .5em .1em;
+
+@label-round-border-radius:   1em;
+
+@label-default-hover-color:   @gray;
+@label-default-hover-bg:      @brand-default-hover;
+
+@label-primary-hover-bg:      @brand-primary-hover;
+
+@label-success-hover-bg:      @brand-success-hover;
+
+@label-info-hover-bg:         @brand-info-hover;
+
+@label-warning-hover-bg:      @brand-warning-hover;
+
+@label-danger-hover-bg:       @brand-danger-hover;
+
+@label-dark-hover-bg:         @brand-dark-hover;
+
+// Component: Label
+// ========================================================================
+
+.label {
+  // font-size: @label-default-font-size;
+  padding: @label-padding;
+  font-weight: @label-font-weight;
+  border-radius: @label-border-radius;
+
+  &.label-outline {
+    color: @label-bg;
+    background-color: transparent;
+    border-color: @label-bg;
+  }
+}
+
+
+// Alternate styles: `label-outline`
+// -------------------------
+
+.label-outline {
+  border: 1px solid transparent;
+}
+
+// Modifier: `label-round`
+// -------------------------
+
+.label-round {
+  border-radius: @label-round-border-radius;
+}
+
+
+// Color Modifier
+// ========================================================================
+
+// Modifier: `label-default`
+// -------------------------
+
+.label-default {
+  color: @label-default-color;
+
+  .label-styles-variant(@label-default-bg; @label-default-hover-bg);
+
+  &[href] {
+    &:hover,
+    &:focus {
+      color: @label-default-hover-color;
+    }
+  }
+
+  &.label-outline {
+    color: @label-default-color;
+  }
+}
+
+// Modifier: `label-primary`
+// -------------------------
+
+.label-primary {
+  .label-styles-variant(@label-primary-bg; @label-primary-hover-bg);
+}
+
+// Modifier: `label-success`
+// -------------------------
+
+.label-success {
+  .label-styles-variant(@label-success-bg; @label-success-hover-bg);
+}
+
+// Modifier: `label-info`
+// -------------------------
+
+.label-info {
+  .label-styles-variant(@label-info-bg; @label-info-hover-bg);
+}
+
+// Modifier: `label-warning`
+// -------------------------
+
+.label-warning {
+  .label-styles-variant(@label-warning-bg; @label-warning-hover-bg);
+}
+
+// Modifier: `label-danger`
+// -------------------------
+
+.label-danger {
+  .label-styles-variant(@label-danger-bg; @label-danger-hover-bg);
+}
+
+// Modifier: `label-dark`
+// -------------------------
+
+.label-dark {
+  .label-styles-variant(@label-dark-bg; @label-dark-hover-bg);
+}
+
+// Size Modifier
+// ========================================================================
+
+// Modifier: `label-lg`
+// -------------------------
+
+.label-lg {
+  font-size: @label-lg-font-size;
+}
+
+// Modifier: `label-sm`
+// -------------------------
+
+.label-sm {
+  padding: @label-sm-padding;
+  font-size: @label-sm-font-size;
+}
+
+// Mixins
+// ========================================================================
+
+.label-styles-variant(@color; @hover-color) {
+  background-color: @color;
+
+  &[href] {
+    &:hover,
+    &:focus {
+      background-color: @hover-color;
+    }
+  }
+
+  &.label-outline {
+    color: @color;
+    background-color: transparent;
+    border-color: @color;
+  }
+}

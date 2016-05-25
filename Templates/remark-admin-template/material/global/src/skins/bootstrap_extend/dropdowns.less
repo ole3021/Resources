@@ -1,0 +1,262 @@
+
+// Name:            Dropdown menus
+//
+// Component:       `dropdown`
+//
+// Modifiers:       `dropdown-submenu`
+//                  `dropdown-menu-primary`
+//                  `dropdown-menu-success`
+//                  `dropdown-menu-info`
+//                  `dropdown-menu-warning`
+//                  `dropdown-menu-danger`
+//                  `dropdown-menu-dark`
+//                  `dropdown-menu-media`
+//
+// Markup:
+//
+// <!-- dropdown -->
+// <div class="dropdown-menu">
+//   <li><a href="">...</a></li>
+//   <li class="active"><a href="">...</a></li>
+// </div>
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+// @dropdown-header-item-padding: 8px 35px;
+@dropdown-header-padding:            8px 20px 6px;
+@dropdown-header-font-size:          @font-size-base;
+@dropdown-header-font-weight:        @font-weight-bold;
+
+@dropdown-divider-margin:            6px 0;
+
+// primary
+@dropdown-primary-link-active-color: @inverse;
+@dropdown-primary-link-active-bg:    @brand-primary;
+
+// success
+@dropdown-success-link-active-color: @inverse;
+@dropdown-success-link-active-bg:    @brand-success;
+
+// info
+@dropdown-info-link-active-color:    @inverse;
+@dropdown-info-link-active-bg:       @brand-info;
+
+// warning
+@dropdown-warning-link-active-color: @inverse;
+@dropdown-warning-link-active-bg:    @brand-warning;
+
+// danger
+@dropdown-danger-link-active-color:  @inverse;
+@dropdown-danger-link-active-bg:     @brand-danger;
+
+// dark
+@dropdown-dark-link-active-color:    @inverse;
+@dropdown-dark-link-active-bg:       @brand-dark;
+
+@dropdownm-menu-animation-name:      slide-left;
+@dropdownm-menu-animation-duration:  .5s;
+@dropdownm-menu-animation-delay:     0.02s;
+
+// Component: Dropdown menus
+// ========================================================================
+
+// Dropdown arrow/caret
+.caret {
+  border-top: @caret-width-base solid;// instead of dashed for the triangle broken in two on safari(iphone ipad )and chrome on android.
+}
+
+// Dropdown menu
+// ========================================================================
+
+.dropdown-menu {
+  .box-shadow(@dropdown-menu-shadow);
+  &.bullet {
+    &:before,
+    &:after {
+      border: 7px solid transparent;
+      border-top-width: 0;
+    }
+
+    &:before {
+      border-bottom-color: @dropdown-border;
+    }
+
+    &:after {
+      border-bottom-color: @dropdown-bg;
+    }
+  }
+}
+
+
+.dropup,
+.navbar-fixed-bottom .dropdown {
+  // Different positioning for bottom up menu
+  .dropdown-menu {
+    .box-shadow(@dropup-menu-shadow);
+
+    &.bullet {
+
+      &:before,
+      &:after {
+        border-top-width: 7px;
+        border-bottom-width: 0;
+      }
+
+      &:before {
+        border-top-color: @dropdown-border;
+      }
+
+      &:after {
+        border-top-color: @dropdown-bg;
+      }
+    }
+  }
+}
+
+
+// Modifier: `dropdown-submenu`
+// -------------------------
+
+.dropdown-menu > .dropdown-submenu {
+  > a {
+    &:after {
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-left: 4px dashed;
+    }
+  }
+}
+
+// Dropdown Menu With Media
+// ========================================================================
+@dropdown-menu-media-width:                              360px;
+@dropdown-menu-media-list-group-height:                  270px;
+@dropdown-menu-media-border:                             @dropdown-border;
+@dropdown-menu-media-padding-horizontal:                 20px;
+
+@dropdown-menu-media-font-size:                          @font-size-small;
+
+@dropdown-menu-media-header-bg:                          @inverse;
+@dropdown-menu-media-header-padding:                     20px @dropdown-menu-media-padding-horizontal;
+@dropdown-menu-media-footer-padding:                     15px @dropdown-menu-media-padding-horizontal;
+
+@dropdown-menu-media-footer-color:                       @gray;
+@dropdown-menu-media-footer-bg:                          @gray-lightest;
+@dropdown-menu-media-footer-hover-color:                 @link-hover-color;
+@dropdown-menu-media-footer-btn-hover-color:             @link-hover-color;
+
+
+.dropdown-menu-media {
+  .dropdown-menu-header {
+    padding: @dropdown-menu-media-header-padding;
+    background-color: @dropdown-menu-media-header-bg;
+    border-bottom: 1px solid @dropdown-menu-media-border;
+  }
+
+  .list-group-item {
+    border: none;
+
+    .media {
+      border-top: 1px solid @dropdown-menu-media-border;
+    }
+
+    &:first-child {
+      .media {
+        border-top: none;
+      }
+    }
+  }
+
+  > .dropdown-menu-footer {
+    border-top: 1px solid @dropdown-menu-media-border;
+    background-color: @dropdown-menu-media-footer-bg;
+
+    > a {
+      color: @dropdown-menu-media-footer-color !important;
+
+      &:hover {
+        background-color: transparent !important;
+        color: @dropdown-menu-media-footer-hover-color !important;
+      }
+    }
+
+    > .dropdown-menu-footer-btn {
+
+      &:hover {
+        color: @dropdown-menu-media-footer-btn-hover-color !important;
+        background-color: transparent !important;
+      }
+    }
+  }
+}
+
+
+// Color Modifier
+// ========================================================================
+
+// Modifier: `dropdown-menu-primary`
+// -------------------------
+
+.dropdown-menu-primary {
+  .dropdown-states-variant(@dropdown-primary-link-active-color; @dropdown-primary-link-active-bg;);
+}
+
+// Modifier: `dropdown-menu-success`
+// -------------------------
+
+.dropdown-menu-success {
+  .dropdown-states-variant(@dropdown-success-link-active-color; @dropdown-success-link-active-bg;);
+}
+
+// Modifier: `dropdown-menu-info`
+// -------------------------
+
+.dropdown-menu-info {
+  .dropdown-states-variant(@dropdown-info-link-active-color; @dropdown-info-link-active-bg;);
+}
+
+// Modifier: `dropdown-menu-warning`
+// -------------------------
+
+.dropdown-menu-warning {
+  .dropdown-states-variant(@dropdown-warning-link-active-color; @dropdown-warning-link-active-bg;);
+}
+
+// Modifier: `dropdown-menu-danger`
+// -------------------------
+
+.dropdown-menu-danger {
+  .dropdown-states-variant(@dropdown-danger-link-active-color; @dropdown-danger-link-active-bg;);
+}
+
+// Modifier: `dropdown-menu-dark`
+// -------------------------
+
+.dropdown-menu-dark {
+  .dropdown-states-variant(@dropdown-dark-link-active-color; @dropdown-dark-link-active-bg;);
+}
+
+// Mixins
+// ========================================================================
+
+.dropdown-states-variant(@active-color; @active-bg;) {
+  > li > a {
+    &:hover,
+    &:focus {
+      color: @active-color;
+      background-color: @active-bg;
+    }
+  }
+
+  > .active > a {
+    &,
+    &:hover,
+    &:focus {
+      color: @active-color;
+      background-color: @active-bg;
+    }
+  }
+}

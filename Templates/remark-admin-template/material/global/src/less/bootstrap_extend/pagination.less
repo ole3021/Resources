@@ -1,0 +1,117 @@
+// Name:            Pagination
+//
+// Component:       `pagination`
+//
+// Modifiers:       `pagination-gap`
+//                  `pagination-no-border`
+//                  `pagination-lg`
+//                  `pagination-sm`
+//
+// Markup:
+//
+// <!-- pagination -->
+// <ul class="pagination">
+//     <li class="previous"><a href=""></a></li>
+//     <li><a href="#">1</a></li>
+//     <li><a href="#">2</a></li>
+//     <li class="next"><a href=""></a></li>
+// </ul>
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+@pagination-link-padding:                   7px 13px;
+@pagination-gap-hover-border:               @brand-primary;
+
+@pagination-lg-font-size:                   16px;
+@pagination-lg-padding-vertical:            9px;
+@pagination-lg-padding-horizontal:          15px;
+
+@pagination-small-font-size:                @font-size-base;
+@pagination-small-padding-vertical:         5px;
+@pagination-small-padding-horizontal:       9px;
+
+// Component: Pagination
+// ========================================================================
+
+.pagination {
+
+  li {
+    // Link
+    > a,
+    > span {
+      padding: @pagination-link-padding;
+      transition: background .2s ease-out, border-color 0s ease-out, color .2s ease-out;
+      &:hover,
+      &:focus {
+        transition: background .2s ease-out, border-color .2s ease-out, color .2s ease-out;
+      }
+    }
+
+    .icon {
+      margin-top: -1px;
+    }
+  }
+
+  > .disabled {
+    > span,
+    > span:hover,
+    > span:focus,
+    > a,
+    > a:hover,
+    > a:focus {
+      color: @pagination-disabled-color;
+      cursor: @cursor-disabled;
+      background-color: @pagination-disabled-bg;
+      border-color: @pagination-disabled-border;
+    }
+  }
+}
+
+// Modifier: `pagination-gap`
+// -------------------------
+
+.pagination-gap {
+  > li {
+    > a {
+      margin: 0 5px;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: transparent;
+        border-color: @pagination-gap-hover-border;
+      }
+    }
+
+    &:first-child,
+    &:last-child {
+      > a {
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+
+// Modifier: `pagination-no-border`
+// -------------------------
+
+.pagination-no-border {
+  > li {
+    > a {
+      border: none;
+    }
+  }
+}
+
+// Size Modifier
+// ========================================================================
+
+.pagination-lg {
+  .pagination-size(@pagination-lg-padding-vertical; @pagination-lg-padding-horizontal; @pagination-lg-font-size; @line-height-large; @border-radius-large);
+}
+
+.pagination-sm {
+  .pagination-size(@pagination-small-padding-vertical; @pagination-small-padding-horizontal; @pagination-small-font-size; @line-height-small; @border-radius-small);
+}

@@ -1,0 +1,66 @@
+// Name:            Chat
+//
+// Component:       `chat`
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@chat-content-bg:         @brand-primary;
+@chat-content-color:      @color-white;
+
+@chat-left-content-bg:    darken(@bg-color-base, 6%);
+@chat-left-content-color: @text-color;
+@chat-time-color:         rgba(255, 255, 255, 0.6);
+@chat-left-time-color:    @prompt-color;
+
+
+
+// Component: Chat
+// ========================================================================
+
+.chat-box {
+  background-color: @inverse;
+}
+
+.chat-content {
+  color: @chat-content-color;
+  background-color: @chat-content-bg;
+
+  &:before {
+    border-color: transparent;
+    border-left-color: @chat-content-bg;
+  }
+
+  & + &:before {
+    border-color: transparent;
+  }
+}
+
+.chat-time {
+  color: @chat-time-color;
+}
+
+// Modifier: `chat-left`
+// ========================================================================
+
+.chat-left {
+  .chat-content {
+    color: @chat-left-content-color;
+    background-color: @chat-left-content-bg;
+
+    &:before {
+      border-right-color: @chat-left-content-bg;
+      border-left-color: transparent;
+    }
+  }
+
+  .chat-content + .chat-content:before {
+    border-color: transparent;
+  }
+
+  .chat-time {
+    color: @chat-left-time-color;
+  }
+}

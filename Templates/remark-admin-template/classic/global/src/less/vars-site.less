@@ -1,0 +1,185 @@
+
+
+//== Site Navbar
+//
+//##
+@brand-font-family:        @headings-font-family;
+@site-navbar-height:       @navbar-height;
+@site-navbar-color:        @gray;
+@site-navbar-hover-color:  @gray-dark;
+@site-navbar-brand-bg:     @gray-darkest;
+
+@site-navbar-header-bg:    @color-blue-600;
+@site-navbar-header-color: @inverse;
+
+@site-navbar-brand-color:  @inverse;
+
+//== Site Skintools
+//
+//##
+
+@site-skintools-top:		(@site-navbar-height + 30px);
+@site-skintools-color: 		@text-color;
+
+//== Site Menubar
+//
+//##
+@site-menubar-bg:                   @gray-base;
+@site-menubar-unfold-width:         260px;
+@site-menubar-fold-width:           90px;
+
+@site-menubar-padding-horizontal:   30px;
+
+@site-menubar-color:                fade(@gray, 90%);
+@site-menubar-font-family:          @headings-font-family;
+@site-menubar-shadow:               0 2px 4px rgba(0, 0, 0, 0.08);
+
+@site-menubar-section-title-color:  @gray-dark;
+
+@site-menubar-footer-height:        76px;
+@site-menubar-footer-color:         @gray-dark;
+@site-menubar-footer-link-bg:       rgb(33, 41, 46);
+@site-menubar-footer-link-hover-bg: rgb(30, 36, 39);
+
+
+//== Site Menubar Fold
+//
+//##
+@site-menubar-fold-nav-height: 60px;
+@site-menubar-fold-sub-bg:     @site-menu-top-active-bg;
+@site-menubar-fold-sub-width:  240px;
+@site-menubar-fold-divider-bg: darken(@site-menubar-bg, 1%);
+
+//Light
+@site-menubar-light-fold-sub-bg:     rgb(243, 248, 251);
+@site-menubar-light-fold-divider-bg: fade(@color-blue-800, 5%);
+@site-menubar-light-fold-box-shadow: 2px 1px 2px rgba(0,0,0,.08);
+
+//== Site Menubar Fold Alt
+//
+//##
+@site-menubar-fold-top-active-bg: @gray-darkest;
+
+//Light
+@site-menubar-light-fold-top-active-bg: @color-blue-100;
+@site-menubar-light-fold-alt-box-shadow: none;
+
+//== Site Menu
+//
+//##
+@site-menu-top-hover-color:         fade(@inverse, 80%);
+@site-menu-top-hover-bg:            rgba(255, 255, 255, .02);
+
+// @site-menu-top-active-head-bg:     @color-purple;
+// @site-menu-top-active-head-bg:     fade(@color-primary-600, 10%);
+@site-menu-top-active-head-bg:      transparent;
+@site-menu-top-active-bg:           darken(@site-menubar-bg, 1%);
+@site-menu-top-active-border-color: rgba(0,0,0,.04);
+@site-menu-top-active-color:        @inverse;
+
+@site-menu-top-open-head-bg:        transparent;
+//@site-menu-top-open-bg:             transparent;
+@site-menu-top-open-bg:             @site-menu-top-active-bg;
+@site-menu-top-open-color:          @site-menu-top-active-color;
+@site-menu-top-height:              46px;
+@site-menu-top-font-size:           16px;
+
+@site-menu-sub-bg:                 transparent;
+@site-menu-sub-color:              @site-menubar-color;
+@site-menu-sub-hover-bg:           rgba(255, 255, 255, .02);
+@site-menu-sub-hover-color:        @site-menu-top-hover-color;
+@site-menu-sub-active-bg:          rgba(0, 0, 0, .06);
+@site-menu-sub-active-color:       @inverse;
+@site-menu-sub-open-bg:            @site-menu-sub-active-bg;
+@site-menu-sub-open-color:         @site-menu-sub-active-color;
+@site-menu-sub-height:             36px;
+
+@site-menu-category-color:         @gray-dark;
+
+@site-menu-has-sub-border-color:   rgba(0, 0, 0, .06);
+@site-menu-padding-horizontal:     @site-menubar-padding-horizontal;
+
+//== Site Menubar light
+//
+//##
+@site-menubar-light-color:                fade(@gray-dark, 90%);
+@site-menubar-light-bg:                   @inverse;
+@site-menubar-light-shadow:               @site-menubar-shadow;
+@site-menubar-light-footer-link-bg:       @gray-lighter;
+@site-menubar-light-footer-link-hover-bg: darken(@gray-lighter, 5%);
+
+//== Site Menu light
+//
+//##
+@site-menu-light-top-open-head-bg:      transparent;
+@site-menu-light-top-hover-bg:          fade(@color-primary-800, 5%);
+@site-menu-light-top-open-bg:           @site-menu-light-top-hover-bg;
+@site-menu-light-top-active-bg:         @site-menu-light-top-hover-bg;
+@site-menu-light-sub-active-bg:         fade(@color-primary-800, 3%);
+@site-menu-light-sub-open-bg:           fade(@color-primary-800, 3%);
+@site-menu-light-has-sub-border-color:  @site-menu-light-top-hover-bg;
+
+@site-menu-light-top-hover-color:       @color-primary-600;
+@site-menu-light-top-active-color:      @site-menu-light-top-hover-color;
+@site-menu-light-sub-active-color:      @site-menu-light-top-hover-color;
+@site-menu-light-sub-open-color:        @site-menu-light-sub-active-color;
+@site-menu-light-sub-hover-color:       @site-menu-light-top-hover-color;
+
+
+//== Site Grid Menu
+//
+//##
+@site-gridmenu-color:          @gray;
+@site-gridmenu-hover-color:    @inverse;
+@site-gridmenu-bg:             @gray-base;
+@site-gridmenu-hover-bg:       fade(@inverse, 2%);
+
+@site-gridmenu-toggle-size:    @font-size-base;
+
+//== Site Sidebar
+//
+//##
+@site-sidebar-width: 300px;
+@site-sidebar-z-index: (@zindex-navbar + 10);
+@site-sidebar-nav-height: 90px;
+@site-sidebar-padding-horizontal: 30px;
+
+//== Page
+//
+//##
+@page-bg:                 #f1f4f5;
+
+@page-vertical-padding:   30px;
+@page-horizontal-padding: 30px;
+
+//== Page Header
+//
+//##
+@page-header-bg:                        transparent;
+@page-header-bordered-bg:               @inverse;
+@page-header-vertical-padding:          30px;
+@page-header-bordered-vertical-padding: 20px;
+
+
+//== Page Aside
+//
+//##
+@page-aside-padding-horizontal: 30px;
+@page-aside-width:              260px;
+@page-aside-md-width:           220px;
+@page-aside-bg:                 @inverse;
+
+//== Site Footer
+//
+//##
+@site-footer-vertical-padding: 10px;
+@site-footer-bg:               rgba(0,0,0,.02);
+@site-footer-divider-color:    @gray-lighter;
+@site-footer-height:           44px;
+@site-footer-xs-height:        66px;
+
+//== Layout Boxed
+//
+//##
+@layout-boxed-width: 1320px;
+@layout-boxed-bg:    @gray-lighter;

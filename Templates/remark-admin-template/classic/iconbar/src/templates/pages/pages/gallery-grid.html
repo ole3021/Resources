@@ -1,0 +1,213 @@
+---
+title: Gallery Grid
+body_class: page-gallery-grid
+---
+
+{{#extend "layout-default"}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/pages/gallery-grid.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/matchheight/jquery.matchHeight-min.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/matchheight.js"></script>
+  {{/content}}
+
+
+  {{#content "body"}}
+
+
+    <div class="page animsition">
+      <div class="page-content padding-0">
+        <ul class="blocks no-space blocks-100 blocks-xlg-3 blocks-md-2">
+          <li class="widget">
+            <div class="cover overlay overlay-hover">
+              <img class="cover-image overlay-scale" src="{{global}}/photos/placeholder.png"
+              alt="...">
+              <div class="overlay-panel overlay-fade overlay-background overlay-background-fixed text-center vertical-align">
+                <div class="vertical-align-middle">
+                  <div class="widget-time widget-divider">
+                    <span>September 12, 2015</span>
+                  </div>
+                  <h3 class="widget-title margin-bottom-20">Probantur Dubio Fortitudinem Istius.</h3>
+                  <button type="button" class="btn btn-outline btn-inverse">READ MORE</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="widget">
+            <div class="cover overlay overlay-hover">
+              <img class="cover-image overlay-scale" src="{{global}}/photos/placeholder.png"
+              alt="...">
+              <div class="overlay-panel overlay-fade overlay-background overlay-background-fixed text-center vertical-align">
+                <div class="vertical-align-middle">
+                  <div class="widget-time widget-divider">
+                    <span>September 28, 2015</span>
+                  </div>
+                  <h3 class="widget-title margin-bottom-20">Locus Referuntur Eruditus Finitum.</h3>
+                  <button type="button" class="btn btn-outline btn-inverse">READ MORE</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="widget">
+            <div class="cover overlay overlay-hover">
+              <img class="cover-image overlay-scale" src="{{global}}/photos/placeholder.png"
+              alt="...">
+              <div class="overlay-panel overlay-fade overlay-background overlay-background-fixed text-center vertical-align">
+                <div class="vertical-align-middle">
+                  <div class="widget-time widget-divider">
+                    <span>October 05, 2015</span>
+                  </div>
+                  <h3 class="widget-title margin-bottom-20">Atomi O Consentaneum Distrahi.</h3>
+                  <button type="button" class="btn btn-outline btn-inverse">READ MORE</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="widget">
+            <div class="cover overlay overlay-hover">
+              <img class="cover-image overlay-scale" src="{{global}}/photos/placeholder.png"
+              alt="...">
+              <div class="overlay-panel overlay-fade overlay-background overlay-background-fixed text-center vertical-align">
+                <div class="vertical-align-middle">
+                  <div class="widget-time widget-divider">
+                    <span>October 15, 2015</span>
+                  </div>
+                  <h3 class="widget-title margin-bottom-20">Summa Arbitratu Placebit Fruitur.</h3>
+                  <button type="button" class="btn btn-outline btn-inverse">READ MORE</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="widget">
+            <div class="cover overlay overlay-hover">
+              <img class="cover-image overlay-scale" src="{{global}}/photos/placeholder.png"
+              alt="...">
+              <div class="overlay-panel overlay-fade overlay-background overlay-background-fixed text-center vertical-align">
+                <div class="vertical-align-middle">
+                  <div class="widget-time widget-divider">
+                    <span>October 23, 2015</span>
+                  </div>
+                  <h3 class="widget-title margin-bottom-20">Beateque Civium Durissimis Equos.</h3>
+                  <button type="button" class="btn btn-outline btn-inverse">READ MORE</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="widget">
+            <div class="cover overlay overlay-hover">
+              <img class="cover-image overlay-scale" src="{{global}}/photos/placeholder.png"
+              alt="...">
+              <div class="overlay-panel overlay-fade overlay-background overlay-background-fixed text-center vertical-align">
+                <div class="vertical-align-middle">
+                  <div class="widget-time widget-divider">
+                    <span>October 28, 2015</span>
+                  </div>
+                  <h3 class="widget-title margin-bottom-20">Suas Cupio Conveniunt Insidiarum.</h3>
+                  <button type="button" class="btn btn-outline btn-inverse">READ MORE</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="widget">
+            <div class="cover overlay overlay-hover">
+              <img class="cover-image overlay-scale" src="{{global}}/photos/placeholder.png"
+              alt="...">
+              <div class="overlay-panel overlay-fade overlay-background overlay-background-fixed text-center vertical-align">
+                <div class="vertical-align-middle">
+                  <div class="widget-time widget-divider">
+                    <span>November 16, 2015</span>
+                  </div>
+                  <h3 class="widget-title margin-bottom-20">Misisti Accusantium Statue Beate.</h3>
+                  <button type="button" class="btn btn-outline btn-inverse">READ MORE</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="widget">
+            <div class="cover overlay overlay-hover">
+              <img class="cover-image overlay-scale" src="{{global}}/photos/placeholder.png"
+              alt="...">
+              <div class="overlay-panel overlay-fade overlay-background overlay-background-fixed text-center vertical-align">
+                <div class="vertical-align-middle">
+                  <div class="widget-time widget-divider">
+                    <span>November 22, 2015</span>
+                  </div>
+                  <h3 class="widget-title margin-bottom-20">Dominorum Erunt Primos Causas.</h3>
+                  <button type="button" class="btn btn-outline btn-inverse">READ MORE</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="widget">
+            <div class="cover overlay overlay-hover">
+              <img class="cover-image overlay-scale" src="{{global}}/photos/placeholder.png"
+              alt="...">
+              <div class="overlay-panel overlay-fade overlay-background overlay-background-fixed text-center vertical-align">
+                <div class="vertical-align-middle">
+                  <div class="widget-time widget-divider">
+                    <span>November 25, 2015</span>
+                  </div>
+                  <h3 class="widget-title margin-bottom-20">Accessio Iudicem Exiguam Instituit.</h3>
+                  <button type="button" class="btn btn-outline btn-inverse">READ MORE</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="widget">
+            <div class="cover overlay overlay-hover">
+              <img class="cover-image overlay-scale" src="{{global}}/photos/placeholder.png"
+              alt="...">
+              <div class="overlay-panel overlay-fade overlay-background overlay-background-fixed text-center vertical-align">
+                <div class="vertical-align-middle">
+                  <div class="widget-time widget-divider">
+                    <span>December 11, 2015</span>
+                  </div>
+                  <h3 class="widget-title margin-bottom-20">Lorem Ipsum Dolor Sit Amet.</h3>
+                  <button class="btn btn-outline btn-inverse" type="button">READ MORE</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="widget">
+            <div class="cover overlay overlay-hover">
+              <img class="cover-image overlay-scale" src="{{global}}/photos/placeholder.png"
+              alt="...">
+              <div class="overlay-panel overlay-fade overlay-background overlay-background-fixed text-center vertical-align">
+                <div class="vertical-align-middle">
+                  <div class="widget-time widget-divider">
+                    <span>December 27, 2015</span>
+                  </div>
+                  <h3 class="widget-title margin-bottom-20">Lorem Ipsum Dolor Sit Amet.</h3>
+                  <button class="btn btn-outline btn-inverse" type="button">READ MORE</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="widget">
+            <div class="cover overlay overlay-hover">
+              <img class="cover-image overlay-scale" src="{{global}}/photos/placeholder.png"
+              alt="...">
+              <div class="overlay-panel overlay-fade overlay-background overlay-background-fixed text-center vertical-align">
+                <div class="vertical-align-middle">
+                  <div class="widget-time widget-divider">
+                    <span>December 30, 2015</span>
+                  </div>
+                  <h3 class="widget-title margin-bottom-20">Lorem Ipsum Dolor Sit Amet.</h3>
+                  <button class="btn btn-outline btn-inverse" type="button">READ MORE</button>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  {{/content}}
+{{/extend}}

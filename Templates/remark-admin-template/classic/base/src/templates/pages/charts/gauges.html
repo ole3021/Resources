@@ -1,0 +1,190 @@
+---
+title: Gauges Charts
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/gauge-js/gauge.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/gauge-js/gauge.min.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/gauge-js.js"></script>
+  {{/content}}
+
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/charts/gauges.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title">Gauges Charts</h1>
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li><a href="javascript:void(0)">Charts</a></li>
+          <li class="active">Gauges</li>
+        </ol>
+        <div class="page-header-actions">
+          <a class="btn btn-sm btn-default btn-outline btn-round" href="http://bernii.github.io/gauge.js/"
+          target="_blank">
+            <i class="icon wb-link" aria-hidden="true"></i>
+            <span class="hidden-xs">Official Website</span>
+          </a>
+        </div>
+      </div>
+      <div class="page-content container-fluid">
+        <!-- Panel Gauge -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Gauge</h3>
+          </div>
+          <div class="panel-body">
+            <div class="row row-lg">
+              <div class="col-sm-6">
+
+                <!-- Example Gauge Basic -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Basic</h4>
+                  <div class="example">
+
+                    <div class="gauge" data-plugin="gauge" data-value="2190" data-max-value="3000">
+                      <canvas width="200" height="150"></canvas>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Gauge Basic -->
+              </div>
+
+              <div class="col-sm-6">
+                <!-- Example Gauge Dynamic -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Dynamic</h4>
+                  <div class="example">
+                    <div class="gauge" id="exampleDynamicGauge" data-plugin="gauge" data-value="870"
+                    data-max-value="1000" data-stroke-color="#f978a6">
+                      <div class="gauge-label"></div>
+                      <canvas width="200" height="150"></canvas>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Gauge Dynamic -->
+              </div>
+            </div>
+
+
+            <!-- Example Gauge Sizing -->
+            <div class="example-wrap">
+              <h4 class="example-title">Sizing</h4>
+
+              <div class="row row-lg">
+                <div class="col-sm-4">
+                  <div class="gauge gauge-lg" data-plugin="gauge" data-value="2190" data-max-value="3000">
+                    <div class="gauge-label"></div>
+                    <canvas width="300" height="220"></canvas>
+                  </div>
+                </div>
+
+                <div class="col-sm-4">
+                  <div class="gauge" data-plugin="gauge" data-value="2190" data-max-value="3000">
+                    <div class="gauge-label"></div>
+                    <canvas width="200" height="150"></canvas>
+                  </div>
+                </div>
+
+                <div class="col-sm-4">
+                  <div class="gauge gauge-sm" data-plugin="gauge" data-value="2190" data-max-value="3000">
+                    <div class="gauge-label"></div>
+                    <canvas width="150" height="110"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Example Gauge Sizing -->
+          </div>
+        </div>
+        <!-- End Panel Gauge -->
+
+        <!-- Panel Donut -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Donut</h3>
+          </div>
+          <div class="panel-body">
+            <div class="row row-lg">
+              <div class="col-sm-6">
+
+                <!-- Example Donut Basic -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Basic</h4>
+                  <div class="example">
+                    <div class="donut" data-plugin="donut" data-value="1280" data-max-value="2000">
+                      <canvas width="200" height="150"></canvas>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Donut Basic -->
+              </div>
+
+              <div class="col-sm-6">
+                <!-- Example Donut Dynamic -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Dynamic</h4>
+                  <div class="example">
+                    <div class="donut" id="exampleDynamicDonut" data-plugin="donut" data-value="870"
+                    data-max-value="1000" data-stroke-color="#f978a6">
+                      <div class="donut-label"></div>
+                      <canvas width="200" height="150"></canvas>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Donut Dynamic -->
+              </div>
+            </div>
+
+            <!-- Example Donut Sizing -->
+            <div class="example-wrap">
+              <h4 class="example-title">Sizing</h4>
+
+              <div class="row row-lg">
+                <div class="col-sm-4">
+                  <div class="donut donut-lg" data-plugin="donut" data-value="1280" data-max-value="2000">
+                    <div class="donut-label"></div>
+                    <canvas width="300" height="220"></canvas>
+                  </div>
+                </div>
+
+                <div class="col-sm-4">
+                  <div class="donut" data-plugin="donut" data-value="1280" data-max-value="2000">
+                    <div class="donut-label"></div>
+                    <canvas width="200" height="150"></canvas>
+                  </div>
+                </div>
+
+                <div class="col-sm-4">
+                  <div class="donut donut-sm" data-plugin="donut" data-value="1280" data-max-value="2000">
+                    <div class="donut-label"></div>
+                    <canvas width="150" height="110"></canvas>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- End Example Donut Sizing -->
+          </div>
+        </div>
+        <!-- End Panel Donut -->
+
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

@@ -1,0 +1,57 @@
+@media (max-width: @grid-float-breakpoint-max) {
+  .site-navbar {
+    .brand {
+      display: none;
+    }
+    .brand-mobile {
+      display: block;
+    }
+  }
+
+  .site-menubar {
+    @top: @site-navbar-height;
+    top: @top;
+
+    @height: %(~"100% - %d", @top);
+
+    height: -webkit-calc(@height);
+    height: calc(@height);
+
+    backface-visibility: hidden;
+    perspective: 1000;
+
+    -ms-transform: translate(-@site-menubar-unfold-width, 0);
+    .transform(translate3d(-@site-menubar-unfold-width, 0, 0));
+
+    .site-navbar-collapse-show & {
+      top: (2*@site-navbar-height);
+      @height: %(~"100% - %d", (2*@site-navbar-height));
+      height: -webkit-calc(@height);
+      height: calc(@height);
+    }
+  }
+
+  .site-menubar-footer {
+    visibility: hidden;
+
+    .site-menubar-open & {
+      visibility: visible;
+    }
+  }
+
+  .disable-scrolling {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  body.site-menubar-open {
+    overflow: hidden;
+    height: 100%;
+
+    .page {
+      overflow: hidden;
+      height: 100%;
+      pointer-events: none;
+    }
+  }
+}

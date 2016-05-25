@@ -1,0 +1,381 @@
+---
+title: Ribbon
+---
+
+{{#extend "layout-default"}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/structure/ribbon.css">
+  {{/content}}
+
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title">Ribbon</h1>
+        <ol class="breadcrumb">
+          <li><a href="{{dest '/index.html'}}">Home</a></li>
+          <li class="active">Structure</li>
+        </ol>
+        <div class="page-header-actions">
+          <form>
+            <div class="input-search input-search-dark">
+              <i class="input-search-icon wb-search" aria-hidden="true"></i>
+              <input type="text" class="form-control" name="" placeholder="Search...">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="page-content">
+        <!-- Panel -->
+        <div class="panel">
+          <div class="panel-body container-fluid">
+            <div class="row">
+              <div class="col-sm-12">
+                <!-- Example Basic -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Basic</h4>
+                  <p>Ribbons have shared markup, starting with the default <code>.ribbons</code>                    class, as well as shared states. Swap modifier classes <code>.vertical</code>                    to switch ribbon direction. Add any of the below mentioned
+                    modifier classes (example, <code>.ribbon-danger</code> and
+                    <code>.ribbon-warning</code>) to change the appearance of a
+                    ribbon.</p>
+                  <div class="row">
+                    <div class="col-lg-2 col-sm-4">
+                      <div class="example">
+                        <div class="ribbon">
+                          <span class="ribbon-inner">Ribbon</span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-4">
+                      <div class="example">
+                        <div class="ribbon ribbon-primary">
+                          <span class="ribbon-inner">Ribbon</span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-4">
+                      <div class="example">
+                        <div class="ribbon ribbon-danger">
+                          <span class="ribbon-inner">Ribbon</span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-4">
+                      <div class="example">
+                        <div class="ribbon ribbon-vertical ribbon-warning">
+                          <span class="ribbon-inner"><i class="icon wb-heart" aria-hidden="true"></i></span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-4">
+                      <div class="example">
+                        <div class="ribbon ribbon-vertical ribbon-success">
+                          <span class="ribbon-inner"><i class="icon wb-heart" aria-hidden="true"></i></span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-4">
+                      <div class="example">
+                        <div class="ribbon ribbon-vertical ribbon-info">
+                          <span class="ribbon-inner"><i class="icon wb-heart" aria-hidden="true"></i></span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Basic -->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <!-- Example Reverse -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Reverse</h4>
+                  <p> Alternatively, you can align ribbons to the right by using <code>.ribbon-reverse</code>                    utility classes.</p>
+                  <div class="row">
+                    <div class="col-lg-2 col-sm-4">
+                      <div class="example example-reverse">
+                        <div class="ribbon ribbon-reverse">
+                          <span class="ribbon-inner">Ribbon</span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-4">
+                      <div class="example example-reverse">
+                        <div class="ribbon ribbon-reverse ribbon-primary">
+                          <span class="ribbon-inner">Ribbon</span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-4">
+                      <div class="example example-reverse">
+                        <div class="ribbon ribbon-reverse ribbon-danger">
+                          <span class="ribbon-inner">Ribbon</span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-4">
+                      <div class="example example-reverse">
+                        <div class="ribbon ribbon-vertical ribbon-reverse ribbon-warning">
+                          <span class="ribbon-inner"><i class="icon wb-heart" aria-hidden="true"></i></span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-4">
+                      <div class="example example-reverse">
+                        <div class="ribbon ribbon-vertical ribbon-reverse ribbon-success">
+                          <span class="ribbon-inner"><i class="icon wb-heart" aria-hidden="true"></i></span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-4">
+                      <div class="example example-reverse">
+                        <div class="ribbon ribbon-vertical ribbon-reverse ribbon-info">
+                          <span class="ribbon-inner"><i class="icon wb-heart" aria-hidden="true"></i></span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Reverse -->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <!-- Example Bookmark -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Bookmark</h4>
+                  <p>Use <code>.ribbon-bookmark</code> class to quickly switch a bookmark
+                    styled ribbons.</p>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <div class="example">
+                        <div class="ribbon ribbon-bookmark">
+                          <span class="ribbon-inner">Ribbon</span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="example example-reverse">
+                        <div class="ribbon ribbon-bookmark ribbon-reverse ribbon-primary">
+                          <span class="ribbon-inner">Ribbon</span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="example">
+                        <div class="ribbon ribbon-vertical ribbon-bookmark ribbon-danger">
+                          <span class="ribbon-inner"><i class="icon wb-heart" aria-hidden="true"></i></span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="example example-reverse">
+                        <div class="ribbon ribbon-vertical ribbon-bookmark ribbon-reverse ribbon-warning">
+                          <span class="ribbon-inner"><i class="icon wb-heart" aria-hidden="true"></i></span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Bookmark -->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <!-- Example Clip -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Clip</h4>
+                  <p>Use <code>.ribbon-clip</code> class to quickly switch a clip
+                    styled ribbons, add <code>.ribbon-bottom</code> to switch the
+                    ribbon direction.</p>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <div class="example">
+                        <div class="ribbon ribbon-clip">
+                          <span class="ribbon-inner">Ribbon</span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="example example-reverse">
+                        <div class="ribbon ribbon-clip ribbon-reverse ribbon-primary">
+                          <span class="ribbon-inner">Ribbon</span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="example example-bottom">
+                        <div class="ribbon ribbon-clip ribbon-bottom ribbon-danger">
+                          <span class="ribbon-inner">Ribbon</span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="example example-bottom-reverse">
+                        <div class="ribbon ribbon-clip ribbon-reverse ribbon-bottom ribbon-warning">
+                          <span class="ribbon-inner">Ribbon</span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Clip -->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <!-- Example Badge -->
+                <div class="example-wrap margin-sm-0">
+                  <h4 class="example-title">Badge</h4>
+                  <p>Use <code>.ribbon-badge</code> class to quickly switch a badge
+                    styled ribbons, add <code>.ribbon-bottom</code> to switch the
+                    ribbon direction.</p>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="example">
+                        <div class="ribbon ribbon-badge ribbon-primary">
+                          <span class="ribbon-inner">Ribbon</span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="example example-reverse">
+                        <div class="ribbon ribbon-badge ribbon-primary ribbon-reverse">
+                          <span class="ribbon-inner">Ribbon</span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="example example-bottom">
+                        <div class="ribbon ribbon-badge ribbon-primary ribbon-bottom">
+                          <span class="ribbon-inner">Ribbon</span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="example example-bottom-reverse">
+                        <div class="ribbon ribbon-badge ribbon-primary ribbon-reverse ribbon-bottom">
+                          <span class="ribbon-inner">Ribbon</span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Badge -->
+              </div>
+
+              <div class="col-sm-6">
+                <!-- Example Corner -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Corner</h4>
+                  <p>Use <code>.ribbon-corner</code> class to quickly switch a corner
+                    styled ribbons, add <code>.ribbon-bottom</code> to switch the
+                    ribbon direction. An icon used in an ribbon with additional
+                    .wb-heart class.</p>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="example">
+                        <div class="ribbon ribbon-corner ribbon-primary">
+                          <span class="ribbon-inner"><i class="icon wb-heart" aria-hidden="true"></i></span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="example example-reverse">
+                        <div class="ribbon ribbon-corner ribbon-primary ribbon-reverse">
+                          <span class="ribbon-inner"><i class="icon wb-heart" aria-hidden="true"></i></span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="example example-bottom">
+                        <div class="ribbon ribbon-corner ribbon-primary ribbon-bottom">
+                          <span class="ribbon-inner"><i class="icon wb-heart" aria-hidden="true"></i></span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="example example-bottom-reverse">
+                        <div class="ribbon ribbon-corner ribbon-primary ribbon-reverse ribbon-bottom">
+                          <span class="ribbon-inner"><i class="icon wb-heart" aria-hidden="true"></i></span>
+                        </div>
+                        <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus
+                          diam.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Corner -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel -->
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

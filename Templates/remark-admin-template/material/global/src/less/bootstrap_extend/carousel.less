@@ -1,0 +1,177 @@
+// Name:            Carousel
+//
+// Component:       `carousel`
+//
+// Modifiers:       `carousel-indicators-scaleup`
+//                  `carousel-indicators-fillin`
+//                  `carousel-indicators-fall`
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@carousel-caption-title-font-size:        20px;
+@carousel-caption-title-color:            @inverse;
+
+@carousel-control-hover-opacity:          0.4;
+@carousel-control-icon-size:              @carousel-control-font-size;
+
+@carousel-control-screen-icon-size:       48px;
+@carousel-control-screen-icon-font-size:  @carousel-control-screen-icon-size;
+
+@carousel-indicators-list-margin:         3px;
+@carousel-indicators-list-bg-color:       rgba(255, 255, 255, 0.3);
+@carousel-indicators-list-active-size:    10px;
+
+
+// Component: Carousel
+// ========================================================================
+
+.carousel-control {
+  // &.right,
+  // &.left {
+  //   background: transparent;
+  // }
+
+  min-width: 50px;
+
+  &:hover,
+  &:focus {
+    .opacity(@carousel-control-hover-opacity);
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    width: @carousel-control-icon-size;
+    height: @carousel-control-icon-size;
+    margin-top: (-@carousel-control-icon-size / 2);
+  }
+
+  &.left .icon {
+    left: 50%;
+    margin-left: (-@carousel-control-icon-size / 2);
+  }
+
+  &.right .icon {
+    right: 50%;
+    margin-right: (-@carousel-control-icon-size / 2);
+  }
+}
+
+.carousel-caption {
+  h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+  }
+}
+
+.carousel-indicators {
+  margin-bottom: 0;
+
+  li {
+    margin: @carousel-indicators-list-margin;
+    background-color: @carousel-indicators-list-bg-color;
+    border: none;
+  }
+
+  .active {
+    width: @carousel-indicators-list-active-size;
+    height: @carousel-indicators-list-active-size;
+    margin: @carousel-indicators-list-margin;
+  }
+}
+
+
+// Animate Modifier
+// ========================================================================
+
+// Modifier: `carousel-indicators-scaleup`
+// -------------------------
+
+.carousel-indicators-scaleup {
+  li {
+    border: none;
+    transition: transform 0.3s ease 0s, background-color 0.3s ease 0s;
+  }
+
+  .active {
+    .scale(1.5);
+  }
+}
+
+// Modifier: `carousel-indicators-fillin`
+// -------------------------
+
+.carousel-indicators-fillin {
+  li {
+    background-color: transparent;
+    box-shadow: 0 0 0 2px #fff inset;
+    transition: box-shadow 0.3s ease 0s;
+  }
+
+  .active {
+    box-shadow: 0 0 0 8px #fff inset;
+  }
+}
+
+
+// Modifier: `carousel-indicators-fall`
+// -------------------------
+
+.carousel-indicators-fall {
+  li {
+    position: relative;
+    transition: transform 0.3s ease 0s, background-color 0.3s ease 0s;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+      content: '';
+      background-color: rgba(0, 0, 0, .3);
+      border-radius: 50%;
+      opacity: 0;
+      .translate(0%, -200%);
+      transition: opacity 0.3s ease 0s, visibility 0s ease 0.3s;
+    }
+  }
+
+  .active {
+    background-color: transparent;
+    .translate(0, 200%);
+
+    &:after {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 0.3s ease 0s;
+    }
+  }
+}
+
+// Media Modifier
+// ========================================================================
+
+@media screen and (min-width: @screen-sm-min) {
+  .carousel-control {
+    .icon {
+      width: @carousel-control-screen-icon-size;
+      height: @carousel-control-screen-icon-size;
+      margin-top: (-@carousel-control-screen-icon-size / 2);
+      font-size: @carousel-control-screen-icon-font-size;
+    }
+
+    &.left .icon {
+      margin-left: (-@carousel-control-screen-icon-size / 2);
+    }
+
+    &.right .icon {
+      margin-right: (-@carousel-control-screen-icon-size / 2);
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@import "vars.less";
+
+// jquery-strength
+// =========================================================
+
+@namespace: strength;
+
+.@{namespace}-container {
+  // display: inline-block;
+  position: relative;
+
+  .@{namespace}-input {
+    width: 100%;
+    padding-right: 20px;
+  }
+
+  .@{namespace}-meter {
+    position: absolute;
+    top: 15%;
+    right: 6px;
+    width: 4px;
+    height: 70%;
+    background-color: #ccc;
+    border-radius: 1px;
+    overflow: hidden;
+  }
+
+  .@{namespace}-score {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    color: transparent;
+    transition: width 0.6s ease 0s;
+  }
+
+  .show-password-wrap {
+    position: absolute;
+  }
+
+  .@{namespace}-toggle {
+
+  }
+
+  //===score 2 status
+  .@{namespace}-invalid {
+    &.@{namespace}-score {
+      background-color: @brand-danger;
+      height: 25%;
+    }
+  }
+
+  .@{namespace}-weak {
+    &.@{namespace}-score {
+      background-color: @brand-warning;
+      height: 50%;
+    }
+  }
+
+  .@{namespace}-good {
+    &.@{namespace}-score {
+      background-color: @brand-info;
+      height: 75%; 
+    }
+  }
+
+  .@{namespace}-strong {
+    &.@{namespace}-score {
+      background-color: @brand-success;
+      height: 100%; 
+    }
+  }
+
+}
+
+

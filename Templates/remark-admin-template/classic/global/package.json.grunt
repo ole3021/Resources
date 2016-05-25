@@ -1,0 +1,67 @@
+{
+  "name": "remark",
+  "title": "Remark",
+  "description": "The best backend-end framework for developing responsive, mobile first projects on the web.",
+  "version": "2.1.0",
+  "homepage": "http://getbootstrapadmin.com/remark",
+  "private": true,
+  "keywords": [
+    "css",
+    "js",
+    "less",
+    "mobile-first",
+    "responsive",
+    "framework",
+    "web",
+    "admin",
+    "bootstrap"
+  ],
+  "author": {
+    "name": "amazingsurge",
+    "url": "http://amazingSurge.com"
+  },
+  "bugs": {
+    "url": "https://forum.getbootstrapadmin.com/remark"
+  },
+  "license": "Themeforest Standard Licenses",
+  "licenses": [{
+    "type": "Themeforest Standard Licenses",
+    "url": "http://themeforest.net/licenses/standard"
+  }],
+  "devDependencies": {
+    "glob": "*",
+    "grunt": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-bootlint": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-csslint": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-csscomb": "*",
+    "grunt-exec": "*",
+    "grunt-hb": "*",
+    "grunt-notify": "*",
+    "grunt-prettify": "*",
+    "load-grunt-config": "*",
+    "load-grunt-tasks": "*"
+  },
+  "engines": {
+    "node": ">=0.10.1"
+  },
+  "files": [
+    "js/**/*.js",
+    "css/**/*.css",
+    "vendor/**/*",
+    "fonts/**/*",
+    "src/js/**/*.js",
+    "src/less/**/*.less",
+    "src/vendor/**/*.less",
+    "src/fonts/**/*.less",
+    "src/skins/**/*.less"
+  ]
+}

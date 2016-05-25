@@ -1,0 +1,119 @@
+// Name:            Popover
+//
+// Component:       `popover`
+//
+// Modifiers:       `popover-primary`
+//                  `popover-success`
+//                  `popover-info`
+//                  `popover-warning`
+//                  `popover-danger`
+//                  `popover-rotate`
+//                  `popover-scale`
+//
+// Markup:
+//
+// <!-- popover -->
+// <div class="popover">
+//   <div class="arrow"></div>
+//   <h3 class="popover-title"></h3>
+//   <div class="popover-content"></div>
+// </div>
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+@popover-primary-color  : @inverse;
+@popover-primary-bg     : @brand-primary;
+@popover-primary-border : @brand-primary;
+
+@popover-success-color  : @inverse;
+@popover-success-bg     : @brand-success;
+@popover-success-border : @brand-success;
+
+@popover-info-color     : @inverse;
+@popover-info-bg        : @brand-info;
+@popover-info-border    : @brand-info;
+
+@popover-warning-color  : @inverse;
+@popover-warning-bg     : @brand-warning;
+@popover-warning-border : @brand-warning;
+
+@popover-danger-color   : @inverse;
+@popover-danger-bg      : @brand-danger;
+@popover-danger-border  : @brand-danger;
+
+// Component: Popover
+// ========================================================================
+
+.popover {
+  .box-shadow(@popover-shadow);
+  &.bottom {
+    > .arrow:after {
+      border-bottom-color: @popover-title-bg;
+    }
+  }
+}
+
+
+// Color Modifier
+// ========================================================================
+
+// Modifier: `popover-primary`
+// -------------------------
+
+.popover-primary {
+  .popover-variant(@popover-primary-color; @popover-primary-bg; @popover-primary-border);
+}
+
+// Modifier: `popover-success`
+// -------------------------
+
+.popover-success {
+  .popover-variant(@popover-success-color; @popover-success-bg; @popover-success-border);
+}
+
+// Modifier: `popover-info`
+// -------------------------
+
+.popover-info {
+  .popover-variant(@popover-info-color; @popover-info-bg; @popover-info-border);
+}
+
+// Modifier: `popover-warning`
+// -------------------------
+
+.popover-warning {
+  .popover-variant(@popover-warning-color; @popover-warning-bg; @popover-warning-border);
+}
+
+// Modifier: `popover-danger`
+// -------------------------
+
+.popover-danger {
+  .popover-variant(@popover-danger-color; @popover-danger-bg; @popover-danger-border);
+}
+
+// Popover Animation
+// ========================================================================
+
+
+// Mixins
+// ========================================================================
+
+.popover-variant(@color; @bg; @border) {
+  & + .popover {
+    .popover-title {
+      color: @color;
+      background-color: @bg;
+      border-color: @border;
+    }
+
+    &.bottom .arrow {
+      border-bottom-color: @border;
+      &:after {
+        border-bottom-color: @bg;
+      }
+    }
+  }
+}

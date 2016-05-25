@@ -1,0 +1,15 @@
+@media (max-width: 480px) {
+  .panel-actions .dataTables_length {
+    display: none;
+  }
+}
+@media (max-width: 320px) {
+  .panel-actions .dataTables_filter {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .dataTables_length {
+    float: left;
+  }
+}

@@ -1,0 +1,401 @@
+---
+title: List
+---
+
+{{#extend "layout-default"}}
+
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li class="active">Basic UI</li>
+        </ol>
+        <h1 class="page-title">List</h1>
+        <div class="page-header-actions">
+          <button type="button" class="btn btn-sm btn-icon btn-inverse btn-round" data-toggle="tooltip"
+          data-original-title="Edit">
+            <i class="icon wb-pencil" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-sm btn-icon btn-inverse btn-round" data-toggle="tooltip"
+          data-original-title="Refresh">
+            <i class="icon wb-refresh" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-sm btn-icon btn-inverse btn-round" data-toggle="tooltip"
+          data-original-title="Setting">
+            <i class="icon wb-settings" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <div class="page-content">
+        <!-- Panle List -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">List Style</h3>
+          </div>
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-sm-6 col-lg-4">
+                <!-- Example Basic -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Basic List</h4>
+                  <p>The most basic list group is simply an ordered list with list
+                    items, and the proper classes. Build upon it with the options
+                    that follow, or your own CSS as needed.</p>
+                  <ul class="list-group list-group-full">
+                    <li class="list-group-item active">1. Active</li>
+                    <li class="list-group-item">2. Dapibus ac facilisis in</li>
+                    <li class="list-group-item">3. Morbi leo risus</li>
+                    <li class="list-group-item disabled">4. Disabled</li>
+                    <li class="list-group-item">5. Vestibulum at eros</li>
+                  </ul>
+                </div>
+                <!-- End Example Basic -->
+              </div>
+
+              <div class="col-sm-6 col-lg-4">
+                <!-- Example Bordered -->
+                <div class="example-wrap">
+                  <h4 class="example-title">List Group Bordered Style</h4>
+                  <p>Add the <code>.list-group-bordered</code> to the wrap.</p>
+                  <ul class="list-group list-group-bordered">
+                    <li class="list-group-item active">1. Active</li>
+                    <li class="list-group-item">2. Dapibus ac facilisis in</li>
+                    <li class="list-group-item">3. Morbi leo risus</li>
+                    <li class="list-group-item disabled">4. Disabled</li>
+                    <li class="list-group-item">5. Vestibulum at eros</li>
+                  </ul>
+                </div>
+                <!-- End Example Bordered -->
+              </div>
+
+              <div class="clearfix visible-sm-block visible-md-block"></div>
+
+              <div class="col-sm-6 col-lg-4">
+                <!-- Example List Divider -->
+                <div class="example-wrap">
+                  <h4 class="example-title">List Group With Divider line</h4>
+                  <p>Add the <code>.list-group-dividered</code> to the wrap.</p>
+                  <ul class="list-group list-group-dividered list-group-full">
+                    <li class="list-group-item active">1. Active</li>
+                    <li class="list-group-item">2. Dapibus ac facilisis in</li>
+                    <li class="list-group-item">3. Morbi leo risus</li>
+                    <li class="list-group-item disabled">4. Disabled</li>
+                    <li class="list-group-item">5. Vestibulum at eros</li>
+                  </ul>
+                </div>
+                <!-- End Example List Divider -->
+              </div>
+
+              <div class="clearfix visible-lg-block"></div>
+
+              <div class="col-sm-6 col-lg-4">
+                <!-- Example Badges -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Badges List</h4>
+                  <p>Add the badges component to any list group item and it will automatically
+                    be positioned on the right.</p>
+                  <ul class="list-group list-group-full">
+                    <li class="list-group-item">
+                      <span class="badge badge-success">6</span> Cras justo odio
+                    </li>
+                    <li class="list-group-item">
+                      Dapibus ac facilisis in
+                    </li>
+                    <li class="list-group-item">
+                      <span class="badge badge-danger">3</span> Morbi leo risus
+                    </li>
+                    <li class="list-group-item active">
+                      <span class="badge badge-info">10</span> Porta ac consectetur ac
+                    </li>
+                    <li class="list-group-item">
+                      Vestibulum at eros
+                    </li>
+                    <li class="list-group-item">
+                      Ibus ac facilis
+                    </li>
+                  </ul>
+                </div>
+                <!-- End Example Badges -->
+              </div>
+
+              <div class="clearfix visible-sm-block visible-md-block"></div>
+
+              <div class="col-sm-6 col-lg-4">
+                <!-- Example Linked -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Linked Items</h4>
+                  <p>Linkify list group items by using anchor tags instead of list
+                    items (that also means a parent <code>&lt;div&gt;</code> instead
+                    of an <code>&lt;ul&gt;</code>). No need for individual parents
+                    around each element.</p>
+                  <div class="list-group">
+                    <a class="list-group-item active" href="javascript:void(0)">Cras justo odio</a>
+                    <a class="list-group-item" href="javascript:void(0)">Dapibus ac facilisis in</a>
+                    <a class="list-group-item" href="javascript:void(0)">Morbi leo risus</a>
+                    <a class="list-group-item disabled" href="javascript:void(0)">Porta ac consectetur ac</a>
+                    <a class="list-group-item" href="javascript:void(0)">Vestibulum at eros</a>
+                  </div>
+                </div>
+                <!-- End Example Linked -->
+              </div>
+
+              <div class="col-sm-6 col-lg-4">
+                <!-- Example Background -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Background</h4>
+                  <p>Add the color by <code>.bg-*</code> to the wrap. Also your will
+                    be add the class with <code>.bg-inherit</code></p>
+                  <div class="list-group bg-blue-grey-100 bg-inherit">
+                    <a class="list-group-item blue-grey-500" href="javascript:void(0)">
+                      <i class="icon wb-inbox" aria-hidden="true"></i> Inbox
+                    </a>
+                    <a class="list-group-item blue-grey-500" href="javascript:void(0)">
+                      <i class="icon wb-user" aria-hidden="true"></i> Profile visits
+                    </a>
+                    <a class="list-group-item blue-grey-500" href="javascript:void(0)">
+                      <i class="icon wb-bell" aria-hidden="true"></i> Call
+                    </a>
+                    <a class="list-group-item blue-grey-500" href="javascript:void(0)">
+                      <i class="icon wb-envelope" aria-hidden="true"></i> Messages
+                    </a>
+                    <a class="list-group-item blue-grey-500" href="javascript:void(0)">
+                      <i class="icon wb-tag" aria-hidden="true"></i> Bookmarks
+                    </a>
+                  </div>
+                </div>
+                <!-- End Example Background -->
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="col-sm-6 col-lg-4">
+                <!-- Example Contextual -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Contextual Classes</h4>
+                  <p>Use contextual classes to style list items, default or linked.
+                    Also includes <code>.active</code> state.</p>
+                  <ul class="list-group list-group-gap">
+                    <li class="list-group-item list-group-item-warning">Cras justo odio</li>
+                    <li class="list-group-item list-group-item-success">Dapibus ac facilisis in</li>
+                    <li class="list-group-item list-group-item-info">Cras sit amet nibh libero</li>
+                    <li class="list-group-item list-group-item-danger">Porta ac consectetur ac</li>
+                    <li class="list-group-item list-group-item-dark">Vestibulum at eros</li>
+                  </ul>
+                </div>
+                <!-- End Example Contextual -->
+              </div>
+
+
+              <div class="col-sm-6 col-lg-4">
+                <!-- Example Custom -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Custom Content</h4>
+                  <p>Add nearly any HTML within, even for linked list groups like
+                    the one below.</p>
+                  <div class="list-group">
+                    <a class="list-group-item active" href="javascript:void(0)">
+                      <h4 class="list-group-item-heading">List 1</h4>
+                      <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)">
+                      <h4 class="list-group-item-heading">List 2</h4>
+                      <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)">
+                      <h4 class="list-group-item-heading">List 3</h4>
+                      <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+                    </a>
+                  </div>
+                </div>
+                <!-- End Example Custom -->
+              </div>
+
+              <div class="clearfix visible-sm-block visible-md-block"></div>
+
+              <div class="col-sm-6 col-lg-4">
+                <!-- Example Gap -->
+                <div class="example-wrap">
+                  <h4 class="example-title">With Gap</h4>
+                  <p>Add the <code>.list-group-gap</code> to the wrap for gap the
+                    items.</p>
+                  <ul class="list-group list-group-gap">
+                    <li class="list-group-item bg-blue-grey-100">
+                      <i class="icon wb-inbox" aria-hidden="true"></i> Inbox
+                    </li>
+                    <li class="list-group-item bg-blue-grey-100">
+                      <i class="icon wb-user" aria-hidden="true"></i> Profile visits
+                    </li>
+                    <li class="list-group-item bg-blue-grey-100">
+                      <i class="icon wb-bell" aria-hidden="true"></i> Call
+                    </li>
+                    <li class="list-group-item bg-blue-grey-100">
+                      <i class="icon wb-envelope" aria-hidden="true"></i> Messages
+                    </li>
+                    <li class="list-group-item bg-blue-grey-100">
+                      <i class="icon wb-tag" aria-hidden="true"></i> Bookmarks
+                    </li>
+                  </ul>
+                </div>
+                <!-- End Example Gap -->
+              </div>
+
+              <div class="clearfix visible-lg-block"></div>
+
+              <div class="col-sm-6 col-lg-4">
+                <!-- Example User -->
+                <div class="example-wrap margin-lg-0">
+                  <h4 class="example-title">User List</h4>
+                  <p>A list item can contain an image with state.</p>
+                  <ul class="list-group list-group-full">
+                    <li class="list-group-item">
+                      <div class="media">
+                        <div class="media-left">
+                          <a class="avatar" href="javascript:void(0)">
+                            <img class="img-responsive" src="{{global}}/portraits/1.jpg"
+                            alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">Herman Beck</h4>
+                          <small>CEO</small>
+                        </div>
+                        <div class="media-right">
+                          <span class="status status-lg status-online"></span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="media">
+                        <div class="media-left">
+                          <a class="avatar" href="javascript:void(0)">
+                            <img class="img-responsive" src="{{global}}/portraits/2.jpg"
+                            alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">Mary Adams</h4>
+                          <small>CIO</small>
+                        </div>
+                        <div class="media-right">
+                          <span class="status status-lg status-busy"></span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="media">
+                        <div class="media-left">
+                          <a class="avatar" href="javascript:void(0)">
+                            <img class="img-responsive" src="{{global}}/portraits/3.jpg"
+                            alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">Caleb Richards</h4>
+                          <small>CTO</small>
+                        </div>
+                        <div class="media-right">
+                          <span class="status status-lg status-off"></span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="media">
+                        <div class="media-left">
+                          <a class="avatar" href="javascript:void(0)">
+                            <img class="img-responsive" src="{{global}}/portraits/4.jpg"
+                            alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">June Lane</h4>
+                          <small>CVO</small>
+                        </div>
+                        <div class="media-right">
+                          <span class="status status-lg status-away"></span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- End Example User -->
+              </div>
+
+              <div class="clearfix visible-sm-block visible-md-block"></div>
+
+              <div class="col-sm-6 col-lg-4">
+                <!-- Example Media -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Media List</h4>
+                  <p>A list item can contain an image, user name and description.</p>
+                  <ul class="list-group list-group-full">
+                    <li class="list-group-item">
+                      <div class="media">
+                        <div class="media-left">
+                          <a class="avatar avatar-online" href="javascript:void(0)">
+                            <img class="img-responsive" src="{{global}}/portraits/5.jpg"
+                            alt="..."><i></i></a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">Edward Fletcher</h4>
+                          <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel
+                            metus.</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="media">
+                        <div class="media-left">
+                          <a class="avatar avatar-away" href="javascript:void(0)">
+                            <img class="img-responsive" src="{{global}}/portraits/6.jpg"
+                            alt="..."><i></i></a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">Crystal Bates</h4>
+                          <p>Porta ac consectetur ac. Porta ac consectetur ac.</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="media">
+                        <div class="media-left">
+                          <a class="avatar avatar-busy" href="javascript:void(0)">
+                            <img class="img-responsive" src="{{global}}/portraits/7.jpg"
+                            alt="..."><i></i></a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">Nathan Watts</h4>
+                          <p>Cbh libero, in gravida nulla. Nulla vel metus.</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="media">
+                        <div class="media-left">
+                          <a class="avatar avatar-off" href="javascript:void(0)">
+                            <img class="img-responsive" src="{{global}}/portraits/8.jpg"
+                            alt="..."><i></i></a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">Heather Harper</h4>
+                          <p>Bbh libero, in gravida nulla. Nulla vel metus.</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- End Example Media -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panle List -->
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

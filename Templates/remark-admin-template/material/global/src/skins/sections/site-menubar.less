@@ -1,0 +1,13 @@
+
+.site-menubar {
+  background: @site-menubar-bg;
+  color: @site-menubar-color;
+
+  &.site-menubar-dark {
+    background: @site-menubar-dark-bg;
+
+    .scrollable-inverse.scrollable .scrollable-bar-handle {
+      background: fade(@gray, 60%);;
+    }
+  }
+}

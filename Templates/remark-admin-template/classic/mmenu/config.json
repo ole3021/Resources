@@ -1,0 +1,45 @@
+{
+  "html": "html",
+  "assets": "assets",
+  "destination": {
+    "css": "assets/css",
+    "js": "assets/js",
+    "skins": "assets/skins",
+    "examples": "assets/examples"
+  },
+  "source": {
+    "js": "src/js",
+    "less": "src/less",
+    "skins": "src/skins",
+    "examples": "src/examples"
+  },
+  "templates": {
+    "data": "src/templates/data",
+    "helpers": "src/templates/helpers",
+    "partials": "src/templates/partials",
+    "pages": "src/templates/pages"
+  },
+  "global": {
+    "path": "../global",
+    "fonts": "../global/fonts",
+    "vendor": "../global/vendor",
+    "css": "../global/css",
+    "js": "../global/js",
+    "less": "../global/src/less",
+    "skins": "../global/src/skins"
+  },
+  "bootstrap": {
+    "less": "../global/src/less/bootstrap",
+    "mixins": "../global/src/less/mixins"
+  },
+  "autoprefixerBrowsers": [
+    "Android 2.3",
+    "Android >= 4",
+    "Chrome >= 20",
+    "Firefox >= 24",
+    "Explorer >= 8",
+    "iOS >= 6",
+    "Opera >= 12",
+    "Safari >= 6"
+  ]
+}

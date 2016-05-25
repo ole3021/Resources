@@ -1,0 +1,338 @@
+@import "vars.less";
+
+
+// Mix-ins
+
+
+.word-wrap(@value: break-word) {
+  -ms-word-wrap: @value;
+  word-wrap: @value;
+}
+
+// Variables
+@black:       #000;
+@white:       #fff;
+@default:     #e4eaee;
+
+@success:     @inverse;
+@success-bg:  @brand-success-hover;
+
+@danger:      @inverse;
+@danger-bg:   @brand-danger-hover;
+
+@info:        @inverse;
+@info-bg:     @brand-info-hover;
+
+@warning:     @inverse;
+@warning-bg:  @brand-warning-hover;
+
+@progress-bg: #000;
+
+@default-container-opacity: .95;
+
+// z-index
+@toastr-z-index: @zindex-modal;
+@toastr-border-color: rgba(0, 0, 0, .1);
+@toastr-border-radius: @border-radius-base;
+
+// shadow
+@toastr-shadow: 0 1px 2px 0 rgba(0,0,0,.16), 0 1px 4px 0 rgba(0,0,0,.12);  // @box-shadow-1;
+@toastr-hover-shadow: 0 2px 4px 0 rgba(0,0,0,.16), 0 2px 8px 0 rgba(0,0,0,.12);
+
+// Styles
+.toast-title {
+  font-weight: @font-weight-bold;
+}
+.toast-message {
+  .word-wrap();
+
+  a,
+  label {
+    color: @white;
+  }
+
+  a:hover {
+    color: @gray-light;
+    text-decoration: none;
+  }
+}
+
+.toast-close-button {
+  position: relative;
+  right: -0.3em;
+  top: -0.3em;
+  margin-bottom: -.5em;
+  float: right;
+  font-size: 20px;
+  font-weight: @font-weight-normal;
+  color: @white;
+  -webkit-text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+  .opacity(0.8);
+
+  &:hover,
+  &:focus {
+    color: @black;
+    text-decoration: none;
+    cursor: pointer;
+    .opacity(0.4);
+  }
+}
+
+/*Additional properties for button version
+ iOS requires the button element instead of an anchor tag.
+ If you want the anchor version, it requires `href="#"`.*/
+button.toast-close-button {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+//#endregion
+
+.toast-top-center {
+  top: 12px;
+  right: 0;
+  width: 100%;
+}
+
+.toast-bottom-center {
+  bottom: 12px;
+  right: 0;
+  width: 100%;
+}
+
+.toast-top-full-width {
+  top: 0;
+  right: 0;
+  width: 100%;
+
+  .toast {
+    margin-bottom: 0;
+  }
+}
+
+.toast-bottom-full-width {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+
+  .toast {
+    margin-bottom: 0;
+  }
+}
+
+.toast-top-left {
+  top: 12px;
+  left: 12px;
+}
+
+.toast-top-right {
+  top: 12px;
+  right: 12px;
+}
+
+.toast-bottom-right {
+  right: 12px;
+  bottom: 12px;
+}
+
+.toast-bottom-left {
+  bottom: 12px;
+  left: 12px;
+}
+
+[aria-live="polite"][class*="toast-"] {
+  position: fixed;
+  // z-index: 999999;
+  z-index: @toastr-z-index;
+  pointer-events: none;
+
+  * {
+    .box-sizing(border-box);
+  }
+
+  > div {
+    position: relative;
+    pointer-events: auto;
+    overflow: hidden;
+    margin: 0 0 6px;
+    padding: 15px 20px;
+    width: 300px;
+    border-radius: @toastr-border-radius;
+    border: 1px solid @toastr-border-color;
+    background-position: 15px center;
+    background-repeat: no-repeat;
+    color: @gray;
+    .opacity(@default-container-opacity);
+    box-shadow: @toastr-shadow;
+
+    &:hover {
+      box-shadow: @toastr-hover-shadow;
+    }
+  }
+
+  > .toast-flat {
+    box-shadow: none;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  > :hover {
+    .opacity(1);
+    cursor: pointer;
+  }
+
+  > .toast-success,
+  > .toast-info,
+  > .toast-warning,
+  > .toast-danger {
+    &:not(.toast-just-text) {
+      padding-left: 50px;
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        font-family: @zmdi-font-name;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: @font-weight-normal;
+        text-rendering: auto;
+        speak: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+
+  > .toast-success {
+    color: @success;
+
+    &:not(.toast-just-text) {
+      &:before {
+        content: @zmdi-var-check;
+      }
+    }
+  }
+
+  > .toast-info {
+    color: @info;
+
+    &:not(.toast-just-text) {
+      &:before {
+        content: @zmdi-var-info;
+      }
+    }
+  }
+
+  > .toast-warning {
+    color: @warning;
+
+    &:not(.toast-just-text) {
+      &:before {
+        content: @zmdi-var-alert-triangle;
+      }
+    }
+  }
+
+  > .toast-danger {
+    color: @danger;
+
+    &:not(.toast-just-text) {
+      &:before {
+        content: @zmdi-var-alert-circle;
+      }
+    }
+  }
+
+  /*overrides*/
+  &.toast-top-center > div,
+  &.toast-bottom-center > div {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.toast-top-full-width > div,
+  &.toast-bottom-full-width > div {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0;
+  }
+}
+
+.toast {
+  background-color: @default;
+}
+
+.toast-success {
+  background-color: @success-bg;
+}
+
+.toast-danger {
+  background-color: @danger-bg;
+}
+
+.toast-info {
+  background-color: @info-bg;
+}
+
+.toast-warning {
+  background-color: @warning-bg;
+}
+
+.toast-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: @progress-bg;
+  .opacity(0.1);
+}
+
+/*Responsive Design*/
+
+@media all and (max-width: 240px) {
+  [aria-live="polite"] {
+
+    > div {
+      padding: 8px 8px 8px 50px;
+      width: 11em;
+    }
+
+    & .toast-close-button {
+      right: -0.2em;
+      top: -0.2em;
+    }
+  }
+}
+
+@media all and (min-width: 241px) and (max-width: 480px) {
+  [aria-live="polite"] {
+    > div {
+      padding: 8px 8px 8px 50px;
+      width: 18em;
+    }
+
+    & .toast-close-button {
+      right: -0.2em;
+      top: -0.2em;
+    }
+  }
+}
+
+@media all and (min-width: 481px) and (max-width: 768px) {
+  [aria-live="polite"] {
+    > div {
+      padding: 15px 15px 15px 50px;
+      width: 25em;
+    }
+  }
+}

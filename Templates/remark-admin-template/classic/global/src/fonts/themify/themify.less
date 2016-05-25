@@ -1,0 +1,23 @@
+@import "vars.less";
+@import "less/variables.less";
+
+@ti-font-path: ".";
+
+@font-face {
+  font-family: '@{ti-font-family}';
+  src:url('@{ti-font-path}/themify.eot?-fvbane');
+  src:url('@{ti-font-path}/themify.eot?#iefix-fvbane') format('embedded-opentype'),
+    url('@{ti-font-path}/themify.woff?-fvbane') format('woff'),
+    url('@{ti-font-path}/themify.ttf?-fvbane') format('truetype'),
+    url('@{ti-font-path}/themify.svg?-fvbane#themify') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="@{ti-css-prefix}-"],
+[class*=" @{ti-css-prefix}-"] {
+  font-family: '@{ti-font-family}';
+  .make-icon();
+}
+
+@import "less/icons.less";

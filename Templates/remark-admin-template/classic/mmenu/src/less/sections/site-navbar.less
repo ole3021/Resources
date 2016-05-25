@@ -1,0 +1,59 @@
+
+.site-navbar {
+  background-color: @site-navbar-header-bg;
+
+  .navbar-header {
+    background-color: transparent;
+    color: @site-navbar-header-color;
+
+    .navbar-toggle {
+      color: @site-navbar-header-color;
+    }
+
+    .hamburger {
+      &:before,
+      &:after,
+      .hamburger-bar {
+        background-color: @site-navbar-header-color;
+      }
+    }
+
+    .navbar-brand {
+      float: none;
+      color: @site-navbar-brand-color;
+      font-family: @brand-font-family;
+      cursor: pointer;
+      text-align: center;
+
+      .text-overflow();
+
+      &-logo {
+        height: 22px;
+        transition: height .25s;
+      }
+
+      &-text {
+        display: none;
+      }
+    }
+
+    @media (min-width: @grid-float-breakpoint) {
+      width: @site-menubar-fold-width;
+    }
+  }
+
+  .navbar-container {
+    @media (min-width: @grid-float-breakpoint) {
+      margin-left: @site-menubar-fold-width;
+      transition: margin-left .25s;
+    }
+
+    background-color: @inverse;
+  }
+
+  &.navbar-inverse {
+    .navbar-container {
+      background-color: transparent;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+@include keyframes(animateLoader) {
+	0% {
+		@include transform( rotate(0deg) );
+	}
+	100% {
+		@include transform( rotate(220deg) );
+	}
+}
+
+@include keyframes(animateLoaderAfterWhite) {
+	0% {
+		box-shadow: 0 0 0 6px #FFF inset;
+		@include transform( rotate(-140deg) );
+	}
+	50% {
+		box-shadow: 0 0 0 2px #FFF inset;
+	}
+	100% {
+		box-shadow: 0 0 0 6px #FFF inset;
+		@include transform( rotate(140deg) );
+	}
+}
+
+@include keyframes(animateLoaderAfterBlack) {
+	0% {
+		box-shadow: 0 0 0 6px #000 inset;
+		@include transform( rotate(-140deg) );
+	}
+	50% {
+		box-shadow: 0 0 0 2px #000 inset;
+	}
+	100% {
+		box-shadow: 0 0 0 6px #000 inset;
+		@include transform( rotate(140deg) );
+	}
+}
+
+.loading-overlay-showing {
+	overflow: hidden;
+
+	& > .loading-overlay {
+		opacity: 1;
+		visibility: visible;
+		@include transition-delay( 0 );
+	}
+}
+
+.loading-overlay {
+	@include transition( visibility 0s ease-in-out 0.5s, opacity 0.5s ease-in-out );
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	opacity: 0;
+	right: 0;
+	top: 0;
+	visibility: hidden;
+
+	&.dark {
+		background: $dark-bg;
+	}
+
+	&.light {
+		background: #FFF;
+	}
+
+	.loader {
+		@include animation( animateLoader 1s linear infinite );
+		clip: rect(0, 30px, 30px, 15px);
+		height: 30px;
+		left: 50%;
+		margin-left: -15px;
+		margin-top: -15px;
+		position: absolute;
+		text-align: left;
+		top: 50%;
+		width: 30px;
+
+		&.white:after {
+			@include animation( animateLoaderAfterWhite 1s ease-in-out infinite );
+		}
+
+		&.black:after {
+			@include animation( animateLoaderAfterBlack 1s ease-in-out infinite );
+		}
+
+		&:after {
+			border-radius: 50%;
+			clip: rect(0, 30px, 30px, 15px);
+			content: '';
+			height: 30px;
+			position: absolute;
+			width: 30px;
+		}
+	}
+}
+
+body > .loading-overlay {
+	position: fixed;
+	z-index: 999999;
+}

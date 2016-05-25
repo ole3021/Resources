@@ -1,0 +1,176 @@
+// Name:            Ribbon
+//
+// Component:       `ribbon`
+//
+// Modifiers:       'ribbon-lg'
+//                  'ribbon-sm'
+//                  'ribbon-xs'
+//                  'ribbon-vertical'
+//                  'ribbon-reverse'
+//                  'ribbon-bookmark'
+//                  'ribbon-badge'
+//                  'ribbon-corner'
+//                  'ribbon-clip'
+//                  'ribbon-primary'
+//                  'ribbon-success'
+//                  'ribbon-info'
+//                  'ribbon-warning'
+//                  'ribbon-danger'
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@ribbon-primary-inner-bg:    @brand-primary;
+@ribbon-primary-clip-border: @brand-primary-active;
+
+@ribbon-success-inner-bg:    @brand-success;
+@ribbon-success-clip-border: @brand-success-active;
+
+@ribbon-info-inner-bg:       @brand-info;
+@ribbon-info-clip-border:    @brand-info-active;
+
+@ribbon-warning-inner-bg:    @brand-warning;
+@ribbon-warning-clip-border: @brand-warning-active;
+
+@ribbon-danger-inner-bg:     @brand-danger;
+@ribbon-danger-clip-border:  @brand-danger-active;
+
+
+// Color Modifier
+// ========================================================================
+
+.ribbon-primary {
+  .ribbon-variant(@ribbon-primary-inner-bg);
+  .ribbon-clip-variant(@ribbon-primary-clip-border);
+}
+
+.ribbon-success {
+  .ribbon-variant(@ribbon-success-inner-bg);
+  .ribbon-clip-variant(@ribbon-success-clip-border);
+}
+
+.ribbon-info {
+  .ribbon-variant(@ribbon-info-inner-bg);
+  .ribbon-clip-variant(@ribbon-info-clip-border);
+}
+
+.ribbon-warning {
+  .ribbon-variant(@ribbon-warning-inner-bg);
+  .ribbon-clip-variant(@ribbon-warning-clip-border);
+}
+
+.ribbon-danger {
+  .ribbon-variant(@ribbon-danger-inner-bg);
+  .ribbon-clip-variant(@ribbon-danger-clip-border);
+}
+
+// Mixins
+// ========================================================================
+
+.ribbon-variant(@bg) {
+  .ribbon-inner {
+    background-color: @bg;
+  }
+
+  &.ribbon-bookmark {
+    .ribbon-bookmark-variant(@bg);
+  }
+
+  &.ribbon-corner {
+    .ribbon-corner-variant(@bg);
+  }
+}
+
+.ribbon-bookmark-variant(@border) {
+  .ribbon-inner {
+    &:before {
+      border-color: @border;
+      border-right-color: transparent;
+    }
+  }
+
+  &.ribbon-reverse {
+    .ribbon-inner {
+      &:before {
+        border-right-color: @border;
+        border-left-color: transparent;
+      }
+    }
+  }
+
+  &.ribbon-vertical {
+    .ribbon-inner {
+      &:before {
+        border-right-color: @border;
+        border-bottom-color: transparent;
+      }
+    }
+  }
+
+  &.ribbon-vertical.ribbon-reverse {
+    .ribbon-inner {
+      &:before {
+        border-right-color: @border;
+        border-bottom-color: transparent;
+        border-left-color: @border;
+      }
+    }
+  }
+}
+
+.ribbon-clip-variant(@border) {
+  .ribbon-inner {
+    &:after {
+      border-top-color: @border;
+      border-right-color: @border;
+    }
+  }
+
+  &.ribbon-reverse {
+    .ribbon-inner {
+      &:after {
+        border-right-color: transparent;
+        border-left-color: @border;
+      }
+    }
+  }
+
+  &.ribbon-bottom {
+    .ribbon-inner {
+      &:after {
+        border-top-color: transparent;
+        border-bottom-color: @border;
+      }
+    }
+  }
+}
+
+.ribbon-corner-variant(@border) {
+  .ribbon-inner {
+    background-color: transparent;
+    &:before {
+      border-top-color: @border;
+      border-left-color: @border;
+    }
+  }
+
+  &.ribbon-reverse {
+    .ribbon-inner {
+      &:before {
+        border-right-color: @border;
+        border-left-color: transparent;
+      }
+    }
+  }
+
+  &.ribbon-bottom {
+    .ribbon-inner {
+      &:before {
+        border-top-color: transparent;
+        border-bottom-color: @border;
+      }
+    }
+  }
+}

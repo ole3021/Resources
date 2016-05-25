@@ -1,0 +1,441 @@
+---
+title: Location
+body_class: app-location page-aside-scroll
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/mapbox.js/mapbox.css">
+  {{/content}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/apps/location.css">
+  {{/content}}
+
+
+  {{#content "fonts" mode="prepend"}}
+    <link rel="stylesheet" href="{{global}}/fonts/font-awesome/font-awesome.css">
+    <link rel="stylesheet" href="{{global}}/fonts/web-icons/web-icons.css">
+  {{/content}}
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/slidepanel/jquery-slidePanel.js"></script>
+    <script src="{{global}}/vendor/mapbox.js/mapbox.js"></script>
+    <script src="{{global}}/vendor/mapbox.js/plugins/leaflet.markercluster.js"></script>
+  {{/content}}
+
+
+  {{#content "js" mode="append"}}
+    <script src="{{assets}}/js/app.js"></script>
+  {{/content}}
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/apps/location.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <div class="page animsition">
+      <!-- Firends Sidebar -->
+      <div class="page-aside">
+        <div class="page-aside-switch">
+          <i class="icon wb-chevron-left" aria-hidden="true"></i>
+          <i class="icon wb-chevron-right" aria-hidden="true"></i>
+        </div>
+        <div class="page-aside-inner">
+          <!-- Search Panel -->
+          <div class="search-friends panel">
+            <div class="panel-heading">
+              <div class="panel-actions">
+                <div class="input-search input-group-sm">
+                  <button type="submit" class="input-search-btn">
+                    <i class="icon wb-search" aria-hidden="true"></i>
+                  </button>
+                  <input type="text" class="form-control" name="" placeholder="Search...">
+                </div>
+              </div>
+              <h3 class="panel-title">Friends</h3>
+            </div>
+          </div>
+          <!-- End Search Panel -->
+          <!-- Firends List -->
+          <div class="app-location-list" data-plugin="pageAsideScroll">
+            <div data-role="container">
+              <div data-role="content">
+                <div class="list-group row">
+                  <div class="list-group-item col-xlg-6 col-lg-12 friend-info" data-friend-id="f_1">
+                    <div class="widget widget-shadow">
+                      <div class="widget-content text-center bg-white padding-20">
+                        <a href="#" class="avatar margin-bottom-5">
+                          <img class="img-responsive" src="{{global}}/portraits/1.jpg"
+                          alt="Adam_photo" />
+                        </a>
+                        <div class="friend-name">Adam</div>
+                        <div class="friend-title margin-bottom-20 blue-grey-400">
+                          Hi~ I&#x27;m Adam.
+                        </div>
+                        <ul class="list-inline font-size-17 margin-bottom-5">
+                          <li>
+                            <a href="#" class="icon wb-user blue-grey-400"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-chat blue-grey-400">
+                              <span class="badge up badge-success">1</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-tag blue-grey-400"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-share blue-grey-400"></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-group-item col-xlg-6 col-lg-12 friend-info" data-friend-id="f_2">
+                    <div class="widget widget-shadow">
+                      <div class="widget-content text-center bg-white padding-20">
+                        <a href="#" class="avatar margin-bottom-5">
+                          <img class="img-responsive" src="{{global}}/portraits/2.jpg"
+                          alt="Fanny_photo" />
+                        </a>
+                        <div class="friend-name">Fanny</div>
+                        <div class="friend-title margin-bottom-20 blue-grey-400">
+                          Hi~ I&#x27;m Fanny.
+                        </div>
+                        <ul class="list-inline font-size-17 margin-bottom-5">
+                          <li>
+                            <a href="#" class="icon wb-user blue-grey-400"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-chat blue-grey-400">
+                              <span class="badge up badge-success"></span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-tag blue-grey-400"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-share blue-grey-400"></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-group-item col-xlg-6 col-lg-12 friend-info" data-friend-id="f_3">
+                    <div class="widget widget-shadow">
+                      <div class="widget-content text-center bg-white padding-20">
+                        <a href="#" class="avatar margin-bottom-5">
+                          <img class="img-responsive" src="{{global}}/portraits/9.jpg"
+                          alt="Allen_photo" />
+                        </a>
+                        <div class="friend-name">Allen</div>
+                        <div class="friend-title margin-bottom-20 blue-grey-400">
+                          Hi~ I&#x27;m Allen.
+                        </div>
+                        <ul class="list-inline font-size-17 margin-bottom-5">
+                          <li>
+                            <a href="#" class="icon wb-user blue-grey-400"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-chat blue-grey-400">
+                              <span class="badge up badge-success">4</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-tag blue-grey-400"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-share blue-grey-400"></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-group-item col-xlg-6 col-lg-12 friend-info" data-friend-id="f_4">
+                    <div class="widget widget-shadow">
+                      <div class="widget-content text-center bg-white padding-20">
+                        <a href="#" class="avatar margin-bottom-5">
+                          <img class="img-responsive" src="{{global}}/portraits/1.jpg"
+                          alt="Fitch_photo" />
+                        </a>
+                        <div class="friend-name">Fitch</div>
+                        <div class="friend-title margin-bottom-20 blue-grey-400">
+                          Hi~ I&#x27;m Fitch.
+                        </div>
+                        <ul class="list-inline font-size-17 margin-bottom-5">
+                          <li>
+                            <a href="#" class="icon wb-user blue-grey-400"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-chat blue-grey-400">
+                              <span class="badge up badge-success"></span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-tag blue-grey-400"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-share blue-grey-400"></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-group-item col-xlg-6 col-lg-12 friend-info" data-friend-id="f_5">
+                    <div class="widget widget-shadow">
+                      <div class="widget-content text-center bg-white padding-20">
+                        <a href="#" class="avatar margin-bottom-5">
+                          <img class="img-responsive" src="{{global}}/portraits/6.jpg"
+                          alt="Viola_photo" />
+                        </a>
+                        <div class="friend-name">Viola</div>
+                        <div class="friend-title margin-bottom-20 blue-grey-400">
+                          Hi~ I&#x27;m Viola.
+                        </div>
+                        <ul class="list-inline font-size-17 margin-bottom-5">
+                          <li>
+                            <a href="#" class="icon wb-user blue-grey-400"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-chat blue-grey-400">
+                              <span class="badge up badge-success"></span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-tag blue-grey-400"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-share blue-grey-400"></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-group-item col-xlg-6 col-lg-12 friend-info" data-friend-id="f_6">
+                    <div class="widget widget-shadow">
+                      <div class="widget-content text-center bg-white padding-20">
+                        <a href="#" class="avatar margin-bottom-5">
+                          <img class="img-responsive" src="{{global}}/portraits/7.jpg"
+                          alt="Gordon_photo" />
+                        </a>
+                        <div class="friend-name">Gordon</div>
+                        <div class="friend-title margin-bottom-20 blue-grey-400">
+                          Hi~ I&#x27;m Gordon.
+                        </div>
+                        <ul class="list-inline font-size-17 margin-bottom-5">
+                          <li>
+                            <a href="#" class="icon wb-user blue-grey-400"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-chat blue-grey-400">
+                              <span class="badge up badge-success"></span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-tag blue-grey-400"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-share blue-grey-400"></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-group-item col-xlg-6 col-lg-12 friend-info" data-friend-id="f_7">
+                    <div class="widget widget-shadow">
+                      <div class="widget-content text-center bg-white padding-20">
+                        <a href="#" class="avatar margin-bottom-5">
+                          <img class="img-responsive" src="{{global}}/portraits/3.jpg"
+                          alt="Wall_photo" />
+                        </a>
+                        <div class="friend-name">Wall</div>
+                        <div class="friend-title margin-bottom-20 blue-grey-400">
+                          Hi~ I&#x27;m Wall.
+                        </div>
+                        <ul class="list-inline font-size-17 margin-bottom-5">
+                          <li>
+                            <a href="#" class="icon wb-user blue-grey-400"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-chat blue-grey-400">
+                              <span class="badge up badge-success">4</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-tag blue-grey-400"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-share blue-grey-400"></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-group-item col-xlg-6 col-lg-12 friend-info" data-friend-id="f_8">
+                    <div class="widget widget-shadow">
+                      <div class="widget-content text-center bg-white padding-20">
+                        <a href="#" class="avatar margin-bottom-5">
+                          <img class="img-responsive" src="{{global}}/portraits/9.jpg"
+                          alt="Ian_photo" />
+                        </a>
+                        <div class="friend-name">Ian</div>
+                        <div class="friend-title margin-bottom-20 blue-grey-400">
+                          Hi~ I&#x27;m Ian.
+                        </div>
+                        <ul class="list-inline font-size-17 margin-bottom-5">
+                          <li>
+                            <a href="#" class="icon wb-user blue-grey-400"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-chat blue-grey-400">
+                              <span class="badge up badge-success"></span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-tag blue-grey-400"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-share blue-grey-400"></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-group-item col-xlg-6 col-lg-12 friend-info" data-friend-id="f_9">
+                    <div class="widget widget-shadow">
+                      <div class="widget-content text-center bg-white padding-20">
+                        <a href="#" class="avatar margin-bottom-5">
+                          <img class="img-responsive" src="{{global}}/portraits/8.jpg"
+                          alt="Sibyl_photo" />
+                        </a>
+                        <div class="friend-name">Sibyl</div>
+                        <div class="friend-title margin-bottom-20 blue-grey-400">
+                          Hi~ I&#x27;m Sibyl.
+                        </div>
+                        <ul class="list-inline font-size-17 margin-bottom-5">
+                          <li>
+                            <a href="#" class="icon wb-user blue-grey-400"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-chat blue-grey-400">
+                              <span class="badge up badge-success"></span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-tag blue-grey-400"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-share blue-grey-400"></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-group-item col-xlg-6 col-lg-12 friend-info" data-friend-id="f_10">
+                    <div class="widget widget-shadow">
+                      <div class="widget-content text-center bg-white padding-20">
+                        <a href="#" class="avatar margin-bottom-5">
+                          <img class="img-responsive" src="{{global}}/portraits/5.jpg"
+                          alt="Darren_photo" />
+                        </a>
+                        <div class="friend-name">Darren</div>
+                        <div class="friend-title margin-bottom-20 blue-grey-400">
+                          Hi~ I&#x27;m Darren.
+                        </div>
+                        <ul class="list-inline font-size-17 margin-bottom-5">
+                          <li>
+                            <a href="#" class="icon wb-user blue-grey-400"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-chat blue-grey-400">
+                              <span class="badge up badge-success"></span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-tag blue-grey-400"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-share blue-grey-400"></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-group-item col-xlg-6 col-lg-12 friend-info" data-friend-id="f_11">
+                    <div class="widget widget-shadow">
+                      <div class="widget-content text-center bg-white padding-20">
+                        <a href="#" class="avatar margin-bottom-5">
+                          <img class="img-responsive" src="{{global}}/portraits/6.jpg"
+                          alt="Madeline_photo" />
+                        </a>
+                        <div class="friend-name">Madeline</div>
+                        <div class="friend-title margin-bottom-20 blue-grey-400">
+                          Hi~ I&#x27;m Madeline.
+                        </div>
+                        <ul class="list-inline font-size-17 margin-bottom-5">
+                          <li>
+                            <a href="#" class="icon wb-user blue-grey-400"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-chat blue-grey-400">
+                              <span class="badge up badge-success"></span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-tag blue-grey-400"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-share blue-grey-400"></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-group-item col-xlg-6 col-lg-12 friend-info" data-friend-id="f_12">
+                    <div class="widget widget-shadow">
+                      <div class="widget-content text-center bg-white padding-20">
+                        <a href="#" class="avatar margin-bottom-5">
+                          <img class="img-responsive" src="{{global}}/portraits/5.jpg"
+                          alt="Lyndon_photo" />
+                        </a>
+                        <div class="friend-name">Lyndon</div>
+                        <div class="friend-title margin-bottom-20 blue-grey-400">
+                          Hi~ I&#x27;m Lyndon.
+                        </div>
+                        <ul class="list-inline font-size-17 margin-bottom-5">
+                          <li>
+                            <a href="#" class="icon wb-user blue-grey-400"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-chat blue-grey-400">
+                              <span class="badge up badge-success">2</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-tag blue-grey-400"></a>
+                          </li>
+                          <li>
+                            <a href="#" class="icon wb-share blue-grey-400"></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Firends List -->
+        </div>
+      </div>
+      <!-- End Firends Sidebar -->
+
+      <div class="page-main">
+        <div id="map">
+        </div>
+      </div>
+    </div>
+  {{/content}}
+{{/extend}}

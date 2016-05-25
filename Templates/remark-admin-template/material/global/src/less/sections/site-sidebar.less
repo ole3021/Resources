@@ -1,0 +1,141 @@
+//
+// Site Sidebar
+// ========================================================================
+
+// Component: Site Sidebar
+// ========================================================================
+.site-sidebar {
+  &.slidePanel {
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+
+    &.slidePanel-right, &.slidePanel-left {
+      width: @site-sidebar-width;
+      overflow: hidden;
+    }
+  }
+
+  &-content {
+    height: 100%;
+  }
+
+  z-index: @site-sidebar-z-index;
+
+  // Nav Tabs
+  // --------
+  &-nav {
+    &.nav-tabs > li {
+      display: table-cell;
+      width: 1%;
+      > a {
+        font-size: 16px;
+        line-height: @site-sidebar-nav-height;
+        padding: 0;
+      }
+    }
+  }
+
+  &-tab-content {
+    @height: %(~"100% - %d", @site-sidebar-nav-height);
+    height: 100%;
+    height: -webkit-calc(@height);
+    height: calc(@height);
+
+    > .tab-pane {
+      height: 100%;
+      padding: 20px @site-sidebar-padding-horizontal;
+
+      &.scrollable {
+        padding: 0;
+      }
+
+      .scrollable-content {
+        padding: 20px @site-sidebar-padding-horizontal;
+      }
+
+      .list-group {
+        margin-left: -@site-sidebar-padding-horizontal;
+        margin-right: -@site-sidebar-padding-horizontal;
+
+        > .list-group-item {
+          padding-left: @site-sidebar-padding-horizontal;
+          padding-right: @site-sidebar-padding-horizontal;
+        }
+      }
+    }
+  }
+
+  .conversation {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+
+    .z-index(modal);
+    transition: all .3s;
+
+    &.active {
+      right:0;
+    }
+
+    &-header {
+      border-bottom: 1px solid @divider-color-base;
+
+      & > * {
+        margin: 0;
+        padding: 0 30px;
+        line-height: @site-sidebar-nav-height;
+      }
+    }
+
+    &-return {
+      position: relative;
+      z-index: @zindex-base;
+      cursor:pointer;
+      color: @icon-color;
+
+      &:hover,
+      &:focus {
+        color: @icon-hover-color;
+      }
+
+      &:active {
+        color: @icon-active-color;
+      }
+    }
+
+    &-title {
+      position: relative;
+      top: 1px;
+      color: @gray-darkest;
+      text-align: right;
+    }
+
+    &-content {
+      padding: 30px 15px;
+    }
+
+    &-reply {
+      position: absolute;
+      bottom: 0;
+      padding: 10px 0;
+      border-top: 1px solid @divider-color-base;
+
+      .form-control {
+        border: none;
+        border-right: 1px solid @input-border;
+      }
+    }
+  }
+}
+
+@media (max-width: @grid-float-breakpoint-max) {
+  .site-sidebar {
+    &.slidePanel {
+      &.slidePanel-right, &.slidePanel-left {
+        width: 100%;
+      }
+    }
+  }
+}

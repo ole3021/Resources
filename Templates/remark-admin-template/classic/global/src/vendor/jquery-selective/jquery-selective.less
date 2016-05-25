@@ -1,0 +1,116 @@
+
+@import "vars.less";
+
+//jquery-selective
+.addMember {
+  .avatar {
+    width: 30px;
+    display: inline-block;
+  }
+
+  &-items {
+    display: inline-block;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+
+  &-item {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+
+    &:hover {
+      .addMember-remove {
+        display: block;
+      }
+    }
+  }
+
+  &-remove {
+    display: none;
+    position: absolute;
+    color: @color-red-500;
+    background-color: @inverse;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 10px;
+    line-height: 1;
+    right: -2px;
+    top: -2px;
+  }
+
+  &-trigger {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+
+    &-button {
+      color: @inverse;
+      background-color: #dcdfe3;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 28px;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #e6e9ed;
+      }
+    }
+
+    &-dropdown {
+      display: none;
+      background-color: @inverse;
+      position: absolute;
+      padding: 1px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+      left: 45px;
+      top: 0;
+
+      &:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent #fff transparent transparent;
+        display: block;
+        position: absolute;
+        left: -19px;
+        top: 6px;
+      }
+    }
+
+    &.addMember-active {
+      .addMember-trigger-dropdown {
+        display: block;
+      }
+    }
+  }
+
+  &-list {
+    list-style: none;
+    padding-left: 0;
+    max-height: 260px;
+    margin-bottom: 0;
+    overflow-y: auto;
+
+    &-item {
+      padding: 8px 20px;
+      white-space: nowrap;
+      margin-bottom: 1px;
+      cursor: pointer;
+
+      > .avatar {
+        margin-right: 10px;
+      }
+
+      &.addMember-selected, &:hover {
+        background-color: @gray-lightest;
+      }
+    }
+  }
+}

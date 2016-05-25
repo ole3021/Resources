@@ -1,0 +1,74 @@
+
+
+.site-footer {
+  // @padding: %(~"calc((100% - %d) / 2 + 30px)", @site-container-width-lg);
+  // padding-left: @padding !important;
+  // padding-right: @padding !important;
+
+  padding: @site-footer-vertical-padding @page-horizontal-padding;
+  background-color:  @site-footer-bg;
+  border-top: 1px solid @site-footer-divider-color;
+  height:@site-footer-height;
+  box-shadow: @site-footer-shadow;
+
+  .clearfix();
+
+  &-legal {
+    float: left;
+    margin-left: @site-footer-horizontal-padding;
+  }
+
+  &-actions {
+    float: right;
+    margin-right: @site-footer-horizontal-padding;
+  }
+
+  &-right {
+    float: right;
+    margin-right: @site-footer-horizontal-padding;
+  }
+
+  .scroll-to-top {
+    color: @text-color;
+
+    &, &:hover, &:active {
+      text-decoration: none;
+    }
+  }
+
+  @media (max-width: @screen-xs) {
+    height: auto;
+  }
+
+  &-legal, &-right, &-actions {
+    @media (max-width: @screen-xs) {
+      display: block;
+      float: none;
+      text-align: center;
+    }
+  }
+}
+
+
+.site-footer {
+  @media screen and (min-width: @screen-xlg) {
+    @padding: %(~"calc((100% - %d) / 2 + 30px)", @site-container-width-xlg);
+    padding-left: @padding !important;
+    padding-right: @padding !important;
+  }
+  @media (min-width: @screen-lg) and (max-width: @screen-lg-max) {
+    @padding: %(~"calc((100% - %d) / 2 + 30px)", @site-container-width-lg);
+    padding-left: @padding !important;
+    padding-right: @padding !important;
+  }
+  @media (min-width: @screen-md) and (max-width: @screen-md-max) {
+    @padding: %(~"calc((100% - %d) / 2 + 30px)", @site-container-width-md);
+    padding-left: @padding !important;
+    padding-right: @padding !important;
+  }
+  @media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
+    @padding: %(~"calc((100% - %d) / 2 + 30px)", @site-container-width-sm);
+    padding-left: @padding !important;
+    padding-right: @padding !important;
+  }
+}

@@ -1,0 +1,24 @@
+
+.site-navbar {
+  background-color: @site-navbar-header-bg;
+  
+  .navbar-container {
+    background-color: @inverse;
+
+    .navbar-toolbar {
+      [data-toggle="menubar"] {
+        &:focus,
+        &:hover {
+          color: @site-navbar-header-toolbar-hover-color;
+          background-color: @site-navbar-header-toolbar-hover-bg;
+        }
+      }
+    }
+  }
+  
+  &.navbar-inverse {
+    .navbar-container {
+      background-color: transparent;
+    }
+  }
+}

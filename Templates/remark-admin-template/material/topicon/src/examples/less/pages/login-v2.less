@@ -1,0 +1,153 @@
+@import "vars.less";
+
+.page-login-v2 {
+  height: 100%;
+
+  &:before {
+    background-image: url("../../images/login.jpg");
+  }
+
+  &.page-dark.layout-full {
+    &:after {
+      background-color: fade(@gray-base, 60%);
+    }
+  }
+
+  .page-brand-info {
+    margin: 220px 100px 0 90px;
+
+    .brand-img {
+      vertical-align: middle;
+    }
+
+    .brand-text {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 11px 0 11px 20px;
+    }
+
+    p {
+      opacity: 0.6;
+      max-width: 650px;
+    }
+  }
+
+  .page-login-main {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    height: auto;
+    min-height: 100%;
+    padding: 150px 60px 180px;
+    color: @text-color;
+    background: @color-white;
+
+    // for max-width: @screem-sm-min;
+    .brand {
+      margin-bottom: 60px;
+    }
+    .brand-img {
+      vertical-align: middle;
+    }
+
+    .brand-text {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 11px 0 11px 20px;
+      color: @brand-primary;
+    }
+  }
+
+  form {
+    width: 350px;
+    margin: 45px 0 20px;
+
+    > button {
+      margin-top: 38px;
+    }
+
+    a {
+      margin-left: 20px;
+    }
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 100px;
+    margin: 50px 0;
+    text-align: center;
+    transform: translate(-50%, 0px);
+  }
+
+  .social {
+    .icon {
+      &,
+      &:hover,
+      &:active {
+        color: @color-white;
+      }
+    }
+  }
+}
+
+@media(min-width: @screen-md-min) {
+  .page-login-v2 {
+    .page-content {
+      padding-right: 500px;
+    }
+  }
+}
+@media(max-width: @screen-sm-min) {
+  .page-login-v2 {
+    .page-login-main {
+      padding-top: 60px;
+    }
+  }
+}
+
+@media(min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+  .page-login-v2 {
+    .page-login-main {
+      padding-top: 80px;
+    }
+
+    .page-brand-info {
+      margin: 160px 0 0 35px;
+
+      > p {
+        opacity: 0;
+        color: transparent;
+      }
+    }
+  }
+}
+
+@media(max-width: @screen-xs-max) {
+  .page-login-v2 {
+
+    .page-login-main {
+      padding-top: 60px;
+      width: 100%;
+    }
+
+    form {
+      width: auto;
+    }
+  }
+}
+
+@media(max-width: @screen-xs-min) {
+  .page-login-v2 {
+
+    .page-login-main {
+      padding: 50px 30px 180px;
+    }
+
+    form {
+      width: auto;
+    }
+  }
+}

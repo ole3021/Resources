@@ -1,0 +1,296 @@
+---
+title: Page Headers
+---
+
+{{#extend "layout-default"}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/layouts/headers.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/peity/jquery.peity.min.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/peity.js"></script>
+  {{/content}}
+
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title">Page Headers</h1>
+        <div class="page-header-actions">
+          <ol class="breadcrumb">
+            <li><a href="{{dest 'index.html'}}">Home</a></li>
+            <li><a href="javascript:void(0)">Layouts</a></li>
+            <li class="active">Headers</li>
+          </ol>
+        </div>
+      </div>
+      <div class="page-content container-fluid">
+        <!-- Panel Header -->
+        <div class="panel">
+          <div class="panel-body">
+            <!-- Example Basic -->
+            <div class="example-wrap">
+              <h4 class="example-title">Basic</h4>
+              <div class="example example-well">
+                <div class="page-header">
+                  <h1 class="page-title">Page Title</h1>
+                  <div class="page-header-actions">
+                    <ol class="breadcrumb">
+                      <li><a href="{{dest 'index.html'}}">Home</a></li>
+                      <li class="active">You are Here</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Example Basic -->
+
+            <!-- Example Breadcrumb Top -->
+            <div class="example-wrap">
+              <h4 class="example-title">Breadcrumb Top</h4>
+              <div class="example example-well">
+                <div class="page-header">
+                  <ol class="breadcrumb">
+                    <li><a href="{{dest 'index.html'}}">Home</a></li>
+                    <li class="active">You are Here</li>
+                  </ol>
+                  <h1 class="page-title">Page Title</h1>
+                </div>
+              </div>
+            </div>
+            <!-- Example Breadcrumb Top -->
+
+            <!-- Example Breadcrumb Bottom -->
+            <div class="example-wrap">
+              <h4 class="example-title">Breadcrumb Bottom</h4>
+              <div class="example example-well">
+                <div class="page-header">
+                  <h1 class="page-title">Page Title</h1>
+                  <ol class="breadcrumb">
+                    <li><a href="{{dest 'index.html'}}">Home</a></li>
+                    <li class="active">You are Here</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <!-- Example Breadcrumb Bottom -->
+
+            <!-- Example With Description -->
+            <div class="example-wrap">
+              <h4 class="example-title">With Description</h4>
+              <div class="example example-well">
+                <div class="page-header">
+                  <h1 class="page-title">Page Title</h1>
+                  <p class="page-description">
+                    Page Description Here.
+                  </p>
+                  <div class="page-header-actions">
+                    <ol class="breadcrumb">
+                      <li><a href="{{dest 'index.html'}}">Home</a></li>
+                      <li class="active">You are Here</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Example With Description -->
+
+            <!-- Example Centered -->
+            <div class="example-wrap">
+              <h4 class="example-title">Centered</h4>
+              <div class="example example-well">
+                <div class="page-header text-center">
+                  <h1 class="page-title">Page Title</h1>
+                  <p class="page-description">
+                    Page Description Here.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Example Centered -->
+
+            <!-- Example With Search -->
+            <div class="example-wrap">
+              <h4 class="example-title">With Search</h4>
+              <div class="example example-well">
+                <div class="page-header">
+                  <h1 class="page-title">Page Title</h1>
+                  <ol class="breadcrumb">
+                    <li><a href="{{dest 'index.html'}}">Home</a></li>
+                    <li class="active">You are Here</li>
+                  </ol>
+                  <div class="page-header-actions">
+                    <form>
+                      <div class="input-search input-search-dark">
+                        <i class="input-search-icon md-search" aria-hidden="true"></i>
+                        <input type="text" class="form-control" name="" placeholder="Search...">
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Example With Search -->
+
+
+            <!-- Example With Button -->
+            <div class="example-wrap">
+              <h4 class="example-title">With Button</h4>
+              <div class="example example-well">
+                <div class="page-header">
+                  <h1 class="page-title">Page Title</h1>
+                  <ol class="breadcrumb">
+                    <li><a href="{{dest 'index.html'}}">Home</a></li>
+                    <li class="active">You are Here</li>
+                  </ol>
+                  <div class="page-header-actions">
+                    <button type="button" class="btn btn-sm btn-primary btn-round">
+                      <span class="text hidden-xs">Settings</span>
+                      <i class="icon md-chevron-right" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Example With Button -->
+
+            <!-- Example With Button Group -->
+            <div class="example-wrap">
+              <h4 class="example-title">With Button Group</h4>
+              <div class="example example-well">
+                <div class="page-header">
+                  <h1 class="page-title">Page Title</h1>
+                  <ol class="breadcrumb">
+                    <li><a href="{{dest 'index.html'}}">Home</a></li>
+                    <li class="active">You are Here</li>
+                  </ol>
+                  <div class="page-header-actions">
+                    <div class="btn-group btn-group-sm" id="withBtnGroup" aria-label="Page Header Actions"
+                    role="group">
+                      <button type="button" class="btn btn-primary">
+                        <i class="icon md-wrench" aria-hidden="true"></i>
+                        <span
+                        class="hidden-xs">Settings</span>
+                      </button>
+                      <button type="button" class="btn btn-primary" data-toggle="tooltip" data-original-title="Reload"
+                      data-container="body">
+                        <i class="icon md-refresh" aria-hidden="true"></i>
+                      </button>
+                      <button type="button" class="btn btn-primary" data-toggle="tooltip" data-original-title="Search"
+                      data-container="body">
+                        <i class="icon md-search" aria-hidden="true"></i></button>
+                      <button type="button" class="btn btn-primary" data-toggle="tooltip" data-original-title="Print"
+                      data-container="body">
+                        <i class="icon md-print" aria-hidden="true"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Example With Button Group -->
+
+            <!-- Example With Round Buttons -->
+            <div class="example-wrap">
+              <h4 class="example-title">With Round Buttons</h4>
+              <div class="example example-well">
+                <div class="page-header">
+                  <h1 class="page-title">Page Title</h1>
+                  <ol class="breadcrumb">
+                    <li><a href="{{dest 'index.html'}}">Home</a></li>
+                    <li class="active">You are Here</li>
+                  </ol>
+                  <div class="page-header-actions">
+                    <button type="button" class="btn btn-sm btn-icon btn-primary btn-round" data-toggle="tooltip"
+                    data-original-title="Edit">
+                      <i class="icon md-edit" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-icon btn-primary btn-round" data-toggle="tooltip"
+                    data-original-title="Refresh">
+                      <i class="icon md-refresh-alt" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-icon btn-primary btn-round" data-toggle="tooltip"
+                    data-original-title="Setting">
+                      <i class="icon md-settings" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Example With Round Buttons -->
+
+            <!-- Example With Stats -->
+            <div class="example-wrap">
+              <h4 class="example-title">With Stats</h4>
+              <div class="example example-well">
+                <div class="page-header">
+                  <h1 class="page-title">Page Title</h1>
+                  <ol class="breadcrumb">
+                    <li><a href="{{dest 'index.html'}}">Home</a></li>
+                    <li class="active">You are Here</li>
+                  </ol>
+                  <div class="page-header-actions">
+                    <div class="row no-space width-250 hidden-xs">
+                      <div class="col-xs-4">
+                        <div class="counter">
+                          <span class="counter-number font-weight-medium">8371</span>
+                          <div class="counter-label">Purchases</div>
+                        </div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="counter">
+                          <span class="counter-number font-weight-medium">1024</span>
+                          <div class="counter-label">Members</div>
+                        </div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="counter">
+                          <span class="counter-number font-weight-medium">$38,823</span>
+                          <div class="counter-label">Today Profit</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Example With Stats -->
+
+            <!-- Example With Charts -->
+            <div class="example-wrap">
+              <h4 class="example-title">With Charts</h4>
+              <div class="example example-well">
+                <div class="page-header">
+                  <h1 class="page-title">Page Title</h1>
+                  <ol class="breadcrumb">
+                    <li><a href="{{dest 'index.html'}}">Home</a></li>
+                    <li class="active">You are Here</li>
+                  </ol>
+                  <div class="page-header-actions">
+                    <div class="counter inline-block text-right margin-right-20 hidden-xs">
+                      <div class="counter-label">New Users</div>
+                      <span class="counter-number font-weight-medium">426,120</span>
+                    </div>
+                    <span data-plugin="peityBar" data-width="90" data-height="38" data-padding="0.25"
+                    data-skin="blue">5,3,9,6,5,9,7,3,5,2</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Example With Charts -->
+          </div>
+        </div>
+        <!-- End Panel Header -->
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

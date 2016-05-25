@@ -1,0 +1,84 @@
+// Name:            Progress
+//
+// Component:       `progress`
+//
+// Modifiers:       `progress-bar-indicating`
+//                  `progress-skill`
+//                  `progress-lg`
+//                  `progress-sm`
+//                  `progress-xs`
+//                  `progress-square`
+//                  `progress-circle`
+//                  `contextual-progress`
+//
+// Markup:
+//
+// <!-- progress -->
+// <div class="progress">
+//   <div class="progress-bar"></div>
+// </div>
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@progress-bar-height:               15px;
+@progress-bar-xs-height:            4px;
+@progress-bar-sm-height:         10px;
+@progress-bar-lg-height:            @line-height-computed;
+
+@progress-vertical-bar-width:       15px;
+@progress-vertical-bar-xs-width:    4px;
+@progress-vertical-bar-sm-width:    10px;
+@progress-vertical-bar-lg-width:    25px;
+
+@progress-bar-indicating-active-bg: @inverse;
+
+@progress-round:                    1000px;
+
+@progress-vertical-min-height:      250px;
+@progress-vertical-margin-right:    30px;
+
+@progress-skill-color:              @subtitle-color;
+
+// Component: Progress
+// ========================================================================
+
+.progress {
+  .box-shadow(none);
+}
+
+.progress-bar {
+  .box-shadow(none);
+}
+
+// Modifier: `progress-bar-indicating`
+// -------------------------
+
+.progress-bar-indicating {
+  &.active {
+    &:before {
+      background-color: @progress-bar-indicating-active-bg;
+    }
+  }
+}
+
+.vertical .progress-bar-indicating {
+  &.active {
+    &:before {
+      background-color: @progress-bar-indicating-active-bg;
+    }
+  }
+}
+
+// Modifier: `progress-skill`
+// ========================================================================
+
+.progress-skill {
+  .progress-bar {
+    > span {
+      color: @progress-skill-color;
+    }
+  }
+}

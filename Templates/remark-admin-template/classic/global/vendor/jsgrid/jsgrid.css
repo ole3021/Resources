@@ -1,0 +1,378 @@
+.jsgrid {
+  position: relative;
+  overflow: hidden;
+  font-size: 1em;
+}
+.jsgrid,
+.jsgrid *,
+.jsgrid *:before,
+.jsgrid *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.jsgrid input,
+.jsgrid textarea,
+.jsgrid select {
+  font-size: 1em;
+}
+.jsgrid-grid-header {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+
+   -khtml-user-select: none;
+}
+.jsgrid-grid-body {
+  overflow-x: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.jsgrid .jsgrid-table {
+  margin-bottom: 0;
+}
+.jsgrid-table {
+  width: 100%;
+  table-layout: fixed;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.jsgrid-table td {
+  padding: .5em .5em;
+}
+.jsgrid-table > tbody > tr > td {
+  vertical-align: middle;
+}
+.jsgrid-table td,
+.jsgrid-table th {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.jsgrid-align-left {
+  text-align: left;
+}
+.jsgrid-align-center {
+  text-align: center;
+}
+.jsgrid-align-right {
+  text-align: right;
+}
+.jsgrid-header-row > th {
+  padding: .5em .5em;
+}
+.jsgrid-filter-row input,
+.jsgrid-filter-row textarea,
+.jsgrid-filter-row select,
+.jsgrid-edit-row input,
+.jsgrid-edit-row textarea,
+.jsgrid-edit-row select,
+.jsgrid-insert-row input,
+.jsgrid-insert-row textarea,
+.jsgrid-insert-row select {
+  width: 90%;
+  padding: .3em .5em;
+}
+.jsgrid-filter-row input[type='checkbox'],
+.jsgrid-edit-row input[type='checkbox'],
+.jsgrid-insert-row input[type='checkbox'] {
+  width: auto;
+}
+.jsgrid-header-row > th,
+.jsgrid-filter-row > td,
+.jsgrid-insert-row > td,
+.jsgrid-edit-row > td {
+  text-align: center;
+}
+.jsgrid-selected-row td {
+  cursor: pointer;
+}
+.jsgrid-nodata-row td {
+  padding: .5em 0;
+  text-align: center;
+}
+.jsgrid-header-sort {
+  cursor: pointer;
+}
+.jsgrid-pager {
+  padding: .4em 0;
+}
+.jsgrid-pager-nav-button {
+  padding: .2em .5em;
+}
+.jsgrid-pager-nav-inactive-button {
+  display: none;
+  pointer-events: none;
+}
+.jsgrid-pager-page {
+  padding: .2em .6em;
+}
+.jsgrid-control-field {
+  white-space: nowrap;
+}
+.jsgrid-grid-header,
+.jsgrid-grid-body,
+.jsgrid-header-row > th,
+.jsgrid-filter-row > td,
+.jsgrid-insert-row > td,
+.jsgrid-edit-row > td {
+  border: 1px solid #e4eaec;
+}
+.jsgrid-header-row > th {
+  border-top: 0;
+}
+.jsgrid-header-row > th,
+.jsgrid-filter-row > td,
+.jsgrid-insert-row > td {
+  border-bottom: 0;
+}
+.jsgrid-header-row > th:first-child,
+.jsgrid-filter-row > td:first-child,
+.jsgrid-insert-row > td:first-child {
+  border-left: none;
+}
+.jsgrid-header-row > th:last-child,
+.jsgrid-filter-row > td:last-child,
+.jsgrid-insert-row > td:last-child {
+  border-right: none;
+}
+.jsgrid-grid-header {
+  background: #e4eaec;
+}
+.jsgrid-header-scrollbar {
+  scrollbar-arrow-color: #f3f7f9;
+  scrollbar-base-color: #f3f7f9;
+  scrollbar-3dlight-color: #f3f7f9;
+  scrollbar-highlight-color: #f3f7f9;
+  scrollbar-track-color: #f3f7f9;
+  scrollbar-shadow-color: #f3f7f9;
+  scrollbar-dark-shadow-color: #f3f7f9;
+}
+.jsgrid-header-scrollbar::-webkit-scrollbar {
+  visibility: hidden;
+}
+.jsgrid-header-scrollbar::-webkit-scrollbar-track {
+  background: #f3f7f9;
+}
+.jsgrid-header-sortable:hover {
+  cursor: pointer;
+  background: #fcfcfc;
+}
+.jsgrid-header-row .jsgrid-header-sort {
+  background: #e8f1f8;
+}
+.jsgrid-header-sort:before {
+  position: relative;
+  display: inline-block;
+  float: left;
+  font-family: 'Web Icons';
+  font-style: normal;
+  font-weight: normal;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+       -o-transform: translate(0, 0);
+          transform: translate(0, 0);
+
+  text-rendering: auto;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.jsgrid-header-sort-asc:before {
+  content: '\f190';
+}
+.jsgrid-header-sort-desc:before {
+  content: '\f18f';
+}
+.jsgrid-grid-body {
+  border-top: none;
+}
+.jsgrid-grid-body td {
+  border: #f3f3f3 1px solid;
+}
+.jsgrid-grid-body tr:first-child td {
+  border-top: none;
+}
+.jsgrid-grid-body tr td:first-child {
+  border-left: none;
+}
+.jsgrid-grid-body tr td:last-child {
+  border-right: none;
+}
+.jsgrid-row > td {
+  background: #fff;
+}
+.jsgrid-alt-row > td {
+  background: #fcfcfc;
+}
+.jsgrid-header-row > th {
+  background: #f9f9f9;
+}
+.jsgrid-filter-row > td {
+  background: #fcfcfc;
+}
+.jsgrid-insert-row > td {
+  background: #e7faf2;
+}
+.jsgrid-edit-row > td {
+  background: #fffae7;
+}
+.jsgrid-selected-row > td {
+  background: #e8f1f8;
+  border-color: #e8f1f8;
+}
+.jsgrid-nodata-row td {
+  background: #fff;
+}
+.jsgrid-pager-current-page {
+  font-weight: bold;
+}
+.jsgrid-pager-nav-inactive-button a {
+  color: #d3d3d3;
+}
+.jsgrid-button + .jsgrid-button {
+  margin-left: 5px;
+}
+.jsgrid-button:hover {
+  opacity: .5;
+  -webkit-transition: opacity 200ms linear;
+       -o-transition: opacity 200ms linear;
+          transition: opacity 200ms linear;
+}
+.jsgrid .jsgrid-button {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  font-family: 'Web Icons';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+       -o-transform: translate(0, 0);
+          transform: translate(0, 0);
+
+  text-rendering: auto;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.jsgrid-mode-on-button {
+  opacity: .5;
+}
+.jsgrid-cancel-button:before {
+  content: '\f194';
+}
+.jsgrid-clear-filter-button:before {
+  content: '\f133';
+}
+.jsgrid-delete-button:before {
+  content: '\f14e';
+}
+.jsgrid-edit-button:before {
+  content: '\f13c';
+}
+.jsgrid-cancel-edit-button:before {
+  content: '\f194';
+}
+.jsgrid-insert-mode-button:before {
+  content: '\f197';
+}
+.jsgrid-insert-button:before {
+  content: '\f197';
+}
+.jsgrid-search-mode-button:before {
+  content: '\f131';
+}
+.jsgrid-search-button:before {
+  content: '\f131';
+}
+.jsgrid-update-button:before {
+  content: '\f192';
+}
+.jsgrid-load-shader {
+  background: #ddd;
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+.jsgrid-load-panel {
+  width: 15em;
+  height: 5em;
+  padding-top: 3em;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #e4eaec;
+}
+.jsgrid-load-panel:before {
+  position: absolute;
+  top: .5em;
+  left: 50%;
+  width: 2em;
+  height: 2em;
+  margin-left: -1em;
+  content: ' ';
+  border: 2px solid #009a67;
+  border-right-color: transparent;
+  border-radius: 50%;
+  -webkit-animation: indicator 1s linear infinite;
+       -o-animation: indicator 1s linear infinite;
+          animation: indicator 1s linear infinite;
+}
+@-webkit-keyframes indicator {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-o-keyframes indicator {
+  from {
+    -o-transform: rotate(0deg);
+       transform: rotate(0deg);
+  }
+  50% {
+    -o-transform: rotate(180deg);
+       transform: rotate(180deg);
+  }
+  to {
+    -o-transform: rotate(360deg);
+       transform: rotate(360deg);
+  }
+}
+@keyframes indicator {
+  from {
+    -webkit-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+         -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/* old IE */
+.jsgrid-load-panel {
+  padding-top: 1.5em\9;
+}
+.jsgrid-load-panel:before {
+  display: none\9;
+}

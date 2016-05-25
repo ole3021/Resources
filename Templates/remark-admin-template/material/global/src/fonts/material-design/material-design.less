@@ -1,0 +1,27 @@
+
+@import "vars.less";
+@import "less/variables.less";
+
+@zmdi-font-name:        "Material-Design-Iconic-Font";
+@zmdi-font-path:        ".";
+@zmdi-css-prefix:       md;
+@zmdi-icon-prefix:      md;
+
+[class^="@{zmdi-css-prefix}-"],
+[class*=" @{zmdi-css-prefix}-"] {
+  font-family: @zmdi-font-name;
+  .make-icon();
+}
+
+// @import "mixins.less";
+@import "less/path.less";
+// @import "core.less";
+// @import "sizes.less";
+// @import "fixed-width.less";
+// @import "list.less";
+// @import "border.less";
+// @import "pulled.less";
+// @import "spinned.less";
+// @import "rotated.less";
+// @import "stacked.less";
+@import "less/icons.less";

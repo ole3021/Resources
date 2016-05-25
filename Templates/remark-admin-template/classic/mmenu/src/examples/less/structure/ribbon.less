@@ -1,0 +1,18 @@
+@import "vars.less";
+
+
+.example {
+  position: relative;
+  padding: 50px 15px 15px 50px;
+  background-color: #f3f7fa;
+  border: 1px solid #eee;
+  &-reverse {
+    padding: 50px 50px 15px 15px;
+  }
+  &-bottom {
+    padding: 15px 15px 50px 50px;
+    &-reverse {
+      padding: 15px 50px 50px 15px;
+    }
+  }  
+}

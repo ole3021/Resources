@@ -1,0 +1,238 @@
+// Name:            Progress
+//
+// Component:       `progress`
+//
+// Modifiers:       `progress-bar-indicating`
+//                  `progress-skill`
+//                  `progress-lg`
+//                  `progress-sm`
+//                  `progress-xs`
+//                  `progress-square`
+//                  `progress-circle`
+//                  `contextual-progress`
+//
+// Markup:
+//
+// <!-- progress -->
+// <div class="progress">
+//   <div class="progress-bar"></div>
+// </div>
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@progress-bar-height:               15px;
+@progress-bar-xs-height:            4px;
+@progress-bar-sm-height:         10px;
+@progress-bar-lg-height:            @line-height-computed;
+
+@progress-vertical-bar-width:       15px;
+@progress-vertical-bar-xs-width:    4px;
+@progress-vertical-bar-sm-width:    10px;
+@progress-vertical-bar-lg-width:    25px;
+
+@progress-bar-indicating-active-bg: @inverse;
+
+@progress-round:                    1000px;
+
+@progress-vertical-min-height:      250px;
+@progress-vertical-margin-right:    30px;
+
+@progress-skill-color:              @subtitle-color;
+
+// Component: Progress
+// ========================================================================
+
+.progress {
+  height: @progress-bar-height;
+  box-shadow: none;
+}
+
+.progress-bar {
+  line-height: @progress-bar-height;
+  box-shadow: none;
+}
+
+
+// Modifier: `progress-square`
+// -------------------------
+
+.progress-square {
+  border-radius: 0;
+}
+
+// Modifier: `progress-circle`
+// -------------------------
+
+.progress-circle {
+  border-radius: @progress-round;
+}
+
+// Vertical
+// --------
+.progress-vertical {
+  min-height: @progress-vertical-min-height;
+  height: @progress-vertical-min-height;
+  width: @progress-vertical-bar-width;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: @progress-vertical-margin-right;
+
+  .progress-bar {
+    width: 100%;
+  }
+}
+
+// Modifier: `progress-bar-indicating`
+// -------------------------
+
+.progress-bar-indicating {
+  &.active {
+    position: relative;
+
+    animation: none;
+    &:before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      background-color: @progress-bar-indicating-active-bg;
+      border-radius: inherit;
+      opacity: 0;
+      animation: progress-active 3s ease 0s infinite;
+
+      .progress-vertical & {
+        animation-name: progress-vertical-active;
+      }
+    }
+  }
+}
+
+// Modifier: `progress-skill`
+// ========================================================================
+
+.progress-skill {
+  position: relative;
+
+  .progress-bar {
+    > span {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      color: @progress-skill-color;
+    }
+  }
+}
+
+// Size Modifier
+// ========================================================================
+
+.progress-lg {
+  height: @progress-bar-lg-height;
+
+  &.progress-vertical {
+    width: @progress-vertical-bar-lg-width;
+  }
+
+  .progress-bar {
+    line-height: @progress-bar-lg-height;
+  }
+}
+
+.progress-sm {
+  height: @progress-bar-sm-height;
+
+  &.progress-vertical {
+    width: @progress-vertical-bar-sm-width;
+  }
+  .progress-bar {
+    line-height: @progress-bar-sm-height;
+  }
+}
+
+.progress-xs {
+  height: @progress-bar-xs-height;
+
+  &.progress-vertical {
+    width: @progress-vertical-bar-xs-width;
+  }
+
+  border-radius: 1px;
+  .progress-bar {
+    line-height: @progress-bar-xs-height;
+  }
+}
+
+// Modifier: `contextual-progress`
+// ========================================================================
+
+.contextual-progress {
+  margin: 20px 0;
+
+  .progress-title {
+    float: left;
+  }
+
+  .progress-label {
+    position: relative;
+    float: right;
+  }
+
+  .progress {
+    height: 2px;
+    margin: 5px 0;
+  }
+}
+
+// Progress Animation
+// ========================================================================
+
+@-webkit-keyframes progress-active {
+  0% {
+    width: 0;
+    opacity: .4;
+  }
+  100% {
+    width: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes progress-active {
+  0% {
+    width: 0;
+    opacity: .4;
+  }
+  100% {
+    width: 100%;
+    opacity: 0;
+  }
+}
+
+
+@-webkit-keyframes progress-vertical-active {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  100% {
+    top: 175px;
+    opacity: .4;
+  }
+}
+
+@keyframes progress-vertical-active {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  100% {
+    top: 175px;
+    opacity: .4;
+  }
+}

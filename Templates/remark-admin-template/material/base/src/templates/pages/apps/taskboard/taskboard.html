@@ -1,0 +1,85 @@
+---
+title: TaskBoard
+body_class: app-taskboard
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/bootstrap-select/bootstrap-select.css">
+    <link rel="stylesheet" href="{{global}}/vendor/jquery-selective/jquery-selective.css">
+    <link rel="stylesheet" href="{{global}}/vendor/bootstrap-datepicker/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="{{global}}/vendor/bootstrap-markdown/bootstrap-markdown.css">
+  {{/content}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/apps/taskboard.css">
+  {{/content}}
+
+
+  {{#content "fonts" mode="prepend"}}
+    <link rel="stylesheet" href="{{global}}/fonts/font-awesome/font-awesome.css">
+  {{/content}}
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="{{global}}/vendor/bootstrap-select/bootstrap-select.js"></script>
+    <script src="{{global}}/vendor/jquery-selective/jquery-selective.js"></script>
+    <script src="{{global}}/vendor/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+    <script src="{{global}}/vendor/bootstrap-markdown/bootstrap-markdown.js"></script>
+    <script src="{{global}}/vendor/bootbox/bootbox.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/bootstrap-select.js"></script>
+    <script src="{{global}}/js/components/bootstrap-datepicker.js"></script>
+    <script src="{{global}}/js/components/bootbox.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{assets}}/js/app.js"></script>
+  {{/content}}
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/apps/taskboard.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title">TaskBoard</h1>
+      </div>
+      <div class="page-content">
+        <ul class="taskboard-stages" id="taskboard-stages"></ul>
+      </div>
+    </div>
+    <button class="site-action site-floataction btn-raised btn btn-success btn-floating"
+    type="button" data-toggle="modal" data-target="#addStageFrom">
+      <i class="icon md-plus" aria-hidden="true"></i>
+    </button>
+    <div class="modal fade" id="addStageFrom" aria-hidden="true" aria-labelledby="addStageFrom"
+    role="dialog" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" aria-hidden="true" data-dismiss="modal">×</button>
+            <h4 class="modal-title">Create New Group</h4>
+          </div>
+          <div class="modal-body">
+            <form action="#" method="post" role="form">
+              <div class="form-group">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Stage Name">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer text-left">
+            <button id="taskboard-stage-creat" class="btn btn-primary" data-dismiss="modal"
+            type="button">Creat</button>
+            <a class="btn btn-sm btn-white btn-pure" data-dismiss="modal" href="javascript:void(0)">Cancel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  {{/content}}
+{{/extend}}

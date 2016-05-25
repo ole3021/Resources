@@ -1,0 +1,132 @@
+---
+title: Rickshaw
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/rickshaw/rickshaw.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="{{global}}/vendor/d3/d3.min.js"></script>
+    <script src="{{global}}/vendor/rickshaw/rickshaw.js"></script>
+  {{/content}}
+
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/charts/rickshaw.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title">Rickshaw</h1>
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li><a href="javascript:void(0)">Charts</a></li>
+          <li class="active">Rickshaw</li>
+        </ol>
+        <div class="page-header-actions">
+          <a class="btn btn-sm btn-primary btn-round" href="http://code.shutterstock.com/rickshaw"
+          target="_blank">
+            <i class="icon md-link" aria-hidden="true"></i>
+            <span class="hidden-xs">Official Website</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="page-content container-fluid">
+        <!-- Panel Rickshaw -->
+        <div class="panel">
+          <div class="panel-body">
+            <div class="row row-lg">
+              <div class="col-md-6">
+                <!-- Example Lines -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Lines</h4>
+                  <div class="example rickshaw-wrap">
+                    <div id="exampleChart"></div>
+                    <div class="rickshaw-legend-wrap">
+                      <div id="exampleChartLegend"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Lines -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Scatter Plot -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Scatter Plot</h4>
+                  <div class="example rickshaw-wrap">
+                    <div id="exampleScatterChart"></div>
+                    <div class="rickshaw-legend-wrap">
+                      <div id="exampleScatterLegend"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Scatter Plot -->
+              </div>
+
+              <div class="clearfix visible-md-block visible-lg-block"></div>
+
+              <div class="col-md-6">
+                <!-- Example Stacked Bars -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Stacked Bars</h4>
+                  <div class="example rickshaw-wrap">
+                    <div id="exampleStackedChart"></div>
+                    <div class="rickshaw-legend-wrap">
+                      <div id="exampleStackedLegend"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Stacked Bars -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Area -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Area</h4>
+                  <div class="example rickshaw-wrap">
+                    <div id="exampleAreaChart"></div>
+                    <div class="rickshaw-legend-wrap">
+                      <div id="exampleAreaLegend"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Area -->
+              </div>
+
+              <div class="col-md-12">
+                <!-- Example Multiple Renderers -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Multiple Renderers</h4>
+                  <p>Bars, lines, area, and scatterplot graphs all in one setting.</p>
+                  <div class="example rickshaw-wrap">
+                    <div id="exampleMultipleChart"></div>
+                    <div id="exampleMultipleSlider" class="margin-top-10"></div>
+                    <div class="rickshaw-legend-wrap">
+                      <div id="exampleMultipleLegend"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Multiple Renderers -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- End Panel Rickshaw -->
+
+      </div>
+    </div>
+    <!-- End Page -->
+
+
+  {{/content}}
+{{/extend}}

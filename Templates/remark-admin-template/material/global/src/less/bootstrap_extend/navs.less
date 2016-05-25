@@ -1,0 +1,700 @@
+// Name:            Nav
+//
+// Component:       `nav`
+//
+// Modifiers:       `nav-justified`
+//                  `nav-tabs-bottom`
+//                  `nav-tabs-solid`
+//                  `nav-tabs-reverse`
+//                  `nav-tabs-line`
+//                  `nav-tabs-vertical`
+//                  `nav-tabs-inverse`
+//                  `nav-tabs-lg`
+//                  `nav-tabs-sm`
+//
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+@nav-tabs-link-padding                      : @nav-padding-vertical 20px;
+@nav-tabs-vertical-link-padding             : @nav-padding-vertical 20px;
+
+@nav-tabs-color                             : @text-color;
+@nav-tabs-active-color                      : @inverse;
+@nav-tabs-active-bg                         : @brand-primary;
+@nav-tabs-active-border                     : @brand-primary;
+
+@nav-tabs-solid-color                       : @text-color;
+@nav-tabs-solid-bg                          : @gray-lightest;
+@nav-tabs-solid-border                      : @gray-lightest;
+
+@nav-tabs-solid-content-padding             : 20px;
+@nav-tabs-vertical-solid-content-padding    : 20px;
+
+@nav-tabs-line-border                       : @border-color-base;
+@nav-tabs-line-hover-border                 : @gray-light;
+@nav-tabs-line-active-color                 : @brand-primary;
+@nav-tabs-line-active-border                : transparent;
+@nav-tabs-line-link-padding                 : @nav-padding-vertical 20px;
+
+@nav-tabs-sm-padding                        : 5px 10px;
+@nav-tabs-sm-font-size                      : @font-size-small;
+@nav-tabs-sm-line-height                    : @line-height-small;
+
+@nav-tabs-lg-padding                        : 12px 20px;
+@nav-tabs-lg-font-size                      : @font-size-large;
+@nav-tabs-lg-line-height                    : @line-height-large;
+
+@nav-tabs-inverse-bg                        : @inverse;
+@nav-tabs-inverse-border                    : @inverse;
+
+@nav-quick-margin-bottom                    : @line-height-computed;
+@nav-quick-bg                               : @inverse;
+@nav-quick-hover-bg                         : @bg-color-base;
+@nav-quick-border-radius                    : @border-radius-base;
+@nav-quick-box-shadow                       : 0 1px 1px rgba(0, 0, 0, .05);
+@nav-quick-icon-font-size                   : (2*@font-size-icon);
+@nav-quick-vertical-padding                 : 16px;
+
+@nav-quick-lg-icon-font-size                : (2.5*@font-size-icon);
+@nav-quick-lg-vertical-padding              : 22px;
+
+@nav-quick-sm-icon-font-size                : (1.5*@font-size-icon);
+@nav-quick-sm-vertical-padding              : 12px;
+
+@nav-quick-border-color                     : @border-color-base;
+
+// Component: Nav
+// ========================================================================
+
+.nav {
+  > li {
+    > a {
+      overflow:hidden;
+
+      &:focus {
+        outline: none;
+      }
+
+      .close {
+        display: inline-block;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  // Open dropdowns
+  .open > a {
+    &,
+    &:hover,
+    &:focus {
+      border-color: transparent;
+    }
+  }
+}
+
+
+// Component: `nav-quick`
+// ========================================================================
+.nav-quick {
+  padding: 0;
+  margin-bottom: @nav-quick-margin-bottom;
+  background-color: @nav-quick-bg;
+  border-radius: @nav-quick-border-radius;
+  margin-left: 0;
+  margin-right: 0;
+
+  box-shadow: @nav-quick-box-shadow;
+
+  li {
+    position: relative;
+    display: block;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+
+  a {
+    display: block;
+    padding: @nav-quick-vertical-padding 0;
+    color: @nav-tabs-color;
+
+    .icon {
+      display: block;
+      margin-bottom: 0.2em;
+      font-size: @nav-quick-icon-font-size;
+    }
+
+    &:focus {
+      text-decoration: none;
+    }
+
+    &:hover {
+      text-decoration: none;
+      background-color: @nav-quick-hover-bg;
+    }
+  }
+
+  .label, .badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &-sm {
+    a {
+      padding: @nav-quick-sm-vertical-padding 0;
+
+      .icon {
+        font-size: @nav-quick-sm-icon-font-size;
+      }
+    }
+  }
+
+  &-lg {
+    a {
+      padding: @nav-quick-lg-vertical-padding 0;
+
+      .icon {
+        font-size: @nav-quick-lg-icon-font-size;
+      }
+    }
+  }
+
+  &-bordered {
+    border-top: 1px solid @nav-quick-border-color;
+    border-left: 1px solid @nav-quick-border-color;
+
+    li {
+      border-bottom: 1px solid @nav-quick-border-color;
+      border-right: 1px solid @nav-quick-border-color;
+    }
+  }
+}
+
+// Component: `nav-pills`
+// ========================================================================
+.nav-pills {
+  > li {
+    > a {
+      transition: border .2s linear, color .2s linear, background-color .2s linear;
+    }
+  }
+}
+
+.nav-pills-rounded {
+  > li{
+    > a {
+      margin-left: 5px;
+      margin-right: 5px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 1000px;
+    }
+  }
+}
+
+// Component: `nav-tabs`
+// ========================================================================
+.nav-tabs {
+  > li {
+    > a {
+      padding: @nav-tabs-link-padding;
+      color: @nav-tabs-color;
+
+      transition: .25s;
+
+      > .icon {
+        line-height: 1;
+        margin-right: .5em;
+      }
+    }
+
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @nav-tabs-active-color;
+        background-color: @nav-tabs-active-bg;
+        border-color: transparent;
+        border-bottom-color: @nav-tabs-active-border;
+      }
+    }
+  }
+
+  &.nav-justified {
+    > li {
+      > a {
+        border-radius: @border-radius-large @border-radius-large 0 0;
+      }
+
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          border-color: transparent;
+          border-bottom-color: @nav-tabs-active-border;
+        }
+      }
+    }
+  }
+}
+
+
+// Modifier: `nav-tabs-bottom`
+// -------------------------
+
+.nav-tabs.nav-tabs-bottom {
+  border-top: 1px solid @nav-tabs-border-color;
+  border-bottom: none;
+
+  > li {
+    margin-top: -1px;
+    margin-bottom: 0;
+    > a {
+      border-radius: 0 0 @border-radius-large @border-radius-large;
+
+      &:hover,
+      &:focus {
+        border-bottom-color: transparent;
+        border-top-color: @nav-tabs-border-color;
+      }
+    }
+  }
+
+  &.nav-justified {
+    border-top: none;
+
+    > li {
+      > a {
+        border-bottom-color: transparent;
+        border-top-color: @nav-tabs-border-color;
+      }
+
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          border-top: 1px solid @nav-tabs-active-border;
+        }
+      }
+    }
+  }
+}
+
+
+// Modifier: `nav-tabs-reverse`
+// -------------------------
+
+.nav-tabs-reverse {
+  > li {
+    float: right;
+
+    > a {
+      margin-right: 0;
+      margin-left: 2px;
+    }
+  }
+}
+
+
+// Modifier: `nav-tabs-solid`
+// ========================================================================
+
+.nav-tabs-solid {
+  border-bottom-color: @nav-tabs-solid-border;
+  > li {
+    > a {
+      &:hover {
+        border-color: transparent;
+      }
+    }
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @nav-tabs-solid-color;
+        background-color: @nav-tabs-solid-bg;
+        border-color: transparent;
+      }
+    }
+  }
+
+  & ~ .tab-content {
+    padding: @nav-tabs-solid-content-padding;
+    background-color: @nav-tabs-solid-bg;
+  }
+
+  &.nav-justified {
+    > li {
+      > a {
+        border: none;
+      }
+
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          border: none;
+        }
+      }
+    }
+  }
+
+  &.nav-tabs-bottom {
+    > li {
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+
+// Modifier: `nav-tabs-line`
+// ========================================================================
+
+.nav-tabs-line {
+  position: relative;
+
+  > li {
+    > a {
+      padding: @nav-tabs-line-link-padding;
+      border-bottom: 2px solid transparent;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+
+      &:hover {
+        border-bottom-color: @nav-tabs-line-hover-border;
+      }
+    }
+
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @nav-tabs-line-active-color;
+        background-color: transparent;
+        border-bottom: 2px solid @nav-tabs-line-active-border;
+      }
+    }
+  }
+
+  // Open dropdowns
+  .open > a {
+    &,
+    &:hover,
+    &:focus {
+      border-color: transparent;
+      border-bottom-color: @nav-tabs-line-hover-border;
+    }
+  }
+
+  > .nav-tabs-autoline {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: @nav-tabs-active-bg;
+    transition-property: left, width;
+  }
+
+  &.nav-tabs-bottom {
+    > li {
+      > a {
+        border-top: 2px solid transparent;
+        border-bottom: none;
+        &:hover {
+          border-top-color: @nav-tabs-line-hover-border;
+          border-bottom-color: transparent;
+        }
+      }
+
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          border-top: 2px solid @nav-tabs-line-active-border;
+          border-bottom: none;
+        }
+      }
+    }
+
+    > .nav-tabs-autoline {
+      top: 0;
+      bottom: auto;
+    }
+  }
+
+  &.nav-justified {
+    > li {
+      > a {
+        margin-bottom: -1px;
+        border-bottom: 2px solid @nav-tabs-line-border;
+        &:hover {
+          border-bottom-color: @nav-tabs-line-hover-border;
+        }
+      }
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          border-color: transparent;
+          border-bottom: 2px solid @nav-tabs-line-border;
+        }
+      }
+    }
+
+    &.nav-tabs-bottom {
+      border-top: none;
+      > li {
+        > a {
+          margin-top: -1px;
+          margin-bottom: 0;
+          border-top: 2px solid @nav-tabs-line-border;
+          border-bottom: none;
+          &:hover {
+            border-top-color: @nav-tabs-line-hover-border;
+          }
+        }
+        &.active > a {
+          &,
+          &:hover,
+          &:focus {
+            border-top-color: @nav-tabs-line-border;
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Modifier: `nav-tabs-vertical`
+// ========================================================================
+
+.nav-tabs-vertical {
+  .clearfix();
+
+  .nav-tabs {
+    float: left;
+    border-right: 1px solid @nav-tabs-border-color;
+    border-bottom: none;
+
+    > li {
+      float: none;
+      margin-right: -1px;
+      margin-bottom: 0;
+
+      > a {
+        padding: @nav-tabs-vertical-link-padding;
+        margin-right: 0;
+        margin-bottom: 2px;
+        border-radius: @border-radius-large 0 0 @border-radius-large;
+
+        &:hover {
+          border-bottom-color: transparent;
+          border-right-color: @nav-tabs-border-color;
+        }
+      }
+
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          border-right-color: @nav-tabs-active-border;
+        }
+      }
+    }
+  }
+
+  .nav-tabs-reverse {
+    float: right;
+    border-right: none;
+    border-left: 1px solid @nav-tabs-border-color;
+
+    > li {
+      margin-right: 0;
+      margin-left: -1px;
+      > a {
+        margin-left: 0;
+        border-radius: 0 @border-radius-large @border-radius-large 0;
+
+        &:hover {
+          border-right-color: transparent;
+          border-left-color: @nav-tabs-border-color;
+        }
+      }
+
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          border-left-color: @nav-tabs-active-border;
+        }
+      }
+    }
+  }
+
+  .nav-tabs-solid {
+    border-right-color: @nav-tabs-solid-border;
+
+    > li {
+      > a {
+        &:hover {
+          border-color: transparent;
+        }
+      }
+
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          border-color: transparent;
+        }
+      }
+    }
+
+    & + .tab-content {
+      padding: @nav-tabs-vertical-solid-content-padding;
+    }
+
+    &.nav-tabs-reverse {
+      border-left-color: @nav-tabs-solid-border;
+    }
+  }
+
+  .nav-tabs-line {
+    > li {
+      > a {
+        border-right: 2px solid transparent;
+        border-bottom: none;
+        &:hover {
+          border-right-color: @nav-tabs-line-hover-border;
+        }
+      }
+
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          border-right: 2px solid @nav-tabs-line-active-border;
+          border-bottom: none;
+        }
+      }
+    }
+
+    > .nav-tabs-autoline {
+      left: auto;
+      right: 0;
+      width: 2px;
+      height: 0;
+      transition-property: top, height;
+    }
+  }
+
+  .nav-tabs-line.nav-tabs-reverse {
+    > li {
+      > a {
+        border-right-width: 1px;
+        border-left: 2px solid transparent;
+        &:hover {
+          border-color: transparent;
+          border-left-color: @nav-tabs-line-hover-border;
+        }
+      }
+
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          border-right: 1px solid transparent;
+          border-left: 2px solid @nav-tabs-line-active-border;
+        }
+      }
+    }
+
+    > .nav-tabs-autoline {
+      left: 0;
+      right: auto;
+    }
+  }
+
+  .tab-content {
+    overflow: hidden;
+  }
+}
+
+
+// Modifier: `nav-tabs-inverse`
+// ========================================================================
+
+.nav-tabs-inverse {
+  .nav-tabs-solid {
+    border-bottom-color: @nav-tabs-inverse-border;
+    > li {
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          color: @nav-tabs-color;
+          background-color: @nav-tabs-inverse-bg;
+        }
+      }
+    }
+  }
+
+  &.nav-tabs-vertical {
+    .nav-tabs-solid {
+      border-right-color: @nav-tabs-inverse-border;
+      &.nav-tabs-reverse {
+        border-left-color: @nav-tabs-inverse-border;
+      }
+    }
+  }
+
+  .tab-content {
+    background: @nav-tabs-inverse-bg;
+  }
+}
+
+// Modifier: `nav-tabs-animate`
+// ========================================================================
+.nav-tabs-animate {
+  .tab-content {
+    overflow:hidden;
+  }
+}
+// Size Modifier
+// ========================================================================
+
+.nav-tabs-lg {
+  .nav-tabs-size(@nav-tabs-lg-font-size, @nav-tabs-lg-line-height, @nav-tabs-lg-padding);
+}
+
+.nav-tabs-sm {
+  .nav-tabs-size(@nav-tabs-sm-font-size, @nav-tabs-sm-line-height, @nav-tabs-sm-padding);
+}
+
+// Mixins
+// ========================================================================
+
+.nav-tabs-size(@font-size; @line-height; @padding) {
+  > li {
+    > a {
+      padding: @padding;
+      font-size: @font-size;
+      line-height: @line-height;
+    }
+  }
+}

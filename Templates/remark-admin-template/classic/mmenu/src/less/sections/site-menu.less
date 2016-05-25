@@ -1,0 +1,144 @@
+
+.site-menu {
+  font-size: 14px;
+  // overflow-y: hidden;
+  overflow: visible;
+  padding-bottom: 20px;
+  transition: transform .25s;
+
+  &-item {
+    transition: transform .1s, all .25s, border 0;
+    line-height: @site-menu-sub-height;
+
+    > a {
+      white-space: nowrap;
+      cursor: pointer;
+    }
+  }
+
+  &-icon {
+    display: inline-block;
+    margin-right: @site-menu-top-font-size;
+
+    .icon-fixed-width();
+  }
+
+  &-title {
+    display: inline-block;
+    max-width: 160px;
+    vertical-align: middle;
+
+    transition: visibility .25s,opacity .25s;
+
+    .text-overflow();
+
+    &:first-child {
+      margin-left: @site-menubar-padding-horizontal;
+    }
+  }
+
+  &-arrow {
+    font-family: '@{wb-font-family}';
+
+    .make-icon();
+    &:before {
+      content: '@{wb-var-chevron-right-mini}';
+    }
+  }
+
+  &-arrow, &-badge, &-label {
+    position: absolute;
+    right: @site-menu-padding-horizontal;
+    display: inline-block;
+    vertical-align: middle;
+    transition: visibility cubic-bezier(0.76, 0.1, 1,-0.16) .25s, opacity cubic-bezier(0.76, 0.1, 1,-0.16) .5s;
+  }
+
+  .badge, .label {
+    padding: 2px 5px 3px;
+    font-size: @font-size-small;
+    font-weight: @font-weight-normal;
+  }
+
+  &-item {
+    position: relative;
+    white-space: nowrap;
+
+    a {
+      display: block;
+      color: @site-menubar-color;
+    }
+
+    &:hover {
+      > a {
+        color: @site-menu-top-hover-color;
+        background-color: @site-menu-top-hover-bg;
+      }
+    }
+
+    &.active {
+      background: @site-menu-top-active-bg;
+
+      > a {
+        color: @site-menu-top-active-color;
+        background: @site-menu-top-active-head-bg;
+      }
+
+      &.hover {
+        > a {
+          background: @site-menu-top-active-head-bg;
+        }
+      }
+    }
+  }
+
+  > .site-menu-item {
+    font-size: 14px;
+    padding: 0;
+
+    > a {
+      padding: 0 @site-menubar-padding-horizontal;
+      line-height: @site-menu-top-height;
+    }
+
+    &.active {
+      border-top: 1px solid @site-menu-top-active-border-color;
+      border-bottom: 1px solid @site-menu-top-active-border-color;
+    }
+  }
+
+  &-item {
+    > .site-menu-sub {
+      background-color: @site-menu-top-active-bg;
+    }
+  }
+}
+
+.site-menubar-light {
+  .site-menu {
+    &-item {
+      a {
+        color: @site-menubar-light-color;
+      }
+
+      &:hover {
+        background-color: @site-menu-light-top-hover-bg;
+        > a {
+          color: @site-menu-light-top-hover-color;
+          background: @site-menu-light-top-active-head-bg;
+        }
+      }
+
+      &.active {
+        background: @site-menu-light-top-active-bg;
+        > a {
+          color: @site-menu-light-top-active-color;
+        }
+      }
+
+      > .site-menu-sub {
+        background-color: @site-menu-light-top-active-bg;
+      }
+    }
+  }
+}

@@ -1,0 +1,173 @@
+// Name:            badges
+//
+// Component:       `badge`
+//
+// Modifiers:       `badge-primary`
+//                  `badge-success`
+//                  `badge-info`
+//                  `badge-warning`
+//                  `badge-danger`
+//                  `badge-dark`
+//                  `badge-lg`
+//                  `badge-sm`
+//                  `badge-radius`
+//
+// Markup:
+//
+// <!-- badge -->
+// <span class="badge">...</span>
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@badge-primary-color:         @inverse;
+@badge-primary-bg:            @brand-primary;
+
+@badge-success-color:         @inverse;
+@badge-success-bg:            @brand-success;
+
+@badge-info-color:            @inverse;
+@badge-info-bg:               @brand-info;
+
+@badge-warning-color:         @inverse;
+@badge-warning-bg:            @brand-warning;
+
+@badge-danger-color:          @inverse;
+@badge-danger-bg:             @brand-danger;
+
+@badge-dark-color:            @inverse;
+@badge-dark-bg:               @brand-dark;
+
+@badge-padding:               3px 6px;
+
+@badge-lg-padding:            5px 9px 8px;
+@badge-lg-font-size:          16px;
+
+@badge-sm-padding:            2px 5px;
+@badge-sm-font-size:          10px;
+
+@badge-up-margin:             0 -0.8em;
+@badge-up-border:             @inverse;
+
+@badge-radius:                @border-radius-base;
+
+
+// Component: Badge
+// ========================================================================
+
+.badge {
+  padding: @badge-padding;
+
+  .btn & {
+    top: 0;
+  }
+  &.up {
+    position: relative;
+    top: -10px;
+    margin: @badge-up-margin;
+    //border: 2px solid @badge-up-border;
+    border-radius: 15px;
+  }
+  &.badge-absolute {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    z-index: 5;
+  }
+}
+
+// Modifier: `badge-radius`
+// -------------------------
+
+.badge-radius {
+  border-radius: @badge-radius;
+}
+
+// Color Modifier
+// ========================================================================
+
+// Modifier: `badge-primary`
+// -------------------------
+
+.badge-primary {
+  .badge-variant(@badge-primary-color; @badge-primary-bg);
+}
+
+// Modifier: `badge-success`
+// -------------------------
+
+.badge-success {
+  .badge-variant(@badge-success-color; @badge-success-bg);
+}
+
+// Modifier: `badge-info`
+// -------------------------
+
+.badge-info {
+  .badge-variant(@badge-info-color; @badge-info-bg);
+}
+
+// Modifier: `badge-warning`
+// -------------------------
+
+.badge-warning {
+  .badge-variant(@badge-warning-color; @badge-warning-bg);
+}
+
+// Modifier: `badge-danger`
+// -------------------------
+
+.badge-danger {
+  .badge-variant(@badge-danger-color; @badge-danger-bg);
+}
+
+// Modifier: `badge-dark`
+// -------------------------
+
+.badge-dark {
+  .badge-variant(@badge-dark-color; @badge-dark-bg);
+}
+
+// Size Modifier
+// ========================================================================
+
+// Modifier: `badge-lg`
+// -------------------------
+
+.badge-lg {
+  padding: @badge-lg-padding;
+  font-size: @badge-lg-font-size;
+}
+
+// Modifier: `badge-sm`
+// -------------------------
+
+.badge-sm {
+  padding: @badge-sm-padding;
+  font-size: @badge-sm-font-size;
+}
+
+// Mixins
+// ========================================================================
+
+.badge-variant(@color; @bg) {
+  color: @color;
+  background-color: @bg;
+  
+  &[href] {
+    &:hover,
+    &:focus {
+      color: @color;
+      background-color: darken(@bg, 10%);
+    }
+  }
+
+  .list-group-item.active > &,
+  .nav-pills > .active > a > & {
+    color: @color;
+    background-color: @bg;
+  }
+}

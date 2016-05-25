@@ -1,0 +1,130 @@
+---
+title: Alertify
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/alertify-js/alertify.css">
+  {{/content}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/advanced/alertify.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/alertify-js/alertify.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/alertify-js.js"></script>
+  {{/content}}
+
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li class="active">Advanced UI</li>
+        </ol>
+        <h1 class="page-title">Alertify</h1>
+        <div class="page-header-actions">
+          <a class="btn btn-sm btn-inverse btn-round" href="https://alertifyjs.org/" target="_blank">
+            <i class="icon wb-link" aria-hidden="true"></i>
+            <span class="hidden-xs">Official Website</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="page-content">
+        <!-- Panel Alertify -->
+        <div class="panel">
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-lg-4 col-sm-6">
+                <!-- Example Alert Dialog -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Alert Dialog</h4>
+                  <p>You want to make sure information comes through to the user.</p>
+                  <div class="example">
+                    <button type="button" class="btn btn-primary" id="alert" data-plugin="alertify"
+                    data-alert-message="This is an alert dialog">Generate</button>
+                  </div>
+                </div>
+                <!-- End Example Alert Dialog -->
+              </div>
+
+              <div class="col-lg-4 col-sm-6">
+                <!-- Example Confirm Dialog -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Confirm Dialog</h4>
+                  <p>You want the user to verify or accept something.</p>
+                  <div class="example">
+                    <button type="button" class="btn btn-primary" id="confirm" data-plugin="alertify"
+                    data-type="confirm" data-confirm-title="This is a confirm dialog"
+                    data-success-message="You've clicked OK" data-error-message="You've clicked Cancel">Generate</button>
+                  </div>
+                </div>
+                <!-- End Example Confirm Dialog -->
+              </div>
+
+              <div class="clearfix visible-sm-block visible-md-block"></div>
+
+              <div class="col-lg-4 col-sm-6">
+                <!-- Example Prompt Dialog -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Prompt Dialog</h4>
+                  <p>A prompt dialog is often used if you want the user to input a
+                    value. </p>
+                  <div class="example">
+                    <button type="button" class="btn btn-primary" id="prompt" data-plugin="alertify"
+                    data-type="prompt" data-prompt-title="This is a prompt dialog"
+                    data-success-message="You've clicked OK and typed: %s" data-error-message="You've clicked Cancel"
+                    data-default-message="Default Value">Generate</button>
+                  </div>
+                </div>
+                <!-- End Example Prompt Dialog -->
+              </div>
+
+              <div class="col-lg-4 col-sm-6">
+                <!-- Example Delay -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Delay</h4>
+                  <p>The callback function will be delay for 10 seconds when user
+                    clicks “ok” button.</p>
+                  <div class="example">
+                    <button type="button" class="btn btn-primary" id="exampleDelay" data-plugin="alertify"
+                    data-type="log" data-delay="10000" data-log-message="Hiding in 10 seconds">Generate</button>
+                  </div>
+                </div>
+                <!-- End Example Delay -->
+              </div>
+
+              <div class="col-lg-4 col-sm-6">
+                <!-- Example Button Labels -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Button Labels</h4>
+                  <p>Click on the bottom of the different location of the button to
+                    show you.</p>
+                  <div class="example">
+                    <button type="button" class="btn btn-primary" id="exampleLabels" data-plugin="alertify"
+                    data-type="confirm" data-ok-label="Accept" data-cancel-label="Deny"
+                    data-confirm-title="Confirm dialog with custom button labels"
+                    data-success-message="You've clicked OK" data-error-message="You've clicked Cancel">Generate</button>
+                  </div>
+                </div>
+                <!-- End Example Button Labels -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel Alertify -->
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

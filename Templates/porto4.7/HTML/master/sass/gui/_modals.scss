@@ -1,0 +1,19 @@
+/* Popup */
+.popup-inline-content,
+.mfp-content .ajax-container {
+	background: none repeat scroll 0 0 #FFF;
+	margin: 40px auto;
+	max-width: 1170px;
+	padding: 20px 30px;
+	position: relative;
+	text-align: $left;
+	display: none;
+}
+
+.mfp-content .ajax-container {
+	display: block;
+}
+
+.mfp-wrap .popup-inline-content {
+	display: block;
+}

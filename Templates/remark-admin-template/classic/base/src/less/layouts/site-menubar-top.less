@@ -1,0 +1,21 @@
+@site-menubar-top-nav-width:  90px;
+@site-menubar-top-nav-height: 60px;
+
+.site-menubar-top {
+  .site-menubar {
+    width: 100%;
+    height: @site-menubar-top-nav-height;
+    position: relative;
+  }
+
+  .site-menu {
+    &-category {
+      display: none;
+    }
+
+    &-item {
+      width: @site-menubar-top-nav-width;
+      float: left;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "elusive-icons",
+  "description": "Elusive Icons",
+  "version": "2.0.0",
+  "keywords": [],
+  "homepage": "http://elusiveicons.com",
+  "dependencies": {},
+  "devDependencies": {},
+  "license": ["OFL-1.1", "MIT", "CC-BY-3.0"],
+  "main": [
+    "./css/elusive-icons.css",
+    "./fonts/*"
+  ],
+  "ignore": [
+    "*/.*",
+    "*.json",
+    "src",
+    "*.yml",
+    "Gemfile",
+    "Gemfile.lock",
+    "*.md"
+  ]
+}

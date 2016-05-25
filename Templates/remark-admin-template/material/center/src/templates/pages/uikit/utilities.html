@@ -1,0 +1,1126 @@
+---
+title: Utilities
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/filament-tablesaw/tablesaw.css">
+  {{/content}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/uikit/utilities.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/filament-tablesaw/tablesaw.js"></script>
+  {{/content}}
+
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li class="active">Basic UI</li>
+        </ol>
+        <h1 class="page-title">Utilities</h1>
+        <div class="page-header-actions">
+          <button type="button" class="btn btn-sm btn-icon btn-primary btn-round" data-toggle="tooltip"
+          data-original-title="Edit">
+            <i class="icon md-edit" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-sm btn-icon btn-primary btn-round" data-toggle="tooltip"
+          data-original-title="Refresh">
+            <i class="icon md-refresh-alt" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-sm btn-icon btn-primary btn-round" data-toggle="tooltip"
+          data-original-title="Setting">
+            <i class="icon md-settings" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <div class="page-content">
+        <!-- Panel Alignments -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Alignments</h3>
+          </div>
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-lg-6">
+                <!-- Example Clearing And Floating -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Clearing And Floating</h4>
+                  <p>Floating is fundamental for creating all kinds of layouts. But
+                    floats need to be cleared or in the worst case, you might end
+                    up with a scrambled site. The following classes will help you
+                    to setup basic layouts.</p>
+                  <table class="table table-bordered table-hover">
+                    <colgroup>
+                      <col class="col-xs-1">
+                        <col class="col-xs-7">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th class="text-nowrap">Class</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-nowrap">
+                          <code>.pull-left</code>
+                        </td>
+                        <td>Float the element to the left.</td>
+                      </tr>
+                      <tr>
+                        <td class="text-nowrap">
+                          <code>.pull-right</code>
+                        </td>
+                        <td>Float the element to the right.</td>
+                      </tr>
+                      <tr>
+                        <td class="text-nowrap">
+                          <code>.clearfix</code>
+                        </td>
+                        <td>Add this class to a parent container to clear floats.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <div class="example example-box">
+                    <button type="button" class="btn btn-info">Left</button>
+                    <button type="button" class="btn btn-info pull-right">Pull right</button>
+                  </div>
+                </div>
+                <!-- End Example Clearing And Floating -->
+              </div>
+
+              <div class="col-lg-6">
+                <!-- Example Vertical Aligns -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Vertical Aligns</h4>
+                  <div class="example-body">
+                    <p>Add one of these classes to change the display properties of
+                      an element.</p>
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-hover">
+                        <colgroup>
+                          <col class="col-xs-2">
+                            <col class="col-xs-6">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th class="text-nowrap">Class</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="text-nowrap">
+                              <code>.vertical-align</code>
+                            </td>
+                            <td>Add this class to the parent container. This container
+                              needs a specific height.</td>
+                          </tr>
+                          <tr>
+                            <td class="text-nowrap">
+                              <code>.vertical-align-middle</code>
+                            </td>
+                            <td>Add this class to the child element to center your
+                              content.</td>
+                          </tr>
+                          <tr>
+                            <td class="text-nowrap">
+                              <code>.vertical-align-bottom</code>
+                            </td>
+                            <td>Add this class to the child element to align your content
+                              to the bottom.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="example example-box container-fluid">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="vertical-align height-100">
+                            <div class="vertical-align-middle">
+                              <button type="button" class="btn btn-info">This is align middle</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="vertical-align height-100">
+                            <div class="vertical-align-bottom">
+                              <button type="button" class="btn btn-info">This is align bottom</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Vertical Aligns -->
+              </div>
+              <div class="clearfix visible-lg-block"></div>
+
+              <div class="col-lg-6">
+                <!-- Example Center Block -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Center Block</h4>
+                  <div class="example-body">
+                    <table class="table table-bordered table-hover">
+                      <colgroup>
+                        <col class="col-xs-1">
+                          <col class="col-xs-7">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th class="text-nowrap">Class</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="text-nowrap">
+                            <code>.center-block</code>
+                          </td>
+                          <td>Use the class to center the element.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <div class="example example-box">
+                      <button type="button" class="btn btn-info center-block">Center</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Center Block -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel Alignments -->
+
+        <!-- Panel Text Related -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Text Related</h3>
+          </div>
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-lg-6">
+                <!-- Example Text Transformation -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Text Transformation</h4>
+                  <div class="example-body">
+                    <p>Transform text in components with text capitalization classes.</p>
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-hover">
+                        <colgroup>
+                          <col class="col-xs-2">
+                            <col class="col-xs-6">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th class="text-nowrap">Class</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="text-nowrap">
+                              <code>.text-lowercase</code>
+                            </td>
+                            <td>Transform text to lowercase.</td>
+                          </tr>
+                          <tr>
+                            <td class="text-nowrap">
+                              <code>.text-uppercase</code>
+                            </td>
+                            <td>Transform text to uppercase.</td>
+                          </tr>
+                          <tr>
+                            <td class="text-nowrap">
+                              <code>.text-capitalize</code>
+                            </td>
+                            <td>Transform text to capitalize.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="example example-box">
+                      <p class="text-lowercase">Lowercased text.</p>
+                      <p class="text-uppercase">Uppercased text.</p>
+                      <p class="text-capitalize">Capitalized text.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Text Transformation -->
+              </div>
+              <div class="col-lg-6">
+                <!-- Example Text Wrapping -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Text Wrapping</h4>
+                  <div class="example-body">
+                    <p>Add one of these classes to wrap the text.</p>
+                    <table class="table table-bordered table-hover">
+                      <colgroup>
+                        <col class="col-xs-1">
+                          <col class="col-xs-7">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th class="text-nowrap">Class</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="text-nowrap">
+                            <code>.text-hide</code>
+                          </td>
+                          <td>Replace an element's text content with a background image.</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap">
+                            <code>.text-truncate</code>
+                          </td>
+                          <td>Prevents text from wrapping into multiple lines, truncating
+                            it instead.</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap">
+                            <code>.text-break</code>
+                          </td>
+                          <td>Breaks strings if their length exceeds the width of their
+                            container.</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap">
+                            <code>.text-nowrap</code>
+                          </td>
+                          <td>Prevents text from wrapping into multiple lines.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <div class="example example-box container-fluid">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <div class="text-hide height-100" style="border:1px solid #e6e8ea; background-image: url({{global}}/photos/placeholder.png)">
+                            This is text hide.
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="text-truncate height-100" style="border:1px solid #e6e8ea;">
+                            This is text truncate.This is text truncate.
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="text-break height-100" style="border:1px solid #e6e8ea;">
+                            This-is-text-break.This-is-text-break.This-is-text-break.This-is-text-break.
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="text-nowrap height-100" style="border:1px solid #e6e8ea;overflow: hidden;">
+                            This is text nowrap.This is text nowrap.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Text Wrapping -->
+              </div>
+
+              <div class="clearfix visible-lg-block"></div>
+
+              <div class="col-lg-6">
+                <!-- Example Text Alignment -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Text Alignment</h4>
+                  <div class="example-body">
+                    <p>Add one of these useful classes to align your text.</p>
+                    <table class="table table-bordered table-hover">
+                      <colgroup>
+                        <col class="col-xs-1">
+                          <col class="col-xs-7">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th class="text-nowrap">Class</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="text-nowrap">
+                            <code>.text-top</code>
+                          </td>
+                          <td>Aligns text to the top.</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap">
+                            <code>.text-middle</code>
+                          </td>
+                          <td>Aligns text to the middle.</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap">
+                            <code>.text-bottom</code>
+                          </td>
+                          <td>Aligns text to the bottom.</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap">
+                            <code>.text-left</code>
+                          </td>
+                          <td>Left aligned text.</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap">
+                            <code>.text-center</code>
+                          </td>
+                          <td>Center aligned text.</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap">
+                            <code>.text-right</code>
+                          </td>
+                          <td>Right aligned text.</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap">
+                            <code>.text-justify</code>
+                          </td>
+                          <td>Justified text.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <div class="example example-box container-fluid">
+                      <div class="row">
+                        <div class="col-md-4 margin-bottom-10">
+                          <a class="avatar" href="javascript:void(0)">
+                            <img class="width-50" src="{{global}}/portraits/1.jpg" alt="Relevant textual alternative to the image">
+                          </a>
+                          <span class="text-top">Aligns text to the top.</span>
+                        </div>
+                        <div class="col-md-4 margin-bottom-10">
+                          <a class="avatar" href="javascript:void(0)">
+                            <img class="width-50" src="{{global}}/portraits/2.jpg" alt="Relevant textual alternative to the image">
+                          </a>
+                          <span class="text-middle">Aligns text to the middle.</span>
+                        </div>
+                        <div class="col-md-4 margin-bottom-10">
+                          <a class="avatar" href="javascript:void(0)">
+                            <img class="width-50" src="{{global}}/portraits/3.jpg" alt="Relevant textual alternative to the image">
+                          </a>
+                          <span class="text-bottom">Aligns text to the bottom.</span>
+                        </div>
+                      </div>
+                      <div class="margin-top-20">
+                        <p class="text-left">Left aligned text.</p>
+                        <p class="text-center">Center aligned text.</p>
+                        <p class="text-right">Right aligned text.</p>
+                        <p class="text-justify">Justified text.Justified text.Justified text.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Text Alignment -->
+              </div>
+
+              <div class="col-lg-6">
+                <!-- Example Quick Font Size -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Quick Font Size</h4>
+                  <div class="example-body">
+                    <p>Add one of these classes to set the font size.</p>
+                    <p>All size: 0, 10, 12, 14, 16, 18, 20, 24, 26, 30, 40, 50, 60,
+                      70 , 80.</p>
+                    <table class="table table-bordered table-hover">
+                      <colgroup>
+                        <col class="col-xs-1">
+                          <col class="col-xs-7">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th class="text-nowrap">Class</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="text-nowrap"><code>.font-size-0</code></td>
+                          <td>font-size: 0px</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.font-size-10</code></td>
+                          <td>font-size: 10px</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.font-size-12</code></td>
+                          <td>font-size: 12px</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.font-size-14</code></td>
+                          <td>font-size: 14px</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.font-size-16</code></td>
+                          <td>font-size: 16px</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.font-size-18</code></td>
+                          <td>font-size: 18px</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.font-size-20</code></td>
+                          <td>font-size: 20px</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- End Example Quick Font Size -->
+
+                <!-- Example Quick Font Weight -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Quick Font Weight</h4>
+                  <div class="example-body">
+                    <p>Add one of these classes to set the font weight.</p>
+                    <p>All size: unset, 100, 200, 300, 400, 500, 600, 700, 800, 900.</p>
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-hover">
+                        <colgroup>
+                          <col class="col-xs-1">
+                            <col class="col-xs-7">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th class="text-nowrap">Class</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="text-nowrap"><code>.font-weight-unset</code></td>
+                            <td>font-weight: unset</td>
+                          </tr>
+                          <tr>
+                            <td class="text-nowrap"><code>.font-weight-100</code></td>
+                            <td>font-weight: 100</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Quick Font Weight -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel Text Related -->
+
+        <!-- Panel Box Modal -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Box Modal</h3>
+          </div>
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-lg-6">
+                <!-- Example Quick Padding -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Quick Padding</h4>
+                  <div class="example-body">
+                    <p>All size: 0, 3, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50.</p>
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-hover">
+                        <colgroup>
+                          <col class="col-xs-1">
+                            <col class="col-xs-7">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th class="text-nowrap">CLASS</th>
+                            <th>DESCRIPTION</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="text-nowrap"><code>.padding-5</code></td>
+                            <td>padding: 5px</td>
+                          </tr>
+                          <tr>
+                            <td class="text-nowrap"><code>.padding-vertical-5</code></td>
+                            <td>
+                              <p>padding-top: 5px</p>
+                              <p>padding-bottom: 5px</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-nowrap"><code>.padding-horizontal-5</code></td>
+                            <td>
+                              <p>padding-left: 5px</p>
+                              <p>padding-right: 5px</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-nowrap"><code>.padding-top-5</code></td>
+                            <td>padding-top: 5px</td>
+                          </tr>
+                          <tr>
+                            <td class="text-nowrap"><code>.padding-right-5</code></td>
+                            <td>padding-right: 5px</td>
+                          </tr>
+                          <tr>
+                            <td class="text-nowrap"><code>.padding-bottom-5</code></td>
+                            <td>padding-bottom: 5px</td>
+                          </tr>
+                          <tr>
+                            <td class="text-nowrap"><code>.padding-left-5</code></td>
+                            <td>padding-left: 5px</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Quick Padding -->
+              </div>
+
+              <div class="col-lg-6">
+                <!-- Example Quick Margin -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Quick Margin</h4>
+                  <div class="example-body">
+                    <p>All size: 0, 3, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50.</p>
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-hover">
+                        <colgroup>
+                          <col class="col-xs-1">
+                            <col class="col-xs-7">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th class="text-nowrap">CLASS</th>
+                            <th>DESCRIPTION</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="text-nowrap"><code>.margin-5</code></td>
+                            <td>margin: 5px</td>
+                          </tr>
+                          <tr>
+                            <td class="text-nowrap"><code>.margin-vertical-5</code></td>
+                            <td>
+                              <p>margin-top: 5px</p>
+                              <p>margin-bottom: 5px</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-nowrap"><code>.margin-horizontal-5</code></td>
+                            <td>
+                              <p>margin-left: 5px</p>
+                              <p>margin-right: 5px</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-nowrap"><code>.margin-top-5</code></td>
+                            <td>margin-top: 5px</td>
+                          </tr>
+                          <tr>
+                            <td class="text-nowrap"><code>.margin-right-5</code></td>
+                            <td>margin-right: 5px</td>
+                          </tr>
+                          <tr>
+                            <td class="text-nowrap"><code>.margin-bottom-5</code></td>
+                            <td>margin-bottom: 5px</td>
+                          </tr>
+                          <tr>
+                            <td class="text-nowrap"><code>.margin-left-5</code></td>
+                            <td>margin-left: 5px</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Quick Margin -->
+              </div>
+
+              <div class="col-lg-6">
+                <!-- Example Quick Height -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Quick Height</h4>
+                  <div class="example-body">
+                    <p>All size: 50, 100, 150, 200, 250, 300, 350, 400, 450, 500.</p>
+                    <table class="table table-bordered table-hover">
+                      <colgroup>
+                        <col class="col-xs-1">
+                          <col class="col-xs-7">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th class="text-nowrap">Class</th>
+                          <th>DESCRIPTION</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="text-nowrap"><code>.height-50</code></td>
+                          <td>height: 50px</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.height-100</code></td>
+                          <td>height: 100px</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.height-150</code></td>
+                          <td>height: 150px</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.height-200</code></td>
+                          <td>height: 200px</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.height-250</code></td>
+                          <td>height: 250px</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.height-300</code></td>
+                          <td>height: 300px</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.height-350</code></td>
+                          <td>height: 350px</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.height-400</code></td>
+                          <td>height: 400px</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.height-450</code></td>
+                          <td>height: 450px</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.height-500</code></td>
+                          <td>height: 500px</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- End Example Quick Height -->
+              </div>
+
+              <div class="col-lg-6">
+                <!-- Example Quick Width -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Quick Width</h4>
+                  <div class="example-body">
+                    <p>All size: 50, 100, 150, 200, 250, 300, 350, 400, 450, 500.</p>
+                    <table class="table table-bordered table-hover">
+                      <colgroup>
+                        <col class="col-xs-1">
+                          <col class="col-xs-7">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th class="text-nowrap">Class</th>
+                          <th>DESCRIPTION</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="text-nowrap"><code>.width-50</code></td>
+                          <td>width: 50px</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.width-100</code></td>
+                          <td>width: 100px</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.width-150</code></td>
+                          <td>width: 150px</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.width-200</code></td>
+                          <td>width: 200px</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.width-250</code></td>
+                          <td>width: 250px</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.width-300</code></td>
+                          <td>width: 300px</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.width-350</code></td>
+                          <td>width: 350px</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.width-400</code></td>
+                          <td>width: 400px</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.width-450</code></td>
+                          <td>width: 450px</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.width-500</code></td>
+                          <td>width: 500px</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- End Example Quick Width -->
+              </div>
+
+              <div class="col-lg-12">
+                <!-- Example Responsive Height -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Responsive Height</h4>
+                  <div class="example-body">
+                    <table class="tablesaw table-bordered table-hover visiblity-utilities" data-tablesaw-mode="swipe"
+                    data-tablesaw-minimap>
+                      <thead>
+                        <tr>
+                          <th data-tablesaw-priority="persist"></th>
+                          <th>
+                            Extra small devices
+                            <small>Phones (&lt;768px)</small>
+                          </th>
+                          <th>
+                            Small devices
+                            <small>Tablets (≥768px)</small>
+                          </th>
+                          <th>
+                            Medium devices
+                            <small>Desktops (≥992px)</small>
+                          </th>
+                          <th>
+                            Large devices
+                            <small>Desktops (≥1200px)</small>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>50px</th>
+                          <td class="text-nowrap"><code>.height-xs-50</code></td>
+                          <td class="text-nowrap"><code>.height-sm-50</code></td>
+                          <td class="text-nowrap"><code>.height-md-50</code></td>
+                          <td class="text-nowrap"><code>.height-lg-50</code></td>
+                        </tr>
+                        <tr>
+                          <th>100px</th>
+                          <td class="text-nowrap"><code>.height-xs-100</code></td>
+                          <td class="text-nowrap"><code>.height-sm-100</code></td>
+                          <td class="text-nowrap"><code>.height-md-100</code></td>
+                          <td class="text-nowrap"><code>.height-lg-100</code></td>
+                        </tr>
+                        <tr>
+                          <th>150px</th>
+                          <td class="text-nowrap"><code>.height-xs-150</code></td>
+                          <td class="text-nowrap"><code>.height-sm-150</code></td>
+                          <td class="text-nowrap"><code>.height-md-150</code></td>
+                          <td class="text-nowrap"><code>.height-lg-150</code></td>
+                        </tr>
+                        <tr>
+                          <th>200px</th>
+                          <td class="text-nowrap"><code>.height-xs-200</code></td>
+                          <td class="text-nowrap"><code>.height-sm-200</code></td>
+                          <td class="text-nowrap"><code>.height-md-200</code></td>
+                          <td class="text-nowrap"><code>.height-lg-200</code></td>
+                        </tr>
+                        <tr>
+                          <th>250px</th>
+                          <td class="text-nowrap"><code>.height-xs-250</code></td>
+                          <td class="text-nowrap"><code>.height-sm-250</code></td>
+                          <td class="text-nowrap"><code>.height-md-250</code></td>
+                          <td class="text-nowrap"><code>.height-lg-250</code></td>
+                        </tr>
+                        <tr>
+                          <th>300px</th>
+                          <td class="text-nowrap"><code>.height-xs-300</code></td>
+                          <td class="text-nowrap"><code>.height-sm-300</code></td>
+                          <td class="text-nowrap"><code>.height-md-300</code></td>
+                          <td class="text-nowrap"><code>.height-lg-300</code></td>
+                        </tr>
+                      </tbody>
+                      <tbody>
+                        <tr>
+                          <th>350px</th>
+                          <td class="text-nowrap"><code>.height-xs-350</code></td>
+                          <td class="text-nowrap"><code>.height-sm-350</code></td>
+                          <td class="text-nowrap"><code>.height-md-350</code></td>
+                          <td class="text-nowrap"><code>.height-lg-350</code></td>
+                        </tr>
+                        <tr>
+                          <th>400px</th>
+                          <td class="text-nowrap"><code>.height-xs-400</code></td>
+                          <td class="text-nowrap"><code>.height-sm-400</code></td>
+                          <td class="text-nowrap"><code>.height-md-400</code></td>
+                          <td class="text-nowrap"><code>.height-lg-400</code></td>
+                        </tr>
+                        <tr>
+                          <th>450px</th>
+                          <td class="text-nowrap"><code>.height-xs-450</code></td>
+                          <td class="text-nowrap"><code>.height-sm-450</code></td>
+                          <td class="text-nowrap"><code>.height-md-450</code></td>
+                          <td class="text-nowrap"><code>.height-lg-450</code></td>
+                        </tr>
+                        <tr>
+                          <th>500px</th>
+                          <td class="text-nowrap"><code>.height-xs-500</code></td>
+                          <td class="text-nowrap"><code>.height-sm-500</code></td>
+                          <td class="text-nowrap"><code>.height-md-500</code></td>
+                          <td class="text-nowrap"><code>.height-lg-500</code></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- End Example Responsive Height -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel Box Modal -->
+
+        <!-- Panel Miscellaneous -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Miscellaneous</h3>
+          </div>
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-lg-6">
+                <!-- Example Quick Grid With No Space -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Quick Grid With No Space</h4>
+                  <div class="example-body">
+                    <p>
+                      <code>.row</code> with <code>.no-space</code> to set the
+                      columns which directly under no space.
+                    </p>
+                    <div class="example container-fluid">
+                      <div class="row no-space text-center">
+                        <div class="col-xs-3" style="border: 1px solid #ddd">col-3</div>
+                        <div class="col-xs-3" style="border: 1px solid #ddd">col-3</div>
+                        <div class="col-xs-3" style="border: 1px solid #ddd">col-3</div>
+                        <div class="col-xs-3" style="border: 1px solid #ddd">col-3</div>
+                      </div>
+                      <div class="row no-space text-center margin-top-10">
+                        <div class="col-xs-6" style="border: 1px solid #ddd">col-6</div>
+                        <div class="col-xs-6" style="border: 1px solid #ddd">col-6</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Quick Grid With No Space -->
+              </div>
+
+              <div class="col-lg-6">
+                <!-- Example Display Utilities -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Display Utilities</h4>
+                  <div class="example-body">
+                    <p>Add one of these classes to change the display properties of
+                      an element.</p>
+                    <table class="table table-bordered table-hover">
+                      <colgroup>
+                        <col class="col-xs-1">
+                          <col class="col-xs-7">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th class="text-nowrap">Class</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="text-nowrap"><code>.inline</code></td>
+                          <td>Forces the element to behave like an inline element.</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.inline-block</code></td>
+                          <td>Forces the element to behave like an inline-block element.</td>
+                        </tr>
+                        <tr>
+                          <td class="text-nowrap"><code>.block</code></td>
+                          <td>Forces the element to behave like a block element.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- End Example Display Utilities -->
+              </div>
+              <div class="clearfix visible-lg-block"></div>
+
+              <div class="col-lg-6">
+                <!-- Example Screen Reader And Keyboard Navigation Content -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Screen Reader And Keyboard Navigation Content</h4>
+                  <div class="example-body">
+                    <p>Hide an element to all devices
+                      <strong>except screen readers</strong> with <code>.sr-only</code>.
+                      Combine <code>.sr-only</code> with <code>.sr-only-focusable</code>                      to show the element again when it's focused (e.g. by a keyboard-only
+                      user). Can also be used as mixins.</p>
+                  </div>
+                </div>
+                <!-- End Example Screen Reader And Keyboard Navigation Content -->
+              </div>
+
+              <div class="col-lg-6">
+                <!-- Example Carets -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Carets</h4>
+                  <div class="example-body">
+                    <p>Use carets to indicate dropdown functionality and direction.
+                      Note that the default caret will reverse automatically in
+                      <a href="./dropdowns.html">dropup menus</a>.</p>
+                    <div class="example example-box">
+                      <span class="caret"></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Carets -->
+              </div>
+
+              <div class="clearfix visible-lg-block"></div>
+
+              <div class="col-lg-12">
+                <!-- Example Visibility -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Visibility</h4>
+                  <div class="example-body">
+                    <table class="tablesaw table-bordered table-hover visiblity-utilities" data-tablesaw-mode="swipe"
+                    data-tablesaw-minimap>
+                      <thead>
+                        <tr>
+                          <th data-tablesaw-priority="persist"></th>
+                          <th>
+                            Extra small devices
+                            <small>Phones (&lt;768px)</small>
+                          </th>
+                          <th>
+                            Small devices
+                            <small>Tablets (≥768px)</small>
+                          </th>
+                          <th>
+                            Medium devices
+                            <small>Desktops (≥992px)</small>
+                          </th>
+                          <th>
+                            Large devices
+                            <small>Desktops (≥1200px)</small>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th class="text-nowrap"><code>.show</code></th>
+                          <td class="is-visible">Visible</td>
+                          <td class="is-visible">Visible</td>
+                          <td class="is-visible">Visible</td>
+                          <td class="is-visible">Visible</td>
+                        </tr>
+                        <tr>
+                          <th class="text-nowrap"><code>.hide</code></th>
+                          <td class="is-hidden">Hidden</td>
+                          <td class="is-hidden">Hidden</td>
+                          <td class="is-hidden">Hidden</td>
+                          <td class="is-hidden">Hidden</td>
+                        </tr>
+                        <tr>
+                          <th class="text-nowrap"><code>.visible-xs-*</code></th>
+                          <td class="is-visible">Visible</td>
+                          <td class="is-hidden">Hidden</td>
+                          <td class="is-hidden">Hidden</td>
+                          <td class="is-hidden">Hidden</td>
+                        </tr>
+                        <tr>
+                          <th class="text-nowrap"><code>.visible-sm-*</code></th>
+                          <td class="is-hidden">Hidden</td>
+                          <td class="is-visible">Visible</td>
+                          <td class="is-hidden">Hidden</td>
+                          <td class="is-hidden">Hidden</td>
+                        </tr>
+                        <tr>
+                          <th class="text-nowrap"><code>.visible-md-*</code></th>
+                          <td class="is-hidden">Hidden</td>
+                          <td class="is-hidden">Hidden</td>
+                          <td class="is-visible">Visible</td>
+                          <td class="is-hidden">Hidden</td>
+                        </tr>
+                        <tr>
+                          <th class="text-nowrap"><code>.visible-lg-*</code></th>
+                          <td class="is-hidden">Hidden</td>
+                          <td class="is-hidden">Hidden</td>
+                          <td class="is-hidden">Hidden</td>
+                          <td class="is-visible">Visible</td>
+                        </tr>
+                      </tbody>
+                      <tbody>
+                        <tr>
+                          <th class="text-nowrap"><code>.hidden-xs</code></th>
+                          <td class="is-hidden">Hidden</td>
+                          <td class="is-visible">Visible</td>
+                          <td class="is-visible">Visible</td>
+                          <td class="is-visible">Visible</td>
+                        </tr>
+                        <tr>
+                          <th class="text-nowrap"><code>.hidden-sm</code></th>
+                          <td class="is-visible">Visible</td>
+                          <td class="is-hidden">Hidden</td>
+                          <td class="is-visible">Visible</td>
+                          <td class="is-visible">Visible</td>
+                        </tr>
+                        <tr>
+                          <th class="text-nowrap"><code>.hidden-md</code></th>
+                          <td class="is-visible">Visible</td>
+                          <td class="is-visible">Visible</td>
+                          <td class="is-hidden">Hidden</td>
+                          <td class="is-visible">Visible</td>
+                        </tr>
+                        <tr>
+                          <th class="text-nowrap"><code>.hidden-lg</code></th>
+                          <td class="is-visible">Visible</td>
+                          <td class="is-visible">Visible</td>
+                          <td class="is-visible">Visible</td>
+                          <td class="is-hidden">Hidden</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- End Example Visibility -->
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+        <!-- End Panel Miscellaneous -->
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

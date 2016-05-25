@@ -1,0 +1,28 @@
+@import "vars.less";
+
+@gridstack-columns: 12;
+
+.grid-stack-items(@gridstack-columns) {
+    .grid-stack.grid-stack-@{gridstack-columns} {
+
+        > .grid-stack-item {
+            min-width: 100% / @gridstack-columns;
+            .col(@i) when (@i <= @gridstack-columns) {
+                &[data-gs-width='@{i}'] { width: (100% / @gridstack-columns) * @i; }
+                &[data-gs-x='@{i}'] { left: (100% / @gridstack-columns) * @i; }
+                &[data-gs-min-width='@{i}'] { min-width: (100% / @gridstack-columns) * @i; }
+                &[data-gs-max-width='@{i}'] { max-width: (100% / @gridstack-columns) * @i; }
+
+                .col((@i + 1));
+            }
+            .col(1);
+        }
+    }
+}
+
+.loop(@j) when (@j <= @gridstack-columns) {
+    .grid-stack-items(@j);
+
+    .loop((@j + 1));
+}
+.loop(1);

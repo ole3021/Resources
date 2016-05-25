@@ -1,0 +1,24 @@
+@import "vars.less";
+
+.page-login {
+  &:before {
+    background-image: url("../../images/login.jpg");
+  }
+
+  form {
+    width: 340px;
+    margin: 30px 0;
+
+    a {
+      margin-left: 20px;
+    }
+  }
+}
+
+@media(max-width: @screen-xs-max) {
+  .page-login {
+    form {
+      width: auto;
+    }
+  }
+}

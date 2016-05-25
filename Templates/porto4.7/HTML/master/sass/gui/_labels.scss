@@ -1,0 +1,16 @@
+/* Labels */
+@each $state in $states {
+	.label-#{nth($state,1)} {
+		background-color: #{nth($state,2)};
+		color: #{nth($state,3)};
+	}
+}
+
+.label {
+	&.label-sm {
+		font-size: 0.7em;
+	}
+	&.label-lg {
+		font-size: 1em;
+	}
+}

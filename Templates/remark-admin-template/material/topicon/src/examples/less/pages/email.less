@@ -1,0 +1,78 @@
+@import "vars.less";
+
+.page-email {
+  .page-content {
+    .panel {
+      max-width: 660px;
+      margin: 0 auto;
+    }
+
+    .widget {
+      padding: 20px 0;
+      margin: 0;
+
+      &-header {
+        margin-bottom: 35px;
+      }
+
+      &-body {
+        h3 {
+          margin-bottom: 20px;
+        }
+
+        &-footer {
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+
+  .email-title {
+    padding: 15px 0 5px;
+    text-align: center;
+  }
+
+  .email-more {
+    margin-top: 40px;
+    padding: 35px 0 10px;
+    text-align: center;
+    border-top: 1px solid @divider-color-base;
+
+    &-title {
+      font-size: 20px;
+    }
+
+    &-content {
+      padding: 47px 0 54px;
+    }
+
+    &-social {
+      padding: 20px 0;
+
+      a {
+        margin: 0 7px;
+        padding: 5px;
+        text-decoration: none;
+      }
+
+      .icon {
+        color: @icon-color;
+        font-size: @font-size-icon;
+
+        &:hover,
+        &:focus {
+          color: @icon-hover-color;
+        }
+
+        &.active,
+        &:active {
+          color: @icon-active-color;
+        }
+      }
+    }
+  }
+
+  .email-unsubscribe {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,42 @@
+//
+// Carousel
+// --------------------------------------------------
+
+
+// Left/right controls for nav
+// ---------------------------
+
+.carousel-control {
+  color: @carousel-control-color;
+  text-shadow: @carousel-text-shadow;
+  // We can't have this transition here because WebKit cancels the carousel
+  // animation if you trip this while in the middle of another animation.
+
+  // Hover/focus state
+  &:hover,
+  &:focus {
+    color: @carousel-control-color;
+  }
+}
+
+// Optional indicator pips
+//
+// Add an unordered list with the following class and add a list item for each
+// slide your carousel holds.
+
+.carousel-indicators {
+  li {
+    border: 1px solid @carousel-indicator-border-color;
+  }
+  .active {
+    background-color: @carousel-indicator-active-bg;
+  }
+}
+
+// Optional captions
+// -----------------------------
+// Hidden by default for smaller viewports
+.carousel-caption {
+  color: @carousel-caption-color;
+  text-shadow: @carousel-text-shadow;
+}

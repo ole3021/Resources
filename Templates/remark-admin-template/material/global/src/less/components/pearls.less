@@ -1,0 +1,304 @@
+// Name:            Steps
+//
+// Component:       `pearls`
+//
+// Modifiers:       'pearl-icon'
+//                  'pearl-number'
+//                  'pearl-title'
+//                  'pearl-desc'
+//                  'current'
+//                  'done'
+//                  'error'
+//                  'disabled'
+//                  'pearls-vertical'
+//                  'pearls-lg'
+//                  'pearls-sm'
+//                  'pearls-xs'
+//
+// Markup:
+// <div class="pearl done">
+//   <span class="pearl-number">1</span>
+//   <div class="pearl-title">Title</div>
+// </div>
+// ========================================================================
+
+// Variables
+// ========================================================================
+@pearls-margin-bottom:        @line-height-computed;
+@pearl-line-bg:               @gray-lightest;
+@pearl-line-size:             4px;
+@pearl-line-xs-size:          2px;
+
+@pearl-color:                 @inverse;
+@pearl-bg:                    @gray-light;
+@pearl-border-size:           2px;
+@pearl-border-color:          @pearl-bg;
+
+@pearl-current-scale:         1.3;
+@pearl-current-color:         @brand-primary;
+@pearl-current-bg:            @inverse;
+@pearl-current-line-bg:       @brand-primary;
+@pearl-current-border-color:  @pearl-current-color;
+
+@pearl-done-color:            @inverse;
+@pearl-done-bg:               @brand-primary;
+@pearl-done-line-bg:          @brand-primary;
+@pearl-done-border-color:     @pearl-done-bg;
+
+@pearl-error-color:           @brand-danger;
+@pearl-error-bg:              @inverse;
+@pearl-error-line-bg:         @brand-primary;
+@pearl-error-border-color:    @pearl-error-color;
+
+@pearl-disabled-color:        @pearl-color;
+@pearl-disabled-bg:           @pearl-bg;
+@pearl-disabled-line-bg:      @pearl-line-bg;
+@pearl-disabled-border-color: @pearl-disabled-bg;
+
+@pearl-title-margin-top:      0.5em;
+
+@pearl-title-font-size:       16px;
+@pearl-number-font-size:      18px;
+@pearl-icon-font-size:        @pearl-number-font-size;
+@pearl-size:                  36px;
+
+
+@pearl-lg-title-font-size:    18px;
+@pearl-lg-number-font-size:   20px;
+@pearl-lg-icon-font-size:     @pearl-lg-number-font-size;
+@pearl-lg-size:               40px;
+
+
+@pearl-sm-title-font-size:    14px;
+@pearl-sm-icon-font-size:     @pearl-sm-title-font-size;
+@pearl-sm-number-font-size:   16px;
+@pearl-sm-size:               32px;
+
+@pearl-xs-title-font-size:    12px;
+@pearl-xs-icon-font-size:     @pearl-xs-title-font-size;
+@pearl-xs-number-font-size:   12px;
+@pearl-xs-size:               24px;
+
+
+// Component: pearls
+// ========================================================================
+.pearls {
+  &.row {
+    display: block;
+  }
+
+  margin-bottom: @pearls-margin-bottom;
+}
+
+.pearl {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: (@pearl-size/2);
+    z-index: @zindex-init;
+    width: 50%;
+    height: @pearl-line-size;
+    content: "";
+    background-color: @pearl-line-bg;
+  }
+
+  &:before {
+    left: 0;
+  }
+
+  &:after {
+    right: 0;
+  }
+
+  &:first-child:before,
+  &:last-child:after {
+    display: none !important;
+  }
+}
+
+
+.pearl-number, .pearl-icon {
+  position: relative;
+  z-index: @zindex-base;
+  display: inline-block;
+  width: @pearl-size;
+  height: @pearl-size;
+  line-height: (@pearl-size - 2*@pearl-border-size);
+  color: @pearl-color;
+  text-align: center;
+  background: @pearl-bg;
+  border-radius: 50%;
+  border: @pearl-border-size solid @pearl-border-color;
+}
+
+.pearl-number {
+  font-size: @pearl-number-font-size;
+}
+
+.pearl-icon {
+  font-size: @pearl-icon-font-size;
+}
+
+.pearl-title {
+  margin-top: @pearl-title-margin-top;
+  display: block;
+  font-size: @pearl-title-font-size;
+  color: @subtitle-color;
+  margin-bottom: 0;
+
+  .text-truncate();
+}
+
+
+// State Modifier
+// ========================================================================
+.pearl {
+  &.current {
+    &:before,
+    &:after {
+      background-color: @pearl-current-line-bg;
+    }
+
+    .pearl-number, .pearl-icon {
+      color: @pearl-current-color;
+      background-color: @pearl-current-bg;
+      border-color: @pearl-current-border-color;
+      transform: scale(@pearl-current-scale);
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+    cursor: auto;
+
+    &:before,
+    &:after {
+      background-color: @pearl-disabled-line-bg;
+    }
+
+    .pearl-number, .pearl-icon {
+      color: @pearl-disabled-color;
+      background-color: @pearl-disabled-bg;
+      border-color: @pearl-disabled-border-color;
+    }
+  }
+
+  &.error {
+    &:before {
+      background-color: @pearl-error-line-bg;
+    }
+
+    &:after {
+      background-color: @pearl-line-bg;
+    }
+
+    .pearl-number, .pearl-icon {
+      color: @pearl-error-color;
+      background-color: @pearl-error-bg;
+      border-color: @pearl-error-border-color;
+    }
+  }
+
+  &.done {
+    &:before,
+    &:after {
+      background-color: @pearl-done-line-bg;
+    }
+
+    .pearl-number, .pearl-icon {
+      color: @pearl-done-color;
+      background-color: @pearl-done-bg;
+      border-color: @pearl-done-border-color;
+    }
+  }
+}
+
+// Size Modifier
+// ========================================================================
+
+.pearls-lg {
+  .pearl {
+    &:before,
+    &:after {
+      top: (@pearl-lg-size/2);
+    }
+
+    &-title {
+      font-size: @pearl-lg-title-font-size;
+    }
+
+    &-number, &-icon {
+      width: @pearl-lg-size;
+      height: @pearl-lg-size;
+      line-height: (@pearl-lg-size - 2*@pearl-border-size);
+    }
+
+    &-icon {
+      font-size: @pearl-lg-icon-font-size;
+    }
+
+    &-number {
+      font-size: @pearl-lg-number-font-size;
+    }
+  }
+}
+
+.pearls-sm {
+  .pearl {
+    &:before,
+    &:after {
+      top: (@pearl-sm-size/2);
+    }
+
+    &-title {
+      font-size: @pearl-sm-title-font-size;
+    }
+
+    &-number, &-icon {
+      width: @pearl-sm-size;
+      height: @pearl-sm-size;
+      line-height: (@pearl-sm-size - 2*@pearl-border-size);
+    }
+
+    &-number {
+      font-size: @pearl-sm-number-font-size;
+    }
+
+    &-icon {
+      font-size: @pearl-sm-icon-font-size;
+    }
+  }
+}
+
+.pearls-xs {
+  .pearl {
+    &:before,
+    &:after {
+      top: (@pearl-xs-size/2);
+      height: @pearl-line-xs-size;
+    }
+
+    &-title {
+      font-size: @pearl-xs-title-font-size;
+    }
+
+    &-number, &-icon {
+      width: @pearl-xs-size;
+      height: @pearl-xs-size;
+      line-height: (@pearl-xs-size - 2*@pearl-border-size);
+    }
+
+    &-number {
+      font-size: @pearl-xs-number-font-size;
+    }
+
+    &-icon {
+      font-size: @pearl-xs-icon-font-size;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.dashboard .page-header {
+  background-image: url("../../images/dashboard2-header.jpg");
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+.dashboard .widget,
+.dashboard .panel {
+  height: -webkit-calc(100% - 30px);
+  height:         calc(100% - 30px);
+}
+.dashboard .widget-content {
+  height: 100%;
+}
+#widgetLinearea .ct-chart .ct-label.ct-vertical,
+#widgetLinearea .ct-chart .ct-label.ct-horizontal {
+  font-size: 14px;
+}
+#widgetLinearea .ct-chart .ct-area {
+  fill-opacity: 1;
+}
+#widgetLinearea .ct-chart .ct-series.ct-series-a .ct-area {
+  fill: #d5e4f1;
+}
+#widgetLinearea .ct-chart .ct-series.ct-series-b .ct-area {
+  fill: #cdf4f1;
+}
+#widgetLinearea ul .icon {
+  vertical-align: text-bottom;
+}
+#widgetGmap {
+  overflow: hidden;
+}
+#widgetGmap .map {
+  padding: 0;
+  border: none;
+}

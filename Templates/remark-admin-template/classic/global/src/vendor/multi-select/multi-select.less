@@ -1,0 +1,153 @@
+@import "vars.less";
+
+// var
+//================================================================
+
+@ms-border:                @input-border;
+@multi-select-hover-bg:    @brand-primary;
+@ms-optgroup-label-color:  @text-color;
+@multi-select-disabled-bg: @disabled-color-base;
+
+// multi-select
+//================================================================
+
+.ms-container {
+  // background: transparent url('images/switch.png') no-repeat 50% 50%;
+  // width: 100%;
+  // min-width: 400px;
+  // width: 400px;
+  &:before {
+    display: inline-block;
+    font-family: @wb-font-family;
+    font-size: inherit;
+    font-style: normal;
+    font-weight: normal;
+    position: relative;
+    text-rendering: auto;
+    top: 68px;
+    left: 3.5%;
+    content: @wb-var-loop;
+    transform: translate(0, 0);
+  }
+}
+
+.ms-container:after {
+  content: ".";
+  display: block;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  clear: both;
+  min-height: 0;
+  visibility: hidden;
+}
+
+.ms-container .ms-selectable, .ms-container .ms-selection {
+  background: #fff;
+  color: @text-color;
+  float: left;
+  width: 45%;
+}
+
+.ms-container .ms-selection {
+  float: right;
+}
+
+.ms-container .ms-list {
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  border: 1px solid @ms-border;
+  border-radius: @border-radius-base;
+  position: relative;
+  height: 160px;
+  padding: 3px;
+  overflow-y: auto;
+}
+
+.ms-container .ms-list.ms-focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+}
+
+.ms-container ul {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+.ms-container .ms-optgroup-container {
+  width: 100%;
+}
+
+.ms-container .ms-optgroup-label {
+  margin: 0;
+  padding: 5px 0 0 7px;
+  cursor: pointer;
+  color: @ms-optgroup-label-color;//#999;
+  font-weight: @font-weight-medium;
+}
+
+.ms-container .ms-selectable li.ms-elem-selectable,
+.ms-container .ms-selection li.ms-elem-selection {
+  // border-bottom: 1px @ms-border solid;
+  padding: 5px 10px 5px 20px;
+}
+
+.ms-container .ms-selectable li.ms-hover,
+.ms-container .ms-selection li.ms-hover {
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  background-color: @multi-select-hover-bg;
+}
+
+.ms-container .ms-selectable li.disabled,
+.ms-container .ms-selection li.disabled {
+  background-color: @multi-select-disabled-bg;
+  color: @text-color;
+  cursor: text;
+}
+
+@media (min-width: @screen-lg-min) {
+  .ms-container {
+    width: 450px;
+  }
+}
+
+@media (min-width: @screen-md-min) and (max-width: @screen-lg-min) {
+  .ms-container {
+    width: 350px;
+  }
+}
+
+@media (min-width: @screen-xs-min) and (max-width: @screen-md-min) {
+  .ms-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: @screen-xs-min) {
+  .ms-container {
+    width: 100%;
+
+    &:before {
+      left: 50%;
+      top: 190px;
+      margin-left: -8px;
+    }
+
+    .ms-selectable,
+    .ms-selection {
+      width: 100%;
+      display: block;
+    }
+
+    .ms-selectable {
+      margin-bottom: 40px;
+    }
+  }
+}

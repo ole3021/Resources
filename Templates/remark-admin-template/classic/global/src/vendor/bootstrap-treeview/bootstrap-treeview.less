@@ -1,0 +1,40 @@
+@import "vars.less";
+
+.treeview .list-group-item {
+  cursor: pointer;
+
+  &:not(.node-selected):hover, &:not(.node-selected):focus {
+    background-color: @gray-lightest;
+    color: @brand-primary;
+
+    > .node-icon {
+      color: @brand-primary;
+    }
+  }
+}
+
+.treeview span.indent {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.treeview span.icon {
+  width: 12px;
+  margin-right: 8px;
+}
+
+.treeview .node-disabled {
+  color: silver;
+  cursor: not-allowed;
+}
+
+// .treeview {
+//   .list-group-item.node-selected {
+
+//     &, & .node-icon {
+//       color: #ffffff;
+//     }
+
+//     background-color: @color-primary-600;
+//   }
+// }

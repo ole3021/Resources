@@ -1,0 +1,108 @@
+---
+title: Morris Charts
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/morris-js/morris.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/raphael/raphael-min.js"></script>
+    <script src="{{global}}/vendor/morris-js/morris.min.js"></script>
+  {{/content}}
+
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/charts/morris.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title">Morris Charts</h1>
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li><a href="javascript:void(0)">Charts</a></li>
+          <li class="active">Morris</li>
+        </ol>
+        <div class="page-header-actions">
+          <a class="btn btn-sm btn-primary btn-round" href="http://morrisjs.github.com/morris.js"
+          target="_blank">
+            <i class="icon md-link" aria-hidden="true"></i>
+            <span class="hidden-xs">Official Website</span>
+          </a>
+        </div>
+      </div>
+      <div class="page-content container-fluid">
+        <!-- Panel -->
+        <div class="panel">
+          <div class="panel-body">
+            <div class="row row-lg">
+              <div class="col-md-6">
+                <!-- Example Line -->
+                <div class="example-wrap margin-md-0">
+                  <h4 class="example-title">Line</h4>
+                  <p>Use function: <code>Morris.Line(options)</code> to generate chart.</p>
+                  <div class="example">
+                    <div id="exampleMorrisLine"></div>
+                  </div>
+                </div>
+                <!-- End Example Line -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Area -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Area</h4>
+                  <p>Create an area chart using: <code>Morris.Area(options)</code>.</p>
+                  <div class="example">
+                    <div id="exampleMorrisArea"></div>
+                  </div>
+                </div>
+                <!-- End Example Area -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel -->
+
+        <!-- Panel -->
+        <div class="panel">
+          <div class="panel-body">
+            <div class="row row-lg">
+              <div class="col-md-6">
+                <!-- Example Bar -->
+                <div class="example-wrap margin-md-0">
+                  <h4 class="example-title">Bar</h4>
+                  <p>Create bar charts using <code>Morris.Bar(options)</code>.</p>
+                  <div class="example">
+                    <div id="exampleMorrisBar"></div>
+                  </div>
+                </div>
+                <!-- End Example Bar -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Donut -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Donut</h4>
+                  <p>Create a Donut chart using <code>Morris.Donut(options)</code>.</p>
+                  <div class="example">
+                    <div id="exampleMorrisDonut"></div>
+                  </div>
+                </div>
+                <!-- End Example Donut -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

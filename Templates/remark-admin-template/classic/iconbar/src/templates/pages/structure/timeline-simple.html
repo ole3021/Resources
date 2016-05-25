@@ -1,0 +1,201 @@
+---
+title: Simple Timeline
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/plyr/plyr.css">
+  {{/content}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/structure/timeline.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/jquery-appear/jquery.appear.js"></script>
+    <script src="{{global}}/vendor/plyr/plyr.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/plyr.js"></script>
+  {{/content}}
+
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/structure/timeline.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header page-header-bordered">
+        <h1 class="page-title">Simple Timeline</h1>
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li class="active">Structure</li>
+        </ol>
+        <div class="page-header-actions">
+          <form>
+            <div class="input-search input-search-dark">
+              <i class="input-search-icon wb-search" aria-hidden="true"></i>
+              <input type="text" class="form-control" name="" placeholder="Search...">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="page-content container">
+        <!-- Timeline -->
+        <ul class="timeline timeline-simple">
+          <li class="timeline-period">MAY 2015</li>
+          <li class="timeline-item">
+            <div class="timeline-dot" data-placement="right" data-toggle="tooltip" data-trigger="hover"
+            data-original-title="2 Days ago"></div>
+            <div class="timeline-content">
+              <div class="widget widget-article widget-shadow">
+                <div class="widget-header cover">
+                  <img class="cover-image" src="{{global}}/photos/placeholder.png" alt="...">
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-item timeline-reverse">
+            <div class="timeline-dot bg-green-500" data-placement="left" data-toggle="tooltip"
+            data-trigger="hover" data-original-title="2 Days ago"></div>
+            <div class="timeline-content">
+              <div class="widget widget-article widget-shadow">
+                <div class="widget-header cover">
+                  <img class="cover-image" src="{{global}}/photos/placeholder.png" alt="...">
+                </div>
+                <div class="widget-body padding-30">
+                  <h3 class="widget-title">Lorem Ipsum Dolor</h3>
+                  <p class="widget-metas">
+                    <span class="widget-time">MAY 15, 2015</span>
+                  </p>
+                  <p>Dubium sequatur declinare fecit securi emolumento ait habere
+                    tutiorem neglegentur, pugnantibus simplicem propemodum atqui
+                    suo licet confirmat. Iudicium ipso debent panaetium exorsus,
+                    vacuitate artifex confirmavit asperner posuit sollicitant contentam
+                    probamus perdiderunt. Coniuncta appetendi quo operis, iniucundus,
+                    putat magnis, invitat diceret. </p>
+                  <div class="widget-body-footer">
+                    <div class="widget-actions pull-right">
+                      <a href="javascript:void(0)">
+                        <i class="icon wb-chat-working" aria-hidden="true"></i>
+                        <span>2500</span>
+                      </a>
+                      <a href="javascript:void(0)">
+                        <i class="icon wb-heart" aria-hidden="true"></i>
+                        <span>20</span>
+                      </a>
+                    </div>
+                    <a class="btn btn-primary btn-outline widget-readmore" href="javascript:void(0)">Read More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-dot bg-orange-500" data-placement="right" data-toggle="tooltip"
+            data-trigger="hover" data-original-title="9 Days ago"></div>
+            <div class="timeline-content">
+              <div class="widget widget-article cover widget-shadow">
+                <div class="widget-header cover">
+                  <div class="cover-background padding-30" style="background-image: url('{{global}}/photos/placeholder.png')">
+                    <blockquote class="cover-quote white">Fabulis timentis synephebos faciendum laetitia utamur consuevit
+                      tali hortatore videre, summa quasi, consequentis desideret.
+                      Constantia aptior consectetur credo audiebamus dissentiunt
+                      vivere moribus. </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-period">Apr 2015</li>
+          <li class="timeline-item">
+            <div class="timeline-dot bg-green-500" data-placement="right" data-toggle="tooltip"
+            data-trigger="hover" data-original-title="1 Month ago"></div>
+            <div class="timeline-content">
+              <div class="widget widget-article widget-shadow">
+                <div class="widget-header cover">
+                  <img class="cover-image" src="{{global}}/photos/placeholder.png" alt="...">
+                </div>
+                <div class="widget-body">
+                  <h3 class="widget-title">Lorem Ipsum Dolor</h3>
+                  <p class="widget-metas">
+                    <span class="widget-time">MAY 08, 2015</span>
+                  </p>
+                  <p>Sumus homo praetor intellegerem erga incidunt singulis, legam
+                    viveremus deorum, tertio frui tantum dedocendi profecto omittantur
+                    gravissimas cognitioque. Arbitrer negarent vocant disserui
+                    urbanitas, videtis commenticiam persequeris recteque data amoris
+                    opes. Discenda efficere diligi praesenti nostri adversantur
+                    pertinaces detractis levitatibus etiam. </p>
+                  <div class="widget-body-footer">
+                    <div class="widget-actions pull-right">
+                      <a href="javascript:void(0)">
+                        <i class="icon wb-chat-working" aria-hidden="true"></i>
+                        <span>2500</span>
+                      </a>
+                      <a href="javascript:void(0)">
+                        <i class="icon wb-heart" aria-hidden="true"></i>
+                        <span>20</span>
+                      </a>
+                    </div>
+                    <a class="btn btn-primary btn-outline" href="javascript:void(0)">Read More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-item timeline-reverse">
+            <div class="timeline-dot bg-orange-600" data-placement="left" data-toggle="tooltip"
+            data-trigger="hover" data-original-title="1 Month ago"></div>
+            <div class="timeline-content">
+              <div class="widget widget-article widget-shadow">
+                <div class="widget-header cover">
+                  <div class="cover-background padding-30" style="background-image: url('{{global}}/photos/placeholder.png')">
+                    <blockquote class="cover-quote white">Debilitati fugienda partitio esse debemus, erat segnitiae quaerimus
+                      iudicia aspernatur vis, perfunctio quae ludus commodius habemus
+                      inflammat. Distinguantur vera a tollatur desiderent. </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-item timeline-reverse">
+            <div class="timeline-dot bg-cyan-600" data-placement="left" data-toggle="tooltip"
+            data-trigger="hover" data-original-title="1 Month ago"></div>
+            <div class="timeline-content">
+              <div class="widget widget-article widget-shadow">
+                <div class="widget-header cover player">
+                  <video poster="{{assets}}/examples/images/poster.jpg" controls crossorigin>
+                    <!-- Video Files -->
+                    <source type="video/mp4" src="https://cdn.selz.com/plyr/1.0/movie.mp4">
+                    <source type="video/webm" src="https://cdn.selz.com/plyr/1.0/movie.webm">
+
+                    <!-- Text Track File -->
+                    <track kind="captions" label="English" srclang="en" src="//cdn.selz.com/plyr/1.0/en.vtt"
+                    default>
+
+                      <!-- Fallback For Browsers That Don'T Support The <Video> Element -->
+                      <a href="https://cdn.selz.com/plyr/1.0/movie.mp4">Download</a>
+                  </video>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!-- End Timeline -->
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

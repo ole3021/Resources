@@ -1,0 +1,374 @@
+---
+title: Analytics Overview
+body_class: dashboard
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/morris-js/morris.css">
+    <link rel="stylesheet" href="{{global}}/vendor/chartist-js/chartist.css">
+    <link rel="stylesheet" href="{{global}}/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css">
+  {{/content}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/dashboard/analytics.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/chartist-js/chartist.js"></script>
+    <script src="{{global}}/vendor/raphael/raphael-min.js"></script>
+    <script src="{{global}}/vendor/morris-js/morris.min.js"></script>
+    <script src="{{global}}/vendor/matchheight/jquery.matchHeight-min.js"></script>
+    <script src="{{global}}/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.min.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/matchheight.js"></script>
+  {{/content}}
+
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/dashboard/analytics.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page">
+      <div class="page-header">
+        <h1 class="page-title">Analytics Overview</h1>
+      </div>
+      <!-- Page Content -->
+      <div class="page-content container-fluid">
+        <div class="row" data-plugin="matchHeight" data-by-row="true">
+          <div class="col-ms-12 col-xs-12 col-md-12">
+            <!-- Product Overview Widget -->
+            <div id="productOverviewWidget" class="widget widget-shadow">
+              <!-- The Header Of First Widget -->
+              <div class="widget-header padding-20">
+                <div class="btn-group dropdown chart-menu">
+                  <button type="button" class="btn btn-outline btn-default dropdown-toggle btn-flat btn-sale"
+                  data-toggle="dropdown">
+                    Product Sales
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu animate" role="menu">
+                    <li role="presentation">
+                      <a href="#" role="menuitem">Sales</a>
+                    </li>
+                    <li role="presentation">
+                      <a href="#" role="menuitem">Total sales</a>
+                    </li>
+                    <li role="presentation">
+                      <a href="#" role="menuitem">Profit</a>
+                    </li>
+                  </ul>
+                </div>
+                <ul class="nav nav-pills nav-pills-rounded product-filters" data-plugin="nav-tabs">
+                  <li class="active">
+                    <a href="#scoreLineToDay" data-toggle="tab">Day</a>
+                  </li>
+                  <li>
+                    <a href="#scoreLineToWeek" data-toggle="tab">Week</a>
+                  </li>
+                  <li>
+                    <a href="#scoreLineToMonth" data-toggle="tab">Month</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End The Header Of First Widget -->
+
+              <!-- The Content Of First Widget -->
+              <div class="widget-content padding-20">
+                <div class="tab-content">
+                  <div class="ct-chart tab-pane active" id="scoreLineToDay"></div>
+                  <div class="ct-chart tab-pane" id="scoreLineToWeek"></div>
+                  <div class="ct-chart tab-pane" id="scoreLineToMonth"></div>
+                </div>
+                <div id="productOptionsData" class="text-center">
+                  <div class="row no-space">
+                    <!-- The First Counter Block-->
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                      <div class="counter">
+                        <div class="counter-label">Vist</div>
+                        <div class="counter-number-group text-truncate">
+                          <span class="counter-number-related red-600">+</span>
+                          <span class="counter-number">681</span>
+                        </div>
+                        <div class="ct-chart" data-counter-type="productVist"></div>
+                      </div>
+                    </div>
+                    <!-- End The First Counter Block-->
+
+                    <!-- The Second Counter Block-->
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                      <div class="counter">
+                        <div class="counter-label">Unique Vistors</div>
+                        <div class="counter-number-group text-truncate">
+                          <span class="counter-number-related green-600">-</span>
+                          <span class="counter-number">522</span>
+                        </div>
+                        <div class="ct-chart" data-counter-type="productVistors"></div>
+                      </div>
+                    </div>
+                    <!-- End The Second Counter Block-->
+
+                    <!-- The Third Counter Block-->
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                      <div class="counter">
+                        <div class="counter-label">Page Views</div>
+                        <div class="counter-number-group text-truncate">
+                          <span class="counter-number-related green-600">-</span>
+                          <span class="counter-number">1,622</span>
+                        </div>
+                        <div class="ct-chart" data-counter-type="productPageViews"></div>
+                      </div>
+                    </div>
+                    <!-- End The Third Counter Block-->
+
+                    <!-- The fourth Counter Block-->
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                      <div class="counter">
+                        <div class="counter-label">Bounce Rate</div>
+                        <div class="counter-number-group text-truncate">
+                          <span class="counter-number-related red-600">+</span>
+                          <span class="counter-number">843</span>
+                        </div>
+                        <div class="ct-chart" data-counter-type="productBounceRate"></div>
+                      </div>
+                    </div>
+                    <!-- End The fourth Counter Block-->
+                  </div>
+                </div>
+              </div>
+              <!-- End The Content Of First Widget -->
+            </div>
+            <!-- End Product Overview Widget -->
+          </div>
+
+          <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+            <!-- Browser Flow Widget -->
+            <div id="browsersFlowWidget" class="widget widget-shadow">
+              <div class="widget-header">
+                <p class="font-size-14 blue-grey-700 margin-bottom-0">BROWSER FLOW</p>
+              </div>
+              <div class="widget-content">
+                <div class="col-sm-6 col-xs-12">
+                  <!-- Browsers Vists Table -->
+                  <table class="table table-analytics margin-bottom-0">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Browser</th>
+                        <th>Vists</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <img src="{{assets}}/examples/images/browser/chrome-logo.png" title="Chrome"
+                          alt="Chrome">
+                        </td>
+                        <td>
+                          Chrome
+                        </td>
+                        <td>
+                          11,976
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img src="{{assets}}/examples/images/browser/firefox-logo.png" title="Firefox"
+                          alt="Firefox">
+                        </td>
+                        <td>
+                          Firefox
+                        </td>
+                        <td>
+                          1,706
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img src="{{assets}}/examples/images/browser/safari-logo.png" title="Safari"
+                          alt="Safari">
+                        </td>
+                        <td>
+                          Safari
+                        </td>
+                        <td>
+                          1,677
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img src="{{assets}}/examples/images/browser/internet-logo.png" title="Internet"
+                          alt="Internet">
+                        </td>
+                        <td>
+                          Internet
+                        </td>
+                        <td>
+                          1,268
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img src="{{assets}}/examples/images/browser/opera-logo.png" title="Opera" alt="Opera">
+                        </td>
+                        <td>
+                          Opera
+                        </td>
+                        <td>
+                          915
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- End Browsers Vists Table -->
+                </div>
+                <div class="col-sm-6 col-xs-12 padding-horizontal-0">
+                  <!-- MorrisDonut -->
+                  <div id="browersVistsDonut"></div>
+                  <!-- End MorrisDonut -->
+                  <!-- Stacked BarChart -->
+                  <div id="weekStackedBarChart"></div>
+                  <!--End Stacked BarChart -->
+                </div>
+              </div>
+            </div>
+            <!-- End Browser Flow Widget -->
+          </div>
+
+          <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+            <!-- Countries Vists Widget -->
+            <div id="countriesVistsWidget" class="widget widget-shadow">
+              <div class="widget-header">
+                <p class="font-size-14 blue-grey-700 margin-bottom-0">VISTS IN DIFFERENT COUNTRIES</p>
+              </div>
+              <div class="widget-content padding-horizontal-30">
+                <div class="table-responsive">
+                  <table class="table table-analytics margin-bottom-0 text-nowrap">
+                    <thead>
+                      <tr>
+                        <th class="language">Language</th>
+                        <th class="vists">Vists</th>
+                        <th class="vists-percent">%Vists</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <img src="{{assets}}/examples/images/country/usa-icon.png" title="USA" alt="USA">
+                          <span class="country-name">U.S.A</span>
+                        </td>
+                        <td>12,924</td>
+                        <td>
+                          <div class="progress progress-xs margin-bottom-0">
+                            <div class="progress-bar progress-bar-info bg-blue-600" style="width: 90%" aria-valuemax="100"
+                            aria-valuemin="0" aria-valuenow="90" role="progressbar">
+                            </div>
+                          </div>
+                          <span class="progress-percent">90%
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img src="{{assets}}/examples/images/country/uk-icon.png" title="UK" alt="UK">
+                          <span class="country-name">U.K</span>
+                        </td>
+                        <td>11,246</td>
+                        <td>
+                          <div class="progress progress-xs margin-bottom-0">
+                            <div class="progress-bar progress-bar-info bg-blue-600" style="width: 86%" aria-valuemax="100"
+                            aria-valuemin="0" aria-valuenow="86" role="progressbar">
+                            </div>
+                          </div>
+                          <span class="progress-percent">86%
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img src="{{assets}}/examples/images/country/canada-icon.png" title="Canada"
+                          alt="Canada">
+                          <span class="country-name">Canada</span>
+                        </td>
+                        <td>10,468</td>
+                        <td>
+                          <div class="progress progress-xs margin-bottom-0">
+                            <div class="progress-bar progress-bar-info bg-blue-600" style="width: 68%" aria-valuemax="100"
+                            aria-valuemin="0" aria-valuenow="68" role="progressbar">
+                            </div>
+                          </div>
+                          <span class="progress-percent">68%
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img src="{{assets}}/examples/images/country/germany-icon.png" title="Germany"
+                          alt="GermanyGermany">
+                          <span class="country-name">Germany</span>
+                        </td>
+                        <td>8,246</td>
+                        <td>
+                          <div class="progress progress-xs margin-bottom-0">
+                            <div class="progress-bar progress-bar-info bg-blue-600" style="width: 56%" aria-valuemax="100"
+                            aria-valuemin="0" aria-valuenow="56" role="progressbar">
+                            </div>
+                          </div>
+                          <span class="progress-percent">56%
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img src="{{assets}}/examples/images/country/china-icon.png" title="China" alt="China">
+                          <span class="country-name">China</span>
+                        </td>
+                        <td>4,354</td>
+                        <td>
+                          <div class="progress progress-xs margin-bottom-0">
+                            <div class="progress-bar progress-bar-info bg-blue-600" style="width: 38%" aria-valuemax="100"
+                            aria-valuemin="0" aria-valuenow="38" role="progressbar">
+                            </div>
+                          </div>
+                          <span class="progress-percent">38%
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img src="{{assets}}/examples/images/country/australia-icon.png" title="Australia"
+                          alt="Australia">
+                          <span class="country-name">Australia</span>
+                        </td>
+                        <td>3,675</td>
+                        <td>
+                          <div class="progress progress-xs margin-bottom-0">
+                            <div class="progress-bar progress-bar-info bg-blue-600" style="width: 25%" aria-valuemax="100"
+                            aria-valuemin="0" aria-valuenow="25" role="progressbar">
+                            </div>
+                          </div>
+                          <span class="progress-percent">25%
+                          </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- End Countries Vists Widget -->
+          </div>
+        </div>
+      </div>
+      <!-- End Page Content -->
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

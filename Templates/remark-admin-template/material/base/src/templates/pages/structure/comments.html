@@ -1,0 +1,314 @@
+---
+title: Comments
+---
+
+{{#extend "layout-default"}}
+
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title">Comments</h1>
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li class="active">Structure</li>
+        </ol>
+        <div class="page-header-actions">
+          <form>
+            <div class="input-search input-search-dark">
+              <i class="input-search-icon md-search" aria-hidden="true"></i>
+              <input type="text" class="form-control" name="" placeholder="Search...">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="page-content">
+
+        <!-- Panel Comments -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Comments
+              <span class="panel-desc">User comment style for using various pages of components (like blog,
+                tweets, etc) that feature a left- or right-aligned avatar avatar-lgalongside
+                textual content. You can use the basic class <code>.comments</code>.</span>
+            </h3>
+          </div>
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-sm-6">
+                <!-- Example Avatar -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Avatar</h4>
+                  <p>A comment can contain an image or avatar</p>
+                  <div class="example">
+                    <div class="comment media">
+                      <div class="media-left">
+                        <a class="avatar avatar-lg" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/1.jpg" alt="...">
+                        </a>
+                      </div>
+                      <div class="comment-body media-body">
+                        <a class="comment-author" href="javascript:void(0)">Herman Beck</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Avatar -->
+              </div>
+              <div class="col-sm-6">
+                <!-- Example Metadata -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Metadata</h4>
+                  <p>A comment can contain metadata about the comment, an arbitrary
+                    amount of metadata may be defined.</p>
+                  <div class="example">
+                    <div class="comment media">
+                      <div class="media-left">
+                        <a class="avatar avatar-lg" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/2.jpg" alt="...">
+                        </a>
+                      </div>
+                      <div class="comment-body media-body">
+                        <a class="comment-author" href="javascript:void(0)">Mary Adams</a>
+                        <div class="comment-meta">
+                          <span class="date">Just now</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Metadata -->
+              </div>
+              <div class="col-sm-6">
+                <!-- Example Actions -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Actions</h4>
+                  <p>A comment can contain an list of actions a user may perform related
+                    to this comment.</p>
+                  <div class="example">
+                    <div class="comment media">
+                      <div class="media-left">
+                        <a class="avatar avatar-lg" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/3.jpg" alt="...">
+                        </a>
+                      </div>
+                      <div class="comment-body media-body">
+                        <a class="comment-author" href="javascript:void(0)">Caleb Richards</a>
+                        <div class="comment-content">
+                          <p>Elliot you are always so right :)</p>
+                        </div>
+                        <div class="comment-actions">
+                          <a class="text-like icon md-favorite" href="javascript:void(0)" role="button"></a>
+                          <a href="javascript:void(0)" role="button">Reply</a>
+                          <a href="javascript:void(0)" role="button">Edit</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Actions -->
+              </div>
+              <div class="col-sm-6">
+                <!-- Example Reply Form -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Reply Form</h4>
+                  <p>A comment can contain a form to reply to a comment. This may
+                    have arbitrary content.</p>
+                  <div class="example">
+                    <div class="comment media">
+                      <div class="media-left">
+                        <a class="avatar avatar-lg" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/4.jpg" alt="...">
+                        </a>
+                      </div>
+                      <div class="comment-body media-body">
+                        <a class="comment-author" href="javascript:void(0)">June Lane</a>
+                        <div class="comment-meta">
+                          <span class="date">5 days ago</span>
+                        </div>
+                        <div class="comment-content">
+                          <p>Dude, this is awesome. Thanks so much</p>
+                        </div>
+                        <div class="comment-actions">
+                          <a class="active" href="javascript:void(0)" role="button">Reply</a>
+                        </div>
+                        <form class="comment-reply" action="#" method="post">
+                          <div class="form-group">
+                            <textarea class="form-control" rows="5" placeholder="Comment here"></textarea>
+                          </div>
+                          <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Reply</button>
+                            <button type="button" class="btn btn-link grey-600">Close</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Avatar -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel Comments Full -->
+        <div class="panel">
+          <div class="panel-body">
+
+            <div class="comments margin-horizontal-20">
+              <h3>Comments</h3>
+              <div class="comment media">
+                <div class="media-left">
+                  <a class="avatar avatar-lg" href="javascript:void(0)">
+                    <img src="{{global}}/portraits/5.jpg" alt="...">
+                  </a>
+                </div>
+                <div class="media-body">
+                  <div class="comment-body">
+                    <a class="comment-author" href="javascript:void(0)">Edward Fletcher</a>
+                    <div class="comment-meta">
+                      <span class="date">Yesterday at 12:30AM</span>
+                    </div>
+                    <div class="comment-content">
+                      <p>eniam ipsum pariatur anim labore sunt duis officia labore.
+                        Occaecat sunt ipsum eu ad nostrud do in. Ea aliqua officia
+                        magna laborum quis proident. Irure ullamco aliquip esse
+                        ipsum. Exercitation enim dolore commodo mollit non laboris
+                        et velit adipisicing. Nulla labore sint aliqua minim ad
+                        qui. Minim sint aliqua magna anim duis laborum quis officia.
+                        Veniam nostrud aliqua in anim. Pariatur elit ad ea incididunt
+                        aliquip. Mollit Lorem in magna magna irure commodo do est
+                        ullamco.</p>
+                    </div>
+                    <div class="comment-actions">
+                      <a class="text-like active icon md-favorite" href="javascript:void(0)" role="button"></a>
+                      <a href="javascript:void(0)" role="button">Reply</a>
+                    </div>
+                  </div>
+                  <div class="comments">
+                    <div class="comment media">
+                      <div class="media-left">
+                        <a class="avatar avatar-lg" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/6.jpg" alt="...">
+                        </a>
+                      </div>
+                      <div class="comment-body media-body">
+                        <a class="comment-author" href="javascript:void(0)">Crystal Bates</a>
+                        <div class="comment-meta">
+                          <span class="date">Just now</span>
+                        </div>
+                        <div class="comment-content">
+                          <p>Fletcher you are always so right :)</p>
+                        </div>
+                        <div class="comment-actions">
+                          <a class="text-like icon md-favorite" href="javascript:void(0)" role="button"></a>
+                          <a href="javascript:void(0)" role="button">Reply</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="comment media">
+                      <div class="media-left">
+                        <a class="avatar avatar-lg" href="javascript:void(0)">
+                          <img src="{{global}}/portraits/5.jpg" alt="...">
+                        </a>
+                      </div>
+                      <div class="comment-body media-body">
+                        <a class="comment-author" href="javascript:void(0)">Edward Fletcher</a>
+                        <div class="comment-meta">
+                          <span class="date">Just now</span>
+                        </div>
+                        <div class="comment-content">
+                          <p>Yes, That's really awesome!</p>
+                        </div>
+                        <div class="comment-actions">
+                          <a class="text-like icon md-favorite" href="javascript:void(0)" role="button"></a>
+                          <a href="javascript:void(0)" role="button">Reply</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="comment media">
+                <div class="media-left">
+                  <a class="avatar avatar-lg" href="javascript:void(0)">
+                    <img src="{{global}}/portraits/7.jpg" alt="...">
+                  </a>
+                </div>
+                <div class="comment-body media-body">
+                  <a class="comment-author" href="javascript:void(0)">Nathan Watts</a>
+                  <div class="comment-meta">
+                    <span class="date">5 days ago</span>
+                  </div>
+                  <div class="comment-content">
+                    <p>Dude, this is awesome. Thanks so much</p>
+                  </div>
+                  <div class="comment-actions">
+                    <a class="text-like icon md-favorite" href="javascript:void(0)" role="button"></a>
+                    <a class="active" href="javascript:void(0)" role="button">Reply</a>
+                  </div>
+                  <form class="comment-reply" action="#" method="post">
+                    <div class="form-group">
+                      <textarea class="form-control" rows="5" placeholder="Comment here"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-primary">Comment</button>
+                      <button type="button" class="btn btn-link grey-600">close</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="comment media">
+                <div class="media-left">
+                  <a class="avatar avatar-lg" href="javascript:void(0)">
+                    <img src="{{global}}/portraits/8.jpg" alt="...">
+                  </a>
+                </div>
+                <div class="comment-body media-body">
+                  <a class="comment-author" href="javascript:void(0)">Heather Harper</a>
+                  <div class="comment-meta">
+                    <span class="date">5 days ago</span>
+                  </div>
+                  <div class="comment-content">
+                    <p>Lorem ipsum Ullamco fugiat esse culpa consequat velit veniam
+                      incididunt incididunt nostrud labore nostrud sit dolore in
+                      nulla sit non laborum.</p>
+                  </div>
+                  <div class="comment-actions">
+                    <a class="text-like icon md-favorite" href="javascript:void(0)" role="button"></a>
+                    <a href="javascript:void(0)" role="button">Reply</a>
+                  </div>
+                </div>
+              </div>
+              <form class="comments-add margin-top-35" action="#" method="post">
+                <h3 class="margin-bottom-35">Leave A Reply</h3>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="email" placeholder="Web site">
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" rows="5" placeholder="Comment here"></textarea>
+                </div>
+                <div class="form-group">
+                  <button type="button" class="btn btn-primary">Comment</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel Comments Full -->
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

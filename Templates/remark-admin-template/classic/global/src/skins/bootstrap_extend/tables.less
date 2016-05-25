@@ -1,0 +1,157 @@
+// Name:            Table
+//
+// Component:       `table`
+//
+// Modifiers:       `table-default`
+//                  `table-primary`
+//                  `table-success`
+//                  `table-info`
+//                  `table-warning`
+//                  `table-danger`
+//                  `table-dark`
+//                  `table-gray`
+//                  `table-bordered`
+//
+// ========================================================================
+
+// Component: Table
+// ========================================================================
+
+.table {
+  color: @gray-dark;
+  > thead > tr > th, > tfoot > tr > th {
+    color: @gray-darker;
+  }
+  > thead > tr > th {
+    border-bottom: 1px solid @table-border-color;
+  }
+  > tbody + tbody {
+    border-top: 1px solid @table-border-color;
+  }
+  .success,
+  .warning,
+  .danger,
+  .info {
+    color: @color-white;
+    a {
+      color: @color-white;
+    }
+  }
+}
+
+
+// Color Modifier
+// ========================================================================
+
+.table-primary,
+.table-success,
+.table-info,
+.table-warning,
+.table-danger,
+.table-dark {
+  thead tr {
+    color: @inverse;
+  }
+}
+
+// Modifier: `table-default`
+// -------------------------
+
+.table-default {
+  thead tr {
+    background: @bg-color-base;
+  }
+}
+
+// Modifier: `table-primary`
+// -------------------------
+
+.table-primary {
+  thead tr {
+    background: @brand-primary;
+  }
+}
+
+// Modifier: `table-success`
+// -------------------------
+
+.table-success {
+  thead tr {
+    background: @brand-success;
+  }
+}
+
+// Modifier: `table-info`
+// -------------------------
+
+.table-info {
+  thead tr {
+    background: @brand-info;
+  }
+}
+
+// Modifier: `table-warning`
+// -------------------------
+
+.table-warning {
+  thead tr {
+    background: @brand-warning;
+  }
+}
+
+// Modifier: `table-danger`
+// -------------------------
+
+.table-danger {
+  thead tr {
+    background: @brand-danger;
+  }
+}
+
+// Modifier: `table-dark`
+// -------------------------
+
+.table-dark {
+  thead tr {
+    background: @gray-darker;
+  }
+}
+
+// Modifier: `table-gray`
+// -------------------------
+
+.table-gray {
+  thead tr {
+    color: @gray-darker;
+    background: @gray-light;
+  }
+}
+
+// Modifier: `table-bordered`
+// ========================================================================
+
+.table-bordered {
+  > thead > tr {
+    > th,
+    > td {
+      border-bottom-width: 1px;
+    }
+  }
+  > thead:first-child {
+    > tr:first-child {
+      > th {
+        border: 1px solid @table-border-color;
+      }
+    }
+  }
+}
+
+// Modifier: `table-section`
+// ========================================================================
+.table-section {
+  &.active {
+    tr {
+      background-color: @table-bg-active;
+    }
+  }
+}

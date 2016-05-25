@@ -1,0 +1,88 @@
+//
+// Grid system
+// --------------------------------------------------
+
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container {
+  max-width: 100%;
+
+  @media (min-width: @screen-xlg-min) {
+    width: @container-xlg;
+  }
+}
+
+// Extra large grid
+//
+// Columns, offsets, pushes, and pulls for the extra large desktop device range.
+
+@media (min-width: @screen-xlg-min) {
+  .make-grid(xlg);
+}
+
+.make-xlg-grid-columns() {
+  // Common styles for all sizes of grid columns, widths 1-12
+  .col(@index) { // initial
+    @item: ~".col-xlg-@{index}";
+    .col((@index + 1), @item);
+  }
+  .col(@index, @list) when (@index =< @grid-columns) { // general; "=<" isn't a typo
+    @item: ~".col-xlg-@{index}";
+    .col((@index + 1), ~"@{list}, @{item}");
+  }
+  .col(@index, @list) when (@index > @grid-columns) { // terminal
+    @{list} {
+      position: relative;
+      // Prevent columns from collapsing when empty
+      min-height: 1px;
+      // Inner gutter via padding
+      padding-left:  ceil((@grid-gutter-width / 2));
+      padding-right: floor((@grid-gutter-width / 2));
+    }
+  }
+  .col(1); // kickstart it
+}
+
+.make-xlg-grid-columns();
+
+
+// Gird
+// ========================================================================
+.row.no-space {
+  margin-right: 0;
+  margin-left: 0;
+
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.row-lg {
+  margin-left:  ceil((@grid-lg-gutter-width / -2));
+  margin-right: floor((@grid-lg-gutter-width / -2));
+}
+
+.make-lg-grid-columns();
+
+.make-lg-grid-columns() {
+  // Common styles for all sizes of grid columns, widths 1-12
+  .col(@index) { // initial
+    @item: ~".row-lg > .col-xs-@{index}, .row-lg > .col-sm-@{index}, .row-lg > .col-md-@{index}, .row-lg > .col-lg-@{index}, .row-lg > .col-xlg-@{index}";
+    .col((@index + 1), @item);
+  }
+  .col(@index, @list) when (@index =< @grid-columns) { // general; "=<" isn't a typo
+    @item: ~".row-lg > .col-xs-@{index}, .row-lg > .col-sm-@{index}, .row-lg > .col-md-@{index}, .row-lg > .col-lg-@{index}, .row-lg > .col-xlg-@{index}";
+    .col((@index + 1), ~"@{list}, @{item}");
+  }
+  .col(@index, @list) when (@index > @grid-columns) { // terminal
+    @{list} {
+      padding-left:  ceil((@grid-lg-gutter-width / 2));
+      padding-right: floor((@grid-lg-gutter-width / 2));
+    }
+  }
+  .col(1); // kickstart it
+}

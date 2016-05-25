@@ -1,0 +1,64 @@
+.site-menu {
+  &-sub {
+    background-color: @site-menubar-bg;
+  }
+
+  //Status Color
+  &-item {
+    > a {
+      color: inherit;
+
+      &:hover {
+        color: @site-menu-top-hover-color;
+        background-color: @site-menu-top-hover-bg;
+      }
+    }
+
+    &:hover {
+      > a {
+        color: @site-menu-top-hover-color;
+        background-color: @site-menu-top-hover-bg;
+      }
+    }
+
+    &.active {
+      > a {
+        color: @site-menu-top-active-color;
+        background-color: @site-menu-sub-active-bg;
+      }
+    }
+  }
+}
+
+.site-menubar-dark {
+  .site-menu {
+    &-item {
+      > a {
+        color: inherit;
+
+        &:hover {
+          color: @site-menu-dark-top-hover-color;
+          background-color: @site-menu-dark-top-hover-bg;
+        }
+      }
+
+      &:hover {
+        > a {
+          color: @site-menu-dark-top-hover-color;
+          background-color: @site-menu-dark-top-hover-bg;
+        }
+      }
+
+      &.active {
+        > a {
+          color: @site-menu-dark-top-active-color;
+          background-color: @site-menu-dark-sub-active-bg;
+        }
+      }
+    }
+
+    &-sub {
+      background-color: @inverse;
+    }
+  }
+}

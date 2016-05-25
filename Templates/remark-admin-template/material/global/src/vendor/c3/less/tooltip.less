@@ -1,0 +1,36 @@
+.c3-tooltip-container {
+  z-index: 10;
+}
+.c3-tooltip {
+  border-collapse:collapse;
+  border-spacing:0;
+  background-color: @popover-bg;
+  empty-cells:show;
+  box-shadow: @popover-shadow;
+  opacity: 0.9;
+}
+.c3-tooltip tr {
+  border-bottom:1px solid @border-color-base;
+}
+.c3-tooltip th {
+  background-color: @gray-dark;
+  font-size: 14px;
+  padding: 2px 5px;
+  text-align: left;
+  color: #FFF;
+}
+.c3-tooltip td {
+  font-size: 13px;
+  padding: 3px 6px;
+  background-color: @popover-bg;
+  border-left: 1px dotted @border-color-base;
+}
+.c3-tooltip td > span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+}
+.c3-tooltip td.value{
+  text-align: right;
+}

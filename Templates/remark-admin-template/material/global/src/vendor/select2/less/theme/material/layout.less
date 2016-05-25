@@ -1,0 +1,194 @@
+// https://github.com/fk/select2-bootstrap-theme
+
+@import "mixins.less";
+
+.select2-container--material {
+  display: block;
+
+  .select2-selection {
+    .form-control-defaults();
+    outline: 0;
+
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+    .form-material-control-underline(@form-material-focus-text, @form-material-underline-color);
+
+    background-size: 0 2px, 100% 1px;
+    background-repeat: no-repeat;
+    background-position: center bottom, center calc(~"100% - 1px");
+    background-color: transparent;
+    background-color: rgba(0,0,0,0);
+    transition: background 0s ease-out;
+  }
+
+  .select2-search--dropdown {
+      .select2-search__field {
+          .form-control-defaults();
+      }
+  }
+
+  .select2-search__field {
+    outline: 0;
+
+    &::-webkit-input-placeholder {
+        color: @input-color-placeholder;
+    }
+
+    &:-moz-placeholder {
+        color: @input-color-placeholder;
+    }
+
+    &::-moz-placeholder {
+        color: @input-color-placeholder;
+        opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+        color: @input-color-placeholder;
+    }
+  }
+
+  .select2-results__option {
+    &[role=group] {
+      padding: 0;
+    }
+
+    &[aria-disabled=true] {
+      color: @dropdown-link-disabled-color;
+      cursor: @cursor-disabled;
+    }
+
+    &[aria-selected=true] {
+      background-color: @dropdown-link-hover-bg;
+      color: @dropdown-link-hover-color;
+    }
+
+    .select2-results__option {
+      padding: @padding-base-vertical @padding-base-horizontal;
+      .select2-results__group {
+        padding-left: 0;
+      }
+      .select2-results__option {
+        margin-left: -@padding-base-horizontal;
+        padding-left: @padding-base-horizontal*2;
+        .select2-results__option {
+          margin-left: -@padding-base-horizontal*2;
+          padding-left: @padding-base-horizontal*3;
+          .select2-results__option {
+            margin-left: -@padding-base-horizontal*3;
+            padding-left: @padding-base-horizontal*4;
+            .select2-results__option {
+              margin-left: -@padding-base-horizontal*4;
+              padding-left: @padding-base-horizontal*5;
+              .select2-results__option {
+                margin-left: -@padding-base-horizontal*5;
+                padding-left: @padding-base-horizontal*6;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &--highlighted[aria-selected] {
+      background-color: @dropdown-link-active-bg;
+      color: @dropdown-link-active-color;
+    }
+  }
+  
+  .select2-results__group {
+    color: @dropdown-header-color;
+    display: block;
+    cursor: default;
+    padding: @padding-base-vertical @padding-base-horizontal;
+    font-size: @font-size-small;
+    line-height: @line-height-base;
+    white-space: nowrap;
+  }
+  
+  &.select2-container--open {
+    .select2-selection {
+      .select2-selection__arrow b {
+        border-color: transparent transparent @dropdown-arrow-color transparent;
+        border-width: 0 @caret-width-base @caret-width-base @caret-width-base;
+      }
+    }
+
+    &.select2-container--above {
+      .select2-selection {
+        .border-top-radius(0);
+        border-top-color: transparent;
+      }
+    }
+    
+    &.select2-container--below {
+      .select2-selection {
+        .border-bottom-radius(0);
+        border-bottom-color: transparent;
+      }
+    }
+  }
+
+  &.select2-container--open,
+  &.select2-container--focus {
+    .select2-selection {
+      outline: none;
+      background-size: 100% 2px, 100% 1px;
+      transition-duration: 0.3s;
+    }
+  }
+
+  &.select2-container--disabled {
+    .select2-selection {
+      background: transparent;
+      background: rgba(0,0,0,0);
+      border-bottom: 1px dashed @form-material-disabled-underline-color;
+    }
+  }
+
+  &.input-sm,
+  &.input-lg {
+    border-radius: 0;
+    font-size: 12px;
+    height: auto;
+    line-height: 1;
+    padding: 0;
+  }
+
+  @import "dropdown.less";
+  @import "single.less";
+  @import "multiple.less";
+  
+  &.input-lg.select2-container--open {
+   .dropdown-arrow();
+  }
+  
+  .input-group-lg & {
+    &.select2-container--open {
+      .dropdown-arrow();
+    }
+  }
+
+  .input-group & {
+    display: table;
+    table-layout: fixed;
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+.has-warning {
+    .validation-state-focus(@form-warning-text);
+}
+
+.has-error {
+    .validation-state-focus(@form-danger-text);
+}
+
+.has-success {
+    .validation-state-focus(@form-success-text);
+}

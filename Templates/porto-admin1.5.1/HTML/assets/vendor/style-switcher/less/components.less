@@ -1,0 +1,905 @@
+/* Blockquote */
+blockquote.primary {
+	border-color: @color-primary;
+}
+
+/* Nav Pills */
+.nav-pills-primary {
+	> li {
+		a:hover,
+		a:focus {
+			color: @color-primary;
+			background-color: lighten(@color-primary, 50%);
+		}
+	}
+
+	> li.active {
+		> a {
+			&,
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: @color-primary;
+			}
+		}
+	}
+}
+
+/* Dropdown Menu */
+.dropdown-menu & >.active & > a,
+.dropdown-menu & >.active & > a:hover,
+.dropdown-menu & >.active & > a:focus {
+	background-color: @color-primary;
+}
+
+.open > .dropdown-toggle.btn-primary {
+	background: @color-primary;
+	border-color: darken(@color-primary, 5%);
+}
+
+body .btn-primary.dropdown-toggle {
+	border-left-color: lighten(@color-primary, 8%);
+}
+
+/* Buttons */
+body {
+
+	.btn-primary {
+		.buttonBackground(@color-primary, spin(@color-primary, 20%));
+	}
+
+	.btn-success {
+		.buttonBackground(@color-success, spin(@color-success, 20%));
+	}
+
+	.btn-warning {
+		.buttonBackground(@color-warning, spin(@color-warning, 20%));
+	}
+
+	.btn-danger {
+		.buttonBackground(@color-danger, spin(@color-danger, 20%));
+	}
+
+	.btn-info {
+		.buttonBackground(@color-info, spin(@color-info, 20%));
+	}
+
+	.btn-dark {
+		.buttonBackground(@color-dark, spin(@color-dark, 20%));
+	}
+
+}
+
+/* Switch*/
+.switch {
+	&.switch-primary {
+		.ios-switch .on-background {
+			background: @color-primary;
+		}
+	}
+}
+
+/* Label */
+.label-primary {
+	background: @color-primary;
+}
+
+/* Text Primary */
+.text-primary {
+	color: @color-primary !important;
+}
+
+/* BG Primary */
+.bg-primary {
+	background: @color-primary;
+}
+
+/* Alternative Font Style */
+.alternative-font {
+	color: @color-primary;
+}
+
+/* Hightlight */
+.highlight {
+	background-color: @color-primary;
+}
+
+/* Drop Caps */
+p.drop-caps {
+	&.colored:first-child:first-letter {
+		color: @color-primary;
+	}
+	&.colored.secundary:first-child:first-letter {
+		background-color: @color-primary;
+	}
+}
+
+/* Well */
+.well.primary {
+	background: @color-primary;
+	border-color: darken( @color-primary, 10% );
+}
+
+/* Form */
+.form-control:focus {
+	border-color: lighten(@color-primary, 20%);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(red(@color-primary), green(@color-primary), blue(@color-primary), 0.3);
+}
+
+/* Header */
+.header {
+	.toggle-sidebar-left {
+		background: @color-primary;
+	}
+}
+
+/* Page Header */
+.page-header {
+	h2 {
+		border-bottom-color: @color-primary;
+	}
+	.sidebar-right-toggle {
+		&:hover {
+			color: @color-primary;
+		}
+	}
+}
+
+/* Navigation */
+ul.nav-main {
+
+	& > li {
+		&.nav-active {
+			> a {
+				box-shadow: 2px 0 0 @color-primary inset;
+			}
+			& > i {
+				color: @color-primary;
+			}
+		}
+	}
+
+	li {
+
+		.nav-children {
+
+			li {
+				&.nav-active {
+					> a {
+						color: @color-primary;
+					}
+
+				}
+
+			}
+		}
+
+	}
+
+}
+
+html.sidebar-light:not(.dark) {
+	ul.nav-main {
+
+		& > li {
+			&.nav-active {
+				> a {
+					color: @color-primary;
+				}
+			}
+		}
+
+	}
+}
+
+/* Nano Scroller Plugin */
+html.no-overflowscrolling {
+	.nano {
+		> .nano-pane {
+
+			> .nano-slider {
+				background: @color-primary;
+			}
+		}
+	}
+}
+
+/* Nav Pills */
+.nav-pills > .active {
+	a {
+		&,
+		&:hover,
+		&:focus {
+			background-color: @color-primary;
+		}
+	}
+}
+
+/* Pagination */
+.pagination {
+	> li {
+		a {
+			color: @color-primary;
+			&:hover,
+			&:focus {
+				color: lighten(@color-primary, 5%);
+			}
+		}
+
+		&.active {
+			a,
+			span {
+				&,
+				&:hover,
+				&:focus {
+					background-color: @color-primary;
+					border-color: @color-primary;
+				}
+			}
+
+			a {
+				background-color: @color-primary;
+			}
+		}
+	}
+}
+
+html,
+html.dark {
+	.pagination > li.active {
+		a,
+		span {
+			&,
+			&:hover,
+			&:focus {
+				background-color: @color-primary;
+				border-color: @color-primary;
+			}
+		}
+
+		a {
+			background-color: @color-primary;
+		}
+	}
+}
+
+/* Fullcalendar */
+.fc {
+
+	.fc-toolbar {
+		h2 {
+			&:before {
+				color: @color-primary;
+			}
+		}
+		.fc-button {
+			&.fc-state-active {
+				background-color: @color-primary;
+			}
+		}
+	}
+}
+
+.fc-event {
+	background: @color-primary;
+	border-color: @color-primary;
+}
+
+.fc-event.fc-event-primary {
+	background: @color-primary;
+	border-color: @color-primary;
+}
+
+/* Maps */
+.jqvmap-zoomin,
+.jqvmap-zoomout {
+	background: @color-primary;
+}
+
+/* Timeline */
+.timeline {
+
+	.tm-items {
+
+		& > li {
+
+			.tm-datetime {
+
+				.tm-datetime-time {
+					color: @color-primary;
+				}
+			}
+
+			.tm-icon {
+				border-color: @color-primary;
+				color: @color-primary;
+			}
+		}
+	}
+
+	&.timeline-simple {
+
+		.tm-body {
+
+			.tm-items {
+
+				& > li {
+
+					&:before {
+						background: @color-primary;
+						box-shadow: 0 0 0 3px #FFF, 0 0 0 6px @color-primary;
+					}
+
+				}
+			}
+		}
+
+	}
+}
+
+html.dark .timeline.timeline-simple .tm-body .tm-items > li:before {
+	background: @color-primary;
+	box-shadow: 0 0 0 3px lighten(#1d2127, 8%), 0 0 0 6px @color-primary;
+}
+
+/* Princing Table */
+.pricing-table {
+	h3 {
+		span {
+			color: @color-primary;
+		}
+	}
+
+
+	.most-popular {
+		h3 {
+			background-color: @color-primary !important;
+			color: #FFF !important
+		}
+	}
+}
+
+/* Data Tables Loading */
+.dataTables_processing {
+	background-color: @color-primary;
+}
+
+/* Accordion */
+.panel-group {
+	.panel-accordion {
+		.panel-heading {
+
+			a {
+				color: @color-primary;
+			}
+
+		}
+	}
+}
+
+/* Alerts */
+.alert-primary {
+	background-color: @color-primary;
+	border-color: darken(@color-primary, 3%);
+
+	.alert-link {
+		color: darken(@color-primary, 20%);
+	}
+}
+
+/* Nestable */
+.dd-handle {
+	&:hover {
+		color: @color-primary !important;
+	}
+}
+
+.dd-placeholder {
+	background: lighten(@color-primary, 55%);
+	border-color: @color-primary;
+}
+
+/* Panels */
+.panel-highlight {
+
+	.panel-heading {
+		background-color: @color-primary;
+		border-color: @color-primary;
+	}
+
+	.panel-body {
+		background-color: @color-primary;
+	}
+}
+
+html .panel-primary {
+	.panel-heading {
+		background: @color-primary;
+		border-color: @color-primary;
+	}
+}
+
+.panel-heading {
+	&.bg-primary {
+		background: @color-primary;
+	}
+}
+
+.panel-body {
+	&.bg-primary {
+		background: @color-primary;
+	}
+}
+
+.panel-featured-primary {
+	border-color: @color-primary;
+
+	.panel-title {
+		color: @color-primary;
+	}
+}
+
+.panel-heading-icon {
+	&.bg-primary {
+		background: @color-primary;
+	}
+}
+
+.panel-group .panel-accordion-primary {
+	.panel-heading .panel-title a {
+		background: @color-primary;
+	}
+}
+
+/* Progress Bar */
+.progress-bar {
+	background-color: @color-primary;
+}
+
+.progress {
+	.progress-bar-primary {
+		background-color: @color-primary;
+	}
+}
+
+/* Toggle */
+.toggle {
+	&> {
+		label {
+			border-left-color: @color-primary;
+			color: @color-primary;
+		}
+	}
+	&.active {
+		> label {
+			background: @color-primary !important;
+			border-color: @color-primary;
+		}
+	}
+}
+
+/* Treeview */
+.jstree-default {
+	.jstree-hovered {
+		background-color: lighten(@color-primary, 55%) !important;
+	}
+	.jstree-clicked {
+		background-color: lighten(@color-primary, 45%) !important;
+	}
+	.colored {
+		color: @color-primary !important;
+		.jstree-icon {
+			color: @color-primary !important;
+		}
+	}
+	.colored-icon {
+		.jstree-icon {
+			color: @color-primary !important;
+		}
+	}
+}
+
+/* Widgets */
+.sidebar-widget {
+
+	&.widget-tasks {
+
+		ul {
+			li {
+
+				&:before {
+					border-color: @color-primary;
+				}
+
+			}
+		}
+	}
+}
+
+.widget-twitter-profile {
+	background-color: @color-primary;
+	.profile-quote {
+		background-color: lighten(@color-primary, 4%);
+		.quote-footer {
+			border-top-color: rgba(red(lighten(@color-primary, 10%)), green(lighten(@color-primary, 10%)), blue(lighten(@color-primary, 10%)), 0.7);
+		}
+	}
+}
+
+.widget-profile-info {
+	.profile-info {
+		.profile-footer {
+			border-top-color: rgba(red(lighten(@color-primary, 10%)), green(lighten(@color-primary, 10%)), blue(lighten(@color-primary, 10%)), 0.7);
+		}
+	}
+}
+
+/* Thumb Info */
+.thumb-info {
+	.thumb-info-type {
+		background-color: @color-primary;
+	}
+}
+
+/* Social Icons */
+.social-icons-list {
+	a {
+		background: @color-primary;
+	}
+}
+
+/* Notifications */
+.notifications {
+	.notification-menu {
+		.notification-title {
+			background: @color-primary;
+			.label-default {
+				background-color: darken(@color-primary, 10%);
+			}
+		}
+	}
+}
+
+.notifications .notification-menu,
+.notifications .notification-icon {
+	&:before {
+		border-bottom-color: @color-primary;
+	}
+}
+
+.ui-pnotify {
+	.notification-primary {
+		background: rgba(red(@color-primary), green(@color-primary), blue(@color-primary), 0.95);
+	}
+
+	&.stack-bar-top,
+	&.stack-bar-bottom {
+		.notification-primary {
+			background: @color-primary;
+		}
+	}
+}
+
+.ui-pnotify.notification-primary {
+	.notification,
+	.notification-primary {
+		background: rgba(red(@color-primary), green(@color-primary), blue(@color-primary), 0.95);
+	}
+
+	&.stack-bar-top,
+	&.stack-bar-bottom {
+		.notification,
+		.notification-primary {
+			background: @color-primary;
+		}
+	}
+}
+
+/* Modal */
+.modal-block-primary {
+	.fa {
+		color: @color-primary;
+	}
+	&.modal-header-color {
+		.panel-heading {
+			background-color: @color-primary;
+		}
+	}
+	&.modal-full-color {
+		.panel {
+			background-color: lighten(@color-primary, 8%);
+		}
+		.panel-heading {
+			background-color: @color-primary;
+		}
+		.panel-footer {
+			background-color: lighten(@color-primary, 8%);
+		}
+	}
+}
+
+/* Modal Icon */
+.modal-block-primary .modal-icon {
+	.fa {
+		color: @color-primary;
+	}
+}
+
+/* Tabs */
+html,
+html.dark {
+	body {
+		.tabs-primary {
+			.nav-tabs {
+				&,
+				&.nav-justified {
+					li {
+						a {
+							&,
+							&:hover {
+								color: @color-primary;
+							}
+
+							&:hover {
+								border-top-color: @color-primary;
+							}
+						}
+
+						&.active {
+							a,
+							a:hover,
+							a:focus {
+								border-top-color: @color-primary;
+								color: @color-primary;
+							}
+						}
+					}
+				}
+			}
+
+			&.tabs-bottom {
+				.nav-tabs {
+					&,
+					&.nav-justified {
+						li {
+							a {
+								&:hover {
+									border-bottom-color: @color-primary;
+								}
+							}
+
+							&.active {
+								a,
+								a:hover,
+								a:focus {
+									border-top-color: #FFF;
+									border-bottom-color: @color-primary;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&.tabs-vertical {
+				&.tabs-left {
+					li {
+						a {
+							&:hover {
+								border-left-color: @color-primary;
+							}
+						}
+
+						&.active {
+							a,
+							a:hover,
+							a:focus {
+								border-left-color: @color-primary;
+							}
+						}
+					}
+				}
+
+				&.tabs-right {
+					li {
+						a {
+							&:hover {
+								border-right-color: @color-primary;
+							}
+						}
+
+						&.active {
+							a,
+							a:hover,
+							a:focus {
+								border-right-color: @color-primary;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Simple List */
+ul.simple-bullet-list {
+	li {
+		&:before {
+			border-color: @color-primary;
+		}
+	}
+}
+
+/* Simple Card List */
+.simple-card-list {
+	li.primary {
+		background: @color-primary;
+	}
+}
+
+/* Search Results */
+.search-content {
+	.search-toolbar {
+		.nav-pills {
+			li.active {
+				a {
+					color: @color-primary;
+					border-bottom-color: @color-primary;
+				}
+			}
+		}
+	}
+}
+
+.search-results-list {
+	.result-thumb {
+		.fa {
+			background: @color-primary;
+		}
+	}
+}
+
+/* Scrollable */
+.scrollable.colored-slider {
+	.scrollable-slider {
+		background: @color-primary;
+	}
+}
+
+html.dark {
+	.search-content {
+		.search-toolbar {
+			.nav-pills {
+				li.active {
+					a {
+						&,
+						&:hover,
+						&:focus {
+							color: @color-primary;
+							border-bottom-color: @color-primary;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Time Picker */
+.bootstrap-timepicker-widget table td a:hover {
+	background-color: @color-primary;
+}
+
+/* Loading Progress */
+#nprogress {
+	.bar {
+		background: @color-primary;
+	}
+	.peg {
+		box-shadow: 0 0 10px 1px @color-primary, 0 0 5px @color-primary;
+	}
+}
+
+/* Zoom */
+.img-thumbnail {
+	.zoom {
+		background: @color-primary;
+	}
+}
+
+/* Owl Carousel */
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+	background-color: darken(@color-primary, 6%);
+}
+
+.owl-theme .owl-nav [class*="owl-"] {
+	background: @color-primary;
+}
+
+.owl-theme .owl-nav [class*="owl-"]:focus,
+.owl-theme .owl-nav [class*="owl-"]:hover {
+	background-color: lighten(@color-primary, 6%);
+}
+
+/* Chartist */
+.ct-chart .tooltip {
+	background: @color-primary;
+
+	&:after {
+		border-top-color: @color-primary;
+	}
+}
+
+.ct-chart .ct-series.ct-series-a .ct-bar,
+.ct-chart .ct-series.ct-series-a .ct-line,
+.ct-chart .ct-series.ct-series-a .ct-point,
+.ct-chart .ct-series.ct-series-a .ct-slice.ct-donut {
+	stroke: @color-primary;
+}
+
+.ct-chart .ct-series.ct-series-a .ct-area,
+.ct-chart .ct-series.ct-series-a .ct-slice:not(.ct-donut) {
+	fill: @color-primary;
+}
+
+.ct-chart .ct-series.ct-series-b .ct-bar,
+.ct-chart .ct-series.ct-series-b .ct-line,
+.ct-chart .ct-series.ct-series-b .ct-point,
+.ct-chart .ct-series.ct-series-b .ct-slice.ct-donut {
+	stroke: darken(@color-primary, 15%);
+}
+
+.ct-chart .ct-series.ct-series-b .ct-area,
+.ct-chart .ct-series.ct-series-b .ct-slice:not(.ct-donut) {
+	fill: darken(@color-primary, 15%);
+}
+
+.ct-chart .ct-series.ct-series-i .ct-bar,
+.ct-chart .ct-series.ct-series-i .ct-line,
+.ct-chart .ct-series.ct-series-i .ct-point,
+.ct-chart .ct-series.ct-series-i .ct-slice.ct-donut {
+	stroke: darken(@color-primary, 15%);
+}
+
+.ct-chart .ct-series.ct-series-i .ct-area,
+.ct-chart .ct-series.ct-series-i .ct-slice:not(.ct-donut) {
+	fill: darken(@color-primary, 15%);
+}
+
+.ct-chart .ct-series.ct-series-j .ct-bar,
+.ct-chart .ct-series.ct-series-j .ct-line,
+.ct-chart .ct-series.ct-series-j .ct-point,
+.ct-chart .ct-series.ct-series-j .ct-slice.ct-donut {
+	stroke: lighten(@color-primary, 15%);
+}
+
+.ct-chart .ct-series.ct-series-j .ct-area,
+.ct-chart .ct-series.ct-series-j .ct-slice:not(.ct-donut) {
+	fill: lighten(@color-primary, 15%);
+}
+
+.ct-chart .ct-series.ct-series-n .ct-bar,
+.ct-chart .ct-series.ct-series-n .ct-line,
+.ct-chart .ct-series.ct-series-n .ct-point,
+.ct-chart .ct-series.ct-series-n .ct-slice.ct-donut {
+	stroke: darken(@color-primary, 35%);
+}
+
+.ct-chart .ct-series.ct-series-n .ct-area,
+.ct-chart .ct-series.ct-series-n .ct-slice:not(.ct-donut) {
+	fill: darken(@color-primary, 35%);
+}
+
+.ct-chart .ct-series.ct-series-o .ct-bar,
+.ct-chart .ct-series.ct-series-o .ct-line,
+.ct-chart .ct-series.ct-series-o .ct-point,
+.ct-chart .ct-series.ct-series-o .ct-slice.ct-donut {
+	stroke: lighten(@color-primary, 35%);
+}
+
+.ct-chart .ct-series.ct-series-o .ct-area,
+.ct-chart .ct-series.ct-series-o .ct-slice:not(.ct-donut) {
+	fill: lighten(@color-primary, 35%);
+}

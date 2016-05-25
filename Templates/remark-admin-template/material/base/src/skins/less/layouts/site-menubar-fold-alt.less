@@ -1,0 +1,32 @@
+
+.site-menubar-fold.site-menubar-fold-alt {
+  .site-menu {
+    > .site-menu-item {
+      &.active, &.open, &.hover {
+        background: @site-menubar-fold-top-active-bg;
+      }
+
+      > a {
+        .site-menu-title {
+          background: @site-menubar-fold-top-active-bg;
+        }
+      }
+    }
+  }
+
+  .site-menubar-dark {
+    .site-menu {
+      > .site-menu-item {
+        &.active, &.open, &.hover {
+          background: @site-menubar-dark-fold-top-active-bg;
+        }
+
+        > a {
+          .site-menu-title {
+            background: @site-menubar-dark-fold-top-active-bg;
+          }
+        }
+      }
+    }
+  }
+}

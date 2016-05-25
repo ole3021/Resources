@@ -1,0 +1,278 @@
+.sidebar-left {
+	z-index: $sidebar-left-z-index;
+
+	// SIDEBAR HEADER
+	// -----------------------------------------------------------------------------
+	.sidebar-header {
+		position: relative;
+		color: $color-default-inverse;
+		height: $sidebar-top-header-size;
+
+		.sidebar-title {
+			background: $sidebar-background;
+			color: #465162;
+			padding: 15px;
+			@include font-size(13);
+		}
+
+		.sidebar-toggle {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: $sidebar-toggle-width;
+			height: $sidebar-top-header-size;
+			background-color: $sidebar-toggle-background;
+			border-radius: 0 0 0 $sidebar-toggle-bottom-radius;
+			text-align: center;
+			cursor: pointer;
+
+			i {
+				color: $sidebar-toggle-color;
+				@include font-size(17);
+				line-height: $sidebar-top-header-size;
+				@include transition(all 0.15s ease-in-out);
+			}
+
+			&:hover {
+				i {
+					color: $sidebar-toggle-hover-color;
+				}
+			}
+		}
+
+	}
+
+	hr.separator {
+		background: none;
+		margin: 20px 10px 20px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.sidebar-left {
+		background: $sidebar-background;
+	}
+}
+
+// REMOVE NANO STYLE FOR BOXED AND SCROLL
+// -----------------------------------------------------------------------------
+/* Unstyle nano for non fixed layouts */
+@media only screen and (min-width: 768px) {
+	html.scroll,
+	html.boxed {
+		.sidebar-left {
+			.sidebar-header {
+				margin-bottom: -3px;
+			}
+			.nano {
+				position: absolute;
+				overflow: visible;
+				width: 100%;
+
+				.nano-content {
+					margin-right: 0 !important;
+					position: static;
+					overflow: visible;
+				}
+
+				.nano-pane {
+					display: none !important;
+				}
+			}
+		}
+	}
+
+	html.boxed,
+	html.scroll {
+		.sidebar-left {
+			.nano {
+				> .nano-content {
+					overflow: visible !important;
+				}
+			}
+		}
+	}
+
+	html.boxed {
+		.sidebar-left {
+			.nano {
+				padding-bottom: 10px;
+			}
+		}
+	}
+
+	html.scroll {
+		.sidebar-left {
+			.nano {
+				padding-bottom: 10px;
+			}
+		}
+	}
+}
+
+// SIDEBAR LEFT COLLAPSED
+// -----------------------------------------------------------------------------
+@media only screen and (min-width: 768px) {
+	html.sidebar-left-collapsed {
+		.sidebar-left {
+
+			.nano {
+				background: $sidebar-background;
+				box-shadow: -$sidebar-border-width 0 0 $sidebar-border-color inset;
+			}
+
+			.sidebar-title {
+				margin-left: -$sidebar-left-full-width;
+				opacity: 0;
+			}
+
+			.sidebar-toggle {
+				border-radius: 0;
+			}
+
+			.nav-main {
+				> li > a {
+					overflow: hidden;
+					text-overflow: clip;
+				}
+
+				li {
+					// has children
+					&.nav-parent {
+						// arrow
+						a:after {
+							display: none;
+						}
+
+						> ul.nav-children {
+							display: none;
+						}
+					}
+				}
+
+				// text
+				a span {
+					visibility: hidden;
+				}
+			}
+
+			.sidebar-widget,
+			.separator {
+				display: none;
+			}
+		}
+	}
+
+	// auto expand on hover
+	html.sidebar-left-collapsed {
+		.sidebar-left {
+			.nano:hover {
+				width: $sidebar-left-full-width;
+
+				.nav-main {
+					.nav-expanded {
+						> ul.nav-children {
+							display: block;
+						}
+					}
+
+					li {
+						// has children
+						&.nav-parent {
+							// arrow
+							a:after {
+								display: inline-block;
+							}
+						}
+
+						// text
+						a span {
+							visibility: visible;
+						}
+					}
+				}
+
+				.sidebar-widget,
+				.separator {
+					display: block;
+				}
+			}
+		}
+	}
+
+	html.sidebar-left-collapsed.sidebar-left-opened {
+		.sidebar-left {
+			.nano {
+				width: $sidebar-left-full-width;
+
+				.nav-main {
+					.nav-expanded {
+						> ul.nav-children {
+							display: block;
+						}
+					}
+
+					li {
+						// has children
+						&.nav-parent {
+							// arrow
+							a:after {
+								display: inline-block;
+							}
+						}
+
+						// text
+						a span {
+							visibility: visible;
+						}
+					}
+				}
+
+				.sidebar-widget,
+				.separator {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+// SIDEBAR LIGHT
+// -----------------------------------------------------------------------------
+html.sidebar-light:not(.dark) {
+	.sidebar-left {
+		.sidebar-header {
+			.sidebar-title {
+				background: #FFF;
+			}
+			.sidebar-toggle {
+				i {
+					color: #333;
+				}
+				background: #f6f6f6;
+			}
+		}
+
+		.nano {
+			box-shadow: -5px 0 0 #f6f6f6 inset;
+			background: #FFF;
+		}
+	}
+
+	&.sidebar-left-collapsed {
+		.sidebar-left {
+			.nano {
+				box-shadow: -5px 0 0 #f6f6f6 inset;
+				background: #FFF;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	html.sidebar-light {
+		.sidebar-left {
+			background: #FFF;
+		}
+	}
+}

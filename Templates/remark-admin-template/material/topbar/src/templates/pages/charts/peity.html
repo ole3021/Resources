@@ -1,0 +1,279 @@
+---
+title: Peity Charts
+---
+
+{{#extend "layout-default"}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/peity/jquery.peity.min.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/peity.js"></script>
+  {{/content}}
+
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/charts/peity.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title">Peity Charts</h1>
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li><a href="javascript:void(0)">Charts</a></li>
+          <li class="active">Peity</li>
+        </ol>
+        <div class="page-header-actions">
+          <a class="btn btn-sm btn-primary btn-round" href="https://github.com/benpickles/peity"
+          target="_blank">
+            <i class="icon md-link" aria-hidden="true"></i>
+            <span class="hidden-xs">Official Website</span>
+          </a>
+        </div>
+      </div>
+      <div class="page-content">
+        <!-- Panel -->
+        <div class="panel">
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-lg-6">
+                <!-- Example Blue -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Blue</h4>
+                  <table class="table table-striped">
+                    <tr>
+                      <td>Pie Charts</td>
+                      <td>
+                        <span data-plugin="peityPie">1/5</span>
+                        <span data-plugin="peityPie">226/360</span>
+                        <span data-plugin="peityPie">0.52/1.561</span>
+                        <span data-plugin="peityPie">1,4</span>
+                        <span data-plugin="peityPie">226,134</span>
+                        <span data-plugin="peityPie">0.52,1.041</span>
+                        <span data-plugin="peityPie">1,2,3,2,2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Donut Charts</td>
+                      <td>
+                        <span data-plugin="peityDonut">1/5</span>
+                        <span data-plugin="peityDonut">226/360</span>
+                        <span data-plugin="peityDonut">0.52/1.561</span>
+                        <span data-plugin="peityDonut">1,4</span>
+                        <span data-plugin="peityDonut">226,134</span>
+                        <span data-plugin="peityDonut">0.52,1.041</span>
+                        <span data-plugin="peityDonut">1,2,3,2,2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Line Charts</td>
+                      <td>
+                        <span data-plugin="peityLine">5,3,9,6,5,9,7,3,5,2</span>
+                        <span data-plugin="peityLine">5,3,2,-1,-3,-2,2,3,5,2</span>
+                        <span data-plugin="peityLine">0,-3,-6,-4,-5,-4,-7,-3,-5,-2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Bar Charts</td>
+                      <td>
+                        <span data-plugin="peityBar">5,3,9,6,5,9,7,3,5,2</span>
+                        <span data-plugin="peityBar">5,3,2,-1,-3,-2,2,3,5,2</span>
+                        <span data-plugin="peityBar">0,-3,-6,-4,-5,-4,-7,-3,-5,-2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Dynamic Charts</td>
+                      <td>
+                        <span id="examplePeityDynamic" data-plugin="peityLine">5,3,9,6,5,9,7,3,5,2,5,3,9,6,5,9,7,3,5,2</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- End Example Blue -->
+              </div>
+
+              <div class="col-lg-6">
+                <!-- Example Red -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Red</h4>
+                  <table class="table table-striped">
+                    <tr>
+                      <td>Pie Charts</td>
+                      <td>
+                        <span data-plugin="peityPie" data-skin="red">1/5</span>
+                        <span data-plugin="peityPie" data-skin="red">226/360</span>
+                        <span data-plugin="peityPie" data-skin="red">0.52/1.561</span>
+                        <span data-plugin="peityPie" data-skin="red">1,4</span>
+                        <span data-plugin="peityPie" data-skin="red">226,134</span>
+                        <span data-plugin="peityPie" data-skin="red">0.52,1.041</span>
+                        <span data-plugin="peityPie" data-skin="red">1,2,3,2,2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Donut Charts</td>
+                      <td>
+                        <span data-plugin="peityDonut" data-skin="red">1/5</span>
+                        <span data-plugin="peityDonut" data-skin="red">226/360</span>
+                        <span data-plugin="peityDonut" data-skin="red">0.52/1.561</span>
+                        <span data-plugin="peityDonut" data-skin="red">1,4</span>
+                        <span data-plugin="peityDonut" data-skin="red">226,134</span>
+                        <span data-plugin="peityDonut" data-skin="red">0.52,1.041</span>
+                        <span data-plugin="peityDonut" data-skin="red">1,2,3,2,2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Line Charts</td>
+                      <td>
+                        <span data-plugin="peityLine" data-skin="red">5,3,9,6,5,9,7,3,5,2</span>
+                        <span data-plugin="peityLine" data-skin="red">5,3,2,-1,-3,-2,2,3,5,2</span>
+                        <span data-plugin="peityLine" data-skin="red">0,-3,-6,-4,-5,-4,-7,-3,-5,-2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Bar Charts</td>
+                      <td>
+                        <span data-plugin="peityBar" data-skin="red">5,3,9,6,5,9,7,3,5,2</span>
+                        <span data-plugin="peityBar" data-skin="red">5,3,2,-1,-3,-2,2,3,5,2</span>
+                        <span data-plugin="peityBar" data-skin="red">0,-3,-6,-4,-5,-4,-7,-3,-5,-2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Dynamic Charts</td>
+                      <td>
+                        <span id="examplePeityDynamicRed" data-plugin="peityLine" data-skin="red">5,3,9,6,5,9,7,3,5,2,5,3,9,6,5,9,7,3,5,2</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- End Example Red -->
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="col-lg-6">
+                <!-- Example Green -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Green</h4>
+                  <table class="table table-striped">
+                    <tr>
+                      <td>Pie Charts</td>
+                      <td>
+                        <span data-plugin="peityPie" data-skin="green">1/5</span>
+                        <span data-plugin="peityPie" data-skin="green">226/360</span>
+                        <span data-plugin="peityPie" data-skin="green">0.52/1.561</span>
+                        <span data-plugin="peityPie" data-skin="green">1,4</span>
+                        <span data-plugin="peityPie" data-skin="green">226,134</span>
+                        <span data-plugin="peityPie" data-skin="green">0.52,1.041</span>
+                        <span data-plugin="peityPie" data-skin="green">1,2,3,2,2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Donut Charts</td>
+                      <td>
+                        <span data-plugin="peityDonut" data-skin="green">1/5</span>
+                        <span data-plugin="peityDonut" data-skin="green">226/360</span>
+                        <span data-plugin="peityDonut" data-skin="green">0.52/1.561</span>
+                        <span data-plugin="peityDonut" data-skin="green">1,4</span>
+                        <span data-plugin="peityDonut" data-skin="green">226,134</span>
+                        <span data-plugin="peityDonut" data-skin="green">0.52,1.041</span>
+                        <span data-plugin="peityDonut" data-skin="green">1,2,3,2,2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Line Charts</td>
+                      <td>
+                        <span data-plugin="peityLine" data-skin="green">5,3,9,6,5,9,7,3,5,2</span>
+                        <span data-plugin="peityLine" data-skin="green">5,3,2,-1,-3,-2,2,3,5,2</span>
+                        <span data-plugin="peityLine" data-skin="green">0,-3,-6,-4,-5,-4,-7,-3,-5,-2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Bar Charts</td>
+                      <td>
+                        <span data-plugin="peityBar" data-skin="green">5,3,9,6,5,9,7,3,5,2</span>
+                        <span data-plugin="peityBar" data-skin="green">5,3,2,-1,-3,-2,2,3,5,2</span>
+                        <span data-plugin="peityBar" data-skin="green">0,-3,-6,-4,-5,-4,-7,-3,-5,-2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Dynamic Charts</td>
+                      <td>
+                        <span id="examplePeityDynamicGreen" data-plugin="peityLine" data-skin="green">5,3,9,6,5,9,7,3,5,2,5,3,9,6,5,9,7,3,5,2</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- End Example Green -->
+              </div>
+
+              <div class="col-lg-6">
+                <!-- Example Orange -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Orange</h4>
+                  <table class="table table-striped">
+                    <tr>
+                      <td>Pie Charts</td>
+                      <td>
+                        <span data-plugin="peityPie" data-skin="orange">1/5</span>
+                        <span data-plugin="peityPie" data-skin="orange">226/360</span>
+                        <span data-plugin="peityPie" data-skin="orange">0.52/1.561</span>
+                        <span data-plugin="peityPie" data-skin="orange">1,4</span>
+                        <span data-plugin="peityPie" data-skin="orange">226,134</span>
+                        <span data-plugin="peityPie" data-skin="orange">0.52,1.041</span>
+                        <span data-plugin="peityPie" data-skin="orange">1,2,3,2,2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Donut Charts</td>
+                      <td>
+                        <span data-plugin="peityDonut" data-skin="orange">1/5</span>
+                        <span data-plugin="peityDonut" data-skin="orange">226/360</span>
+                        <span data-plugin="peityDonut" data-skin="orange">0.52/1.561</span>
+                        <span data-plugin="peityDonut" data-skin="orange">1,4</span>
+                        <span data-plugin="peityDonut" data-skin="orange">226,134</span>
+                        <span data-plugin="peityDonut" data-skin="orange">0.52,1.041</span>
+                        <span data-plugin="peityDonut" data-skin="orange">1,2,3,2,2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Line Charts</td>
+                      <td>
+                        <span data-plugin="peityLine" data-skin="orange">5,3,9,6,5,9,7,3,5,2</span>
+                        <span data-plugin="peityLine" data-skin="orange">5,3,2,-1,-3,-2,2,3,5,2</span>
+                        <span data-plugin="peityLine" data-skin="orange">0,-3,-6,-4,-5,-4,-7,-3,-5,-2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Bar Charts</td>
+                      <td>
+                        <span data-plugin="peityBar" data-skin="orange">5,3,9,6,5,9,7,3,5,2</span>
+                        <span data-plugin="peityBar" data-skin="orange">5,3,2,-1,-3,-2,2,3,5,2</span>
+                        <span data-plugin="peityBar" data-skin="orange">0,-3,-6,-4,-5,-4,-7,-3,-5,-2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Dynamic Charts</td>
+                      <td>
+                        <span id="examplePeityDynamicOrange" data-plugin="peityLine" data-skin="orange">5,3,9,6,5,9,7,3,5,2,5,3,9,6,5,9,7,3,5,2</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- End Example Orange -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel -->
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

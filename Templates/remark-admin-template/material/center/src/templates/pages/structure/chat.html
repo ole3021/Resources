@@ -1,0 +1,134 @@
+---
+title: Chat
+---
+
+{{#extend "layout-default"}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/structure/chat.css">
+  {{/content}}
+
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title">Chat</h1>
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li class="active">Structure</li>
+        </ol>
+        <div class="page-header-actions">
+          <form>
+            <div class="input-search input-search-dark">
+              <i class="input-search-icon md-search" aria-hidden="true"></i>
+              <input type="text" class="form-control" name="" placeholder="Search...">
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="page-content">
+        <!-- Panel Title -->
+        <div class="panel">
+          <div class="panel-header">
+            <div class="panel-title">
+              <a class="pull-left" href="javascript:void(0)">
+                <i class="icon md-chevron-left" aria-hidden="true"></i>
+              </a>
+              <div class="text-right">
+                Conversation with June Lane
+                <a class="avatar margin-left-15" data-toggle="tooltip" href="#" data-placement="right"
+                title="June Lane">
+                  <img src="{{global}}/portraits/4.jpg" alt="...">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="chat-box">
+              <div class="chats">
+                <div class="chat">
+                  <div class="chat-body">
+                    <div class="chat-content" data-toggle="tooltip" title="8:30 am">
+                      <p>
+                        Hello. What can I do for you?
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat chat-right">
+                  <div class="chat-body">
+                    <div class="chat-content" data-toggle="tooltip" title="8:35 am">
+                      <p>
+                        I'm just looking around.
+                      </p>
+                      <p>Will you tell me something about yourself? </p>
+                    </div>
+                    <div class="chat-content" data-toggle="tooltip" title="8:40 am">
+                      <p>
+                        Are you there? That time!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat">
+                  <div class="chat-body">
+                    <div class="chat-content" data-toggle="tooltip" title="8:35 am">
+                      <p>
+                        Where?
+                      </p>
+                    </div>
+                    <div class="chat-content" data-toggle="tooltip" title="8:42 am">
+                      <p>
+                        OK, my name is Limingqiang. I like singing, playing basketballand so on.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat chat-right">
+                  <div class="chat-body">
+                    <div class="chat-content" data-toggle="tooltip" title="8:49 am">
+                      <p>You wait for notice.</p>
+                    </div>
+                    <div class="chat-content" data-toggle="tooltip" title="8:50 am">
+                      <p>Consectetuorem ipsum dolor sit?</p>
+                    </div>
+                    <div class="chat-content" data-toggle="tooltip" title="8:55 am">
+                      <p>OK?</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat">
+                  <div class="chat-body">
+                    <div class="chat-content" data-toggle="tooltip" title="9:00 am">
+                      <p>OK!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <form>
+              <div class="input-group form-material">
+                <span class="input-group-btn">
+                  <a href="javascript: void(0)" class="btn btn-pure btn-default icon md-camera"></a>
+                </span>
+                <input class="form-control" type="text" placeholder="Type message here ...">
+                <span class="input-group-btn">
+                  <buttn type="button" class="btn btn-pure btn-default icon md-mail-send">
+                    </button>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- End Panel Title -->
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

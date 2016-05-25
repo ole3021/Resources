@@ -1,0 +1,31 @@
+@form-material-focus-text:              @brand-primary;
+@form-material-underline-color:         @gray-lighter;
+
+// Form material
+// ========================================================================
+.form-material {
+  .form-control {
+    &, &:focus, &.focus {
+      box-shadow: none;
+      .form-material-control-underline(@form-material-focus-text, @form-material-underline-color);
+    }
+
+    &:focus, &.focus {
+      .no-cssgradients & {
+        border-bottom-color: @form-material-focus-text;
+      }
+    }
+  }
+
+  .form-control {
+    &:focus, &.focus {
+      ~ .floating-label {
+        color: @form-material-focus-text;
+      }
+    }
+  }
+}
+
+.form-material-control-underline(@text-color, @border-color) {
+  background-image: linear-gradient(@text-color, @text-color), linear-gradient(@border-color, @border-color);
+}

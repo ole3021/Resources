@@ -1,0 +1,117 @@
+// Name:            Media
+//
+// Component:       `media`
+//
+// Modifiers:       `media-lg`
+//                  `media-sm`
+//                  `media-xs`
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+// @media-border:             @divider-color-base;
+@media-meta-color:         @text-muted;
+@media-meta-font-size:     @font-size-small;
+// @media-padding-vertical:   30px;
+@media-column-spacing:     20px;
+
+
+// Component: Media
+// ========================================================================
+
+.media {
+  // padding: @media-padding-vertical 0;
+  // margin-top: 0;
+  // border-bottom: 1px solid @media-border;
+
+  &-object {
+    width: 120px;
+  }
+
+  &-left,
+  & > .pull-left {
+    padding-right: @media-column-spacing;
+  }
+
+  &-right,
+  & > .pull-right {
+    padding-left: @media-column-spacing;
+  }
+
+  &-body {
+    overflow: auto;
+  }
+
+  .media {
+    padding-bottom: 0;
+    // margin-top: 25px;
+    // border-top: 1px solid @media-border;
+    border-bottom: none;
+  }
+
+  &-meta {
+    color: @media-meta-color;
+    font-size: @media-meta-font-size;
+    margin-bottom: 3px;
+  }
+}
+
+
+// Size Modifier
+// ========================================================================
+
+// Modifier: `media-lg`
+// -------------------------
+
+.media-lg {
+  .media-object {
+    width: 160px;
+  }
+  .media {
+    margin-left: -110px;
+  }
+}
+
+
+// Modifier: `media-sm`
+// -------------------------
+
+.media-sm {
+  .media-object {
+    width: 80px;
+  }
+  .media {
+    margin-left: -70px;
+  }
+}
+
+
+// Modifier: `media-xs`
+// -------------------------
+
+.media-xs {
+  .media-object {
+    width: 60px;
+  }
+  .media {
+    margin-left: -60px;
+  }
+}
+
+
+// Media Modifier
+// ========================================================================
+
+@media screen and (min-width: @screen-sm-min) {
+  .media {
+    &-body {
+      overflow: hidden;
+    }
+
+    .media {
+      margin-left: 0;
+    }
+  }
+}

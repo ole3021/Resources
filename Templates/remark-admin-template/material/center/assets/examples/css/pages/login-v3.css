@@ -1,0 +1,59 @@
+.page-login-v3:before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: #3949ab;
+  /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzYyYThlYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxNTcxYjEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background-image: -webkit-linear-gradient(top, #3949ab 0%, #283593 100%);
+  background-image:      -o-linear-gradient(top, #3949ab 0%, #283593 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3949ab), to(#283593));
+  background-image:         linear-gradient(to bottom, #3949ab 0%, #283593 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3949ab', endColorstr='#ff283593', GradientType=0);
+  background-repeat: repeat-x;
+  background-position: center top;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+.page-login-v3 .panel {
+  width: 400px;
+  margin-bottom: 45px;
+  background: #fff;
+  border-radius: 4px;
+}
+.page-login-v3 .panel .panel-body {
+  padding: 50px 40px 40px;
+}
+.page-login-v3 .panel .brand-text {
+  margin-top: 8px;
+}
+.page-login-v3 form {
+  margin: 45px 0 30px;
+}
+.page-login-v3 form a {
+  margin-left: 20px;
+}
+.page-login-v3 form .form-material.floating + .page-login-v3 form .form-material.floating {
+  margin-top: 30px;
+}
+.page-login-v3 form .form-material label {
+  font-weight: 300;
+  color: #a3afb7;
+}
+@media (max-width: 480px) {
+  .page-login-v3 .page-content {
+    padding: 30px 20px;
+  }
+  .page-login-v3 .panel {
+    width: auto;
+    padding: 10px;
+  }
+  .page-login-v3 .panel .panel-body {
+    padding: 35px 25px 35px;
+  }
+}

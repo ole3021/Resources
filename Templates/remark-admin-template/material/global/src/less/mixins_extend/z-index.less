@@ -1,0 +1,11 @@
+// z-index
+// ----------------------------
+
+.z-index(@layer) {
+  @value: %('zindex-%s', @layer);
+  z-index: @@value;
+}
+.z-index(@layer, @step) {
+  @value: %('zindex-%s', @layer);
+  z-index: @@value + @step;
+}

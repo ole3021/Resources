@@ -1,0 +1,145 @@
+@import "vars.less";
+
+// sitemap-list
+// ===========================================
+
+// the first menu list
+.sitemap-list {
+  padding: 0;
+  margin-bottom: 30px;
+  border-top: 1px solid @color-grey-300;
+  list-style-type: none;
+  .shadow-bottom(0 1px 4px 0 rgba(0, 0, 0, 0.1));
+  
+  i {
+    margin-left: 15px;
+  }
+
+  a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: @color-blue-grey-500;
+  }
+  
+  a[href$=".html"]:hover {
+    color: #fff;
+    border-color: @color-indigo-700;
+    background-color: @color-indigo-700;
+  }
+
+  // sitemap-list item
+  > li {
+    border: 1px solid @color-grey-300;
+    border-top: none;
+    
+    &.is-parent {
+      
+      // secondary first menu
+      > a {
+        border-bottom: 1px solid @color-grey-300;
+      }
+      
+      // set the child list of secondary menu as third menu list
+      > ul {
+        padding: 0;
+        list-style-type: none;
+        
+        // third menu items
+        > li {
+          border-bottom: 1px solid @color-grey-300;
+          &:last-child {
+            border-bottom: none;
+          }
+          
+          > a {
+            padding-left: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// sitemap-list-sub
+// ===========================================
+
+// the fourth menu list
+.sitemap-list-sub {
+  list-style-type: none;
+  padding: 0;
+
+  // the fourth menu item
+  > li {
+    border-bottom: 1px solid @color-grey-300;
+    > a {
+      padding-left: 80px;
+    }
+  }
+}
+
+// responsive
+// ===========================================
+
+@media(max-width : 480px) {
+
+  // the first menu list
+  .sitemap-list {
+    padding-left: 40px;
+    border-top: none;
+    list-style-type: disc;
+    box-shadow: none;
+    
+    i {
+      display: none;
+    }
+    
+    a[href$=".html"]:hover {
+      color: @color-indigo-700;
+      border-color: transparent;
+      background-color: transparent;
+    }
+
+    > li {
+      border: none;
+
+      > a {
+        padding: 5px;
+      }
+
+      &.is-parent {
+        > a {
+          border: none;
+        }
+
+        > ul {
+          padding: 0 0 5px 26px;
+          list-style-type: circle;
+          
+          > li {
+            border: none;
+
+            > a {
+              padding:2px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // the fourth menu list
+  .sitemap-list-sub {
+    padding-left: 20px;
+    list-style-type: square;
+
+    > li {
+      border: none;
+
+      > a {
+        padding: 0;
+      }
+    }
+  }
+} 
+

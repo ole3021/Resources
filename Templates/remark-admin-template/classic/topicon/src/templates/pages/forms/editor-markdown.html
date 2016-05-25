@@ -1,0 +1,151 @@
+---
+title: Markdown
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/bootstrap-markdown/bootstrap-markdown.css">
+  {{/content}}
+
+
+  {{#content "fonts" mode="prepend"}}
+    <link rel="stylesheet" href="{{global}}/fonts/font-awesome/font-awesome.css">
+  {{/content}}
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/bootstrap-markdown/bootstrap-markdown.js"></script>
+    <script src="{{global}}/vendor/marked/marked.js"></script>
+    <script src="{{global}}/vendor/to-markdown/to-markdown.js"></script>
+  {{/content}}
+
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title">Markdown</h1>
+        <ol class="breadcrumb">
+          <li><a href="{{dest '/index.html'}}">Home</a></li>
+          <li><a href="javascript:void(0)">Forms</a></li>
+          <li><a href="javascript:void(0)">Editors</a></li>
+          <li class="active">Markdown</li>
+        </ol>
+        <div class="page-header-actions">
+          <a class="btn btn-sm btn-default btn-outline btn-round" href="https://github.com/toopay/bootstrap-markdown"
+          target="_blank">
+            <i class="icon wb-link" aria-hidden="true"></i>
+            <span class="hidden-xs">Official Website</span>
+          </a>
+        </div>
+      </div>
+      <div class="page-content container-fluid">
+        <div class="row">
+          <div class="col-lg-6">
+            <!-- Panel Standard Editor -->
+            <div class="panel">
+              <div class="panel-heading">
+                <h3 class="panel-title">Standard Editor</h3>
+              </div>
+              <div class="panel-body">
+                <p>
+                  <strong>Bootstrap-Markdown</strong> designed to be easily integrated
+                  with your bootstrap project. It exposes useful API that allow
+                  you to fully hook-in into the plugin</p>
+                <div class="example">
+                  <form>
+                    <textarea name="content" data-provide="markdown" data-iconlibrary="fa" rows="11">### Heading is here
+
+Lorem ipsum dolor sit amet, ****consectetur adipisicing elit****consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud <u>Exercitation</u> ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+*   list text here
+*   list text here
+*   1.  list text here
+    2.  list text here
+    3.  list text here
+*   list text here
+
+#### Title
+
+laboris nisi ut aliquip ex ea commodo consequat [link is here](http://www.github.com)(http://www.github.com)</textarea>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- End Panel Standard Editor -->
+          </div>
+
+          <div class="col-lg-6">
+            <!-- Panel Inline Editing -->
+            <div class="panel">
+              <div class="panel-heading">
+                <h3 class="panel-title">Inline Editing</h3>
+              </div>
+              <div class="panel-body">
+                <p>Inline editing with
+                  <strong>Bootstrap-Markdown</strong> is done by adding <code class="prettyprint">data-provide=&quot;markdown-editable&quot;</code>                  attribute</p>
+                <div class="example">
+                  <div data-provide="markdown-editable" data-iconlibrary="fa">
+                    <h3>Heading is here</h3>
+                    <p>Lorem ipsum dolor sit amet,
+                      <strong><b>consectetur adipisicing elit</b></strong>consectetur adipisicing
+                      elit, sed do eiusmod tempor incididunt ut labore et dolore
+                      magna aliqua. Ut enim ad minim veniam, quis nostrud <u>Exercitation</u>                      ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <ul class="list-unstyled">
+                      <li>list text here</li>
+                      <li>list text here</li>
+                      <li>
+                        <ol>
+                          <li>list text here</li>
+                          <li>list text here</li>
+                          <li>list text here</li>
+                        </ol>
+                      </li>
+                      <li>list text here</li>
+                    </ul>
+                    <h4>Title</h4>
+                    <p>laboris nisi ut aliquip ex ea commodo consequat <a href="http://www.github.com">link is here</a>(http://www.github.com)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Panel Inline Editing -->
+          </div>
+
+          <div class="col-lg-12">
+            <!-- Panel Examples -->
+            <div class="panel">
+              <div class="panel-heading">
+                <h3 class="panel-title">Examples</h3>
+              </div>
+              <div class="panel-body">
+
+                <form>
+                  <p>Custom width using <code>data-width="400"</code> attribute</p>
+                  <div class="example example-responsive">
+                    <textarea data-provide="markdown" data-iconlibrary="fa" data-width="400"></textarea>
+                  </div>
+                  <p>Hidden buttons using <code>data-hidden-buttons="cmdBold"</code>                    attribute</p>
+                  <div class="example">
+                    <textarea data-provide="markdown" data-iconlibrary="fa" data-hidden-buttons="cmdBold"></textarea>
+                  </div>
+                  <p>Hideable on blur using <code>data-hideable="true"</code> attribute</p>
+                  <div class="example">
+                    <textarea data-provide="markdown" data-iconlibrary="fa" data-hideable="true"></textarea>
+                  </div>
+                  <p>Savable using <code>data-savable="true"</code> attribute</p>
+                  <div class="example">
+                    <textarea data-provide="markdown" data-iconlibrary="fa" data-savable="true"></textarea>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- End Panel Examples -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

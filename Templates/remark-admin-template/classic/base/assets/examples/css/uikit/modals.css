@@ -1,0 +1,47 @@
+.example-modal {
+  display: block;
+  width: 100%;
+  padding: 35px 15px;
+  background-color: #f3f7f9;
+}
+.example-modal .modal {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: 1;
+  display: block;
+}
+.example-modal .modal .modal-dialog {
+  width: auto;
+  max-width: 600px;
+  margin: 15px auto;
+}
+.example-modal-top .center {
+  top: 0;
+  -webkit-transform: translate(-50%, 0px);
+      -ms-transform: translate(-50%, 0px);
+       -o-transform: translate(-50%, 0px);
+          transform: translate(-50%, 0px);
+}
+.example-modal-bottom .center {
+  top: auto;
+  bottom: 0 ;
+  -webkit-transform: translate(-50%, 0px);
+      -ms-transform: translate(-50%, 0px);
+       -o-transform: translate(-50%, 0px);
+          transform: translate(-50%, 0px);
+}
+.example-modal-sidebar .center {
+  top: 0;
+  right: 5px;
+  left: auto;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+.color-selector > li {
+  margin-right: 20px;
+}

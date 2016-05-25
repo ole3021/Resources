@@ -1,0 +1,79 @@
+
+.site-navbar {
+  background-color: @site-navbar-header-bg;
+
+  @media (min-width: @grid-float-breakpoint) {
+    background-color: @inverse;
+
+    .navbar-brand-logo {
+      height: 24px;
+    }
+  }
+
+  .navbar-header {
+    background-color: transparent;
+    color: @site-navbar-header-color;
+
+    .navbar-toggle {
+      color: @site-navbar-header-color;
+    }
+
+    .hamburger {
+      &:before,
+      &:after,
+      .hamburger-bar {
+        background-color: @site-navbar-header-color;
+      }
+    }
+
+    .navbar-brand {
+      color: @site-navbar-brand-color;
+      font-family: @brand-font-family;
+      cursor: pointer;
+
+      @media (min-width: @grid-float-breakpoint) {
+        color: @title-color;
+      }
+    }
+
+    @media (min-width: @grid-float-breakpoint) {
+      width: @site-menubar-unfold-width;
+    }
+  }
+
+
+  .navbar-container {
+    @media (min-width: @grid-float-breakpoint) {
+      margin-left: @site-menubar-unfold-width;
+    }
+
+    background-color: @inverse;
+  }
+
+  &.navbar-inverse {
+    .navbar-container {
+      background-color: transparent;
+    }
+  }
+
+  // for skins
+  &.navbar-inverse,
+  &[class*="bg-"][class*="00"] {
+    @media (min-width: @grid-float-breakpoint) {
+      background-color: @site-navbar-header-bg;
+    }
+
+    .navbar-brand {
+      @media (min-width: @grid-float-breakpoint) {
+        color: @site-navbar-brand-color;
+      }
+
+      .navbar-brand-logo {
+        display: inline-block !important;
+      }
+      .navbar-brand-logo.hidden-xs {
+        display: none !important;
+      }
+    }
+  }
+}

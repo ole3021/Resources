@@ -1,0 +1,94 @@
+---
+title: Panel Portlets
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/gridstack/gridstack.css">
+  {{/content}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/uikit/panel-portlets.css">
+  {{/content}}
+
+
+  {{#content "fonts" mode="prepend"}}
+    <link rel="stylesheet" href="{{global}}/fonts/font-awesome/font-awesome.css">
+  {{/content}}
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/lodash/lodash.js"></script>
+    <script src="{{global}}/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="{{global}}/vendor/gridstack/gridstack.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/panel.js"></script>
+    <script src="{{global}}/js/components/gridstack.js"></script>
+  {{/content}}
+
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li class="active">Basic UI</li>
+        </ol>
+        <h1 class="page-title">Panel Portlets</h1>
+        <div class="page-header-actions">
+          <a class="btn btn-sm btn-primary btn-round" href="http://troolee.github.io/gridstack.js/"
+          target="_blank">
+            <i class="icon md-link" aria-hidden="true"></i>
+            <span class="hidden-xs">Official Website</span>
+          </a>
+        </div>
+      </div>
+      <!-- Page Content -->
+      <div class="page-content container-fluid">
+        <div class="grid-stack" data-plugin="gridstack" data-gs-width="12" data-gs-animate="yes">
+          <div class="grid-stack-item" data-gs-x="0" data-gs-y="0" data-gs-width="4" data-gs-height="2">
+            <div class="grid-stack-item-content panel">1</div>
+          </div>
+          <div class="grid-stack-item" data-gs-x="4" data-gs-y="0" data-gs-width="4" data-gs-height="4">
+            <div class="grid-stack-item-content panels">2</div>
+          </div>
+          <div class="grid-stack-item" data-gs-x="8" data-gs-y="0" data-gs-width="2" data-gs-height="2"
+          data-gs-min-width="2" data-gs-no-resize="yes">
+            <div class="grid-stack-item-content panel">
+              <span class="fa fa-hand-o-up"></span> Drag me! </div>
+          </div>
+          <div class="grid-stack-item" data-gs-x="10" data-gs-y="0" data-gs-width="2" data-gs-height="2">
+            <div class="grid-stack-item-content panel">4</div>
+          </div>
+          <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" data-gs-width="2" data-gs-height="2">
+            <div class="grid-stack-item-content panel">5</div>
+          </div>
+          <div class="grid-stack-item" data-gs-x="2" data-gs-y="2" data-gs-width="2" data-gs-height="4">
+            <div class="grid-stack-item-content panel">6</div>
+          </div>
+          <div class="grid-stack-item" data-gs-x="8" data-gs-y="2" data-gs-width="4" data-gs-height="2">
+            <div class="grid-stack-item-content panel">7</div>
+          </div>
+          <div class="grid-stack-item" data-gs-x="0" data-gs-y="4" data-gs-width="2" data-gs-height="2">
+            <div class="grid-stack-item-content panel">8</div>
+          </div>
+          <div class="grid-stack-item" data-gs-x="4" data-gs-y="4" data-gs-width="4" data-gs-height="2">
+            <div class="grid-stack-item-content panel">9</div>
+          </div>
+          <div class="grid-stack-item" data-gs-x="8" data-gs-y="4" data-gs-width="2" data-gs-height="2">
+            <div class="grid-stack-item-content panel">10</div>
+          </div>
+          <div class="grid-stack-item" data-gs-x="10" data-gs-y="4" data-gs-width="2" data-gs-height="2">
+            <div class="grid-stack-item-content panel">11</div>
+          </div>
+        </div>
+      </div>
+      <!-- End Page Content -->
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

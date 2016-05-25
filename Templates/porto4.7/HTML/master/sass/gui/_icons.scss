@@ -1,0 +1,48 @@
+/* Icons */
+.featured-icon {
+	background: #CCC;
+	border-radius: 35px;
+	color: #FFF;
+	display: inline-block;
+	height: 35px;
+	line-height: 35px;
+	margin-#{$right}: 10px;
+	position: relative;
+	text-align: center;
+	top: 5px;
+	width: 35px;
+	i {
+		color: #FFF;
+		font-size: 0.9em;
+		font-weight: normal;
+	}
+}
+
+/* Font Awesome List */
+.sample-icon-list {
+	margin-top: 22px;
+	.sample-icon a {
+		display: block;
+		color: #222222;
+		line-height: 32px;
+		height: 32px;
+		padding-left: 10px;
+		border-radius: 4px;
+		font-size: 11px;
+		.fa, .icons {
+			width: 32px;
+			font-size: 14px;
+			display: inline-block;
+			text-align: $right;
+			margin-right: 10px;
+		}
+		&:hover {
+			color: #ffffff;
+			text-decoration: none;
+			.fa, .icons {
+				font-size: 28px;
+				vertical-align: -6px;
+			}
+		}
+	}
+}

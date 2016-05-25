@@ -1,0 +1,379 @@
+---
+title: NoteBook
+body_class: app-notebook page-aside-scroll
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/bootstrap-markdown/bootstrap-markdown.css">
+  {{/content}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/apps/notebook.css">
+  {{/content}}
+
+
+  {{#content "fonts" mode="prepend"}}
+    <link rel="stylesheet" href="{{global}}/fonts/font-awesome/font-awesome.css">
+  {{/content}}
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/marked/marked.js"></script>
+    <script src="{{global}}/vendor/bootstrap-markdown/bootstrap-markdown.js"></script>
+    <script src="{{global}}/vendor/to-markdown/to-markdown.js"></script>
+    <script src="{{global}}/vendor/slidepanel/jquery-slidePanel.js"></script>
+    <script src="{{global}}/vendor/bootstrap-contextmenu/bootstrap-contextmenu.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/plugins/action-btn.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{assets}}/js/app.js"></script>
+  {{/content}}
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/apps/notebook.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <div class="page animsition">
+      <!-- Notebook Sidebar -->
+      <div class="page-aside">
+        <div class="page-aside-switch">
+          <i class="icon md-chevron-left" aria-hidden="true"></i>
+          <i class="icon md-chevron-right" aria-hidden="true"></i>
+        </div>
+        <div class="page-aside-inner">
+          <div class="input-search">
+            <button class="input-search-btn" type="submit">
+              <i class="icon md-search" aria-hidden="true"></i>
+            </button>
+            <form>
+              <input class="form-control" type="text" placeholder="Search Keyword" name="">
+            </form>
+          </div>
+
+          <div class="app-notebook-list" data-plugin="pageAsideScroll">
+            <div data-role="container">
+              <div data-role="content">
+                <ul class="list-group">
+                  <li class="list-group-item active" data-toggle="context" data-target="#contextMenu">
+                    <h4 class="list-group-item-heading">New note</h4>
+                    <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                      vel auctor neque.</p>
+                    <div class="info">
+                      <i class="icon md-folder "></i>
+                      <span class="category">CSS</span>
+                      <span class="time">Dec 12th, 7:35 am</span>
+                    </div>
+                  </li>
+                  <li class="list-group-item" data-toggle="context" data-target="#contextMenu">
+                    <h4 class="list-group-item-heading">Neque porro</h4>
+                    <p class="list-group-item-text">Maecenas vitae consectetur nibh, sed sodales odio.</p>
+                    <div class="info">
+                      <i class="icon md-folder "></i>
+                      <span class="category">HTML</span>
+                      <span class="time">Dec 10th, 6:28 pm</span>
+                    </div>
+                  </li>
+                  <li class="list-group-item" data-toggle="context" data-target="#contextMenu">
+                    <h4 class="list-group-item-heading">Dolorem ipsum</h4>
+                    <p class="list-group-item-text">Sed sed elit sapien. Praesent in gravida felis.</p>
+                    <div class="info">
+                      <i class="icon md-folder "></i>
+                      <span class="category">JAVASCRIPT</span>
+                      <span class="time">Dec 7th, 5:16 pm</span>
+                    </div>
+                  </li>
+                  <li class="list-group-item" data-toggle="context" data-target="#contextMenu">
+                    <h4 class="list-group-item-heading">Quia dolor</h4>
+                    <p class="list-group-item-text">Nullam sit amet imperdiet eros. Ut cursus est at tortor consequat
+                      sodales.</p>
+                    <div class="info">
+                      <i class="icon md-folder "></i>
+                      <span class="category">CSS</span>
+                      <span class="time">Nov 25th, 11:53 am</span>
+                    </div>
+                  </li>
+                  <li class="list-group-item" data-toggle="context" data-target="#contextMenu">
+                    <h4 class="list-group-item-heading">Sit amet</h4>
+                    <p class="list-group-item-text">Donec placerat nulla sapien. Suspendisse nec euismod massa.</p>
+                    <div class="info">
+                      <i class="icon md-folder "></i>
+                      <span class="category">CSS</span>
+                      <span class="time">Nov 3th, 8:10 pm</span>
+                    </div>
+                  </li>
+                  <li class="list-group-item" data-toggle="context" data-target="#contextMenu">
+                    <h4 class="list-group-item-heading">Consectetur</h4>
+                    <p class="list-group-item-text">Sed maximus ex eu vulputate gravida. Integer lacinia pellentesque
+                      aliquam.</p>
+                    <div class="info">
+                      <i class="icon md-folder "></i>
+                      <span class="category">HTML</span>
+                      <span class="time">Oct 20th, 3:55 am</span>
+                    </div>
+                  </li>
+                  <li class="list-group-item" data-toggle="context" data-target="#contextMenu">
+                    <h4 class="list-group-item-heading">Adipisci velit</h4>
+                    <p class="list-group-item-text">Pellentesque eu nibh tellus. Maecenas diam ante, elementum
+                      sed erat non, mollis tincidunt felis.</p>
+                    <div class="info">
+                      <i class="icon md-folder "></i>
+                      <span class="category">PHP</span>
+                      <span class="time">Oct 18th, 10:40 pm</span>
+                    </div>
+                  </li>
+                  <li class="list-group-item" data-toggle="context" data-target="#contextMenu">
+                    <h4 class="list-group-item-heading">Nemo enim</h4>
+                    <p class="list-group-item-text">Donec purus ligula, consequat quis mattis vel, posuere vitae
+                      eros.</p>
+                    <div class="info">
+                      <i class="icon md-folder "></i>
+                      <span class="category">WORDPRESS</span>
+                      <span class="time">Oct 9th, 9:23 pm</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Notebook Sidebar -->
+
+      <div class="page-main">
+
+        <!--markdown  START-->
+        <form>
+          <textarea id="mdEdit" data-iconlibrary="fa">GitHub Flavored Markdown
+================================
+
+*View the [source of this content](http://github.github.com/github-flavored-markdown/sample_content.html).*
+
+Let's get the whole "linebreak" thing out of the way. The next paragraph contains two phrases separated by a single newline character:
+
+Roses are red
+Violets are blue
+
+The next paragraph has the same phrases, but now they are separated by two spaces and a newline character:
+
+Roses are red
+Violets are blue
+
+Oh, and one thing I cannot stand is the mangling of words with multiple underscores in them like perform_complicated_task or do_this_and_do_that_and_another_thing.
+
+A bit of the GitHub spice
+-------------------------
+
+In addition to the changes in the previous section, certain references are auto-linked:
+
+* SHA: be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
+* User@SHA ref: mojombo@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
+* User/Project@SHA: mojombo/god@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
+* \#Num: #1
+* User/#Num: mojombo#1
+* User/Project#Num: mojombo/god#1
+
+These are dangerous goodies though, and we need to make sure email addresses don't get mangled:
+
+My email addy is tom@github.com.
+
+Math is hard, let's go shopping
+-------------------------------
+
+In first grade I learned that 5 > 3 and 2 < 7. Maybe some arrows. 1 -> 2 -> 3. 9 <- 8 <- 7.
+
+Triangles man! a^2 + b^2 = c^2
+
+We all like making lists
+------------------------
+
+The above header should be an H2 tag. Now, for a list of fruits:
+
+* Red Apples
+* Purple Grapes
+* Green Kiwifruits
+
+Let's get crazy:
+
+1.  This is a list item with two paragraphs. Lorem ipsum dolor
+    sit amet, consectetuer adipiscing elit. Aliquam hendrerit
+    mi posuere lectus.
+
+    Vestibulum enim wisi, viverra nec, fringilla in, laoreet
+    vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
+    sit amet velit.
+
+2.  Suspendisse id sem consectetuer libero luctus adipiscing.
+
+What about some code **in** a list? That's insane, right?
+
+1. In Ruby you can map like this:
+
+        ['a', 'b'].map { |x| x.uppercase }
+
+2. In Rails, you can do a shortcut:
+
+        ['a', 'b'].map(&:uppercase)
+
+Some people seem to like definition lists
+
+<dl>
+  <dt>Lower cost</dt>
+  <dd>The new version of this product costs significantly less than the previous one!</dd>
+  <dt>Easier to use</dt>
+  <dd>We've changed the product so that it's much easier to use!</dd>
+</dl>
+
+I am a robot
+------------
+
+Maybe you want to print `robot` to the console 1000 times. Why not?
+
+    def robot_invasion
+      puts("robot " * 1000)
+    end
+
+You see, that was formatted as code because it's been indented by four spaces.
+
+How about we throw some angle braces and ampersands in there?
+
+    <div class="footer">
+        &copy; 2004 Foo Corporation
+    </div>
+
+Set in stone
+------------
+
+Preformatted blocks are useful for ASCII art:
+
+<pre>
+             ,-.
+    ,     ,-.   ,-.
+   / \   (   )-(   )
+   \ |  ,.>-(   )-<
+    \|,' (   )-(   )
+     Y ___`-'   `-'
+     |/__/   `-'
+     |
+     |
+     |    -hrr-
+  ___|_____________
+</pre>
+
+Playing the blame game
+----------------------
+
+If you need to blame someone, the best way to do so is by quoting them:
+
+> I, at any rate, am convinced that He does not throw dice.
+
+Or perhaps someone a little less eloquent:
+
+> I wish you'd have given me this written question ahead of time so I
+> could plan for it... I'm sure something will pop into my head here in
+> the midst of this press conference, with all the pressure of trying to
+> come up with answer, but it hadn't yet...
+>
+> I don't want to sound like
+> I have made no mistakes. I'm confident I have. I just haven't - you
+> just put me under the spot here, and maybe I'm not as quick on my feet
+> as I should be in coming up with one.
+
+Table for two
+-------------
+
+<table>
+  <tr>
+    <th>ID</th><th>Name</th><th>Rank</th>
+  </tr>
+  <tr>
+    <td>1</td><td>Tom Preston-Werner</td><td>Awesome</td>
+  </tr>
+  <tr>
+    <td>2</td><td>Albert Einstein</td><td>Nearly as awesome</td>
+  </tr>
+</table>
+
+Crazy linking action
+--------------------
+
+I get 10 times more traffic from [Google] [1] than from
+[Yahoo] [2] or [MSN] [3].
+
+  [1]: http://google.com/        "Google"
+  [2]: http://search.yahoo.com/  "Yahoo Search"
+  [3]: http://search.msn.com/    "MSN Search"
+      </textarea>
+        </form>
+        <!--markdown  END-->
+
+      </div>
+
+
+      <!-- Site Action -->
+      <div class="site-action">
+        <button type="button" class="site-action-toggle btn-raised btn btn-success btn-floating">
+          <i class="front-icon md-plus animation-scale-up" aria-hidden="true"></i>
+          <i class="back-icon md-close animation-scale-up" aria-hidden="true"></i>
+        </button>
+        <div class="site-action-buttons">
+          <button type="button" data-action="trash" class="btn-raised btn btn-success btn-floating animation-slide-bottom">
+            <i class="icon md-delete" aria-hidden="true"></i>
+          </button>
+          <button type="button" data-action="folder" class="btn-raised btn btn-success btn-floating animation-slide-bottom">
+            <i class="icon md-print" aria-hidden="true"></i>
+          </button>
+          <button type="button" data-action="folder" class="btn-raised btn btn-success btn-floating animation-slide-bottom">
+            <i class="icon md-share" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <!-- End Site Action -->
+
+
+      <!-- Create New Notes Modal -->
+      <div class="modal fade" id="addNewNote" aria-hidden="true" aria-labelledby="addNewNote"
+      role="dialog" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" aria-hidden="true" data-dismiss="modal">×</button>
+              <h4 class="modal-title">Create New Notes</h4>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <input class="form-control" type="text" name="noteName" placeholder="Enter a new note name">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer text-left">
+              <button class="btn btn-primary" data-dismiss="modal" type="submit">Create</button>
+              <a class="btn btn-sm btn-white btn-pure" data-dismiss="modal" href="javascript:void(0)">Cancel</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Create New Notes Modal -->
+
+
+      <!--contextMenu STRAT-->
+      <div id="contextMenu">
+        <ul class="dropdown-menu" role="menu">
+          <li><a tabindex="-1"><i class="icon md-folder" aria-hidden="true"></i> Archive</a></li>
+          <li><a tabindex="-1"><i class="icon md-delete" aria-hidden="true"></i> Delete</a></li>
+          <li><a tabindex="-1"><i class="icon md-print" aria-hidden="true"></i> Print</a></li>
+          <li><a tabindex="-1"><i class="icon md-share" aria-hidden="true"></i> Share</a></li>
+        </ul>
+      </div>
+      <!--contextMenu END-->
+
+    </div>
+
+  {{/content}}
+{{/extend}}

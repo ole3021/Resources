@@ -1,0 +1,783 @@
+---
+title: Chart Widgets
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/chartist-js/chartist.css">
+  {{/content}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/widgets/chart.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/sparkline/jquery.sparkline.min.js"></script>
+    <script src="{{global}}/vendor/chartist-js/chartist.min.js"></script>
+    <script src="{{global}}/vendor/matchheight/jquery.matchHeight-min.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/matchheight.js"></script>
+  {{/content}}
+
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/widgets/chart.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title">Chart Widgets</h1>
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li><a href="javascript:void(0)">Widgets</a></li>
+          <li class="active">Chart</li>
+        </ol>
+        <div class="page-header-actions">
+          <button type="button" class="btn btn-sm btn-primary btn-round">
+            <span class="text hidden-xs">Settings</span>
+            <i class="icon md-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <div class="page-content container-fluid">
+        <div class="row" data-plugin="matchHeight" data-by-row="true">
+          <div class="col-xlg-6 col-sm-12">
+            <!-- Panel Linearea -->
+            <div class="widget widget-shadow" id="chartThreeLinearea">
+              <div class="widget-content height-full">
+                <div class="padding-top-30 padding-horizontal-30" style="height:calc(100% - 250px);">
+                  <div class="row">
+                    <div class="col-xs-8">
+                      <p class="font-size-20 grey-700">Eneergy Predictions</p>
+                      <p>Quisque volutpat condimentum velit. Class aptent taciti</p>
+                      <div class="counter text-left">
+                        <span class="counter-icon red-600"><i class="icon md-caret-up" aria-hidden="true"></i></span>
+                        <span class="counter-number">2,250</span>
+                      </div>
+                    </div>
+                    <div class="col-xs-4">
+                      <div class="pull-right clearfix">
+                        <ul class="list-unstyled">
+                          <li class="margin-bottom-5">
+                            <i class="icon md-circle green-600 margin-right-5" aria-hidden="true"></i>                            Diretary intake
+                          </li>
+                          <li class="margin-bottom-5">
+                            <i class="icon md-circle orange-600 margin-right-5" aria-hidden="true"></i>                            Motion
+                          </li>
+                          <li class="margin-bottom-5">
+                            <i class="icon md-circle red-600 margin-right-5" aria-hidden="true"></i>                            Other
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ct-chart height-250"></div>
+              </div>
+            </div>
+            <!-- End Panel Linearea -->
+          </div>
+
+          <div class="col-xlg-3 col-md-6 col-sm-12">
+            <!-- Panel Line Pie -->
+            <div class="widget widget-shadow" id="chartLinePie">
+              <div class="widget-content">
+                <div class="bg-red-600 white padding-30">
+                  <div class="font-size-20 clearfix">
+                    Power
+                    <span class="pull-right">
+                      <i class="icon md-caret-up" aria-hidden="true"></i> 260
+                    </span>
+                  </div>
+                  <div class="font-size-14 red-200 clearfix">
+                    2015.1.20
+                    <span class="pull-right">+12.5(2.8%)</span>
+                  </div>
+                  <div class="ct-chart chart-line height-100"></div>
+                </div>
+                <div class="padding-30">
+                  <div class="row no-space">
+                    <div class="col-xs-7">
+                      <p>
+                        <span class="icon md-circle cyan-600 margin-right-5"></span>35% Dietary intake</p>
+                      <p class="margin-bottom-20">
+                        <span class="icon md-circle red-600 margin-right-5"></span>65% Motion capture</p>
+                      <p>TOTAL POWER</p>
+                      <p class="font-size-20 margin-bottom-0" style="line-height:1;">4200</p>
+                    </div>
+                    <div class="col-xs-5">
+                      <div class="ct-chart chart-pie" style="height: 129px;">
+                        <div class="vertical-align text-center" style="height:100%; width:100%; position:absolute; left:0; top:0;">
+                          <div class="font-size-20  vertical-align-middle" style="line-height:1.1 ">
+                            <div>3600</div>
+                            <div>Total</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Panel Line Pie -->
+          </div>
+
+          <div class="col-xlg-3 col-md-6 col-sm-12">
+            <!-- Panel Bar Pie -->
+            <div class="widget widget-shadow" id="chartBarPie">
+              <div class="widget-content">
+                <div class="bg-blue-600 white padding-30">
+                  <div class="font-size-20 clearfix">
+                    Power
+                    <span class="pull-right">
+                      <i class="icon md-caret-up" aria-hidden="true"></i> 720
+                    </span>
+                  </div>
+                  <div class="font-size-14 blue-200 clearfix">
+                    2015.1.20
+                    <span class="pull-right">+120.5(5.0%)</span>
+                  </div>
+                  <div class="ct-chart chart-bar height-100"></div>
+                </div>
+                <div class="padding-30">
+                  <div class="row no-space">
+                    <div class="col-xs-7">
+                      <p>
+                        <span class="icon md-circle purple-600 margin-right-5"></span>70% Dietary intake</p>
+                      <p class="margin-bottom-20">
+                        <span class="icon md-circle blue-600 margin-right-5"></span>30% Motion capture</p>
+                      <p>TOTAL POWER</p>
+                      <p class="font-size-20 margin-bottom-0" style="line-height:1;">6200</p>
+                    </div>
+                    <div class="col-xs-5">
+                      <div class="ct-chart chart-pie" style="height: 129px;">
+                        <div class="vertical-align text-center" style="height:100%; width:100%; position:absolute; left:0; top:0;">
+                          <div class="font-size-20  vertical-align-middle" style="line-height:1.1 ">
+                            <div>4400</div>
+                            <div>Total</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Panel Bar Pie -->
+          </div>
+
+          <div class="col-xlg-6 col-sm-12">
+            <!-- Panel Bar Stacked -->
+            <div class="widget widget-shadow" id="chartBarStacked">
+              <div class="widget-content padding-30 height-full">
+                <div class="chart-header padding-bottom-10" style="height:calc(100% - 350px);">
+                  <div class="font-size-20 inline-block">
+                    Overview of
+                    <div class="btn-group btn-group-flat vertical-align-bottom margin-left-3 font-size-20">
+                      <div data-toggle="dropdown" aria-expanded="false" style="cursor: pointer;" role="complementary">
+                        Last year
+                        <span class="caret"></span>
+                      </div>
+                      <ul class="dropdown-menu" role="menu">
+                        <li role="presentation"><a href="javascript:void(0)" role="menuitem">The year before last</a></li>
+                        <li role="presentation"><a href="javascript:void(0)" role="menuitem">Three years ago</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <ul class="list-inline pull-right">
+                    <li>
+                      <span class="icon md-circle blue-600 margin-right-5"></span>TYPE1</li>
+                    <li>
+                      <span class="icon md-circle purple-600 margin-right-5"></span>TYPE2</li>
+                    <li>
+                      <span class="icon md-circle grey-500 margin-right-5"></span>TYPE3</li>
+                  </ul>
+                </div>
+                <div class="ct-chart height-350"></div>
+              </div>
+            </div>
+            <!-- End Panel Bar Stacked -->
+          </div>
+
+          <div class="col-xlg-3 col-lg-6 col-sm-12">
+            <!-- Panel Pie -->
+            <div class="widget widget-shadow" id="chartPie">
+              <div class="widget-content padding-30 height-full">
+                <div class="font-size-20 text-center" style="height:calc(100% - 350px);">
+                  Summary of
+                  <div class="btn-group btn-group-flat vertical-align-bottom font-size-20">
+                    <div data-toggle="dropdown" aria-expanded="false" style="cursor: pointer;" role="complementary">
+                      Last month
+                      <span class="caret"></span>
+                    </div>
+                    <ul class="dropdown-menu" role="menu">
+                      <li role="presentation"><a href="javascript:void(0)" role="menuitem">The month before last</a></li>
+                      <li role="presentation"><a href="javascript:void(0)" role="menuitem">Three months ago</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="ct-chart height-250"></div>
+                <div class="row no-space margin-top-40">
+                  <div class="col-xs-4">
+                    <div class="counter">
+                      <div class="counter-number-group font-size-14">
+                        <span class="counter-number-related">
+                          <span class="icon md-circle purple-600"></span>
+                        </span>
+                        <span class="counter-number font-size-24">35%</span>
+                        <span class="counter-number-related font-size-14">42</span>
+                      </div>
+                      <div class="counter-label text-uppercase">TYPE A</div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4">
+                    <div class="counter">
+                      <div class="counter-number-group font-size-14">
+                        <span class="counter-number-related">
+                          <span class="icon md-circle red-600"></span>
+                        </span>
+                        <span class="counter-number font-size-24">20%</span>
+                        <span class="counter-number-related font-size-14">24</span>
+                      </div>
+                      <div class="counter-label text-uppercase">TYPE B</div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4">
+                    <div class="counter text-center">
+                      <div class="counter-number-group font-size-14">
+                        <span class="counter-number-related">
+                          <span class="icon md-circle blue-600"></span>
+                        </span>
+                        <span class="counter-number font-size-24">45%</span>
+                        <span class="counter-number-related font-size-14">54</span>
+                      </div>
+                      <div class="counter-label text-uppercase">TYPE C</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Panel Pie -->
+          </div>
+
+          <div class="col-xlg-3 col-lg-6 col-sm-12">
+            <div class="row">
+              <div class="col-lg-12 col-sm-6">
+                <!-- Panel Bar Simple -->
+                <div class="widget widget-shadow" id="chartBarSimple">
+                  <div class="widget-content padding-30">
+                    <div class="counter text-left">
+                      <span class="counter-number">3650</span>
+                      <div class="counter-label text-uppercase margin-bottom-20">views of your project</div>
+                    </div>
+                    <div class="ct-chart height-100"></div>
+                  </div>
+                </div>
+                <!-- End Panel Bar Simple -->
+              </div>
+
+              <div class="col-lg-12 col-sm-6">
+                <!-- Panel Linearea Simple -->
+                <div class="widget widget-shadow" id="chartLineareaSimple">
+                  <div class="widget-content padding-30">
+                    <div class="counter text-left">
+                      <span class="counter-number">3650</span>
+                      <div class="counter-label text-uppercase margin-bottom-20">views of your project</div>
+                    </div>
+                    <div class="ct-chart height-100"></div>
+                  </div>
+                </div>
+                <!-- End Panel Linearea Simple -->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xlg-3 col-sm-12">
+            <div class="row">
+              <div class="col-xlg-12 col-sm-6">
+                <!-- Panel Linearea Withfooter -->
+                <div class="widget widget-shadow" id="chartLineareaWithfooter">
+                  <div class="widget-content">
+                    <div class="padding-30">
+                      <div class="font-size-20 margin-bottom-20">
+                        Lorem ipsum
+                        <span class="pull-right"><i class="icon md-caret-up red-600 margin-right-10" aria-hidden="true"></i>1,750</span>
+                      </div>
+                      <div class="ct-chart height-100"></div>
+                    </div>
+                    <div class="text-center padding-horizontal-30 padding-vertical-15" style="border-top:1px solid #e9eaeb">
+                      <div class="row">
+                        <div class="col-xs-4">
+                          <div class="counter">
+                            <span class="counter-number">1,230</span>
+                            <div class="counter-bottom text-uppercase">TYPE A</div>
+                          </div>
+                        </div>
+                        <div class="col-xs-4">
+                          <div class="counter">
+                            <span class="counter-number">470</span>
+                            <div class="counter-bottom text-uppercase">TYPE B</div>
+                          </div>
+                        </div>
+                        <div class="col-xs-4">
+                          <div class="counter">
+                            <span class="counter-number">50</span>
+                            <div class="counter-bottom text-uppercase">TYPE C</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Panel Linearea Withfooter -->
+              </div>
+              <div class="col-xlg-12 col-sm-6">
+                <!-- Panel Bar Withfooter -->
+                <div class="widget widget-shadow" id="chartBarWithfooter">
+                  <div class="widget-content">
+                    <div class="padding-30">
+                      <div class="font-size-20 margin-bottom-20">
+                        Lorem ipsum
+                        <span class="pull-right"><i class="icon md-caret-up red-600 margin-right-10" aria-hidden="true"></i>2,250</span>
+                      </div>
+                      <div class="ct-chart height-100"></div>
+                    </div>
+                    <div class="text-center padding-horizontal-30 padding-vertical-15" style="border-top:1px solid #e9eaeb">
+                      <div class="row">
+                        <div class="col-xs-4">
+                          <div class="counter">
+                            <span class="counter-number">1,230</span>
+                            <div class="counter-bottom text-uppercase">TYPE A</div>
+                          </div>
+                        </div>
+                        <div class="col-xs-4">
+                          <div class="counter">
+                            <span class="counter-number">470</span>
+                            <div class="counter-bottom text-uppercase">TYPE B</div>
+                          </div>
+                        </div>
+                        <div class="col-xs-4">
+                          <div class="counter">
+                            <span class="counter-number">50</span>
+                            <div class="counter-bottom text-uppercase">TYPE C</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Panel Bar Withfooter -->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xlg-9 col-sm-12">
+            <!-- Panel Linebar Large -->
+            <div class="widget widget-shadow" id="chartLinebarLarge">
+              <div class="widget-content height-full">
+                <div class="padding-30" style="calc(100% - 260px);">
+                  <div class="ct-chart chart-line height-300"></div>
+                </div>
+                <div class="padding-30 bg-grey-100">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="font-size-24 grey-700 margin-bottom-5">LAST YEAR</div>
+                      <div class="font-size-14">Today May 12 2015</div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="counter text-right">
+                        <div class="counter-number-group  green-600 font-size-24 margin-bottom-5">
+                          <span class="counter-number-related">+</span>
+                          <span class="counter-number">651</span>
+                        </div>
+                      </div>
+                      <div class="counter counter-sm text-right">
+                        <div class="counter-number-group">
+                          <span class="counter-number-related">-</span>
+                          <span class="counter-number">12</span>
+                          <span class="counter-number-related">%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="padding-30">
+                  <div class="row">
+                    <div class="col-xs-7">
+                      <div class="counter text-left">
+                        <div class="counter-number-group font-size-24 margin-bottom-5">
+                          <span class="counter-number">74,206</span>
+                          <span class="counter-number-related">K</span>
+                        </div>
+                        <div class="counter-label">Lifetime earnings</div>
+                      </div>
+                    </div>
+                    <div class="col-xs-5">
+                      <div class="ct-chart chart-bar" style="height:70px;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Panel Linebar Large -->
+          </div>
+
+          <div class="col-xlg-9 col-sm-12">
+            <!-- Panel Line Time -->
+            <div class="widget widget-shadow" id="chartLineTime">
+              <div class="widget-content">
+                <div class="padding-30 bg-cyan-400">
+                  <div class="font-size-20 white text-uppercase margin-bottom-30">Server Status</div>
+                  <div class="ct-chart chart-line height-150"></div>
+                </div>
+                <div class="padding-30">
+                  <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                      <div class="row">
+                        <div class="col-xs-6">
+                          <div class="font-size-20 margin-bottom-25 text-uppercase grey-700">Kernel Menmory</div>
+                          <div class="ct-chart chart-pie-left width-150 height-150" style="position: relative;">
+                            <div class="vertical-align text-center" style="height:100%; width:100%; position:absolute; left:0; top:0;">
+                              <div class="font-size-20  vertical-align-middle" style="line-height:1.1 ">50%</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-6">
+                          <div class="font-size-20 margin-bottom-25 text-uppercase grey-700">Physical Memory</div>
+                          <div class="ct-chart chart-pie-right width-150 height-150" style="position: relative;">
+                            <div class="vertical-align text-center" style="height:100%; width:100%; position:absolute; left:0; top:0;">
+                              <div class="font-size-20  vertical-align-middle" style="line-height:1.1 ">80%</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                      <div class="font-size-20 margin-bottom-20 text-uppercase grey-700">SYSTEM STATUS</div>
+                      <ul class="list-unstyled margin-bottom-0">
+                        <li>
+                          <div class="counter counter-sm text-left">
+                            <div class="counter-number-group margin-bottom-10">
+                              <span class="counter-number-related">Handles - </span>
+                              <span class="counter-number">82</span>
+                              <span class="counter-number-related">%</span>
+                            </div>
+                          </div>
+                          <div class="progress progress-xs">
+                            <div class="progress-bar progress-bar-info bg-blue-600" aria-valuenow="82" aria-valuemin="0"
+                            aria-valuemax="100" style="width: 82%" role="progressbar">
+                              <span class="sr-only">82%</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="counter counter-sm text-left">
+                            <div class="counter-number-group margin-bottom-10">
+                              <span class="counter-number-related">Threads - </span>
+                              <span class="counter-number">66</span>
+                              <span class="counter-number-related">%</span>
+                            </div>
+                          </div>
+                          <div class="progress progress-xs">
+                            <div class="progress-bar progress-bar-info bg-red-600" aria-valuenow="66" aria-valuemin="0"
+                            aria-valuemax="100" style="width: 66%" role="progressbar">
+                              <span class="sr-only">66%</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="counter counter-sm text-left">
+                            <div class="counter-number-group margin-bottom-10">
+                              <span class="counter-number-related">Proccess - </span>
+                              <span class="counter-number">43</span>
+                              <span class="counter-number-related">%</span>
+                            </div>
+                          </div>
+                          <div class="progress progress-xs margin-bottom-0">
+                            <div class="progress-bar progress-bar-info bg-green-600" aria-valuenow="43" aria-valuemin="0"
+                            aria-valuemax="100" style="width: 43%" role="progressbar">
+                              <span class="sr-only">43%</span>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Panel Line Time -->
+          </div>
+
+          <div class="col-xlg-3 col-sm-6">
+            <!-- Panel Barline Mix -->
+            <div class="widget" id="chartBarlineMix">
+              <div class="padding-30 white bg-orange-600">
+                <div class="text-center font-size-20" style="height:30px;">Last 30 days</div>
+                <div class="ct-chart chart-bar height-200">
+                  <div class="ct-chart chart-line height-200"></div>
+                </div>
+              </div>
+              <div class="bg-white padding-30 font-size-14" style="height:calc(100% - 290px);">
+                <div class="counter counter-md text-left">
+                  <div class="counter-label text-uppercase margin-bottom-5">Viwers</div>
+                  <span class="counter-number">10,251,541</span>
+                </div>
+                <div class="counter counter-md text-left margin-top-30">
+                  <div class="counter-label text-uppercase margin-bottom-5">Sales</div>
+                  <div class="counter-number-group">
+                    <span class="counter-number-related">$</span>
+                    <span class="counter-number">120,232,874</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Panel Barline Mix -->
+          </div>
+
+          <div class="col-xlg-3 col-sm-6">
+            <!-- Panel Linepoint -->
+            <div class="widget widget-shadow" id="chartLinepoint">
+              <div class="widget-content height-full">
+                <div class="padding-30 padding-top-10 height-200">
+                  <h3 class="margin-bottom-30">Sales Analysis
+                    <span class="badge badge-info pull-right">View</Span>
+                  </h3>
+                  <div class="row">
+                    <div class="col-xs-4">
+                      <div class="counter counter-sm">
+                        <div class="counter-label">TOTAL</div>
+                        <div class="counter-number red-600">20,186</div>
+                      </div>
+                    </div>
+                    <div class="col-xs-4">
+                      <div class="counter counter-sm">
+                        <div class="counter-label">TODAY</div>
+                        <div class="counter-number red-600">36</div>
+                      </div>
+                    </div>
+                    <div class="col-xs-4">
+                      <div class="counter counter-sm">
+                        <div class="counter-label">WEEK</div>
+                        <div class="counter-number red-600">60</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="padding-horizontal-30 padding-bottom-50">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent
+                  libero.
+                </div>
+                <div class="ct-chart height-150 margin-top-10"></div>
+              </div>
+            </div>
+            <!-- End Panel Linepoint -->
+          </div>
+
+          <div class="col-xlg-3 col-lg-5 col-sm-12">
+            <!-- Panel Stacked Bar -->
+            <div class="widget widget-shadow" id="chartStackedBar">
+              <div class="widget-content height-full">
+                <div class="padding-30 height-150">
+                  <p>MARKET DOW</p>
+                  <div class="red-600">
+                    <i class="md-caret-up font-size-20 margin-right-5"></i>
+                    <span class="font-size-30">26,580.62</span>
+                  </div>
+                </div>
+                <div class="counters padding-bottom-20 padding-horizontal-30" style="height:calc(100% - 400px);">
+                  <div class="row">
+                    <div class="col-xs-4">
+                      <div class="counter counter-sm">
+                        <div class="counter-label text-uppercase">APPL</div>
+                        <div class="counter-number-group">
+                          <span class="counter-number-related green-600">+</span>
+                          <span class="counter-number green-600">82.24</span>
+                          <span class="counter-number-related green-600">%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-4">
+                      <div class="counter counter-sm">
+                        <div class="counter-label text-uppercase">FB</div>
+                        <div class="counter-number-group">
+                          <span class="counter-number-related red-600">-</span>
+                          <span class="counter-number red-600">12.06</span>
+                          <span class="counter-number-related red-600">%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-4">
+                      <div class="counter counter-sm">
+                        <div class="counter-label text-uppercase">GOOG</div>
+                        <div class="counter-number-group">
+                          <span class="counter-number-related green-600">+</span>
+                          <span class="counter-number green-600">24.86</span>
+                          <span class="counter-number-related green-600">%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ct-chart height-250"></div>
+              </div>
+            </div>
+            <!-- End Panel Stacked Bar -->
+          </div>
+
+          <div class="col-xlg-6 col-lg-7 col-sm-12">
+            <!-- Panel Timeline Two -->
+            <div class="widget widget-shadow" id="chartTimelineTwo">
+              <div class="widget-content height-full">
+                <div class="padding-30">
+                  <div class="row">
+                    <div class="col-xs-4">
+                      <div class="counter text-left">
+                        <div class="counter-label grey-700">You have earned</div>
+                        <div class="counter-number-group">
+                          <span class="counter-number red-600">21,451</span>
+                          <span class="counter-number-related red-600">USD</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-4">
+                      <div class="counter text-left">
+                        <div class="counter-label">Currently</div>
+                        <div class="counter-number-group">
+                          <span class="counter-number">227.34</span>
+                          <span class="counter-number-related">KB</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-4">
+                      <div class="counter text-left">
+                        <div class="counter-label">Average</div>
+                        <div class="counter-number-group">
+                          <span class="counter-number">117.65</span>
+                          <span class="counter-number-related">MB</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <ul class="list-unstyled" style="height:calc(100% - 313px);">
+                  <li class="padding-horizontal-30 padding-vertical-15">
+                    <div class="row">
+                      <div class="col-sm-3 grey-600">Mail App</div>
+                      <div class="col-sm-6">Redesign project template</div>
+                      <div class="col-sm-3 green-600">227.34KB</div>
+                    </div>
+                  </li>
+                  <li class="padding-horizontal-30 padding-vertical-15">
+                    <div class="row">
+                      <div class="col-sm-3 grey-600">Calendar</div>
+                      <div class="col-sm-6">Redesign project template</div>
+                      <div class="col-sm-3 green-600">128.62KB</div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="ct-chart height-200"></div>
+              </div>
+            </div>
+            <!-- End Panel Timeline Two -->
+          </div>
+
+          <div class="col-xlg-6 col-sm-12">
+            <!-- Panel Linearea Two -->
+            <div class="widget widget-shadow" id="charLineareaTwo">
+              <div class="widget-content padding-30 height-full">
+                <div class="row" style="height:calc(100% - 300px);">
+                  <div class="col-xs-8">
+                    <div class="grey-700">YOUR TRAFFIC VIEWS</div>
+                  </div>
+                  <div class="col-xs-4">
+                    <div class="row">
+                      <div class="col-xs-6">
+                        <div class="counter counter-md">
+                          <div class="counter-number-group">
+                            <span class="counter-number">76</span>
+                            <span class="counter-number-related">%</span>
+                          </div>
+                          <div class="counter-label grey-600">PC Browser</div>
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="counter counter-md">
+                          <div class="counter-number-group">
+                            <span class="counter-number">24</span>
+                            <span class="counter-number-related">%</span>
+                          </div>
+                          <div class="counter-label grey-600">Mobile Phone</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ct-chart height-250"></div>
+                <ul class="list-inline text-center padding-top-25 height-50">
+                  <li>
+                    <i class="icon md-dot-circle blue-200 margin-right-10" aria-hidden="true"></i>                    PC BROWSER
+                  </li>
+                  <li class="margin-left-35">
+                    <i class="icon md-dot-circle teal-200 margin-right-10" aria-hidden="true"></i>                    MOBILE PHONE
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- End Panel Linearea Two -->
+          </div>
+
+          <div class="col-xlg-6 col-sm-12">
+            <!-- Panel Barline-Mix Two -->
+            <div class="widget widget-shadow" id="chartBarlineMixTwo">
+              <div class="widget-content padding-30">
+                <div class="row height-100">
+                  <div class="col-xs-4">
+                    <div class="counter counter-md text-left">
+                      <div class="counter-label">OVERALL VIEWS</div>
+                      <div class="counter-number-group">
+                        <span class="counter-number-related red-600">$</span>
+                        <span class="counter-number red-600">432,852</span>
+                      </div>
+                      <div class="counter-label">2% higher than last month</div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4">
+                    <div class="counter counter-sm text-left inline-block">
+                      <div class="counter-label">MY BALANCE</div>
+                      <div class="counter-number-group">
+                        <span class="counter-number-related">$</span>
+                        <span class="counter-number">12,346</span>
+                      </div>
+                    </div>
+                    <div class="ct-chart small-bar-one"></div>
+                  </div>
+                  <div class="col-xs-4">
+                    <div class="counter counter-sm text-left inline-block">
+                      <div class="counter-label">NEW ORDERS</div>
+                      <div class="counter-number-group">
+                        <span class="counter-number-related">$</span>
+                        <span class="counter-number">17,555</span>
+                      </div>
+                    </div>
+                    <div class="ct-chart small-bar-two"></div>
+                  </div>
+                </div>
+                <div class="ct-chart line-chart height-300 margin-top-30"></div>
+              </div>
+            </div>
+            <!-- End Panel Barline-Mix Two -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

@@ -1,0 +1,366 @@
+.site-menu {
+  font-size: 0;
+
+  &-category {
+    display: none;
+  }
+
+  &-icon {
+    display: inline-block;
+    margin-right: 4px;
+
+    .icon-fixed-width();
+  }
+
+  &-title {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  &-arrow {
+    font-family: '@{zmdi-font-name}';
+    transition: transform 0.15s;
+
+    .make-icon();
+
+    &:before {
+      content: '@{zmdi-var-chevron-right}';
+    }
+
+    position: absolute;
+    right: @site-menu-padding-horizontal;
+  }
+
+  &-item {
+    font-size: @site-menu-top-font-size;
+
+    > a {
+      display: block;
+      padding: 0 (@site-menu-padding-horizontal + 10px) 0 @site-menu-padding-horizontal;
+      line-height: @site-menu-sub-height;
+    }
+
+    &.has-sub {
+      position: relative;
+    }
+
+    &:hover {
+      > .site-menu-sub {
+        display: block;
+      }
+    }
+  }
+
+  > .site-menu-item {
+    display: inline-block;
+
+    > a {
+      display: block;
+      white-space: nowrap;
+      cursor: pointer;
+      padding: 13px 20px;
+
+      > .site-menu {
+        &-icon {
+          display: block;
+          width: 100%;
+          line-height: 1;
+          font-size: 20px;
+          margin: 2px 0 4px
+        }
+
+        &-title {
+          display: block;
+          line-height: 20px;
+        }
+
+        &-arrow {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &-sub {
+    display: none;
+    background-color: @site-menubar-bg;
+    border: 1px solid @site-menu-has-sub-border-color;
+    position: absolute;
+    left: 0;
+    top: 100%;
+
+    @shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: @shadow;
+
+    ul& {
+      padding: 5px 0;
+    }
+
+    .site-menu {
+      &-item {
+        > a {
+          width: 200px;
+        }
+      }
+
+      &-sub {
+        left: 100%;
+        top: 0;
+      }
+    }
+  }
+
+  //Status Color
+  &-item {
+    > a {
+      color: inherit;
+
+      &:hover {
+        color: @site-menu-top-hover-color;
+        background-color: @site-menu-top-hover-bg;
+      }
+    }
+
+    &:hover {
+      > a {
+        color: @site-menu-top-hover-color;
+        background-color: @site-menu-top-hover-bg;
+      }
+    }
+
+    &.active {
+      > a {
+        color: @site-menu-top-active-color;
+        background-color: @site-menu-sub-active-bg;
+      }
+    }
+  }
+}
+
+.site-menubar-dark {
+  .site-menu {
+    &-item {
+      > a {
+        color: inherit;
+
+        &:hover {
+          color: @site-menu-dark-top-hover-color;
+          background-color: @site-menu-dark-top-hover-bg;
+        }
+      }
+
+      &:hover {
+        > a {
+          color: @site-menu-dark-top-hover-color;
+          background-color: @site-menu-dark-top-hover-bg;
+        }
+      }
+
+      &.active {
+        > a {
+          color: @site-menu-dark-top-active-color;
+          background-color: @site-menu-dark-sub-active-bg;
+        }
+      }
+    }
+
+    &-sub {
+      background-color: @site-menu-dark-top-active-bg;
+    }
+  }
+}
+
+@media screen and (max-width: @screen-xs-max) {
+  .site-menu {
+    &-category {
+      display: block;
+      font-size: 15px;
+      padding: 0 24px;
+      line-height: @site-menu-top-height;
+      text-transform: uppercase;
+      margin-top: 20px;
+    }
+
+    &-title {
+      max-width: 160px;
+
+      &:first-child {
+        margin-left: (2 * @site-menu-top-font-size);
+      }
+    }
+
+    &-item {
+      > a {
+        padding: 0 @site-menu-responsive-padding;
+        line-height: @site-menu-sub-height;
+      }
+
+      &.has-sub {
+        position: relative;
+      }
+
+      &:hover {
+        > .site-menu-sub {
+          display: none;
+        }
+      }
+
+      &.open {
+        > a {
+          .site-menu-arrow {
+            .transform(rotate(90deg));
+          }
+        }
+
+        > .site-menu-sub {
+          display: block;
+        }
+      }
+    }
+
+    > .site-menu-item {
+      display: block;
+
+      > a {
+        line-height: @site-menu-top-height;
+        padding: 0 @site-menu-responsive-padding;
+
+        > .site-menu {
+          &-icon {
+            display: inline-block;
+            width: auto;
+            line-height: inherit;
+            font-size: @site-menu-top-font-size;
+            margin-right: 14px;
+            margin-bottom: 0;
+          }
+
+          &-title {
+            display: inline-block;
+            line-height: inherit;
+          }
+
+          &-arrow {
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    &-sub {
+      display: none;
+      background-color: transparent;
+      border: none;
+      position: relative;
+      top: 0;
+
+      box-shadow: none;
+
+      ul& {
+        padding: 0;
+      }
+
+      .site-menu {
+        &-item {
+          > a {
+            width: auto;
+          }
+        }
+
+        &-sub {
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+
+    //Status Color
+    &-item {
+      > a {
+        color: inherit;
+
+        &:hover {
+          color: @site-menu-top-hover-color;
+          background-color: @site-menu-top-hover-bg;
+        }
+      }
+
+      &.open {
+        background-color: @site-menu-sub-open-bg;
+
+        > a {
+          color: @site-menu-sub-open-color;
+          background-color: transparent;
+
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+
+      &.active {
+        > a {
+          color: @site-menu-top-active-color;
+          background-color: @site-menu-sub-active-bg;
+        }
+
+        &.open {
+          > a {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .site-menubar-dark {
+    .site-menu {
+      &-sub {
+        background-color: transparent;
+      }
+
+      //Status Color
+      &-item {
+        > a {
+          color: inherit;
+
+          &:hover {
+            color: @site-menu-dark-top-hover-color;
+            background-color: @site-menu-dark-top-hover-bg;
+          }
+        }
+
+        &.open {
+          background-color: @site-menu-dark-sub-open-bg;
+
+          > a {
+            color: @site-menu-dark-sub-open-color;
+            background-color: transparent;
+
+            &:hover {
+              background-color: transparent;
+            }
+          }
+        }
+
+        &.active {
+          > a {
+            color: @site-menu-dark-top-active-color;
+            background-color: @site-menu-dark-sub-active-bg;
+          }
+
+          &.open {
+            > a {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+}

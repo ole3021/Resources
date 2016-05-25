@@ -1,0 +1,136 @@
+---
+title: Document Articles
+body_class: app-documents
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/bootstrap-select/bootstrap-select.css">
+  {{/content}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/apps/documents.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/matchheight/jquery.matchHeight-min.js"></script>
+    <script src="{{global}}/vendor/bootstrap-select/bootstrap-select.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/bootstrap-select.js"></script>
+    <script src="{{global}}/js/components/matchheight.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{assets}}/js/app.js"></script>
+  {{/content}}
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/apps/documents.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title margin-bottom-10">Getting Started
+          <small>( 8 Articles )</small>
+        </h1>
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li class="active">Getting Started</li>
+        </ol>
+      </div>
+      <div class="page-content">
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-btn">
+              <select data-plugin="selectpicker" data-style="btn-inverse">
+                <option>Getting started</option>
+                <option>Configuration</option>
+                <option>Developer Tourial</option>
+                <option>Compatible Themes</option>
+              </select>
+            </div>
+            <button type="submit" class="input-search-btn">
+              <i class="icon md-search" aria-hidden="true"></i>
+            </button>
+            <input type="text" class="form-control" placeholder="Search the knowledge base...">
+          </div>
+        </div>
+
+        <div class="documents-wrap articles">
+          <ul class="blocks blocks-100 blocks-xlg-4 blocks-md-3 blocks-xs-2" data-plugin="matchHeight">
+            <li>
+              <div class="articles-item">
+                <i class="icon md-file" aria-hidden="true"></i>
+                <h4 class="title"><a href="article.html">Divitias modis theophrastus intuemur.</a></h4>
+                <p>Iudico officia morati mortis ipsas bene navigandi nemini, convicia.</p>
+              </div>
+            </li>
+            <li>
+              <div class="articles-item">
+                <i class="icon md-file" aria-hidden="true"></i>
+                <h4 class="title"><a href="article.html">Defensa depravatum amorem fodere.</a></h4>
+                <p>Primo, munere existunt nominata succumbere magnum meminerunt epicuro
+                  iactare.</p>
+              </div>
+            </li>
+            <li>
+              <div class="articles-item">
+                <i class="icon md-file" aria-hidden="true"></i>
+                <h4 class="title"><a href="article.html">Placatae acute labore maiorem.</a></h4>
+                <p>Tibi, importari libido referenda, hunc mediocris conversam civitas
+                  venire.</p>
+              </div>
+            </li>
+            <li>
+              <div class="articles-item">
+                <i class="icon md-file" aria-hidden="true"></i>
+                <h4 class="title"><a href="article.html">Inter eoque retinent andriam.</a></h4>
+                <p>Propositum chremes quod magna securi sapiens. Impendere qualisque.
+                  Affirmatis.</p>
+              </div>
+            </li>
+            <li>
+              <div class="articles-item">
+                <i class="icon md-file" aria-hidden="true"></i>
+                <h4 class="title"><a href="article.html">Firmam praeterea totam finibus.</a></h4>
+                <p>Percipiatur depulsa motu permulta tempus desistemus dicent, loquerer
+                  turpe.</p>
+              </div>
+            </li>
+            <li>
+              <div class="articles-item">
+                <i class="icon md-file" aria-hidden="true"></i>
+                <h4 class="title"><a href="article.html">Hanc cuius maiores satisfacit.</a></h4>
+                <p>Appareat cuiquam senectutem verentur, exedunt acuti oportet ex
+                  afferre.</p>
+              </div>
+            </li>
+            <li>
+              <div class="articles-item">
+                <i class="icon md-file" aria-hidden="true"></i>
+                <h4 class="title"><a href="article.html">Parta meis reprehensione bona.</a></h4>
+                <p>Appareat cuiquam senectutem verentur, exedunt acuti oportet ex
+                  afferre.</p>
+              </div>
+            </li>
+            <li>
+              <div class="articles-item">
+                <i class="icon md-file" aria-hidden="true"></i>
+                <h4 class="title"><a href="article.html">Generis acutum omittam deterritum.</a></h4>
+                <p>Discordant aspernari praeda nullam fuissent nostris, antipatrum
+                  caecilii nocet.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  {{/content}}
+{{/extend}}

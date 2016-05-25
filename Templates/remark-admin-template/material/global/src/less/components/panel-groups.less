@@ -1,0 +1,154 @@
+// Name:            Accordion
+//
+// Component:       `accordion`
+//
+// Modifiers:       'panel-group-continuous'
+//                  'panel-group-simple'
+//
+// Markup:
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@accordion-panel-title-font-size:         @font-size-base;
+@accordion-panel-color:                   @text-color;
+@accordion-panel-border:                  @border-color-base;
+@accordion-panel-radius:                  @panel-border-radius;
+@accordion-panel-title-padding:           15px 45px 15px 30px;
+@accordion-panel-body-padding:            15px 30px;
+
+// Component: Accordion
+// ========================================================================
+
+.panel-group {
+  .panel {
+    box-shadow: none;
+  }
+
+  .panel-title {
+    position: relative;
+    padding: @accordion-panel-title-padding;
+    font-size: @accordion-panel-title-font-size;
+
+    &:before,
+    &:after {
+      position: absolute;
+      top: 15px;
+      right: 30px;
+      font-family: @zmdi-font-name;
+      transition: all 300ms linear 0s;
+    }
+
+    &:before {
+      content: @zmdi-var-plus;
+    }
+
+    &:after {
+      content: @zmdi-var-minus;
+    }
+
+    &[aria-expanded="false"] {
+      &:before {
+        opacity: .4;
+      }
+
+      &:after {
+        opacity: 0;
+        .transform(~'rotate(-180deg)');
+      }
+    }
+
+    &[aria-expanded="true"] {
+      &:before {
+        opacity: 0;
+        .transform(~'rotate(180deg)');
+      }
+
+      &:after {
+        opacity: 1;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: @accordion-panel-color;
+      text-decoration: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .panel-heading + .panel-collapse {
+    margin: 0;
+  }
+
+  .panel-collapse .panel-body {
+    padding: @accordion-panel-body-padding;
+  }
+
+  .panel-heading + .panel-collapse .panel-body {
+    border-top-color: transparent;
+  }
+
+  .panel + .panel {
+    margin-top: 10px;
+  }
+}
+
+
+// Modifier: `panel-group-continuous`
+// ========================================================================
+
+.panel-group-continuous {
+  .panel {
+    border-radius: 0;
+
+    &:first-child {
+      border-radius: @accordion-panel-radius @accordion-panel-radius 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 @accordion-panel-radius @accordion-panel-radius;
+    }
+  }
+
+  .panel + .panel {
+    margin-top: 0;
+    border-top: 1px solid @accordion-panel-border;
+  }
+}
+
+
+// Modifier: `panel-group-simple`
+// ========================================================================
+
+.panel-group-simple {
+  .panel {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .panel-title {
+    padding-left: 0;
+    padding-bottom: 10px;
+
+    &:before,
+    &:after {
+      right: 5px;
+    }
+  }
+
+  .panel-collapse .panel-body {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+  }
+
+  .panel + .panel {
+    margin-top: 0;
+  }
+}

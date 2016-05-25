@@ -1,0 +1,168 @@
+---
+title: Blockquotes
+---
+
+{{#extend "layout-default"}}
+
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title">Blockquotes</h1>
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li class="active">Structure</li>
+        </ol>
+        <div class="page-header-actions">
+          <form>
+            <div class="input-search input-search-dark">
+              <i class="input-search-icon wb-search" aria-hidden="true"></i>
+              <input type="text" class="form-control" name="" placeholder="Search...">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="page-content">
+        <div class="panel">
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-lg-6">
+                <!-- Example Default -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Default</h4>
+                  <p>Wrap <code>&lt;blockquote&gt;</code> around any HTML as the quote.
+                    For straight quotes, we recommend a <code>&lt;p&gt;</code>.</p>
+                  <div class="example">
+                    <blockquote>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit integer.</p>
+                    </blockquote>
+                  </div>
+                </div>
+                <!-- End Example Default -->
+              </div>
+
+              <div class="col-lg-6">
+                <!-- Example Naming A Source -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Naming A Source</h4>
+                  <p>Add a <code>&lt;footer&gt;</code> for identifying the source.
+                    Wrap the name of the source work in <code>&lt;cite&gt;</code>.</p>
+                  <div class="example">
+                    <blockquote>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit integer.</p>
+                      <footer>Someone famous in
+                        <cite title="Source Title">Source Title</cite>
+                      </footer>
+                    </blockquote>
+                  </div>
+                </div>
+                <!-- End Example Naming A Source -->
+              </div>
+            </div>
+
+            <div class="row row-lg">
+              <div class="col-lg-6">
+                <!-- Example Alternate Displays -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Alternate Displays</h4>
+                  <p>Add <code>.blockquote-reverse</code> for a blockquote with right-aligned
+                    content.</p>
+                  <div class="example">
+                    <blockquote class="blockquote-reverse">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit integer.</p>
+                      <footer>Someone famous in
+                        <cite title="Source Title">Source Title</cite>
+                      </footer>
+                    </blockquote>
+                  </div>
+                </div>
+                <!-- End Example Alternate Displays -->
+              </div>
+
+              <div class="col-lg-6">
+                <!-- Example Cover Quote -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Cover Quote</h4>
+                  <p>Add <code>.cover-quote</code> for a blockquote with left-aligned
+                    content and additional class .blockquote-reverse for right-aligned
+                    content.</p>
+                  <div class="example">
+                    <blockquote class="cover-quote">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit integer.
+                      <footer>Someone famous in
+                        <cite title="Source Title">Source Title</cite>
+                      </footer>
+                    </blockquote>
+                  </div>
+                </div>
+                <!-- End Example Cover Quote -->
+              </div>
+            </div>
+
+            <div class="row row-lg">
+              <div class="col-sm-12">
+                <!-- Example Styles -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Styles</h4>
+                  <p>Use any of the available blockquote classes to quickly create
+                    a styled button.</p>
+                  <div class="row row-lg">
+                    <div class="col-sm-6">
+                      <div class="example">
+                        <blockquote class="blockquote blockquote-success">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                            integer.</p>
+                          <footer>Someone famous in
+                            <cite title="Source Title">Source Title</cite>
+                          </footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="example">
+                        <blockquote class="blockquote blockquote-info">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                            integer.</p>
+                          <footer>Someone famous in
+                            <cite title="Source Title">Source Title</cite>
+                          </footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="example">
+                        <blockquote class="blockquote blockquote-warning">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                            integer.</p>
+                          <footer>Someone famous in
+                            <cite title="Source Title">Source Title</cite>
+                          </footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="example">
+                        <blockquote class="blockquote blockquote-danger">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                            integer.</p>
+                          <footer>Someone famous in
+                            <cite title="Source Title">Source Title</cite>
+                          </footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Styles -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

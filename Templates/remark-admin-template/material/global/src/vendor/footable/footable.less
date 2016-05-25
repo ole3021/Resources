@@ -1,0 +1,211 @@
+@import "vars.less";
+
+// Variables
+@charPlus: @zmdi-var-plus;
+@charMinus: @zmdi-var-minus;
+
+@charCirclePlus: @zmdi-var-plus-circle;
+@charCircleMinus: @zmdi-var-minus-circle;
+
+
+@charArrowUp: @zmdi-var-long-arrow-up;
+@charArrowDown: @zmdi-var-long-arrow-down;
+@charArrowLeft: @zmdi-var-long-arrow-left;
+@charArrowRight: @zmdi-var-long-arrow-right;
+
+@charArrowSmallUp: @zmdi-var-caret-up;
+@charArrowSmallDown: @zmdi-var-caret-down;
+@charArrowSmallLeft: @zmdi-var-caret-left;
+@charArrowSmallRight: @zmdi-var-caret-right;
+
+@charArrowAltUp: @zmdi-var-chevron-up;
+@charArrowAltDown: @zmdi-var-chevron-down;
+@charArrowAltLeft: @zmdi-var-chevron-left;
+@charArrowAltRight: @zmdi-var-chevron-right;
+
+@charCircleArrowUp: @zmdi-var-caret-up-circle;
+@charCircleArrowDown: @zmdi-var-caret-down-circle;
+@charCircleArrowLeft: @zmdi-var-caret-left-circle;
+@charCircleArrowRight: @zmdi-var-caret-right-circle;
+
+@charArrowTinyUp: @zmdi-var-chevron-up;
+@charArrowTinyDown: @zmdi-var-chevron-down;
+@charArrowTinyLeft: @zmdi-var-chevron-left;
+@charArrowTinyRight: @zmdi-var-chevron-right;
+
+@charArrowSmallUpDown: @zmdi-var-unfold-more;
+
+
+@colorStriping: @table-bg-accent;
+@tr-hover: @table-bg-hover;
+
+@fontPath: @zmdi-font-path;
+@fontFootable: @zmdi-font-name;
+
+.ToggleTheme (@charCirclePlus, @charCircleMinus) {
+  > tbody > tr {
+    &.footable-detail-show > td > span.footable-toggle:before {
+      content: @charCircleMinus;
+      &:hover{
+        background-color: @tr-hover;
+      }
+    }
+
+    > td > span.footable-toggle:before {
+      content: @charCirclePlus;
+    }
+  }
+}
+
+// Classes
+
+.footable {
+  width: 100%;
+
+
+  &.breakpoint {
+    > tbody > tr {
+      &.footable-detail-show > td {
+        border-bottom:none;
+        & > span.footable-toggle:before {
+          content: @charCircleMinus;
+        }
+      }
+
+      &:hover:not(.footable-row-detail) {
+        cursor: pointer;
+      }
+
+      > td.footable-cell-detail {
+        border-top:none;
+      }
+
+      > td > span.footable-toggle {
+        display: inline-block;
+        font-family: @fontFootable;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        -webkit-font-smoothing: antialiased;
+        padding-right:5px;
+        font-size:14px;
+
+
+        &:before {
+          content: @charCirclePlus;
+        }
+      }
+    }
+
+    &.toggle-circle {
+      .ToggleTheme(@charCirclePlus, @charCircleMinus);
+    }
+
+    &.toggle-arrow {
+      .ToggleTheme(@charArrowRight, @charArrowDown);
+    }
+
+    &.toggle-arrow-small {
+      .ToggleTheme(@charArrowSmallRight, @charArrowSmallDown);
+    }
+
+    &.toggle-arrow-circle {
+      .ToggleTheme(@charCircleArrowRight, @charCircleArrowDown);
+    }
+
+    &.toggle-arrow-tiny {
+      .ToggleTheme(@charArrowTinyRight, @charArrowTinyDown);
+    }
+
+    &.toggle-medium > tbody > tr {
+      > td > span.footable-toggle {
+        font-size:18px;
+      }
+    }
+
+    &.toggle-large > tbody > tr {
+      > td > span.footable-toggle {
+        font-size:24px;
+      }
+    }
+  }
+
+  /** SORTING **/
+  > thead > tr > th {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &.footable-sortable:hover {
+      cursor:pointer;
+    }
+
+    &.footable-sorted > span.footable-sort-indicator:before {
+      content: @charArrowSmallDown;
+    }
+
+    &.footable-sorted-desc > span.footable-sort-indicator:before {
+      content: @charArrowSmallUp;
+    }
+
+    > span.footable-sort-indicator {
+      display: inline-block;
+      font-family: @fontFootable;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      -webkit-font-smoothing: antialiased;
+	  padding-left: 5px;
+
+      &:before {
+        content: @charArrowSmallUpDown;
+      }
+    }
+  }
+
+  /** PAGINATION **/
+  > tfoot .pagination {
+    margin: 0;
+  }
+
+  &.no-paging .hide-if-no-paging {
+    display: none;
+  }
+}
+
+.footable-row-detail-inner {
+	display:table;
+}
+
+.footable-row-detail-row {
+	display: table-row;
+	line-height: 1.5em;
+}
+
+.footable-row-detail-group  {
+	display: block;
+	line-height: 2em;
+	font-size: 1.2em;
+	font-weight: @font-weight-bold;
+}
+
+.footable-row-detail-name {
+	display: table-cell;
+	font-weight: @font-weight-bold;
+	padding-right: 0.5em;
+}
+
+.footable-row-detail-value {
+	display: table-cell;
+}
+
+.footable-odd {
+	background-color: @colorStriping;
+}

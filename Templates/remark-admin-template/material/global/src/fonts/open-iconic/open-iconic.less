@@ -1,0 +1,20 @@
+@import "vars.less";
+@iconic-font-path:   '.';
+@iconic-css-prefix:  io;
+@iconic-font-family: 'Iconic';
+
+@font-face {
+  font-family: '@{iconic-font-family}';
+  src: url('@{iconic-font-path}/open-iconic.eot');
+  src: url('@{iconic-font-path}/open-iconic.eot?#iconic-sm') format('embedded-opentype'), url('@{iconic-font-path}/open-iconic.woff') format('woff'), url('@{iconic-font-path}/open-iconic.ttf') format('truetype'), url('@{iconic-font-path}/open-iconic.otf') format('opentype'), url('@{iconic-font-path}/open-iconic.svg#iconic-sm') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="@{iconic-css-prefix}-"],
+[class*=" @{iconic-css-prefix}-"] {
+  font-family: '@{iconic-font-family}';
+  .make-icon();
+}
+
+@import "_open-iconic-icons.less";

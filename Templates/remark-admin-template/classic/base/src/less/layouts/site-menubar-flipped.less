@@ -1,0 +1,197 @@
+// site-menubar-flipped
+// --------------------------------------------------
+
+.site-menubar-flipped {
+  // site-navbar
+  .navbar-header {
+    @media (min-width: @grid-float-breakpoint) {
+      float: right;
+    }
+  }
+
+  // site-menubar
+  .site-menubar,
+  .site-menubar-footer {
+    right: 0;
+    left: auto;
+  }
+
+  // site-gridmenu
+  .site-gridmenu {
+    right: 0;
+    left: auto;
+  }
+
+  // Hamburger Menu Arrow Left style
+  .hamburger-arrow-left {
+    &.collapsed, &.unfolded {
+      // transform: rotate(180deg);
+
+      &:before {
+        transform: translateX(-0.1em) translateY(.1em) rotate(135deg);
+      }
+
+      &:after {
+        transform: translateX(-0.1em) translateY(-.1em) rotate(45deg);
+      }
+    }
+  }
+}
+
+// site-menubar-unfold
+// --------------------------------------------------
+
+// site-navbar-unfold
+@media screen and (max-width: @grid-float-breakpoint-max),
+screen and (min-width: @screen-lg-min) {
+  .css-menubar {
+    .site-menubar-flipped {
+      .site-navbar {
+        .navbar-container {
+          @media (min-width: @grid-float-breakpoint) {
+            margin-right: @site-menubar-unfold-width;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// page site-footer
+@media screen and (min-width: @screen-lg-min) {
+  .css-menubar {
+    .site-menubar-flipped {
+      .page,
+      .site-footer {
+        margin-right: @site-menubar-unfold-width;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+//.js-menubar {
+  .site-menubar-unfold {
+    &.site-menubar-flipped {
+      .page,
+      .site-footer {
+        margin-right: @site-menubar-unfold-width;
+        margin-left: 0;
+      }
+
+      .site-navbar {
+        .navbar-container {
+          @media (min-width: @grid-float-breakpoint) {
+            margin-right: @site-menubar-unfold-width;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+//}
+
+@media (max-width: @grid-float-breakpoint-max) {
+  //.js-menubar {
+    .site-menubar-flipped {
+      &.site-menubar-unfold {
+        .page, .site-footer {
+          margin-left: 0;
+          margin-right: auto;
+        }
+      }
+
+      &.site-menubar-open {
+        .page, .site-footer {
+          -ms-transform: translate(-@site-menubar-unfold-width, 0);
+          .transform(translate3d(-@site-menubar-unfold-width, 0, 0));
+        }
+
+        .site-menubar {
+          -ms-transform: translate(0, 0);
+          .transform(translate3d(0, 0, 0));
+        }
+      }
+    }
+  //}
+}
+
+// site-menu-fold
+// --------------------------------------------------
+
+@media screen and (min-width: @screen-sm-min) and (max-width: @screen-md-max) {
+  .css-menubar {
+    .site-menubar-flipped {
+      // site-page-fold()
+      .page, .site-footer {
+        margin-right: @site-menubar-fold-width;
+        margin-left: 0;
+      }
+
+      // site-navbar-fold()
+      .site-navbar {
+        .navbar-container {
+          @media (min-width: @grid-float-breakpoint) {
+            margin-right: @site-menubar-fold-width;
+            margin-left: 0;
+          }
+        }
+      }
+
+      // site-menu-fold()
+      .site-menu {
+        > .site-menu-item {
+          > .site-menu-sub {
+            left: auto;
+            right: @site-menubar-fold-width;
+          }
+        }
+      }
+    }
+  }
+}
+
+//.js-menubar {
+  .site-menubar-fold {
+    &.site-menubar-flipped {
+      // site-page-fold()
+      .page, .site-footer {
+        margin-right: @site-menubar-fold-width;
+        margin-left: 0;
+      }
+
+      // site-navbar-fold()
+      .site-navbar {
+        .navbar-container {
+          @media (min-width: @grid-float-breakpoint) {
+            margin-right: @site-menubar-fold-width;
+            margin-left: 0;
+          }
+        }
+      }
+
+      // site-menu-fold()
+      .site-menu {
+        > .site-menu-item {
+          > .site-menu-sub {
+            left: auto;
+            right: @site-menubar-fold-width;
+          }
+        }
+      }
+    }
+  }
+//}
+
+// responsive-phone
+// --------------------------------------------------
+
+@media (max-width: @grid-float-breakpoint-max) {
+  .site-menubar-flipped {
+    .site-menubar {
+      -ms-transform: translate(@site-menubar-unfold-width, 0);
+      .transform(translate3d(@site-menubar-unfold-width, 0, 0));
+    }
+  }
+}

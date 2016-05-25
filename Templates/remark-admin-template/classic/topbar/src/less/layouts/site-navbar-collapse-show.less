@@ -1,0 +1,20 @@
+
+@media (max-width: @grid-float-breakpoint-max) {
+  .site-navbar-collapsing {
+    transition: padding-top .35s;
+  }
+
+  body.site-navbar-collapse-show {
+    padding-top: (2 * @site-navbar-height);
+  }
+
+  .site-navbar-collapse-show {
+    .slidePanel {
+      &.slidePanel-right, &.slidePanel-left {
+        top: 135px;
+        transition: top .35s;
+        // height: ~'calc(100% - 135px)';
+      }
+    }
+  }
+}

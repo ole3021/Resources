@@ -1,0 +1,83 @@
+
+@import "vars.less";
+
+// z-index
+@fv-control-feedback-z-index: @zindex-base + 1;// v2 Ensure icon is above input groups
+
+// formValidation
+// ==================================================
+
+.fv-has-feedback {
+    position: relative;
+}
+
+.fv-control-feedback {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: @fv-control-feedback-z-index;
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+}
+
+// .fv-has-feedback .fv-control-feedback {
+    /*right: 15px;*/
+// }
+
+.fv-help-block {
+    display: block;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~ For Bootstrap form ~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.fv-form-bootstrap .help-block {
+    margin-bottom: 0;
+}
+
+.fv-form-bootstrap .tooltip-inner {
+    text-align: left;
+}
+
+/* Bootstrap stacked form without label */
+.fv-form-bootstrap .fv-icon-no-label {
+  top: 0;
+}
+
+.fv-form-bootstrap .fv-bootstrap-icon-input-group {
+  z-index: @fv-control-feedback-z-index + 9;
+}
+
+/* Bootstrap inline form */
+.form-inline.fv-form-bootstrap .form-group {
+    vertical-align: top;
+}
+
+//for add weight
+.fv-form-bootstrap .has-feedback {
+  // Enable absolute positioning
+  position: relative;
+
+  // Ensure icons don't overlap text
+  .form-control {
+    padding-right: (@input-height-base * 1.25);
+  }
+}
+
+// Feedback icon (requires .glyphicon classes)
+.fv-form-bootstrap .form-control-feedback {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: @fv-control-feedback-z-index; // Ensure icon is above input groups
+  display: block;
+  width: @input-height-base;
+  height: @input-height-base;
+  line-height: @input-height-base;
+  text-align: center;
+  pointer-events: none;
+}

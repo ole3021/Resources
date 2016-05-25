@@ -1,0 +1,172 @@
+// Name:            Navbar
+//
+// Component:       `navbar`
+//                  `navbar-avatar`
+//                  `navbar-toolbar`
+//
+// Modifiers:       `navbar-default`
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@navbar-default-shadow:           0 2px 4px rgba(0, 0, 0, 0.08);
+@navbar-avatar-size:              30px;
+@navbar-toolbar-float-max-height: 400px;
+
+// Component: Navbar
+// ========================================================================
+
+.navbar-toggle {
+  background: transparent !important;
+
+  &:hover {
+    background: transparent !important;
+  }
+}
+
+.navbar {
+  border: none;
+  .box-shadow(@navbar-default-shadow);
+}
+
+// Component: Navbar Search
+// ========================================================================
+.navbar-form {
+  .icon {
+    color: fade(@gray-darkest, 40%);
+  }
+
+  .form-control {
+    background-color: @bg-color-base;
+    border: none;
+  }
+}
+
+.navbar-search {
+  .navbar-form {
+    @media (max-width: @grid-float-breakpoint-max) {
+      border-bottom: none;
+    }
+  }
+}
+
+// Component: Navbar Search Overlap
+// ========================================================================
+.navbar-search-overlap {
+  background-color: @inverse;
+
+  .form-control {
+    background-color: transparent !important;
+
+    &:focus {
+      border-color: transparent;
+    }
+  }
+}
+
+// Color Modifier
+// ========================================================================
+
+// Modifier: `navbar-default`
+// -------------------------
+
+.navbar-default {
+  .navbar-toolbar {
+    > li > a {
+      color: @navbar-default-link-color;
+      &:hover,
+      &:focus {
+        color: @navbar-default-link-hover-color;
+        background-color: @navbar-default-link-hover-bg;
+      }
+    }
+
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-default-link-active-color;
+        background-color: @navbar-default-link-active-bg;
+      }
+    }
+
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-default-link-disabled-color;
+        background-color: @navbar-default-link-disabled-bg;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    color: @navbar-default-toggle-icon-bar-bg;
+  }
+
+  // Dropdown menu items
+  .navbar-toolbar {
+    // Remove background color from open dropdown
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-default-link-active-color;
+        background-color: @navbar-default-link-active-bg;
+      }
+    }
+  }
+}
+
+
+// Modifier: `navbar-inverse`
+// -------------------------
+.navbar-inverse {
+  .navbar-toolbar {
+    > li > a {
+      color: @navbar-inverse-link-color;
+      &:hover,
+      &:focus {
+        color: @navbar-inverse-link-hover-color;
+        background-color: @navbar-inverse-link-hover-bg;
+      }
+    }
+
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-inverse-link-active-color;
+        background-color: @navbar-inverse-link-active-bg;
+      }
+    }
+
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-inverse-link-disabled-color;
+        background-color: @navbar-inverse-link-disabled-bg;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    color: @navbar-inverse-toggle-icon-bar-bg;
+  }
+
+  // Dropdown menu items
+  .navbar-toolbar {
+    // Remove background color from open dropdown
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-inverse-link-active-color;
+        background-color: @navbar-inverse-link-active-bg;
+      }
+    }
+  }
+}

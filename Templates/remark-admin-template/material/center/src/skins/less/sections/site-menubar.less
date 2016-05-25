@@ -1,0 +1,23 @@
+
+.site-menubar {
+  background: @site-menubar-bg;
+  color: @site-menubar-color;
+
+  &-header {
+    .site-menubar-user {
+      color: #fff;
+    }
+
+    .site-menubar-email {
+      color: rgba(255, 255, 255, .6);
+    }
+  }
+
+  &.site-menubar-dark {
+    background: @site-menubar-dark-bg;
+    
+    .scrollable-inverse.scrollable .scrollable-bar-handle {
+      background: fade(@gray, 60%);;
+    }
+  }
+}

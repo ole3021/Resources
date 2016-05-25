@@ -1,0 +1,604 @@
+---
+title: Mailbox
+body_class: app-mailbox
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/slidepanel/slidePanel.css">
+    <link rel="stylesheet" href="{{global}}/vendor/bootstrap-markdown/bootstrap-markdown.css">
+    <link rel="stylesheet" href="{{global}}/vendor/select2/select2.css">
+  {{/content}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/apps/mailbox.css">
+  {{/content}}
+
+
+  {{#content "fonts" mode="prepend"}}
+    <link rel="stylesheet" href="{{global}}/fonts/font-awesome/font-awesome.css">
+  {{/content}}
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/select2/select2.min.js"></script>
+    <script src="{{global}}/vendor/slidepanel/jquery-slidePanel.js"></script>
+    <script src="{{global}}/vendor/bootstrap-markdown/bootstrap-markdown.js"></script>
+    <script src="{{global}}/vendor/marked/marked.js"></script>
+    <script src="{{global}}/vendor/to-markdown/to-markdown.js"></script>
+    <script src="{{global}}/vendor/aspaginator/jquery.asPaginator.min.js"></script>
+    <script src="{{global}}/vendor/bootbox/bootbox.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/select2.js"></script>
+    <script src="{{global}}/js/components/aspaginator.js"></script>
+    <script src="{{global}}/js/components/animate-list.js"></script>
+    <script src="{{global}}/js/plugins/action-btn.js"></script>
+    <script src="{{global}}/js/plugins/selectable.js"></script>
+    <script src="{{global}}/js/components/selectable.js"></script>
+    <script src="{{global}}/js/components/material.js"></script>
+    <script src="{{global}}/js/components/bootbox.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{assets}}/js/app.js"></script>
+  {{/content}}
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/apps/mailbox.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+
+    <div class="page bg-white animsition">
+
+      <!-- Mailbox Sidebar -->
+      <div class="page-aside">
+        <div class="page-aside-switch">
+          <i class="icon md-chevron-left" aria-hidden="true"></i>
+          <i class="icon md-chevron-right" aria-hidden="true"></i>
+        </div>
+        <div class="page-aside-inner" data-plugin="pageAsideScroll">
+          <div data-role="container">
+            <div data-role="content">
+              <div class="page-aside-section">
+                <div class="list-group">
+                  <a class="list-group-item active" href="javascript:void(0)">
+                    <span class="badge badge-danger">6</span><i class="icon md-inbox" aria-hidden="true"></i>Inbox</a>
+                  <a class="list-group-item" href="javascript:void(0)"><i class="icon md-email" aria-hidden="true"></i>Sent</a>
+                  <a class="list-group-item" href="javascript:void(0)">
+                    <span class="badge badge-info">2</span><i class="icon md-edit" aria-hidden="true"></i>Draft</a>
+                  <a class="list-group-item" href="javascript:void(0)"><i class="icon md-star" aria-hidden="true"></i>Important</a>
+                  <a class="list-group-item" href="javascript:void(0)"><i class="icon md-delete" aria-hidden="true"></i>Trash</a>
+                </div>
+              </div>
+              <div class="page-aside-section">
+                <h5 class="page-aside-title">LABEL</h5>
+                <div class="list-group has-actions">
+                  <div class="list-group-item">
+                    <div class="list-content">
+                      <i class="item-right md-circle font-size-10 red-600" aria-hidden="true"></i>
+                      <span class="list-text">Work</span>
+                      <div class="item-actions">
+                        <span class="btn btn-pure btn-icon" data-toggle="list-editable"><i class="icon md-edit" aria-hidden="true"></i></span>
+                        <span class="btn btn-pure btn-icon" data-tag="list-delete"><i class="icon md-delete" aria-hidden="true"></i></span>
+                      </div>
+                    </div>
+                    <div class="list-editable">
+                      <div class="form-group form-material">
+                        <input type="text" class="form-control empty" name="label" data-bind=".list-text"
+                        value="Work">
+                        <button type="button" class="input-editable-close icon md-close" data-toggle="list-editable-close"
+                        aria-label="Close" aria-expanded="true"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-group-item">
+                    <div class="list-content">
+                      <i class="item-right md-circle font-size-10 orange-600" aria-hidden="true"></i>
+                      <span class="list-text">Family</span>
+                      <div class="item-actions">
+                        <span class="btn btn-pure btn-icon" data-toggle="list-editable"><i class="icon md-edit" aria-hidden="true"></i></span>
+                        <span class="btn btn-pure btn-icon" data-tag="list-delete"><i class="icon md-delete" aria-hidden="true"></i></span>
+                      </div>
+                    </div>
+                    <div class="list-editable">
+                      <div class="form-group form-material">
+                        <input type="text" class="form-control empty" name="label" data-bind=".list-text"
+                        value="Family">
+                        <button type="button" class="input-editable-close icon md-close" data-toggle="list-editable-close"
+                        aria-label="Close" aria-expanded="true"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-group-item">
+                    <div class="list-content">
+                      <i class="item-right md-circle font-size-10 cyan-600" aria-hidden="true"></i>
+                      <span class="list-text">Private</span>
+                      <div class="item-actions">
+                        <span class="btn btn-pure btn-icon" data-toggle="list-editable"><i class="icon md-edit" aria-hidden="true"></i></span>
+                        <span class="btn btn-pure btn-icon" data-tag="list-delete"><i class="icon md-delete" aria-hidden="true"></i></span>
+                      </div>
+                    </div>
+                    <div class="list-editable">
+                      <div class="form-group form-material">
+                        <input type="text" class="form-control empty" name="label" data-bind=".list-text"
+                        value="Private">
+                        <button type="button" class="input-editable-close icon md-close" data-toggle="list-editable-close"
+                        aria-label="Close" aria-expanded="true"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-group-item">
+                    <div class="list-content">
+                      <i class="item-right md-circle font-size-10 green-600" aria-hidden="true"></i>
+                      <span class="list-text">Friends</span>
+                      <div class="item-actions">
+                        <span class="btn btn-pure btn-icon" data-toggle="list-editable"><i class="icon md-edit" aria-hidden="true"></i></span>
+                        <span class="btn btn-pure btn-icon" data-tag="list-delete"><i class="icon md-delete" aria-hidden="true"></i></span>
+                      </div>
+                    </div>
+                    <div class="list-editable">
+                      <div class="form-group form-material">
+                        <input type="text" class="form-control empty" name="label" data-bind=".list-text"
+                        value="Friends">
+                        <button type="button" class="input-editable-close icon md-close" data-toggle="list-editable-close"
+                        aria-label="Close" aria-expanded="true"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <a id="addLabelToggle" class="list-group-item" href="javascript:void(0)">
+                    <i class="icon md-plus" aria-hidden="true"></i> Add New Label
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mailbox Content -->
+      <div class="page-main">
+
+        <!-- Mailbox Header -->
+        <div class="page-header">
+          <h1 class="page-title">Mailbox</h1>
+          <div class="page-header-actions">
+            <form>
+              <div class="input-search input-search-dark">
+                <i class="input-search-icon md-search" aria-hidden="true"></i>
+                <input type="text" class="form-control" name="" placeholder="Search...">
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Mailbox Content -->
+        <div class="page-content page-content-table" data-selectable="selectable">
+
+          <!-- Actions -->
+          <div class="page-content-actions">
+            <div class="pull-right filter">
+              <span>Filter :</span>
+              <div class="dropdown">
+                <button type="button" class="btn btn-pure dropdown-toggle" data-toggle="dropdown"
+                aria-expanded="false">
+                  Check all
+                  <span class="icon md-chevron-down" aria-hidden="true"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right animation-scale-up animation-top-right animation-duration-250"
+                role="menu">
+                  <li><a href="javascript:void(0)">Check all</a></li>
+                  <li><a href="javascript:void(0)">Check read</a></li>
+                  <li><a href="javascript:void(0)">Check unread</a></li>
+                  <li class="divider"></li>
+                  <li><a href="javascript:void(0)">Check starred</a></li>
+                  <li><a href="javascript:void(0)">Check unstarred</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="actions-main">
+              <span class="checkbox-custom checkbox-primary checkbox-lg inline-block vertical-align-bottom">
+                <input type="checkbox" class="mailbox-checkbox selectable-all" id="select_all"
+                />
+                <label for="select_all"></label>
+              </span>
+              <div class="btn-group btn-group-flat">
+                <div class="dropdown">
+                  <button class="btn btn-icon btn-pure btn-default dropdown-toggle" data-toggle="dropdown"
+                  aria-expanded="false" type="button"><i class="icon md-folder" aria-hidden="true"></i></button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="javascript:void(0)">work</a></li>
+                    <li><a href="javascript:void(0)">Family</a></li>
+                    <li><a href="javascript:void(0)">Private</a></li>
+                    <li><a href="javascript:void(0)">Friends</a></li>
+                    <li class="divider"></li>
+                    <li><a href="javascript:void(0)">Trash</a></li>
+                    <li><a href="javascript:void(0)">Spam</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown">
+                  <button class="btn btn-icon btn-pure btn-default dropdown-toggle" data-toggle="dropdown"
+                  aria-expanded="false" type="button"><i class="icon md-tag" aria-hidden="true"></i></button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="javascript:void(0)">work</a></li>
+                    <li><a href="javascript:void(0)">Family</a></li>
+                    <li><a href="javascript:void(0)">Private</a></li>
+                    <li><a href="javascript:void(0)">Friends</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mailbox -->
+          <table id="mailboxTable" class="table" data-plugin="animateList" data-animate="fade"
+          data-child="tr">
+            <tbody>
+              <!-- 
+          <tr data-url="panel.tpl" data-toggle="slidePanel">
+            <td class="cell-60">
+              <span class="checkbox-custom checkbox-primary checkbox-lg">
+                <input type="checkbox" class="mailbox-checkbox selectable-item" id="mail_1"/>
+                <label for="mail_1"></label>
+              </span>
+            </td>
+            <td class="cell-30 responsive-hide">
+              <span class="checkbox-important checkbox-default">
+                <input type="checkbox" class="mailbox-checkbox mailbox-important" id="mail_1_important"/>
+                <label for="mail_1_important"></label>
+              </span>
+            </td>
+            <td class="cell-60 responsive-hide">
+              <a class="avatar" href="javascript:void(0)"><img class="img-responsive" src="{{global}}/portraits/11.jpg" alt="..."></a>
+            </td>
+            <td>
+              <div class="content">
+                <div class="title">Gwendolyn Wheeler</div>
+                <div class="abstract"></div>
+              </div>
+            </td>
+            <td class="cell-30 responsive-hide">
+              <i class="icon md-attachment-alt" aria-hidden="true"></i>
+            </td>
+            <td class="cell-130">
+              <div class="time">1 day ago</div>
+              <div class="identity"><i class="md-circle " aria-hidden="true"></i></div>
+            </td>
+          </tr>
+          <tr data-url="panel.tpl" data-toggle="slidePanel">
+            <td class="cell-60">
+              <span class="checkbox-custom checkbox-primary checkbox-lg">
+                <input type="checkbox" class="mailbox-checkbox selectable-item" id="mail_2"/>
+                <label for="mail_2"></label>
+              </span>
+            </td>
+            <td class="cell-30 responsive-hide">
+              <span class="checkbox-important checkbox-default">
+                <input type="checkbox" class="mailbox-checkbox mailbox-important" id="mail_2_important"/>
+                <label for="mail_2_important"></label>
+              </span>
+            </td>
+            <td class="cell-60 responsive-hide">
+              <a class="avatar" href="javascript:void(0)"><img class="img-responsive" src="{{global}}/portraits/12.jpg" alt="..."></a>
+            </td>
+            <td>
+              <div class="content">
+                <div class="title">Daniel Russell</div>
+                <div class="abstract"></div>
+              </div>
+            </td>
+            <td class="cell-30 responsive-hide">
+              <i class="icon md-attachment-alt" aria-hidden="true"></i>
+            </td>
+            <td class="cell-130">
+              <div class="time">2 days ago</div>
+              <div class="identity"><i class="md-circle " aria-hidden="true"></i></div>
+            </td>
+          </tr>
+          <tr data-url="panel.tpl" data-toggle="slidePanel">
+            <td class="cell-60">
+              <span class="checkbox-custom checkbox-primary checkbox-lg">
+                <input type="checkbox" class="mailbox-checkbox selectable-item" id="mail_3"/>
+                <label for="mail_3"></label>
+              </span>
+            </td>
+            <td class="cell-30 responsive-hide">
+              <span class="checkbox-important checkbox-default">
+                <input type="checkbox" class="mailbox-checkbox mailbox-important" id="mail_3_important"/>
+                <label for="mail_3_important"></label>
+              </span>
+            </td>
+            <td class="cell-60 responsive-hide">
+              <a class="avatar" href="javascript:void(0)"><img class="img-responsive" src="{{global}}/portraits/13.jpg" alt="..."></a>
+            </td>
+            <td>
+              <div class="content">
+                <div class="title">Sarah Graves</div>
+                <div class="abstract"></div>
+              </div>
+            </td>
+            <td class="cell-30 responsive-hide">
+              <i class="icon md-attachment-alt" aria-hidden="true"></i>
+            </td>
+            <td class="cell-130">
+              <div class="time">3 days ago</div>
+              <div class="identity"><i class="md-circle " aria-hidden="true"></i></div>
+            </td>
+          </tr>
+          <tr data-url="panel.tpl" data-toggle="slidePanel">
+            <td class="cell-60">
+              <span class="checkbox-custom checkbox-primary checkbox-lg">
+                <input type="checkbox" class="mailbox-checkbox selectable-item" id="mail_4"/>
+                <label for="mail_4"></label>
+              </span>
+            </td>
+            <td class="cell-30 responsive-hide">
+              <span class="checkbox-important checkbox-default">
+                <input type="checkbox" class="mailbox-checkbox mailbox-important" id="mail_4_important"/>
+                <label for="mail_4_important"></label>
+              </span>
+            </td>
+            <td class="cell-60 responsive-hide">
+              <a class="avatar" href="javascript:void(0)"><img class="img-responsive" src="{{global}}/portraits/14.jpg" alt="..."></a>
+            </td>
+            <td>
+              <div class="content">
+                <div class="title">Andrew Hoffman</div>
+                <div class="abstract"></div>
+              </div>
+            </td>
+            <td class="cell-30 responsive-hide">
+              <i class="icon md-attachment-alt" aria-hidden="true"></i>
+            </td>
+            <td class="cell-130">
+              <div class="time">4 days ago</div>
+              <div class="identity"><i class="md-circle " aria-hidden="true"></i></div>
+            </td>
+          </tr>
+          <tr data-url="panel.tpl" data-toggle="slidePanel">
+            <td class="cell-60">
+              <span class="checkbox-custom checkbox-primary checkbox-lg">
+                <input type="checkbox" class="mailbox-checkbox selectable-item" id="mail_5"/>
+                <label for="mail_5"></label>
+              </span>
+            </td>
+            <td class="cell-30 responsive-hide">
+              <span class="checkbox-important checkbox-default">
+                <input type="checkbox" class="mailbox-checkbox mailbox-important" id="mail_5_important"/>
+                <label for="mail_5_important"></label>
+              </span>
+            </td>
+            <td class="cell-60 responsive-hide">
+              <a class="avatar" href="javascript:void(0)"><img class="img-responsive" src="{{global}}/portraits/15.jpg" alt="..."></a>
+            </td>
+            <td>
+              <div class="content">
+                <div class="title">Camila Lynch</div>
+                <div class="abstract"></div>
+              </div>
+            </td>
+            <td class="cell-30 responsive-hide">
+              <i class="icon md-attachment-alt" aria-hidden="true"></i>
+            </td>
+            <td class="cell-130">
+              <div class="time">5 days ago</div>
+              <div class="identity"><i class="md-circle " aria-hidden="true"></i></div>
+            </td>
+          </tr>
+          <tr data-url="panel.tpl" data-toggle="slidePanel">
+            <td class="cell-60">
+              <span class="checkbox-custom checkbox-primary checkbox-lg">
+                <input type="checkbox" class="mailbox-checkbox selectable-item" id="mail_6"/>
+                <label for="mail_6"></label>
+              </span>
+            </td>
+            <td class="cell-30 responsive-hide">
+              <span class="checkbox-important checkbox-default">
+                <input type="checkbox" class="mailbox-checkbox mailbox-important" id="mail_6_important"/>
+                <label for="mail_6_important"></label>
+              </span>
+            </td>
+            <td class="cell-60 responsive-hide">
+              <a class="avatar" href="javascript:void(0)"><img class="img-responsive" src="{{global}}/portraits/16.jpg" alt="..."></a>
+            </td>
+            <td>
+              <div class="content">
+                <div class="title">Ramon Dunn</div>
+                <div class="abstract"></div>
+              </div>
+            </td>
+            <td class="cell-30 responsive-hide">
+              <i class="icon md-attachment-alt" aria-hidden="true"></i>
+            </td>
+            <td class="cell-130">
+              <div class="time">6 days ago</div>
+              <div class="identity"><i class="md-circle " aria-hidden="true"></i></div>
+            </td>
+          </tr>
+          <tr data-url="panel.tpl" data-toggle="slidePanel">
+            <td class="cell-60">
+              <span class="checkbox-custom checkbox-primary checkbox-lg">
+                <input type="checkbox" class="mailbox-checkbox selectable-item" id="mail_7"/>
+                <label for="mail_7"></label>
+              </span>
+            </td>
+            <td class="cell-30 responsive-hide">
+              <span class="checkbox-important checkbox-default">
+                <input type="checkbox" class="mailbox-checkbox mailbox-important" id="mail_7_important"/>
+                <label for="mail_7_important"></label>
+              </span>
+            </td>
+            <td class="cell-60 responsive-hide">
+              <a class="avatar" href="javascript:void(0)"><img class="img-responsive" src="{{global}}/portraits/17.jpg" alt="..."></a>
+            </td>
+            <td>
+              <div class="content">
+                <div class="title">Scott Sanders</div>
+                <div class="abstract"></div>
+              </div>
+            </td>
+            <td class="cell-30 responsive-hide">
+              <i class="icon md-attachment-alt" aria-hidden="true"></i>
+            </td>
+            <td class="cell-130">
+              <div class="time">7 days ago</div>
+              <div class="identity"><i class="md-circle " aria-hidden="true"></i></div>
+            </td>
+          </tr>
+          <tr data-url="panel.tpl" data-toggle="slidePanel">
+            <td class="cell-60">
+              <span class="checkbox-custom checkbox-primary checkbox-lg">
+                <input type="checkbox" class="mailbox-checkbox selectable-item" id="mail_8"/>
+                <label for="mail_8"></label>
+              </span>
+            </td>
+            <td class="cell-30 responsive-hide">
+              <span class="checkbox-important checkbox-default">
+                <input type="checkbox" class="mailbox-checkbox mailbox-important" id="mail_8_important"/>
+                <label for="mail_8_important"></label>
+              </span>
+            </td>
+            <td class="cell-60 responsive-hide">
+              <a class="avatar" href="javascript:void(0)"><img class="img-responsive" src="{{global}}/portraits/18.jpg" alt="..."></a>
+            </td>
+            <td>
+              <div class="content">
+                <div class="title">Nina Wells</div>
+                <div class="abstract"></div>
+              </div>
+            </td>
+            <td class="cell-30 responsive-hide">
+              <i class="icon md-attachment-alt" aria-hidden="true"></i>
+            </td>
+            <td class="cell-130">
+              <div class="time">8 days ago</div>
+              <div class="identity"><i class="md-circle " aria-hidden="true"></i></div>
+            </td>
+          </tr>
+          <tr data-url="panel.tpl" data-toggle="slidePanel">
+            <td class="cell-60">
+              <span class="checkbox-custom checkbox-primary checkbox-lg">
+                <input type="checkbox" class="mailbox-checkbox selectable-item" id="mail_9"/>
+                <label for="mail_9"></label>
+              </span>
+            </td>
+            <td class="cell-30 responsive-hide">
+              <span class="checkbox-important checkbox-default">
+                <input type="checkbox" class="mailbox-checkbox mailbox-important" id="mail_9_important"/>
+                <label for="mail_9_important"></label>
+              </span>
+            </td>
+            <td class="cell-60 responsive-hide">
+              <a class="avatar" href="javascript:void(0)"><img class="img-responsive" src="{{global}}/portraits/20.jpg" alt="..."></a>
+            </td>
+            <td>
+              <div class="content">
+                <div class="title">Marvin Nelson</div>
+                <div class="abstract"></div>
+              </div>
+            </td>
+            <td class="cell-30 responsive-hide">
+              <i class="icon md-attachment-alt" aria-hidden="true"></i>
+            </td>
+            <td class="cell-130">
+              <div class="time">9 days ago</div>
+              <div class="identity"><i class="md-circle " aria-hidden="true"></i></div>
+            </td>
+          </tr>
+         -->
+            </tbody>
+          </table>
+          <!-- pagination -->
+          <ul data-plugin="paginator" data-total="50" data-skin="pagination-gap"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-action">
+      <button type="button" class="site-action-toggle btn-raised btn btn-success btn-floating">
+        <i class="front-icon md-edit animation-scale-up" aria-hidden="true"></i>
+        <i class="back-icon md-close animation-scale-up" aria-hidden="true"></i>
+      </button>
+      <div class="site-action-buttons">
+        <button type="button" data-action="trash" class="btn-raised btn btn-success btn-floating animation-slide-bottom">
+          <i class="icon md-delete" aria-hidden="true"></i>
+        </button>
+        <button type="button" data-action="inbox" class="btn-raised btn btn-success btn-floating animation-slide-bottom">
+          <i class="icon md-inbox" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Create New Messages Modal -->
+    <div class="modal fade" id="addMailForm" aria-hidden="true" aria-labelledby="addMailForm"
+    role="dialog" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" aria-hidden="true" data-dismiss="modal">×</button>
+            <h4 class="modal-title">Create New Messages</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <select id="topicTo" class="form-control" data-plugin="select2" multiple="multiple"
+                data-placeholder="To:">
+                  <optgroup label="">
+                    <option value="AK">Alaska</option>
+                    <option value="HI">Hawaii</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="form-group">
+                <select id="topicSubject" class="form-control" data-plugin="select2" multiple="multiple"
+                data-placeholder="Subject:">
+                  <optgroup label="">
+                    <option value="AK">Alaska</option>
+                    <option value="HI">Hawaii</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="form-group">
+                <textarea name="content" data-provide="markdown" data-iconlibrary="fa" rows="10"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer text-left">
+            <button class="btn btn-primary" data-dismiss="modal" type="submit">Send</button>
+            <a class="btn btn-sm btn-white btn-pure" data-dismiss="modal" href="javascript:void(0)">Cancel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Create New Messages Modal -->
+
+    <!-- Add Label Form -->
+    <div class="modal fade" id="addLabelForm" aria-hidden="true" aria-labelledby="addLabelForm"
+    role="dialog" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" aria-hidden="true" data-dismiss="modal">×</button>
+            <h4 class="modal-title">Add New Label</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <input type="text" class="form-control" name="lablename" placeholder="Label Name"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" data-dismiss="modal" type="submit">Save</button>
+            <a class="btn btn-sm btn-white btn-pure" data-dismiss="modal" href="javascript:void(0)">Cancel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Add Label Form -->
+
+  {{/content}}
+{{/extend}}

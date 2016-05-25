@@ -1,0 +1,71 @@
+// Name:            Pager
+//
+// Component:       `pager`
+//
+// Modifiers:       `pager-round`
+//
+// Markup:
+//
+// <!-- pager -->
+// <ul class="pager">
+//     <li class="previous"><a href=""></a></li>
+//     <li class="next"><a href=""></a></li>
+// </ul>
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@pager-padding:                   10px 20px;
+@pager-color:                     @text-color;
+@pager-hover-color:               @brand-primary;
+@pager-hover-border-color:        @brand-primary;
+
+// Component: Pager
+// ========================================================================
+
+.pager {
+  li {
+    > a, > span {
+      padding: @pager-padding;
+      color: @pager-color;
+
+      transition: all .2s ease;
+    }
+
+    > a:hover, > a:focus {
+      color: @pager-hover-color;
+    }
+
+    .icon {
+      margin-top: -1px;
+    }
+
+    > a:hover,
+    > a:focus {
+      border-color: @pager-hover-border-color;
+    }
+  }
+
+  .disabled {
+    > a,
+    > a:hover,
+    > a:focus,
+    > span {
+      border-color: @pager-border;
+    }
+  }
+}
+
+// Modifier: `pager-round`
+// -------------------------
+
+.pager-round {
+  li {
+    > a,
+    > span {
+      border-radius: 1000px;
+    }
+  }
+}

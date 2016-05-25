@@ -1,0 +1,56 @@
+@import "vars.less";
+
+// var
+// =================================================================
+@switchery-bg:            @color-white;
+@switchery-border-color:  @border-color-base; // #dfdfdf
+
+// switchery
+// =================================================================
+
+.switchery {
+  background-color: @switchery-bg;
+  border: 1px solid @switchery-border-color;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-block;
+  height: 24px;
+  position: relative;
+  vertical-align: middle;
+  width: 45px;
+  user-select: none;
+  box-sizing: content-box;
+  background-clip: content-box;
+}
+
+.switchery > small {
+  background: @switchery-bg;
+  border-radius: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  height: 24px;
+  position: absolute;
+  top: 0;
+  width: 24px;
+}
+
+.switchery-small {
+  border-radius: 20px;
+  height: 20px;
+  width: 33px;
+}
+
+.switchery-small > small {
+  height: 20px;
+  width: 20px;
+}
+
+.switchery-large {
+  border-radius: 36px;
+  height: 36px;
+  width: 66px;
+}
+
+.switchery-large > small {
+  height: 36px;
+  width: 36px;
+}

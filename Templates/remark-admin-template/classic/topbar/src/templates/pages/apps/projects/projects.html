@@ -1,0 +1,382 @@
+---
+title: Projects
+body_class: app-projects
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/jquery-selective/jquery-selective.css">
+  {{/content}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/apps/projects.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/jquery-selective/jquery-selective.min.js"></script>
+    <script src="{{global}}/vendor/bootbox/bootbox.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/animate-list.js"></script>
+    <script src="{{global}}/js/components/bootbox.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{assets}}/js/app.js"></script>
+  {{/content}}
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/apps/projects.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title">Projects</h1>
+        <div class="page-header-actions">
+          <form>
+            <div class="input-search">
+              <i class="input-search-icon wb-search" aria-hidden="true"></i>
+              <input type="text" class="form-control" name="" placeholder="Search...">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="page-content">
+        <div class="projects-sort">
+          <span class="projects-sort-label">Sorted by : </span>
+          <div class="inline-block dropdown">
+            <span class="dropdown-toggle" id="projects-menu" data-toggle="dropdown" aria-expanded="false"
+            role="button">
+              Dropdown
+              <i class="icon wb-chevron-down-mini" aria-hidden="true"></i>
+            </span>
+            <ul class="dropdown-menu animation-scale-up animation-top-left animation-duration-250"
+            aria-labelledby="projects-menu" role="menu">
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem" tabindex="-1">Sort One</a>
+              </li>
+              <li class="active" role="presentation">
+                <a href="javascript:void(0)" role="menuitem" tabindex="-1">Sort Two</a>
+              </li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem" tabindex="-1">Sort Three</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="projects-wrap">
+          <ul class="blocks blocks-100 blocks-xlg-5 blocks-md-4 blocks-sm-3 blocks-xs-2"
+          data-plugin="animateList" data-child=">li">
+            <li>
+              <div class="panel">
+                <figure class="overlay overlay-hover animation-hover">
+                  <img class="caption-figure" src="{{global}}/photos/placeholder.png">
+                  <figcaption class="overlay-panel overlay-background overlay-fade text-center vertical-align">
+                    <div class="btn-group">
+                      <div class="dropdown pull-left">
+                        <button type="button" class="btn btn-icon btn-pure btn-default dropdown-toggle"
+                        title="Setting"><i class="icon wb-settings" aria-hidden="true"></i></button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="">Copy</a></li>
+                          <li><a href="">Rename</a></li>
+                        </ul>
+                      </div>
+                      <button type="button" class="btn btn-icon btn-pure btn-default" title="Delete"
+                      data-tag="project-delete"><i class="icon wb-trash" aria-hidden="true"></i></button>
+                    </div>
+                    <button type="button" class="btn btn-outline btn-default project-button">View Project</button>
+                  </figcaption>
+                </figure>
+                <div class="time pull-right">Feb 22, 2015</div>
+                <div class="text-truncate">Lorem ipsum</div>
+              </div>
+            </li>
+            <li>
+              <div class="panel">
+                <figure class="overlay overlay-hover animation-hover">
+                  <img class="caption-figure" src="{{global}}/photos/placeholder.png">
+                  <figcaption class="overlay-panel overlay-background overlay-fade text-center vertical-align">
+                    <div class="btn-group">
+                      <div class="dropdown pull-left">
+                        <button type="button" class="btn btn-icon btn-pure btn-default dropdown-toggle"
+                        title="Setting"><i class="icon wb-settings" aria-hidden="true"></i></button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="">Copy</a></li>
+                          <li><a href="">Rename</a></li>
+                        </ul>
+                      </div>
+                      <button type="button" class="btn btn-icon btn-pure btn-default" title="Delete"
+                      data-tag="project-delete"><i class="icon wb-trash" aria-hidden="true"></i></button>
+                    </div>
+                    <button type="button" class="btn btn-outline btn-default project-button">View Project</button>
+                  </figcaption>
+                </figure>
+                <div class="time pull-right">Mar 10, 2015</div>
+                <div class="text-truncate">Voluptate pariatur</div>
+              </div>
+            </li>
+            <li>
+              <div class="panel">
+                <figure class="overlay overlay-hover animation-hover">
+                  <img class="caption-figure" src="{{global}}/photos/placeholder.png">
+                  <figcaption class="overlay-panel overlay-background overlay-fade text-center vertical-align">
+                    <div class="btn-group">
+                      <div class="dropdown pull-left">
+                        <button type="button" class="btn btn-icon btn-pure btn-default dropdown-toggle"
+                        title="Setting"><i class="icon wb-settings" aria-hidden="true"></i></button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="">Copy</a></li>
+                          <li><a href="">Rename</a></li>
+                        </ul>
+                      </div>
+                      <button type="button" class="btn btn-icon btn-pure btn-default" title="Delete"
+                      data-tag="project-delete"><i class="icon wb-trash" aria-hidden="true"></i></button>
+                    </div>
+                    <button type="button" class="btn btn-outline btn-default project-button">View Project</button>
+                  </figcaption>
+                </figure>
+                <div class="time pull-right">Mar 8, 2015</div>
+                <div class="text-truncate">Laboris Excepteur</div>
+              </div>
+            </li>
+            <li>
+              <div class="panel">
+                <figure class="overlay overlay-hover animation-hover">
+                  <img class="caption-figure" src="{{global}}/photos/placeholder.png">
+                  <figcaption class="overlay-panel overlay-background overlay-fade text-center vertical-align">
+                    <div class="btn-group">
+                      <div class="dropdown pull-left">
+                        <button type="button" class="btn btn-icon btn-pure btn-default dropdown-toggle"
+                        title="Setting"><i class="icon wb-settings" aria-hidden="true"></i></button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="">Copy</a></li>
+                          <li><a href="">Rename</a></li>
+                        </ul>
+                      </div>
+                      <button type="button" class="btn btn-icon btn-pure btn-default" title="Delete"
+                      data-tag="project-delete"><i class="icon wb-trash" aria-hidden="true"></i></button>
+                    </div>
+                    <button type="button" class="btn btn-outline btn-default project-button">View Project</button>
+                  </figcaption>
+                </figure>
+                <div class="time pull-right">June 22, 2015</div>
+                <div class="text-truncate">Consequat ullamco</div>
+              </div>
+            </li>
+            <li>
+              <div class="panel">
+                <figure class="overlay overlay-hover animation-hover">
+                  <img class="caption-figure" src="{{global}}/photos/placeholder.png">
+                  <figcaption class="overlay-panel overlay-background overlay-fade text-center vertical-align">
+                    <div class="btn-group">
+                      <div class="dropdown pull-left">
+                        <button type="button" class="btn btn-icon btn-pure btn-default dropdown-toggle"
+                        title="Setting"><i class="icon wb-settings" aria-hidden="true"></i></button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="">Copy</a></li>
+                          <li><a href="">Rename</a></li>
+                        </ul>
+                      </div>
+                      <button type="button" class="btn btn-icon btn-pure btn-default" title="Delete"
+                      data-tag="project-delete"><i class="icon wb-trash" aria-hidden="true"></i></button>
+                    </div>
+                    <button type="button" class="btn btn-outline btn-default project-button">View Project</button>
+                  </figcaption>
+                </figure>
+                <div class="time pull-right">Apr 30, 2015</div>
+                <div class="text-truncate">Eiusmod amet</div>
+              </div>
+            </li>
+            <li>
+              <div class="panel">
+                <figure class="overlay overlay-hover animation-hover">
+                  <img class="caption-figure" src="{{global}}/photos/placeholder.png">
+                  <figcaption class="overlay-panel overlay-background overlay-fade text-center vertical-align">
+                    <div class="btn-group">
+                      <div class="dropdown pull-left">
+                        <button type="button" class="btn btn-icon btn-pure btn-default dropdown-toggle"
+                        title="Setting"><i class="icon wb-settings" aria-hidden="true"></i></button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="">Copy</a></li>
+                          <li><a href="">Rename</a></li>
+                        </ul>
+                      </div>
+                      <button type="button" class="btn btn-icon btn-pure btn-default" title="Delete"
+                      data-tag="project-delete"><i class="icon wb-trash" aria-hidden="true"></i></button>
+                    </div>
+                    <button type="button" class="btn btn-outline btn-default project-button">View Project</button>
+                  </figcaption>
+                </figure>
+                <div class="time pull-right">May 12, 2015</div>
+                <div class="text-truncate">ullamco quis</div>
+              </div>
+            </li>
+            <li>
+              <div class="panel">
+                <figure class="overlay overlay-hover animation-hover">
+                  <img class="caption-figure" src="{{global}}/photos/placeholder.png">
+                  <figcaption class="overlay-panel overlay-background overlay-fade text-center vertical-align">
+                    <div class="btn-group">
+                      <div class="dropdown pull-left">
+                        <button type="button" class="btn btn-icon btn-pure btn-default dropdown-toggle"
+                        title="Setting"><i class="icon wb-settings" aria-hidden="true"></i></button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="">Copy</a></li>
+                          <li><a href="">Rename</a></li>
+                        </ul>
+                      </div>
+                      <button type="button" class="btn btn-icon btn-pure btn-default" title="Delete"
+                      data-tag="project-delete"><i class="icon wb-trash" aria-hidden="true"></i></button>
+                    </div>
+                    <button type="button" class="btn btn-outline btn-default project-button">View Project</button>
+                  </figcaption>
+                </figure>
+                <div class="time pull-right">May 25, 2015</div>
+                <div class="text-truncate">Reprehenderit</div>
+              </div>
+            </li>
+            <li>
+              <div class="panel">
+                <figure class="overlay overlay-hover animation-hover">
+                  <img class="caption-figure" src="{{global}}/photos/placeholder.png">
+                  <figcaption class="overlay-panel overlay-background overlay-fade text-center vertical-align">
+                    <div class="btn-group">
+                      <div class="dropdown pull-left">
+                        <button type="button" class="btn btn-icon btn-pure btn-default dropdown-toggle"
+                        title="Setting"><i class="icon wb-settings" aria-hidden="true"></i></button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="">Copy</a></li>
+                          <li><a href="">Rename</a></li>
+                        </ul>
+                      </div>
+                      <button type="button" class="btn btn-icon btn-pure btn-default" title="Delete"
+                      data-tag="project-delete"><i class="icon wb-trash" aria-hidden="true"></i></button>
+                    </div>
+                    <button type="button" class="btn btn-outline btn-default project-button">View Project</button>
+                  </figcaption>
+                </figure>
+                <div class="time pull-right">Aug 30, 2015</div>
+                <div class="text-truncate">Ullamco fugiat</div>
+              </div>
+            </li>
+            <li>
+              <div class="panel">
+                <figure class="overlay overlay-hover animation-hover">
+                  <img class="caption-figure" src="{{global}}/photos/placeholder.png">
+                  <figcaption class="overlay-panel overlay-background overlay-fade text-center vertical-align">
+                    <div class="btn-group">
+                      <div class="dropdown pull-left">
+                        <button type="button" class="btn btn-icon btn-pure btn-default dropdown-toggle"
+                        title="Setting"><i class="icon wb-settings" aria-hidden="true"></i></button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="">Copy</a></li>
+                          <li><a href="">Rename</a></li>
+                        </ul>
+                      </div>
+                      <button type="button" class="btn btn-icon btn-pure btn-default" title="Delete"
+                      data-tag="project-delete"><i class="icon wb-trash" aria-hidden="true"></i></button>
+                    </div>
+                    <button type="button" class="btn btn-outline btn-default project-button">View Project</button>
+                  </figcaption>
+                </figure>
+                <div class="time pull-right">Oct 8, 2015</div>
+                <div class="text-truncate">Dolor veniam</div>
+              </div>
+            </li>
+            <li>
+              <div class="panel">
+                <figure class="overlay overlay-hover animation-hover">
+                  <img class="caption-figure" src="{{global}}/photos/placeholder.png">
+                  <figcaption class="overlay-panel overlay-background overlay-fade text-center vertical-align">
+                    <div class="btn-group">
+                      <div class="dropdown pull-left">
+                        <button type="button" class="btn btn-icon btn-pure btn-default dropdown-toggle"
+                        title="Setting"><i class="icon wb-settings" aria-hidden="true"></i></button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="">Copy</a></li>
+                          <li><a href="">Rename</a></li>
+                        </ul>
+                      </div>
+                      <button type="button" class="btn btn-icon btn-pure btn-default" title="Delete"
+                      data-tag="project-delete"><i class="icon wb-trash" aria-hidden="true"></i></button>
+                    </div>
+                    <button type="button" class="btn btn-outline btn-default project-button">View Project</button>
+                  </figcaption>
+                </figure>
+                <div class="time pull-right">Oct 18, 2015</div>
+                <div class="text-truncate">Minim officia</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <nav>
+          <ul class="pagination pagination-no-border">
+            <li class="disabled">
+              <a href="javascript:void(0)" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="active"><a href="javascript:void(0)">1 <span class="sr-only">(current)</span></a></li>
+            <li><a href="javascript:void(0)">2</a></li>
+            <li><a href="javascript:void(0)">3</a></li>
+            <li><a href="javascript:void(0)">4</a></li>
+            <li><a href="javascript:void(0)">5</a></li>
+            <li>
+              <a href="javascript:void(0)" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Site Action -->
+    <button class="site-action btn-raised btn btn-success btn-floating" data-target="#addProjectForm"
+    data-toggle="modal" type="button">
+      <i class="icon wb-plus" aria-hidden="true"></i>
+    </button>
+    <!-- End Site Action -->
+
+    <!-- Add Project Form -->
+    <div class="modal fade" id="addProjectForm" aria-hidden="true" aria-labelledby="addProjectForm"
+    role="dialog" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" aria-hidden="true" data-dismiss="modal">×</button>
+            <h4 class="modal-title">Create New Project</h4>
+          </div>
+          <div class="modal-body">
+            <form action="#" method="post" role="form">
+              <div class="form-group">
+                <label class="control-label margin-bottom-15" for="name">Project name:</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Project name">
+              </div>
+              <div class="form-group">
+                <label class="control-label margin-bottom-15" for="name">Project description:</label>
+                <textarea class="maxlength-textarea form-control mb-sm" placeholder="Project description."
+                rows="4" maxlength="225" data-plugin="maxlength"></textarea>
+              </div>
+              <div class="form-group">
+                <label class="control-label margin-bottom-15" for="name">Choice people to your project:</label>
+                <select multiple="multiple" data-plugin="jquery-selective"></select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer text-right">
+            <button class="btn btn-primary" data-dismiss="modal" type="button">Creat</button>
+            <a class="btn btn-sm btn-white" data-dismiss="modal" href="javascript:void(0)">Cancel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Add Project Form -->
+
+  {{/content}}
+{{/extend}}

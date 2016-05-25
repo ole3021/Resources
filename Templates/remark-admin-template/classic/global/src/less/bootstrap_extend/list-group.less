@@ -1,0 +1,182 @@
+// Name:            List groups
+//
+// Component:       `list-group`
+//
+// Modifiers:       `list-group.bg-inherit`
+//                  `list-group-bordered`
+//                  `list-group-gap`
+//                  `list-group-full`
+//                  `list-group-item-dark`
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@list-group-active-color                 : @brand-primary;
+
+@list-group-link-disabled-color          : @disabled-color-base;
+@list-group-link-disabled-bg             : @gray-lightest;
+
+@list-group-link-active-color            : @color-white;
+@list-group-link-active-bg               : @brand-primary;
+
+@list-group-item-icon-margin-right       : 10px;
+
+@list-group-bg-inherit-item-border       : rgba(0, 0, 0, 0.075);
+@list-group-bg-inherit-item-hover-bg     : rgba(0, 0, 0, 0.075);
+
+@list-group-bordered-border              : @border-color-base;
+@list-group-bordered-active-color        : @component-active-color;
+@list-group-bordered-active-bg           : @component-active-bg;
+@list-group-bordered-active-border       : @list-group-bordered-active-bg;
+
+@list-group-gap-item-margin-bottom       : 2px;
+
+@list-group-media-heading-font-size      : @font-size-base;
+
+// Component: List groups
+// ========================================================================
+
+.list-group {
+  .media {
+    padding: 2px 0;
+    border-bottom: 0;
+    .pull-left,
+    .media-left {
+      padding-right: 20px;
+    }
+    .pull-right,
+    .media-right {
+      padding-left: 20px;
+    }
+    .pull-right {
+      .status {
+        margin-top: 15px;
+        margin-right: 5px;
+      }
+    }
+    .media-heading {
+      font-size: @list-group-media-heading-font-size;
+    }
+  }
+}
+
+.list-group-full {
+  > .list-group-item {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+a.list-group-item {
+  border-radius: @border-radius-base;
+  &.disabled,
+  &.disabled:hover,
+  &.disabled:focus {
+    color: @list-group-link-disabled-color;
+    background-color: @list-group-link-disabled-bg;
+  }
+  &.active,
+  &.active:hover,
+  &.active:focus {
+    color: @list-group-link-active-color;
+    background-color: @list-group-link-active-bg;
+  }
+}
+
+.list-group-item {
+  .icon {
+    margin-right: @list-group-item-icon-margin-right;
+  }
+}
+
+
+
+// Modifier: `list-group.bg-inherit`
+// -------------------------
+
+.list-group.bg-inherit {
+  border-radius: @border-radius-base;
+  .list-group-item {
+    background-color: transparent;
+    border-bottom-color: @list-group-bg-inherit-item-border;
+    &:last-child {
+      border-bottom-color: transparent;
+    }
+    &:hover {
+      background-color: @list-group-bg-inherit-item-hover-bg;
+      border-color: transparent;
+    }
+  }
+}
+
+
+// Modifier: `list-group-bordered`
+// -------------------------
+
+.list-group-bordered {
+  .list-group-item {
+    border-color: @list-group-bordered-border;
+    &.active,
+    &.active:hover,
+    &.active:focus {
+      color: @list-group-bordered-active-color;
+      background-color: @list-group-bordered-active-bg;
+      border-color: @list-group-bordered-active-border;
+    }
+  }
+}
+
+// Modifier: `list-group-dividered`
+// -------------------------
+
+.list-group-dividered {
+  .list-group-item, {
+    border-top-color: @list-group-bordered-border;
+
+    &.active:hover {
+      border-top-color: @list-group-bordered-border;
+    }
+  }
+
+  .list-group-item:last-child {
+    border-bottom-color: @list-group-bordered-border;
+  }
+
+  .list-group-item:first-child {
+    border-top-color: @list-group-border;
+    &.active:hover {
+      border-top-color: @list-group-border;
+    }
+  }
+}
+
+
+// Modifier: `list-group-gap`
+// -------------------------
+
+.list-group-gap {
+  .list-group-item {
+    margin-bottom: @list-group-gap-item-margin-bottom;
+    border-radius: @border-radius-base;
+  }
+}
+
+// Modifier: `list-group-full`
+// -------------------------
+
+.list-group-full {
+  .list-group-item {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+// Color Modifier
+// ========================================================================
+
+// Modifier: `list-group-item-dark`
+// -------------------------
+
+.list-group-item-variant(dark; @state-dark-bg; @state-dark-text);

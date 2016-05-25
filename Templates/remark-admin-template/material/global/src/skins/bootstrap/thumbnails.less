@@ -1,0 +1,22 @@
+//
+// Thumbnails
+// --------------------------------------------------
+
+
+// Mixin and adjust the regular image class
+.thumbnail {
+  background-color: @thumbnail-bg;
+  border: 1px solid @thumbnail-border;
+
+  // Add a hover state for linked versions only
+  a&:hover,
+  a&:focus,
+  a&.active {
+    border-color: @link-color;
+  }
+
+  // Image captions
+  .caption {
+    color: @thumbnail-caption-color;
+  }
+}

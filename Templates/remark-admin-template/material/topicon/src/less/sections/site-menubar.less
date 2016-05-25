@@ -1,0 +1,83 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  padding-top: (@site-navbar-height + @site-menubar-height);
+}
+
+.site-menubar {
+  .z-index(menubar);
+
+  position: fixed;
+  top: @site-navbar-height;
+
+  background: @site-menubar-bg;
+  color: @site-menubar-color;
+  height: @site-menubar-height;
+  width: 100%;
+  font-family: @site-menubar-font-family;
+
+  // @shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);
+  box-shadow: @site-menubar-shadow;
+
+  ul {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    outline: none;
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+
+
+  //Site Menubar Dark
+  &.site-menubar-dark {
+    background: @site-menubar-dark-bg;
+    color: @site-menubar-dark-color;
+  }
+}
+
+
+@media screen and (max-width: @screen-xs-max) {
+  .page {
+    padding-top: 0;
+  }
+
+  .site-menubar {
+    width: @site-menubar-responsive-width;
+
+    &-body {
+      height: 100%;
+    }
+  }
+}
+
+
+.site-menubar {
+  @media screen and (min-width: @screen-xlg) {
+    @padding: %(~"calc((100% - %d) / 2 + 30px)", @site-container-width-xlg);
+    padding-left: @padding !important;
+    padding-right: @padding !important;
+  }
+  @media (min-width: @screen-lg) and (max-width: @screen-lg-max) {
+    @padding: %(~"calc((100% - %d) / 2 + 30px)", @site-container-width-lg);
+    padding-left: @padding !important;
+    padding-right: @padding !important;
+  }
+  @media (min-width: @screen-md) and (max-width: @screen-md-max) {
+    @padding: %(~"calc((100% - %d) / 2 + 30px)", @site-container-width-md);
+    padding-left: @padding !important;
+    padding-right: @padding !important;
+  }
+  @media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
+    @padding: %(~"calc((100% - %d) / 2 + 30px)", @site-container-width-sm);
+    padding-left: @padding !important;
+    padding-right: @padding !important;
+  }
+}

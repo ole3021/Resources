@@ -1,0 +1,23 @@
+@import "vars.less";
+@import "less/variables.less";
+
+@pe-font-path: ".";
+
+@font-face {
+  font-family: 'Pe-icon-7-stroke';
+  src:url('Pe-icon-7-stroke.eot?d7yf1v');
+  src:url('Pe-icon-7-stroke.eot?#iefixd7yf1v') format('embedded-opentype'),
+    url('Pe-icon-7-stroke.woff?d7yf1v') format('woff'),
+    url('Pe-icon-7-stroke.ttf?d7yf1v') format('truetype'),
+    url('Pe-icon-7-stroke.svg?d7yf1v#Pe-icon-7-stroke') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="@{pe-css-prefix}-"],
+[class*=" @{pe-css-prefix}-"] {
+  font-family: '@{pe-font-family}';
+  .make-icon();
+}
+
+@import "less/icons.less";

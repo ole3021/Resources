@@ -1,0 +1,107 @@
+
+html, body {
+  height: 100%;
+}
+
+body {
+  padding-top: @site-navbar-height;
+}
+
+.site-menubar {
+  .z-index(menubar);
+
+  position: fixed;
+  top: @site-navbar-height;
+
+  height: 100%;
+  @height: %(~"100% - %d", @site-navbar-height);
+  height: -webkit-calc(@height);
+  height: calc(@height);
+
+  background: @site-menubar-bg;
+  color: @site-menubar-color;
+  font-family: @site-menubar-font-family;
+  box-shadow: @site-menubar-shadow;
+
+  &-body {
+    height: 100%;
+    @height: %(~"100% - %d",  @site-menubar-footer-height);
+    height: -webkit-calc(@height);
+    height: calc(@height);
+  }
+
+  ul {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    outline: none;
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+
+  &.site-menubar-light {
+    background: @site-menubar-light-bg;
+    box-shadow: @site-menubar-light-shadow;
+
+    .scrollable-inverse.scrollable .scrollable-bar-handle {
+      background: fade(@gray, 60%);;
+    }
+  }
+}
+
+.site-menubar-section {
+  padding: 0 @site-menubar-padding-horizontal;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  > h4, > h5 {
+    color: @site-menubar-section-title-color;
+  }
+
+  .progress {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.site-menubar-footer {
+  position: fixed;
+  bottom: 0;
+  display: block;
+  .z-index(menubar);
+
+  > a {
+    display: block;
+    float: left;
+    width: (100% / 3);
+    height: @site-menubar-footer-height;
+    padding: 26px 0;
+    color: @site-menubar-footer-color;
+    font-size: 16px;
+    text-align: center;
+    background-color: @site-menubar-footer-link-bg;
+
+    &:hover,
+    &:focus {
+      background-color: @site-menubar-footer-link-hover-bg;
+    }
+  }
+}
+
+.site-menubar-light {
+  .site-menubar-footer {
+    > a {
+      background-color: @site-menubar-light-footer-link-bg;
+      &:hover,
+      &:focus {
+        background-color: @site-menubar-light-footer-link-hover-bg;
+      }
+    }
+  }
+}

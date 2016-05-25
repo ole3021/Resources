@@ -1,0 +1,103 @@
+/* Forms */
+form label {
+	font-weight: normal;
+}
+
+textarea {
+	resize: vertical;
+}
+
+select {
+	border: 1px solid #E5E7E9;
+	border-radius: 6px;
+	outline: none;
+}
+
+.label {
+	font-weight: normal;
+}
+
+.form-group:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.form-control {
+	&:focus {
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+		border-color: #CCC;
+	}
+	&.error {
+		border-color: #a94442;
+		-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+		&:focus {
+			border-color: #843534;
+			-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+		}
+	}
+}
+
+/* Forms Validations */
+label {
+	&.valid {
+		display: inline-block;
+		text-indent: -9999px;
+	}
+
+	&.error {
+		color: #c10000;
+		font-size: 0.9em;
+		line-height: 18px;
+		padding: 5px 0 0;
+		&#captcha-error {
+			margin-top: 15px;
+		}
+	}
+
+}
+
+/* Captcha */
+.captcha {
+	clear: both;
+	overflow: hidden;
+	background: #F2F2F2;
+	text-align: center;
+	margin-bottom: 20px;
+	max-width: 160px;
+	height: 78px;
+	position: relative;
+	input {
+		border: 0;
+	}
+}
+
+.captcha-input {
+	position: relative;
+	top: 15px;
+	font-size: 14px;
+}
+
+.captcha-image {
+	float: $left;
+	position: relative;
+	top: -5px;
+	#{$left}: -13px;
+}
+
+.captcha-refresh {
+	position: absolute;
+	z-index: 1;
+	bottom: 2px;
+	right: 2px;
+	border-radius: 3px;
+	padding: 2px 5px;
+	a, a:hover, a:focus, a:active {
+		color: #333;
+	}
+}

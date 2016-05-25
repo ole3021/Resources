@@ -1,0 +1,22 @@
+@import "vars.less";
+
+// editable-table
+// ===================================================
+
+.editable-table + input.error {
+  border: 1px solid @brand-danger;
+  outline-offset: 0;
+  outline: none;
+}
+
+.editable-table + input:focus,
+.editable-table + input {
+  border: 1px solid @brand-primary !important;
+  outline-offset: 0 !important;
+  outline: none !important;
+}
+
+.editable-table td:focus {
+  outline: none;
+}
+

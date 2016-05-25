@@ -1,0 +1,344 @@
+---
+title: Message
+body_class: app-message page-aside-scroll
+---
+
+{{#extend "layout-default"}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/apps/message.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/slidepanel/jquery-slidePanel.js"></script>
+    <script src="{{global}}/vendor/autosize/autosize.js"></script>
+  {{/content}}
+
+
+  {{#content "js" mode="append"}}
+    <script src="{{assets}}/js/app.js"></script>
+  {{/content}}
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/apps/message.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <div class="page animsition">
+      <!-- Message Sidebar -->
+      <div class="page-aside">
+        <div class="page-aside-switch">
+          <i class="icon wb-chevron-left" aria-hidden="true"></i>
+          <i class="icon wb-chevron-right" aria-hidden="true"></i>
+        </div>
+        <div class="page-aside-inner">
+          <div class="input-search">
+            <button class="input-search-btn" type="submit">
+              <i class="icon wb-search" aria-hidden="true"></i>
+            </button>
+            <form>
+              <input class="form-control" type="text" placeholder="Search Keyword" name="">
+            </form>
+          </div>
+
+          <div class="app-message-list" data-plugin="pageAsideScroll">
+            <div data-role="container">
+              <div data-role="content">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-online" href="javascript:void(0)">
+                          <img class="img-responsive" src="{{global}}/portraits/1.jpg"
+                          alt="..."><i></i></a>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">Kerem Sure</h4>
+                        <span class="media-time">15 sec ago</span>
+                      </div>
+                      <div class="media-right">
+                        <span class="badge badge-danger">3</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-online" href="javascript:void(0)">
+                          <img class="img-responsive" src="{{global}}/portraits/2.jpg"
+                          alt="..."><i></i></a>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">Eric hoffman</h4>
+                        <span class="media-time">1 minutes ago</span>
+                      </div>
+                      <div class="media-right">
+                        <span class="badge badge-danger"></span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-online" href="javascript:void(0)">
+                          <img class="img-responsive" src="{{global}}/portraits/3.jpg"
+                          alt="..."><i></i></a>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">Eddie Lobanovskiy</h4>
+                        <span class="media-time">5 minutes ago</span>
+                      </div>
+                      <div class="media-right">
+                        <span class="badge badge-danger"></span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-online" href="javascript:void(0)">
+                          <img class="img-responsive" src="{{global}}/portraits/4.jpg"
+                          alt="..."><i></i></a>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">Bill S Kenney</h4>
+                        <span class="media-time">15 minutes ago</span>
+                      </div>
+                      <div class="media-right">
+                        <span class="badge badge-danger">5</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item active">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-away" href="javascript:void(0)">
+                          <img class="img-responsive" src="{{global}}/portraits/5.jpg"
+                          alt="..."><i></i></a>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">Derek Bradley</h4>
+                        <span class="media-time">40 minutes ago</span>
+                      </div>
+                      <div class="media-right">
+                        <span class="badge badge-danger"></span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-away" href="javascript:void(0)">
+                          <img class="img-responsive" src="{{global}}/portraits/6.jpg"
+                          alt="..."><i></i></a>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">Mariusz Ciesla</h4>
+                        <span class="media-time">2 hours ago</span>
+                      </div>
+                      <div class="media-right">
+                        <span class="badge badge-danger"></span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-online" href="javascript:void(0)">
+                          <img class="img-responsive" src="{{global}}/portraits/7.jpg"
+                          alt="..."><i></i></a>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">Jesse Dodds</h4>
+                        <span class="media-time">3 hours ago</span>
+                      </div>
+                      <div class="media-right">
+                        <span class="badge badge-danger"></span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-off" href="javascript:void(0)">
+                          <img class="img-responsive" src="{{global}}/portraits/8.jpg"
+                          alt="..."><i></i></a>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">Gerren Lamson</h4>
+                        <span class="media-time">3 hours ago</span>
+                      </div>
+                      <div class="media-right">
+                        <span class="badge badge-danger"></span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-off" href="javascript:void(0)">
+                          <img class="img-responsive" src="{{global}}/portraits/9.jpg"
+                          alt="..."><i></i></a>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">Daniel Waldron</h4>
+                        <span class="media-time">5 hours ago</span>
+                      </div>
+                      <div class="media-right">
+                        <span class="badge badge-danger"></span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media">
+                      <div class="media-left">
+                        <a class="avatar avatar-off" href="javascript:void(0)">
+                          <img class="img-responsive" src="{{global}}/portraits/10.jpg"
+                          alt="..."><i></i></a>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">Celikovic</h4>
+                        <span class="media-time">7 hours ago</span>
+                      </div>
+                      <div class="media-right">
+                        <span class="badge badge-danger"></span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Message Sidebar -->
+      <div class="page-main">
+        <!-- Chat Box -->
+        <div class="app-message-chats">
+          <button type="button" id="historyBtn" class="btn btn-round btn-outline btn-default">History Messages</button>
+          <div class="chats">
+            <div class="chat">
+              <div class="chat-avatar">
+                <a class="avatar" data-toggle="tooltip" href="#" data-placement="right" title="">
+                  <img src="{{global}}/portraits/4.jpg" alt="June Lane">
+                </a>
+              </div>
+              <div class="chat-body">
+                <div class="chat-content">
+                  <p>
+                    Hello. What can I do for you?
+                  </p>
+
+                </div>
+              </div>
+            </div>
+            <div class="chat chat-left">
+              <div class="chat-avatar">
+                <a class="avatar" data-toggle="tooltip" href="#" data-placement="left" title="">
+                  <img src="{{global}}/portraits/5.jpg" alt="Edward Fletcher">
+                </a>
+              </div>
+              <div class="chat-body">
+                <div class="chat-content">
+                  <p>
+                    I'm just looking around.
+                  </p>
+                  <p>Will you tell me something about yourself? </p>
+
+                </div>
+                <div class="chat-content">
+                  <p>
+                    Are you there? That time!
+                  </p>
+
+                </div>
+              </div>
+            </div>
+            <div class="chat">
+              <div class="chat-avatar">
+                <a class="avatar" data-toggle="tooltip" href="#" data-placement="right" title="">
+                  <img src="{{global}}/portraits/4.jpg" alt="June Lane">
+                </a>
+              </div>
+              <div class="chat-body">
+                <div class="chat-content">
+                  <p>
+                    Where?
+                  </p>
+
+                </div>
+                <div class="chat-content">
+                  <p>
+                    OK, my name is Limingqiang. I like singing, playing basketballand so on.
+                  </p>
+
+                </div>
+              </div>
+            </div>
+            <p class="time">1 hours ago</p>
+            <div class="chat chat-left">
+              <div class="chat-avatar">
+                <a class="avatar" data-toggle="tooltip" href="#" data-placement="left" title="">
+                  <img src="{{global}}/portraits/5.jpg" alt="Edward Fletcher">
+                </a>
+              </div>
+              <div class="chat-body">
+                <div class="chat-content">
+                  <p>You wait for notice.</p>
+                </div>
+                <div class="chat-content">
+                  <p>Consectetuorem ipsum dolor sit?</p>
+
+                </div>
+                <div class="chat-content">
+                  <p>OK?</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="chat">
+              <div class="chat-avatar">
+                <a class="avatar" data-toggle="tooltip" href="#" data-placement="right" title="">
+                  <img src="{{global}}/portraits/4.jpg" alt="June Lane">
+                </a>
+              </div>
+              <div class="chat-body">
+                <div class="chat-content">
+                  <p>OK!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- End Chat Box -->
+
+        <!-- Message Input-->
+        <form class="app-message-input">
+          <div class="message-input">
+            <textarea class="form-control" rows="1"></textarea>
+            <div class="message-input-actions btn-group">
+              <button class="btn btn-pure btn-icon btn-default" type="button">
+                <i class="icon wb-emoticon" aria-hidden="true"></i>
+              </button>
+              <button class="btn btn-pure btn-icon btn-default" type="button">
+                <i class="icon wb-image" aria-hidden="true"></i>
+              </button>
+              <button class="btn btn-pure btn-icon btn-default" type="button">
+                <i class="icon wb-paperclip" aria-hidden="true"></i>
+              </button>
+              <input id="messageImage" type="file" name="messageImage">
+              <input id="messageFile" type="file" name="messageFile">
+            </div>
+          </div>
+          <button class="message-input-btn btn btn-primary" type="button">SEND</button>
+        </form>
+        <!-- End Message Input-->
+
+      </div>
+    </div>
+
+  {{/content}}
+{{/extend}}

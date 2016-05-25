@@ -1,0 +1,58 @@
+// Name:            Jumbotron
+//
+// Component:       `jumbotron`
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@jumbotron-radius: @border-radius-base;
+
+// Component: Jumbotron
+// ========================================================================
+
+.jumbotron {
+  padding: 0;
+  border-radius: @jumbotron-radius;
+
+  & > &-photo img {
+    width: 100%;
+
+    .border-top-radius(@jumbotron-radius);
+  }
+
+  &-contents {
+    padding: @jumbotron-padding;
+  }
+
+  .carousel,
+  .carousel-inner,
+  .carousel-inner > .item.active img {
+    .border-top-radius(@jumbotron-radius);
+  }
+
+  .carousel-inner > .item > a > img,
+  .carousel-inner > .item > img {
+    width: 100%;
+  }
+
+  h1, .h1 {
+    font-size: 28px;
+  }
+
+  h2, .h2 {
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &, .container & {
+      padding: 0;
+    }
+
+    h1,
+    .h1 {
+      font-size: 28px;
+    }
+  }
+}

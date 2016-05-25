@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>6. Theme Structure - Remark Admin Template Docs</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "6. Theme Structure";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Remark Admin Template Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../index.html">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../overview/index.html">1. Overview</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../build/index.html">2. Building Tools</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../global/index.html">3. Global Assets</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../style/index.html">4. Customize Styles</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../javascript/index.html">5. Modular JavaScript</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="index.html">6. Theme Structure</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#6-template-structure">6. Template Structure</a></li>
+                
+                    <li><a class="toctree-l4" href="#61-sections">6.1 Sections</a></li>
+                
+                    <li><a class="toctree-l4" href="#62-layouts">6.2 Layouts</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../components/index.html">7. Components</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../psd/index.html">8. PSD Files</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../credits/index.html">9. Sources and Credits</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../support/index.html">10. Support</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../changelog/index.html">11. Changelog</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Remark Admin Template Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>6. Theme Structure</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/amazingSurge/remark-docs/" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="6-template-structure">6. Template Structure</h1>
+<p>The general template structure is the same throughout the template. Here is the general structure.</p>
+<h2 id="61-sections">6.1 Sections</h2>
+<h3 id="header">Header</h3>
+<p>Main header is within a div with an classname of "site-navbar":</p>
+<pre><code>&lt;nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-mega" role="navigation"&gt;
+  &lt;div class="navbar-header"&gt;
+    ......
+  &lt;/div&gt;
+  &lt;div class="navbar-container container-fluid"&gt;
+    ......
+  &lt;/div&gt;
+&lt;/nav&gt;
+</code></pre>
+<h3 id="content">Content</h3>
+<p>Content is within the main content area which is nested within a div with an classname of <code>"page"</code>:</p>
+<pre><code>&lt;div class="page"&gt;
+  &lt;!-- Page Header --&gt;
+  &lt;div class="page-header"&gt;
+    &lt;h1 class="page-title"&gt;Page Title&lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;!-- End Page Header --&gt;
+
+  &lt;!-- Page Content --&gt;
+  &lt;div class="page-content"&gt;
+
+    &lt;!-- Panel --&gt;
+    &lt;div class="panel"&gt;
+      &lt;div class="panel-heading"&gt;
+        &lt;h3 class="panel-title"&gt;Panel Title&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div class="panel-body"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- End Panel --&gt;
+
+    &lt;!-- Panel --&gt;
+    &lt;div class="panel"&gt;
+    &lt;/div&gt;
+    &lt;!-- End Panel --&gt;
+
+    ......
+
+  &lt;/div&gt;
+  &lt;!-- End Page Content --&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="site-menu">Site Menu</h3>
+<p>The site menu is within a div with an classname of <code>"site-menubar"</code>:</p>
+<pre><code>&lt;div class="site-menubar"&gt;
+  &lt;ul class="site-menu"&gt;
+    &lt;!-- Menu Category--&gt;
+    &lt;li class="site-menu-category"&gt;Category&lt;/li&gt;
+    &lt;!-- End Menu Category--&gt;
+
+    &lt;!-- Site Menu Item--&gt;
+    &lt;li class="site-menu-item"&gt;
+      &lt;a href="#"&gt;Item Name&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;!-- End Site Menu Item--&gt;
+
+    &lt;!-- Site Menu Item With Sub--&gt;
+    &lt;li class="site-menu-item has-sub"&gt;
+      &lt;a href="#"&gt;Item Name&lt;/a&gt;
+      &lt;ul class="site-menu-sub"&gt;
+        Sub Nav Item......
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;!-- End Site Menu Item With Sub--&gt;
+
+    ......
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<p>If you would like to edit the color, font, or style of any elements in one of these columns, you would do the following:</p>
+<pre><code class="css">  .class-name a {
+    color: #somecolor;
+  }
+</code></pre>
+
+<p>So, to ensure that your new styles are applied, make sure that they carry enough "weight" and that there isn't a style lower in the CSS file that is being applied after yours.</p>
+<p>Remark template comes with some layouts for you to use.</p>
+<h2 id="62-layouts">6.2 Layouts</h2>
+<h3 id="default">Default</h3>
+<p>The default layout provide a responsive menubar. You can add <code>css-menubar</code> class to html element to get menubar style when browser js not enabled.</p>
+<pre><code class="html">&lt;html class=&quot;no-js css-menubar&quot; lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui&quot;&gt;
+  &lt;title&gt;Default Layout&lt;/title&gt;
+
+  /* stylesheets */
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;nav class=&quot;site-navbar&quot; role=&quot;navigation&quot;&gt;...&lt;/nav&gt;
+  &lt;div class=&quot;site-menubar&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;site-gridmenu&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;page&quot;&gt;...&lt;/div&gt;
+  &lt;footer class=&quot;site-footer&quot;&gt;...&lt;/footer&gt;
+
+  /* javascripts */
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h3 id="boxed-layout">Boxed layout</h3>
+<p>Just add <code>layout-boxed</code> class to <code>body</code> element.</p>
+<pre><code class="html">&lt;html class=&quot;no-js css-menubar&quot; lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui&quot;&gt;
+  &lt;title&gt;Default Layout&lt;/title&gt;
+
+  /* stylesheets */
+&lt;/head&gt;
+&lt;body class=&quot;layout-boxed&quot;&gt;
+  &lt;nav class=&quot;site-navbar&quot; role=&quot;navigation&quot;&gt;...&lt;/nav&gt;
+  &lt;div class=&quot;site-menubar&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;site-gridmenu&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;page&quot;&gt;...&lt;/div&gt;
+  &lt;footer class=&quot;site-footer&quot;&gt;...&lt;/footer&gt;
+
+  /* javascripts */
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h3 id="menu-collapsed">Menu Collapsed</h3>
+<p>If you want menu collapsed by default, you should remove <code>css-menubar</code> class from html element and add <code>class="site-menubar-fold site-menubar-keep"</code> to <code>body</code> element.</p>
+<pre><code class="html">&lt;html class=&quot;no-js&quot; lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui&quot;&gt;
+  &lt;title&gt;Menu Collapsed&lt;/title&gt;
+
+  /* stylesheets */
+&lt;/head&gt;
+&lt;body class=&quot;site-menubar-fold site-menubar-keep&quot; data-auto-menubar=&quot;false&quot;&gt;
+  &lt;nav class=&quot;site-navbar&quot; role=&quot;navigation&quot;&gt;...&lt;/nav&gt;
+  &lt;div class=&quot;site-menubar&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;site-gridmenu&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;page&quot;&gt;...&lt;/div&gt;
+  &lt;footer class=&quot;site-footer&quot;&gt;...&lt;/footer&gt;
+
+  /* javascripts */
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h3 id="menu-expended">Menu Expended</h3>
+<p>If you want menu expended by default, you should remove <code>css-menubar</code> class from html element and add <code>class="site-menubar-unfold site-menubar-keep"</code> to <code>body</code> element.</p>
+<pre><code class="html">&lt;html class=&quot;no-js&quot; lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui&quot;&gt;
+  &lt;title&gt;Menu Expended&lt;/title&gt;
+
+  /* stylesheets */
+&lt;/head&gt;
+&lt;body class=&quot;site-menubar-unfold site-menubar-keep&quot;&gt;
+  &lt;nav class=&quot;site-navbar&quot; role=&quot;navigation&quot;&gt;...&lt;/nav&gt;
+  &lt;div class=&quot;site-menubar&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;site-gridmenu&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;page&quot;&gt;...&lt;/div&gt;
+  &lt;footer class=&quot;site-footer&quot;&gt;...&lt;/footer&gt;
+
+  /* javascripts */
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../components/index.html" class="btn btn-neutral float-right" title="7. Components"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../javascript/index.html" class="btn btn-neutral" title="5. Modular JavaScript"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../javascript/index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../components/index.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

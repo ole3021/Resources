@@ -1,0 +1,52 @@
+---
+title: File Uploads
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/blueimp-file-upload/jquery.fileupload.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/jquery-ui/jquery-ui.js"></script>
+    <script src="{{global}}/vendor/blueimp-tmpl/tmpl.js"></script>
+    <script src="{{global}}/vendor/blueimp-canvas-to-blob/canvas-to-blob.js"></script>
+    <script src="{{global}}/vendor/blueimp-load-image/load-image.all.min.js"></script>
+    <script src="{{global}}/vendor/blueimp-file-upload/jquery.fileupload.js"></script>
+    <script src="{{global}}/vendor/blueimp-file-upload/jquery.fileupload-process.js"></script>
+    <script src="{{global}}/vendor/blueimp-file-upload/jquery.fileupload-image.js"></script>
+    <script src="{{global}}/vendor/blueimp-file-upload/jquery.fileupload-audio.js"></script>
+    <script src="{{global}}/vendor/blueimp-file-upload/jquery.fileupload-video.js"></script>
+    <script src="{{global}}/vendor/blueimp-file-upload/jquery.fileupload-validate.js"></script>
+    <script src="{{global}}/vendor/blueimp-file-upload/jquery.fileupload-ui.js"></script>
+  {{/content}}
+
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/forms/uploads.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-content">
+        <form class="upload-form" id="exampleUploadForm" method="POST">
+          <input type="file" id="inputUpload" name="files[]" multiple="" />
+          <div class="uploader-inline">
+            <h3 class="upload-instructions">Click Or Drop Files To Upload. We Use Jquery File Upload, You Can Learn
+              More Form
+              <A id="uploadlink" href="https://blueimp.github.io/jQuery-File-Upload/"
+              target="_blank">Here</A>.</h3>
+          </div>
+          <div class="file-wrap container-fluid">
+            <div class="file-list row"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

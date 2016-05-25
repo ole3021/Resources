@@ -1,0 +1,97 @@
+// Name:            Forms
+//
+// Component:       `form`
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@form-control-round-border-radius: 200px;
+
+@input-search-font-size:                 16px;
+@input-search-icon-width:                @input-height-base;
+@input-search-icon-line-height:          @input-height-base;
+@input-search-icon-z-index:              @zindex-base;
+
+
+// Component: Form
+// ========================================================================
+
+.form-control {
+  .box-shadow(none);
+  // for remove iphone-safari input box-shadow inset
+  &:not(select) {
+    -webkit-appearance: none;
+  }
+}
+
+.has-success {
+  .form-control-validation(@form-success-text; @form-success-text; @form-success-bg);
+}
+
+.has-warning {
+  .form-control-validation(@form-warning-text; @form-warning-text; @form-warning-bg);
+}
+
+.has-error {
+  .form-control-validation(@form-danger-text; @form-danger-text; @form-danger-bg);
+}
+
+
+// Modifier: `input-group-file`
+// ----------------------------
+
+.input-group-file {
+  input[type="text"] {
+    background-color: @input-bg;
+  }
+}
+
+
+// Input Search
+// ========================================================================
+
+.input-search-close {
+  color: @close-color;
+  text-shadow: @close-text-shadow;
+
+  &:hover,
+  &:focus {
+    color: @close-color;
+    text-decoration: none;
+  }
+
+  button& {
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+  }
+}
+
+.input-search {
+
+  .input-search-icon {
+    color: @input-color-placeholder;
+  }
+}
+
+.input-search-btn {
+  background: transparent;
+  border: none;
+}
+
+.input-search-dark {
+  .input-search-icon {
+    color: @gray-dark;
+  }
+
+  .form-control {
+    background: @gray-lightest;
+    box-shadow: none;
+
+    &:focus {
+      background-color: transparent;
+    }
+  }
+}

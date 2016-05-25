@@ -1,0 +1,100 @@
+// Name:            Comments
+//
+// Component:       `comments`
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+@comment-padding-vertical          : 20px;
+@comment-border                    : @divider-color-base;
+@comment-author-color              : @title-color;
+@comment-meta-color                : @prompt-color;
+
+// Component: Comments
+// ========================================================================
+
+.comments {
+  padding: 0;
+  margin: 0;
+
+  .comment {
+    border: none;
+    border-bottom: 1px solid @comment-border;
+
+    .comment {
+      &:first-child {
+        border-top: 1px solid @comment-border;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.comment {
+  padding: @comment-padding-vertical 0;
+  margin: 0;
+
+  .comment {
+    margin-top: @comment-padding-vertical;
+
+    padding-bottom: @comment-padding-vertical;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.comment-author {
+  &,
+  &:hover,
+  &:focus {
+    color: @comment-author-color;
+  }
+}
+
+.comment-meta {
+  margin-left: 5px;
+  display: inline-block;
+  font-size: @font-size-small;
+
+  color: @comment-meta-color;
+}
+
+.comment-content {
+  margin-top: 5px;
+
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+.comment-actions {
+  margin-top: 10px;
+  text-align: right;
+
+  a {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+
+    &.icon {
+      text-decoration: none;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.comment-reply {
+  margin: @line-height-computed 0 10px;
+
+  .form-group:last-child {
+    margin-bottom: 0;
+  }
+}

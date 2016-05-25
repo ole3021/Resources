@@ -1,0 +1,322 @@
+.page-aside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: @page-aside-width;
+  border-right: 1px solid @border-color-base;
+  background: @page-aside-bg;
+  transition: visibility 0.1s ease, top 0.3s ease, left 0.5s ease;
+  overflow-y: hidden;
+
+  + .page-main {
+    margin-left: @page-aside-width;
+  }
+
+  .list-group-item  {
+    &.active, &.active:focus, &.active:hover {
+      z-index: 0;
+    }
+  }
+}
+
+.page-aside-fixed {
+  .page-aside {
+    position: fixed;
+    top: @site-navbar-height;
+    left: @site-menubar-unfold-width;
+    height: calc(~'100% - ' @site-navbar-height);
+  }
+
+  .page-aside-inner {
+    overflow-y: scroll;
+    height: 100%;
+  }
+
+  .site-footer {
+    margin-left: (@page-aside-width + @site-menubar-unfold-width);
+  }
+}
+
+// Page Aside Section
+// ------------------
+.page-aside-section {
+  position: relative;
+
+  &:first-child {
+    padding-top: @line-height-computed;
+  }
+
+  &:last-child {
+    margin-bottom: @line-height-computed;
+  }
+
+  &:after {
+    content:'';
+    position: relative;
+    display: block;
+    margin: @line-height-computed;
+    border-bottom: 1px solid @gray-lighter;
+  }
+
+  &:last-child:after {
+    display: none;
+  }
+}
+
+// Page Aside Switch
+// -----------------
+.page-aside-switch {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  left: ~'calc(100% - 1px)';
+  top: ~'calc(50% - 25px)';
+  background-color: white;
+  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.2);
+  border-radius: 0 100px 100px 0;
+  line-height: 1;
+  padding: 15px 8px 15px 4px;
+
+  .md-chevron-right {
+    display: inline;
+  }
+
+  .md-chevron-left {
+    display: none;
+  }
+}
+
+
+// Page Aside Title
+// ----------------
+.page-aside-title {
+  padding: 10px @page-aside-padding-horizontal;
+  margin: 20px 0 10px;
+  font-weight: @font-weight-bold;
+  color: @gray-darker;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: default;
+}
+
+
+// List group
+// ----------
+.page-aside {
+  .list-group {
+    margin-bottom: @line-height-computed;
+
+    &-item {
+      padding: 13px @page-aside-padding-horizontal;
+      margin-bottom: 1px;
+      border: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      .icon {
+        color: @gray;
+      }
+
+      .item-right {
+        float: right;
+      }
+
+      &:hover, &:focus {
+        background-color: @gray-lightest;
+        border: none;
+        color: @brand-primary;
+
+        > .icon {
+          color: @brand-primary;
+        }
+      }
+
+      &.active {
+        background-color: transparent;
+        color: @brand-primary;
+
+        > .icon {
+          color: @brand-primary;
+        }
+
+        &:hover, &:focus {
+          background-color: @gray-lightest;
+          border: none;
+          color: @brand-primary;
+
+          > .icon {
+            color: @brand-primary;
+          }
+        }
+      }
+    }
+
+    &.has-actions {
+      .list-group-item {
+        cursor:pointer;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        line-height: @input-height-base;
+
+        .list-editable {
+          display:none;
+          position:relative;
+
+          .input-editable-close {
+            position: absolute;
+            top: 50%;
+            right:0;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            z-index: 1;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+            background: 0 0;
+            border: 0;
+            outline:none;
+            -webkit-appearance: none;
+          }
+
+          .form-group {
+            margin: 0;
+          }
+        }
+
+        .item-actions {
+          display: none;
+          position: absolute;
+          right: 20px;
+          top: 6px;
+
+          .btn-icon {
+            padding-left: 2px;
+            padding-right: 2px;
+            background-color: transparent;
+
+            &:hover {
+              .icon {
+                color: @brand-primary;
+              }
+            }
+          }
+
+          .icon {
+            margin: 0;
+          }
+        }
+
+        &:hover {
+          .item-right {
+            display: none;
+          }
+
+          .item-actions {
+            display: block;
+            .icon {
+              color: @gray-dark;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @screen-md-max) {
+  .page-aside {
+    width: @page-aside-md-width;
+
+    + .page-main {
+      margin-left: @page-aside-md-width;
+    }
+  }
+
+  .page-aside-fixed {
+    .site-footer {
+      margin-left: (@page-aside-md-width + @site-menubar-unfold-width);
+    }
+  }
+}
+
+@media (max-width: @grid-float-breakpoint-max) {
+  .page-aside {
+    position: fixed;
+    top: @site-navbar-height;
+    width: @page-aside-width;
+    left: -@page-aside-width;
+    border-color: transparent;
+    z-index: @zindex-header;
+    overflow-y: visible;
+    height: calc(~'100% - '@site-navbar-height);
+    visibility: visible;
+
+    .site-navbar-collapse-show & {
+      top: (2 * @site-navbar-height);
+      height: calc(~'100% - '(2*@site-navbar-height));
+    }
+
+    .site-menubar-changing &,
+    .site-menubar-open & {
+      height: 100%;
+    }
+
+    .page-aside-inner {
+      height: 100%;
+      background-color: white;
+      border-right: 1px solid @gray-lighter;
+    }
+
+    &.open {
+      left: 0;
+
+      .site-menubar-changing &,
+      .site-menubar-open & {
+        visibility: hidden;
+      }
+
+      .page-aside-switch {
+        .md-chevron-right {
+          display: none;
+        }
+
+        .md-chevron-left {
+          display: inline;
+        }
+      }
+    }
+
+    + .page-main {
+      margin-left: 0;
+    }
+  }
+
+  .page-aside-fixed {
+    .page-aside {
+      left: -@page-aside-width;
+
+      &.open {
+        left: 0;
+      }
+    }
+
+    .site-footer {
+      margin-left: 0;
+    }
+
+    .site-menubar-unfold & + .site-footer {
+      margin-left: 0;
+    }
+
+    .site-menubar-fold & + .site-footer {
+      margin-left: 0;
+    }
+  }
+
+  .page-aside-switch {
+    display: block;
+  }
+}

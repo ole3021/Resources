@@ -1,0 +1,432 @@
+---
+title: Work
+body_class: app-work
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/slidepanel/slidePanel.css">
+    <link rel="stylesheet" href="{{global}}/vendor/chartist-js/chartist.css">
+    <link rel="stylesheet" href="{{global}}/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css">
+    <link rel="stylesheet" href="{{global}}/vendor/jquery-selective/jquery-selective.css">
+  {{/content}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/apps/work.css">
+  {{/content}}
+
+
+  {{#content "fonts" mode="prepend"}}
+    <link rel="stylesheet" href="{{global}}/fonts/font-awesome/font-awesome.css">
+    <link rel="stylesheet" href="{{global}}/fonts/web-icons/web-icons.css">
+  {{/content}}
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/slidepanel/jquery-slidePanel.js"></script>
+    <script src="{{global}}/vendor/chartist-js/chartist.min.js"></script>
+    <script src="{{global}}/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.min.js"></script>
+    <script src="{{global}}/vendor/jquery-selective/jquery-selective.min.js"></script>
+  {{/content}}
+
+
+  {{#content "js" mode="append"}}
+    <script src="{{assets}}/js/app.js"></script>
+  {{/content}}
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/apps/work.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+
+    <div class="page animsition">
+      <div class="page-content">
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">PROJECT LIST</h3>
+            <form class="panel-search-form" role="search">
+              <div class="input-search">
+                <i class="input-search-icon wb-search" aria-hidden="true"></i>
+                <input type="text" class="form-control" id="inputSearch" name="search" placeholder="Search List">
+                <i class="icon wb-loop"></i>
+              </div>
+            </form>
+
+            <ul class="panel-info">
+              <li>
+                <div class="num blue-600">23</div>
+                <p>Recruiting</p>
+              </li>
+              <li>
+                <div class="num orange-600">8</div>
+                <p>Underway</p>
+              </li>
+              <li>
+                <div class="num green-600">5</div>
+                <p>Completed</p>
+              </li>
+            </ul>
+          </div>
+          <div class="panel-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Status</th>
+                  <th>Subject</th>
+                  <th>Progress</th>
+                  <th>Members</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="work-status">
+                    <span class="label label-primary">Recruiting</span>
+                  </td>
+                  <td class="subject">
+                    <div class="table-content">
+                      <p class="blue-grey-500">Lorem ipsum dolor sit amet,consectetur adipsicing elit</p>
+                      <span class="blue-grey-400">11/08/2015</span>
+                      <span class="label label-sm label-primary">Recruiting</span>
+                    </div>
+                  </td>
+                  <td class="work-progress">
+                    <div class="progress progress-xs table-content">
+                      <div class="progress-bar progress-bar-primary progress-bar-indicating" style="width: 90%"
+                      role="progressbar">
+                        <span class="sr-only">90%</span>
+                      </div>
+                    </div>
+                    <span>90%</span>
+                  </td>
+                  <td class="members">
+                    <div class="table-content">
+                      <select multiple="multiple" data-plugin="jquery-selective"></select>
+                    </div>
+                  </td>
+                  <td class="actions">
+                    <button data-url="panel.tpl" data-toggle="slidePanel" type="button" class="btn btn-outline btn-success ">Achievements</button>
+                    <div class="table-content">
+                      <i class="icon wb-menu" data-url="panel.tpl" data-toggle="slidePanel"></i>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="work-status">
+                    <span class="label label-primary">Recruiting</span>
+                  </td>
+                  <td class="subject">
+                    <div class="table-content">
+                      <p class="blue-grey-500">Lorem ipsum dolor sit amet,consectetur adipsicing elit</p>
+                      <span class="blue-grey-400">10/12/2015</span>
+                      <span class="label label-sm label-primary">Recruiting</span>
+                    </div>
+                  </td>
+                  <td class="work-progress">
+                    <div class="progress progress-xs table-content">
+                      <div class="progress-bar progress-bar-primary progress-bar-indicating" style="width: 77%"
+                      role="progressbar">
+                        <span class="sr-only">77%</span>
+                      </div>
+                    </div>
+                    <span>77%</span>
+                  </td>
+                  <td class="members">
+                    <div class="table-content">
+                      <select multiple="multiple" data-plugin="jquery-selective"></select>
+                    </div>
+                  </td>
+                  <td class="actions">
+                    <button data-url="panel.tpl" data-toggle="slidePanel" type="button" class="btn btn-outline btn-success ">Achievements</button>
+                    <div class="table-content">
+                      <i class="icon wb-menu" data-url="panel.tpl" data-toggle="slidePanel"></i>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="work-status">
+                    <span class="label label-success">Completed</span>
+                  </td>
+                  <td class="subject">
+                    <div class="table-content">
+                      <p class="blue-grey-500">Lorem ipsum dolor sit amet,consectetur adipsicing elit</p>
+                      <span class="blue-grey-400">15/10/2015</span>
+                      <span class="label label-sm label-success">Completed</span>
+                    </div>
+                  </td>
+                  <td class="work-progress">
+                    <div class="progress progress-xs table-content">
+                      <div class="progress-bar progress-bar-success progress-bar-indicating" style="width: 100%"
+                      role="progressbar">
+                        <span class="sr-only">100%</span>
+                      </div>
+                    </div>
+                    <span>100%</span>
+                  </td>
+                  <td class="members">
+                    <div class="table-content">
+                      <select multiple="multiple" data-plugin="jquery-selective"></select>
+                    </div>
+                  </td>
+                  <td class="actions">
+                    <button data-url="panel.tpl" data-toggle="slidePanel" type="button" class="btn btn-outline btn-success finish">Achievements</button>
+                    <div class="table-content">
+                      <i class="icon wb-menu" data-url="panel.tpl" data-toggle="slidePanel"></i>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="work-status">
+                    <span class="label label-warning">Filled</span>
+                  </td>
+                  <td class="subject">
+                    <div class="table-content">
+                      <p class="blue-grey-500">Lorem ipsum dolor sit amet,consectetur adipsicing elit</p>
+                      <span class="blue-grey-400">20/11/2015</span>
+                      <span class="label label-sm label-warning">Filled</span>
+                    </div>
+                  </td>
+                  <td class="work-progress">
+                    <div class="progress progress-xs table-content">
+                      <div class="progress-bar progress-bar-primary progress-bar-indicating" style="width: 48%"
+                      role="progressbar">
+                        <span class="sr-only">48%</span>
+                      </div>
+                    </div>
+                    <span>48%</span>
+                  </td>
+                  <td class="members">
+                    <div class="table-content">
+                      <select multiple="multiple" data-plugin="jquery-selective"></select>
+                    </div>
+                  </td>
+                  <td class="actions">
+                    <button data-url="panel.tpl" data-toggle="slidePanel" type="button" class="btn btn-outline btn-success ">Achievements</button>
+                    <div class="table-content">
+                      <i class="icon wb-menu" data-url="panel.tpl" data-toggle="slidePanel"></i>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="work-status">
+                    <span class="label label-primary">Recruiting</span>
+                  </td>
+                  <td class="subject">
+                    <div class="table-content">
+                      <p class="blue-grey-500">Lorem ipsum dolor sit amet,consectetur adipsicing elit</p>
+                      <span class="blue-grey-400">16/08/2015</span>
+                      <span class="label label-sm label-primary">Recruiting</span>
+                    </div>
+                  </td>
+                  <td class="work-progress">
+                    <div class="progress progress-xs table-content">
+                      <div class="progress-bar progress-bar-primary progress-bar-indicating" style="width: 97%"
+                      role="progressbar">
+                        <span class="sr-only">97%</span>
+                      </div>
+                    </div>
+                    <span>97%</span>
+                  </td>
+                  <td class="members">
+                    <div class="table-content">
+                      <select multiple="multiple" data-plugin="jquery-selective"></select>
+                    </div>
+                  </td>
+                  <td class="actions">
+                    <button data-url="panel.tpl" data-toggle="slidePanel" type="button" class="btn btn-outline btn-success ">Achievements</button>
+                    <div class="table-content">
+                      <i class="icon wb-menu" data-url="panel.tpl" data-toggle="slidePanel"></i>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="work-status">
+                    <span class="label label-primary">Recruiting</span>
+                  </td>
+                  <td class="subject">
+                    <div class="table-content">
+                      <p class="blue-grey-500">Lorem ipsum dolor sit amet,consectetur adipsicing elit</p>
+                      <span class="blue-grey-400">24/09/2015</span>
+                      <span class="label label-sm label-primary">Recruiting</span>
+                    </div>
+                  </td>
+                  <td class="work-progress">
+                    <div class="progress progress-xs table-content">
+                      <div class="progress-bar progress-bar-primary progress-bar-indicating" style="width: 80%"
+                      role="progressbar">
+                        <span class="sr-only">80%</span>
+                      </div>
+                    </div>
+                    <span>80%</span>
+                  </td>
+                  <td class="members">
+                    <div class="table-content">
+                      <select multiple="multiple" data-plugin="jquery-selective"></select>
+                    </div>
+                  </td>
+                  <td class="actions">
+                    <button data-url="panel.tpl" data-toggle="slidePanel" type="button" class="btn btn-outline btn-success ">Achievements</button>
+                    <div class="table-content">
+                      <i class="icon wb-menu" data-url="panel.tpl" data-toggle="slidePanel"></i>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="work-status">
+                    <span class="label label-primary">Recruiting</span>
+                  </td>
+                  <td class="subject">
+                    <div class="table-content">
+                      <p class="blue-grey-500">Lorem ipsum dolor sit amet,consectetur adipsicing elit</p>
+                      <span class="blue-grey-400">12/11/2015</span>
+                      <span class="label label-sm label-primary">Recruiting</span>
+                    </div>
+                  </td>
+                  <td class="work-progress">
+                    <div class="progress progress-xs table-content">
+                      <div class="progress-bar progress-bar-primary progress-bar-indicating" style="width: 65%"
+                      role="progressbar">
+                        <span class="sr-only">65%</span>
+                      </div>
+                    </div>
+                    <span>65%</span>
+                  </td>
+                  <td class="members">
+                    <div class="table-content">
+                      <select multiple="multiple" data-plugin="jquery-selective"></select>
+                    </div>
+                  </td>
+                  <td class="actions">
+                    <button data-url="panel.tpl" data-toggle="slidePanel" type="button" class="btn btn-outline btn-success ">Achievements</button>
+                    <div class="table-content">
+                      <i class="icon wb-menu" data-url="panel.tpl" data-toggle="slidePanel"></i>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="work-status">
+                    <span class="label label-primary">Recruiting</span>
+                  </td>
+                  <td class="subject">
+                    <div class="table-content">
+                      <p class="blue-grey-500">Lorem ipsum dolor sit amet,consectetur adipsicing elit</p>
+                      <span class="blue-grey-400">21/10/2015</span>
+                      <span class="label label-sm label-primary">Recruiting</span>
+                    </div>
+                  </td>
+                  <td class="work-progress">
+                    <div class="progress progress-xs table-content">
+                      <div class="progress-bar progress-bar-primary progress-bar-indicating" style="width: 70%"
+                      role="progressbar">
+                        <span class="sr-only">70%</span>
+                      </div>
+                    </div>
+                    <span>70%</span>
+                  </td>
+                  <td class="members">
+                    <div class="table-content">
+                      <select multiple="multiple" data-plugin="jquery-selective"></select>
+                    </div>
+                  </td>
+                  <td class="actions">
+                    <button data-url="panel.tpl" data-toggle="slidePanel" type="button" class="btn btn-outline btn-success ">Achievements</button>
+                    <div class="table-content">
+                      <i class="icon wb-menu" data-url="panel.tpl" data-toggle="slidePanel"></i>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="work-status">
+                    <span class="label label-primary">Recruiting</span>
+                  </td>
+                  <td class="subject">
+                    <div class="table-content">
+                      <p class="blue-grey-500">Lorem ipsum dolor sit amet,consectetur adipsicing elit</p>
+                      <span class="blue-grey-400">23/10/2015</span>
+                      <span class="label label-sm label-primary">Recruiting</span>
+                    </div>
+                  </td>
+                  <td class="work-progress">
+                    <div class="progress progress-xs table-content">
+                      <div class="progress-bar progress-bar-primary progress-bar-indicating" style="width: 62%"
+                      role="progressbar">
+                        <span class="sr-only">62%</span>
+                      </div>
+                    </div>
+                    <span>62%</span>
+                  </td>
+                  <td class="members">
+                    <div class="table-content">
+                      <select multiple="multiple" data-plugin="jquery-selective"></select>
+                    </div>
+                  </td>
+                  <td class="actions">
+                    <button data-url="panel.tpl" data-toggle="slidePanel" type="button" class="btn btn-outline btn-success ">Achievements</button>
+                    <div class="table-content">
+                      <i class="icon wb-menu" data-url="panel.tpl" data-toggle="slidePanel"></i>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="work-status">
+                    <span class="label label-primary">Recruiting</span>
+                  </td>
+                  <td class="subject">
+                    <div class="table-content">
+                      <p class="blue-grey-500">Lorem ipsum dolor sit amet,consectetur adipsicing elit</p>
+                      <span class="blue-grey-400">11/11/2015</span>
+                      <span class="label label-sm label-primary">Recruiting</span>
+                    </div>
+                  </td>
+                  <td class="work-progress">
+                    <div class="progress progress-xs table-content">
+                      <div class="progress-bar progress-bar-primary progress-bar-indicating" style="width: 83%"
+                      role="progressbar">
+                        <span class="sr-only">83%</span>
+                      </div>
+                    </div>
+                    <span>83%</span>
+                  </td>
+                  <td class="members">
+                    <div class="table-content">
+                      <select multiple="multiple" data-plugin="jquery-selective"></select>
+                    </div>
+                  </td>
+                  <td class="actions">
+                    <button data-url="panel.tpl" data-toggle="slidePanel" type="button" class="btn btn-outline btn-success ">Achievements</button>
+                    <div class="table-content">
+                      <i class="icon wb-menu" data-url="panel.tpl" data-toggle="slidePanel"></i>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="panel-footer">
+            <nav>
+              <ul class="pagination pagination-gap">
+                <li class="disabled">
+                  <a href="javascript:void(0)" aria-label="Previous">
+                    <span aria-hidden="true">Previous</span>
+                  </a>
+                </li>
+                <li class="active"><a href="javascript:void(0)">1 <span class="sr-only">(current)</span></a></li>
+                <li><a href="javascript:void(0)">2</a></li>
+                <li><a href="javascript:void(0)">3</a></li>
+                <li><a href="javascript:void(0)">4</a></li>
+                <li><a href="javascript:void(0)">5</a></li>
+                <li>
+                  <a href="javascript:void(0)" aria-label="Next">
+                    <span aria-hidden="true">Next</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  {{/content}}
+{{/extend}}

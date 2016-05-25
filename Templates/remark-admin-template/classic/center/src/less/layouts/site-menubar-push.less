@@ -1,0 +1,35 @@
+
+
+@media (min-width: @grid-float-breakpoint) {
+  .site-menubar-push {
+    &.site-menubar-changing {
+      .page, .site-footer {
+        transition: padding .25s;
+      }
+    }
+
+    &.site-menubar-open {
+      .page, .site-footer {
+        padding-left: @site-menubar-width;
+      }
+
+      .page-aside {
+        left: @site-menubar-width;
+      }
+
+      .site-menubar {
+        -ms-transform: translate(0, 0);
+        .transform(translate3d(0, 0, 0));
+      }
+    }
+  }
+  .site-menubar-fold {
+    .page, .site-footer {
+      padding-left: @site-menubar-fold-width;
+    }
+
+    .page-aside {
+      left: @site-menubar-fold-width;
+    }
+  }
+}

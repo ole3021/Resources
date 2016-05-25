@@ -1,0 +1,22 @@
+// Top & Bottom
+.shadow(@shadow-top; @shadow-bottom) {
+  box-shadow: @shadow-top, @shadow-bottom;
+}
+
+// Top
+.shadow-top(@shadow-top;) {
+  box-shadow: @shadow-top;
+}
+
+// Bottom
+.shadow-bottom(@shadow-bottom) {
+  box-shadow: @shadow-bottom;
+}
+
+// active
+.shadow-active(@shadow-active) {
+  &:hover,
+  &:focus {
+    box-shadow: @shadow-active;
+  }
+}

@@ -1,0 +1,448 @@
+@import "vars.less";
+
+.dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+// Widget Chart
+//=============================
+.widget {
+  margin-bottom: 30px;
+  height: ~'calc(100% - 30px)';
+}
+
+.ct-chart {
+  .ct-label {
+    &.ct-vertical, &.ct-horizontal {
+      font-size: 14px;
+      color: @gray;
+    }
+    &.ct-horizontal {
+      text-align: center;
+    }
+  }
+}
+
+#chartThreeLinearea {
+  .ct-chart {
+    .ct-area {
+      fill-opacity: 1;
+    }
+    .ct-series {
+      &.ct-series-a {
+        .ct-area {
+          fill: @color-red-600;
+        }
+      }
+      &.ct-series-b {
+        .ct-area {
+          fill: @color-orange-600;
+        }
+      }
+      &.ct-series-c {
+        .ct-area {
+          fill: @color-green-600;
+        }
+      }
+    }
+  }
+}
+
+#chartLinePie {
+  .chart-line {
+    .ct-line, .ct-point {
+      stroke: white;
+    }
+    .ct-line {
+      stroke-width: 2px;
+    }
+    .ct-point {
+      stroke-width: 6px;
+    }
+  }
+  .chart-pie {
+    .ct-series {
+      &.ct-series-a {
+        .ct-slice-donut {
+          stroke: @color-cyan-600;
+        }
+      }
+      &.ct-series-b {
+        .ct-slice-donut {
+          stroke: @color-red-600;
+        }
+      }
+    }
+  }
+}
+
+#chartBarPie {
+  .chart-bar {
+    .ct-bar {
+      stroke: @color-blue-400;
+      stroke-width: 3%;
+    }
+  }
+  .chart-pie {
+    .ct-series {
+      &.ct-series-a {
+        .ct-slice-donut {
+          stroke: @color-purple-600;
+        }
+      }
+      &.ct-series-b {
+        .ct-slice-donut {
+          stroke: @color-blue-600;
+        }
+      }
+    }
+  }
+}
+
+#chartBarStacked {
+  .ct-chart {
+    .ct-bar {
+      stroke-width: 4%;
+    }
+    .ct-series {
+      &.ct-series-a {
+        .ct-bar {
+          stroke: @color-blue-600;
+        }
+      }
+      &.ct-series-b {
+        .ct-bar {
+          stroke: @color-purple-600;
+        }
+      }
+      &.ct-series-c {
+        .ct-bar {
+          stroke: @gray-light;
+        }
+      }
+    }
+  }
+}
+
+#chartPie {
+  .ct-chart {
+    .ct-series {
+      &.ct-series-a {
+        .ct-slice-donut {
+          stroke: @color-purple-600;
+        }
+      }
+      &.ct-series-b {
+        .ct-slice-donut {
+          stroke: @color-red-600;
+        }
+      }
+      &.ct-series-c {
+        .ct-slice-donut {
+          stroke: @color-blue-600;
+        }
+      }
+    }
+  }
+}
+
+#chartBarSimple {
+  .ct-chart {
+    .ct-bar {
+      stroke: @color-blue-600;
+      stroke-width: 2%;
+    }
+  }
+}
+
+
+#chartLineareaSimple {
+  .ct-chart {
+    .ct-line {
+      stroke-width: 1px;
+      stroke: @color-red-300;
+    }
+    .ct-area {
+      fill: @color-red-200;
+    }
+  }
+}
+
+#chartLineareaWithfooter {
+  .ct-chart {
+    .ct-area {
+      fill: @color-blue-700;
+    }
+    .ct-line {
+      stroke-width: 1px;
+      stroke: @color-blue-400;
+    }
+  }
+}
+
+#chartBarWithfooter {
+  .ct-chart {
+    .ct-series {
+      &.ct-series-a {
+        .ct-bar {
+          stroke: @color-red-600;
+          stroke-width: 2%;
+        }
+      }
+      &.ct-series-b {
+        .ct-bar {
+          stroke: @gray-lighter;
+          stroke-width: 2%;
+        }
+      }
+    }
+  }
+}
+
+#chartLinebarLarge {
+  .chart-line {
+    .ct-line {
+      stroke: @color-blue-600;
+      stroke-width: 2px;
+    }
+    .ct-label {
+      &.ct-horizontal {
+        margin-left: -20px;
+      }
+    }
+  }
+  .chart-bar {
+    .ct-bar {
+      stroke: @color-cyan-600;
+      stroke-width: 5%;
+    }
+  }
+}
+
+#chartLineTime {
+  .chart-line {
+    .ct-line {
+      stroke: @gray-lightest;
+      stroke-width: 2px;
+    }
+  }
+  .ct-chart {
+    position: relative;
+  }
+
+  .chart-pie-left {
+    .ct-series {
+      &.ct-series-a {
+        .ct-slice-donut {
+          stroke: @color-blue-600;
+        }
+      }
+      &.ct-series-b {
+        .ct-slice-donut {
+          stroke: @gray-lighter;
+        }
+      }
+    }
+  }
+
+  .chart-pie-right {
+    .ct-series {
+      &.ct-series-a {
+        .ct-slice-donut {
+          stroke: @color-red-600;
+        }
+      }
+      &.ct-series-b {
+        .ct-slice-donut {
+          stroke: @gray-lighter;
+        }
+      }
+    }
+  }
+}
+
+
+#chartBarlineMix {
+  .chart-bar {
+    position: relative;
+    .ct-bar {
+      stroke: @color-orange-300;
+      stroke-width: 2%;
+    }
+  }
+  .chart-line {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .ct-line {
+      stroke: white;
+      stroke-width: 2px;
+    }
+  }
+}
+
+
+#chartBarlineMixTwo {
+  .small-bar-one, .small-bar-two {
+    display: inline-block;
+    width: 80px;
+    height: 45px;
+    vertical-align: top;
+    .ct-bar {
+      stroke-width: 4px;
+    }
+  }
+  .small-bar-one {
+    .ct-bar {
+      stroke: @color-green-600;
+    }
+  }
+  .small-bar-two {
+    .ct-bar {
+      stroke: @color-blue-600;
+    }
+  }
+  .line-chart {
+    .ct-series {
+      &.ct-series-a {
+        .ct-line {
+          stroke: @color-blue-600;
+          stroke-width: 2px;
+        }
+      }
+      &.ct-series-b {
+        .ct-line {
+          stroke: @color-green-600;
+          stroke-width: 2px;
+        }
+      }
+    }
+    .ct-labels > foreignObject {
+      &:first-child {
+        .ct-label.ct-horizontal {
+          margin-left: 0px;
+        }
+      }
+    }
+    .ct-label {
+      &.ct-vertical {
+        text-align: left;
+      }
+      &.ct-horizontal {
+        margin-left: -20px;
+      }
+    }
+  }
+}
+
+
+
+
+#charLineareaTwo {
+  .ct-chart {
+    .ct-label {
+      &.ct-vertical, &.ct-horizontal {
+        font-size: 14px;
+      }
+    }
+    .ct-area {
+      fill-opacity: 1;
+    }
+    .ct-series {
+      &.ct-series-a {
+        .ct-area {
+          fill: @color-blue-200;
+        }
+      }
+      &.ct-series-b {
+        .ct-area {
+          fill: @color-teal-200;
+        }
+      }
+    }
+  }
+
+  ul {
+    .icon {
+      vertical-align: text-bottom;
+    }
+  }
+}
+
+#chartLinepoint {
+  .header {
+    border-bottom: 1px solid @gray-lighter;
+  }
+  .badge {
+    padding: 8px 12px
+  }
+  .ct-chart {
+    .ct-line, .ct-point {
+      stroke: @color-blue-600;
+    }
+    .ct-line {
+      stroke-width: 2px;
+    }
+    .ct-point {
+      stroke-width: 6px;
+    }
+  }
+}
+
+#chartTimelineTwo {
+  ul {
+    li {
+      border-bottom: 1px solid @gray-lighter;
+    }
+  }
+  .ct-chart {
+    .ct-area {
+      fill-opacity: 1;
+    }
+    .ct-series {
+      &.ct-series-a {
+        .ct-area {
+          fill: @gray-lighter;
+        }
+      }
+      &.ct-series-b {
+        .ct-area {
+          fill: @color-blue-600;
+        }
+      }
+    }
+  }
+}
+
+#chartStackedBar {
+  .ct-chart {
+    .ct-label {
+      &.ct-vertical, &.ct-horizontal {
+        font-size: 14px;
+      }
+      &.ct-horizontal {
+        text-align: center;
+      }
+    }
+    .ct-bar {
+      stroke-width: 3%;
+    }
+    .ct-series {
+      &.ct-series-a {
+        .ct-bar {
+          stroke: @color-blue-600;
+        }
+      }
+      &.ct-series-b {
+        .ct-bar {
+          stroke: @gray-lightest;
+        }
+      }
+    }
+  }
+}

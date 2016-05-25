@@ -1,0 +1,54 @@
+@import "vars.less";
+
+.dashboard {
+  .page-header {
+    background-image: url("../../images/dashboard2-header.jpg");
+    background-size: cover;
+  }
+  .widget, .panel {
+    height: ~"calc(100% - 30px)";
+    }
+  .widget-content {
+    height: 100%;
+  }
+}
+
+#widgetLinearea {
+  .ct-chart {
+    .ct-label {
+      &.ct-vertical, &.ct-horizontal {
+        font-size: 14px;
+      }
+    }
+    .ct-area {
+      fill-opacity: 1;
+    }
+    .ct-series {
+      &.ct-series-a {
+        .ct-area {
+          fill: @color-blue-200;
+        }
+      }
+      &.ct-series-b {
+        .ct-area {
+          fill: @color-teal-200;
+        }
+      }
+    }
+  }
+
+  ul {
+    .icon {
+      vertical-align: text-bottom;
+    }
+  }
+}
+
+#widgetGmap {
+  overflow: hidden;
+
+  .map {
+    border: none;
+    padding: 0;
+  }
+}

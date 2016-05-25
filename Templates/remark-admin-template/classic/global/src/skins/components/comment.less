@@ -1,0 +1,42 @@
+// Name:            Comments
+//
+// Component:       `comments`
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+@comment-border                    : @divider-color-base;
+@comment-author-color              : @title-color;
+@comment-meta-color                : @prompt-color;
+
+// Component: Comments
+// ========================================================================
+
+.comments {
+  .comment {
+    border: none;
+    border-bottom-color: @comment-border;
+
+    .comment {
+      &:first-child {
+        border-top-color: @comment-border;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.comment-author {
+  &,
+  &:hover,
+  &:focus {
+    color: @comment-author-color;
+  }
+}
+
+.comment-meta {
+  color: @comment-meta-color;
+}

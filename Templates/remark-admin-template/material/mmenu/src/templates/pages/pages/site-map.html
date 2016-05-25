@@ -1,0 +1,923 @@
+---
+title: Site Map
+---
+
+{{#extend "layout-default"}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/pages/site-map.css">
+  {{/content}}
+
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/panel.js"></script>
+  {{/content}}
+
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <!-- Page Header -->
+      <div class="page-header">
+        <ol class="breadcrumb">
+          <li><a href="{{dest '/index.html'}}">Home</a></li>
+          <li class="active">Pages</li>
+        </ol>
+        <h1 class="page-title">Site Map</h1>
+      </div>
+      <!-- End Page Header -->
+      <!-- Page Content -->
+      <div class="page-content container-fluid">
+        <div class="panel">
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-xlg-4 col-lg-6 col-md-6 col-sm-6">
+                <!-- Sitemap List -->
+                <h4>General</h4>
+                <ul class="sitemap-list">
+                  <li>
+                    <a href="{{dest 'index.html'}}">
+                      <i class="md-view-dashboard margin-right-10"></i>
+                      <span>Dashboard</span>
+                    </a>
+
+                    <!-- Sitemap Children -->
+                  </li>
+                  <li class="is-parent">
+                    <a href="#">
+                      <i class="md-view-compact margin-right-10"></i>
+                      <span>Layouts</span>
+                    </a>
+
+                    <!-- Sitemap Children -->
+                    <ul>
+
+                      <li>
+                        <a href="{{dest 'layouts/menu-collapsed.html'}}">
+                          <span>Menu Collapsed</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'layouts/menu-expended.html'}}">
+                          <span>Menu Expended</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'layouts/grids.html'}}">
+                          <span>Grid Scaffolding</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'layouts/layout-grid.html'}}">
+                          <span>Layout Grid</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'layouts/headers.html'}}">
+                          <span>Different Headers</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'layouts/panel-transition.html'}}">
+                          <span>Panel Transition</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'layouts/boxed.html'}}">
+                          <span>Boxed Layout</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'layouts/two-columns.html'}}">
+                          <span>Two Columns</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'layouts/page-aside-fixed.html'}}">
+                          <span>Page Aside Fixed</span>
+                        </a>
+                      </li>
+                    </ul>
+                    <!-- End Sitemap Children -->
+                  </li>
+                  <li class="is-parent">
+                    <a href="#">
+                      <i class="md-google-pages margin-right-10"></i>
+                      <span>Pages</span>
+                    </a>
+
+                    <!-- Sitemap Children -->
+                    <ul>
+
+                      <li>
+                        <a href="javascript:void(0)">
+                          <span>Errors</span>
+                        </a>
+                      </li>
+                      <!-- Sitemap List Sub -->
+                      <ul class="sitemap-list-sub">
+                        <li>
+                          <a href="{{dest 'pages/error-400.html'}}">
+                    400
+                  </a>
+                        </li>
+                        <li>
+                          <a href="{{dest 'pages/error-403.html'}}">
+                    403
+                  </a>
+                        </li>
+                        <li>
+                          <a href="{{dest 'pages/error-404.html'}}">
+                    404
+                  </a>
+                        </li>
+                        <li>
+                          <a href="{{dest 'pages/error-500.html'}}">
+                    500
+                  </a>
+                        </li>
+                        <li>
+                          <a href="{{dest 'pages/error-503.html'}}">
+                    503
+                  </a>
+                        </li>
+                      </ul>
+                      <!-- End Sitemap List Sub -->
+                      <li>
+                        <a href="{{dest 'pages/faq.html'}}">
+                          <span>FAQ</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'pages/gallery.html'}}">
+                          <span>Gallery</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'pages/gallery-grid.html'}}">
+                          <span>Gallery Grid</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'pages/search-result.html'}}">
+                          <span>Search Result</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">
+                          <span>Maps</span>
+                        </a>
+                      </li>
+                      <!-- Sitemap List Sub -->
+                      <ul class="sitemap-list-sub">
+                        <li>
+                          <a href="{{dest 'pages/map-google.html'}}">
+                    Google Maps
+                  </a>
+                        </li>
+                        <li>
+                          <a href="{{dest 'pages/map-vector.html'}}">
+                    Vector Maps
+                  </a>
+                        </li>
+                      </ul>
+                      <!-- End Sitemap List Sub -->
+                      <li>
+                        <a href="{{dest 'pages/maintenance.html'}}">
+                          <span>Maintenance</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'pages/forgot-password.html'}}">
+                          <span>Forgot Password</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'pages/lockscreen.html'}}">
+                          <span>Lockscreen</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'pages/login.html'}}">
+                          <span>Login</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'pages/register.html'}}">
+                          <span>Register</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'pages/login-v2.html'}}">
+                          <span>Login V2</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'pages/register-v2.html'}}">
+                          <span>Register V2</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'pages/login-v3.html'}}">
+                          <span>Login V3</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'pages/register-v3.html'}}">
+                          <span>Register V3</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'pages/user.html'}}">
+                          <span>User List</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'pages/invoice.html'}}">
+                          <span>Invoice</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'pages/blank.html'}}">
+                          <span>Blank Page</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'pages/email.html'}}">
+                          <span>Email</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'pages/code-editor.html'}}">
+                          <span>Code Editor</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'pages/profile.html'}}">
+                          <span>Profile</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'pages/site-map.html'}}">
+                          <span>Sitemap</span>
+                        </a>
+                      </li>
+                    </ul>
+                    <!-- End Sitemap Children -->
+                  </li>
+
+                </ul>
+                <!-- End Sitemap List -->
+              </div>
+              <div class="col-xlg-4 col-lg-6 col-md-6 col-sm-6">
+                <!-- Sitemap List -->
+                <h4>Elements</h4>
+                <ul class="sitemap-list">
+                  <li class="is-parent">
+                    <a href="#">
+                      <i class="md-palette margin-right-10"></i>
+                      <span>Basic UI</span>
+                    </a>
+
+                    <!-- Sitemap Children -->
+                    <ul>
+
+                      <li>
+                        <a href="javascript:void(0)">
+                          <span>Panel</span>
+                        </a>
+                      </li>
+                      <!-- Sitemap List Sub -->
+                      <ul class="sitemap-list-sub">
+                        <li>
+                          <a href="{{dest 'uikit/panel-structure.html'}}">
+                    Panel Structure
+                  </a>
+                        </li>
+                        <li>
+                          <a href="{{dest 'uikit/panel-actions.html'}}">
+                    Panel Actions
+                  </a>
+                        </li>
+                        <li>
+                          <a href="{{dest 'uikit/panel-portlets.html'}}">
+                    Panel Portlets
+                  </a>
+                        </li>
+                      </ul>
+                      <!-- End Sitemap List Sub -->
+                      <li>
+                        <a href="{{dest 'uikit/buttons.html'}}">
+                          <span>Buttons</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'uikit/dropdowns.html'}}">
+                          <span>Dropdowns</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'uikit/icons.html'}}">
+                          <span>Icons</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'uikit/list.html'}}">
+                          <span>List</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'uikit/tooltip-popover.html'}}">
+                          <span>Tooltip &amp; Popover</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'uikit/modals.html'}}">
+                          <span>Modals</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'uikit/tabs-accordions.html'}}">
+                          <span>Tabs &amp; Accordions</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'uikit/images.html'}}">
+                          <span>Images</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'uikit/badges-labels.html'}}">
+                          <span>Badges &amp; Labels</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'uikit/progress-bars.html'}}">
+                          <span>Progress Bars</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'uikit/carousel.html'}}">
+                          <span>Carousel</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'uikit/typography.html'}}">
+                          <span>Typography</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'uikit/colors.html'}}">
+                          <span>Colors</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'uikit/utilities.html'}}">
+                          <span>Utilties</span>
+                        </a>
+                      </li>
+                    </ul>
+                    <!-- End Sitemap Children -->
+                  </li>
+                  <li class="is-parent">
+                    <a href="#">
+                      <i class="md-format-color-fill margin-right-10"></i>
+                      <span>Advanced UI</span>
+                    </a>
+
+                    <!-- Sitemap Children -->
+                    <ul>
+
+                      <li>
+                        <a href="javascript:void(0)">
+                          <span>Tour</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'advanced/animation.html'}}">
+                          <span>Animation</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'advanced/highlight.html'}}">
+                          <span>Highlight</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'advanced/lightbox.html'}}">
+                          <span>Lightbox</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'advanced/scrollable.html'}}">
+                          <span>Scrollable</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'advanced/rating.html'}}">
+                          <span>Rating</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'advanced/context-menu.html'}}">
+                          <span>Context Menu</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'advanced/alertify.html'}}">
+                          <span>Alertify</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'advanced/masonry.html'}}">
+                          <span>Masonry</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'advanced/treeview.html'}}">
+                          <span>Treeview</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'advanced/toastr.html'}}">
+                          <span>Toastr</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'advanced/maps-vector.html'}}">
+                          <span>Vector Maps</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'advanced/maps-google.html'}}">
+                          <span>Google Maps</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'advanced/sortable-nestable.html'}}">
+                          <span>Sortable &amp; Nestable</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'advanced/bootbox-sweetalert.html'}}">
+                          <span>Bootbox &amp; Sweetalert</span>
+                        </a>
+                      </li>
+                    </ul>
+                    <!-- End Sitemap Children -->
+                  </li>
+                  <li class="is-parent">
+                    <a href="#">
+                      <i class="md-puzzle-piece margin-right-10"></i>
+                      <span>Structure</span>
+                    </a>
+
+                    <!-- Sitemap Children -->
+                    <ul>
+
+                      <li>
+                        <a href="{{dest 'structure/alerts.html'}}">
+                          <span>Alerts</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'structure/ribbon.html'}}">
+                          <span>Ribbon</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'structure/pricing-tables.html'}}">
+                          <span>Pricing Tables</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'structure/overlay.html'}}">
+                          <span>Overlay</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'structure/cover.html'}}">
+                          <span>Cover</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'structure/timeline-simple.html'}}">
+                          <span>Simple Timeline</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'structure/timeline.html'}}">
+                          <span>Timeline</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'structure/step.html'}}">
+                          <span>Step</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'structure/comments.html'}}">
+                          <span>Comments</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'structure/media.html'}}">
+                          <span>Media</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'structure/chat.html'}}">
+                          <span>Chat</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'structure/testimonials.html'}}">
+                          <span>Testimonials</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'structure/nav.html'}}">
+                          <span>Nav</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'structure/navbars.html'}}">
+                          <span>Navbars</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'structure/blockquotes.html'}}">
+                          <span>Blockquotes</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'structure/pagination.html'}}">
+                          <span>Pagination</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'structure/breadcrumbs.html'}}">
+                          <span>Breadcrumbs</span>
+                        </a>
+                      </li>
+                    </ul>
+                    <!-- End Sitemap Children -->
+                  </li>
+                  <li class="is-parent">
+                    <a href="#">
+                      <i class="md-widgets margin-right-10"></i>
+                      <span>Widgets</span>
+                    </a>
+
+                    <!-- Sitemap Children -->
+                    <ul>
+
+                      <li>
+                        <a href="{{dest 'widgets/statistics.html'}}">
+                          <span>Statistics Widgets</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'widgets/data.html'}}">
+                          <span>Data Widgets</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'widgets/blog.html'}}">
+                          <span>Blog Widgets</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'widgets/chart.html'}}">
+                          <span>Chart Widgets</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'widgets/social.html'}}">
+                          <span>Social Widgets</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'widgets/weather.html'}}">
+                          <span>Weather Widgets</span>
+                        </a>
+                      </li>
+                    </ul>
+                    <!-- End Sitemap Children -->
+                  </li>
+                  <li class="is-parent">
+                    <a href="#">
+                      <i class="md-comment-alt-text margin-right-10"></i>
+                      <span>Forms</span>
+                    </a>
+
+                    <!-- Sitemap Children -->
+                    <ul>
+
+                      <li>
+                        <a href="{{dest 'forms/general.html'}}">
+                          <span>General Elements</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'forms/material.html'}}">
+                          <span>Material Elements</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'forms/advanced.html'}}">
+                          <span>Advanced Elements</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'forms/layouts.html'}}">
+                          <span>Form Layouts</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'forms/wizard.html'}}">
+                          <span>Form Wizard</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'forms/validation.html'}}">
+                          <span>Form Validation</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'forms/masks.html'}}">
+                          <span>Form Masks</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'forms/editable.html'}}">
+                          <span>Form Editable</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">
+                          <span>Editors</span>
+                        </a>
+                      </li>
+                      <!-- Sitemap List Sub -->
+                      <ul class="sitemap-list-sub">
+                        <li>
+                          <a href="{{dest 'forms/editor-summernote.html'}}">
+                    Summernote
+                  </a>
+                        </li>
+                        <li>
+                          <a href="{{dest 'forms/editor-markdown.html'}}">
+                    Markdown
+                  </a>
+                        </li>
+                        <li>
+                          <a href="{{dest 'forms/editor-ace.html'}}">
+                    Ace Editor
+                  </a>
+                        </li>
+                      </ul>
+                      <!-- End Sitemap List Sub -->
+                      <li>
+                        <a href="{{dest 'forms/image-cropping.html'}}">
+                          <span>Image Cropping</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'forms/file-uploads.html'}}">
+                          <span>File Uploads</span>
+                        </a>
+                      </li>
+                    </ul>
+                    <!-- End Sitemap Children -->
+                  </li>
+                  <li class="is-parent">
+                    <a href="#">
+                      <i class="md-border-all margin-right-10"></i>
+                      <span>Tables</span>
+                    </a>
+
+                    <!-- Sitemap Children -->
+                    <ul>
+
+                      <li>
+                        <a href="{{dest 'tables/basic.html'}}">
+                          <span>Basic Tables</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'tables/bootstrap.html'}}">
+                          <span>Bootstrap Tables</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'tables/floatthead.html'}}">
+                          <span>floatThead</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'tables/responsive.html'}}">
+                          <span>Responsive Tables</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'tables/editable.html'}}">
+                          <span>Editable Tables</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'tables/jsgrid.html'}}">
+                          <span>jsGrid</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'tables/footable.html'}}">
+                          <span>FooTable</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'tables/datatable.html'}}">
+                          <span>DataTables</span>
+                        </a>
+                      </li>
+                    </ul>
+                    <!-- End Sitemap Children -->
+                  </li>
+                  <li class="is-parent">
+                    <a href="#">
+                      <i class="md-chart margin-right-10"></i>
+                      <span>Chart</span>
+                    </a>
+
+                    <!-- Sitemap Children -->
+                    <ul>
+
+                      <li>
+                        <a href="{{dest 'charts/chartjs.html'}}">
+                          <span>Chart.js</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'charts/gauges.html'}}">
+                          <span>Gauges</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'charts/flot.html'}}">
+                          <span>Flot</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'charts/peity.html'}}">
+                          <span>Peity</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'charts/sparkline.html'}}">
+                          <span>Sparkline</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'charts/morris.html'}}">
+                          <span>Morris</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'charts/chartist.html'}}">
+                          <span>Chartist.js</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'charts/rickshaw.html'}}">
+                          <span>Rickshaw</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'charts/pie-progress.html'}}">
+                          <span>Pie Progress</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'charts/c3.html'}}">
+                          <span>C3</span>
+                        </a>
+                      </li>
+                    </ul>
+                    <!-- End Sitemap Children -->
+                  </li>
+
+                </ul>
+                <!-- End Sitemap List -->
+              </div>
+              <div class="col-xlg-4 col-lg-6 col-md-6 col-sm-6">
+                <!-- Sitemap List -->
+                <h4>Apps</h4>
+                <ul class="sitemap-list">
+                  <li class="is-parent">
+                    <a href="#">
+                      <i class="md-apps margin-right-10"></i>
+                      <span>Apps</span>
+                    </a>
+
+                    <!-- Sitemap Children -->
+                    <ul>
+
+                      <li>
+                        <a href="{{dest 'apps/contacts/contacts.html'}}">
+                          <span>Contacts</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'apps/calendar/calendar.html'}}">
+                          <span>Calendar</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'apps/notebook/notebook.html'}}">
+                          <span>Notebook</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'apps/taskboard/taskboard.html'}}">
+                          <span>Taskboard</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)">
+                          <span>Documents</span>
+                        </a>
+                      </li>
+                      <!-- Sitemap List Sub -->
+                      <ul class="sitemap-list-sub">
+                        <li>
+                          <a href="{{dest 'apps/documents/articles.html'}}">
+                    Articles
+                  </a>
+                        </li>
+                        <li>
+                          <a href="{{dest 'apps/documents/categories.html'}}">
+                    Categories
+                  </a>
+                        </li>
+                        <li>
+                          <a href="{{dest 'apps/documents/article.html'}}">
+                    Article
+                  </a>
+                        </li>
+                      </ul>
+                      <!-- End Sitemap List Sub -->
+                      <li>
+                        <a href="{{dest 'apps/forum/forum.html'}}">
+                          <span>Forum</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'apps/message/message.html'}}">
+                          <span>Message</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'apps/projects/projects.html'}}">
+                          <span>Projects</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'apps/mailbox/mailbox.html'}}">
+                          <span>Mailbox</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'apps/media/overview.html'}}">
+                          <span>Media</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'apps/work/work.html'}}">
+                          <span>Work</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="{{dest 'apps/location/location.html'}}">
+                          <span>Location</span>
+                        </a>
+                      </li>
+                    </ul>
+                    <!-- End Sitemap Children -->
+                  </li>
+
+                </ul>
+                <!-- End Sitemap List -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Page Content -->
+    </div>
+    <!-- End Page -->
+
+
+  {{/content}}
+{{/extend}}

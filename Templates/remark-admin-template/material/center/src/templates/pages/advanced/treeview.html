@@ -1,0 +1,179 @@
+---
+title: Treeview
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/toastr/toastr.css">
+    <link rel="stylesheet" href="{{global}}/vendor/bootstrap-treeview/bootstrap-treeview.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/toastr/toastr.js"></script>
+    <script src="{{global}}/vendor/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/toastr.js"></script>
+    <script src="{{global}}/js/components/bootstrap-treeview.js"></script>
+  {{/content}}
+
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/advanced/treeview.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li class="active">Advanced UI</li>
+        </ol>
+        <h1 class="page-title">Treeview</h1>
+        <div class="page-header-actions">
+          <a class="btn btn-sm btn-primary btn-round" href="https://github.com/jonmiles/bootstrap-treeview"
+          target="_blank">
+            <i class="icon md-link" aria-hidden="true"></i>
+            <span class="hidden-xs">Official Website</span>
+          </a>
+        </div>
+      </div>
+      <div class="page-content">
+        <!-- Panel -->
+        <div class="panel">
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-lg-4 col-sm-6">
+                <!-- Example Basic -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Basic</h4>
+                  <div class="example">
+                    <div data-plugin="treeview" data-source="getExampleTreeview" id="exampleBasic"></div>
+                  </div>
+                </div>
+                <!-- End Example Basic -->
+              </div>
+
+              <div class="col-lg-4 col-sm-6">
+                <!-- Example Collapsed -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Collapsed</h4>
+                  <div class="example">
+                    <div data-plugin="treeview" data-source="getExampleTreeview" data-levels="1" id="exampleCollapsed"></div>
+                  </div>
+                </div>
+                <!-- End Example Collapsed -->
+              </div>
+
+              <div class="clearfix visible-md-block visible-sm-block"></div>
+
+              <div class="col-lg-4 col-sm-6">
+                <!-- Example Expanded -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Expanded</h4>
+                  <div class="example">
+                    <div data-plugin="treeview" data-source="getExampleTreeview" data-levels="99" id="exampleExpanded"></div>
+                  </div>
+                </div>
+                <!-- End Example Expanded -->
+              </div>
+
+              <div class="clearfix visible-lg-block"></div>
+
+              <div class="col-lg-4 col-sm-6">
+                <!-- Example Custom Icons -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Custom Icons</h4>
+                  <div class="example">
+                    <div data-plugin="treeview" data-source="getExampleTreeview" data-expand-icon="icon md-chevron-right"
+                    data-collapse-icon="icon md-chevron-down" data-node-icon="icon md-bookmark"
+                    id="exampleCustomIcons"></div>
+                  </div>
+                </div>
+                <!-- End Example Custom Icons -->
+              </div>
+
+              <div class="clearfix visible-md-block visible-sm-block"></div>
+
+              <div class="col-lg-4 col-sm-6">
+                <!-- Example Tags As Badges -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Tags As Badges</h4>
+                  <div class="example">
+                    <div data-plugin="treeview" data-source="getExampleTreeview" data-expand-icon="icon md-check"
+                    data-collapse-icon="icon md-check-circle" data-node-icon="icon md-account"
+                    data-show-tags="true" id="exampleTagsAsBadges"></div>
+                  </div>
+                </div>
+                <!-- End Example Tags As Badges -->
+              </div>
+
+              <div class="col-lg-4 col-sm-6">
+                <!-- Example Json Data -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Json Data</h4>
+                  <div class="example">
+                    <div id="exampleJsonData"></div>
+                  </div>
+                </div>
+                <!-- End Example Json Data -->
+              </div>
+
+              <div class="clearfix hidden-xs"></div>
+
+              <div class="col-md-4 col-sm-6">
+                <!-- Example Searchable Tree -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Searchable Tree</h4>
+                  <form class="form-group" id="exampleSearchForm" role="search">
+                    <div class="input-search">
+                      <input type="search" class="form-control" id="inputSearchable" placeholder="Search ...">
+                      <button type="submit" class="input-search-btn">
+                        <i class="icon md-search" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </form>
+                  <div class="example">
+                    <div id="exampleSearchableTree"></div>
+                  </div>
+                </div>
+                <!-- End Example Searchable Tree -->
+              </div>
+
+              <div class="col-md-4 col-sm-6">
+                <!-- Example Expandible Tree -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Expandible Tree</h4>
+                  <button type="button" class="btn btn-info" id="exampleExpandAll">Expand All</button>
+                  <button type="button" class="btn btn-info" id="exampleCollapseAll">Collapse All</button>
+                  <div class="example">
+                    <div id="exampleExpandibleTree"></div>
+                  </div>
+                </div>
+                <!-- End Example Expandible Tree -->
+              </div>
+
+              <div class="col-md-4 col-sm-6">
+                <!-- Example Events -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Events</h4>
+                  <div class="example">
+                    <div id="exampleEvents"></div>
+                  </div>
+                </div>
+                <!-- End Example Events -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel -->
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

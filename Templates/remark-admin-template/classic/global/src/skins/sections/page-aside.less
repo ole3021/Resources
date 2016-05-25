@@ -1,0 +1,99 @@
+
+
+.page-aside {
+  border-right-color: @border-color-base;
+  background: @page-aside-bg;
+}
+
+// Page Aside Section
+// ------------------
+.page-aside-section {
+  &:after {
+    border-bottom-color: @gray-lighter;
+  }
+}
+
+
+// Page Aside Title
+// ----------------
+.page-aside-title {
+  color: @gray-darker;
+}
+
+// List group
+// ----------
+.page-aside {
+  .list-group {
+    &-item {
+      border: none;
+
+      .icon {
+        color: @gray;
+      }
+
+      &:hover, &:focus {
+        background-color: @gray-lightest;
+        border: none;
+        color: @brand-primary;
+
+        > .icon {
+          color: @brand-primary;
+        }
+      }
+
+      &.active {
+        background-color: transparent;
+        color: @brand-primary;
+
+        > .icon {
+          color: @brand-primary;
+        }
+
+        &:hover, &:focus {
+          background-color: @gray-lightest;
+          border: none;
+          color: @brand-primary;
+
+          > .icon {
+            color: @brand-primary;
+          }
+        }
+      }
+    }
+
+    &.has-actions {
+      .list-group-item {
+        .item-actions {
+          .btn-icon {
+            background-color: transparent;
+
+            &:hover {
+              .icon {
+                color: @brand-primary;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .item-actions {
+            .icon {
+              color: @gray-dark;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @screen-xs-max) {
+  .page-aside {
+    border-color: transparent;
+
+    .page-aside-inner {
+      background-color: white;
+      border-right-color: @gray-lighter;
+    }
+  }
+}

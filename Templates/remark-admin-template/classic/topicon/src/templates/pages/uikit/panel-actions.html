@@ -1,0 +1,229 @@
+---
+title: Panel Actions
+---
+
+{{#extend "layout-default"}}
+
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/panel.js"></script>
+  {{/content}}
+
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/uikit/panel-actions.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <ol class="breadcrumb">
+          <li><a href="{{dest '/index.html'}}">Home</a></li>
+          <li class="active">Basic UI</li>
+        </ol>
+        <h1 class="page-title">Panel Actions</h1>
+        <div class="page-header-actions">
+          <button type="button" class="btn btn-sm btn-sm btn-icon btn-inverse btn-round"
+          data-toggle="tooltip" data-original-title="Edit">
+            <i class="icon wb-pencil" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-sm btn-sm btn-icon btn-inverse btn-round"
+          data-toggle="tooltip" data-original-title="Refresh">
+            <i class="icon wb-refresh" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-sm btn-sm btn-icon btn-inverse btn-round"
+          data-toggle="tooltip" data-original-title="Setting">
+            <i class="icon wb-settings" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Page Content -->
+      <div class="page-content container-fluid">
+        <!-- Panel Api -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Api Live Example</h3>
+          </div>
+          <div class="panel-body">
+            <div class="row row-lg">
+              <div class="col-lg-5">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Action</th>
+                      <th>Live</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-middle">Fullscreen</td>
+                      <td>
+                        <button id="exampleTogglFullscreene" type="button" class="btn btn-sm btn-outline btn-primary">Toggle</button>
+                        <button id="exampleEnterFullscreen" type="button" class="btn btn-sm btn-outline btn-success">Enter</button>
+                        <button id="exampleLeaveFullscreen" type="button" class="btn btn-sm btn-outline btn-warning">Leave</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-middle">Content</td>
+                      <td>
+                        <button id="exampleToggleContent" type="button" class="btn btn-sm btn-outline btn-primary">Toggle</button>
+                        <button id="exampleShowContent" type="button" class="btn btn-sm btn-outline btn-success">Show</button>
+                        <button id="exampleHideContent" type="button" class="btn btn-sm btn-outline btn-warning">Hide</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-middle">Open/Close</td>
+                      <td>
+                        <button id="exampleToggle" type="button" class="btn btn-sm btn-outline btn-primary">Toggle</button>
+                        <button id="exampleOpen" type="button" class="btn btn-sm btn-outline btn-success">Open</button>
+                        <button id="exampleClose" type="button" class="btn btn-sm btn-outline btn-warning">Close</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-middle">Refresh</td>
+                      <td>
+                        <button id="exampleReplace" type="button" class="btn btn-sm btn-outline btn-primary">Replace</button>
+                        <button id="exampleLoad" type="button" class="btn btn-sm btn-outline btn-success">Load</button>
+                        <button id="exampleDone" type="button" class="btn btn-sm btn-outline btn-warning">Done</button>
+                      </td>
+                    </tr>
+                    <tbody>
+                </table>
+              </div>
+
+              <div class="col-lg-7">
+                <div class="example example-well margin-top-0 padding-30">
+                  <div id="examplePanel" class="panel margin-bottom-0">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Live Example</h3>
+                      <div class="panel-actions">
+                        <div class="dropdown">
+                          <a class="dropdown-toggle panel-action" data-toggle="dropdown" href="#" aria-expanded="false"><i class="icon wb-settings" aria-hidden="true"></i></a>
+                          <ul class="dropdown-menu bullet" role="menu">
+                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-flag" aria-hidden="true"></i> Action</a></li>
+                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-print" aria-hidden="true"></i> Another action</a></li>
+                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-heart" aria-hidden="true"></i> Something else here</a></li>
+                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i> Separated link</a></li>
+                          </ul>
+                        </div>
+                        <a class="panel-action icon wb-refresh" data-toggle="panel-refresh" data-load-type="round-circle"
+                        data-load-callback="customRefreshCallback" aria-hidden="true"></a>
+                        <a class="panel-action icon wb-minus" aria-expanded="true" data-toggle="panel-collapse"
+                        aria-hidden="true"></a>
+                        <a class="panel-action icon wb-expand" data-toggle="panel-fullscreen" aria-hidden="true"></a>
+                        <a class="panel-action icon wb-close" data-toggle="panel-close" aria-hidden="true"></a>
+                      </div>
+                    </div>
+                    <div class="panel-body">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent
+                      libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis
+                      sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent
+                      mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
+                      Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu
+                      ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel Api -->
+
+        <div class="row">
+          <div class="col-md-6">
+            <!-- Example Panel Fullscreen -->
+            <div class="panel">
+              <div class="panel-heading">
+                <h3 class="panel-title">Fullscreen</h3>
+                <div class="panel-actions">
+                  <a class="panel-action icon wb-expand" data-toggle="panel-fullscreen" aria-hidden="true"></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent
+                libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem
+                at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
+                Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum
+                lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora
+                torquent per conubia nostra, per inceptos himenaeos.
+              </div>
+            </div>
+            <!-- End Example Panel Fullscreen -->
+          </div>
+
+          <div class="col-md-6">
+            <!-- Example Panel Refresh -->
+            <div class="panel">
+              <div class="panel-heading">
+                <h3 class="panel-title">Refresh</h3>
+                <div class="panel-actions">
+                  <a class="panel-action icon wb-refresh" data-toggle="panel-refresh" data-load-type="round-circle"
+                  data-load-callback="customRefreshCallback" aria-hidden="true"></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent
+                libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem
+                at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
+                Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum
+                lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora
+                torquent per conubia nostra, per inceptos himenaeos.
+              </div>
+            </div>
+            <!-- End Example Panel Refresh -->
+          </div>
+
+          <div class="clearfix visible-md-block visible-lg-block"></div>
+
+          <div class="col-md-6">
+            <!-- Example Panel Collapse -->
+            <div class="panel">
+              <div class="panel-heading">
+                <h3 class="panel-title">Collapse</h3>
+                <div class="panel-actions">
+                  <a class="panel-action icon wb-minus" data-toggle="panel-collapse" aria-hidden="true"></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent
+                libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem
+                at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
+                Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum
+                lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora
+                torquent per conubia nostra, per inceptos himenaeos.
+              </div>
+            </div>
+            <!-- End Example Panel Collapse -->
+          </div>
+
+          <div class="col-md-6">
+            <!-- Example Panel Close -->
+            <div class="panel">
+              <div class="panel-heading">
+                <h3 class="panel-title">Close</h3>
+                <div class="panel-actions">
+                  <a class="panel-action icon wb-close" data-toggle="panel-close" aria-hidden="true"></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent
+                libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem
+                at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
+                Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum
+                lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora
+                torquent per conubia nostra, per inceptos himenaeos.
+              </div>
+            </div>
+            <!-- End Example Panel Close -->
+          </div>
+        </div>
+      </div>
+      <!-- End Page Content -->
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

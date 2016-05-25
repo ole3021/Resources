@@ -1,0 +1,464 @@
+// Name:            Nav
+//
+// Component:       `nav`
+//
+// Modifiers:       `nav-justified`
+//                  `nav-tabs-bottom`
+//                  `nav-tabs-solid`
+//                  `nav-tabs-reverse`
+//                  `nav-tabs-line`
+//                  `nav-tabs-vertical`
+//                  `nav-tabs-inverse`
+//                  `nav-tabs-lg`
+//                  `nav-tabs-sm`
+//
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+@nav-tabs-link-padding                      : @nav-padding-vertical 20px;
+@nav-tabs-vertical-link-padding             : @nav-padding-vertical 20px;
+
+@nav-tabs-color                             : @text-color;
+@nav-tabs-active-color                      : @inverse;
+@nav-tabs-active-bg                         : @brand-primary;
+@nav-tabs-active-border                     : @brand-primary;
+
+@nav-tabs-solid-color                       : @text-color;
+@nav-tabs-solid-bg                          : @gray-lightest;
+@nav-tabs-solid-border                      : @gray-lightest;
+
+@nav-tabs-solid-content-padding             : 20px;
+@nav-tabs-vertical-solid-content-padding    : 20px;
+
+@nav-tabs-line-border                       : @border-color-base;
+@nav-tabs-line-hover-border                 : @gray-light;
+@nav-tabs-line-active-color                 : @brand-primary;
+@nav-tabs-line-active-border                : @brand-primary;
+@nav-tabs-line-link-padding                 : @nav-padding-vertical 20px;
+
+@nav-tabs-sm-padding                        : 5px 10px;
+@nav-tabs-sm-font-size                      : @font-size-small;
+@nav-tabs-sm-line-height                    : @line-height-small;
+
+@nav-tabs-lg-padding                        : 12px 20px;
+@nav-tabs-lg-font-size                      : @font-size-large;
+@nav-tabs-lg-line-height                    : @line-height-large;
+
+@nav-tabs-inverse-bg                        : @inverse;
+@nav-tabs-inverse-border                    : @inverse;
+
+@nav-quick-margin-bottom                    : @line-height-computed;
+@nav-quick-bg                               : @inverse;
+@nav-quick-hover-bg                         : @bg-color-base;
+@nav-quick-border-radius                    : @border-radius-base;
+@nav-quick-box-shadow                       : 0 1px 1px rgba(0, 0, 0, .05);
+@nav-quick-icon-font-size                   : (2*@font-size-icon);
+@nav-quick-vertical-padding                 : 16px;
+
+@nav-quick-lg-icon-font-size                : (2.5*@font-size-icon);
+@nav-quick-lg-vertical-padding              : 22px;
+
+@nav-quick-sm-icon-font-size                : (1.5*@font-size-icon);
+@nav-quick-sm-vertical-padding              : 12px;
+
+@nav-quick-border-color                     : @border-color-base;
+
+// Component: Nav
+// ========================================================================
+
+.nav {
+  // Open dropdowns
+  .open > a {
+    &,
+    &:hover,
+    &:focus {
+      border-color: transparent;
+    }
+  }
+}
+
+
+// Component: `nav-quick`
+// ========================================================================
+.nav-quick {
+  background-color: @nav-quick-bg;
+
+  .box-shadow(@nav-quick-box-shadow);
+
+  a {
+    color: @nav-tabs-color;
+
+    &:hover {
+      background-color: @nav-quick-hover-bg;
+    }
+  }
+
+  &-bordered {
+    border-top: 1px solid @nav-quick-border-color;
+    border-left: 1px solid @nav-quick-border-color;
+
+    li {
+      border-bottom: 1px solid @nav-quick-border-color;
+      border-right: 1px solid @nav-quick-border-color;
+    }
+  }
+}
+
+// Component: `nav-tabs`
+// ========================================================================
+.nav-tabs {
+  > li {
+    > a {
+      color: @nav-tabs-color;
+    }
+
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @nav-tabs-active-color;
+        background-color: @nav-tabs-active-bg;
+        border-color: transparent;
+        border-bottom-color: @nav-tabs-active-border;
+      }
+    }
+  }
+
+  &.nav-justified {
+    > li {
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          border-color: transparent;
+          border-bottom-color: @nav-tabs-active-border;
+        }
+      }
+    }
+  }
+}
+
+
+// Modifier: `nav-tabs-bottom`
+// -------------------------
+
+.nav-tabs.nav-tabs-bottom {
+  border-top: 1px solid @nav-tabs-border-color;
+
+  > li {
+    > a {
+      &:hover,
+      &:focus {
+        border-bottom-color: transparent;
+        border-top-color: @nav-tabs-border-color;
+      }
+    }
+  }
+
+  &.nav-justified {
+    border-top: none;
+
+    > li {
+      > a {
+        border-bottom-color: transparent;
+        border-top-color: @nav-tabs-border-color;
+      }
+
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          border-top: 1px solid @nav-tabs-active-border;
+        }
+      }
+    }
+  }
+}
+
+// Modifier: `nav-tabs-solid`
+// ========================================================================
+
+.nav-tabs-solid {
+  border-bottom-color: @nav-tabs-solid-border;
+  > li {
+    > a {
+      &:hover {
+        border-color: transparent;
+      }
+    }
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @nav-tabs-solid-color;
+        background-color: @nav-tabs-solid-bg;
+        border-color: transparent;
+      }
+    }
+  }
+
+  & ~ .tab-content {
+    background-color: @nav-tabs-solid-bg;
+  }
+
+  &.nav-justified {
+    > li {
+      > a {
+        border: none;
+      }
+
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          border: none;
+        }
+      }
+    }
+  }
+
+  &.nav-tabs-bottom {
+    > li {
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+
+// Modifier: `nav-tabs-line`
+// ========================================================================
+
+.nav-tabs-line {
+  > li {
+    > a {
+      border-bottom: 2px solid transparent;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+
+      &:hover {
+        border-bottom-color: @nav-tabs-line-hover-border;
+      }
+    }
+
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @nav-tabs-line-active-color;
+        background-color: transparent;
+        border-bottom: 2px solid @nav-tabs-line-active-border;
+      }
+    }
+  }
+
+  // Open dropdowns
+  .open > a {
+    &,
+    &:hover,
+    &:focus {
+      border-color: transparent;
+      border-bottom-color: @nav-tabs-line-hover-border;
+    }
+  }
+
+  &.nav-tabs-bottom {
+    > li {
+      > a {
+        border-top: 2px solid transparent;
+        border-bottom: none;
+        &:hover {
+          border-top-color: @nav-tabs-line-hover-border;
+          border-bottom-color: transparent;
+        }
+      }
+
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          border-top: 2px solid @nav-tabs-line-active-border;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  &.nav-justified {
+    > li {
+      > a {
+        border-bottom: 2px solid @nav-tabs-line-border;
+        &:hover {
+          border-bottom-color: @nav-tabs-line-hover-border;
+        }
+      }
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          border-color: transparent;
+          border-bottom: 2px solid @nav-tabs-line-active-border;
+        }
+      }
+    }
+
+    &.nav-tabs-bottom {
+      border-top: none;
+      > li {
+        > a {
+          border-top: 2px solid @nav-tabs-line-border;
+          border-bottom: none;
+          &:hover {
+            border-top-color: @nav-tabs-line-hover-border;
+          }
+        }
+        &.active > a {
+          &,
+          &:hover,
+          &:focus {
+            border-top-color: @nav-tabs-line-active-border;
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Modifier: `nav-tabs-vertical`
+// ========================================================================
+
+.nav-tabs-vertical {
+  .clearfix();
+
+  .nav-tabs {
+    border-right: 1px solid @nav-tabs-border-color;
+    border-bottom: none;
+
+    > li {
+      > a {
+        &:hover {
+          border-bottom-color: transparent;
+          border-right-color: @nav-tabs-border-color;
+        }
+      }
+    }
+  }
+
+  .nav-tabs-reverse {
+    border-right: none;
+    border-left: 1px solid @nav-tabs-border-color;
+
+    > li {
+      > a {
+        &:hover {
+          border-right-color: transparent;
+          border-left-color: @nav-tabs-border-color;
+        }
+      }
+    }
+  }
+
+  .nav-tabs-solid {
+    border-right-color: @nav-tabs-solid-border;
+
+    > li {
+      > a {
+        &:hover {
+          border-color: transparent;
+        }
+      }
+    }
+
+    &.nav-tabs-reverse {
+      border-left-color: @nav-tabs-solid-border;
+    }
+  }
+
+  .nav-tabs-line {
+    > li {
+      > a {
+        border-right: 2px solid transparent;
+        border-bottom: none;
+        &:hover {
+          border-right-color: @nav-tabs-line-hover-border;
+        }
+      }
+
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          border-right: 2px solid @nav-tabs-line-active-border;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  .nav-tabs-line.nav-tabs-reverse {
+    > li {
+      > a {
+        border-right-width: 1px;
+        border-left: 2px solid transparent;
+        &:hover {
+          border-color: transparent;
+          border-left-color: @nav-tabs-line-hover-border;
+        }
+      }
+
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          border-right: 1px solid transparent;
+          border-left: 2px solid @nav-tabs-line-active-border;
+        }
+      }
+    }
+  }
+}
+
+
+// Modifier: `nav-tabs-inverse`
+// ========================================================================
+
+.nav-tabs-inverse {
+  .nav-tabs-solid {
+    border-bottom-color: @nav-tabs-inverse-border;
+    > li {
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          color: @nav-tabs-color;
+          background-color: @nav-tabs-inverse-bg;
+        }
+      }
+    }
+  }
+
+  &.nav-tabs-vertical {
+    .nav-tabs-solid {
+      border-right-color: @nav-tabs-inverse-border;
+      &.nav-tabs-reverse {
+        border-left-color: @nav-tabs-inverse-border;
+      }
+    }
+  }
+
+  .tab-content {
+    background: @nav-tabs-inverse-bg;
+  }
+}

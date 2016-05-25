@@ -1,0 +1,454 @@
+// Name:            Navbar
+//
+// Component:       `navbar`
+//                  `navbar-avatar`
+//                  `navbar-toolbar`
+//
+// Modifiers:       `navbar-default`
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@navbar-default-shadow:           0 2px 4px rgba(0, 0, 0, 0.08);
+@navbar-avatar-size:              30px;
+@navbar-toolbar-float-max-height: 400px;
+
+// Component: Navbar
+// ========================================================================
+
+.navbar-toggle {
+  transition: color .25s linear;
+  .navbar-vertical-align(34px);
+  padding: @navbar-padding-vertical @navbar-padding-horizontal;
+  line-height: @line-height-computed;
+  height: @navbar-height;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  .icon {
+    margin-top: -1px;
+  }
+
+  background: transparent !important;
+
+  &:hover {
+    background: transparent !important;
+  }
+}
+
+.navbar-toggle-left {
+  float: left;
+  margin-left: @navbar-padding-horizontal;
+  margin-right: 0;
+}
+
+
+.navbar {
+  border: none;
+  .box-shadow(@navbar-default-shadow);
+}
+
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  width: 100%; // fix ie issue
+}
+
+.hidden-float {
+  @media (min-width: @grid-float-breakpoint) {
+    display: block;
+  }
+
+  @media (max-width: @grid-float-breakpoint-max) {
+    display: none !important;
+  }
+}
+
+// Component: Navbar Brand
+// ========================================================================
+
+.navbar-brand {
+  font-weight: @font-weight-bold;
+  padding: @navbar-padding-vertical @navbar-brand-padding-horizontal;
+  > .navbar-brand-logo {
+    display: inline-block;
+  }
+}
+
+.navbar-brand-logo {
+  margin-top: (-(@navbar-brand-logo-height - @line-height-computed)/2);
+  height: @navbar-brand-logo-height;
+}
+
+.navbar-brand-text {
+  margin-left: 6px;
+}
+
+
+@media (max-width: @grid-float-breakpoint-max) {
+  .navbar-brand-center {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+// Component: Mega Navbar
+// ========================================================================
+
+.navbar-mega {
+  // reset positions
+  // .nav, .collapse, .dropup, .dropdown {
+  //   position: static;
+  // }
+
+  // propagate menu position under container for fw navbars
+  @media (min-width: @grid-float-breakpoint) {
+    .container, .container-fluid {
+      position: relative;
+    }
+  }
+
+  // by default aligns menu to left
+  .dropdown-menu {
+    left: auto;
+  }
+
+  .dropdown-mega {
+    position: static;
+  }
+
+  // Content with padding
+  .mega-content {
+    padding: 20px 30px;
+  }
+
+  .mega-menu {
+    min-width: 150px;
+    max-width: 100%;
+
+    > ul {
+      padding-left: 0;
+    }
+
+    .list-icons {
+      margin-bottom: 6px;
+    }
+  }
+
+  // Fullwidth menu
+  .dropdown.dropdown-fw .dropdown-menu {
+    right: 5px;
+    left: 5px;
+
+    @media (max-width: @grid-float-breakpoint-max) {
+      right: 0;
+      left: 0;
+    }
+  }
+}
+
+// Component: Navbar Avatar
+// ========================================================================
+
+.navbar-nav, .navbar-toolbar {
+  > li > a.navbar-avatar {
+    padding-top: ((@navbar-height - @navbar-avatar-size)/2);
+    padding-bottom: ((@navbar-height - @navbar-avatar-size)/2);
+  }
+}
+
+.navbar-nav {
+  > li > a.navbar-avatar {
+    @media (max-width: @grid-float-breakpoint-max) {
+      padding-top: ((@line-height-computed + 20px - @navbar-avatar-size)/2);
+      padding-bottom: ((@line-height-computed + 20px - @navbar-avatar-size)/2);
+    }
+  }
+}
+
+.navbar-avatar .avatar {
+  width: @navbar-avatar-size;
+}
+
+// Component: Navbar Search
+// ========================================================================
+.navbar-form {
+  .icon {
+    font-size: 16px;
+    color: fade(@gray-darkest, 40%);
+  }
+
+  .form-control {
+    background-color: @bg-color-base;
+    border: none;
+    border-radius: 38px;
+  }
+}
+
+.navbar-search {
+  @media (min-width: @grid-float-breakpoint) {
+    &.collapse {
+      display: block !important;
+      height: auto !important;
+      overflow: visible !important;
+      visibility: visible !important;
+    }
+  }
+
+  @media (max-width: @grid-float-breakpoint-max) {
+    padding-right: @navbar-padding-horizontal;
+    padding-left: @navbar-padding-horizontal;
+  }
+
+  .navbar-form {
+    @media (max-width: @grid-float-breakpoint-max) {
+      margin-top: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
+}
+
+.container,
+.container-fluid {
+  > .navbar-search {
+    margin-right: -@navbar-padding-horizontal;
+    margin-left: -@navbar-padding-horizontal;
+
+    @media (min-width: @grid-float-breakpoint) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+// Component: Navbar Search Overlap
+// ========================================================================
+.navbar-search-overlap {
+  left: 0;
+  right: 0;
+  top: 0;
+  position: absolute !important;
+  background-color: @inverse;
+
+  .form-group, .form-control {
+    display: block !important;
+    margin: 0;
+  }
+
+  .form-control {
+    background-color: transparent !important;
+    height: @navbar-height !important;
+    border-radius: 0;
+
+    &:focus {
+      border-color: transparent;
+    }
+  }
+}
+
+
+// Component: Navbar Toolbar
+// ========================================================================
+
+.navbar-collapse-toolbar {
+  &.in {
+    overflow-y: visible;
+  }
+}
+
+.navbar-toolbar {
+  float: left;
+  .clearfix();
+
+  > li {
+    float: left;
+    .clearfix();
+
+    > a {
+      padding-top: @navbar-padding-vertical;
+      padding-bottom: @navbar-padding-vertical;
+      line-height: @line-height-computed;
+    }
+  }
+
+  .dropdown-menu{
+    -webkit-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+    -webkit-animation-duration: .3s;
+            animation-duration: .3s;
+  }
+
+  @media (max-width: @grid-float-breakpoint-max) {
+    .dropdown-menu:not(.dropdown-menu-media) {
+      max-height: @navbar-toolbar-float-max-height;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      .transform(translate3d(0,0,0));
+
+      @media (max-device-width: @screen-xs-min) and (orientation: landscape) {
+        max-height: 200px;
+      }
+    }
+
+    .open {
+      position: static;
+
+      .dropdown-menu {
+        left: 0;
+        right: 0;
+        width: auto;
+        margin-top: 0;
+        float: none;
+        .border-top-radius(0);
+        // box-shadow: none;
+      }
+    }
+  }
+}
+
+@media (max-width: @grid-float-breakpoint-max) {
+  .navbar-toolbar-left {
+    float: left !important;
+  }
+
+  .navbar-toolbar-right {
+    float: right !important;
+  }
+}
+
+// Component: Navbar icons
+// ========================================================================
+
+
+.icon-fullscreen {
+  font-family: @wb-font-family;
+
+  &:before {
+    content: @wb-var-expand;
+  }
+
+  &.active:before {
+    content: @wb-var-contract;
+  }
+}
+
+.icon-menubar {
+  font-family: @wb-font-family;
+
+  &:before {
+    content: @wb-var-menu;
+  }
+
+  &.active:before {
+    content: @wb-var-menu;
+  }
+}
+
+// Color Modifier
+// ========================================================================
+
+// Modifier: `navbar-default`
+// -------------------------
+
+.navbar-default {
+  .navbar-toolbar {
+    > li > a {
+      color: @navbar-default-link-color;
+      &:hover,
+      &:focus {
+        color: @navbar-default-link-hover-color;
+        background-color: @navbar-default-link-hover-bg;
+      }
+    }
+
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-default-link-active-color;
+        background-color: @navbar-default-link-active-bg;
+      }
+    }
+
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-default-link-disabled-color;
+        background-color: @navbar-default-link-disabled-bg;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    color: @navbar-default-toggle-icon-bar-bg;
+  }
+
+  // Dropdown menu items
+  .navbar-toolbar {
+    // Remove background color from open dropdown
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-default-link-active-color;
+        background-color: @navbar-default-link-active-bg;
+      }
+    }
+  }
+}
+
+
+// Modifier: `navbar-inverse`
+// -------------------------
+.navbar-inverse {
+  .navbar-toolbar {
+    > li > a {
+      color: @navbar-inverse-link-color;
+      &:hover,
+      &:focus {
+        color: @navbar-inverse-link-hover-color;
+        background-color: @navbar-inverse-link-hover-bg;
+      }
+    }
+
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-inverse-link-active-color;
+        background-color: @navbar-inverse-link-active-bg;
+      }
+    }
+
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-inverse-link-disabled-color;
+        background-color: @navbar-inverse-link-disabled-bg;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    color: @navbar-inverse-toggle-icon-bar-bg;
+  }
+
+  // Dropdown menu items
+  .navbar-toolbar {
+    // Remove background color from open dropdown
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-inverse-link-active-color;
+        background-color: @navbar-inverse-link-active-bg;
+      }
+    }
+  }
+}

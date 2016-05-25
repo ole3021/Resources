@@ -1,0 +1,163 @@
+---
+title: Breadcrumbs
+---
+
+{{#extend "layout-default"}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/structure/breadcrumbs.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/asbreadcrumbs/jquery-asBreadcrumbs.min.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/asbreadcrumbs.js"></script>
+  {{/content}}
+
+
+  {{#content "body"}}
+
+
+    <!-- Page Breadcrumbs -->
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title">Breadcrumbs</h1>
+        <ol class="breadcrumb">
+          <li><a href="{{dest '/index.html'}}">Home</a></li>
+          <li class="active">Structure</li>
+        </ol>
+        <div class="page-header-actions">
+          <form>
+            <div class="input-search input-search-dark">
+              <i class="input-search-icon wb-search" aria-hidden="true"></i>
+              <input type="text" class="form-control" name="" placeholder="Search...">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="page-content">
+        <!-- Panel -->
+        <div class="panel">
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-lg-4 col-sm-6">
+                <!-- Example Default Style -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Default Style</h4>
+                  <p>Separators are automatically added in CSS through <code>:before</code>                    and content.</p>
+                  <div class="example">
+                    <ol class="breadcrumb">
+                      <li><a href="javascript:void(0)">Home</a></li>
+                      <li class="active">Library</li>
+                    </ol>
+                    <ol class="breadcrumb">
+                      <li><a href="javascript:void(0)">Home</a></li>
+                      <li><a href="javascript:void(0)">Library</a></li>
+                      <li class="active">Data</li>
+                    </ol>
+                  </div>
+                </div>
+                <!-- End Example Default Style -->
+              </div>
+
+              <div class="col-lg-4 col-sm-6">
+                <!-- Example Arrow Style -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Arrow Style</h4>
+                  <p>Add modifier class <code>.breadcrumb-arrow</code> to switch slash
+                    or arrow style.</p>
+                  <div class="example">
+                    <ol class="breadcrumb breadcrumb-arrow">
+                      <li><a href="javascript:void(0)">Home</a></li>
+                      <li class="active">Library</li>
+                    </ol>
+                    <ol class="breadcrumb breadcrumb-arrow">
+                      <li><a href="javascript:void(0)">Home</a></li>
+                      <li><a href="javascript:void(0)">Library</a></li>
+                      <li class="active">Data</li>
+                    </ol>
+                  </div>
+                </div>
+                <!-- End Example Arrow Style -->
+              </div>
+
+              <div class="clearfix visible-md-block"></div>
+
+              <div class="col-lg-4 col-sm-6">
+                <!-- Example Items With Icon -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Items With Icon</h4>
+                  <p>An icon used in breadcrumb to convey that it’s an home page,
+                    with additional <code>.wb-home</code> class.</p>
+                  <div class="example">
+                    <ol class="breadcrumb">
+                      <li><a class="icon wb-home" href="javascript:void(0)">Home</a></li>
+                      <li class="active">Data</li>
+                    </ol>
+                    <ol class="breadcrumb breadcrumb-arrow">
+                      <li><a class="icon wb-home" href="javascript:void(0)">Home</a></li>
+                      <li><a href="javascript:void(0)">Library</a></li>
+                      <li class="active">Data</li>
+                    </ol>
+                  </div>
+                </div>
+                <!-- End Example Items With Icon -->
+              </div>
+
+              <div class="col-lg-4 col-sm-6">
+                <!-- Example Responsive -->
+                <div class="example-wrap margin-lg-0">
+                  <h4 class="example-title">Responsive</h4>
+                  <p>jquery-asBreadcrumbs allows you to hide the overflowing crumbs
+                    and then makes them available to your visitor via a dropdown
+                    menu.</p>
+                  <div class="example">
+                    <ol class="breadcrumb" data-plugin="breadcrumb">
+                      <li><a href="javascript:void(0)">Home</a></li>
+                      <li><a href="javascript:void(0)">Getting Started</a></li>
+                      <li><a href="javascript:void(0)">Library</a></li>
+                      <li><a href="javascript:void(0)">Document</a></li>
+                      <li><a href="javascript:void(0)">Components</a></li>
+                      <li><a href="javascript:void(0)">JavaScript</a></li>
+                      <li><a href="javascript:void(0)">Customize</a></li>
+                      <li class="active">Data</li>
+                    </ol>
+                  </div>
+                </div>
+                <!-- End Example Responsive -->
+              </div>
+
+              <div class="clearfix visible-md-block visible-sm-block"></div>
+
+              <div class="col-lg-4 col-sm-6">
+                <!-- Example Accessibility -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Accessibility</h4>
+                  <p>Use this snippet to make breadcrumbs more accessible. Adding
+                    the role attribute gives context to a screen reader. The <code>aria-label</code>                    attribute will allow a screen reader to call out what the component
+                    is to the user.</p>
+                  <div class="example">
+                    <ol class="breadcrumb" aria-label="breadcrumbs" role="menubar">
+                      <li><a href="javascript:void(0)">Home</a></li>
+                      <li><a href="javascript:void(0)">Getting Started</a></li>
+                      <li><a href="javascript:void(0)">Library</a></li>
+                      <li class="disable" aria-disabled="true"><a href="javascript:void(0)">Customize</a></li>
+                      <li class="active">Data</li>
+                    </ol>
+                  </div>
+                </div>
+                <!-- End Example Accessibility -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel -->
+      </div>
+    </div>
+    <!-- End Page Breadcrumbs -->
+
+  {{/content}}
+{{/extend}}

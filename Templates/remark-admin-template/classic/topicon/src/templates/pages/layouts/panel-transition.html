@@ -1,0 +1,437 @@
+---
+title: Panel Transition
+---
+
+{{#extend "layout-default"}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/layouts/panel-transition.css">
+  {{/content}}
+
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/animate-list.js"></script>
+    <script src="{{global}}/js/components/panel.js"></script>
+  {{/content}}
+
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/layouts/panel-transition.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title">Panel Transition</h1>
+        <ol class="breadcrumb">
+          <li><a href="{{dest '/index.html'}}">Home</a></li>
+          <li class="active">Panel Transition</li>
+        </ol>
+        <div class="page-header-actions">
+          <div class="btn-group btn-group-sm" id="withBtnGroup" aria-label="Page Header Actions"
+          role="group">
+            <div class="dropdown">
+              <button type="button" class="btn btn-pure dropdown-toggle" data-toggle="dropdown"
+              aria-expanded="false">
+                Try Transtion
+                <span class="icon wb-chevron-down-mini" aria-hidden="true"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                <li data-type="fade"><a href="javascript:void(0)">Fade</a></li>
+                <li data-type="scale-up"><a href="javascript:void(0)">Scale Up</a></li>
+                <li data-type="slide-left"><a href="javascript:void(0)">Slide Left</a></li>
+                <li data-type="slide-right"><a href="javascript:void(0)">Slide Right</a></li>
+                <li data-type="slide-top"><a href="javascript:void(0)">Slide Top</a></li>
+                <li data-type="slide-bottom"><a href="javascript:void(0)">Slide Bottom</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="exampleTransition" class="page-content container-fluid" data-plugin="animateList">
+        <ul class="blocks-xs-100 blocks-md-2 blocks-xlg-3">
+          <li>
+            <div class="panel panel-bordered">
+              <div class="panel-heading">
+                <h3 class="panel-title">Panel Example</h3>
+                <div class="panel-actions">
+                  <a class="panel-action icon wb-refresh" data-toggle="panel-refresh" data-load-type="round-circle"
+                  data-load-callback="customRefreshCallback" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-minus" aria-expanded="true" data-toggle="panel-collapse"
+                  aria-hidden="true"></a>
+                  <a class="panel-action icon wb-expand" data-toggle="panel-fullscreen" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-close" data-toggle="panel-close" aria-hidden="true"></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  velit tortor, dictum in gravida nec, aliquet non lorem. pellentesque.ipiscing
+                  elit. Fusce velit tortor.</p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="panel panel-bordered">
+              <div class="panel-heading">
+                <h3 class="panel-title">Panel Example</h3>
+                <div class="panel-actions">
+                  <a class="panel-action icon wb-refresh" data-toggle="panel-refresh" data-load-type="round-circle"
+                  data-load-callback="customRefreshCallback" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-minus" aria-expanded="true" data-toggle="panel-collapse"
+                  aria-hidden="true"></a>
+                  <a class="panel-action icon wb-expand" data-toggle="panel-fullscreen" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-close" data-toggle="panel-close" aria-hidden="true"></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  velit tortor, dictum in gravida nec, aliquet non lorem. pellentesque.ipiscing
+                  elit. Fusce velit tortor.</p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="panel panel-bordered">
+              <div class="panel-heading">
+                <h3 class="panel-title">Panel Example</h3>
+                <div class="panel-actions">
+                  <a class="panel-action icon wb-refresh" data-toggle="panel-refresh" data-load-type="round-circle"
+                  data-load-callback="customRefreshCallback" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-minus" aria-expanded="true" data-toggle="panel-collapse"
+                  aria-hidden="true"></a>
+                  <a class="panel-action icon wb-expand" data-toggle="panel-fullscreen" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-close" data-toggle="panel-close" aria-hidden="true"></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  velit tortor, dictum in gravida nec, aliquet non lorem. pellentesque.ipiscing
+                  elit. Fusce velit tortor.</p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="panel panel-bordered">
+              <div class="panel-heading">
+                <h3 class="panel-title">Panel Example</h3>
+                <div class="panel-actions">
+                  <a class="panel-action icon wb-refresh" data-toggle="panel-refresh" data-load-type="round-circle"
+                  data-load-callback="customRefreshCallback" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-minus" aria-expanded="true" data-toggle="panel-collapse"
+                  aria-hidden="true"></a>
+                  <a class="panel-action icon wb-expand" data-toggle="panel-fullscreen" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-close" data-toggle="panel-close" aria-hidden="true"></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  velit tortor, dictum in gravida nec, aliquet non lorem. pellentesque.ipiscing
+                  elit. Fusce velit tortor.</p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="panel panel-bordered">
+              <div class="panel-heading">
+                <h3 class="panel-title">Panel Example</h3>
+                <div class="panel-actions">
+                  <a class="panel-action icon wb-refresh" data-toggle="panel-refresh" data-load-type="round-circle"
+                  data-load-callback="customRefreshCallback" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-minus" aria-expanded="true" data-toggle="panel-collapse"
+                  aria-hidden="true"></a>
+                  <a class="panel-action icon wb-expand" data-toggle="panel-fullscreen" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-close" data-toggle="panel-close" aria-hidden="true"></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  velit tortor, dictum in gravida nec, aliquet non lorem. pellentesque.ipiscing
+                  elit. Fusce velit tortor.</p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="panel panel-bordered">
+              <div class="panel-heading">
+                <h3 class="panel-title">Panel Example</h3>
+                <div class="panel-actions">
+                  <a class="panel-action icon wb-refresh" data-toggle="panel-refresh" data-load-type="round-circle"
+                  data-load-callback="customRefreshCallback" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-minus" aria-expanded="true" data-toggle="panel-collapse"
+                  aria-hidden="true"></a>
+                  <a class="panel-action icon wb-expand" data-toggle="panel-fullscreen" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-close" data-toggle="panel-close" aria-hidden="true"></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  velit tortor, dictum in gravida nec, aliquet non lorem. pellentesque.ipiscing
+                  elit. Fusce velit tortor.</p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="panel panel-bordered">
+              <div class="panel-heading">
+                <h3 class="panel-title">Panel Example</h3>
+                <div class="panel-actions">
+                  <a class="panel-action icon wb-refresh" data-toggle="panel-refresh" data-load-type="round-circle"
+                  data-load-callback="customRefreshCallback" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-minus" aria-expanded="true" data-toggle="panel-collapse"
+                  aria-hidden="true"></a>
+                  <a class="panel-action icon wb-expand" data-toggle="panel-fullscreen" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-close" data-toggle="panel-close" aria-hidden="true"></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  velit tortor, dictum in gravida nec, aliquet non lorem. pellentesque.ipiscing
+                  elit. Fusce velit tortor.</p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="panel panel-bordered">
+              <div class="panel-heading">
+                <h3 class="panel-title">Panel Example</h3>
+                <div class="panel-actions">
+                  <a class="panel-action icon wb-refresh" data-toggle="panel-refresh" data-load-type="round-circle"
+                  data-load-callback="customRefreshCallback" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-minus" aria-expanded="true" data-toggle="panel-collapse"
+                  aria-hidden="true"></a>
+                  <a class="panel-action icon wb-expand" data-toggle="panel-fullscreen" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-close" data-toggle="panel-close" aria-hidden="true"></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  velit tortor, dictum in gravida nec, aliquet non lorem. pellentesque.ipiscing
+                  elit. Fusce velit tortor.</p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="panel panel-bordered">
+              <div class="panel-heading">
+                <h3 class="panel-title">Panel Example</h3>
+                <div class="panel-actions">
+                  <a class="panel-action icon wb-refresh" data-toggle="panel-refresh" data-load-type="round-circle"
+                  data-load-callback="customRefreshCallback" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-minus" aria-expanded="true" data-toggle="panel-collapse"
+                  aria-hidden="true"></a>
+                  <a class="panel-action icon wb-expand" data-toggle="panel-fullscreen" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-close" data-toggle="panel-close" aria-hidden="true"></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  velit tortor, dictum in gravida nec, aliquet non lorem. pellentesque.ipiscing
+                  elit. Fusce velit tortor.</p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="panel panel-bordered">
+              <div class="panel-heading">
+                <h3 class="panel-title">Panel Example</h3>
+                <div class="panel-actions">
+                  <a class="panel-action icon wb-refresh" data-toggle="panel-refresh" data-load-type="round-circle"
+                  data-load-callback="customRefreshCallback" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-minus" aria-expanded="true" data-toggle="panel-collapse"
+                  aria-hidden="true"></a>
+                  <a class="panel-action icon wb-expand" data-toggle="panel-fullscreen" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-close" data-toggle="panel-close" aria-hidden="true"></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  velit tortor, dictum in gravida nec, aliquet non lorem. pellentesque.ipiscing
+                  elit. Fusce velit tortor.</p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="panel panel-bordered">
+              <div class="panel-heading">
+                <h3 class="panel-title">Panel Example</h3>
+                <div class="panel-actions">
+                  <a class="panel-action icon wb-refresh" data-toggle="panel-refresh" data-load-type="round-circle"
+                  data-load-callback="customRefreshCallback" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-minus" aria-expanded="true" data-toggle="panel-collapse"
+                  aria-hidden="true"></a>
+                  <a class="panel-action icon wb-expand" data-toggle="panel-fullscreen" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-close" data-toggle="panel-close" aria-hidden="true"></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  velit tortor, dictum in gravida nec, aliquet non lorem. pellentesque.ipiscing
+                  elit. Fusce velit tortor.</p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="panel panel-bordered">
+              <div class="panel-heading">
+                <h3 class="panel-title">Panel Example</h3>
+                <div class="panel-actions">
+                  <a class="panel-action icon wb-refresh" data-toggle="panel-refresh" data-load-type="round-circle"
+                  data-load-callback="customRefreshCallback" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-minus" aria-expanded="true" data-toggle="panel-collapse"
+                  aria-hidden="true"></a>
+                  <a class="panel-action icon wb-expand" data-toggle="panel-fullscreen" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-close" data-toggle="panel-close" aria-hidden="true"></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  velit tortor, dictum in gravida nec, aliquet non lorem. pellentesque.ipiscing
+                  elit. Fusce velit tortor.</p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="panel panel-bordered">
+              <div class="panel-heading">
+                <h3 class="panel-title">Panel Example</h3>
+                <div class="panel-actions">
+                  <a class="panel-action icon wb-refresh" data-toggle="panel-refresh" data-load-type="round-circle"
+                  data-load-callback="customRefreshCallback" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-minus" aria-expanded="true" data-toggle="panel-collapse"
+                  aria-hidden="true"></a>
+                  <a class="panel-action icon wb-expand" data-toggle="panel-fullscreen" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-close" data-toggle="panel-close" aria-hidden="true"></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  velit tortor, dictum in gravida nec, aliquet non lorem. pellentesque.ipiscing
+                  elit. Fusce velit tortor.</p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="panel panel-bordered">
+              <div class="panel-heading">
+                <h3 class="panel-title">Panel Example</h3>
+                <div class="panel-actions">
+                  <a class="panel-action icon wb-refresh" data-toggle="panel-refresh" data-load-type="round-circle"
+                  data-load-callback="customRefreshCallback" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-minus" aria-expanded="true" data-toggle="panel-collapse"
+                  aria-hidden="true"></a>
+                  <a class="panel-action icon wb-expand" data-toggle="panel-fullscreen" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-close" data-toggle="panel-close" aria-hidden="true"></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  velit tortor, dictum in gravida nec, aliquet non lorem. pellentesque.ipiscing
+                  elit. Fusce velit tortor.</p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="panel panel-bordered">
+              <div class="panel-heading">
+                <h3 class="panel-title">Panel Example</h3>
+                <div class="panel-actions">
+                  <a class="panel-action icon wb-refresh" data-toggle="panel-refresh" data-load-type="round-circle"
+                  data-load-callback="customRefreshCallback" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-minus" aria-expanded="true" data-toggle="panel-collapse"
+                  aria-hidden="true"></a>
+                  <a class="panel-action icon wb-expand" data-toggle="panel-fullscreen" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-close" data-toggle="panel-close" aria-hidden="true"></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  velit tortor, dictum in gravida nec, aliquet non lorem. pellentesque.ipiscing
+                  elit. Fusce velit tortor.</p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="panel panel-bordered">
+              <div class="panel-heading">
+                <h3 class="panel-title">Panel Example</h3>
+                <div class="panel-actions">
+                  <a class="panel-action icon wb-refresh" data-toggle="panel-refresh" data-load-type="round-circle"
+                  data-load-callback="customRefreshCallback" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-minus" aria-expanded="true" data-toggle="panel-collapse"
+                  aria-hidden="true"></a>
+                  <a class="panel-action icon wb-expand" data-toggle="panel-fullscreen" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-close" data-toggle="panel-close" aria-hidden="true"></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  velit tortor, dictum in gravida nec, aliquet non lorem. pellentesque.ipiscing
+                  elit. Fusce velit tortor.</p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="panel panel-bordered">
+              <div class="panel-heading">
+                <h3 class="panel-title">Panel Example</h3>
+                <div class="panel-actions">
+                  <a class="panel-action icon wb-refresh" data-toggle="panel-refresh" data-load-type="round-circle"
+                  data-load-callback="customRefreshCallback" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-minus" aria-expanded="true" data-toggle="panel-collapse"
+                  aria-hidden="true"></a>
+                  <a class="panel-action icon wb-expand" data-toggle="panel-fullscreen" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-close" data-toggle="panel-close" aria-hidden="true"></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  velit tortor, dictum in gravida nec, aliquet non lorem. pellentesque.ipiscing
+                  elit. Fusce velit tortor.</p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="panel panel-bordered">
+              <div class="panel-heading">
+                <h3 class="panel-title">Panel Example</h3>
+                <div class="panel-actions">
+                  <a class="panel-action icon wb-refresh" data-toggle="panel-refresh" data-load-type="round-circle"
+                  data-load-callback="customRefreshCallback" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-minus" aria-expanded="true" data-toggle="panel-collapse"
+                  aria-hidden="true"></a>
+                  <a class="panel-action icon wb-expand" data-toggle="panel-fullscreen" aria-hidden="true"></a>
+                  <a class="panel-action icon wb-close" data-toggle="panel-close" aria-hidden="true"></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  velit tortor, dictum in gravida nec, aliquet non lorem. pellentesque.ipiscing
+                  elit. Fusce velit tortor.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  {{/content}}
+{{/extend}}

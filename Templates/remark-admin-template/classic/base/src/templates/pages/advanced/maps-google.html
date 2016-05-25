@@ -1,0 +1,149 @@
+---
+title: Google Maps
+---
+
+{{#extend "layout-default"}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/gmaps/gmaps.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/gmaps.js"></script>
+  {{/content}}
+
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/advanced/maps-google.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li class="active">Advanced UI</li>
+        </ol>
+        <h1 class="page-title">Google Maps</h1>
+        <div class="page-header-actions">
+          <a class="btn btn-sm btn-inverse btn-round" href="http://hpneo.github.com/gmaps/"
+          target="_blank">
+            <i class="icon wb-link" aria-hidden="true"></i>
+            <span class="hidden-xs">Official Website</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="page-content">
+        <!-- Panel Google Maps -->
+        <div class="panel">
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-md-6">
+                <!-- Example Simple -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Simple</h4>
+                  <div class="example">
+                    <div class="height-300" id="simpleGmap"></div>
+                  </div>
+                </div>
+                <!-- End Example Simple -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Custom -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Custom</h4>
+                  <div class="example">
+                    <div class="height-300" id="customGmap"></div>
+                  </div>
+                </div>
+                <!-- End Example Custom -->
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="col-md-6">
+                <!-- Example Markers -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Markers</h4>
+                  <div class="example">
+                    <div class="height-300" id="markersGmap"></div>
+                  </div>
+                </div>
+                <!-- End Example Markers -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Polylines -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Polylines</h4>
+                  <div class="example">
+                    <div class="height-300" id="polylinesGmap"></div>
+                  </div>
+                </div>
+                <!-- End Example Polylines -->
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="col-md-6">
+                <!-- Example Polygons -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Polygons</h4>
+                  <div class="example">
+                    <div class="height-300" id="polygonsGmap"></div>
+                  </div>
+                </div>
+                <!-- End Example Polygons -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Fusion Tables layers -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Fusion Tables layers</h4>
+                  <div class="example">
+                    <div class="height-300" id="FTLGmap"></div>
+                  </div>
+                </div>
+                <!-- End Example Fusion Tables layers -->
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="col-md-6">
+                <!-- Example Panoramas -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Street View Panoramas</h4>
+                  <div class="example">
+                    <div class="height-300" id="panoramasGmap"></div>
+                  </div>
+                </div>
+                <!-- End Example Panoramas -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Satellite -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Satellite</h4>
+                  <div class="example">
+                    <div class="height-300" id="satelliteGmap"></div>
+                  </div>
+                </div>
+                <!-- End Example Satellite -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel Google Maps -->
+      </div>
+    </div>
+    <!-- End Page -->
+
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+  {{/content}}
+{{/extend}}

@@ -1,0 +1,465 @@
+---
+title: Overlay
+---
+
+{{#extend "layout-default"}}
+
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title">Overlay</h1>
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li class="active">Structure</li>
+        </ol>
+        <div class="page-header-actions">
+          <form>
+            <div class="input-search input-search-dark">
+              <i class="input-search-icon wb-search" aria-hidden="true"></i>
+              <input type="text" class="form-control" name="" placeholder="Search...">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="page-content">
+        <div class="panel">
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Basic -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Basic</h4>
+                  <p>To create a position context, add the <code>.overlay</code> class
+                    to a container element around an image. Add the <code>.overlay-panel</code>                    class to a child element to create the actual overlay panel.
+                    </p>
+                  <div class="example">
+                    <figure class="overlay">
+                      <img src="{{global}}/photos/placeholder.png" alt="...">
+                      <figcaption class="overlay-panel">
+                        <h3>Title</h3>
+                        <p>Lorem <a href="javascript:void(0)">ipsum dolor</a> sit
+                          amet, consetetur sadipscing elitr.</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <!-- End Example Basic -->
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Toggle Overlay On Hover -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Toggle Overlay On Hover</h4>
+                  <p>By default, the overlay is always visible. To hide the overlay
+                    and display it on hover, add the <code>.overlay-hover</code>                    class to the overlay container.</p>
+                  <div class="example">
+                    <figure class="overlay overlay-hover">
+                      <img src="{{global}}/photos/placeholder.png" alt="...">
+                      <figcaption class="overlay-panel overlay-fade">
+                        <h3>Title</h3>
+                        <p>Lorem <a href="javascript:void(0)">ipsum dolor</a> sit
+                          amet, consetetur sadipscing elitr.</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <!-- End Example Toggle Overlay On Hover -->
+              </div>
+
+              <div class="clearfix visible-md-block"></div>
+
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Overlay Background -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Overlay Background</h4>
+                  <p>To give the overlay a background just add the <code>.overlay-background</code>                    class to the overlay container.</p>
+                  <div class="example">
+                    <figure class="overlay">
+                      <img src="{{global}}/photos/placeholder.png" alt="...">
+                      <figcaption class="overlay-panel overlay-background">
+                        <h3>Title</h3>
+                        <p>Lorem <a href="javascript:void(0)">ipsum dolor</a> sit
+                          amet, consetetur sadipscing elitr.</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <!-- End Example Overlay Background -->
+              </div>
+
+              <div class="clearfix visible-lg-block"></div>
+
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Overlay Icon -->
+                <div class="example-wrap margin-lg-0">
+                  <h4 class="example-title">Overlay Icon</h4>
+                  <p>To display an icon you can add the <code>.overlay-icon</code>                    class to the overlay panel.</p>
+                  <div class="example">
+                    <figure class="overlay">
+                      <img class="overlay-figure" src="{{global}}/photos/placeholder.png" alt="...">
+                      <div class="overlay-panel overlay-icon overlay-background">
+                        <i class="icon wb-search" aria-hidden="true"></i>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+                <!-- End Example Overlay Icon -->
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Overlay Image -->
+                <div class="example-wrap margin-md-0">
+                  <h4 class="example-title">Overlay Image</h4>
+                  <p>To apply an image as an overlay, add the <code>.overlay-image</code>                    class to an <code>&lt;img&gt;</code> element with the <code>.overlay-panel</code>                    class.</p>
+                  <div class="example">
+                    <figure class="overlay overlay-hover">
+                      <img class="overlay-figure" src="{{global}}/photos/placeholder.png" alt="...">
+                      <img class="overlay-panel overlay-image overlay-fade" src="{{global}}/photos/placeholder.png"
+                      alt="...">
+                    </figure>
+                  </div>
+                </div>
+                <!-- End Example Overlay Image -->
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Overlay Anchor -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Overlay Anchor</h4>
+                  <p>To use the entire overlay as a link, just place an <code>&lt;a&gt;</code>                    element inside the overlay container and add the <code>.overlay-anchor</code>.</p>
+                  <div class="example">
+                    <figure class="overlay overlay-hover">
+                      <img class="overlay-figure" src="{{global}}/photos/placeholder.png" alt="...">
+                      <div class="overlay-panel overlay-fade">
+                        <h3>Title</h3>
+                        <p>Lorem <a href="javascript:void(0)">ipsum dolor</a> sit
+                          amet, consetetur sadipscing elitr.</p>
+                      </div>
+                      <a class="overlay-anchor" href="javascript:void(0)"></a>
+                    </figure>
+                  </div>
+                </div>
+                <!-- End Example Overlay Anchor -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- End Panel -->
+
+        <!-- Panel Position -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Overlay Positon</h3>
+          </div>
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Overlay Top -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Overlay Top</h4>
+                  <div class="example">
+                    <figure class="overlay overlay-hover">
+                      <img class="overlay-figure" src="{{global}}/photos/placeholder.png" alt="...">
+                      <figcaption class="overlay-top overlay-panel overlay-background overlay-slide-top">
+                        <h4>Overlay Top</h4>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <!-- End Example Overlay Top -->
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Overlay Bottom -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Overlay Bottom</h4>
+                  <div class="example">
+                    <figure class="overlay overlay-hover">
+                      <img class="overlay-figure" src="{{global}}/photos/placeholder.png" alt="...">
+                      <figcaption class="overlay-bottom overlay-panel overlay-background overlay-slide-top">
+                        <h4>Overlay Bottom</h4>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <!-- End Example Overlay Bottom -->
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Overlay Left -->
+                <div class="example-wrap margin-md-0">
+                  <h4 class="example-title">Overlay Left</h4>
+                  <div class="example">
+                    <figure class="overlay overlay-hover">
+                      <img class="overlay-figure" src="{{global}}/photos/placeholder.png" alt="...">
+                      <figcaption class="overlay-left overlay-panel overlay-background overlay-slide-left">
+                        <h4>Overlay Left</h4>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <!-- End Example Overlay Left -->
+              </div>
+
+              <div class="clearfix visible-lg-block"></div>
+
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Overlay Right -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Overlay Right</h4>
+                  <div class="example">
+                    <figure class="overlay overlay-hover">
+                      <img class="overlay-figure" src="{{global}}/photos/placeholder.png" alt="...">
+                      <figcaption class="overlay-right overlay-panel overlay-background overlay-slide-right">
+                        <h4>Overlay Right</h4>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <!-- End Example Overlay Right -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel Position -->
+
+        <!-- Panel Transition -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Overlay Transition</h3>
+          </div>
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Overlay Fade -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Overlay Fade</h4>
+                  <p>Add this class to the overlay panel or image to fade it in.</p>
+                  <div class="example">
+                    <figure class="overlay overlay-hover">
+                      <img class="overlay-figure" src="{{global}}/photos/placeholder.png" alt="...">
+                      <figcaption class="overlay-panel overlay-background overlay-fade">
+                        <h3>Title</h3>
+                        <p>Lorem <a href="javascript:void(0)">ipsum dolor</a> sit
+                          amet, consetetur sadipscing elitr.</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <!-- End Example Overlay Fade -->
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Overlay Scale -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Overlay Scale</h4>
+                  <p>Add this class to the image to scale it up.</p>
+                  <div class="example">
+                    <figure class="overlay overlay-hover">
+                      <img class="overlay-figure overlay-scale" src="{{global}}/photos/placeholder.png"
+                      alt="...">
+                      <figcaption class="overlay-panel overlay-background">
+                        <h3>Title</h3>
+                        <p>Lorem <a href="javascript:void(0)">ipsum dolor</a> sit
+                          amet, consetetur sadipscing elitr.</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <!-- End Example Overlay Scale -->
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Overlay Spin -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Overlay Spin</h4>
+                  <p>Add this class to the image to slightly rotate it to the right.</p>
+                  <div class="example">
+                    <figure class="overlay overlay-hover">
+                      <img class="overlay-figure overlay-spin" src="{{global}}/photos/placeholder.png"
+                      alt="...">
+                      <figcaption class="overlay-panel overlay-background overlay-fade">
+                        <h3>Title</h3>
+                        <p>Lorem <a href="javascript:void(0)">ipsum dolor</a> sit
+                          amet, consetetur sadipscing elitr.</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <!-- End Example Overlay Fade -->
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Overlay Grayscale -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Overlay Grayscale</h4>
+                  <p>Add this class to the image to desaturate it and color it on
+                    hover.</p>
+                  <div class="example">
+                    <figure class="overlay overlay-hover">
+                      <img class="overlay-figure overlay-grayscale" src="{{global}}/photos/placeholder.png"
+                      alt="...">
+                      <figcaption class="overlay-panel overlay-background overlay-fade">
+                        <h3>Title</h3>
+                        <p>Lorem <a href="javascript:void(0)">ipsum dolor</a> sit
+                          amet, consetetur sadipscing elitr.</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <!-- End Example Overlay Grayscale -->
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Overlay Slide Top -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Overlay Slide Top</h4>
+                  <p>Add this class to the overlay panel to slide it in from the top.</p>
+                  <div class="example">
+                    <figure class="overlay overlay-hover">
+                      <img class="overlay-figure" src="{{global}}/photos/placeholder.png" alt="...">
+                      <figcaption class="overlay-panel overlay-background overlay-slide-top">
+                        <h3>Title</h3>
+                        <p>Lorem <a href="javascript:void(0)">ipsum dolor</a> sit
+                          amet, consetetur sadipscing elitr.</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <!-- End Example Overlay Slide Top -->
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Overlay Slide Bottom -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Overlay Slide Bottom</h4>
+                  <p>Add this class to the overlay panel to slide it in from the bottom.</p>
+                  <div class="example">
+                    <figure class="overlay overlay-hover">
+                      <img class="overlay-figure" src="{{global}}/photos/placeholder.png" alt="...">
+                      <figcaption class="overlay-panel overlay-background overlay-slide-bottom">
+                        <h3>Title</h3>
+                        <p>Lorem <a href="javascript:void(0)">ipsum dolor</a> sit
+                          amet, consetetur sadipscing elitr.</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <!-- End Example Overlay Slide Bottom -->
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Overlay Slide Left -->
+                <div class="example-wrap margin-md-0">
+                  <h4 class="example-title">Overlay Slide Top</h4>
+                  <p>Add this class to the overlay panel to slide it in from the left.</p>
+                  <div class="example">
+                    <figure class="overlay overlay-hover">
+                      <img class="overlay-figure" src="{{global}}/photos/placeholder.png" alt="...">
+                      <figcaption class="overlay-panel overlay-background overlay-slide-left">
+                        <h3>Title</h3>
+                        <p>Lorem <a href="javascript:void(0)">ipsum dolor</a> sit
+                          amet, consetetur sadipscing elitr.</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <!-- End Example Overlay Slide Left -->
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Overlay Slide Right -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Overlay Slide Top</h4>
+                  <p>Add this class to the overlay panel to slide it in from the right.</p>
+                  <div class="example">
+                    <figure class="overlay overlay-hover">
+                      <img class="overlay-figure" src="{{global}}/photos/placeholder.png" alt="...">
+                      <figcaption class="overlay-panel overlay-background overlay-slide-right">
+                        <h3>Title</h3>
+                        <p>Lorem <a href="javascript:void(0)">ipsum dolor</a> sit
+                          amet, consetetur sadipscing elitr.</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <!-- End Example Overlay Slide Right -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- End Panel Transition -->
+
+        <!-- Panel More Examples -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">More Examples</h3>
+          </div>
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Animation -->
+                <div class="example-wrap margin-lg-0">
+                  <h4 class="example-title">Animation</h4>
+                  <div class="example">
+                    <figure class="overlay overlay-hover animation-hover">
+                      <img class="overlay-figure overlay-scale" src="{{global}}/photos/placeholder.png"
+                      alt="...">
+                      <figcaption class="overlay-panel overlay-background overlay-fade">
+                        <h3 class="animation-slide-bottom">Title</h3>
+                        <p class="animation-slide-bottom animation-delay-200">Lorem <a href="javascript:void(0)">ipsum dolor</a> sit
+                          amet, consetetur sadipscing elitr.</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <!-- End Example Animation -->
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Vertical Align -->
+                <div class="example-wrap margin-lg-0">
+                  <h4 class="example-title">Vertical Align</h4>
+                  <div class="example">
+                    <figure class="overlay overlay-hover animation-hover">
+                      <img class="overlay-figure overlay-scale" src="{{global}}/photos/placeholder.png"
+                      alt="...">
+                      <figcaption class="overlay-panel overlay-background overlay-fade text-center vertical-align">
+                        <button type="button" class="btn btn-outline btn-inverse vertical-align-middle">View</button>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <!-- End Example Vertical Align -->
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Overlay Icons -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Icons</h4>
+                  <div class="example">
+                    <figure class="overlay overlay-hover">
+                      <img class="overlay-figure" src="{{global}}/photos/placeholder.png" alt="...">
+                      <figcaption class="overlay-panel overlay-background overlay-fade overlay-icon">
+                        <a class="icon wb-search" href="#search"></a>
+                        <a class="icon wb-upload" href="#upload"></a>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <!-- End Example Icons -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel More Examples -->
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

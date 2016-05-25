@@ -1,0 +1,102 @@
+// Name:            Well
+//
+// Component:       `well`
+//
+// Modifiers:       `well-primary`
+//                  `well-success`
+//                  `well-info`
+//                  `well-warning`
+//                  `well-danger`
+//
+// Markup:
+//
+// <!-- well -->
+// <div class="well">...</div>
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@well-primary-color: @color-white;
+@well-primary-bg: @brand-primary;
+
+@well-success-color: @color-white;
+@well-success-bg: @brand-success;
+
+@well-info-color: @color-white;
+@well-info-bg: @brand-info;
+
+@well-warning-color: @color-white;
+@well-warning-bg: @brand-warning;
+
+@well-danger-color: @color-white;
+@well-danger-bg: @brand-danger;
+
+@well-padding: 20px;
+@well-lg-padding: 24px;
+@well-sm-padding: 12px;
+
+
+// Component: Well
+// ========================================================================
+.well {
+  padding: @well-padding;
+}
+
+.well-lg {
+  padding: @well-lg-padding;
+}
+.well-sm {
+  padding: @well-sm-padding;
+}
+
+.well {
+  .box-shadow(inset 0 0 1px rgba(0, 0, 0, .02));
+}
+
+// Color Modifier
+// ========================================================================
+
+// Modifier: `well-primary`
+// -------------------------
+
+.well-primary {
+  .well-styles-variant(@well-primary-color, @well-primary-bg);
+}
+
+// Modifier: `well-success`
+// -------------------------
+
+.well-success {
+  .well-styles-variant(@well-success-color, @well-success-bg);
+}
+
+// Modifier: `well-info`
+// -------------------------
+
+.well-info {
+  .well-styles-variant(@well-info-color, @well-info-bg);
+}
+
+// Modifier: `well-warning`
+// -------------------------
+
+.well-warning {
+  .well-styles-variant(@well-warning-color, @well-warning-bg);
+}
+
+// Modifier: `well-danger`
+// -------------------------
+
+.well-danger {
+  .well-styles-variant(@well-danger-color, @well-danger-bg);
+}
+
+// Mixins
+// ========================================================================
+
+.well-styles-variant(@color, @bg) {
+  color: @color;
+  background-color: @bg;
+}

@@ -1,0 +1,143 @@
+@import "vars.less";
+// var
+// ==============================================
+@range:                          rangeUi;
+@range-bar-color:                @bg-color-base;
+@range-pointer-size:             10px;
+@range-pointer-bgColor:          @color-white;
+@range-pointer-borderColor:      @input-border;
+
+@range-bar-height:               4px;
+@range-selected-color:           @brand-primary;
+
+@range-tip-bgColor:              @gray-darker;
+@range-tip-borderColor:          @range-tip-bgColor;
+@range-tip-arrow-bgColor:        @range-tip-bgColor;
+
+@range-lines-color:              @input-border;
+@range-values-color:             @text-color;
+
+// z-index
+@range-pointer-z-index:          @zindex-base;
+
+// range
+// ==============================================
+.@{range} {
+  position: relative;
+  cursor: pointer;
+
+  &-bar {
+    height: @range-bar-height;
+    background-color: @range-bar-color;
+  }
+
+  &-pointer {
+    position: absolute;
+    left: 60%;
+    top: -(@range-pointer-size - @range-bar-height)/2;
+    width: @range-pointer-size;
+    height: @range-pointer-size;
+    // margin-left: -(@range-pointer-size + 2)/2;
+    transform: translate(-50%, 0%);
+    background-color: @range-pointer-bgColor;
+    border: 1px solid @range-pointer-borderColor;
+    z-index: 2;
+    border-radius: 50%;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: 0;
+      outline: none;
+    }
+  }
+
+  &-tip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    margin: 0 auto;
+    // .translate(-50%, 0);
+    transform: translate(-50%, 0);
+    display: block;
+    color: @color-white;
+    font-size: 11px;
+    line-height: 1.5em;
+    padding: 2px 4px 1px;
+    text-align: center;
+    background-color: @range-tip-bgColor;
+    border: 1px solid @range-tip-borderColor;
+    border-radius: 2px;
+
+    &:before {
+      position: absolute;
+      bottom: -3px;
+      left: 50%;
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      margin-left: -3px;
+      background-color: @range-tip-arrow-bgColor;
+      // .rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+  }
+
+  &-selected {
+    position: absolute;
+    top: 0;
+    width: 60%;
+    height: @range-bar-height;
+    background-color: @range-selected-color;
+    overflow: hidden;
+  }
+
+  &-scale {
+    height: 30px;
+
+    &-lines,
+    &-values {
+      position: relative;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      vertical-align: middle;
+
+      li {
+        position: absolute;
+        top: 0;
+        float: left;
+      }
+    }
+
+    &-lines {
+      top: 6px;
+
+      li {
+        position: absolute;
+        top: 0;
+        height: 4px;
+        width: 1px;
+        background-color: @range-lines-color;
+      }
+    }
+
+    &-inlineGrid {
+      height: 10px !important;
+    }
+
+    &-values {
+      top: 13px;
+      margin-left: 1px;
+
+      span {
+        // *position: relative;
+        // *display: inline;
+        // *zoom: 1;
+        font-size: 14px;
+        color: @range-values-color;
+        margin-left: -50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+.page-content .blocks > li {
+  margin-bottom: 30px;
+}
+.page-content .blocks > li > .widget {
+  margin-bottom: 0;
+}

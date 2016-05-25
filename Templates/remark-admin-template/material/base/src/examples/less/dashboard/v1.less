@@ -1,0 +1,175 @@
+@import "vars.less";
+
+.dashboard {
+  .widget, .panel {
+      height: ~"calc(100% - 30px)";
+    }
+  .widget-content {
+    height: 100%;
+    border-radius: 3px;
+  }
+}
+
+#widgetLineareaOne {
+  .ct-chart {
+    .ct-area {
+      fill-opacity: 1;
+    }
+    .ct-series {
+      &.ct-series-a {
+        .ct-area {
+          fill: @color-indigo-300;
+        }
+      }
+    }
+  }
+}
+
+#widgetLineareaTwo {
+  .ct-chart {
+    .ct-area {
+      fill-opacity: 1;
+    }
+    .ct-series {
+      &.ct-series-a {
+        .ct-area {
+          fill: @color-amber-300;
+        }
+      }
+    }
+  }
+}
+
+#widgetLineareaThree {
+  .ct-chart {
+    .ct-area {
+      fill-opacity: 1;
+    }
+    .ct-series {
+      &.ct-series-a {
+        .ct-area {
+          fill: @color-cyan-300;
+        }
+      }
+    }
+  }
+}
+
+#widgetLineareaFour {
+  .ct-chart {
+    .ct-area {
+      fill-opacity: 1;
+    }
+    .ct-series {
+      &.ct-series-a {
+        .ct-area {
+          fill: @color-green-300;
+        }
+      }
+    }
+  }
+}
+
+#widgetJvmap {
+  path {
+    fill: @color-indigo-100;
+  }
+}
+
+#widgetCurrentChart {
+  .ct-chart {
+    .ct-series {
+      &.ct-series-a {
+        .ct-bar {
+          stroke: @color-white;
+          stroke-width: 3%;
+        }
+      }
+      &.ct-series-b {
+        .ct-bar {
+          stroke: fade(@color-indigo-50, 40%);
+          stroke-width: 3%;
+        }
+      }
+    }
+
+    .ct-labels {
+      .ct-label {
+        color: @color-white;
+        font-size: 14px;
+      }
+    }
+  }
+
+  > div {
+    position: relative;
+
+    .btn-floating {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      .translate(0%, -50%);
+    }
+  }
+}
+
+#widgetUserList {
+  .widget-header {
+    .overlay-background {
+      background-color: rgba(103, 58, 183, .8);
+    }
+  }
+  .widget-content {
+    position: relative;
+    height: auto;
+
+    .list-group-item {
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+      .media-body {
+        vertical-align: bottom;
+      }
+    }
+
+    .list-group-dividered {
+      .list-group-item:last-child {
+        border-bottom: none;
+      }
+    }
+
+    .btn-floating {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      .translate(0%, -50%);
+    }
+  }
+}
+
+#chat {
+  .widget-chat-header {
+    > * {
+      padding: 0 30px;
+      margin: 0;
+      line-height: 50px;
+    }
+  }
+
+  .widget-chat-footer {
+    position: absolute;
+    bottom: 0;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+}
+
+#projects,
+#projects-status {
+  .table {
+    > thead > tr > td,
+    > tbody > tr > td {
+      vertical-align: middle;
+    }
+  }
+}

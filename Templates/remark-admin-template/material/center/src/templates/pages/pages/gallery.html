@@ -1,0 +1,212 @@
+---
+title: Gallery
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/magnific-popup/magnific-popup.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/isotope/isotope.min.js"></script>
+    <script src="{{global}}/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/filterable.js"></script>
+  {{/content}}
+
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/pages/gallery.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+
+    <div class="page animsition">
+      <div class="page-header">
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li class="active">Pages</li>
+        </ol>
+        <h1 class="page-title">Gallery</h1>
+        <div class="page-header-actions">
+          <a class="btn btn-sm btn-primary btn-round" href="https://github.com/metafizzy/isotope"
+          target="_blank">
+            <i class="icon md-link" aria-hidden="true"></i>
+            <span class="hidden-xs">Official Website</span>
+          </a>
+        </div>
+
+        <ul class="nav nav-tabs nav-tabs-line" role="tablist" data-plugin="nav-tabs">
+          <li class="active" role="presentation">
+            <a href="#exampleList" aria-controls="exampleList" aria-expanded="true" role="tab"
+            data-toggle="tab" data-filter="*">All</a>
+          </li>
+          <li role="presentation">
+            <a href="#exampleList" aria-expanded="false" role="tab" data-toggle="tab" data-filter="object">Object</a>
+          </li>
+          <li role="presentation">
+            <a href="#exampleList" aria-expanded="false" role="tab" data-toggle="tab" data-filter="city">City</a>
+          </li>
+          <li role="presentation">
+            <a href="#exampleList" aria-expanded="false" role="tab" data-toggle="tab" data-filter="animal">Animal</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="page-content">
+        <ul class="blocks blocks-100 blocks-xlg-4 blocks-md-3 blocks-sm-2" id="exampleList"
+        data-filterable="true">
+          <li data-type="animal">
+            <div class="widget widget-shadow">
+              <figure class="widget-header overlay-hover overlay">
+                <img class="overlay-figure overlay-scale" src="{{global}}/photos/placeholder.png"
+                alt="...">
+                <figcaption class="overlay-panel overlay-background overlay-fade overlay-icon">
+                  <a class="icon md-search" href="{{global}}/photos/placeholder.png"></a>
+                </figcaption>
+              </figure>
+              <h4 class="widget-title">Animal Horse</h4>
+            </div>
+          </li>
+          <li data-type="object">
+            <div class="widget widget-shadow">
+              <figure class="widget-header overlay-hover overlay">
+                <img class="overlay-figure overlay-scale" src="{{global}}/photos/placeholder.png"
+                alt="...">
+                <figcaption class="overlay-panel overlay-background overlay-fade overlay-icon">
+                  <a class="icon md-search" href="{{global}}/photos/placeholder.png"></a>
+                </figcaption>
+              </figure>
+              <h4 class="widget-title">Object Coffee</h4>
+            </div>
+          </li>
+          <li data-type="object">
+            <div class="widget widget-shadow">
+              <figure class="widget-header overlay-hover overlay">
+                <img class="overlay-figure overlay-scale" src="{{global}}/photos/placeholder.png"
+                alt="...">
+                <figcaption class="overlay-panel overlay-background overlay-fade overlay-icon">
+                  <a class="icon md-search" href="{{global}}/photos/placeholder.png"></a>
+                </figcaption>
+              </figure>
+              <h4 class="widget-title">Object Cup</h4>
+            </div>
+          </li>
+          <li data-type="city">
+            <div class="widget widget-shadow">
+              <figure class="widget-header overlay-hover overlay">
+                <img class="overlay-figure overlay-scale" src="{{global}}/photos/placeholder.png"
+                alt="...">
+                <figcaption class="overlay-panel overlay-background overlay-fade overlay-icon">
+                  <a class="icon md-search" href="{{global}}/photos/placeholder.png"></a>
+                </figcaption>
+              </figure>
+              <h4 class="widget-title">City Nature</h4>
+            </div>
+          </li>
+          <li data-type="scenery">
+            <div class="widget widget-shadow">
+              <figure class="widget-header overlay-hover overlay">
+                <img class="overlay-figure overlay-scale" src="{{global}}/photos/placeholder.png"
+                alt="...">
+                <figcaption class="overlay-panel overlay-background overlay-fade overlay-icon">
+                  <a class="icon md-search" href="{{global}}/photos/placeholder.png"></a>
+                </figcaption>
+              </figure>
+              <h4 class="widget-title">City Station</h4>
+            </div>
+          </li>
+          <li data-type="city">
+            <div class="widget widget-shadow">
+              <figure class="widget-header overlay-hover overlay">
+                <img class="overlay-figure overlay-scale" src="{{global}}/photos/placeholder.png"
+                alt="...">
+                <figcaption class="overlay-panel overlay-background overlay-fade overlay-icon">
+                  <a class="icon md-search" href="{{global}}/photos/placeholder.png"></a>
+                </figcaption>
+              </figure>
+              <h4 class="widget-title">City Leaf</h4>
+            </div>
+          </li>
+          <li data-type="animal">
+            <div class="widget widget-shadow">
+              <figure class="widget-header overlay-hover overlay">
+                <img class="overlay-figure overlay-scale" src="{{global}}/photos/placeholder.png"
+                alt="...">
+                <figcaption class="overlay-panel overlay-background overlay-fade overlay-icon">
+                  <a class="icon md-search" href="{{global}}/photos/placeholder.png"></a>
+                </figcaption>
+              </figure>
+              <h4 class="widget-title">Animal Bird</h4>
+            </div>
+          </li>
+          <li data-type="city">
+            <div class="widget widget-shadow">
+              <figure class="widget-header overlay-hover overlay">
+                <img class="overlay-figure overlay-scale" src="{{global}}/photos/placeholder.png"
+                alt="...">
+                <figcaption class="overlay-panel overlay-background overlay-fade overlay-icon">
+                  <a class="icon md-search" href="{{global}}/photos/placeholder.png"></a>
+                </figcaption>
+              </figure>
+              <h4 class="widget-title">City Street</h4>
+            </div>
+          </li>
+          <li data-type="animal">
+            <div class="widget widget-shadow">
+              <figure class="widget-header overlay-hover overlay">
+                <img class="overlay-figure overlay-scale" src="{{global}}/photos/placeholder.png"
+                alt="...">
+                <figcaption class="overlay-panel overlay-background overlay-fade overlay-icon">
+                  <a class="icon md-search" href="{{global}}/photos/placeholder.png"></a>
+                </figcaption>
+              </figure>
+              <h4 class="widget-title">Animal Nature</h4>
+            </div>
+          </li>
+          <li data-type="city">
+            <div class="widget widget-shadow">
+              <figure class="widget-header overlay-hover overlay">
+                <img class="overlay-figure overlay-scale" src="{{global}}/photos/placeholder.png"
+                alt="...">
+                <figcaption class="overlay-panel overlay-background overlay-fade overlay-icon">
+                  <a class="icon md-search" href="{{global}}/photos/placeholder.png"></a>
+                </figcaption>
+              </figure>
+              <h4 class="widget-title">City Night</h4>
+            </div>
+          </li>
+          <li data-type="object">
+            <div class="widget widget-shadow">
+              <figure class="widget-header overlay-hover overlay">
+                <img class="overlay-figure overlay-scale" src="{{global}}/photos/placeholder.png"
+                alt="...">
+                <figcaption class="overlay-panel overlay-background overlay-fade overlay-icon">
+                  <a class="icon md-search" href="{{global}}/photos/placeholder.png"></a>
+                </figcaption>
+              </figure>
+              <h4 class="widget-title">Object Book</h4>
+            </div>
+          </li>
+          <li data-type="object">
+            <div class="widget widget-shadow">
+              <figure class="widget-header overlay-hover overlay">
+                <img class="overlay-figure overlay-scale" src="{{global}}/photos/placeholder.png"
+                alt="...">
+                <figcaption class="overlay-panel overlay-background overlay-fade overlay-icon">
+                  <a class="icon md-search" href="{{global}}/photos/placeholder.png"></a>
+                </figcaption>
+              </figure>
+              <h4 class="widget-title">Object Grape</h4>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  {{/content}}
+{{/extend}}

@@ -1,0 +1,561 @@
+---
+title: Testimonials
+---
+
+{{#extend "layout-default"}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/structure/testimonials.css">
+  {{/content}}
+
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title">Testimonials</h1>
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li class="active">Structure</li>
+        </ol>
+        <div class="page-header-actions">
+          <form>
+            <div class="input-search input-search-dark">
+              <i class="input-search-icon md-search" aria-hidden="true"></i>
+              <input type="text" class="form-control" name="" placeholder="Search...">
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="page-content">
+        <!-- Panel -->
+        <div class="panel">
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-sm-12">
+                <!-- Example Default -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Default</h4>
+                  <p>Testimonials from customers who are not famous have been effectively
+                    used in marketing for as long as marketing has existed.</p>
+                  <div class="example">
+                    <div class="testimonial">
+                      <ul class="testimonial-ul row">
+                        <li class="testimonial-item col-sm-4">
+                          <div class="testimonial-content">
+                            <p>Nam nec ante. Sed lacinia, urna non tincidunt mattis,
+                              tortor neque adipiscing diam, a cursus ipsum ante
+                              quis turpis. </p>
+                          </div>
+                          <div class="testimonial-image">
+                            <a class="avatar" href="javascript:void(0)">
+                              <img src="{{global}}/portraits/1.jpg" alt="image" />
+                            </a>
+                          </div>
+                          <span class="testimonial-author">Herman Beck</span>
+                          <span class="testimonial-company">Web Designer</span>
+                        </li>
+                        <li class="testimonial-item col-sm-4">
+                          <div class="testimonial-content">
+                            <p>Suspendisse in justo eu magna luctus suscipit. Sed
+                              lectus. Integer euismod lacus luctus magna. </p>
+                          </div>
+                          <div class="testimonial-image">
+                            <a class="avatar" href="javascript:void(0)">
+                              <img src="{{global}}/portraits/2.jpg" alt="image" />
+                            </a>
+                          </div>
+                          <span class="testimonial-author">Mary Adams</span>
+                          <span class="testimonial-company">Videographer</span>
+                        </li>
+                        <li class="testimonial-item col-sm-4">
+                          <div class="testimonial-content">
+                            <p>Nulla quis sem at nibh elementum imperdiet. Duis sagittis
+                              ipsum. Praesent mauris. Fusce nec tellus sed augue
+                              semper porta.</p>
+                          </div>
+                          <div class="testimonial-image">
+                            <a class="avatar" href="javascript:void(0)">
+                              <img src="{{global}}/portraits/3.jpg" alt="image" />
+                            </a>
+                          </div>
+                          <span class="testimonial-author">Owen Hunt</span>
+                          <span class="testimonial-company">Wordpress Ninja</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Default -->
+              </div>
+
+              <div class="col-sm-12">
+                <!-- Example Reverse -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Reverse</h4>
+                  <p>The content, customer’s avatar, author and company information
+                    can be align to bottom right side by using an additional class
+                    <code>.testimonial-reverse</code>.</p>
+                  <div class="example">
+                    <div class="testimonial testimonial-reverse">
+                      <ul class="testimonial-ul row">
+                        <li class="testimonial-item col-sm-4">
+                          <div class="testimonial-content">
+                            <p>Nam nec ante. Sed lacinia, urna non tincidunt mattis,
+                              tortor neque adipiscing diam, a cursus ipsum ante
+                              quis turpis. </p>
+                          </div>
+                          <div class="testimonial-image">
+                            <a class="avatar" href="javascript:void(0)">
+                              <img src="{{global}}/portraits/4.jpg" alt="image" />
+                            </a>
+                          </div>
+                          <span class="testimonial-author">June Lane</span>
+                          <span class="testimonial-company">Web Designer</span>
+                        </li>
+                        <li class="testimonial-item col-sm-4">
+                          <div class="testimonial-content">
+                            <p>Suspendisse in justo eu magna luctus suscipit. Sed
+                              lectus. Integer euismod lacus luctus magna. </p>
+                          </div>
+                          <div class="testimonial-image">
+                            <a class="avatar" href="javascript:void(0)">
+                              <img src="{{global}}/portraits/5.jpg" alt="image" />
+                            </a>
+                          </div>
+                          <span class="testimonial-author">Edward Fletcher</span>
+                          <span class="testimonial-company">Videographer</span>
+                        </li>
+                        <li class="testimonial-item col-sm-4">
+                          <div class="testimonial-content">
+                            <p>Nulla quis sem at nibh elementum imperdiet. Duis sagittis
+                              ipsum. Praesent mauris. Fusce nec tellus sed augue
+                              semper porta.</p>
+                          </div>
+                          <div class="testimonial-image">
+                            <a class="avatar" href="javascript:void(0)">
+                              <img src="{{global}}/portraits/6.jpg" alt="image" />
+                            </a>
+                          </div>
+                          <span class="testimonial-author">Crystal Bates</span>
+                          <span class="testimonial-company">Wordpress Ninja</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Reverse -->
+              </div>
+            </div>
+
+            <div class="row row-lg">
+              <div class="col-sm-12">
+                <!-- Example Top -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Top</h4>
+                  <p>The content, customer’s avatar, author and company information
+                    can be align to top left side by using an additional class
+                    <code>.testimonial-top</code>.</p>
+                  <div class="example">
+                    <div class="testimonial testimonial-top">
+                      <ul class="testimonial-ul row">
+                        <li class="testimonial-item col-sm-4">
+                          <div class="testimonial-image">
+                            <a class="avatar" href="javascript:void(0)">
+                              <img src="{{global}}/portraits/7.jpg" alt="image" />
+                            </a>
+                          </div>
+                          <span class="testimonial-author">Nathan Watts</span>
+                          <span class="testimonial-company">Web Designer</span>
+                          <div class="testimonial-content">
+                            <p>Nam nec ante. Sed lacinia, urna non tincidunt mattis,
+                              tortor neque adipiscing diam, a cursus ipsum ante
+                              quis turpis. </p>
+                          </div>
+                        </li>
+                        <li class="testimonial-item col-sm-4">
+                          <div class="testimonial-image">
+                            <a class="avatar" href="javascript:void(0)">
+                              <img src="{{global}}/portraits/8.jpg" alt="image" />
+                            </a>
+                          </div>
+                          <span class="testimonial-author">Heather Harper</span>
+                          <span class="testimonial-company">Videographer</span>
+                          <div class="testimonial-content">
+                            <p>Suspendisse in justo eu magna luctus suscipit. Sed
+                              lectus. Integer euismod lacus luctus magna. </p>
+                          </div>
+                        </li>
+                        <li class="testimonial-item col-sm-4">
+                          <div class="testimonial-image">
+                            <a class="avatar" href="javascript:void(0)">
+                              <img src="{{global}}/portraits/9.jpg" alt="image" />
+                            </a>
+                          </div>
+                          <span class="testimonial-author">Willard Wood</span>
+                          <span class="testimonial-company">Wordpress Ninja</span>
+                          <div class="testimonial-content">
+                            <p>Nulla quis sem at nibh elementum imperdiet. Duis sagittis
+                              ipsum. Praesent mauris. Fusce nec tellus sed augue
+                              semper porta.</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Top -->
+              </div>
+
+              <div class="col-sm-12">
+                <!-- Example Top & Reverse -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Top & Reverse</h4>
+                  <p>The content, customer’s avatar, author and company information
+                    can be align to top right side by using an additional classes
+                    <code>.testimonial-top</code> and <code>.testimonial-reverse</code>.</p>
+                  <div class="example">
+                    <div class="testimonial testimonial-top testimonial-reverse">
+                      <ul class="testimonial-ul row">
+                        <li class="testimonial-item col-sm-4">
+                          <div class="testimonial-image">
+                            <a class="avatar" href="javascript:void(0)">
+                              <img src="{{global}}/portraits/10.jpg" alt="image" />
+                            </a>
+                          </div>
+                          <span class="testimonial-author">Ronnie Ellis</span>
+                          <span class="testimonial-company">Web Designer</span>
+                          <div class="testimonial-content">
+                            <p>Nam nec ante. Sed lacinia, urna non tincidunt mattis,
+                              tortor neque adipiscing diam, a cursus ipsum ante
+                              quis turpis. </p>
+                          </div>
+                        </li>
+                        <li class="testimonial-item col-sm-4">
+                          <div class="testimonial-image">
+                            <a class="avatar" href="javascript:void(0)">
+                              <img src="{{global}}/portraits/11.jpg" alt="image" />
+                            </a>
+                          </div>
+                          <span class="testimonial-author">Gwendolyn Wheeler</span>
+                          <span class="testimonial-company">Videographer</span>
+                          <div class="testimonial-content">
+                            <p>Suspendisse in justo eu magna luctus suscipit. Sed
+                              lectus. Integer euismod lacus luctus magna. </p>
+                          </div>
+                        </li>
+                        <li class="testimonial-item col-sm-4">
+                          <div class="testimonial-image">
+                            <a class="avatar" href="javascript:void(0)">
+                              <img src="{{global}}/portraits/12.jpg" alt="image" />
+                            </a>
+                          </div>
+                          <span class="testimonial-author">Daniel Russell</span>
+                          <span class="testimonial-company">Wordpress Ninja</span>
+                          <div class="testimonial-content">
+                            <p>Nulla quis sem at nibh elementum imperdiet. Duis sagittis
+                              ipsum. Praesent mauris. Fusce nec tellus sed augue
+                              semper porta.</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Top & Reverse -->
+              </div>
+            </div>
+
+            <div class="row row-lg">
+              <div class="col-lg-6">
+                <!-- Example Slide Show - Default -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Slide Show - Default</h4>
+                  <p>This slideshow testimonial for cycling through person’s written
+                    or spoken statement, like a carousel. The default content,
+                    customer’s avatar, author and company information align to
+                    bottom left side.</p>
+                  <div class="example">
+                    <div class="testimonial carousel" role="listbox" id="exampleDefault" data-ride="carousel">
+                      <ul class="testimonial-ul carousel-inner">
+                        <li class="testimonial-item item active">
+                          <div class="testimonial-content">
+                            <p>Nam nec ante. Sed lacinia, urna non tincidunt mattis,
+                              tortor neque adipiscing diam, a cursus ipsum ante
+                              quis turpis. </p>
+                          </div>
+                          <div class="testimonial-image">
+                            <a class="avatar" href="javascript:void(0)">
+                              <img src="{{global}}/portraits/13.jpg" alt="image" />
+                            </a>
+                          </div>
+                          <span class="testimonial-author">Sarah Graves</span>
+                          <span class="testimonial-company">Web Designer</span>
+                        </li>
+                        <li class="testimonial-item item">
+                          <div class="testimonial-content">
+                            <p>Suspendisse in justo eu magna luctus suscipit. Sed
+                              lectus. Integer euismod lacus luctus magna. </p>
+                          </div>
+                          <div class="testimonial-image">
+                            <a class="avatar" href="javascript:void(0)">
+                              <img src="{{global}}/portraits/14.jpg" alt="image" />
+                            </a>
+                          </div>
+                          <span class="testimonial-author">Andrew Hoffman</span>
+                          <span class="testimonial-company">Videographer</span>
+                        </li>
+                        <li class="testimonial-item item">
+                          <div class="testimonial-content">
+                            <p>Nulla quis sem at nibh elementum imperdiet. Duis sagittis
+                              ipsum. Praesent mauris. Fusce nec tellus sed augue
+                              semper porta.</p>
+                          </div>
+                          <div class="testimonial-image">
+                            <a class="avatar" href="javascript:void(0)">
+                              <img src="{{global}}/portraits/15.jpg" alt="image" />
+                            </a>
+                          </div>
+                          <span class="testimonial-author">Camila Lynch</span>
+                          <span class="testimonial-company">Wordpress Ninja</span>
+                        </li>
+                      </ul>
+                      <div class="testimonial-control">
+                        <a class="testimonial-control-left" data-slide="prev" href="#exampleDefault" role="button">
+                          <span class="icon md-chevron-left" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="testimonial-control-right" data-slide="next" href="#exampleDefault" role="button">
+                          <span class="icon md-chevron-right" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Slide Show - Default -->
+              </div>
+
+              <div class="col-lg-6">
+                <!-- Example Slide Show - Reverse -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Slide Show - Reverse</h4>
+                  <p>This slideshow testimonial’s content, customer’s avatar, author
+                    and company information can be align to bottom right side by
+                    using class <code>.testimonial-reverse</code>.</p>
+                  <div class="example">
+                    <div class="testimonial testimonial-reverse carousel" role="listbox" id="exampleReverse"
+                    data-ride="carousel">
+                      <ul class="testimonial-ul carousel-inner">
+                        <li class="testimonial-item item active">
+                          <div class="testimonial-content">
+                            <p>Nam nec ante. Sed lacinia, urna non tincidunt mattis,
+                              tortor neque adipiscing diam, a cursus ipsum ante
+                              quis turpis. </p>
+                          </div>
+                          <div class="testimonial-image">
+                            <a class="avatar" href="javascript:void(0)">
+                              <img src="{{global}}/portraits/16.jpg" alt="image" />
+                            </a>
+                          </div>
+                          <span class="testimonial-author">Ramon Dunn</span>
+                          <span class="testimonial-company">Web Designer</span>
+                        </li>
+                        <li class="testimonial-item item">
+                          <div class="testimonial-content">
+                            <p>Suspendisse in justo eu magna luctus suscipit. Sed
+                              lectus. Integer euismod lacus luctus magna. </p>
+                          </div>
+                          <div class="testimonial-image">
+                            <a class="avatar" href="javascript:void(0)">
+                              <img src="{{global}}/portraits/17.jpg" alt="image" />
+                            </a>
+                          </div>
+                          <span class="testimonial-author">Scott Sanders</span>
+                          <span class="testimonial-company">Videographer</span>
+                        </li>
+                        <li class="testimonial-item item">
+                          <div class="testimonial-content">
+                            <p>Nulla quis sem at nibh elementum imperdiet. Duis sagittis
+                              ipsum. Praesent mauris. Fusce nec tellus sed augue
+                              semper porta.</p>
+                          </div>
+                          <div class="testimonial-image">
+                            <a class="avatar" href="javascript:void(0)">
+                              <img src="{{global}}/portraits/18.jpg" alt="image" />
+                            </a>
+                          </div>
+                          <span class="testimonial-author">Nina Wells</span>
+                          <span class="testimonial-company">Wordpress Ninja</span>
+                        </li>
+                      </ul>
+                      <div class="testimonial-control">
+                        <a class="testimonial-control-left" data-slide="prev" href="#exampleReverse" role="button">
+                          <span class="icon md-chevron-left" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="testimonial-control-right" data-slide="next" href="#exampleReverse" role="button">
+                          <span class="icon md-chevron-right" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Slide Show - Reverse -->
+              </div>
+            </div>
+
+            <div class="row row-lg">
+              <div class="col-lg-6">
+                <!-- Example Slide Show - Top -->
+                <div class="example-wrap margin-lg-0">
+                  <h4 class="example-title">Slide Show - Top</h4>
+                  <p>This slideshow testimonial’s content, customer’s avatar, author
+                    and company information can be align to top left side by using
+                    class <code>.testimonial-top</code>.</p>
+                  <div class="example">
+                    <div class="testimonial testimonial-top carousel" role="listbox" id="exampleTop"
+                    data-ride="carousel">
+                      <ul class="testimonial-ul carousel-inner">
+                        <li class="testimonial-item item active">
+                          <div class="testimonial-image">
+                            <a class="avatar" href="javascript:void(0)">
+                              <img src="{{global}}/portraits/20.jpg" alt="image" />
+                            </a>
+                          </div>
+                          <span class="testimonial-author">Marvin Nelson</span>
+                          <span class="testimonial-company">Web Designer</span>
+                          <div class="testimonial-content">
+                            <p>Nam nec ante. Sed lacinia, urna non tincidunt mattis,
+                              tortor neque adipiscing diam, a cursus ipsum ante
+                              quis turpis. </p>
+                          </div>
+                        </li>
+                        <li class="testimonial-item item">
+                          <div class="testimonial-image">
+                            <a class="avatar" href="javascript:void(0)">
+                              <img src="{{global}}/portraits/3.jpg" alt="image" />
+                            </a>
+                          </div>
+                          <span class="testimonial-author">Caleb Richards</span>
+                          <span class="testimonial-company">Videographer</span>
+                          <div class="testimonial-content">
+                            <p>Suspendisse in justo eu magna luctus suscipit. Sed
+                              lectus. Integer euismod lacus luctus magna. </p>
+                          </div>
+                        </li>
+                        <li class="testimonial-item item">
+                          <div class="testimonial-image">
+                            <a class="avatar" href="javascript:void(0)">
+                              <img src="{{global}}/portraits/4.jpg" alt="image" />
+                            </a>
+                          </div>
+                          <span class="testimonial-author">June Lane</span>
+                          <span class="testimonial-company">Wordpress Ninja</span>
+                          <div class="testimonial-content">
+                            <p>Nulla quis sem at nibh elementum imperdiet. Duis sagittis
+                              ipsum. Praesent mauris. Fusce nec tellus sed augue
+                              semper porta.</p>
+                          </div>
+                        </li>
+                      </ul>
+                      <div class="testimonial-control">
+                        <a class="testimonial-control-left" data-slide="prev" href="#exampleTop" role="button">
+                          <span class="icon md-chevron-left" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="testimonial-control-right" data-slide="next" href="#exampleTop" role="button">
+                          <span class="icon md-chevron-right" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Slide Show - Top -->
+              </div>
+
+              <div class="col-lg-6">
+                <!-- Example Slide Show - Top & Reverse -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Slide Show - Top & Reverse</h4>
+                  <p>This slideshow testimonial’s content, customer’s avatar, author
+                    and company information can be align to top right side by using
+                    classes <code>.testimonial-top</code> and <code>.testimonial-reverse</code>.</p>
+                  <div class="example">
+                    <div class="testimonial testimonial-reverse testimonial-top carousel" role="listbox"
+                    data-ride="carousel" id="exampleTopReverse">
+                      <ul class="testimonial-ul carousel-inner">
+                        <li class="testimonial-item item active">
+                          <div class="testimonial-image">
+                            <a class="avatar" href="javascript:void(0)">
+                              <img src="{{global}}/portraits/2.jpg" alt="image" />
+                            </a>
+                          </div>
+                          <span class="testimonial-author">Mary Adams</span>
+                          <span class="testimonial-company">Web Designer</span>
+                          <div class="testimonial-content">
+                            <p>Nam nec ante. Sed lacinia, urna non tincidunt mattis,
+                              tortor neque adipiscing diam, a cursus ipsum ante
+                              quis turpis. </p>
+                          </div>
+                        </li>
+                        <li class="testimonial-item item">
+                          <div class="testimonial-image">
+                            <a class="avatar" href="javascript:void(0)">
+                              <img src="{{global}}/portraits/6.jpg" alt="image" />
+                            </a>
+                          </div>
+                          <span class="testimonial-author">Crystal Bates</span>
+                          <span class="testimonial-company">Videographer</span>
+                          <div class="testimonial-content">
+                            <p>Suspendisse in justo eu magna luctus suscipit. Sed
+                              lectus. Integer euismod lacus luctus magna. </p>
+                          </div>
+                        </li>
+                        <li class="testimonial-item item">
+                          <div class="testimonial-image">
+                            <a class="avatar" href="javascript:void(0)">
+                              <img src="{{global}}/portraits/15.jpg" alt="image" />
+                            </a>
+                          </div>
+                          <span class="testimonial-author">Camila Lynch</span>
+                          <span class="testimonial-company">Wordpress Ninja</span>
+                          <div class="testimonial-content">
+                            <p>Nulla quis sem at nibh elementum imperdiet. Duis sagittis
+                              ipsum. Praesent mauris. Fusce nec tellus sed augue
+                              semper porta.</p>
+                          </div>
+                        </li>
+                      </ul>
+
+                      <div class="testimonial-control">
+                        <a class="testimonial-control-left" data-slide="prev" href="#exampleTopReverse"
+                        role="button">
+                          <span class="icon md-chevron-left" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="testimonial-control-right" data-slide="next" href="#exampleTopReverse"
+                        role="button">
+                          <span class="icon md-chevron-right" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Slide Show - Top & Reverse -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel -->
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

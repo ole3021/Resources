@@ -1,0 +1,64 @@
+@import "vars.less";
+
+// var
+// =============================================================
+@label-default-bg:           @btn-default-bg;
+@label-default-color:        @text-color;
+@label-default-remove-color: @label-default-color;
+
+// bootstrap-tagsinput
+// =============================================================
+
+.bootstrap-tagsinput {
+  display: inline-block;
+  padding: @padding-base-vertical @padding-base-horizontal;
+  color: @text-color;
+  vertical-align: middle;
+  max-width: 100%;
+  line-height: @line-height-base;
+  cursor: text;
+  background-color: @color-white;
+  border: 1px solid @input-border;
+  box-shadow: none;
+  border-radius: @input-border-radius;
+
+  input {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background-color: transparent;
+    margin: 0;
+    width: auto !important;
+    max-width: inherit;
+    line-height: inherit;
+    padding: 0 6px;
+
+    &:focus {
+      border: none;
+      box-shadow: none;
+    }
+  }
+
+  & input.tt-input { //for when twitter-typeahead in
+    padding: 0;
+  }
+
+  .tag {
+    margin-right: 2px;
+
+    [data-role="remove"] {
+      margin-left: 8px;
+      cursor: pointer;
+
+      &:after {
+        content: "x";
+        padding: 0 2px;
+      }
+    }
+
+    &.label {
+      display: inline-block;
+      margin: 0 0 2px;
+    }
+  }
+}

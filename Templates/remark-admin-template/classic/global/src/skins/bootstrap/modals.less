@@ -1,0 +1,33 @@
+//
+// Modals
+// --------------------------------------------------
+
+// .modal-open      - body class for killing the scroll
+// .modal           - container to scroll within
+// .modal-dialog    - positioning shell for the actual modal
+// .modal-content   - actual modal w/ bg and corners and shit
+
+
+// Actual modal
+.modal-content {
+  background-color: @modal-content-bg;
+  border: 1px solid @modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
+  border: 1px solid @modal-content-border-color;
+}
+
+// Modal background
+.modal-backdrop {
+  background-color: @modal-backdrop-bg;
+}
+
+// Modal header
+// Top section of the modal w/ title and dismiss
+.modal-header {
+  border-bottom: 1px solid @modal-header-border-color;
+}
+
+
+// Footer (for actions)
+.modal-footer {
+  border-top: 1px solid @modal-footer-border-color;
+}

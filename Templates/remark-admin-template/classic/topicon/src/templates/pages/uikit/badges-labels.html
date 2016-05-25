@@ -1,0 +1,347 @@
+---
+title: Badges &amp; Labels
+---
+
+{{#extend "layout-default"}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/uikit/badges-labels.css">
+  {{/content}}
+
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <ol class="breadcrumb">
+          <li><a href="{{dest '/index.html'}}">Home</a></li>
+          <li class="active">Basic UI</li>
+        </ol>
+        <h1 class="page-title">Badges &amp; Labels</h1>
+        <div class="page-header-actions">
+          <button type="button" class="btn btn-sm btn-icon btn-inverse btn-round" data-toggle="tooltip"
+          data-original-title="Edit">
+            <i class="icon wb-pencil" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-sm btn-icon btn-inverse btn-round" data-toggle="tooltip"
+          data-original-title="Refresh">
+            <i class="icon wb-refresh" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-sm btn-icon btn-inverse btn-round" data-toggle="tooltip"
+          data-original-title="Setting">
+            <i class="icon wb-settings" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="page-content">
+        <!-- Panel Badges -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Badges</h3>
+          </div>
+
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-sm-6 col-lg-4">
+                <!-- Example Badges Default -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Badges Default</h4>
+                  <p>Wrap one of the seven contextual classes ( e.g. <code>.badge-success</code>                    ) for basic <code>.badge</code> class. Choose from success,
+                    info, warning, etc.</p>
+                  <div class="example">
+                    <span class="badge badge-default">1</span>
+                    <span class="badge badge-primary">2</span>
+                    <span class="badge badge-success">3</span>
+                    <span class="badge badge-info">4</span>
+                    <span class="badge badge-warning">5</span>
+                    <span class="badge badge-danger">6</span>
+                    <span class="badge badge-dark">7</span>
+                  </div>
+
+                  <div class="example">
+                    <span class="badge badge-default">11</span>
+                    <span class="badge badge-primary">12</span>
+                    <span class="badge badge-success">13</span>
+                    <span class="badge badge-info">14</span>
+                    <span class="badge badge-warning">15</span>
+                    <span class="badge badge-danger">16</span>
+                    <span class="badge badge-dark">17</span>
+                  </div>
+                </div>
+                <!-- End Example Badges Default -->
+              </div>
+
+              <div class="col-sm-6 col-lg-4">
+                <!-- Example Badges Radius -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Badges Radius</h4>
+                  <p>It’s normally used to display quantitative information. Building
+                    on any radius style badges by adding an optional <code>.badge-radius</code>.</p>
+                  <div class="example">
+                    <span class="badge badge-radius badge-default">1</span>
+                    <span class="badge badge-radius badge-primary">2</span>
+                    <span class="badge badge-radius badge-success">3</span>
+                    <span class="badge badge-radius badge-info">4</span>
+                    <span class="badge badge-radius badge-warning">5</span>
+                    <span class="badge badge-radius badge-danger">6</span>
+                    <span class="badge badge-radius badge-dark">7</span>
+                  </div>
+                </div>
+                <!-- End Example Badges Radius -->
+              </div>
+
+              <div class="clearfix visible-md-block visible-sm-block"></div>
+
+              <div class="col-sm-6 col-lg-4">
+                <!-- Example Badges Sizes -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Badges Sizes</h4>
+                  <p>Various badges sizes for common scenarios, from default size
+                    to large/small size, you can add additional class <code>.badge-lg</code>                    or <code>.badge-sm</code>.</p>
+                  <div class="example">
+                    <span class="badge badge-lg badge-primary">Large</span>
+                    <span class="badge badge-primary">Default</span>
+                    <span class="badge badge-sm badge-primary">Small</span>
+                  </div>
+                </div>
+                <!-- End Example Badges Sizes -->
+              </div>
+
+              <div class="clearfix visible-lg-block"></div>
+
+              <div class="col-sm-6 col-lg-4">
+                <!-- Example Badges In Button -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Badges In Button</h4>
+                  <p>Easily highlight new or unread items by adding a <code>&lt;span class="badge"&gt;</code>                    to button div.</p>
+                  <div class="example example-buttons">
+                    <button type="button" class="btn btn-primary">
+                      Update
+                      <span class="badge">5</span>
+                    </button>
+                    <button type="button" class="btn btn-outline btn-primary">
+                      Update
+                      <span class="badge">5</span>
+                    </button>
+                  </div>
+                </div>
+                <!-- End Example Badges In Button -->
+              </div>
+
+              <div class="clearfix visible-md-block visible-sm-block"></div>
+
+              <div class="col-sm-6 col-lg-4">
+                <!-- Example Absolute Positioning -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Absolute Positioning</h4>
+                  <p>They’re commonly found in email cilents like Mail.app or on mobile
+                    apps for push notifications. Highligh unread items by adding
+                    <code>.badge</code>, <code>.up</code>, <code>.badge-warning</code>                    class in <code>&lt;span&gt;</code> mark</p>
+                  <div class="example-2 margin-top-25">
+                    <span>
+                      <i class="icon wb-bell" aria-hidden="true"></i>
+                      <span class="badge up badge-danger">5</span>
+                    </span>
+                    <span>
+                      <i class="icon wb-envelope" aria-hidden="true"></i>
+                      <span class="badge up badge-warning">3</span>
+                    </span>
+                    <span>
+                      <i class="icon wb-user" aria-hidden="true"></i>
+                      <span class="badge up badge-primary">3</span>
+                    </span>
+                    <span>
+                      <i class="icon wb-inbox" aria-hidden="true"></i>
+                      <span class="badge up badge-info">3</span>
+                    </span>
+                  </div>
+                </div>
+                <!-- End Example Absolute Positioning -->
+              </div>
+
+              <div class="col-sm-6 col-lg-4">
+                <!-- Example Status Badges -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Status Badges</h4>
+                  <p>You can use this examples to create status indicator badges with
+                    <code>&lt;div class="avatar-online”&gt;</code> for profile
+                    images or similar elements.</p>
+                  <div class="example example-avatars">
+                    <div class="avatar avatar-online">
+                      <img src="{{global}}/portraits/2.jpg" alt="...">
+                      <i></i>
+                    </div>
+
+                    <div class="avatar avatar-off">
+                      <img src="{{global}}/portraits/3.jpg" alt="...">
+                      <i></i>
+                    </div>
+
+                    <div class="avatar avatar-busy">
+                      <img src="{{global}}/portraits/4.jpg" alt="...">
+                      <i></i>
+                    </div>
+
+                    <div class="avatar avatar-away">
+                      <img src="{{global}}/portraits/5.jpg" alt="...">
+                      <i></i>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Status Badges -->
+              </div>
+            </div>
+
+            <div class="row row-lg">
+              <div class="col-sm-12">
+                <!-- Example Badges In Nav -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Badges In Nav</h4>
+                  <p>Built-in styles are included for placing badges in active states
+                    in pill navigations. Highlight unread items by adding a <code>&lt;span class="badge"&gt;</code>                    to tab div.</p>
+                  <div class="example">
+                    <ul class="nav nav-tabs nav-tabs-line">
+                      <li class="active" role="presentation">
+                        <a href="javascript:void(0)">
+                          <span>Home</span>
+                          <span class="badge badge-danger">5</span>
+                        </a>
+                      </li>
+                      <li role="presentation"><a href="javascript:void(0)">Blog</a></li>
+                      <li role="presentation"><a href="javascript:void(0)">Profile</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Example Badges In Nav -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel Badges -->
+
+        <!-- Panel Labels -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Lables</h3>
+          </div>
+
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-sm-6 col-lg-4">
+                <!-- Example Labels Default -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Labels Default</h4>
+                  <p>Add any of the default mentioned modifier classes to change the
+                    appearance of a label.</p>
+                  <div class="example">
+                    <span class="label label-default">Default</span>
+                    <span class="label label-primary">Primary</span>
+                    <span class="label label-success">Success</span>
+                    <span class="label label-info">Info</span>
+                    <span class="label label-warning">Warning</span>
+                    <span class="label label-danger">Danger</span>
+                    <span class="label label-dark">Dark</span>
+                  </div>
+                </div>
+                <!-- End Example Labels Default -->
+              </div>
+
+              <div class="col-sm-6 col-lg-4">
+                <!-- Example Labels Round -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Labels Round</h4>
+                  <p>Round labels can used in taxonomies to provide an ad-hoc, user-generated
+                    scheme for classification. Add <code>.label-round</code> to
+                    change its shape.</p>
+                  <div class="example">
+                    <span class="label label-round label-default">Default</span>
+                    <span class="label label-round label-primary">Primary</span>
+                    <span class="label label-round label-success">Success</span>
+                    <span class="label label-round label-info">Info</span>
+                    <span class="label label-round label-warning">Warning</span>
+                    <span class="label label-round label-danger">Danger</span>
+                    <span class="label label-round label-dark">Dark</span>
+                  </div>
+                </div>
+                <!-- End Example Labels Round -->
+              </div>
+
+              <div class="col-sm-6 col-lg-4">
+                <!-- Example Labels Outline -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Labels Outline</h4>
+                  <p>The label can have outline style and different border color options.
+                    Add <code>.label-outline</code> to change its border style.</p>
+                  <div class="example">
+                    <span class="label label-outline label-default">Default</span>
+                    <span class="label label-outline label-primary">Primary</span>
+                    <span class="label label-outline label-success">Success</span>
+                    <span class="label label-outline label-info">Info</span>
+                    <span class="label label-outline label-warning">Warning</span>
+                    <span class="label label-outline label-danger">Danger</span>
+                    <span class="label label-outline label-dark">Dark</span>
+                  </div>
+                </div>
+                <!-- End Example Labels Outline -->
+              </div>
+
+              <div class="clearfix visible-lg-block"></div>
+
+              <div class="col-sm-6 col-lg-4">
+                <!-- Example Labels Sizes -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Labels Sizes</h4>
+                  <p>Various label sizes for common scenarios, from default size to
+                    large/small size, you can add additional class <code>.label-lg</code>                    or <code>.label-sm</code>.</p>
+                  <div class="example">
+                    <span class="label label-lg label-primary">Large</span>
+                    <span class="label label-primary">Default</span>
+                    <span class="label label-sm label-primary">Small</span>
+                  </div>
+                </div>
+                <!-- End Example Labels Sizes -->
+              </div>
+
+              <div class="clearfix visible-sm-block visible-md-block"></div>
+
+              <div class="col-lg-8">
+                <!-- Example Labels In Header -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Labels In Header</h4>
+                  <p>They show the information in combination with other visual heading
+                    elements by adding <code>&lt;span class=”label label-primary”&gt;</code>.</p>
+                  <div class="example">
+                    <h1>h1. Bootstrap heading
+                      <span class="label label-primary">New</span>
+                    </h1>
+                    <h2>h2. Heading
+                      <span class="label label-primary">New</span>
+                    </h2>
+                    <h3>h3. Heading
+                      <span class="label label-primary">New</span>
+                    </h3>
+                    <h4>h4. Heading
+                      <span class="label label-primary">New</span>
+                    </h4>
+                    <h5>h5. Heading
+                      <span class="label label-primary">New</span>
+                    </h5>
+                    <h6>h6. Heading
+                      <span class="label label-primary">New</span>
+                    </h6>
+                  </div>
+                </div>
+                <!-- End Example Labels In Header -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel Labels -->
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

@@ -1,0 +1,18 @@
+{
+  "name": "remark",
+  "description": "The best backend-end framework for developing responsive, mobile first projects on the web.",
+  "version": "2.0.0",
+  "homepage": "http://getbootstrapadmin.com/remark",
+  "private": true,
+  "keywords": [
+    "css",
+    "js",
+    "less",
+    "mobile-first",
+    "responsive",
+    "framework",
+    "web",
+    "admin",
+    "bootstrap"
+  ]
+}

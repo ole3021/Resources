@@ -1,0 +1,311 @@
+.introjs-overlay {
+  position: absolute;
+  z-index: 10000;
+  background-color: #000;
+  opacity: 0;
+  -webkit-transition: all .3s ease-out;
+       -o-transition: all .3s ease-out;
+          transition: all .3s ease-out;
+}
+.introjs-fixParent {
+  position: absolute !important;
+  z-index: auto !important;
+  opacity: 1.0 !important;
+  -webkit-transform: none !important;
+      -ms-transform: none !important;
+       -o-transform: none !important;
+          transform: none !important;
+}
+.introjs-showElement,
+tr.introjs-showElement > td,
+tr.introjs-showElement > th {
+  z-index: 10100 !important;
+}
+.introjs-disableInteraction {
+  position: absolute;
+  z-index: 10300 !important;
+}
+.introjs-relativePosition,
+tr.introjs-showElement > td,
+tr.introjs-showElement > th {
+  position: relative;
+}
+.introjs-helperLayer {
+  position: absolute;
+  z-index: 10099;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, .7);
+  border: 1px solid #777;
+  border: 1px solid rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, .4);
+          box-shadow: 0 2px 15px rgba(0, 0, 0, .4);
+  -webkit-transition: all .3s ease-out;
+       -o-transition: all .3s ease-out;
+          transition: all .3s ease-out;
+}
+.introjs-tooltipReferenceLayer {
+  position: absolute;
+  z-index: 10101;
+  background-color: transparent;
+  -webkit-transition: all .3s ease-out;
+       -o-transition: all .3s ease-out;
+          transition: all .3s ease-out;
+}
+.introjs-helperLayer *,
+.introjs-helperLayer *:before,
+.introjs-helperLayer *:after {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+
+      -ms-box-sizing: content-box;
+       -o-box-sizing: content-box;
+}
+.introjs-helperNumberLayer {
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  z-index: 10400 !important;
+  /* Old browsers */
+  width: 20px;
+  height: 20px;
+  padding: 4px;
+  font-family: Arial, verdana, tahoma;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+  background: #1e88e5;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, .4);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, .4);
+}
+.introjs-arrow {
+  position: absolute;
+  display: none !important;
+  content: '';
+  border: 5px solid white;
+}
+.introjs-arrow.top {
+  top: -10px;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: white;
+  border-left-color: transparent;
+}
+.introjs-arrow.top-right {
+  top: -10px;
+  right: 10px;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: white;
+  border-left-color: transparent;
+}
+.introjs-arrow.top-middle {
+  top: -10px;
+  left: 50%;
+  margin-left: -5px;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: white;
+  border-left-color: transparent;
+}
+.introjs-arrow.right {
+  top: 10px;
+  right: -10px;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: white;
+}
+.introjs-arrow.right-bottom {
+  right: -10px;
+  bottom: 10px;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: white;
+}
+.introjs-arrow.bottom {
+  bottom: -10px;
+  border-top-color: white;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.introjs-arrow.left {
+  top: 10px;
+  left: -10px;
+  border-top-color: transparent;
+  border-right-color: white;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.introjs-arrow.left-bottom {
+  bottom: 10px;
+  left: -10px;
+  border-top-color: transparent;
+  border-right-color: white;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.introjs-tooltip {
+  position: absolute;
+  min-width: 300px;
+  max-width: 500px;
+  padding: 10px;
+  font-size: 30px;
+  color: #fff;
+  background-color: transparent;
+  -webkit-transition: opacity .1s ease-out;
+       -o-transition: opacity .1s ease-out;
+          transition: opacity .1s ease-out;
+}
+.introjs-tooltip .content {
+  display: block;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.introjs-tooltipbuttons {
+  margin-top: 10px;
+  text-align: right;
+  white-space: nowrap;
+}
+/*
+ Buttons style by http://nicolasgallagher.com/lab/css3-github-buttons/
+ Changed by Afshin Mehrabani
+*/
+.introjs-skipbutton {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  margin: 0;
+  margin-right: 5px;
+  font-size: 24px;
+  color: #fff !important;
+  text-align: center;
+  text-shadow: none;
+  background: #e53935 !important;
+  border: none;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, .15);
+          box-shadow: 0 6px 10px rgba(0, 0, 0, .15);
+}
+.introjs-skipbutton i {
+  line-height: 56px;
+}
+.introjs-skipbutton:hover {
+  color: #fff;
+  border: none;
+  -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, .15);
+          box-shadow: 0 6px 10px rgba(0, 0, 0, .15);
+}
+.introjs-skipbutton:active,
+.introjs-skipbutton:focus {
+  background: #e53935;
+}
+.introjs-prevbutton,
+.introjs-nextbutton {
+  padding: 8px 18px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #fff;
+  text-decoration: none;
+  background-color: #1e88e5;
+  border: 1px solid transparent;
+  border-radius: 1000px;
+  -webkit-transition: border .2s linear, color .2s linear, width .2s linear, background-color .2s linear;
+       -o-transition: border .2s linear, color .2s linear, width .2s linear, background-color .2s linear;
+          transition: border .2s linear, color .2s linear, width .2s linear, background-color .2s linear;
+
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+.introjs-prevbutton:hover,
+.introjs-nextbutton:hover,
+.introjs-prevbutton:active,
+.introjs-nextbutton:active,
+.introjs-prevbutton:focus,
+.introjs-nextbutton:focus {
+  color: #fff;
+  text-decoration: none;
+}
+.introjs-prevbutton.introjs-disabled,
+.introjs-nextbutton.introjs-disabled {
+  color: #9e9e9e !important;
+  cursor: not-allowed;
+  background: transparent !important;
+  border: 1px solid;
+}
+.introjs-prevbutton {
+  float: left;
+}
+.introjs-prevbutton i {
+  margin-right: 10px;
+}
+.introjs-nextbutton {
+  float: right;
+}
+.introjs-nextbutton i {
+  margin-left: 10px;
+}
+.introjs-disabled,
+.introjs-disabled:hover,
+.introjs-disabled:focus {
+  text-decoration: none;
+}
+.introjs-bullets {
+  text-align: center;
+}
+.introjs-bullets ul {
+  display: inline-block;
+  padding: 0;
+  margin: 15px auto 0;
+  clear: both;
+}
+.introjs-bullets ul li {
+  float: left;
+  margin: 0 2px;
+  list-style: none;
+}
+.introjs-bullets ul li a {
+  display: block;
+  width: 6px;
+  height: 6px;
+  text-decoration: none;
+  background: #ccc;
+  border-radius: 10px;
+}
+.introjs-bullets ul li a:hover {
+  background: #999;
+}
+.introjs-bullets ul li a.active {
+  background: #999;
+}
+.introjs-progress {
+  height: 10px;
+  margin: 10px 0 5px 0;
+  overflow: hidden;
+  background-color: #ecf0f1;
+  border-radius: 4px;
+}
+.introjs-progressbar {
+  float: left;
+  width: 0;
+  height: 100%;
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
+  background-color: #08c;
+}
+.introjsFloatingElement {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+}

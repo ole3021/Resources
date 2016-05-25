@@ -1,0 +1,42 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+
+body {
+  color: @text-color;
+  background-color: @body-bg;
+}
+
+
+// Links
+
+a {
+  color: @link-color;
+
+  &:hover,
+  &:focus {
+    color: @link-hover-color;
+  }
+}
+
+
+// Images
+
+img {
+  vertical-align: middle;
+}
+
+// Image thumbnails
+//
+// Heads up! This is mixin-ed into thumbnails.less for `.thumbnail`.
+.img-thumbnail {
+  background-color: @thumbnail-bg;
+  border: 1px solid @thumbnail-border;
+}
+
+// Horizontal rules
+
+hr {
+  border-top: 1px solid @hr-border;
+}

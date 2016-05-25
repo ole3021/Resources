@@ -1,0 +1,454 @@
+@import "vars.less";
+
+// productOverviewWidget
+// ============================================
+
+// default product-filters style
+.product-filters {
+  float: right !important;
+  & > li > a {
+    width: 80px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 400;
+    color: @color-blue-grey-500;
+    &:hover {
+      color: @color-blue-grey-500;
+    }
+  }
+}
+
+#productOverviewWidget {
+  // rewrite the left btn and dropdown font style
+  .btn-sale {
+    text-transform: uppercase;
+    color: @color-blue-grey-700;
+  }
+  .dropdown-menu {
+    text-transform: capitalize;
+  }
+
+  // analytic-TootipsLineView chart style
+  .ct-grids {
+    .ct-vertical {
+      stroke-dasharray: 6;
+    }
+    .ct-horizontal {
+      stroke: none;
+    }
+    .ct-point-label {
+      stroke: #fff;
+      stroke-width: 60px;
+    }
+  }
+
+  .ct-labels {
+    .ct-horizontal {
+      display: block;
+      padding-top: 10px;
+      font-size: 14px;
+      color: @color-blue-grey-500;
+    }
+  }
+
+  .ct-area {
+    fill-opacity: 0.8;
+  }
+
+  .ct-series {
+    .ct-point,.ct-point-content {
+      opacity: 0;
+      .transition(all .3s);
+    }
+
+    &:hover{
+      .ct-point,.ct-point-content {
+        opacity: 1;
+      }
+    }
+
+    &.ct-series-a {
+      .ct-area {
+        fill: @color-purple-500;
+      }
+      .ct-line {
+        stroke: @color-purple-500;
+        stroke-width: 1px;
+      }
+      .ct-point {
+        stroke: @color-purple-600;
+        stroke-width: 12px;
+        cursor: pointer;
+      }
+      .ct-point-content{
+        stroke: #fff;
+        stroke-width: 6px;
+        stroke-linecap: round;
+        pointer-events: none;
+      }
+    }
+
+    &.ct-series-b {
+      .ct-area {
+        fill: @color-cyan-500;
+      }
+      .ct-line{
+        stroke: @color-cyan-500;
+        stroke-width: 1px;
+      }
+      .ct-point{
+        stroke:@color-purple-600;
+        stroke-width: 12px;
+        cursor: pointer;
+      }
+      .ct-point-content {
+        stroke: #fff;
+        stroke-width: 6px;
+        stroke-linecap: round;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+// productOptionsData
+#productOptionsData {
+  padding: 80px 30px 30px;
+
+  // the number in counter group
+  .counter-number-group {
+    font-size: 36px;
+  }
+
+  // common style of four product-Options-Data overlappingBars
+  .ct-chart {
+    height: 60px;
+    width: 200px;
+    margin: 10px auto;
+
+    .ct-series-a {
+      .ct-bar {
+       stroke-width: 4px;
+      }
+    }
+    
+    .ct-series-b {
+      .ct-bar {
+       stroke-width: 4px;
+      }
+    }
+  }
+
+  // product-vist chart
+  .ct-chart[data-counter-type="productVist"] {
+    .ct-series-a {
+      .ct-bar {
+       stroke: @color-purple-500;
+      }
+    }
+    .ct-series-b {
+      .ct-bar {
+       stroke: @color-cyan-500;
+      }
+    }
+  }
+
+  // product-vistors chart
+  .ct-chart[data-counter-type="productVistors"] {
+    .ct-series-a {
+      .ct-bar {
+       stroke: @color-pink-500;
+      }
+    }
+    .ct-series-b {
+      .ct-bar {
+       stroke: @color-indigo-500;
+      }
+    }
+  }
+  
+  // product-page-views chart
+  .ct-chart[data-counter-type="productPageViews"] {
+    .ct-series-a {
+      .ct-bar {
+       stroke: #5cc99a;
+      }
+    }
+    .ct-series-b {
+      .ct-bar {
+        stroke: @color-yellow-500;
+      }
+    }
+  }
+
+  // product-bounce-rate chart
+  .ct-chart[data-counter-type="productBounceRate"] {
+    .ct-series-a {
+      .ct-bar {
+       stroke: @color-blue-500;
+      }
+    }
+    .ct-series-b {
+      .ct-bar {
+       stroke: @color-orange-600;
+      }
+    }
+  }
+}
+
+// browsersFlowWidget
+#browsersFlowWidget {
+  height: 100%;
+  margin-bottom: 0 !important;
+
+  .widget-header {
+    padding: 25px 30px 11px;
+  }
+
+  .widget-content {
+    padding: 0 15px;
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+}
+
+// countriesVistsWidget
+// =============================================
+
+#countriesVistsWidget {
+  margin-bottom: 0 !important;
+  .widget-header {
+    padding: 25px 30px 11px;
+  }
+  .widget-content {
+    padding-bottom: 15px;
+  }
+
+  // remove the border of table-responsive
+  .table-responsive {
+    border: 0 none;
+  }
+}
+
+// common style of two tables in analytic-dashboard
+.table-analytics {
+  & > thead > tr > th {
+    padding: 15px 0;
+    vertical-align: middle;
+    color: @color-blue-grey-700;
+  }
+
+  & > tbody > tr > td {
+    vertical-align: middle;
+  }
+}
+
+// browsersFlowWidget
+// ======================================================
+
+// the left table 
+#browsersFlowWidget {
+  tr:nth-of-type(even) {
+    background-color: @color-grey-100;
+  }
+  td {
+    padding: 20px 0;
+  }
+}
+
+// weekStackedBarChart
+#weekStackedBarChart {
+  // size
+  position: relative;
+  max-width: 350px;
+  height: 180px;
+  margin: 24px auto 0;
+
+  // style
+  .ct-chart-bar {
+    .ct-labels {
+      .ct-horizontal {
+        display: block;
+        padding-top: 12px;
+        text-align: center;
+        font-size: 14px;
+        color: @color-blue-grey-500;
+      }
+      .ct-vertical{
+        display: none;
+      }
+    }
+    
+    .ct-grids {
+      .ct-grid {
+        stroke: none;
+      }
+    }
+
+    .ct-series-a {
+      .ct-bar {
+        stroke: @color-blue-600;
+      }
+    }
+
+    .ct-series-b {
+      .ct-bar {
+        stroke: @color-blue-grey-100;
+      }
+    }
+  }
+}
+
+// browersVistsDonut
+#browersVistsDonut {
+  // size
+  position: relative;
+  height: 250px;
+  margin: 0 auto;
+
+  // style
+  svg {
+    path[fill="none"] {
+      opacity: 0 !important;
+    }
+  }
+}
+
+// countriesVistsWidget
+// =================================================
+
+#countriesVistsWidget {
+  // the table
+  td {
+    padding: 20px 0;
+    &:last-child {
+      font-size: 0;
+    }
+  }
+  
+  // the head of table 
+  .language {
+    min-width: 150px;
+  }
+
+  .vists {
+    min-width: 65px;
+  }
+
+  .vists-percent {
+    min-width: 210px;
+  } 
+
+  // some specific element
+  .progress {
+    display: inline-block;
+    width: 80%;
+    vertical-align: middle;
+  }
+
+  .country-name {
+    margin-left: 20px;
+  }
+
+  .progress-percent {
+    display: inline-block;
+    width: 20%;
+    font-size: 14px;
+    text-align: right;
+    vertical-align: middle;
+    color: @color-blue-grey-500;
+  }
+}
+
+// responsive
+// ============================================
+
+// show the bottom intervarl of browsersFlowWidget below 1400px
+@media screen and (max-width: 1400px) {
+  #browsersFlowWidget {
+    margin-bottom: 30px !important;
+  }
+}
+
+// 1200px ~ 1400px
+// make the right table earlier dropdowm
+@media screen and (min-width: @screen-lg) and (max-width:1400px){
+  .col-lg-7 {
+    width: 100%;
+  }
+
+  .col-lg-5 {
+    width: 100%;
+  }
+}
+
+// responsive interval between counter blocks
+@media screen and (max-width: 1199px) {
+  #productOptionsData {
+    padding-bottom: 20px;
+    .counter {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+// 568px ~ 768px
+@media screen and (min-width: 568px) and (max-width: @screen-sm) {
+  #productOptionsData {
+    .col-xs-12 {
+      width: 50%;
+    }
+  }
+}
+
+// 480px ~ 568px
+@media screen and (min-width: @screen-xs) and (max-width: 567px) {
+  #productOptionsData {
+    .ct-chart {
+      width: 250px;
+    }
+  }  
+}
+
+// product-filters below 480px
+@media screen and (max-width: @screen-xs) {
+  //responsive product sales nav
+  .product-filters {
+    float: none !important;
+    padding: 10px 15px;
+  }
+
+  .product-filters > li > a {
+    width: 50px;
+    height: 30px;
+    padding: 5px 8px;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 400;
+    font-size: 12px;
+    color: @color-blue-grey-500;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  #productOptionsData {
+    .ct-chart {
+      width: 200px;
+    }
+  }
+}
+
+// smaller ct-chart and browersVistsDonut
+@media screen and (max-width: 360px) {
+  #productOptionsData {
+    .ct-chart {
+      width: 160px;
+    }
+  }
+}
+

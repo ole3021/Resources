@@ -1,0 +1,152 @@
+---
+title: Chart.js
+---
+
+{{#extend "layout-default"}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/charts/chartjs.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/chart-js/Chart.js"></script>
+  {{/content}}
+
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/charts/chartjs.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title">Chart.js</h1>
+        <ol class="breadcrumb">
+          <li><a href="{{dest '/index.html'}}">Home</a></li>
+          <li><a href="javascript:void(0)">Charts</a></li>
+          <li class="active">Chart.js</li>
+        </ol>
+        <div class="page-header-actions">
+          <a class="btn btn-sm btn-default btn-outline btn-round" href="http://www.chartjs.org"
+          target="_blank">
+            <i class="icon wb-link" aria-hidden="true"></i>
+            <span class="hidden-xs">Official Website</span>
+          </a>
+        </div>
+      </div>
+      <div class="page-content">
+        <!-- Panel -->
+        <div class="panel">
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Line -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Line</h4>
+                  <p>The line chart requires an array of labels for each of the data
+                    points. This is shown on the X axis. The data for line charts
+                    is broken up into an array of datasets. Each dataset has a
+                    colour for the fill, a colour for the line and colours for
+                    the points and strokes of the points. These colours are strings
+                    just like CSS. You can use RGBA, RGB, HEX or HSL notation.</p>
+                  <div class="example text-center">
+                    <canvas id="exampleChartjsLine" height="300" width="450"></canvas>
+                  </div>
+                </div>
+                <!-- End Example Line -->
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Bar -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Bar</h4>
+                  <p>The bar chart has the a very similar data structure to the line
+                    chart, and has an array of datasets, each with colours and
+                    an array of data. Again, colours are in CSS format. We have
+                    an array of labels too for display. In the example, we are
+                    showing the same data as the previous line chart example.</p>
+                  <div class="example text-center">
+                    <canvas id="exampleChartjsBar" height="300" width="450"></canvas>
+                  </div>
+                </div>
+                <!-- End Example Bar -->
+              </div>
+
+              <div class="clearfix visible-md-block"></div>
+
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Radar -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Radar</h4>
+                  <p>For a radar chart, to provide context of what each point means,
+                    we include an array of strings that show around each point
+                    in the chart. For the radar chart data, we have an array of
+                    datasets. Each of these is an object, with a fill colour, a
+                    stroke colour, a colour for the fill of each point, and a colour
+                    for the stroke of each point. We also have an array of data
+                    values.</p>
+                  <div class="example text-center max-width">
+                    <canvas id="exampleChartjsRadar" height="350"></canvas>
+                  </div>
+                </div>
+                <!-- End Example Radar -->
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Ploar Area -->
+                <div class="example-wrap margin-lg-0">
+                  <h4 class="example-title">Ploar Area</h4>
+                  <p>Polar area charts are similar to pie charts, but each segment
+                    has the same angle - the radius of the segment differs depending
+                    on the value.This type of chart is often useful when we want
+                    to show a comparison data similar to a pie chart, but also
+                    show a scale of values for context. </p>
+                  <div class="example text-center max-width">
+                    <canvas id="exampleChartjsPloarArea" height="250"></canvas>
+                  </div>
+                </div>
+                <!-- End Example Ploar Area -->
+              </div>
+
+              <div class="clearfix visible-md-block"></div>
+
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Pie -->
+                <div class="example-wrap margin-md-0">
+                  <h4 class="example-title">Pie</h4>
+                  <p>Pie charts are probably the most commonly used chart there are.
+                    They are divided into segments, the arc of each segment shows
+                    the proportional value of each piece of data.</p>
+                  <div class="example text-center max-width">
+                    <canvas id="exampleChartjsPie" height="250"></canvas>
+                  </div>
+                </div>
+                <!-- End Example Pie -->
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <!-- Example Donut -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Donut</h4>
+                  <p>Doughnut charts are probably the most commonly used chart there
+                    are. They are divided into segments, the arc of each segment
+                    shows the proportional value of each piece of data. </p>
+                  <div class="example text-center max-width">
+                    <canvas id="exampleChartjsDonut" height="250"></canvas>
+                  </div>
+                </div>
+                <!-- End Example Donut -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel -->
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

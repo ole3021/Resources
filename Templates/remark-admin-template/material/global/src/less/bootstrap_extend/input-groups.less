@@ -1,0 +1,28 @@
+// Text input groups
+// -------------------------
+.input-group-addon {
+  transition: border .25s linear, color .25s linear, background-color .25s linear;
+}
+
+
+.input-group-btn {
+  .btn {
+    padding: 6px 10px;
+    box-shadow: none;
+
+    > .icon {
+      vertical-align: bottom;
+    }
+  }
+
+  .dropdown-toggle.btn .caret {
+    margin-left: 2px;
+  }
+
+  &:last-child {
+    > .btn,
+    > .btn-group {
+      z-index: @zindex-base;
+    }
+  }
+}

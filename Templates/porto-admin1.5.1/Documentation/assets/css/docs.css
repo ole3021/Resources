@@ -1,0 +1,233 @@
+body {
+	background-color: white;
+	color: #777;
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 22px;
+	margin: 0;
+	padding-top: 50px;
+	position: relative;
+}
+
+/* Container */
+.container-full {
+	position: relative;
+	padding: 0 15px;
+}
+
+/* Top Nav */
+.navbar-default {
+	background-color: #fbfbfb;
+	border-color: #efefef;
+	margin: 0;
+}
+
+/* Top */
+.top ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 11px;
+	color: #999;
+}
+
+.top ul li {
+	border-left: 1px solid #efefef;
+	display: inline-block;
+	line-height: 12px;
+	margin: 8px 0 0;
+	padding: 0 12px;
+	text-transform: uppercase;
+}
+
+.top ul li strong {
+	font-weight: 600;
+	color: #000;
+	display: block;
+	padding-top: 5px;
+	font-size: 13px;
+	text-transform: none;
+}
+
+.top ul li strong.version {
+	font-size: 16px;
+}
+
+.top ul li:first-child {
+	border: medium none;
+	padding-left: 0;
+}
+
+.navbar-nav > li > a {
+	font-size: 13px;
+}
+
+.logo {
+	float: left;
+	margin-top: 10px;
+	margin-bottom: -10px;
+	margin-right: 10px;
+	position: relative;
+	top: -8px;
+}
+
+/* Sidebar */
+.sidebar {
+	width: 15%;
+	float: left;
+	position: absolute;
+}
+
+@media (max-width: 991px) {
+	.sidebar {
+		display: none;
+	}
+}
+
+.sidebar .nav-pills > li > a {
+	border-radius: 0;
+	padding: 6px 15px;
+}
+
+.sidebar.affix {
+	position: fixed;
+	top: 51px;
+	overflow-y: auto;
+}
+
+/* Main */
+.main {
+	margin-left: 15%;
+	float: left;
+	padding: 0 30px 30px;
+	width: 85%;
+}
+
+@media (max-width: 991px) {
+	.main {
+		margin-left: 0;
+		width: 100%;
+	}
+}
+
+.main > section {
+	padding-top: 35px;
+	padding-bottom: 25px;
+	border-bottom: 1px solid #ebebeb;
+}
+
+/* Jumbotron */
+.jumbotron {
+	background: #0088cc;
+	padding: 20px 0;
+	color: #FFF;
+	margin: 0;
+	text-align: center;
+}
+
+.jumbotron .logo-main img {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.jumbotron h1 {
+	font-size: 40px;
+	font-weight: 600;
+}
+
+.jumbotron ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 35px;
+	font-size: 11px;
+	color: #FFF;
+}
+
+.jumbotron ul li {
+	border-left: 1px solid #1fa7eb;
+	display: inline-block;
+	line-height: 12px;
+	margin: 8px 0 0;
+	padding: 0 25px;
+	text-transform: uppercase;
+}
+
+.jumbotron ul li:last-child {
+	padding-right: 0;
+}
+
+.jumbotron ul li strong {
+	font-weight: 600;
+	color: #FFF;
+	display: block;
+	padding-top: 5px;
+	font-size: 13px;
+	text-transform: none;
+}
+
+.jumbotron ul li strong.version {
+	font-size: 16px;
+}
+
+.jumbotron ul li:first-child {
+	border: medium none;
+	padding-left: 0;
+}
+
+.jumbotron p.lead {
+	display: block;
+	font-size: 20px;
+	font-weight: 200;
+	line-height: 1.4em;
+	margin: 0 auto 20px;
+	max-width: 69%;
+}
+
+.jumbotron p.lead a {
+	color: #FFF;
+	text-decoration: underline;
+}
+
+/* Titles */
+h2 {
+	color: #000;
+}
+
+h4 {
+	color: #0088cc;
+}
+
+/* Misc */
+.alert-tip {
+	background-color: #f4f4f4;
+	border-color: #f4f4f4;
+	color: #666;
+}
+
+.center {
+	text-align: center;
+}
+
+.pull-left {
+	float: left !important;
+}
+
+.pull-right {
+	float: right !important;
+}
+
+.center {
+	text-align: center;
+}
+
+.push-bottom {
+	margin-bottom: 35px;
+}
+
+.push-top {
+	margin-top: 35px;
+}
+
+.bold {
+	font-weight: bold;
+}

@@ -1,0 +1,175 @@
+---
+title: Flot Charts
+---
+
+{{#extend "layout-default"}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/charts/flot.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/flot/jquery.flot.js"></script>
+    <script src="{{global}}/vendor/flot/jquery.flot.resize.js"></script>
+    <script src="{{global}}/vendor/flot/jquery.flot.time.js"></script>
+    <script src="{{global}}/vendor/flot/jquery.flot.stack.js"></script>
+    <script src="{{global}}/vendor/flot/jquery.flot.pie.js"></script>
+    <script src="{{global}}/vendor/flot/jquery.flot.selection.js"></script>
+  {{/content}}
+
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/charts/flot.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title">Flot Charts</h1>
+        <ol class="breadcrumb">
+          <li><a href="{{dest '/index.html'}}">Home</a></li>
+          <li><a href="javascript:void(0)">Charts</a></li>
+          <li class="active">Flot</li>
+        </ol>
+        <div class="page-header-actions">
+          <a class="btn btn-sm btn-default btn-outline btn-round" href="http://www.flotcharts.org"
+          target="_blank">
+            <i class="icon wb-link" aria-hidden="true"></i>
+            <span class="hidden-xs">Official Website</span>
+          </a>
+        </div>
+      </div>
+      <div class="page-content">
+        <!-- Panel -->
+        <div class="panel">
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-md-6">
+                <!-- Example Realtime -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Realtime</h4>
+                  <div class="example">
+                    <div id="exampleFlotRealtime"></div>
+                  </div>
+                </div>
+                <!-- End Example Realtime -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Full-Bg Line -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Full-Bg Line</h4>
+                  <div class="example example-responsive">
+                    <div class="width-xs-400" id="exampleFlotFullBg"></div>
+                  </div>
+                </div>
+                <!-- End Example Full-Bg Line -->
+              </div>
+
+              <div class="clearfix hidden-xs hidden-sm"></div>
+
+              <div class="col-md-6">
+                <!-- Example Curve -->
+                <div class="example-wrap margin-md-0">
+                  <h4 class="example-title">Curve</h4>
+                  <div class="example example-responsive">
+                    <div class="width-xs-400" id="exampleFlotCurve"></div>
+                  </div>
+                </div>
+                <!-- End Example Curve -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Mix -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Mix</h4>
+                  <div class="example example-responsive">
+                    <div class="width-xs-400" id="exampleFlotMix"></div>
+                  </div>
+                </div>
+                <!-- End Example Mix -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel -->
+
+        <div class="panel">
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-lg-6">
+                <!-- Example Stack Bar -->
+                <div class="example-wrap margin-lg-0">
+                  <h4 class="example-title">Stack Bar</h4>
+                  <div class="example">
+                    <div id="exampleFlotStackBar"></div>
+                  </div>
+                </div>
+                <!-- End Example Stack Bar -->
+              </div>
+
+              <div class="col-lg-6">
+                <!-- Example Horizontal Bar -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Horizontal Bar</h4>
+                  <div class="example">
+                    <div id="exampleFlotHorizontalBar"></div>
+                  </div>
+                </div>
+                <!-- End Example Horizontal Bar -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel Pie -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Pie</h3>
+          </div>
+          <div class="panel-body">
+            <!-- Example Pie -->
+            <div class="example-wrap">
+              <div class="example text-center">
+                <div id="exampleFlotPie"></div>
+              </div>
+              <div class="example-buttons text-center margin-bottom-30">
+                <button class="btn btn-primary btn-outline" id="btnPieDefault" type="button">Default Options</button>
+                <button class="btn btn-primary btn-outline" id="btnPieWithoutLegend" type="button">Without Legend</button>
+                <button class="btn btn-primary btn-outline" id="btnPieLabelRadius" type="button">Label Radius</button>
+                <button class="btn btn-primary btn-outline" id="btnPieRectangular" type="button">Rectangular Pie</button>
+                <button class="btn btn-primary btn-outline" id="btnPieDonutHole" type="button">Donut Hole</button>
+                <button class="btn btn-primary btn-outline" id="btnPieInteractivity" type="button">Interactivity</button>
+              </div>
+            </div>
+            <!-- End Example Pie -->
+          </div>
+        </div>
+        <!-- End Panel Pie -->
+
+        <!-- Panel Visitors -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Visitors</h3>
+          </div>
+          <div class="panel-body">
+            <!-- Example Visitors -->
+            <div class="example-wrap">
+              <div class="example">
+                <div id="exampleFlotVisitors"></div>
+                <div id="exampleFlotVisitorsOverview"></div>
+              </div>
+            </div>
+            <!-- End Example Visitors -->
+          </div>
+        </div>
+        <!-- End Panel Visitors -->
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

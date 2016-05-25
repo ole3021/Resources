@@ -1,0 +1,49 @@
+// Name:            Color
+//
+// Component:       `color`
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+// Primary is necessary
+@color-list: "primary";
+
+@color-level: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900;
+
+// Component: Color
+// ========================================================================
+
+.colorLoop(@type, @color-list, @color-level, @index) when (@index <= length(@color-list)) {
+  @color: extract(@color-list, @index);
+
+  .levelLoop(@type, @color, @color-level, 1);
+  .colorLoop(@type, @color-list, @color-level, (@index + 1));
+}
+
+.levelLoop(@type, @color, @color-level, @index) when (@index <= length(@color-level)) {
+  @level: extract(@color-level, @index);
+  @var: %('color-%s-%s', @color, @level);
+  @class:  e(%('%s-%s', @color, @level));
+
+  .colorGenerator(@type, @class, @@var);
+
+  .levelLoop(@type, @color, @color-level, (@index + 1));
+}
+
+.colorGenerator(@type, @class, @value) when (@type = color){
+  .@{class} {
+    color: @value !important;
+  }
+}
+
+.colorGenerator(@type, @class, @value) when (@type = bg){
+  .bg-@{class} {
+    background-color: @value !important;
+  }
+}
+
+// generate
+.colorLoop(color, @color-list, @color-level, 1);
+.colorLoop(bg, @color-list, @color-level, 1);

@@ -1,0 +1,33 @@
+@import "vars.less";
+
+// Name:            Sortable
+// ========================================================================
+
+// Variables
+// ========================================================================
+@list-group-sortable-placeholder-bg      : @bg-color-base;
+@list-group-sortable-placeholder-border  : @border-color-base;
+
+// Component: Sortable
+// ========================================================================
+
+.sortable > *,
+.sortable-with-handle .sortable-handle {
+  cursor: move;
+}
+
+.sortable-placeholder {
+  display: block;
+  height: 40px;
+  margin-top: 1px;
+  background-color: @list-group-sortable-placeholder-bg;
+  border: 1px dashed @border-color-base;
+}
+
+.sortable, .sortable-with-handle {
+  &.list-group-gap {
+    .sortable-placeholder {
+      margin-bottom: 2px;
+    }
+  }
+}

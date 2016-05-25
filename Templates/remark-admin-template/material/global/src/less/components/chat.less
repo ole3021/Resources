@@ -1,0 +1,83 @@
+// Name:            Chat
+//
+// Component:       `chat`
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@chat-content-bg:         @color-primary-300;
+@chat-content-color:      @color-white;
+@chat-content-padding:    15px 20px;
+
+@chat-right-content-bg:    darken(@bg-color-base, 6%);
+@chat-right-content-color: @text-color;
+@chat-right-time-color:    @prompt-color;3
+
+
+
+// Component: Chat
+// ========================================================================
+
+.chat-box {
+  height: 100%;
+  width: 100%;
+  background-color: @inverse;
+  overflow: hidden;
+}
+
+.chats {
+  padding: 30px 15px;
+}
+
+.chat-body {
+  display: block;
+  margin: 0;
+  overflow: hidden;
+}
+
+.chat-content {
+  position: relative;
+  display: block;
+  float: left;
+  padding: @chat-content-padding;
+  margin: 0 0 30px 20px;
+  clear: both;
+  color: @chat-content-color;
+  background-color: @chat-content-bg;
+  border-radius: @border-radius-large;
+
+  &:before {
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    width: 0;
+    height: 0;
+    content: '';
+    border: 10px solid transparent;
+    border-top-color: @chat-content-bg;
+  }
+
+  & > p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Modifier: `chat-right`
+// ========================================================================
+
+.chat-right {
+  .chat-content {
+    float: right;
+    margin: 0 20px 30px 0;
+    color: @chat-right-content-color;
+    background-color: @chat-right-content-bg;
+
+    &:before {
+      left: auto;
+      right: -10px;
+      border-top-color: @chat-right-content-bg;
+    }
+  }
+}

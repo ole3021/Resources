@@ -1,0 +1,404 @@
+@import "vars.less";
+
+// var
+// =============================================================
+
+@color-grey-arrow:                 rgba(204, 204, 204, 0.2);
+
+@bootstrap-select-error-border:    @state-danger-border;
+@bootstrap-select-width:           220px; // 3 960px-grid columns
+
+@bootstrap-select-notify-bg:       @dropdown-link-hover-bg;
+@bootstrap-select-notify-color:    @dropdown-link-hover-color;
+@bootstrap-select-notify-border:   @border-color-base;
+
+@bootstrap-select-no-result-bg:    @dropdown-link-hover-bg;
+@bootstrap-select-no-result-color: @dropdown-link-hover-color;
+
+@bootstrap-select-show-menu-arrow: @dropdown-border;
+
+// z-index
+@zindex-select-dropdown:           1450; // must be lower than a modal background (1500) but higher than the fixed navbar (1400)
+
+// bootstrap-slect
+// =============================================================
+
+.btn-select {
+  height: @input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  padding: @padding-base-vertical @padding-base-horizontal;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @input-color;
+  background-color: @input-bg;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid @input-border;
+  border-radius: @input-border-radius;
+
+  .btn-group.open &,
+  &:focus {
+    border-color: @input-border-focus !important;
+    box-shadow: none;
+  }
+}
+
+// Mixins
+.cursor-disabled() {
+  cursor: not-allowed;
+}
+
+// Rules
+.bootstrap-select {
+  width: 220px \0; /*IE9 and below*/
+
+  // The selectpicker button
+  > .dropdown-toggle {
+    width: 100%;
+    padding-right: 25px;
+    z-index: 1;
+  }
+
+  > select {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0.11px;
+    height: 100%;
+    opacity: 0;
+    border: none;
+  }
+
+  > select.mobile-device {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    display: block !important;
+    width: 100%;
+    height: 100% !important;
+    opacity: 0;
+    z-index: 2;
+  }
+
+  .icon {
+    .icon-fixed-width();
+  }
+
+  // Error display
+  .has-error & .dropdown-toggle,
+  .error & .dropdown-toggle {
+    border-color: @bootstrap-select-error-border;
+  }
+
+  &.fit-width {
+    width: auto !important;
+  }
+
+  &:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: @bootstrap-select-width;
+  }
+
+  // .dropdown-toggle:focus {
+  //   outline: thin dotted #333333 !important;
+  //   outline: 5px auto -webkit-focus-ring-color !important;
+  //   outline-offset: -2px;
+  // }
+}
+
+.bootstrap-select.form-control {
+  margin-bottom: 0;
+  padding: 0;
+  border: none;
+
+  &:not([class*="col-"]) {
+    width: 100%;
+  }
+
+  &.input-group-btn {
+    z-index: auto;
+  }
+}
+
+// The selectpicker components
+.bootstrap-select.btn-group {
+  &:not(.input-group-btn),
+  &[class*="col-"] {
+    float: none;
+    display: inline-block;
+    margin-left: 0;
+    box-shadow: none;
+  }
+
+  // Forces the pull to the right, if necessary
+  &,
+  &[class*="col-"],
+  .row &[class*="col-"] {
+    &.dropdown-menu-right {
+      float: right;
+    }
+  }
+
+  .form-inline &,
+  .form-horizontal &,
+  .form-group & {
+    margin-bottom: 0;
+  }
+
+  .form-group-lg &.form-control,
+  .form-group-sm &.form-control {
+    padding: 0;
+  }
+
+  // Set the width of the live search (and any other form control within an inline form)
+  // see https://github.com/silviomoreto/bootstrap-select/issues/685
+  .form-inline & .form-control {
+    width: 100%;
+  }
+
+  &.disabled,
+  > .disabled {
+    .cursor-disabled();
+
+    &:focus {
+      outline: none !important;
+    }
+  }
+
+  &.bs-container {
+    position: absolute;
+    
+    .dropdown-menu {
+      z-index: @zindex-select-dropdown;
+    }
+  }
+
+  // The selectpicker button
+  .dropdown-toggle {
+    .filter-option {
+      display: inline-block;
+      overflow: hidden;
+      width: 100%;
+      text-align: left;
+
+      > .icon {
+        margin-right: 0.3em;
+      }
+    }
+
+    .caret {
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      margin-top: -2px;
+      vertical-align: middle;
+    }
+  }
+
+  &[class*="col-"] .dropdown-toggle {
+    width: 100%;
+  }
+
+  // The selectpicker dropdown
+  .dropdown-menu {
+    min-width: 100%;
+    box-sizing: border-box;
+
+    &.inner {
+      position: static;
+      float: none;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    li {
+      position: relative;
+
+      &.active small {
+        color: @inverse;
+      }
+
+      &.disabled a {
+        .cursor-disabled();
+      }
+
+      a {
+        > .icon {
+          margin-right: 0.3em;
+        }
+        cursor: pointer;
+        user-select: none;
+
+        &.opt {
+          position: relative;
+          padding-left: 2.25em;
+        }
+
+        span.check-mark {
+          display: none;
+        }
+
+        span.text {
+          display: inline-block;
+        }
+      }
+
+      small {
+        padding-left: 0.5em;
+      }
+    }
+
+    .notify {
+      position: absolute;
+      bottom: 6px;
+      width: 94%;
+      margin: 0 3%;
+      min-height: 26px;
+      padding: 3px 5px;
+      color: @bootstrap-select-notify-color;
+      background-color: @bootstrap-select-notify-bg;
+      border: 1px solid @bootstrap-select-notify-border;
+      border-radius: @dropdown-link-border-radius;
+      box-shadow: inset 0 1px 1px fade(rgb(0, 0, 0), 5%);
+      pointer-events: none;
+      opacity: 0.9;
+      box-sizing: border-box;
+    }
+  }
+
+  .no-results {
+    padding: 5px 10px;
+    color: @bootstrap-select-no-result-color;
+    background-color: @bootstrap-select-no-result-bg;
+    margin: 0 8px;
+    border-radius: @dropdown-link-border-radius;
+    white-space: nowrap;
+  }
+
+  &.fit-width .dropdown-toggle {
+    .filter-option {
+      position: static;
+    }
+
+    .caret {
+      position: static;
+      top: auto;
+      margin-top: -1px;
+    }
+  }
+
+  &.show-tick .dropdown-menu li {
+    &.selected a span.check-mark {
+      position: absolute;
+      display: inline-block;
+      right: 15px;
+      margin-top: 5px;
+    }
+
+    a span.text {
+      margin-right: 34px;
+    }
+  }
+}
+
+.bootstrap-select.show-menu-arrow {
+  &.open > .dropdown-toggle {
+    z-index: (@zindex-select-dropdown + 1);
+  }
+
+  .dropdown-toggle {
+    &:before {
+      content: '';
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid @bootstrap-select-show-menu-arrow;
+      position: absolute;
+      bottom: -9px;
+      left: 9px;
+      display: none;
+    }
+
+    &:after {
+      content: '';
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid white;
+      position: absolute;
+      bottom: -9px;
+      left: 10px;
+      display: none;
+    }
+  }
+
+  &.dropup .dropdown-toggle {
+    &:before {
+      bottom: auto;
+      top: -8px;
+      border-top: 8px solid @bootstrap-select-show-menu-arrow;
+      border-bottom: 0;
+    }
+
+    &:after {
+      bottom: auto;
+      top: -8px;
+      border-top: 7px solid white;
+      border-bottom: 0;
+    }
+  }
+
+  &.pull-right .dropdown-toggle {
+    &:before {
+      right: 12px;
+      left: auto;
+    }
+
+    &:after {
+      right: 13px;
+      left: auto;
+    }
+  }
+
+  &.open > .dropdown-toggle {
+    &:before,
+    &:after {
+      display: block;
+    }
+  }
+}
+
+.bs-searchbox,
+.bs-actionsbox,
+.bs-donebutton {
+  padding: 4px 8px;
+}
+
+.bs-actionsbox {
+  width: 100%;
+  box-sizing: border-box;
+
+  & .btn-group button {
+    width: 50%;
+  }
+}
+
+.bs-donebutton {
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+
+  & .btn-group button {
+    width: 100%;
+  }
+}
+
+.bs-searchbox {
+  & + .bs-actionsbox {
+    padding: 0 8px 4px;
+  }
+
+  & input.form-control {
+    margin-bottom: 0;
+    width: 100%;
+    float: none;
+  }
+}

@@ -1,0 +1,421 @@
+---
+title: Pagination
+---
+
+{{#extend "layout-default"}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/structure/pagination.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/aspaginator/jquery.asPaginator.min.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/aspaginator.js"></script>
+  {{/content}}
+
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title">Pagination</h1>
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li class="active">Structure</li>
+        </ol>
+        <div class="page-header-actions">
+          <form>
+            <div class="input-search input-search-dark">
+              <i class="input-search-icon md-search" aria-hidden="true"></i>
+              <input type="text" class="form-control" name="" placeholder="Search...">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="page-content">
+        <!-- Panel Pagination -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Pagination</h3>
+          </div>
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-md-6">
+                <!-- Example Basic Pagination -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Basic Pagination</h4>
+                  <p>Simple pagination inspired by Rdio, great for apps and search
+                    results. The large block is hard to miss, easily scalable,
+                    and provides large click areas.</p>
+                  <div class="example">
+                    <nav>
+                      <ul class="pagination">
+                        <li>
+                          <a href="javascript:void(0)" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                        <li><a href="javascript:void(0)">1</a></li>
+                        <li><a href="javascript:void(0)">2</a></li>
+                        <li><a href="javascript:void(0)">3</a></li>
+                        <li><a href="javascript:void(0)">4</a></li>
+                        <li><a href="javascript:void(0)">5</a></li>
+                        <li>
+                          <a href="javascript:void(0)" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+                <!-- End Example Basic Pagination -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Disabled And Active States -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Disabled And Active States</h4>
+                  <p>Links are customizable for different circumstances. Use <code>.disabled</code>                    for unclickable links and <code>.active</code> to indicate
+                    the current page.</p>
+                  <div class="example">
+                    <nav>
+                      <ul class="pagination">
+                        <li class="disabled">
+                          <a href="javascript:void(0)" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                        <li class="active"><a href="javascript:void(0)">1 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="javascript:void(0)">2</a></li>
+                        <li><a href="javascript:void(0)">3</a></li>
+                        <li><a href="javascript:void(0)">4</a></li>
+                        <li><a href="javascript:void(0)">5</a></li>
+                        <li>
+                          <a href="javascript:void(0)" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+                <!-- End Example Disabled And Active States -->
+              </div>
+
+              <div class="clearfix visible-md-block visible-lg-block"></div>
+
+              <div class="col-md-6">
+                <!-- Example Pagination With Gap -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Pagination With Gap</h4>
+                  <p>This pagination style has large clickable areas for each page,
+                    the current page clearly stands out from the links.</p>
+                  <div class="example">
+                    <nav>
+                      <ul class="pagination pagination-gap">
+                        <li class="disabled">
+                          <a href="javascript:void(0)" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                        <li class="active"><a href="javascript:void(0)">1 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="javascript:void(0)">2</a></li>
+                        <li><a href="javascript:void(0)">3</a></li>
+                        <li><a href="javascript:void(0)">4</a></li>
+                        <li><a href="javascript:void(0)">5</a></li>
+                        <li>
+                          <a href="javascript:void(0)" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+                <!-- End Example Pagination With Gap -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Pagination No Border -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Pagination No Border</h4>
+                  <p>The previous and next buttons are nicely detached from the rest
+                    of the pagination through their style.</p>
+                  <div class="example">
+                    <nav>
+                      <ul class="pagination pagination-no-border">
+                        <li class="disabled">
+                          <a href="javascript:void(0)" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                        <li class="active"><a href="javascript:void(0)">1 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="javascript:void(0)">2</a></li>
+                        <li><a href="javascript:void(0)">3</a></li>
+                        <li><a href="javascript:void(0)">4</a></li>
+                        <li><a href="javascript:void(0)">5</a></li>
+                        <li>
+                          <a href="javascript:void(0)" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+                <!-- End Example Pagination No Border -->
+              </div>
+
+              <div class="clearfix visible-md-block visible-lg-block"></div>
+
+              <div class="col-md-6">
+                <!-- Example Sizing -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Sizing</h4>
+                  <p>Fancy larger or smaller pagination? Add <code>.pagination-lg</code>                    or <code>.pagination-sm</code> for additional sizes.</p>
+                  <div class="example">
+                    <nav>
+                      <ul class="pagination pagination-lg">
+                        <li>
+                          <a href="javascript:void(0)" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                        <li><a href="javascript:void(0)">1</a></li>
+                        <li><a href="javascript:void(0)">2</a></li>
+                        <li><a href="javascript:void(0)">3</a></li>
+                        <li><a href="javascript:void(0)">4</a></li>
+                        <li><a href="javascript:void(0)">5</a></li>
+                        <li>
+                          <a href="javascript:void(0)" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                    <nav>
+                      <ul class="pagination">
+                        <li>
+                          <a href="javascript:void(0)" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                        <li><a href="javascript:void(0)">1</a></li>
+                        <li><a href="javascript:void(0)">2</a></li>
+                        <li><a href="javascript:void(0)">3</a></li>
+                        <li><a href="javascript:void(0)">4</a></li>
+                        <li><a href="javascript:void(0)">5</a></li>
+                        <li>
+                          <a href="javascript:void(0)" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                    <nav>
+                      <ul class="pagination pagination-sm">
+                        <li>
+                          <a href="javascript:void(0)" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                        <li><a href="javascript:void(0)">1</a></li>
+                        <li><a href="javascript:void(0)">2</a></li>
+                        <li><a href="javascript:void(0)">3</a></li>
+                        <li><a href="javascript:void(0)">4</a></li>
+                        <li><a href="javascript:void(0)">5</a></li>
+                        <li>
+                          <a href="javascript:void(0)" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+                <!-- End Example Sizing -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel Pagination -->
+
+        <!-- Panel Pager -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Pager</h3>
+          </div>
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-md-6">
+                <!-- Example Pager -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Default Example</h4>
+                  <p>By default, the pager centers links.</p>
+                  <div class="example">
+                    <nav>
+                      <ul class="pager">
+                        <li><a href="javascript:void(0)">Previous</a></li>
+                        <li><a href="javascript:void(0)">Next</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+                <!-- End Example Pager -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Pager Round -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Round Style</h4>
+                  <p>Add <code>.pager-round</code> make the pager looks rounded.</p>
+                  <div class="example">
+                    <nav>
+                      <ul class="pager pager-round">
+                        <li><a href="javascript:void(0)">Previous</a></li>
+                        <li><a href="javascript:void(0)">Next</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+                <!-- End Example Pager Round -->
+              </div>
+
+              <div class="clearfix visible-md-block visible-lg-block"></div>
+
+              <div class="col-md-6">
+                <!-- Example Aligned Links -->
+                <div class="example-wrap margin-md-0">
+                  <h4 class="example-title">Aligned Links</h4>
+                  <p>Alternatively, you can align each link to the sides:</p>
+                  <div class="example">
+                    <nav>
+                      <ul class="pager">
+                        <li class="previous">
+                          <a href="javascript:void(0)">
+                            <span aria-hidden="true">&larr;</span> Older</a>
+                        </li>
+                        <li class="next"><a href="javascript:void(0)">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+                <!-- End Example Aligned Links -->
+              </div>
+
+
+              <div class="col-md-6">
+                <!-- Example Optional Disabled State -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Optional disabled state</h4>
+                  <p>Pager links also use the general <code>.disabled</code> utility
+                    class from the pagination.</p>
+                  <div class="example">
+                    <nav>
+                      <ul class="pager pager-round">
+                        <li class="previous disabled">
+                          <a href="javascript:void(0)">
+                            <span aria-hidden="true">&larr;</span> Older</a>
+                        </li>
+                        <li class="next"><a href="javascript:void(0)">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+                <!-- End Example Optional Disabled State -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel Pager -->
+
+        <!-- Panel Paginator.Js -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Paginator.Js
+              <small><a class="example-plugin-link" href="https://github.com/amazingSurge/jquery-asPaginator"
+                target="_blank">official website</a></small>
+            </h3>
+          </div>
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-md-6">
+                <!-- Example Basic Pagination -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Basic Pagination</h4>
+                  <div class="example">
+                    <nav>
+                      <ul data-plugin="paginator" data-total="50">
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+                <!-- End Example Basic Pagination -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Pagination With Gap -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Pagination With Gap</h4>
+                  <div class="example">
+                    <nav>
+                      <ul data-plugin="paginator" data-total="50" data-skin="pagination-gap">
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+                <!-- End Example Pagination With Gap -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Pagination No Border -->
+                <div class="example-wrap margin-md-0">
+                  <h4 class="example-title">Pagination No Border</h4>
+                  <div class="example">
+                    <nav>
+                      <ul data-plugin="paginator" data-total="50" data-skin="pagination-no-border">
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+                <!-- End Example Pagination No Border -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Sizing -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Sizing</h4>
+                  <div class="example">
+                    <nav>
+                      <ul data-plugin="paginator" data-total="50" data-skin="pagination-lg pagination-gap">
+                      </ul>
+                    </nav>
+                    <nav>
+                      <ul data-plugin="paginator" data-total="50" data-skin="pagination-gap">
+                      </ul>
+                    </nav>
+                    <nav>
+                      <ul data-plugin="paginator" data-total="50" data-skin="pagination-sm pagination-gap">
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+                <!-- End Example Sizing -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- End Panel Paginator.Js -->
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

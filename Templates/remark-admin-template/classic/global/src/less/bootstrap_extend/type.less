@@ -1,0 +1,162 @@
+
+// Variables
+// ========================================================================
+@blockquote-font-size:             20px;
+@blockquote-color:                 @gray-darker;
+@blockquote-styles-padding:        15px 20px;
+
+@blockquote-success-border:        @brand-success;
+@blockquote-info-border:           @brand-info;
+@blockquote-warning-border:        @brand-warning;
+@blockquote-danger-border:         @brand-danger;
+
+// Component: Typography
+// ========================================================================
+
+// Headings
+// -------------------------
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  text-shadow: @headings-text-shadow;
+
+  .icon:first-child {
+    margin-right: 0.5em;
+  }
+}
+
+// Emphasis & misc
+// -------------------------
+
+mark,
+.mark {
+  color: @state-warning-text;
+  border-radius: @border-radius-small;
+}
+
+// Drop Cap
+// -------------------------
+
+.drop-cap {
+  float: left;
+  padding: 5px;
+  margin-right: 5px;
+  font-family: Georgia;
+  font-size: 60px;
+  line-height: 50px;
+  color: @gray-base;
+
+  &-reversed {
+    color: @inverse;
+    background-color: @gray-base;
+  }
+}
+
+.list-icons {
+  padding-left: 10px;
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-top: 6px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    i {
+      float: left;
+      width: 1em;
+      margin: 0 6px 0 0;
+    }
+  }
+}
+
+
+// Text Modifier
+// ========================================================================
+
+// Modifier: `text-primary`
+// -------------------------
+
+.text-primary {
+  .text-emphasis-variant(@brand-primary);
+}
+
+// Modifier: `text-success`
+// -------------------------
+
+.text-success {
+  .text-emphasis-variant(@brand-success);
+}
+
+// Modifier: `text-info`
+// -------------------------
+
+.text-info {
+  .text-emphasis-variant(@brand-info);
+}
+
+// Modifier: `text-warning`
+// -------------------------
+
+.text-warning {
+  .text-emphasis-variant(@brand-warning);
+}
+
+// Modifier: `text-danger`
+// -------------------------
+
+.text-danger {
+  .text-emphasis-variant(@brand-danger);
+}
+
+
+// Component: Blockquote
+// ========================================================================
+
+blockquote {
+  color: @blockquote-color;
+  font-size: @blockquote-font-size;
+  border-left-width: 2px;
+
+  footer,
+  small,
+  .small {
+    font-size: @font-size-base;
+  }
+}
+
+
+.blockquote-reverse {
+  border-right-width: 2px;
+}
+
+.blockquote {
+  padding: @blockquote-styles-padding;
+  border-left-width: 4px;
+  border-radius: @border-radius-base;
+
+  &.blockquote-reverse {
+    border-right-width: 4px;
+  }
+
+  &-success {
+    .blockquote-variant(@blockquote-success-border);
+  }
+  &-info {
+    .blockquote-variant(@blockquote-info-border);
+  }
+  &-warning {
+    .blockquote-variant(@blockquote-warning-border);
+  }
+  &-danger {
+    .blockquote-variant(@blockquote-danger-border);
+  }
+}
+
+
+.blockquote-variant(@border) {
+  // font-size: @font-size-base;
+  background-color: fade(@border, 10%);
+  border-color: @border;
+}

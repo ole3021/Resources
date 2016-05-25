@@ -1,0 +1,351 @@
+---
+title: Animation
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/nprogress/nprogress.css">
+  {{/content}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/advanced/animation.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/jquery-appear/jquery.appear.js"></script>
+    <script src="{{global}}/vendor/nprogress/nprogress.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/jquery-appear.js"></script>
+    <script src="{{global}}/js/components/nprogress.js"></script>
+  {{/content}}
+
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/advanced/animation.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page">
+      <div class="page-header">
+        <ol class="breadcrumb">
+          <li><a href="{{dest '/index.html'}}">Home</a></li>
+          <li class="active">Advanced UI</li>
+        </ol>
+        <h1 class="page-title">Animation</h1>
+        <div class="page-header-actions">
+          <button type="button" class="btn btn-sm btn-icon btn-inverse btn-round" data-toggle="tooltip"
+          data-original-title="Edit">
+            <i class="icon wb-pencil" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-sm btn-icon btn-inverse btn-round" data-toggle="tooltip"
+          data-original-title="Refresh">
+            <i class="icon wb-refresh" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-sm btn-icon btn-inverse btn-round" data-toggle="tooltip"
+          data-original-title="Setting">
+            <i class="icon wb-settings" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="page-content container-fluid">
+        <!-- Panel General Animation -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">General Animation</h3>
+          </div>
+
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-lg-6">
+                <!-- Example Basic Animation -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Basic Animation</h4>
+                  <p>Use a classes <code>.animation-{name}</code> to quickly add a
+                    animation.</p>
+                  <div class="example example-buttons">
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-default animation-fade">Fade</button>
+                    </div>
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-primary animation-scale-up">Scale Up</button>
+                    </div>
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-success animation-scale-down">Scale Down</button>
+                    </div>
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-info animation-slide-top">Slide Top</button>
+                    </div>
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-warning animation-slide-bottom">Slide Bottom</button>
+                    </div>
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-danger animation-slide-left">Slide Left</button>
+                    </div>
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-dark animation-slide-right">Slide Right</button>
+                    </div>
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-success animation-shake">Shake</button>
+                    </div>
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-primary animation-scale">Scale</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Basic Animation -->
+              </div>
+
+              <div class="col-lg-6">
+                <!-- Example Reverse Animation -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Reverse Animation</h4>
+                  <p>To reverse any animation, add the <code>.animation-reverse</code>                    class.</p>
+                  <div class="example example-buttons">
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-primary animation-reverse animation-fade">Fade</button>
+                    </div>
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-success animation-reverse animation-scale-up">Scale Up</button>
+                    </div>
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-dark animation-reverse animation-scale-down">Scale Down</button>
+                    </div>
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-danger animation-reverse animation-slide-top">Slide Top</button>
+                    </div>
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-warning animation-reverse animation-slide-bottom">Slide Bottom</button>
+                    </div>
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-info animation-reverse animation-slide-left">Slide Left</button>
+                    </div>
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-success animation-reverse animation-slide-right">Slide Right</button>
+                    </div>
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-primary animation-reverse animation-shake">Shake</button>
+                    </div>
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-default animation-reverse animation-scale">Scale</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Reverse Animation -->
+              </div>
+            </div>
+
+            <div class="row row-lg">
+              <div class="col-md-4">
+                <!-- Example Animation Duration -->
+                <div class="example-wrap margin-md-0">
+                  <h4 class="example-title">Animation Duration</h4>
+                  <p>To stretch the animation duration, add the <code>.animation-duration-{time(second)}</code>                    class.</p>
+                  <div class="example example-buttons">
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-outline btn-default animation-duration-3 animation-scale-up">Duration 3s</button>
+                    </div>
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-outline btn-default animation-duration-10 animation-slide-right">Duration 10s</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Animation Duration -->
+              </div>
+
+              <div class="col-md-8">
+                <!-- Example Animation Delay -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Animation Delay</h4>
+                  <p>To set the animation delay, add the <code>.animation-delay-{time(milesecond)}</code>                    class.</p>
+                  <div class="example example-buttons">
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-outline btn-default animation-scale-up animation-delay-100">Delay 100ms</button>
+                    </div>
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-outline btn-default animation-scale-up animation-delay-200">Delay 200ms</button>
+                    </div>
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-outline btn-default animation-scale-up animation-delay-300">Delay 300ms</button>
+                    </div>
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-outline btn-default animation-scale-up animation-delay-400">Delay 400ms</button>
+                    </div>
+                    <div class="animation-example animation-hover">
+                      <button type="button" class="btn btn-outline btn-default animation-scale-up animation-delay-500">Delay 500ms</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Animation Delay -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel General Animation -->
+
+        <!-- Panel NProgress -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">NProgress
+              <small><a class="example-plugin-link" href="http://ricostacruz.com/nprogress/"
+                target="_blank">official website</a></small>
+            </h3>
+          </div>
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-md-6">
+                <!-- Example Basic API & Loader Positions -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Basic API</h4>
+                  <div class="example example-buttons">
+                    <button id="exampleNProgressStart" type="button" class="btn btn-default btn-outline">start</button>
+                    <button id="exampleNProgressSet" type="button" class="btn btn-default btn-outline">set(0.5)</button>
+                    <button id="exampleNProgressInc" type="button" class="btn btn-default btn-outline">inc</button>
+                    <button id="exampleNProgressDone" type="button" class="btn btn-default btn-outline">done</button>
+                  </div>
+                  <h4 class="example-title">Loader Positions</h4>
+                  <div class="example example-buttons">
+                    <button id="exampleNProgressDefault" type="button" class="btn btn-default btn-outline">default</button>
+                    <button id="exampleNProgressHeader" type="button" class="btn btn-default btn-outline">header</button>
+                    <button id="exampleNProgressBottom" type="button" class="btn btn-default btn-outline">bottom</button>
+                  </div>
+                </div>
+                <!-- End Example Basic API & Loader Positions -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Style -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Style</h4>
+                  <p></p>
+                  <div class="example example-buttons">
+                    <button id="exampleNProgressPrimary" type="button" class="btn btn-primary">primary</button>
+                    <button id="exampleNProgressSuccess" type="button" class="btn btn-success">success</button>
+                    <button id="exampleNProgressInfo" type="button" class="btn btn-info">info</button>
+                    <button id="exampleNProgressWarning" type="button" class="btn btn-warning">warning</button>
+                    <button id="exampleNProgressDanger" type="button" class="btn btn-danger">danger</button>
+                    <button id="exampleNProgressDark" type="button" class="btn btn-dark">dark</button>
+                    <button id="exampleNProgressLight" type="button" class="btn btn-default">light</button>
+                  </div>
+                </div>
+                <!-- End Example Style -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel NProgress -->
+
+        <!-- Panel Loading Spinner -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Loading Spinner</h3>
+          </div>
+
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-lg-6 col-md-12">
+                <div class="example-loading example-well height-350 vertical-align text-center">
+                  <div class="loader-default loader vertical-align-middle" data-type="default"></div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-12">
+                <div class="example-wrap">
+                  <h4 class="example-title">Select Css Loading Spinner</h4>
+                  <p>This is a collection of loading spinners animated with CSS. Add
+                    <code>.loader</code> and <code>.loader-{type}</code> to enable
+                    loading spinner. You can click the button below to find the
+                    style which you like best.</p>
+                  <div class="example example-buttons">
+                    <button type="button" class="select-loader btn btn-outline btn-default" data-type="default">Default</button>
+                    <button type="button" class="select-loader btn btn-outline btn-default" data-type="grill">Grill</button>
+                    <button type="button" class="select-loader btn btn-outline btn-default" data-type="circle">Circle</button>
+                    <button type="button" class="select-loader btn btn-outline btn-default" data-type="round-circle">Round Circle</button>
+                    <button type="button" class="select-loader btn btn-outline btn-default" data-type="tadpole">Tadpole</button>
+                    <button type="button" class="select-loader btn btn-outline btn-default" data-type="ellipsis">Ellipsis</button>
+                    <button type="button" class="select-loader btn btn-outline btn-default" data-type="dot">Dot</button>
+                    <button type="button" class="select-loader btn btn-outline btn-default" data-type="bounce">Bounce</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel Loading Spinner -->
+
+        <!-- Appear Animate< -->
+        <div class="row">
+          <div class="col-sm-12">
+            <h3 class="example-title">Appear Animate
+              <small><a class="example-plugin-link" href="https://github.com/morr/jquery.appear"
+                target="_blank">official website</a></small>
+            </h3>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="panel panel-primary panel-bordered" data-plugin="appear" data-animate="fade">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Animate Fade</h3>
+                  </div>
+                  <div class="panel-body">Using <code>data-plugin="appear"</code> and <code>data-animate="fade"</code>                    to add appear animate.</div>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="panel panel-danger panel-bordered" data-plugin="appear" data-animate="slide-top">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Animate Slide Top</h3>
+                  </div>
+                  <div class="panel-body">Using <code>data-plugin="appear"</code> and <code>data-animate="slide-top"</code>                    to add appear animate.</div>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="panel panel-dark panel-bordered" data-plugin="appear" data-animate="slide-bottom">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Animate Slide Bottom</h3>
+                  </div>
+                  <div class="panel-body">Using <code>data-plugin="appear"</code> and <code>data-animate="slide-bottom"</code>                    to add appear animate.</div>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="panel panel-success panel-bordered" data-plugin="appear" data-animate="scale-up">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Animate Scale Up</h3>
+                  </div>
+                  <div class="panel-body">Using <code>data-plugin="appear"</code> and <code>data-animate="scale-up"</code>                    to add appear animate.</div>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="panel panel-info panel-bordered" data-plugin="appear" data-animate="scale-down">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Animate Scale Down</h3>
+                  </div>
+                  <div class="panel-body">Using <code>data-plugin="appear"</code> and <code>data-animate="scale-down"</code>                    to add appear animate.</div>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="panel panel-warning panel-bordered" data-plugin="appear" data-animate="slide-right">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Animate Slide Right</h3>
+                  </div>
+                  <div class="panel-body">Using <code>data-plugin="appear"</code> and <code>data-animate="slide-right"</code>                    to add appear animate.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Appear Animate< -->
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

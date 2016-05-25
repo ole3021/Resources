@@ -1,0 +1,594 @@
+@import "vars.less";
+
+// three left completed options pie-progress
+.widget-completed-options .pie-progress {
+  max-width: 120px;
+  min-width: 120px;
+  margin: 10px 0;
+}
+
+// teamCompletedWidget
+// ================================================
+
+#teamCompletedWidget {
+
+  // widget header 
+  // wiget header left
+  .counter-label {
+    font-size: 26px;
+    color: @color-blue-grey-700;
+  }
+
+  .counter-number-group {
+    span:first-child {
+      color: @color-red-600;
+      font-size: 48px;
+    }
+    span:last-child {
+      margin-left: 30px;
+      font-size: 30px;
+      color: @color-blue-grey-700;
+    }
+  }
+  
+  //widget header right
+  .list-inline  {
+    float: right;
+    margin-top: 74px;
+    margin-bottom: 20px;
+
+    li {
+      padding: 0;
+
+      &:first-child,&:last-child {
+        position: relative;
+        &::before {
+          display: inline-block;
+          position: absolute;
+          bottom: 5px;
+          left: -22px;
+          content: "";
+          width: 10px;
+          height:10px;
+        }
+      }
+
+      &:first-child {
+        margin-right: 60px;
+        color: @color-blue-grey-400;
+        &::before {
+          background-color: @color-cyan-600;
+        } 
+      }
+      
+      &:last-child {
+        color: @color-blue-grey-600;
+        &::before {
+          background-color: @color-purple-500;
+        }
+      }
+    }
+  }
+  
+  // widget content
+  .widget-content {
+    min-width: 480px;
+  }
+
+  // analytic-TootipsLineView chart style
+  .ct-grids {
+    .ct-vertical {
+      stroke-dasharray: 6;
+    }
+    .ct-horizontal {
+      stroke: none;
+    }
+    .ct-point-label {
+      stroke: #fff;
+      stroke-width: 60px;
+    }
+  }
+
+  .ct-labels {
+    .ct-horizontal {
+      display: block;
+      padding-top: 10px;
+      margin-left: -28px;
+      font-size: 14px;
+      color: @color-blue-grey-500;
+    }
+
+    .ct-vertical {
+      margin-top: 5px;
+    }
+  }
+
+  .ct-area {
+    fill-opacity: 0.8;
+  }
+
+  .ct-series {
+    .ct-point,.ct-point-content {
+      opacity: 0;
+      .transition(all .3s);
+    }
+
+    &:hover{
+      .ct-point,.ct-point-content {
+        opacity: 1;
+      }
+    }
+
+    &.ct-series-a {
+      .ct-area {
+        fill: @color-purple-500;
+      }
+      .ct-line {
+        stroke: @color-purple-500;
+        stroke-width: 1px;
+      }
+      .ct-point {
+        stroke: @color-purple-600;
+        stroke-width: 12px;
+        cursor: pointer;
+      }
+      .ct-point-content{
+        stroke: #fff;
+        stroke-width: 6px;
+        stroke-linecap: round;
+        pointer-events: none;
+      }
+    }
+
+    &.ct-series-b {
+      .ct-area {
+        fill: @color-cyan-500;
+      }
+      .ct-line{
+        stroke: @color-cyan-500;
+        stroke-width: 1px;
+      }
+      .ct-point{
+        stroke: @color-cyan-600;
+        stroke-width: 12px;
+        cursor: pointer;
+      }
+      .ct-point-content {
+        stroke: #fff;
+        stroke-width: 6px;
+        stroke-linecap: round;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+// personalCompletedWidget
+// ================================================
+#personalCompletedWidget {
+  height: ~"calc(100% - 30px)";
+
+  // widget header
+  .widget-header {
+    display: inline-block;
+    position: relative;
+    height: 270px;
+    width: 100%;
+    text-align: center;
+
+    img {
+      height: 100%;
+    }
+
+    .avatar {
+      width: 120px;
+    }
+  }
+  
+  .overlay-background {
+    background: rgba(109, 69, 188, 0.8);
+  }
+  
+  // widget content
+  .widget-content {
+    padding: 48px 30px 0;
+  }
+
+  .counter-number {
+    margin-top: 10px;
+    font-size: 40px;
+  }
+ 
+  // table
+  .table-responsive {
+    border: none;
+    margin-bottom: 0;
+  }
+  
+  caption {
+    padding-top: 0;
+    padding-bottom: 10px;
+    color: @color-blue-grey-700;
+    font-weight: 400;
+  }
+
+  .table {
+    min-width: 350px;
+    margin-bottom: 0;
+    td {
+      padding: 20px 0 19px;
+      width: 40%;
+
+      &:last-child {
+        width: 20%;
+        text-align: right;
+      }
+    }
+  }
+
+  .progress {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+
+// toDoListWidget
+// ===================================================
+
+#toDoListWidget {
+  height: ~"calc(100% - 30px)";
+  
+  // widget header
+  .widget-header {
+    padding: 30px;
+    line-height: 1;
+    .clearfix();
+
+    a {
+      margin-right: 14px;
+      margin-top: 12px;
+      line-height: 1;
+    }
+  }
+
+  .widget-title {
+    margin-top: 12px;
+    margin-bottom: 21px;
+    font-weight: 300;
+    color: @color-blue-grey-700;
+  }
+  
+  .wb-plus {
+    color: @color-blue-grey-500;
+  }
+  
+  // list group
+  .list-group {
+    margin: 0 30px;
+  }
+
+  .list-group-item {
+    padding: 20px 0;
+    margin-bottom: 0;
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    cursor: pointer;
+    .clearfix();
+
+    .checkbox-custom {
+      margin: 0;
+
+      label {
+        padding-left: 20px;
+        padding-bottom: 2px;
+      }
+
+      input:checked + label {
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  .item-due-date {
+    float: left;
+    span {
+      line-height: 34px;
+      margin-left: 44px;
+    }
+  }
+
+  .item-members {
+    float: right;
+    padding: 0;
+    margin-top: 4px;
+    text-align: right;
+    white-space: normal;
+    list-style-type: none;
+    .clearfix();
+
+    li {
+      float: left;
+      position: relative;
+      margin-left: 10px;
+
+      &:not(:hover) .avatar + button {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+      }
+
+      &:hover {
+        .avatar {
+         display: none;
+        }
+
+        button {
+          opacity: 1;
+        }
+      }
+
+      button {
+        width: 30px;
+        height: 30px;
+        padding: 7px;
+      }
+    }
+  }
+}
+
+// recentActivityWidget
+// =======================================
+
+#recentActivityWidget {
+  height: ~"calc(100% - 30px)";
+
+  // widget header
+  .widget-header {
+    padding: 30px 30px 10px;
+    .clearfix();
+
+    .label {
+      padding: 3px 21px;
+      line-height: 26px;
+      font-size: 14px;
+      font-weight: 400;
+      color: @color-blue-grey-500;
+      cursor: pointer;
+    }
+  }
+
+  .widget-title {
+    display: inline;
+    margin-bottom: 0;
+    line-height: 32px;
+    font-weight: 300;
+    color: @color-blue-grey-700;
+  }
+  
+  // timeline
+  .timeline {
+    margin-left: 50px;
+    margin-right: 30px;
+    margin-bottom: 0;
+    
+    &::before {
+      left: 0;
+      top: 20px;
+      width: 1px;
+      height: 85%;
+      margin-left: 0;
+      background-color: #e5e5e5;
+    }
+    
+    > li {
+      width: 100%;
+      padding-left: 49px;
+      padding-right: 0;
+      margin-bottom: 0;
+      margin-top: 0;
+      cursor: pointer;
+
+      &:last-child {
+        .timeline-content-wrap {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  .timeline-content-wrap {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    .clearfix();
+  }
+  
+  // rewrite
+  .timeline-icon .timeline-reverse .timeline-dot{
+    top: 12px;
+  }
+
+  // timeline-content
+  .timeline-content {
+
+    // title
+    .title {
+      color: @color-blue-grey-500;
+      .authors , .room-number {
+        margin-right: 5px;
+        font-weight: 400;
+        color: @color-blue-grey-700;
+      }
+    }
+    
+    // metas
+    .metas {
+     padding: 3px 0;
+     color: @color-blue-grey-400;
+    }
+
+    // members
+    .members {
+      padding-left: 0;
+      margin-top: 7px;
+      list-style-type: none;
+
+      > li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      .avatar-sm {
+        width: 27px;
+      }
+    }
+
+    // photos
+    .photos {
+      padding-left: 0;
+      margin-top: 7px;
+      list-style-type: none;
+      .clearfix();
+
+      > li {
+        float: left;
+        width: 31%;
+        margin-right: 3%;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    // operates
+    .operates {
+      padding-left: 0;
+      margin-top: 7px;
+      list-style-type: none;
+
+      > li {
+        display: inline-block;
+        margin-right: 30px;
+      }
+
+      .btn {
+        width: 103px;
+        height: 30px;
+        line-height: 16px;
+        color: @color-blue-grey-500;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+// responsive
+// ===============================
+
+// 992px ~ 1600px
+@media screen and (min-width: 992px) and (max-width: 1599px) {
+  .widget-completed-options .pie-progress {
+    min-width: 100px;
+  }
+}
+
+// < 992px
+@media screen and (max-width: 991px) {
+  #teamCompletedWidget {
+    .list-inline {
+      float: left;
+      margin-top: 20px;
+      margin-left: 40px;
+    }
+  }
+}
+
+// 480px ~ 992px
+@media screen and (min-width: 481px) and (max-width: 991px) {
+  .widget-completed-options {
+    height: ~"calc(100% - 30px)";
+    .pie-progress {
+      min-width: 50px;
+    }
+  }
+
+  .widget-completed-options {
+    .col-xs-6 {
+      width: 100%;
+    }
+    .counter {
+      .clearfix();
+    }
+
+    .counter-label {
+      display: inline-block;
+    }
+
+    .counter-number {
+      float: left;
+      margin-right: 20px;
+      font-size: 14px !important;
+      font-weight: 400;
+    }
+
+    .pie-progress {
+      margin: 20px auto 10px; 
+    }
+  }
+}
+
+// 480px ~ 768px
+@media screen and (min-width: 481px) and (max-width: @screen-sm) {
+  .col-xs-12 {
+    width: 33.3333%;
+  }
+}
+// < 480px
+@media screen and (max-width: @screen-xs) {
+  .widget-completed-options .pie-progress {
+    min-width: 100px;
+  }
+
+  #recentActivityWidget {
+
+    .timeline-content {
+      .operates {
+        > li {
+          display: block;
+          margin-right: 0;
+          margin-top: 10px;
+          padding-bottom: 1px;
+        }
+
+        .btn {
+          height: 25px;
+          line-height: 11px;
+          width: 85px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #personalCompletedWidget {
+    .total-completed {
+      font-size: 10px;
+      line-height: 22px;
+    } 
+
+    .widget-content {
+      padding: 30px 15px 0;
+    }
+  }
+
+
+
+}

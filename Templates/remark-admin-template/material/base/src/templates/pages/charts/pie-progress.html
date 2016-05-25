@@ -1,0 +1,301 @@
+---
+title: Pie Progress
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/aspieprogress/asPieProgress.css">
+  {{/content}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/charts/pie-progress.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/aspieprogress/jquery-asPieProgress.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/aspieprogress.js"></script>
+  {{/content}}
+
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/charts/pie-progress.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title">Pie Progress</h1>
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li><a href="javascript:void(0)">Charts</a></li>
+          <li class="active">Pie Progress</li>
+        </ol>
+        <div class="page-header-actions">
+          <a class="btn btn-sm btn-primary btn-round" href="https://github.com/amazingSurge/jquery-asPieProgress"
+          target="_blank">
+            <i class="icon md-link" aria-hidden="true"></i>
+            <span class="hidden-xs">Official Website</span>
+          </a>
+        </div>
+      </div>
+      <div class="page-content">
+        <!-- Panel -->
+        <div class="panel">
+          <div class="panel-body">
+            <!-- Example Api Methods -->
+            <h4 class="example-title">Api Methods</h4>
+            <div class="example-wrap">
+              <div class="text-center">
+                <div class="btn-group margin-bottom-25" aria-label="Pie api example" role="group">
+                  <button type="button" class="btn btn-info pie-api-start">Start</button>
+                  <button type="button" class="btn btn-pure bg-cyan-300 white pie-api-stop">Stop</button>
+                  <button type="button" class="btn btn-info pie-api-reset">Reset</button>
+                  <button type="button" class="btn btn-pure bg-cyan-300 white pie-api-go">Go to 200</button>
+                  <button type="button" class="btn btn-info pie-api-go_percentage">Go to 50%</button>
+                </div>
+              </div>
+              <div class="example">
+                <div class="pie-progress pie-progress-lg center-block" id="examplePieApi" data-plugin="pieProgress"
+                data-barcolor="#f44336" data-goal="100" data-size="350" data-barsize="10"
+                aria-valuemin="-100" aria-valuemax="250" role="progressbar">
+                  <div class="pie-progress-number">0%</div>
+                  <div class="pie-progress-label">New Clients</div>
+                </div>
+              </div>
+            </div>
+            <!-- End Example Api Methods -->
+          </div>
+        </div>
+        <!-- End Panel -->
+
+        <!-- Panel -->
+        <div class="panel">
+          <div class="panel-body container-fluid">
+            <div class="row row-lg">
+              <div class="col-md-6">
+                <!-- Example Percent & Lable -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Percent & Lable</h4>
+                  <div class="example">
+                    <div class="pie-progress pie-progress-lg" data-plugin="pieProgress" data-barcolor="#2196f3"
+                    data-size="200" data-barsize="8" data-goal="75" aria-valuenow="75"
+                    role="progressbar">
+                      <div class="pie-progress-number">75%</div>
+                      <div class="pie-progress-label">New Clients</div>
+                    </div>
+                  </div>
+                  <div class="example">
+                    <div class="pie-progress" data-plugin="pieProgress" data-barcolor="#2196f3" data-size="150"
+                    data-barsize="6" data-goal="75" aria-valuenow="75" role="progressbar">
+                      <div class="pie-progress-number">75%</div>
+                      <div class="pie-progress-label">New Clients</div>
+                    </div>
+                  </div>
+                  <div class="example">
+                    <div class="pie-progress pie-progress-sm" data-plugin="pieProgress" data-barcolor="#2196f3"
+                    data-size="100" data-barsize="4" data-goal="75" aria-valuenow="75"
+                    role="progressbar">
+                      <div class="pie-progress-number">75%</div>
+                      <div class="pie-progress-label">New Clients</div>
+                    </div>
+                  </div>
+                  <div class="example">
+                    <div class="pie-progress pie-progress-xs" data-plugin="pieProgress" data-barcolor="#2196f3"
+                    data-size="60" data-barsize="2" data-goal="75" aria-valuenow="75"
+                    role="progressbar">
+                      <div class="pie-progress-number" data-toggle="tooltip" title="New Clients">75%</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Percent & Lable -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Icon Lable -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Icon Lable</h4>
+                  <div class="example">
+                    <div class="pie-progress pie-progress-lg" data-plugin="pieProgress" data-barcolor="#4caf50"
+                    data-size="200" data-barsize="8" data-goal="60" aria-valuenow="60"
+                    role="progressbar">
+                      <i class="pie-progress-icon icon md-eye" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="example">
+                    <div class="pie-progress" data-plugin="pieProgress" data-barcolor="#4caf50" data-size="150"
+                    data-barsize="6" data-goal="60" aria-valuenow="60" role="progressbar">
+                      <i class="pie-progress-icon icon md-eye" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="example">
+                    <div class="pie-progress pie-progress-sm" data-plugin="pieProgress" data-barcolor="#4caf50"
+                    data-size="100" data-barsize="4" data-goal="60" aria-valuenow="60"
+                    role="progressbar">
+                      <i class="pie-progress-icon icon md-eye" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="example">
+                    <div class="pie-progress pie-progress-xs" data-plugin="pieProgress" data-barcolor="#4caf50"
+                    data-size="60" data-barsize="2" data-goal="60" aria-valuenow="60"
+                    role="progressbar">
+                      <i class="pie-progress-icon icon md-eye" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Icon Lable -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Content Lable -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Content Lable</h4>
+                  <div class="example">
+                    <div class="pie-progress pie-progress-lg" data-plugin="pieProgress" data-barcolor="#ffeb3b"
+                    data-size="200" data-barsize="8" data-goal="75" aria-valuenow="75"
+                    role="progressbar">
+                      <div class="pie-progress-content">Html</div>
+                    </div>
+                  </div>
+                  <div class="example">
+                    <div class="pie-progress pie-progress" data-plugin="pieProgress" data-barcolor="#ffeb3b"
+                    data-size="150" data-barsize="6" data-goal="75" aria-valuenow="75"
+                    role="progressbar">
+                      <div class="pie-progress-content">Html</div>
+                    </div>
+                  </div>
+                  <div class="example">
+                    <div class="pie-progress pie-progress-sm" data-plugin="pieProgress" data-barcolor="#ffeb3b"
+                    data-size="100" data-barsize="4" data-goal="75" aria-valuenow="75"
+                    role="progressbar">
+                      <div class="pie-progress-content">Html</div>
+                    </div>
+                  </div>
+                  <div class="example">
+                    <div class="pie-progress pie-progress-xs" data-plugin="pieProgress" data-barcolor="#ffeb3b"
+                    data-size="60" data-barsize="2" data-goal="75" aria-valuenow="75"
+                    role="progressbar">
+                      <div class="pie-progress-content">Html</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Content Lable -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Percent -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Percent</h4>
+                  <div class="example">
+                    <div class="pie-progress pie-progress-lg" data-plugin="pieProgress" data-valuemax="100"
+                    data-valuemin="0" data-barcolor="#00bcd4" data-size="200" data-barsize="8"
+                    data-goal="45" aria-valuenow="45" role="progressbar">
+                      <span class="pie-progress-number">45%</span>
+                    </div>
+                  </div>
+                  <div class="example">
+                    <div class="pie-progress" data-plugin="pieProgress" data-valuemax="100" data-valuemin="0"
+                    data-barcolor="#00bcd4" data-size="150" data-barsize="6" data-goal="45"
+                    aria-valuenow="45" role="progressbar">
+                      <span class="pie-progress-number">45%</span>
+                    </div>
+                  </div>
+                  <div class="example">
+                    <div class="pie-progress pie-progress-sm" data-plugin="pieProgress" data-valuemax="100"
+                    data-valuemin="0" data-barcolor="#00bcd4" data-size="100" data-barsize="4"
+                    data-goal="45" aria-valuenow="45" role="progressbar">
+                      <span class="pie-progress-number">45%</span>
+                    </div>
+                  </div>
+                  <div class="example">
+                    <div class="pie-progress pie-progress-xs" data-plugin="pieProgress" data-valuemax="100"
+                    data-valuemin="0" data-barcolor="#00bcd4" data-size="60" data-barsize="2"
+                    data-goal="45" aria-valuenow="45" role="progressbar">
+                      <span class="pie-progress-number">45%</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Percent -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example Percent & Icon Lable -->
+                <div class="example-wrap margin-md-0">
+                  <h4 class="example-title">Percent & Icon Lable</h4>
+                  <div class="example">
+                    <div class="pie-progress pie-progress-lg" data-plugin="pieProgress" data-barcolor="#ff9800"
+                    data-goal="75" aria-valuenow="75" data-size="200" data-barsize="8"
+                    role="progressbar">
+                      <div class="pie-progress-number">75%</div>
+                      <div class="pie-progress-label"><i class="icon md-eye" aria-hidden="true"></i></div>
+                    </div>
+                  </div>
+                  <div class="example">
+                    <div class="pie-progress pie-progress" data-plugin="pieProgress" data-barcolor="#ff9800"
+                    data-goal="75" aria-valuenow="75" data-size="150" data-barsize="6"
+                    role="progressbar">
+                      <div class="pie-progress-number">75%</div>
+                      <div class="pie-progress-label"><i class="icon md-eye" aria-hidden="true"></i></div>
+                    </div>
+                  </div>
+                  <div class="example">
+                    <div class="pie-progress pie-progress-sm" data-plugin="pieProgress" data-barcolor="#ff9800"
+                    data-goal="75" aria-valuenow="75" data-size="100" data-barsize="4"
+                    role="progressbar">
+                      <div class="pie-progress-number">75%</div>
+                      <div class="pie-progress-label"><i class="icon md-eye" aria-hidden="true"></i></div>
+                    </div>
+                  </div>
+                  <div class="example">
+                    <div class="pie-progress pie-progress-xs" data-plugin="pieProgress" data-barcolor="#ff9800"
+                    data-goal="75" aria-valuenow="75" data-size="60" data-barsize="2"
+                    role="progressbar">
+                      <div class="pie-progress-number">75%</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Example Percent & Icon Lable -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example No Label -->
+                <div class="example-wrap">
+                  <h4 class="example-title">No Label</h4>
+                  <div class="example">
+                    <div class="pie-progress pie-progress-lg" data-plugin="pieProgress" data-barcolor="#757575"
+                    data-size="200" data-barsize="8" data-goal="75" aria-valuenow="75"
+                    role="progressbar"></div>
+                  </div>
+                  <div class="example">
+                    <div class="pie-progress pie-progress" data-plugin="pieProgress" data-barcolor="#757575"
+                    data-size="150" data-barsize="6" data-goal="75" aria-valuenow="75"
+                    role="progressbar"></div>
+                  </div>
+                  <div class="example">
+                    <div class="pie-progress pie-progress-sm" data-plugin="pieProgress" data-barcolor="#757575"
+                    data-size="100" data-barsize="4" data-goal="75" aria-valuenow="75"
+                    role="progressbar"></div>
+                  </div>
+                  <div class="example">
+                    <div class="pie-progress pie-progress-xs" data-plugin="pieProgress" data-barcolor="#757575"
+                    data-size="60" data-barsize="2" data-goal="75" aria-valuenow="75"
+                    role="progressbar"></div>
+                  </div>
+                </div>
+                <!-- End Example No Label -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel -->
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

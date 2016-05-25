@@ -1,0 +1,148 @@
+@import "vars.less";
+
+// var
+// ==============================================================
+
+@pie-progress-xs-icon-font-size:    16px;
+@pie-progress-xs-number-font-size:  16px;
+@pie-progress-xs-content-font-size: 16px;
+@pie-progress-xs-label-font-size:   10px;
+
+@pie-progress-sm-icon-font-size:    26px;
+@pie-progress-sm-number-font-size:  26px;
+@pie-progress-sm-content-font-size: 26px;
+@pie-progress-sm-label-font-size:   11px;
+
+@pie-progress-icon-font-size:       36px;
+@pie-progress-number-font-size:     36px;
+@pie-progress-content-font-size:    36px;
+@pie-progress-label-font-size:      14px;
+
+@pie-progress-lg-icon-font-size:    44px;
+@pie-progress-lg-number-font-size:  44px;
+@pie-progress-lg-content-font-size: 44px;
+@pie-progress-lg-label-font-size:   18px;
+
+// pie-progress
+// ==============================================================
+
+.pie-progress {
+  text-align: center;
+  position: relative;
+  margin-left:  auto;
+  margin-right: auto;
+
+  transform-style: preserve-3d;
+
+  &-content, &-number, &-label, & &-icon {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    .transform(translateY(-50%));
+  }
+}
+
+// types
+.pie-progress {
+  & &-icon {
+    font-size: @pie-progress-icon-font-size;
+    font-style: normal;
+  }
+
+  &-content {
+    font-size: @pie-progress-content-font-size;
+  }
+
+  &-number {
+    font-size: @pie-progress-number-font-size;
+  }
+
+  &-label {
+    margin-top: @pie-progress-number-font-size/2 + 10px;
+    font-size: @pie-progress-label-font-size;
+
+    .icon {
+      top: 0.1em;
+      font-size: 2em;
+    }
+  }
+
+  &-svg {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+
+    svg {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+// sizes
+.pie-progress-xs {
+  .pie-progress-icon {
+    font-size: @pie-progress-xs-icon-font-size;
+    font-style: normal;
+  }
+
+  .pie-progress-content {
+    font-size: @pie-progress-xs-content-font-size;
+  }
+
+  .pie-progress-number {
+    font-size: @pie-progress-xs-number-font-size;
+  }
+
+  .pie-progress-label {
+    display: none;
+    margin-top: @pie-progress-xs-number-font-size/2 + 2px;
+    font-size: @pie-progress-xs-label-font-size;
+  }
+}
+
+.pie-progress-sm {
+  .pie-progress-icon {
+    font-size: @pie-progress-sm-icon-font-size;
+    font-style: normal;
+  }
+
+  .pie-progress-content {
+    font-size: @pie-progress-sm-content-font-size;
+  }
+
+  .pie-progress-number {
+    font-size: @pie-progress-sm-number-font-size;
+  }
+
+  .pie-progress-label {
+    margin-top: @pie-progress-sm-number-font-size/2 + 6px;
+    font-size: @pie-progress-sm-label-font-size;
+  }
+}
+
+.pie-progress-lg {
+  .pie-progress-icon {
+    font-size: @pie-progress-lg-icon-font-size;
+    font-style: normal;
+  }
+
+  .pie-progress-content {
+    font-size: @pie-progress-lg-content-font-size;
+  }
+
+  .pie-progress-number {
+    font-size: @pie-progress-lg-number-font-size;
+  }
+
+  .pie-progress-label {
+    margin-top: @pie-progress-lg-number-font-size/2 + 14px;
+    font-size: @pie-progress-lg-label-font-size;
+  }
+}

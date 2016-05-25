@@ -1,0 +1,187 @@
+// Name:            Modals
+//
+// Component:       `modal`
+//
+// Modifiers:       `modal-top`
+//                  `modal-center`
+//                  `modal-bottom`
+//                  `modal-sidebar`
+//                  `modal-fill-in`
+//                  `modal-primary`
+//                  `modal-success`
+//                  `modal-info`
+//                  `modal-warning`
+//                  `modal-danger`
+//                  `modal-fade-in-scale-up`
+//                  `modal-slide-in-right`
+//                  `modal-slide-from-bottom`
+//                  `modal-newspaper`
+//                  `modal-fall`
+//                  `modal-side-fall`
+//                  `modal-3d-flip-horizontal`
+//                  `modal-3d-flip-vertical`
+//                  `modal-3d-sign`
+//                  `modal-super-scaled`
+//                  `modal-just-me`
+//                  `modal-3d-slit`
+//                  `modal-rotate-from-bottom`
+//                  `modal-rotate-from-left`
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@modal-header-padding      : 15px 20px;
+
+@modal-body-padding        : 20px;
+
+@modal-footer-padding      : 6px 20px 20px;
+
+@modal-radius              : @border-radius-large;
+
+@modal-sidebar-bg          : @inverse;
+
+@modal-fill-in-bg          : rgba(255, 255, 255, 0.95);
+
+@modal-primary-color       : @inverse;
+@modal-primary-bg          : @brand-primary;
+
+@modal-success-color       : @inverse;
+@modal-success-bg          : @brand-success;
+
+@modal-info-color          : @inverse;
+@modal-info-bg             : @brand-info;
+
+@modal-warning-color       : @inverse;
+@modal-warning-bg          : @brand-warning;
+
+@modal-danger-color        : @inverse;
+@modal-danger-bg           : @brand-danger;
+
+// Component: Modal
+// ========================================================================
+
+.modal-content {
+  border: none;
+  .box-shadow(0 2px 12px rgba(0, 0, 0, .2));
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+// Modifier: `modal-sidebar`
+// -------------------------
+
+.modal-sidebar {
+  background-color: @modal-sidebar-bg;
+
+  .modal-content {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .modal-header {
+    border-bottom: none;
+  }
+  .modal-footer {
+    border-top: none;
+  }
+}
+
+// Modifier: `modal-fill-in`
+// -------------------------
+
+.modal-fill-in {
+  background-color: transparent;
+
+  &.in {
+    background-color: @modal-fill-in-bg;
+  }
+
+  .modal-content {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .modal-header {
+    border-bottom: none;
+  }
+  .modal-footer {
+    border-top: none;
+  }
+}
+
+
+// Color Modifier
+// ========================================================================
+
+// Modifier: `modal-primary`
+// -------------------------
+
+.modal-primary {
+  .modal-styles-variant(@modal-primary-color; @modal-primary-bg);
+}
+
+// Modifier: `modal-success`
+// -------------------------
+
+.modal-success {
+  .modal-styles-variant(@modal-success-color; @modal-success-bg);
+}
+
+// Modifier: `modal-info`
+// -------------------------
+
+.modal-info {
+  .modal-styles-variant(@modal-info-color; @modal-info-bg);
+}
+
+// Modifier: `modal-warning`
+// -------------------------
+
+.modal-warning {
+  .modal-styles-variant(@modal-warning-color; @modal-warning-bg);
+}
+
+// Modifier: `modal-danger`
+// -------------------------
+
+.modal-danger {
+  .modal-styles-variant(@modal-danger-color; @modal-danger-bg);
+}
+
+// Animate Modifier
+// ========================================================================
+
+.modal {
+  // Modifier: `modal-just-me`
+  // -------------------------
+
+  &.modal-just-me {
+    .modal-backdrop {
+      background-color: @inverse;
+    }
+
+    &.in {
+      background: @modal-content-bg;
+    }
+  }
+}
+
+
+// Mixins
+// ========================================================================
+
+.modal-styles-variant(@color; @bg) {
+  .modal-header {
+    background-color: @bg;
+
+    * {
+      color: @color;
+    }
+  }
+}

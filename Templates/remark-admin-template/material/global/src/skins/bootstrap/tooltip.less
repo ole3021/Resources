@@ -1,0 +1,37 @@
+//
+// Tooltips
+// --------------------------------------------------
+
+// Wrapper for the tooltip content
+.tooltip-inner {
+  color: @tooltip-color;
+  background-color: @tooltip-bg;
+}
+
+// Note: Deprecated .top-left, .top-right, .bottom-left, and .bottom-right as of v3.3.1
+.tooltip {
+  &.top .tooltip-arrow {
+    border-top-color: @tooltip-arrow-color;
+  }
+  &.top-left .tooltip-arrow {
+    border-top-color: @tooltip-arrow-color;
+  }
+  &.top-right .tooltip-arrow {
+    border-top-color: @tooltip-arrow-color;
+  }
+  &.right .tooltip-arrow {
+    border-right-color: @tooltip-arrow-color;
+  }
+  &.left .tooltip-arrow {
+    border-left-color: @tooltip-arrow-color;
+  }
+  &.bottom .tooltip-arrow {
+    border-bottom-color: @tooltip-arrow-color;
+  }
+  &.bottom-left .tooltip-arrow {
+    border-bottom-color: @tooltip-arrow-color;
+  }
+  &.bottom-right .tooltip-arrow {
+    border-bottom-color: @tooltip-arrow-color;
+  }
+}

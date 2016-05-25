@@ -1,0 +1,95 @@
+<!-- Style Switcher - Start -->
+<div id="styleSwitcher" class="style-switcher hidden-xs">
+
+	<a id="styleSwitcherOpen" class="style-switcher-open" href="#"><i class="fa fa-cogs"></i></a>
+
+	<div class="style-switcher-wrap">
+
+		<h4>Style Switcher</h4>
+
+		<h5>Primary Color</h5>
+		<div class="input-group input-group-sm color-primary">
+			<input type="text" value="#0088cc" class="form-control" />
+			<span class="input-group-addon"><i></i></span>
+		</div>
+
+		<h5>Layout Style</h5>
+		<div class="options-links layout">
+			<a class="active" data-layout-type="wide" href="#">Wide</a>
+			<a data-layout-type="boxed" href="#">Boxed</a>
+		</div>
+
+		<h5>Borders Style</h5>
+		<div class="options-links borders">
+			<a class="active" data-border-radius="4px" href="#">Rounded</a>
+			<a data-border-radius="0" href="#">Square</a>
+		</div>
+
+		<h5>Background Color</h5>
+		<div class="options-links background-color">
+			<a href="#" data-background-color="light" class="active">Light</a>
+			<a href="#" data-background-color="dark">Dark</a>
+		</div>
+
+		<div class="hidden-on-dark">
+
+			<h5>Header Color</h5>
+			<div class="options-links header-color">
+				<a href="#" data-header-color="light" class="active">Light</a>
+				<a href="#" data-header-color="dark">Dark</a>
+			</div>
+
+		</div>
+
+		<div class="hidden-on-dark">
+
+			<h5>Sidebar Color</h5>
+			<div class="options-links sidebar-color">
+				<a href="#" data-sidebar-color="light">Light</a>
+				<a href="#" data-sidebar-color="dark" class="active">Dark</a>
+			</div>
+
+		</div>
+
+		<h5>Sidebar Size</h5>
+		<div class="options-links sidebar-size">
+			<a href="#" data-sidebar-size="xs">XS</a>
+			<a href="#" data-sidebar-size="sm">SM</a>
+			<a href="#" data-sidebar-size="md" class="active">MD</a>
+		</div>
+
+		<div class="style-switcher-buttons options-links">
+			<a href="#" class="reset">Reset</a>
+			<a href="#getCSSModal" class="get-css"><i class="fa fa-file-text"></i> Get Skin CSS</a>
+		</div>
+
+	</div>
+
+</div>
+
+<div class="modal fade" id="getCSSModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="cssModalLabel">Skin CSS</h4>
+			</div>
+			<div class="modal-body">
+				<div class="alert alert-info" id="addBoxedClassInfo">
+					Add the <strong>&quot;boxed&quot;</strong> class to the &lt;html&gt; element to activate the Boxed Layout.
+				</div>
+				<div class="alert alert-info" id="addDarkClassInfo">
+					Add the <strong>&quot;dark&quot;</strong> class to the &lt;html&gt; element to activate the Dark Color.
+				</div>
+				<div class="alert alert-info" id="addHeaderDarkClassInfo">
+					Add the <strong>&quot;header-dark&quot;</strong> class to the &lt;html&gt; element to activate the Header Dark Color.
+				</div>
+				<div class="alert alert-info" id="addSidebarLightClassInfo">
+					Add the <strong>&quot;sidebar-light&quot;</strong> class to the &lt;html&gt; element to activate the Sidebar Light Color.
+				</div>
+				<textarea id="getCSSTextarea" class="get-css" readonly></textarea>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Style Switcher - End -->

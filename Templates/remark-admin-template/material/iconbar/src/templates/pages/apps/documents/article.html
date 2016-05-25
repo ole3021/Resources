@@ -1,0 +1,216 @@
+---
+title: Document Article
+body_class: app-documents
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/bootstrap-select/bootstrap-select.css">
+  {{/content}}
+
+  {{#content "css" mode="prepend"}}
+    <link rel="stylesheet" href="{{assets}}/examples/css/apps/documents.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/bootstrap-select/bootstrap-select.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{global}}/js/components/bootstrap-select.js"></script>
+  {{/content}}
+
+  {{#content "js" mode="append"}}
+    <script src="{{assets}}/js/app.js"></script>
+  {{/content}}
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/apps/documents.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title margin-bottom-10">Document Article</h1>
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="articles.html">Getting Started</a></li>
+          <li class="active">Article</li>
+        </ol>
+      </div>
+      <div class="page-content">
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-btn">
+              <select data-plugin="selectpicker" data-style="btn-inverse">
+                <option>Getting started</option>
+                <option>Configuration</option>
+                <option>Developer Tourial</option>
+                <option>Compatible article</option>
+              </select>
+            </div>
+            <button type="submit" class="input-search-btn">
+              <i class="icon md-search" aria-hidden="true"></i>
+            </button>
+            <input type="text" class="form-control" placeholder="Search the knowledge base...">
+          </div>
+        </div>
+        <div class="documents-wrap article">
+          <div class="article-sidebar" id="articleAffix">
+            <ul class="list-group nav">
+              <li class="list-group-item active">
+                <a href="#section-1">Article section one.</a>
+              </li>
+              <li class="list-group-item">
+                <a href="#section-2">Article section two.</a>
+              </li>
+              <li class="list-group-item">
+                <a href="#section-3">Article section three.</a>
+                <ul class="list-group" id="subList-3">
+                  <li class="list-group-item"><a href="#section-3-1">Article section three-one.</a></li>
+                  <li class="list-group-item"><a href="#section-3-2">Article section three-two.</a></li>
+                  <li class="list-group-item"><a href="#section-3-3">Article section three-three.</a></li>
+                  <li class="list-group-item"><a href="#section-3-4">Article section three-four.</a></li>
+                </ul>
+              </li>
+              <li class="list-group-item">
+                <a href="#section-4">Article section four.</a>
+              </li>
+            </ul>
+          </div>
+          <div class="article-content">
+            <section>
+              <h4 id="section-1">Article section one.</h4>
+              <p>Perspecta historiae studiis consuevit deterius scribentur expleantur
+                illam invenire anteponant, cuiquam probo accusantium segnitiae
+                hostis. Quos reprehenderit videntur solam amplificarique temeritate
+                incorruptis plena filio, metu, intellegitur videor amotio discordant
+                tenebo officiis quaerendum parentes scaevola dolorum, vivendum
+                dialectica neglegentur liberemus verterunt esset inhaererent, iam
+                mala huc fortitudinis derigatur tollitur ipsum legum.</p>
+              <p>Loca invitat maior ferre amicitiae, neque profecta fictae ferae afflueret
+                fugienda difficilem praesentibus, nacti quoniam exultat memoria,
+                tranquillat iudicari expetendam, dulce efficiat caret vivere cn
+                concessum transferrem odio magna, nominavi nocet allicit depravate
+                inciderint certamen retinere summumque nemini, iusto conciliant
+                aliqua respirare finitum. Quem conformavit, pueriliter quaerenda
+                clamat fugiendum specie.</p>
+            </section>
+            <section>
+              <h4 id="section-2">Article section two.</h4>
+              <p>Deduceret, stabilitas diligenter stultorum diesque dolemus consoletur
+                aristippus specie exeamus, liberiusque perdiscere iucunda intellegerem
+                quosdam movet, maximo constituto saepti, mutat seditione indicaverunt
+                quantum animis dedocendi simulent placatae vivendo. Brute existimant
+                adhibuit effugiendorum artem potiendi sabinum dicat sequitur parabilis,
+                asperner alliciat mutat tale labefactetur corpora, albuci amori
+                velim summam didicisset dubium.</p>
+            </section>
+            <section>
+              <h4 id="section-3">Article section three.</h4>
+              <p>Cum personae causas hae diligamus opibus morbi formidinum voluntates.
+                Quicquam alteram splendide romano discordiae cui. Relinqueret vera
+                fama vocent hortatore constituant aperiri compositis, mediocrem
+                huius utilitate legum, eas intellegunt deditum sollicitudines omnino
+                penitus tantam cumanum privavisse, situm intellegunt iis litteris
+                moribus legendi multos privamur, fugiamus existimo privamur domesticarum,
+                indoctis corporum.</p>
+              <ol>
+                <li>
+                  <h5 id="section-3-1">Article section three-one.</h5>
+                  <p>Ineruditus defendere docti scribimus voluptatis, suis constituant
+                    possent, desiderent litteris allicit acuti iuvaret sensus praetermissum
+                    incidunt effecerit, iucunditas detraxisse dulce legemus regione
+                    dum studium aliquod, tollatur, explicatis sic exorsus torquato
+                    finitum aperta feci, philosophiae nobis defatigatio non tribuat
+                    iudicari aliquid nati servare, virtutem docere idque magnis
+                    aliquid soliditatem nos, lucilius.</p>
+                  <p>Ineruditus defendere docti scribimus voluptatis, suis constituant
+                    possent, desiderent litteris allicit acuti iuvaret sensus praetermissum
+                    incidunt effecerit, iucunditas detraxisse dulce legemus regione
+                    dum studium aliquod, tollatur, explicatis sic exorsus torquato
+                    finitum aperta feci, philosophiae nobis defatigatio non tribuat
+                    iudicari aliquid nati servare, virtutem docere idque magnis
+                    aliquid soliditatem nos, lucilius.</p>
+                </li>
+                <li>
+                  <h5 id="section-3-2">Article section three-two.</h5>
+                  <p>Ostendis acutum totam declinabunt verterunt ullo. Tria fatendum
+                    facultas res concursio necessitatibus futuros gessisse recordamur
+                    intercapedo, vix doceat una quaeso tantopere, tranquillae libero
+                    contentus probo opera ab utilitatibus pulcherrimum scripserit.
+                    Individua mediocriterne studiose posse corrumpit status locatus
+                    multoque fortibus essent, statuat irridente omittantur pugnare.
+                    Ferantur numquidnam delectamur praesentium circumcisaque horribiles.</p>
+                  <p>Ostendis acutum totam declinabunt verterunt ullo. Tria fatendum
+                    facultas res concursio necessitatibus futuros gessisse recordamur
+                    intercapedo, vix doceat una quaeso tantopere, tranquillae libero
+                    contentus probo opera ab utilitatibus pulcherrimum scripserit.
+                    Individua mediocriterne studiose posse corrumpit status locatus
+                    multoque fortibus essent, statuat irridente omittantur pugnare.
+                    Ferantur numquidnam delectamur praesentium circumcisaque horribiles.</p>
+                </li>
+                <li>
+                  <h5 id="section-3-3">Article section three-three.</h5>
+                  <p>Ostendis acutum totam declinabunt verterunt ullo. Tria fatendum
+                    facultas res concursio necessitatibus futuros gessisse recordamur
+                    intercapedo, vix doceat una quaeso tantopere, tranquillae libero
+                    contentus probo opera ab utilitatibus pulcherrimum scripserit.
+                    Individua mediocriterne studiose posse corrumpit status locatus
+                    multoque fortibus essent, statuat irridente omittantur pugnare.
+                    Ferantur numquidnam delectamur praesentium circumcisaque horribiles.</p>
+                  <p>Ostendis acutum totam declinabunt verterunt ullo. Tria fatendum
+                    facultas res concursio necessitatibus futuros gessisse recordamur
+                    intercapedo, vix doceat una quaeso tantopere, tranquillae libero
+                    contentus probo opera ab utilitatibus pulcherrimum scripserit.
+                    Individua mediocriterne studiose posse corrumpit status locatus
+                    multoque fortibus essent, statuat irridente omittantur pugnare.
+                    Ferantur numquidnam delectamur praesentium circumcisaque horribiles.</p>
+                </li>
+                <li>
+                  <h5 id="section-3-4">Article section three-four.</h5>
+                  <p>Ostendis acutum totam declinabunt verterunt ullo. Tria fatendum
+                    facultas res concursio necessitatibus futuros gessisse recordamur
+                    intercapedo, vix doceat una quaeso tantopere, tranquillae libero
+                    contentus probo opera ab utilitatibus pulcherrimum scripserit.
+                    Individua mediocriterne studiose posse corrumpit status locatus
+                    multoque fortibus essent, statuat irridente omittantur pugnare.
+                    Ferantur numquidnam delectamur praesentium circumcisaque horribiles.</p>
+                  <p>Ostendis acutum totam declinabunt verterunt ullo. Tria fatendum
+                    facultas res concursio necessitatibus futuros gessisse recordamur
+                    intercapedo, vix doceat una quaeso tantopere, tranquillae libero
+                    contentus probo opera ab utilitatibus pulcherrimum scripserit.
+                    Individua mediocriterne studiose posse corrumpit status locatus
+                    multoque fortibus essent, statuat irridente omittantur pugnare.
+                    Ferantur numquidnam delectamur praesentium circumcisaque horribiles.</p>
+                </li>
+              </ol>
+            </section>
+            <section>
+              <h4 id="section-4">Article section four.</h4>
+              <p>Suas habent abducat angore exercitumque. Medium successerit amplificarique
+                congressus delectamur claudicare fruuntur poena. Factis arbitrantur,
+                ferae solitudo familiari, sale animadversionis utilior quanti,
+                carum magnos. Veritus perturbari assecutus solvantur. Tua statuerunt
+                dediti fabulas suscipit dirigentur quadam utrumque meminerimus
+                fuit. Numquid molestum deditum aequitatem consulatu mutans firme
+                tolerabiles quantus molestiam, ignorant concursionibus.</p>
+            </section>
+
+            <div class="article-footer margin-top-40">
+              <div class="article-footer-actions">
+                <button type="button" class="btn btn-primary">Yes</button>
+                <button type="button" class="btn btn-primary">No</button>
+              </div>
+              Was this article helpful to you ?
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  {{/content}}
+{{/extend}}

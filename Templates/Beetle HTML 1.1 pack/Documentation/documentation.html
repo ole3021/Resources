@@ -1,0 +1,1326 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+		<head>
+				<!-- Meta, title, CSS, favicons, etc. -->
+				<meta charset="utf-8">
+				<meta http-equiv="X-UA-Compatible" content="IE=edge">
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<meta name="description" content="A Documentation by Mokaine Lab.">
+				<meta name="author" content="Pasquale Vitiello, Daniele Cascone and Frank Rapacciuolo">
+
+				<title>Beetle HTML Template</title>
+
+				<!-- Bootstrap core CSS -->
+				<link href="css/bootstrap.min.css" rel="stylesheet">
+
+				<!-- Documentation extras -->
+				<link href="css/docs.min.css" rel="stylesheet">
+				<link href="css/prism.css" rel="stylesheet">
+
+				<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+				<!--[if lt IE 9]>
+						<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+						<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+				<![endif]-->
+
+				<!-- Favicons -->
+				<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png">
+				<link rel="shortcut icon" href="ico/favicon.ico">
+		</head>
+
+		<body>
+				<a class="sr-only" href="#content">Skip to main content</a>
+
+				<!-- Docs master nav -->
+				<header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+						<div class="container">
+								<div class="navbar-header">
+										<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+												<span class="sr-only">Toggle navigation</span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+										</button>
+										<a href="index.html" class="navbar-brand">Beetle HTML &lt;/doc&gt;</a>
+								</div>
+								<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+										<ul class="nav navbar-nav">
+												<li>
+													<a href="http://mokaine.com/">Mokaine Lab</a>
+												</li>
+												<li>
+													<a href="http://themes.mokaine.com/">Our Themes</a>
+												</li>
+												<li>
+													<a href="http://ask.mokaine.com/">Help Center</a>
+												</li>
+										</ul>
+								</nav>
+						</div>
+				</header>
+
+
+<!-- Docs page layout -->
+<div class="bs-header" id="content">
+	<div class="container">
+		<h1>Beetle HTML v1.0 &lt;/doc&gt;</h1>
+		<p>Or <a href="http://ask.mokaine.com/">ask.mokaine.com</a> for support.</p>
+	</div>
+</div>
+
+<div class="container bs-docs-container">
+
+	<div class="row">
+		<div class="col-md-9" role="main">
+
+			<!-- Introduction
+================================================== -->
+<div class="bs-docs-section">
+<h1 id="introduction" class="page-header">Introduction</h1>
+
+<p class="lead">Hey there, thanks for purchasing Beetle HTML template!</p>
+
+<p><strong>Beetle</strong> is a flat-style <strong>HTML template</strong> best suitable for portfolios, app showcasing and blogging.</p>
+<p>We used a modular architecture made of section to give you maximum flexibility and comfort during the configuration process. In this documentation you’ll learn all you need to know about the powerful features of Beetle HTML template.</p>
+<p>Also, we have designed this template with the intent to release a WordPress theme that we are currently developing. To this purpose you may notice that every single HTML page includes a special class on the <code>&lt;body&gt;</code>.</p>
+
+</div>
+
+
+<!-- What's included
+================================================== -->
+<div class="bs-docs-section">
+<h3 id="whats-included" class="page-header">What's included</h3>
+
+<p>In the package you have downloaded you will find:</p>
+<ul>
+<li><strong>The template</strong> as you see it in the demo (obviously, except the images!)</li>
+<li><strong>The documentation</strong> (we guess you’ve already found it!)</li>
+<li><strong>A mockup builder</strong> including some Photoshop PSD files to quickly build custom device mockup images to be included into the intro.</li>
+</ul>
+
+<strong>License note:</strong> All resources that come with this template (ex.: jQuery plugins) are under the <strong><a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a></strong>. All images contained into the demo are the property of their respective owners (see <a href="#credits">credits</a>); we contacted them for having permission to use their works only for demo purposes.
+
+</div>
+
+
+<!-- Browser compatibility
+================================================== -->
+<div class="bs-docs-section">
+<h3 id="compatibility" class="page-header">Browser compatibility</h3>
+
+<p>Beetle HTML v1.0 is fully compatible with Chrome, Safari, Firefox, IE10+ and iOS latest versions. Currently you may experience some issues with IE9. IE8 and lower versions are not supported.</p>
+
+</div>
+
+
+			<!-- Header Menu
+================================================== -->
+<div class="bs-docs-section">
+<h1 id="header" class="page-header">Header Menu</h1>
+
+<p class="lead">In this section we are going to analyze how the header menu works and its configuration options. We have three different configurations for the header menu in case we see an intro as below:</p>
+<br>
+<ol>
+	<li>
+		<h4>Transparent with white types:</h4>
+		<img src="assets/header-01.jpg" class="thumbnail full" alt="">
+		<pre><code class="language-markup">&lt;header role=&quot;banner&quot; class=&quot;transparent light&quot;&gt;</code></pre><br>
+	</li>
+	<li>
+		<h4>Transparent with dark types:</h4>
+		<img src="assets/header-02.jpg" class="thumbnail full" alt="">
+		<pre><code class="language-markup">&lt;header role=&quot;banner&quot; class=&quot;transparent&quot;&gt;</code></pre><br>
+	</li> 
+	<li>
+		<h4>White background:</h4>
+		<img src="assets/header-03.jpg" class="thumbnail full" alt="">
+		<pre><code class="language-markup">&lt;header role=&quot;banner&quot;&gt;</code></pre><br>
+	</li>    
+</ol>
+
+
+<h3 id="logo">Logo options</h3>
+<p class="lead">We have three different options for logo as well:</p>
+<br>
+<ol>
+	<li>
+		<h4>Text logo:</h4>
+		<pre><code class="language-markup">&lt;div id=&quot;brand&quot;&gt;
+	&lt;h1 class=&quot;reset&quot;&gt;
+		&lt;a href=&quot;home-01.html&quot;&gt;Beetle&lt;/a&gt;
+	&lt;/h1&gt;
+&lt;/div&gt;&lt;!-- brand --&gt;</code></pre><br>
+	</li>
+	<li>
+		<h4>Image logo:</h4>
+		<pre><code class="language-markup">&lt;div id=&quot;brand&quot;&gt;
+	&lt;h1 class=&quot;reset&quot;&gt;
+		&lt;a href=&quot;home-01.html&quot;&gt;
+			&lt;img id=&quot;default-logo&quot; src=&quot;img/logo.png&quot; alt=&quot;Brand Name&quot;&gt;
+			&lt;img id=&quot;retina-logo&quot; src=&quot;img/logo-retina.png&quot; alt=&quot;Brand Name&quot;&gt;
+		&lt;/a&gt;
+	&lt;/h1&gt;
+&lt;/div&gt;&lt;!-- brand --&gt;</code></pre>
+		<div class="bs-callout bs-callout-info">
+			<h4>Retina display option</h4>
+			It is possible to assign a given image for retina displays. The way you choose to display a regular image instead of a retina one is automatic through CSS.
+		</div>
+	</li><br>
+	<li>
+		<h4>Image and text logo:</h4>
+		<pre><code class="language-markup">&lt;div id=&quot;brand&quot;&gt;
+	&lt;h1 class=&quot;reset&quot;&gt;
+		&lt;a href=&quot;home-01.html&quot;&gt;
+			&lt;img id=&quot;default-logo&quot; src=&quot;img/logo.png&quot; alt=&quot;Brand Name&quot;&gt;
+			&lt;img id=&quot;retina-logo&quot; src=&quot;img/logo-retina.png&quot; alt=&quot;Brand Name&quot;&gt;
+			Beetle
+		&lt;/a&gt;
+	&lt;/h1&gt;
+&lt;/div&gt;&lt;!-- brand --&gt;</code></pre>
+	</li>    
+</ol>
+
+</div>
+
+
+<!-- Intro
+================================================== -->
+<div class="bs-docs-section">
+<h1 id="intro" class="page-header">Intro</h1>
+
+<p class="lead">With Intro we mean the slider right below the header. I like to call it INTRO instead of SLIDER because it is really an area that is not necessarily a slider, since it can hold a single image as well. Intro takes advantage of <a href="http://owlgraphic.com/owlcarousel/">OWL Carousel</a> jQuery pulgin by Bartosz Wojciechowski.</p>
+<br>
+<h3 id="intro-options">Intro options</h3>
+<p>To make things easy, let’s start to identify the wrapping <code>&lt;div&gt;</code> that contains slides.</p>
+<pre><code class="language-markup">&lt;div id=&quot;intro-wrap&quot; class=&quot;full-height&quot; data-height=&quot;33.333&quot;&gt;
+	&lt;div id=&quot;intro&quot; class=&quot;preload darken more-button&quot; data-autoplay=&quot;5000&quot; data-transition=&quot;fade&quot; data-navigation=&quot;true&quot; data-pagination=&quot;false&quot;&gt;          
+
+		[Qui dentro ci metteremo le singole slide]
+							
+	&lt;/div&gt;&lt;!-- intro --&gt;
+&lt;/div&gt;&lt;!-- intro-wrap --&gt;</code></pre>
+	<ul>
+		<li>
+			<p><strong>Height</strong>:</p>
+			<p>Default height of an Intro is <strong>33.333em</strong> (namely <strong>600px</strong> in the desktop version). Nevertheless, it is possible to set up a custom value using the attribute <code>data-height=&quot;22.222&quot;</code>. The value needs to be set in em. If you don’t handle this unit of measurement, you can use an <a href="http://pxtoem.com/">on line converter</a> taking into account that the basic value is 18px.</p>
+			<img src="assets/pxtoem.jpg" class="thumbnail full" alt="">
+			<p>To get a full screen intro, you only need to add the class <code>.full-width</code> to the <code>#intro-wrap</code>. Full width mode will overwrite default height and the default value set in the attribute <code>data-height</code>.</p>
+		</li>
+		<li>
+			<p><strong>Autoplay</strong>:</p>
+			<p>To let the slider automatically rotate every given seconds, you need to use the attribute <code>data-autoplay</code>, assigning a value in <strong>ms</strong> (milliseconds). In fact, if you would like the slider to rotate every 3 seconds, the attribute to print is <code>data-autoplay="3000"</code>.</p>
+			<div class="bs-callout bs-callout-info">
+				<h4>Note</h4>
+				<code>true</code> e <code>false</code> are the other allowed values, where the first one sets the auto play at a default value (5000), and the second one disables the auto-rotation. Keep in mind that auto play can be also disabled omitting the <code>data-autoplay</code> or omitting the value as follows: <code>data-autoplay=""</code>.
+			</div>      
+		</li>
+		<li>
+			<p><strong>Transition styles</strong>:</p>
+			<p>We have 9 different CSS3 transition styles for the slider, that can be determined through the attribute <code>data-transition</code>:</p>   
+			<ol>
+				<li><code>data-transition="fade"</code>: crossed fade</li>
+				<li><code>data-transition="backSlide"</code>:  determines zoom-out and zoom-in</li>
+				<li><code>data-transition="goDown"</code>: drops from the top</li>
+				<li><code>data-transition="fadeUp"</code>: zoom-in and zoom-out + fade</li>
+				<li><code>data-transition="scaleDown"</code>: zoom-out / pause / zoom-out (this kind of transition can have conflicts on Firefox)</li>
+				<li><code>data-transition="scaleDownRight"</code>: saver window from right</li>
+				<li><code>data-transition="scaleUpLeft"</code>: exit on the left and zoom-in</li>
+				<li><code>data-transition="fadeTop"</code>: roll effect</li>
+				<li><code>data-transition="overlap"</code>: overlap effect</li>
+			</ol>
+			<div class="bs-callout bs-callout-info">
+				<h4>Note</h4>
+				If <code>data-transition</code> is omitted or the value is missing (<code>data-autoplay=""</code>) the default transition of the plugin will be used. If the value is not included in any of the 8 listed transitions, the slider is not going to work properly. 
+			</div>       
+		</li>    
+		<li>
+			<p><strong>Navigation arrows</strong>:</p>
+			<p>To decide if you are going to use the navigation arrows or not, you need to specify if <code>data-navigation=&quot;true&quot;</code> o <code>data-navigation=&quot;false&quot;</code>.</p>
+			<div class="bs-callout bs-callout-info">
+				<h4>Note</h4>
+				If you completely omit <code>data-navigation</code> or the value (ex.: <code>data-navigation=""</code>) the navigation arrows are not going to be displayed.
+			</div>      
+		</li>  
+		<li>
+			<p><strong>Pagination bullets</strong>:</p>
+			<p>If you want to choose to display the pagination bullets or not, you need to specify if <code>data-pagination=&quot;true&quot;</code> or <code>data-pagination=&quot;false&quot;</code>.</p>
+			<div class="bs-callout bs-callout-info">
+				<h4>Note</h4>
+				If you completely omit <code>data-pagination</code> or the value (ex.: <code>data-pagination=""</code>) the pagination bullets are not going to be displayed.
+			</div>      
+		</li>  
+		<li>
+			<p><strong>Scroll arrow</strong>:</p>
+			<p>If you want to add the icon with a downward arrow to scroll and go right to the main content, you need to add the class <code>.more-button</code> to the <code>#intro</code>.</p>
+			<div class="bs-callout bs-callout-info">
+				<h4>Note</h4>
+				This option is not compatible with the pagination bullets. So, if <code>data-pagination=&quot;true&quot;</code>, the icon will not be shown even if the class <code>.more-button</code> to the <code>#intro</code> is present.
+			</div>           
+		</li>
+		<li>
+			<p><strong>Darken layer</strong>:</p>
+			<p>If you want to darken the slides images with a layer of black that has 30% opacity, giving more prominence to menu elements and captions, you need to add the class <code>.darken</code> to the <code>#intro</code>.</p>    
+		</li>                
+	</ul>
+<br>
+<h3 id="intro-slides">Intro slides</h3>
+<p>Inside the wrapping <code>&lt;div&gt;</code> that defines the intro, we can include every single slide. Remember that we can also use one single slide; in this case the plugin of the slider is not going to be used and some of the options seen above (such as: Autoplay, Transition styles, and so on) will not count.</p>
+<p>The intro can have three different kinds of slides: <strong>Image background</strong>, <strong>Device mockup</strong> and <strong>Map</strong>. Let’s see some examples of these configurations translated into codes.</p>
+<br>
+<ol>
+	<li>
+		<h4>Image background</h4>
+		<img src="assets/intro-mockup-04.jpg" class="thumbnail full" alt="">
+		<pre><code class="language-markup">&lt;div class=&quot;intro-item&quot; style=&quot;background-image: url(img/bg12.jpg);&quot;&gt;
+	&lt;div class=&quot;caption&quot;&gt;
+		&lt;h2&gt;Feliz ao Contrario&lt;/h2&gt;
+		&lt;p&gt;An Awesome Character&lt;/p&gt;
+		&lt;a class=&quot;button white transparent&quot; href=&quot;#&quot;&gt;Read More&lt;/a&gt;
+	&lt;/div&gt;&lt;!-- caption --&gt;
+	&lt;div class=&quot;photocaption&quot;&gt;
+		&lt;h4&gt;Design by Isabela Rodrigues&lt;/h4&gt;
+	&lt;/div&gt;&lt;!-- photocaption --&gt;           
+&lt;/div&gt;</code></pre><br>     
+	</li>
+	<li>
+		<h4>Device mockup</h4>
+		<p>We have three different layouts for the <strong>Device mockup</strong>.</p>
+		<br>
+		<p><strong>Device on the left:</strong></p>
+		<img src="assets/intro-mockup.jpg" class="thumbnail full" alt="">
+		<pre><code class="language-markup">&lt;div class=&quot;intro-item&quot; style=&quot;background-color: #4FC1E9;&quot;&gt;  
+	&lt;div class=&quot;intro-mockup-wrapper&quot;&gt;    
+		&lt;div class=&quot;caption-mockup caption-right column six last-special&quot;&gt;
+			&lt;h2&gt;Pixel-perfect UI&lt;/h2&gt;
+			&lt;p&gt;Take care of your design and build awesome apps.&lt;/p&gt;
+			&lt;a class=&quot;button white transparent&quot; href=&quot;#&quot;&gt;Read More&lt;/a&gt;
+		&lt;/div&gt;&lt;!-- caption --&gt;
+		&lt;div class=&quot;intro-mockup intro-left column six&quot;&gt;
+			&lt;img src=&quot;img/bg20.png&quot; alt=&quot;&quot;&gt;
+		&lt;/div&gt;&lt;!-- intro-mockup --&gt;             
+	&lt;/div&gt;&lt;!-- intro-mockup-wrapper --&gt;
+&lt;/div&gt;&lt;!-- intro-item --&gt;</code></pre> 
+		<br>
+		<p><strong>Device on the right:</strong></p>   
+		<img src="assets/intro-mockup-02.jpg" class="thumbnail full" alt="">
+		<pre><code class="language-markup">&lt;div class=&quot;intro-item&quot; style=&quot;background-color: #434A54;&quot;&gt;
+	&lt;div class=&quot;intro-mockup-wrapper&quot;&gt;
+		&lt;div class=&quot;caption-mockup caption-left column six&quot;&gt;
+			&lt;h2&gt;Love for mobile&lt;/h2&gt;
+			&lt;p&gt;A mobile-first approach to make better layouts.&lt;/p&gt;
+			&lt;a class=&quot;button white transparent&quot; href=&quot;#&quot;&gt;Read More&lt;/a&gt;
+		&lt;/div&gt;&lt;!-- caption --&gt;            
+		&lt;div class=&quot;intro-mockup intro-right column six last&quot;&gt;
+			&lt;img src=&quot;img/bg19.png&quot; alt=&quot;&quot;&gt;
+		&lt;/div&gt;&lt;!-- intro-mockup --&gt; 
+	&lt;/div&gt;&lt;!-- intro-mockup-wrapper --&gt;
+&lt;/div&gt;&lt;!-- intro-item --&gt;</code></pre>  
+		<br>    
+		<p><strong>Centered device:</strong></p> 
+		<img src="assets/intro-mockup-03.jpg" class="thumbnail full" alt="">
+		<pre><code class="language-markup">&lt;div class=&quot;intro-item&quot; style=&quot;background-color: #FFCE54;&quot;&gt;
+	&lt;div class=&quot;intro-mockup-wrapper&quot;&gt;            
+		&lt;div class=&quot;caption-mockup&quot;&gt;
+			&lt;h2&gt;Minimal Design&lt;/h2&gt;
+			&lt;p&gt;Because we love simplicity.&lt;/p&gt;
+		&lt;/div&gt;&lt;!-- caption --&gt;            
+		&lt;div class=&quot;intro-mockup&quot;&gt;
+			&lt;img src=&quot;img/bg18.png&quot; alt=&quot;&quot;&gt;
+		&lt;/div&gt;&lt;!-- intro-mockup --&gt; 
+	&lt;/div&gt;&lt;!-- intro-mockup-wrapper --&gt;                   
+&lt;/div&gt;</code></pre>
+
+<div class="bs-callout bs-callout-info">
+	<h4>How to create mockups to be contained into the intro</h4>
+	<p>The <strong>device mockup</strong> configuration just shown, contrary to <a href="mockup-carousels">mockup carousels</a>, consists in a single image containing both the mockup and the content of the mockup.</p>
+	<p>In the downloaded package, we included a <strong>mockup builder</strong>, a package of PSD files to easily create the mockup to be put in the intro. To insert a custom image in the chosen mockup, you need to open the related PSD file with Photoshop. In the windows with layers, we will have a layer called <strong>Screenshot</strong>. Double click on that layer; a new window will open and you will be able to paste the screenshot to be inserted in the mockup. Save and close the window. At this point the original file will be updated with the pasted image. Export the image in PNG format with transparency and include it in the intro.</p>
+</div> 
+
+<br>     
+	</li>  
+	<li>
+		<h4>Map</h4>
+		<p>We can also use a map inside the intro. For options regarding maps, see the <a href="#map">Map section</a>.</p>
+		<img src="assets/intro-mockup-05.jpg" class="thumbnail full" alt="">
+		<pre><code class="language-markup">&lt;div class=&quot;map&quot; data-maplat=&quot;51.511214&quot; data-maplon=&quot;-0.119824&quot; data-mapzoom=&quot;7&quot; data-color=&quot;aqua&quot; data-height=&quot;22.222&quot; data-img=&quot;img/marker.png&quot; data-info=&quot;I am based in London, UK&quot;&gt;&lt;/div&gt;</code></pre>
+	</li>  
+</ol>
+<br>
+
+<h3 id="parallax">Parallax</h3>
+<p class="lead">Parallax takes advantage of <a href="https://github.com/Prinzhorn/skrollr">Skrollr</a> JS plugin by <a href="https://github.com/Prinzhorn">Prinzhorn</a>. In some cases it can create some conflicts on some devices. For this reason, we have the possibility to partially or completely disable it.</p>
+<ul>
+	<li>
+		<p><strong>Disable parallax</strong>:</p>
+		<p>To completely disable parallax you will need to add the class <code>.no-parallax</code> to the <code>&lt;body&gt;</code>.</p>
+	</li>
+	<li>
+		<p><strong>Disable parallax on touch screen devices</strong>:</p>
+		<p>Mobile browsers try to save battery wherever they can. That's why mobile browsers delay the execution of JavaScript while you are scrolling.</p>
+		<p>By default, parallax is disabled on all touch devices because it may cause some relevant issues.</p>
+	</li>	
+</ul>
+
+
+</div>
+
+			<!-- Sections
+================================================== -->
+<div class="bs-docs-section">
+<h1 id="sections" class="page-header">Sections</h1>
+
+<p class="lead">For this template we decided to use a modular architecture made of sections to allow you to build a website one step at the time.</p>
+<div class="row bs-examples">
+	<div class="col-md-4">
+		<img src="assets/sections.jpg" class="thumbnail full" alt="">
+	</div>
+	<div class="col-md-8">
+		<p>Every element section has a base structure like this:</p>
+		<pre><code class="language-markup">&lt;section class=&quot;row section&quot;&gt;
+	&lt;div class=&quot;row-content buffer even clear-after&quot;&gt;
+
+		[Here the content]
+
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre> 
+		<p>To add a background color, white text and a title:</p>
+		<pre><code class="language-markup">&lt;section class=&quot;row section text-light&quot; style=&quot;background-color:#FF605F;&quot;&gt;
+	&lt;div class=&quot;row-content buffer even clear-after&quot;&gt;
+	&lt;div class=&quot;section-title&quot;&gt;&lt;h3&gt;An Awesome Title&lt;/h3&gt;&lt;/div&gt;
+
+		[Here the content]
+
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>   
+		<div class="bs-callout bs-callout-warning">
+			<h4>Don't forget</h4>
+			The only elements that do not need a section are the <a href="#cta">CTA (call to action)</a> and the <a href="#map">Map sections</a>.
+		</div>  
+	</div>
+</div>
+
+</div>
+
+
+			<!-- Columns
+================================================== -->
+<div class="bs-docs-section">
+<h1 id="columns" class="page-header">Columns</h1>
+
+<p class="lead">Beetle HTML template takes advantage of <a href="http://eiskis.net/layers/">Layers CSS</a> framework by <a href="http://eiskis.net/">Jerry Jäppinen</a>. To know more about built-in classes, read the <a href="http://eiskis.net/layers/">documentation</a>.</p>
+
+<div class="bs-callout bs-callout-info">
+	<h4>Note</h4>
+	To center the text, you can use the class <code>.centertxt</code>.
+</div>  
+<br>
+<h3 id="featured-columns">Featured columns</h3>
+<p class="lead">With <strong>featured</strong> columns we refer to columns including icons, as in the following examples.</p>
+<br>
+<p><strong>Example with small icons:</strong></p>
+<img src="assets/featured-columns-01.jpg" class="thumbnail full" alt="">
+<pre><code class="language-markup">&lt;div class=&quot;column four&quot;&gt;
+	&lt;div class=&quot;small-icon red&quot;&gt;&lt;i class=&quot;icon icon-paperfly&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+	&lt;div class=&quot;small-icon-text clear-after&quot;&gt;
+		&lt;h4&gt;Landing page&lt;/h4&gt;
+		&lt;p class=&quot;text-xs&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;column four&quot;&gt;
+	&lt;div class=&quot;small-icon red&quot;&gt;&lt;i class=&quot;icon icon-diamond&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+	&lt;div class=&quot;small-icon-text clear-after&quot;&gt;
+		&lt;h4&gt;Portfolio&lt;/h4&gt;
+		&lt;p class=&quot;text-xs&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;column four last&quot;&gt;
+	&lt;div class=&quot;small-icon red&quot;&gt;&lt;i class=&quot;icon icon-crown&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+	&lt;div class=&quot;small-icon-text clear-after&quot;&gt;
+		&lt;h4&gt;Resume&lt;/h4&gt;
+		&lt;p class=&quot;text-xs&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;column four&quot;&gt;
+	&lt;div class=&quot;small-icon red&quot;&gt;&lt;i class=&quot;icon icon-tablet&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+	&lt;div class=&quot;small-icon-text clear-after&quot;&gt;
+		&lt;h4&gt;Responsive&lt;/h4&gt;
+		&lt;p class=&quot;text-xs&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;column four&quot;&gt;
+	&lt;div class=&quot;small-icon red&quot;&gt;&lt;i class=&quot;icon icon-megaphone&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+	&lt;div class=&quot;small-icon-text clear-after&quot;&gt;
+		&lt;h4&gt;Blog&lt;/h4&gt;
+		&lt;p class=&quot;text-xs&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;column four last&quot;&gt;
+	&lt;div class=&quot;small-icon red&quot;&gt;&lt;i class=&quot;icon icon-multiview&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+	&lt;div class=&quot;small-icon-text clear-after&quot;&gt;
+		&lt;h4&gt;Layer CSS&lt;/h4&gt;
+		&lt;p class=&quot;text-xs&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre> 
+<br>
+<p><strong>Example with big icons:</strong></p>
+<img src="assets/featured-columns-02.jpg" class="thumbnail full" alt="">
+<pre><code class="language-markup">&lt;div class=&quot;column four centertxt&quot;&gt;
+	&lt;div class=&quot;big-icon red&quot;&gt;&lt;i class=&quot;icon icon-tumbler&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+	&lt;div class=&quot;big-icon-text clear-after&quot;&gt;
+		&lt;h4&gt;Landing page&lt;/h4&gt;
+		&lt;p class=&quot;text-s&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+		&lt;a class=&quot;button transparent aqua&quot; href=&quot;#&quot;&gt;Read more&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;column four centertxt&quot;&gt;
+	&lt;div class=&quot;big-icon red&quot;&gt;&lt;i class=&quot;icon icon-pocket&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+	&lt;div class=&quot;big-icon-text clear-after&quot;&gt;
+		&lt;h4&gt;Landing page&lt;/h4&gt;
+		&lt;p class=&quot;text-s&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+		&lt;a class=&quot;button transparent aqua&quot; href=&quot;#&quot;&gt;Read more&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;						
+&lt;div class=&quot;column four last centertxt&quot;&gt;
+	&lt;div class=&quot;big-icon red&quot;&gt;&lt;i class=&quot;icon icon-heart&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+	&lt;div class=&quot;big-icon-text clear-after&quot;&gt;
+		&lt;h4&gt;Portfolio&lt;/h4&gt;
+		&lt;p class=&quot;text-s&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+		&lt;a class=&quot;button transparent aqua&quot; href=&quot;#&quot;&gt;Read more&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre> 
+
+<div class="bs-callout bs-callout-warning">
+	<h4>Don't forget</h4>
+	Don’t forget to include the sections to get results as shown in the example.
+</div> 
+
+</div>
+
+
+<!-- CTA
+================================================== -->
+<div class="bs-docs-section">
+<h1 id="cta" class="page-header">CTA</h1>
+
+<p class="lead">With CTA (call to action) we mean the sections that usually include a short slogan and a button.</p>
+<img src="assets/cta.jpg" class="thumbnail full" alt="">
+<pre><code class="language-markup">&lt;section class=&quot;row section call-to-action&quot;&gt;
+	&lt;div class=&quot;row-content buffer even&quot;&gt;
+		&lt;p&gt;Have you fallen in love with Beetle?&lt;/p&gt;
+		&lt;a class=&quot;button white transparent&quot; href=&quot;#&quot;&gt;Buy it now!&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+
+
+
+</div>
+
+
+<!-- Mockup carousels
+================================================== -->
+<div class="bs-docs-section">
+<h1 id="mockup-carousels" class="page-header">Mockup carousels</h1>
+
+<p class="lead">Mockup carousel is an element usually made with a series of images framed inside a mockup. We have two different ways to configure a mockup carousel, "<a href="#full-width-carousel">full-width</a>" and "<a href="#aside-carousel">aside</a>". Those elements use <a href="http://owlgraphic.com/owlcarousel/">OWL Carousel</a> plugin as well.</p>
+<br>
+<h3 id="full-width-carousel">Full-width mockup carousel</h3>
+<img src="assets/white-iphone.jpg" class="thumbnail full" alt="">
+<pre><code class="language-markup">&lt;div class=&quot;slider iphone-slider white white-controls&quot; data-autoplay=&quot;3000&quot;&gt;
+	&lt;figure&gt;
+		&lt;div&gt;&lt;img src=&quot;path/img-01.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+		&lt;div&gt;&lt;img src=&quot;path/img-02.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+		&lt;div&gt;&lt;img src=&quot;path/img-03.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+		&lt;div&gt;&lt;img src=&quot;path/img-04.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+		&lt;div&gt;&lt;img src=&quot;path/img-05.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+		&lt;div&gt;&lt;img src=&quot;path/img-06.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+		&lt;div&gt;&lt;img src=&quot;path/img-07.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+		&lt;div&gt;&lt;img src=&quot;path/img-08.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+		&lt;div&gt;&lt;img src=&quot;path/img-09.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+		&lt;div&gt;&lt;img src=&quot;path/img-10.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;</code></pre>
+<div class="bs-callout bs-callout-warning">
+	<h4>Don't forget</h4>
+	Of course, to get the mint background, you will have to include the section.
+</div> 
+<p>For this carousel, we have 7 different types of device mockups. The <strong>mockup choice</strong> can be made using one of the following classes:</p>
+<ul>
+	<li><code>.iphone-slider .white</code> (White iPhone)</li>
+	<li><code>.iphone-slider .grey</code> (Grey iPhone)</li>
+	<li><code>.iphone-slider .black</code> (Black iPhone)</li>
+	<li><code>.ipad-slider .white</code> (White iPad)</li>
+	<li><code>.ipad-slider .grey</code> (Grey iPad)</li>
+	<li><code>.ipad-slider .black</code> (Black iPad)</li>
+	<li><code>.desktop</code> (Apple Monitor)</li>
+</ul>
+<p>Default <strong>navigation arrows color </strong> is grey. Nevertheless, it is possible to use white adding the class <code>.white-controls</code> or black adding the class <code>.dark-controls</code>.</p>
+<p>Finally, as already seen with the intro slider, it is possible to change the rotation time of the slides, inserting a value in milliseconds within the attribute <code>data-autoplay</code>.</p>
+<div class="bs-callout bs-callout-info">
+	<h4>Note</h4>
+	Other allowed values are <code>true</code> and <code>false</code>, , where the first one sets up the autoplay to a default value (5000ms), while the second one disables the auto-rotation. Keep in mind that auto play can be disabled omitting <code>data-autoplay</code> or the value, as is this case: <code>data-autoplay=""</code>.
+</div> 
+<div class="bs-callout bs-callout-warning">
+	<h4>Why device mockups don't show up?</h4>
+	<p>In case device mockups don't show up, maybe you have not uploaded the <code>.htaccess</code> file on your website root.</p>
+	<p>Mockup frames are provided in SVG format. The benefit of using SVG (acronym of Scalable Vector Graphics) is to have small size and scalable images that looks great on retina displays. <strong>Some browsers may fail to display SVG images</strong>, so we need two lines of code inside the <code>.htaccess</code> file located into the root:</p>
+<pre><code class="language-markup"># To display SVG images
+AddType image/svg+xml svg
+AddType image/svg+xml svgz
+AddEncoding x-gzip .svgz
+</code></pre>
+	<p>We have already provided the <code>.htaccess</code> file inside the template folder, you just have to upload it via FTP with a client like <a href="https://filezilla-project.org/">Filezilla</a>.</p>
+	<img src="assets/htaccess.jpg" class="thumbnail full" alt="">
+</div> 
+
+<br><br>
+
+<h3 id="aside-carousel">Aside mockup carousel</h3>
+<img src="assets/dark-iphone.jpg" class="thumbnail full" alt="">
+<p>For this carousel as well we have 7 different types of device mockups to choose. The choice of the device mockup is made using the same class already seen in the full-width carousel.</p>
+<div class="bs-callout bs-callout-warning">
+	<h4>Don't forget</h4>
+	Because the navigation arrows are missing, it is useful to specify classes to change the color of navigation arrows.
+</div> 
+<p>The autoplay option works in the same way of full-width carousel.</p>
+<p class="lead">This kind of carousel allows us to choose if we want to align the device mockup to the right or to the left. Let’s take a look at two configuration samples.</p>
+<p><strong>Device to the left::</strong></p>
+<pre><code class="language-markup">&lt;div class=&quot;column six push-six last-special&quot;&gt;
+	&lt;h2&gt;Landing page&lt;/h2&gt;
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+	&lt;p&gt;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.&lt;/p&gt;
+	&lt;a class=&quot;button transparent white&quot; href=&quot;#&quot;&gt;Explore&lt;/a&gt;
+&lt;/div&gt;						
+&lt;div class=&quot;side-mockup left-mockup animation&quot;&gt;
+	&lt;div class=&quot;slider iphone-slider black&quot; data-autoplay=&quot;3000&quot;&gt;
+		&lt;figure&gt;
+			&lt;div&gt;&lt;img src=&quot;path/img-01.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;div&gt;&lt;img src=&quot;path/img-02.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;div&gt;&lt;img src=&quot;path/img-03.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;div&gt;&lt;img src=&quot;path/img-04.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+		&lt;/figure&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p><strong>Device to the right::</strong></p>
+<pre><code class="language-markup">&lt;div class=&quot;column six&quot;&gt;
+	&lt;h2&gt;Landing page&lt;/h2&gt;
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+	&lt;p&gt;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.&lt;/p&gt;
+	&lt;a class=&quot;button transparent white&quot; href=&quot;#&quot;&gt;Explore&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;side-mockup right-mockup animation&quot;&gt;
+	&lt;div class=&quot;slider iphone-slider black&quot; data-autoplay=&quot;3000&quot;&gt;
+		&lt;figure&gt;
+			&lt;div&gt;&lt;img src=&quot;path/img-01.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;div&gt;&lt;img src=&quot;path/img-02.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;div&gt;&lt;img src=&quot;path/img-03.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;div&gt;&lt;img src=&quot;path/img-04.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+		&lt;/figure&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<div class="bs-callout bs-callout-info">
+	<h4>Note</h4>
+	To cancel mockup pop-up animations you just need to remove the class <code>.animation</code> from the <code>.side-mockup</code>.
+</div> 
+
+<br><br>
+
+<h3 id="ideal-size">Images ideal sizes</h3>
+<p class="lead">Here are the ideal sizes for images included in single mockups.</p>
+
+<ul>
+<li><strong>iPhone image</strong>: 320x568px (min) - 540x1136px (max)</li>
+<li><strong>iPad image</strong>: 504x378px (min) - 1008x756px (max)</li>
+<li><strong>Desktop image</strong>: 574x315px (min) - 1148x630px (max)</li>
+</ul>
+
+</div>
+
+
+<!-- Skills rings
+================================================== -->
+<div class="bs-docs-section">
+<h1 id="skills" class="page-header">Skills rings</h1>
+
+<p class="lead">Skills rings can be customized in many ways, from color to animation time. Those elements take advantages of <a href="http://rendro.github.io/easy-pie-chart/">Easy Pie Chart</a> jQuery plugin by <a href="https://github.com/rendro">rendro</a>.</p>
+<img src="assets/skills.jpg" class="thumbnail full" alt="">
+<pre><code class="language-markup">&lt;div class=&quot;chart&quot; data-percent=&quot;73&quot; data-bar-color=&quot;#fd685b&quot; data-animate=&quot;2000&quot;&gt;
+	&lt;div class=&quot;chart-content&quot;&gt;
+		&lt;div class=&quot;percent&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;chart-title&quot;&gt;User Interface&lt;/div&gt;
+	&lt;/div&gt;&lt;!-- chart-content --&gt;
+&lt;/div&gt;&lt;!-- chart --&gt;</code></pre>
+
+<p>The example shown above is easy to understand. Here are the three main options:</p>
+<p>
+	<ul>
+		<li><strong>Percent value</strong>: it can be defined with a numeric value in the attribute <code>data-percent</code></li>
+		<li><strong>Ring color</strong>: it can be defined inserting an hexadecimal color value in the attribute <code>data-bar-color</code></li>
+		<li><strong>Animation time</strong>: it can be defined inserting a ms value in the attribute <code>data-animate</code></li>				
+	</ul>
+</p>
+
+<div class="bs-callout bs-callout-info">
+	<h4>Note</h4>
+	You just need to insert the percent value in the attribute <code>data-percent</code>. The <code>&lt;div class=&quot;percent&quot;&gt;&lt;/div&gt;</code> must be empty.
+</div> 
+
+<div class="bs-callout bs-callout-warning">
+	<h4>Don't forget</h4>
+	Skills rings don't need to be nested into <code>.column</code> divs.
+</div> 
+
+</div>
+
+
+<!-- Timeline
+================================================== -->
+<div class="bs-docs-section">
+<h1 id="timeline" class="page-header">Timeline</h1>
+
+<p class="lead">Timeline is a very useful feature to be included in a resumé page.</p>
+<img src="assets/timeline.jpg" class="thumbnail full" alt="">
+<pre><code class="language-markup">&lt;div class=&quot;timeline-label column six&quot;&gt;
+	&lt;h4&gt;Work experience&lt;/h4&gt;
+	&lt;p&gt;Specialties : User experience design, user interface design, brand identity, typography, print and packaging design, web standards, grid based layout.&lt;/p&gt;
+	&lt;a class=&quot;button transparent aqua&quot;&gt;View on Linkedin&lt;/a&gt;
+&lt;/div&gt;&lt;!-- timeline-label --&gt;		
+&lt;div class=&quot;timeline column six last&quot;&gt;
+	&lt;div class=&quot;year&quot;&gt;
+		&lt;time datetime=&quot;2013&quot;&gt;2013&lt;/time&gt;
+		&lt;div class=&quot;experience&quot;&gt;
+			&lt;span class=&quot;circle&quot;&gt;&lt;/span&gt;
+			&lt;div class=&quot;experience-img&quot;&gt;&lt;img src=&quot;img/asset01.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;div class=&quot;experience-info clear-after&quot;&gt;
+				&lt;h5&gt;Facebook&lt;/h5&gt;
+				&lt;div class=&quot;role&quot;&gt;UI/UX Designer&lt;/div&gt;
+				&lt;p&gt;October 2013 – November 2013 (2 months)Menlo Park, CA, United States of America&lt;/p&gt;
+			&lt;/div&gt;&lt;!-- experience-info --&gt;
+		&lt;/div&gt;&lt;!-- experience --&gt;
+		&lt;div class=&quot;experience&quot;&gt;
+			&lt;span class=&quot;circle&quot;&gt;&lt;/span&gt;
+			&lt;div class=&quot;experience-img&quot;&gt;&lt;img src=&quot;img/asset02.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;div class=&quot;experience-info clear-after&quot;&gt;
+				&lt;h5&gt;Amazon&lt;/h5&gt;
+				&lt;div class=&quot;role&quot;&gt;UI/UX Designer&lt;/div&gt;
+				&lt;p&gt;October 2013 – November 2013 (2 months)Menlo Park, CA, United States of America&lt;/p&gt;
+			&lt;/div&gt;&lt;!-- experience-info --&gt;
+		&lt;/div&gt;&lt;!-- experience --&gt;								
+	&lt;/div&gt;&lt;!-- year --&gt;
+	&lt;div class=&quot;year&quot;&gt;
+		&lt;time datetime=&quot;2012&quot;&gt;2012&lt;/time&gt;
+		&lt;div class=&quot;experience&quot;&gt;
+			&lt;span class=&quot;circle&quot;&gt;&lt;/span&gt;
+			&lt;div class=&quot;experience-img&quot;&gt;&lt;img src=&quot;img/asset03.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;div class=&quot;experience-info clear-after&quot;&gt;
+				&lt;h5&gt;Apple&lt;/h5&gt;
+				&lt;div class=&quot;role&quot;&gt;UI/UX Designer&lt;/div&gt;
+				&lt;p&gt;October 2013 – November 2013 (2 months)Menlo Park, CA, United States of America&lt;/p&gt;
+			&lt;/div&gt;&lt;!-- experience-info --&gt;
+		&lt;/div&gt;&lt;!-- experience --&gt;
+		&lt;div class=&quot;experience&quot;&gt;
+			&lt;span class=&quot;circle&quot;&gt;&lt;/span&gt;
+			&lt;div class=&quot;experience-img&quot;&gt;&lt;img src=&quot;img/asset04.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;div class=&quot;experience-info clear-after&quot;&gt;
+				&lt;h5&gt;IBM&lt;/h5&gt;
+				&lt;div class=&quot;role&quot;&gt;UI/UX Designer&lt;/div&gt;
+				&lt;p&gt;October 2013 – November 2013 (2 months)Menlo Park, CA, United States of America&lt;/p&gt;
+			&lt;/div&gt;&lt;!-- experience-info --&gt;
+		&lt;/div&gt;&lt;!-- experience --&gt;								
+	&lt;/div&gt;&lt;!-- year --&gt;							
+&lt;/div&gt;&lt;!-- timeline --&gt;</code></pre>
+
+</div>
+
+
+<!-- Team
+================================================== -->
+<div class="bs-docs-section">
+<h1 id="team" class="page-header">Team</h1>
+
+<p class="lead">The team section can be useful to introduce your work team. If used combined with <a href="#columns">colonne</a> it will be possible to show whatever number of teammates you wish.</p>
+<img src="assets/team.jpg" class="thumbnail full" alt="">
+<pre><code class="language-markup">&lt;div class=&quot;column three&quot;&gt;
+	&lt;figure class=&quot;about-us&quot;&gt;
+		&lt;img src=&quot;img/about-01.jpg&quot; alt=&quot;&quot;&gt;
+		&lt;figcaption&gt;
+			&lt;h4&gt;Davide Casali&lt;/h4&gt;
+			&lt;p&gt;CEO and Head of Design&lt;/p&gt;
+			&lt;div class=&quot;meta-social&quot;&gt;
+				&lt;ul class=&quot;inline&quot;&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;twitter-share border-box&quot;&gt;&lt;i class=&quot;fa fa-twitter fa-lg&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;facebook-share border-box&quot;&gt;&lt;i class=&quot;fa fa-facebook fa-lg&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;pinterest-share border-box&quot;&gt;&lt;i class=&quot;fa fa-pinterest fa-lg&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+		&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;</code></pre>
+
+<div class="bs-callout bs-callout-info">
+	<h4>Note</h4>
+	In CSS, we provided colors for all other social network icons. You will only need to use the following classes: <code>.dribbble-share</code>, <code>.flickr-share</code>, <code>.github-share</code>, <code>.gplus-share</code>, <code>.instagram-share</code>, <code>.linkedin-share</code>, <code>.skype-share</code>, <code>.vimeo-share</code>, <code>.youtube-share</code>.
+</div> 
+
+</div>
+
+
+<!-- Slogan
+================================================== -->
+<div class="bs-docs-section">
+<h1 id="slogan" class="page-header">Slogan</h1>
+
+<p class="lead">Slogan is a section built with a heading title, one paragraph an "on-screen" animation.</p>
+<img src="assets/slogan.jpg" class="thumbnail full" alt="">
+<pre><code class="language-markup">&lt;div class=&quot;slogan animation&quot;&gt;
+	&lt;h2&gt;This is an awesome heading slogan!&lt;/h2&gt;	
+	&lt;p&gt;Here you can type a subtitle.&lt;/p&gt;						
+&lt;/div&gt;&lt;!-- slogan --&gt;</code></pre>
+
+<div class="bs-callout bs-callout-info">
+	<h4>Note</h4>
+	You need to use a <a href="#sections">section</a> for slogans too. To cancel pop-up animations in mockup you just need to remove the class <code>.animation</code> from the <code>.slogan</code>.
+</div> 
+
+</div>
+
+
+<!-- Milestone
+================================================== -->
+<div class="bs-docs-section">
+<h1 id="milestone" class="page-header">Milestone</h1>
+
+<p class="lead">A milestone is an element that takes advantage of <a href="https://github.com/mhuggins/jquery-countTo">jquery-countTo</a> jQuery plugin. jQuery plugin. It can be used in combination with <a href="#columns">columns</a>.</p>
+<img src="assets/milestone.jpg" class="thumbnail full" alt="">
+<pre><code class="language-markup">&lt;div class=&quot;count-item&quot;&gt;
+	&lt;div class=&quot;small-icon red&quot;&gt;&lt;i class=&quot;icon icon-leaf&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+	&lt;div class=&quot;count-number&quot; data-from=&quot;0&quot; data-to=&quot;1284&quot; data-speed=&quot;1000&quot; data-refresh-interval=&quot;25&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;count-subject&quot;&gt;Active projects&lt;/div&gt;
+&lt;/div&gt;&lt;!-- count-item --&gt;</code></pre>
+
+<p>In the <code>.count-number</code> it is possible to name the numeric part of the milestone using special attributes.</p>
+<ul>
+	<li><code>data-from</code>: the number to start counting from</li>
+	<li><code>data-to</code>: the number to stop counting at</li>
+	<li><code>data-speed</code>: the number of milliseconds it should take to finish counting</li>
+	<li><code>data-refresh-interval</code>: the number of milliseconds you have to wait for the counter to refresh</li>
+</ul>
+
+<div class="bs-callout bs-callout-info">
+	<h4>Note</h4>
+	You just need to specify the numeric value of the attribute <code>data-to</code>. The <code>&lt;div class=&quot;count-number&quot; ... &gt;&lt;/div&gt;</code> must be kept empty.
+</div> 
+
+</div>
+
+
+<!-- Testimonial
+================================================== -->
+<div class="bs-docs-section">
+<h1 id="testimonial" class="page-header">Testimonial carousel</h1>
+
+<p class="lead">Testimonial carousel takes advantage of <a href="http://owlgraphic.com/owlcarousel/">OWL Carousel</a> jQuery pulgin. It can be configured in two different ways.</p>
+<br>
+<h3>Only text carousel</h3>
+<img src="assets/testimonial-01.jpg" class="thumbnail full" alt="">
+<pre><code class="language-markup">&lt;div class=&quot;testimonial-slider centertxt&quot; data-autoplay=&quot;5000&quot; data-pagination=&quot;true&quot; data-transition=&quot;fade&quot; data-autoheight=&quot;false&quot;&gt;
+	&lt;div class=&quot;quote&quot;&gt;
+		&lt;div class=&quot;column twelve last&quot;&gt;
+			&lt;p&gt;&quot;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.&quot;&lt;/p&gt;
+			&lt;div class=&quot;author&quot;&gt;John Lennon&lt;/div&gt;
+		&lt;/div&gt;&lt;!-- column --&gt;
+	&lt;/div&gt;&lt;!-- quote --&gt;
+	&lt;div class=&quot;quote&quot;&gt;
+		&lt;div class=&quot;column twelve last&quot;&gt;								
+			&lt;p&gt;&quot;Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.&quot;&lt;/p&gt;
+			&lt;div class=&quot;author&quot;&gt;Fabrizio De Andr&amp;egrave;&lt;/div&gt;
+		&lt;/div&gt;&lt;!-- column --&gt;
+	&lt;/div&gt;&lt;!-- quote --&gt;		
+	&lt;div class=&quot;quote&quot;&gt;
+		&lt;div class=&quot;column twelve last&quot;&gt;									
+			&lt;p&gt;&quot;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.&quot;&lt;/p&gt;
+			&lt;div class=&quot;author&quot;&gt;B.B. King&lt;/div&gt;
+		&lt;/div&gt;&lt;!-- column --&gt;									
+	&lt;/div&gt;&lt;!-- quote --&gt;							
+&lt;/div&gt;&lt;!-- testimonial-slider --&gt;</code></pre>
+<br>
+<h3>Text + image carousel</h3>
+<img src="assets/testimonial-02.jpg" class="thumbnail full" alt="">
+<pre><code class="language-markup">&lt;div class=&quot;testimonial-slider&quot; data-autoplay=&quot;5000&quot; data-pagination=&quot;true&quot; data-transition=&quot;fade&quot; data-autoheight=&quot;false&quot;&gt;
+	&lt;div class=&quot;quote&quot;&gt;
+		&lt;div class=&quot;column two&quot;&gt;
+			&lt;figure class=&quot;testimonial-img&quot;&gt;
+				&lt;img src=&quot;img/about-04.jpg&quot; alt=&quot;&quot;&gt;
+			&lt;/figure&gt;
+		&lt;/div&gt;&lt;!-- column --&gt;
+		&lt;div class=&quot;column ten last&quot;&gt;
+			&lt;p&gt;&quot;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.&quot;&lt;/p&gt;
+			&lt;div class=&quot;author&quot;&gt;John Lennon&lt;/div&gt;
+		&lt;/div&gt;&lt;!-- column --&gt;
+	&lt;/div&gt;&lt;!-- quote --&gt;
+	&lt;div class=&quot;quote&quot;&gt;
+		&lt;div class=&quot;column two&quot;&gt;
+			&lt;figure class=&quot;testimonial-img&quot;&gt;
+				&lt;img src=&quot;img/about-03.jpg&quot; alt=&quot;&quot;&gt;
+			&lt;/figure&gt;
+		&lt;/div&gt;&lt;!-- column --&gt;
+		&lt;div class=&quot;column ten last&quot;&gt;								
+			&lt;p&gt;&quot;Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.&quot;&lt;/p&gt;
+			&lt;div class=&quot;author&quot;&gt;Fabrizio De Andr&amp;egrave;&lt;/div&gt;
+		&lt;/div&gt;&lt;!-- column --&gt;
+	&lt;/div&gt;&lt;!-- quote --&gt;		
+	&lt;div class=&quot;quote&quot;&gt;
+		&lt;div class=&quot;column two&quot;&gt;
+			&lt;figure class=&quot;testimonial-img&quot;&gt;
+				&lt;img src=&quot;img/about-01.jpg&quot; alt=&quot;&quot;&gt;
+			&lt;/figure&gt;
+		&lt;/div&gt;&lt;!-- column --&gt;
+		&lt;div class=&quot;column ten last&quot;&gt;									
+			&lt;p&gt;&quot;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.&quot;&lt;/p&gt;
+			&lt;div class=&quot;author&quot;&gt;B.B. King&lt;/div&gt;
+		&lt;/div&gt;&lt;!-- column --&gt;									
+	&lt;/div&gt;&lt;!-- quote --&gt;							
+&lt;/div&gt;&lt;!-- testimonial-slider --&gt;</code></pre>
+
+<p>A testimonial carousel gives you a series of options thanks to specific HTML5 attributes.</p>
+
+<ul>
+	<li>
+		<p><strong>Autoplay</strong>:</p>
+		<p>To let the slider automatically rotate every x seconds, you need to use the attribute <code>data-autoplay</code>, as seen with <a href="#intro">intro</a>.</p>     
+	</li>
+	<li>
+		<p><strong>Transition styles</strong>:</p>
+		<p>It is possible to define the same transitions seen in <a href="#intro">intro</a>, using the attribute <code>data-transition</code>.</p>        
+	</li> 
+	<li>
+		<p><strong>Pagination bullets</strong>:</p>
+		<p>To choose if you want to display pagination bullets or not, you need to say if <code>data-pagination=&quot;true&quot;</code> or <code>data-pagination=&quot;false&quot;</code>.</p>    
+	</li> 
+	<li>
+		<p><strong>Autoheight</strong>:</p>
+		<p>Set <code>data-autoheight=&quot;true&quot;</code> to dinamically adjust slides height or <code>data-autoheight=&quot;false&quot;</code> to assign the same height to all slides.</p>    
+	</li>		 
+</ul>	  
+
+</div>
+
+
+<!-- Custom carousel
+================================================== -->
+<div class="bs-docs-section">
+<h1 id="custom-carousel" class="page-header">Custom carousel</h1>
+
+<p class="lead">Custom carousel is almost the same as <a href="#testimonial">testimonial carousel</a>. The benefit of using a custom slider is the possibility to configure its content as you like. Here is an example of its use.</p>
+<img src="assets/custom-carousel.jpg" class="thumbnail full" alt="">
+<pre><code class="language-markup">&lt;div class=&quot;custom-carousel&quot; data-autoplay=&quot;5000&quot; data-pagination=&quot;true&quot; data-transition=&quot;fade&quot; data-autoheight=&quot;false&quot;&gt;
+	&lt;div class=&quot;carousel-item&quot;&gt;
+		&lt;div class=&quot;column four&quot;&gt;
+			&lt;img src=&quot;img/resume-img-01.png&quot; alt=&quot;&quot;&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;column eight last&quot;&gt;
+			&lt;h3&gt;I create simple interfaces for humans and enjoy pixel-perfection.&lt;/h3&gt;
+			&lt;p&gt;I’m an experienced and passionate user interface designer with interaction design background.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;&lt;!-- carousel-item --&gt;
+	&lt;div class=&quot;carousel-item&quot;&gt;
+		&lt;div class=&quot;column four&quot;&gt;
+			&lt;img src=&quot;img/resume-img-02.png&quot; alt=&quot;&quot;&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;column eight last&quot;&gt;
+			&lt;h3&gt;I am a top experience designer.&lt;/h3&gt;
+			&lt;p&gt;I’m an experienced and passionate user interface designer with interaction design background.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;&lt;!-- carousel-item --&gt;
+	&lt;div class=&quot;carousel-item&quot;&gt;
+		&lt;div class=&quot;column four&quot;&gt;
+			&lt;img src=&quot;img/resume-img-03.png&quot; alt=&quot;&quot;&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;column eight last&quot;&gt;
+			&lt;h3&gt;I am a Themeforest Elite Author.&lt;/h3&gt;
+			&lt;p&gt;I’m an experienced and passionate user interface designer with interaction design background.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;&lt;!-- carousel-item --&gt;
+&lt;/div&gt;</code></pre>
+
+<div class="bs-callout bs-callout-info">
+	<h4>Note</h4>
+	Custom carousel options are the same as <a href="#testimonial">testimonial carousel</a> ones.
+</div> 
+
+</div>
+
+
+<!-- Dribbble section
+================================================== -->
+<div class="bs-docs-section">
+<h1 id="dribbble" class="page-header">Dribbble section</h1>
+
+<p class="lead">The dribbble section allows showing the latest shots from the popular social network.</p>
+<img src="assets/dribbble.jpg" class="thumbnail full" alt="">
+<pre><code class="language-markup">&lt;div class=&quot;dribbble-items portfolio-section preload&quot; data-username=&quot;frankiefreesbie&quot; data-elements=&quot;4&quot;&gt;
+&lt;/div&gt;&lt;!-- dribbble-items --&gt;
+&lt;div class=&quot;more-btn&quot;&gt;&lt;a class=&quot;button transparent white&quot; href=&quot;http://dribbble.com/frankiefreesbie&quot;&gt;View all Shots&lt;/a&gt;&lt;/div&gt;</code></pre>
+
+<p>To let the dribbble section work, you need to specify two options through HTML5 attributes.</p>
+
+<ul>
+	<li>
+		<p><strong>Dribbble username</strong>:</p>
+		<p>Say the right dribble username in the attribute <code>data-username</code> (ex.: <code>data-username="frankiefreesbie"</code>).</p>     
+	</li>
+	<li>
+		<p><strong># of shots to be displayed</strong>:</p>
+		<p>It is possible to choose how many shots you want to show, using the attribute <code>data-elements</code> (ex.: <code>data-elements="4"</code>).</p>        
+	</li> 	 
+</ul>	  
+
+</div>
+
+
+<!-- Map section
+================================================== -->
+<div class="bs-docs-section">
+<h1 id="map" class="page-header">Map section</h1>
+
+<p class="lead">Maps are provided by <a href="https://developers.google.com/maps/documentation/javascript/">Google Maps JavaScript API v3</a>.</p>
+<img src="assets/map.jpg" class="thumbnail full" alt="">
+<pre><code class="language-markup">&lt;section class=&quot;row section&quot;&gt;
+	&lt;div class=&quot;map&quot; data-maplat=&quot;40.714353&quot; data-maplon=&quot;-74.005973&quot; data-mapzoom=&quot;3&quot; data-color=&quot;aqua&quot; data-height=&quot;22.222&quot; data-img=&quot;img/marker.png&quot; data-info=&quot;I am based in New York&quot;&gt;&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+
+<p>Let’s look through the options that we can manage with HTML5 attributes.</p>
+
+<ul>
+	<li>
+		<p><strong>Map coordinates</strong>:</p>
+		<p>You need to specify the coordinates expressed in latitude and longitude to center the map in a given point. Let’s say that you want to center the map on NYC; first thing to do is to find the coordinates through an external service, such as <a href="http://itouchmap.com/latlong.html">iTouchMap</a>.</p>
+		<img src="assets/coordinates.jpg" class="thumbnail full" alt="">
+		<p>Once found, we can insert them in the attributes <code>data-maplat</code> and <code>data-maplon</code>.</p>  
+	</li> 
+	<li>
+		<p><strong>Map zoom level</strong>:</p>
+		<p>The initial resolution at which to display the map, where <code>data-mapzoom=&quot;0&quot;</code> corresponds to a map of the Earth fully zoomed out, and higher zoom levels zoom in at a higher resolution.</p>  
+	</li> 	
+	<li>
+		<p><strong>Map styles</strong>:</p>
+		<p>We created preset styles that we can use with the attribute <code>data-color</code>. Here are all the options:</p>  
+		<ul style="margin-bottom:20px;">
+			<li>You don’t need to use the attribute <code>data-color</code> to get <strong>Google Map default style</strong>.</li>
+			<li><strong>Reversed colors:</strong> <code>data-color=&quot;invert&quot;</code></li>
+			<li><strong>Bicolor maps:</strong></li>
+				<ul>
+					<li><code>data-color=&quot;red&quot;</code></li>
+					<li><code>data-color=&quot;orange&quot;</code></li>
+					<li><code>data-color=&quot;yellow&quot;</code></li>
+					<li><code>data-color=&quot;green&quot;</code></li>
+					<li><code>data-color=&quot;mint&quot;</code></li>
+					<li><code>data-color=&quot;aqua&quot;</code></li>
+					<li><code>data-color=&quot;blue&quot;</code></li>
+					<li><code>data-color=&quot;purple&quot;</code></li>
+					<li><code>data-color=&quot;pink&quot;</code></li>
+					<li><code>data-color=&quot;white&quot;</code></li>
+					<li><code>data-color=&quot;grey&quot;</code></li>
+					<li><code>data-color=&quot;dark-grey&quot;</code></li>
+				</ul>			
+		</ul>
+	</li> 
+	<li>
+		<p><strong>Map section height</strong>:</p>
+		<p>Section height of the map. The value is expressed in the attribute <code>data-height</code>in <code>em</code>, so you use the same principle seen for <a href="#intro">intro</a> height.</p>  
+	</li> 
+	<li>
+		<p><strong>Image marker</strong>:</p>
+		<p>Use the attribute <code>data-img</code> to assign an image to the marker. Ideal marker size is 104x104px.</p>
+	</li> 
+	<li>
+		<p><strong>Tooltip content</strong>:</p>
+		<p>Assign to the attribute <code>data-info</code> what you want to write in the tooltip.</p>
+	</li> 					
+</ul>	  
+
+</div>
+
+
+<!-- Contact section
+================================================== -->
+<div class="bs-docs-section">
+<h1 id="contact" class="page-header">Contact section</h1>
+
+<p class="lead">Contact section is a simple form to send emails through a PHP integrated script.</p>
+<img src="assets/contact.jpg" class="thumbnail full" alt="">
+<p>Here is the HTML code of the form:</p>
+<pre><code class="language-markup">&lt;form id=&quot;contact-form&quot; class=&quot;contact-section&quot; method=&quot;post&quot; action=&quot;&quot;&gt;
+	&lt;span class=&quot;pre-input&quot;&gt;&lt;i class=&quot;icon icon-user&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+	&lt;input class=&quot;name plain buffer&quot; type=&quot;text&quot; name=&quot;name&quot; placeholder=&quot;Full name&quot;&gt;
+	&lt;span class=&quot;pre-input&quot;&gt;&lt;i class=&quot;icon icon-email&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+	&lt;input class=&quot;email plain buffer&quot; type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;Email address&quot;&gt;
+	&lt;textarea class=&quot;plain buffer&quot; name=&quot;message&quot; placeholder=&quot;Don't forget that kindness is all!&quot;&gt;&lt;/textarea&gt;
+	&lt;input id=&quot;send&quot; class=&quot;plain button red&quot; type=&quot;button&quot; value=&quot;Send a Message&quot;&gt;
+&lt;/form&gt;	
+&lt;div id=&quot;success&quot;&gt;&lt;/div&gt;</code></pre>
+
+<div class="bs-callout bs-callout-warning">
+	<h4>Don't forget</h4>
+	The <code>&lt;div id=&quot;success&quot;&gt;&lt;/div&gt;</code> does not have to be removed because you use it to keep the error messages or the sent receipts.
+</div> 
+
+<p>To work properly, the contact form needs the following script before of the tag <code>&lt;/body&gt;</code> and after <code>&lt;script src=&quot;https://code.jquery.com/jquery.js&quot;&gt;&lt;/script&gt;</code> in all pages in which it is included:</p>  
+
+<pre><code class="language-markup">&lt;script&gt;
+$(document).ready(function(){
+	$('#send').click(function(){
+		$(this).val('Sending ...');
+		$('#success p').remove();
+		$.post('contact/contact.php', $('#contact-form').serialize(), function(response) {
+			$('#success').html(response);
+			//$('#success').hide('slow');
+			$('#send').val('Send a Message');
+		});
+		return false;
+	});
+});
+&lt;/script&gt;</code></pre>
+
+<div class="bs-callout bs-callout-warning">
+	<h4>Don't forget</h4>
+	This script includes the <strong>contact.php</strong> located into the <strong>contact</strong> folder. So, if the page containing the contact form is in a different directory from the root, it will be necessary to update the path <code>$.post('contact/contact.php'</code> contained in the script.
+</div> 
+
+<h3 id="contact-settings">Contact Settings</h3>
+<p class="lead">Because the contact form works properly, you need to configure it, putting the email address where you want to receive your messages.</p>
+
+<p>Open the <strong>contact.php</strong> file located into the <strong>contact</strong> folder. The only mandatory string to edit because the form works is <code>$to = 'xxxx@xxxx.com';</code> in which you need to replace <code>xxxx@xxxx.com</code> with your e-mail address.</p>
+<p>In this file it is also possible to change other parameters, including error messages or confirmation messages, email header, etc.</p>
+
+<div class="bs-callout bs-callout-warning">
+	<h4>Don't forget</h4>
+	Mail delivery is a tricky business... just because you send e-mail does not mean that anyone will receive it. Many receiving servers will simply ignore the incoming message if it does not meet certain criteria. This script has been tested with <strong>Gmail</strong> but it may not work with <strong>Hotmail</strong>. We strongly recommend to test it before publishing your website.
+</div> 
+
+</div>
+
+
+<!-- Other elements
+================================================== -->
+<div class="bs-docs-section">
+<h1 id="other" class="page-header">Other elements</h1>
+
+<p class="lead">Let’s take a look at the other elements provided by this template.</p>
+<br>
+<h3 id="buttons">Buttons</h3>
+<img src="assets/buttons.jpg" class="thumbnail full" alt="">
+<p>Here is the HTML basic code for a button.</p>
+<pre><code class="language-markup">&lt;a class=&quot;button href=&quot;#&quot;&gt;Button&lt;/a&gt;</code></pre>
+<p>To create an outlined button you just need to add <code>.transparent</code>:</p>
+<pre><code class="language-markup">&lt;a class=&quot;button transparent&quot; href=&quot;#&quot;&gt;Button&lt;/a&gt;</code></pre>
+<p>To assign a different color you need to choose among one of the built-in colors:</p>
+<pre><code class="language-markup">&lt;a class=&quot;button transparent red&quot; href=&quot;#&quot;&gt;Button&lt;/a&gt;</code></pre>
+<p>The colors provided use the following classes: <code>.red</code>, <code>.orange</code>, <code>.yellow</code>, <code>.green</code>, <code>.mint</code>, <code>.aqua</code>, <code>.blue</code>, <code>.purple</code>, <code>.pink</code>, <code>.white</code>, <code>.grey</code> and <code>.dark-grey</code>.</p>
+<p>To add an icon to the button you will have to specify <code>&lt;i&gt;</code> tag containing the class shown in the <a href="#icons">icons</a> section. Ex.:</p>
+<pre><code class="language-markup">&lt;a class=&quot;button red&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;icon icon-download&quot;&gt;&lt;/i&gt;Red Button&lt;/a&gt;</code></pre>
+<br>
+<h3 id="icons">Icons</h3>
+<p class="lead">Two icon fonts comes with this template: <a href="http://fontawesome.io/">Font Awesome</a> by <a href="http://twitter.com/davegandy">Dave Gandy</a> and <a href="https://www.behance.net/gallery/Line-icon-set-for-UI-more-Infinitely-scalable/10712283">Line icon set</a> by <a href="https://www.behance.net/situ_herrera">Situ Herrera</a>.</p>
+<br>
+<h4>Font Awesome</h4>
+<p>Use the following code for the retro camera from Font Awesome 4.0.3 set:</p>
+<pre><code class="language-markup">&lt;i class=&quot;fa fa-camera-retro&quot;&gt;&lt;/i&gt;</code></pre>
+<p>Here is the <a href="http://fontawesome.io/icons/">Font Awesome cheat sheet</a> including all the icons.</p>
+<br>
+<h4>Line icon set</h4>
+<p>Use the following code for the diamond icon from Line icon set:</p>
+<pre><code class="language-markup">&lt;i class=&quot;icon icon-diamond&quot;&gt;&lt;/i&gt;</code></pre>
+<p>Here is the <a href="assets/lineicon-cheatsheet/icons-reference.html">Line icons cheat sheet</a> including all the icons.</p>
+<br>
+<h3 id="lightbox">Lightbox</h3>
+<p class="lead">We have included a nice lightbox for galleries. It takes advantages of <a href="http://osvaldas.info/image-lightbox-responsive-touch-friendly">ImageLightbox.js</a> plugin by <a href="https://twitter.com/osvaldas">Osvaldas Valutis</a>.</p>
+<img src="assets/lightbox.jpg" class="thumbnail full" alt="">
+<p>To make lightboxes correctly work you need to add a <code>.lightbox</code> class to the <code>.grid-items</code> (see sample page <strong>works-4-columns-lightbox.html</strong> included in template). Don’t forget that you need to add the attribute <code> data-lightbox=&quot;gallery-1&quot;</code> to every element you want to include in the gallery, where <code>gallery-1</code> is a set of images that includes the chosen one. You can add how many groups you want, you just need to add a number after <code>gallery-</code> for every set of images.</p>
+
+</div>
+
+
+<!-- Portfolio filters
+================================================== -->
+<div class="bs-docs-section">
+<h1 id="portfolio-filters" class="page-header">Portfolio filters</h1>
+
+<p class="lead"><strong>Works</strong> (or <strong>Portfolio</strong>) page takes advantages of <a href="http://vestride.github.io/Shuffle/">Shuffle</a> plugin by <a href="https://twitter.com/Vestride">@Vestride</a> for creating masonry layouts. This plugin includes a feature for filtering items. Let's see how it works in details.</p>
+
+<p>First you need to set a list of filters giving a specific name for every <code>data-group</code>. Ex.:</p>
+<pre><code class="language-markup">&lt;ul class=&quot;inline cats filter-options&quot;&gt;
+	&lt;li data-group=&quot;advertising&quot;&gt;Advertising&lt;/li&gt;
+	&lt;li data-group=&quot;fun&quot;&gt;Fun&lt;/li&gt;
+	&lt;li data-group=&quot;icons&quot;&gt;Icons&lt;/li&gt;
+	&lt;li data-group=&quot;infographics&quot;&gt;Infographics&lt;/li&gt;
+	&lt;li data-group=&quot;lightbox&quot;&gt;Lightbox&lt;/li&gt;
+	&lt;li data-group=&quot;minimal&quot;&gt;Minimal&lt;/li&gt;
+	&lt;li data-group=&quot;web-design&quot;&gt;Web design&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+<p>At this point you can assign one or more categories to a single item through the attribute <code>data-groups</code>. Ex.:</p>
+<pre><code class="language-markup">&lt;article class=&quot;item column four&quot; data-groups='[&quot;lightbox&quot;, &quot;minimal&quot;]'&gt;
+	&lt;figure&gt;&lt;img src=&quot;img.jpg&quot; alt=&quot;&quot;&gt;&lt;/figure&gt;
+	&lt;a class=&quot;overlay&quot; href=&quot;#&quot;&gt;
+		&lt;div class=&quot;overlay-content&quot;&gt;
+			&lt;div class=&quot;post-type&quot;&gt;&lt;i class=&quot;icon icon-video&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+			&lt;h2&gt;The title&lt;/h2&gt;
+			&lt;p&gt;The excerpt&lt;/p&gt;
+		&lt;/div&gt;&lt;!-- overlay-content --&gt;
+	&lt;/a&gt;&lt;!-- overlay --&gt;
+&lt;/article&gt;</code></pre>
+
+</div>
+
+
+<!-- Credits
+================================================== -->
+<div class="bs-docs-section">
+<h1 id="credits" class="page-header">Credits</h1>
+
+<p class="lead">Here is the list of the awesome resources we used to create this template.</p>
+<ul>
+<li><a href="http://fontawesome.io/" target="_blank">Font Awesome</a></li>
+<li><a href="https://www.behance.net/gallery/Line-icon-set-for-UI-more-Infinitely-scalable/10712283" target="_blank">Line icon set</a></li>
+<li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
+<li><a href="http://eiskis.net/layers/" target="_blank">Layers CSS</a> framework</li>
+<li><a href="http://modernizr.com/" target="_blank">Modernizr</a></li>
+<li><a href="https://github.com/alexanderdickson/waitForImages" target="_blank">waitForImages</a></li>
+<li><a href="https://github.com/Prinzhorn/skrollr" target="_blank">Skrollr</a></li>
+<li><a href="http://owlgraphic.com/owlcarousel/" target="_blank">OWL Carousel</a></li>
+<li><a href="http://rendro.github.io/easy-pie-chart/" target="_blank">Easy Pie Chart</a></li>
+<li><a href="https://github.com/silvestreh/onScreen" target="_blank">onScreen</a></li>
+<li><a href="http://vestride.github.io/Shuffle/" target="_blank">Shuffle</a> (Masonry)</li>
+<li><a href="https://github.com/tylergaw/jribbble" target="_blank">jribbble</a></li>
+<li><a href="https://github.com/toddmotto/fluidvids" target="_blank">Fluidvids.js</a></li>
+<li><a href="http://osvaldas.info/image-lightbox-responsive-touch-friendly" target="_blank">ImageLightbox.js</a></li>
+<li><a href="https://github.com/mhuggins/jquery-countTo" target="_blank">jquery-countTo</a></li>
+<li><a href="https://developers.google.com/maps/documentation/javascript/" target="_blank">Google Maps JavaScript API v3</a></li>
+</ul>
+<br>
+<p><strong>Images we used in our demo are courtesy of:</strong></p>
+<ul>
+<li><a href="http://dribbble.com/JustinMezzell" target="_blank">Justin Mezzel</a></li>
+<li><a href="http://danielezedda.com" target="_blank">Daniele Zedda</a></li>
+<li><a href="http://madebyvadim.com/" target="_blank">Vadim Sherbakov</a></li>
+<li><a href="http://dribbble.com/rickwaalders" target="_blank">Rick Waalders</a></li>
+<li><a href="http://dribbble.com/noptar" target="_blank">Mani</a></li>
+<li><a href="http://dribbble.com/anwaltzzz" target="_blank">Alexander Zaytsev</a></li>
+<li><a href="http://dribbble.com/sok" target="_blank">Simeon K.</a></li>
+<li><a href="http://doctype.me/" target="blank">Aleks Dorohovich</a></li>
+<li><a href="http://dribbble.com/xeetech" target="_blank">XEE Tech</a></li>
+<li><a href="http://jstn.cc/" target="_blank">jstn</a></li>
+<li><a href="http://picjumbo.com" target="_blank">Picjumbo</a></li>
+<li><a href="http://stockapps.net/" target="_blank">Stockapps</a></li>
+<li><a href="http://graphicburger.com/" target="_blank">Graphic Burger</a> (<a href="http://graphicburger.com/one-page-website-wireframes/" target="_blank">One page website wireframes</a>)</li>
+</ul>
+
+</div>
+
+		</div>
+		<div class="col-md-3">
+			<div class="bs-sidebar hidden-print" role="complementary">
+				<ul class="nav bs-sidenav">
+					
+<li>
+<a href="#introduction">Introduction</a>
+<ul class="nav">
+<li><a href="#whats-included">What's included</a></li>
+<li><a href="#compatibility">Browser compatibility</a></li>
+</ul>
+</li>
+<li>
+<a href="#header">Header Menu</a>
+<ul class="nav">
+<li><a href="#logo">Logo options</a></li>
+</ul>
+</li>
+<li>
+<a href="#intro">Intro</a>
+<ul class="nav">
+<li><a href="#intro-options">Intro options</a></li>
+<li><a href="#intro-slides">Intro slides</a></li>
+<li><a href="#parallax">Parallax</a></li>
+</ul>
+</li>
+<li><a href="#sections">Sections</a></li>
+<li>
+<a href="#columns">Columns</a>
+<ul class="nav">
+<li><a href="#featured-columns">Featured columns</a></li>
+</ul>
+</li>
+<li><a href="#cta">CTA</a></li>
+<li>
+<a href="#mockup-carousels">Mockup carousels</a>
+<ul class="nav">
+<li><a href="#full-width-carousel">Full-width mockup carousel</a></li>
+<li><a href="#aside-carousel">Aside mockup carousel</a></li>
+<li><a href="#ideal-size">Images ideal sizes</a></li>
+</ul>
+</li>
+<li><a href="#skills">Skills rings</a></li>
+<li><a href="#timeline">Timeline</a></li>
+<li><a href="#team">Team</a></li>
+<li><a href="#slogan">Slogan</a></li>
+<li><a href="#milestone">Milestone</a></li>
+<li><a href="#testimonial">Testimonial carousel</a></li>
+<li><a href="#custom-carousel">Custom carousel</a></li>
+<li><a href="#dribbble">Dribbble section</a></li>
+<li><a href="#map">Map section</a></li>
+<li><a href="#contact">Contact section</a></li>
+<li>
+<a href="#other">Other elements</a>
+<ul class="nav">
+<li><a href="#buttons">Buttons</a></li>
+<li><a href="#icons">Icons</a></li>
+<li><a href="#lightbox">Lightbox</a></li>
+</ul>
+</li>
+<li><a href="#portfolio-filters">Portfolio filters</a></li>
+<li><a href="#credits">Credits</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!-- Footer
+================================================== -->
+<footer class="bs-footer" role="contentinfo">
+<div class="container">
+
+<p>Designed with love by <a href="https://twitter.com/frankiefreesbie" target="_blank">Frank Rapacciuolo</a>.</p>
+<p>Coded and Maintained by <a href="https://twitter.com/pacovitiello">Pasquale Vitiello</a> and Daniele Cascone.</p>
+
+<ul class="footer-links muted">
+	<li>Currently v1.0</li>
+	<li>&middot;</li>
+	<li><a href="http://mokaine.com/">Mokaine Lab</a></li>
+	<li>&middot;</li>
+	<li><a href="http://themes.mokaine.com/">Our Themes</a></li>
+	<li>&middot;</li>
+	<li><a href="http://ask.mokaine.com/">Help Center</a></li>
+</ul>
+</div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/docs.min.js"></script>
+<script src="js/prism.js"></script>
+
+
+
+
+</body>
+</html>

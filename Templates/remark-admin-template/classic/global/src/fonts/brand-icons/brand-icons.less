@@ -1,0 +1,19 @@
+
+@import "vars.less";
+
+
+@import "less/variables.less";
+
+@bd-font-path: ".";
+
+@import "less/path.less";
+// @import "less/core.less";
+
+
+[class^="@{bd-css-prefix}-"],
+[class*=" @{bd-css-prefix}-"] {
+  font-family: '@{bd-font-family}';
+
+  .make-icon();
+}
+@import "less/icons.less";

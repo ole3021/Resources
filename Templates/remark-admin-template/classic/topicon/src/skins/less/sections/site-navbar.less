@@ -1,0 +1,35 @@
+
+.site-navbar {
+  .navbar-container {
+    background-color: transparent;
+
+    @media (max-width: @screen-xs-max) {
+      background-color: @inverse;
+    }
+  }
+
+  &.navbar-inverse {
+    .navbar-header {
+      .hamburger {
+        &:before,
+        &:after,
+        .hamburger-bar {
+          background-color: @site-navbar-header-color;
+        }
+      }
+    }
+
+    .navbar-container {
+      background-color: transparent;
+      @media (max-width: @screen-xs-max) {
+        background-color: @inverse;
+      }
+    }
+
+    @media (max-width: @screen-xs-max) {
+      .navbar-toolbar > li > a {
+        color: inherit;
+      }
+    }
+  }
+}

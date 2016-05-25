@@ -1,0 +1,120 @@
+.fc {
+
+	.fc-toolbar {
+		h2 {
+			color: $color-dark;
+			@include font-size(20);
+			font-weight: normal;
+
+			&:before {
+				color: $color-primary;
+				content: "\f073";
+				display: inline-block;
+				font-family: FontAwesome;
+				@include font-size(28);
+				font-style: normal;
+				font-weight: normal;
+				line-height: 1;
+				margin-right: 10px;
+				position: relative;
+				top: 2px;
+				-webkit-font-smoothing: antialiased;
+			}
+		}
+		.fc-button {
+			background: #FFF;
+			box-shadow: none;
+			text-shadow: none;
+			font-size: 0.9em;
+			padding: 2px 0.8em 3px;
+			height: auto;
+			border: 1px solid rgba(0, 0, 0, 0.15);
+			&.fc-state-active {
+				color: #FFF;
+			}
+		}
+	}
+
+	.fc-widget-header {
+		th {
+			line-height: 35px;
+		}
+	}	
+}
+
+// STATES
+// -----------------------------------------------------------------------------
+/* Fullcalendar - Event States */
+/* Buttons - States */
+.fc-event.fc-event-default {
+	background: $color-default;
+	border-color: $color-default;
+
+	.fc-event-inner {
+		color: $color-default-inverse;
+	}
+}
+
+a.fc-event.fc-event-default:hover {
+	color: $color-default-inverse;
+}
+
+@each $state in $states {
+	.fc-event.fc-event-#{nth($state,1)} {
+		background: #{nth($state,2)};
+		border-color: #{nth($state,2)};
+
+		.fc-event-inner {
+			color: #{nth($state,3)};
+		}
+	}
+
+	a.fc-event.fc-event-#{nth($state,1)}:hover {
+		color: #{nth($state,3)};
+	}
+}
+
+// EXTERNAL EVENTS
+// -----------------------------------------------------------------------------
+/* Fullcalendar - External Events */
+.external-event {
+	cursor: move;
+	display: inline-block;
+	@include font-size(12);
+	font-weight: normal;
+	margin: 5px;
+	padding: 10px;
+	text-align: left;
+}
+
+// DARK SKIN
+// -----------------------------------------------------------------------------\
+/* dark */
+html.dark {
+	.fc {
+
+		.fc-toolbar {
+			h2 {
+				color: #FFF;
+			}
+			.fc-button {
+				background: $dark-color-2;
+				color: #FFF;
+			}
+		}
+	}
+
+	.fc-unthemed th,
+	.fc-unthemed td,
+	.fc-unthemed thead,
+	.fc-unthemed tbody,
+	.fc-unthemed .fc-divider,
+	.fc-unthemed .fc-row,
+	.fc-unthemed .fc-popover {
+		border-color: rgba(0, 0, 0, 0.3);
+	}
+
+	.fc-unthemed .fc-today {
+		background: $dark-color-2;
+	}
+}

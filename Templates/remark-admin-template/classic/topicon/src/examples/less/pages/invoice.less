@@ -1,0 +1,38 @@
+@import "vars.less";
+
+
+.page-invoice {
+  &-table {
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    tbody {
+      border-bottom: 1px solid @border-color-base;
+    }
+    .table > thead > tr > th,
+    .table > tbody > tr > th,
+    .table > tfoot > tr > th,
+    .table > thead > tr > td,
+    .table > tbody > tr > td,
+    .table > tfoot > tr > td {
+      padding: 15px 8px;
+    }
+  }
+
+  &-amount {
+    margin-bottom: 40px;
+    padding-top: 10px;
+    font-size: 20px;
+    border-top: 1px solid @border-color-base;
+  }
+}
+
+@media(max-width: @screen-xs-max) {
+  .page-invoice {
+    .page-content {
+      .btn-animate {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

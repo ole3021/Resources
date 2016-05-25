@@ -1,0 +1,147 @@
+
+
+.site-menubar-fold:not(.site-menubar-open) {
+  &.site-menubar-changing {
+    .site-menu {
+      > .site-menu-item {
+        > .site-menu-sub {
+          transition: none;
+        }
+      }
+    }
+  }
+
+  .site-menubar-header {
+    display: none;
+  }
+
+  .site-menubar {
+    width: @site-menubar-fold-width;
+    opacity: 1;
+   -ms-transform: translate(0, 0);
+   .transform(translate3d(0, 0, 0));
+  }
+
+  .site-menu {
+    overflow: visible;
+
+    > .site-menu-item {
+      font-size: 14px;
+
+      > a {
+        line-height: @site-menu-top-height;
+        height: @site-menu-top-height;
+
+        .site-menu-title, .site-menu-icon {
+          transition: visibility 0.25s, opacity 0.25s;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: @site-menubar-fold-width;
+          text-align: center;
+        }
+
+        .site-menu-arrow {
+          transition: visibility 0;
+          visibility: hidden;
+        }
+
+        .site-menu-title {
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        .site-menu-icon {
+          visibility: visible;
+          opacity: 1;
+          font-size: 16px;
+          margin-right: 0;
+        }
+
+        .site-menu-badge {
+          left: 40px;
+          top: -10px;
+        }
+
+        .site-menu-label {
+          display: none;
+        }
+      }
+    }
+
+    .site-menu-sub {
+      .site-menu-sub {
+        display: none;
+      }
+
+      .site-menu-title:first-child {
+        margin-left: 0;
+      }
+
+      .site-menu-item {
+        &.open {
+          > a {
+            .site-menu-arrow {
+              .transform(rotate(90deg));
+            }
+          }
+
+          > .site-menu-sub {
+            display: block;
+          }
+        }
+
+        &:not(.open) {
+          > a {
+            .site-menu-arrow {
+              .transform(none);
+            }
+          }
+
+          > .site-menu-sub {
+            display: none;
+          }
+        }
+      }
+    }
+
+    > .site-menu-item {
+      > .site-menu-sub {
+
+        transition: visibility 0.25s, opacity 0.25s;
+        position: absolute;
+        left: @site-menubar-fold-width;
+        top: 0;
+        width: @site-menubar-fold-sub-width;
+        background: @site-menubar-fold-sub-bg;
+        visibility: hidden;
+        opacity: 0;
+        overflow-y: auto;
+        .box-shadow(@site-menubar-fold-sub-shadow);
+
+        &-up {
+          top: auto;
+          bottom: 0;
+        }
+
+        .site-menu-item {
+          > a {
+            padding: 0 30px;
+          }
+
+          .site-menu-icon {
+            display: none;
+          }
+        }
+      }
+
+      &.hover {
+        > .site-menu-sub {
+          display: block;
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

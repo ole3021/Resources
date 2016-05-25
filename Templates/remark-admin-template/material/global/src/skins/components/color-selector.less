@@ -1,0 +1,41 @@
+// Name:            Color Selector
+//
+// Component:       `color-selector`
+//
+// Markup:
+//
+// <ul class="color-selector">
+//   <li>
+//     <input type="radio" />
+//     <label></label>
+//   </li>
+// </ul>
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@color-selector-bg:                     @brand-primary;
+@color-selector-checked-label-color:    @inverse;
+@color-selector-disabled-bg:            @disabled-color-base;
+
+// z-index
+@color-selector-z-index:                @zindex-base;
+
+// Component: color-selector
+// ========================================================================
+
+.color-selector {
+  > li {
+    background-color: @color-selector-bg;
+
+    input[type="radio"]:checked + label:after {
+      color: @color-selector-checked-label-color;
+    }
+
+    &.color-selector-disabled {
+      background-color: @color-selector-disabled-bg !important;
+    }
+  }
+}

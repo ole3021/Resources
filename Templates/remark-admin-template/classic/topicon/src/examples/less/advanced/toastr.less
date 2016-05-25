@@ -1,0 +1,29 @@
+@import "vars.less";
+
+.toast-example {
+  position: static;
+  margin: 10px 0 30px;
+  &.padding-0 {
+    margin-bottom: 30px;
+  }
+  > div {
+    width: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+  }
+}
+
+.position-example {
+  position: relative;
+  height: 330px;
+  margin-bottom: 20px;
+  > div {
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+  }
+  > .btn-block + .btn-block {
+    margin-top: 215px;
+  }
+}

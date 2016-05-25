@@ -1,0 +1,231 @@
+---
+title: C3 Chart
+---
+
+{{#extend "layout-default"}}
+  {{#content "css_vendor" mode="append"}}
+    <link rel="stylesheet" href="{{global}}/vendor/c3/c3.css">
+  {{/content}}
+
+
+  {{#content "js_vendor" mode="append"}}
+    <script src="{{global}}/vendor/d3/d3.min.js"></script>
+    <script src="{{global}}/vendor/c3/c3.min.js"></script>
+  {{/content}}
+
+
+  {{#content "scripts" mode="replace"}}
+    <script src="{{assets}}/examples/js/charts/c3.js"></script>
+  {{/content}}
+
+  {{#content "body"}}
+
+    <!-- Page -->
+    <div class="page animsition">
+      <div class="page-header">
+        <h1 class="page-title">C3 Chart</h1>
+        <ol class="breadcrumb">
+          <li><a href="{{dest 'index.html'}}">Home</a></li>
+          <li><a href="javascript:void(0)">Charts</a></li>
+          <li class="active">C3</li>
+        </ol>
+        <div class="page-header-actions">
+          <a class="btn btn-sm btn-default btn-outline btn-round" href="https://github.com/masayuki0812/c3"
+          target="_blank">
+            <i class="icon wb-link" aria-hidden="true"></i>
+            <span class="hidden-xs">Official Website</span>
+          </a>
+        </div>
+      </div>
+      <div class="page-content container-fluid">
+        <!-- Panel -->
+        <div class="panel">
+          <div class="panel-body">
+            <div class="row row-lg">
+              <div class="col-md-6">
+                <!-- Example C3 Simple Line -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Simple Line</h4>
+                  <p>Line chart with sequential data. </p>
+                  <div class="example">
+                    <div id="exampleC3SimpleLine"></div>
+                  </div>
+                </div>
+                <!-- End Example C3 Simple Line -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example C3 Line Regions -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Line Regions</h4>
+                  <p>Set regions for each data with style. </p>
+                  <div class="example">
+                    <div id="exampleC3LineRegions"></div>
+                  </div>
+                </div>
+                <!-- End Example C3 Line Regions -->
+              </div>
+
+              <div class="clearfix hidden-xs"></div>
+
+              <div class="col-md-6">
+                <!-- Example C3 Timeseries -->
+                <div class="example-wrap margin-md-0">
+                  <h4 class="example-title">Timeseries</h4>
+                  <p>Simple line chart with timeseries data. </p>
+                  <div class="example example-responsive padding-bottom-15">
+                    <div class="width-xs-400" id="exampleC3TimeSeries"></div>
+                  </div>
+                </div>
+                <!-- End Example C3 Timeseries -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example C3 Spline -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Spline</h4>
+                  <p>Display as Spline Chart. </p>
+                  <div class="example">
+                    <div id="exampleC3Spline"></div>
+                  </div>
+                </div>
+                <!-- End Example C3 Spline -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel -->
+
+        <!-- Panel -->
+        <div class="panel">
+          <div class="panel-body">
+            <div class="row row-lg">
+              <div class="col-md-6">
+                <!-- Example C3 Scatter -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Scatter</h4>
+                  <p>Display as Scatter Plot.</p>
+                  <div class="example example-responsive padding-bottom-15">
+                    <div class="width-xs-400" id="exampleC3Scatter"></div>
+                  </div>
+                </div>
+                <!-- End Example C3 Scatter -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example C3 Bar -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Bar</h4>
+                  <p>Display as Bar Chart. </p>
+                  <div class="example">
+                    <div id="exampleC3Bar"></div>
+                  </div>
+                </div>
+                <!-- End Example C3 Bar -->
+              </div>
+
+              <div class="clearfix hidden-xs"></div>
+
+              <div class="col-md-6">
+                <!-- Example C3 Stacked Bar -->
+                <div class="example-wrap margin-md-0">
+                  <h4 class="example-title">Stacked Bar</h4>
+                  <p>Display as Stacked Bar Chart. </p>
+                  <div class="example">
+                    <div id="exampleC3StackedBar"></div>
+                  </div>
+                </div>
+                <!-- End Example C3 Stacked Bar -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example C3 Combination -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Combination</h4>
+                  <p>Display all kinda charts up in here. </p>
+                  <div class="example">
+                    <div id="exampleC3Combination"></div>
+                  </div>
+                </div>
+                <!-- End Example C3 Combination -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel -->
+
+        <!-- Panel Pie Charts -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Pie Charts</h3>
+          </div>
+          <div class="panel-body">
+            <div class="row row-lg">
+              <div class="col-md-6">
+                <!-- Example C3 Pie -->
+                <div class="example-wrap margin-md-0">
+                  <h4 class="example-title">Pie</h4>
+                  <p>Display as Pie Chart.</p>
+                  <div class="example">
+                    <div id="exampleC3Pie"></div>
+                  </div>
+                </div>
+                <!-- End Example C3 Pie -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example C3 Donut -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Donut</h4>
+                  <p>Display as Donut Chart. </p>
+                  <div class="example">
+                    <div id="exampleC3Donut"></div>
+                  </div>
+                </div>
+                <!-- End Example C3 Donut -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel Pie Charts -->
+
+        <!-- Panel Interaction -->
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Interaction</h3>
+          </div>
+          <div class="panel-body">
+            <div class="row row-lg">
+              <div class="col-md-6">
+                <!-- Example C3 Sub Chart -->
+                <div class="example-wrap margin-md-0">
+                  <h4 class="example-title">Sub Chart</h4>
+                  <p>Show sub chart for zoom and selection range.</p>
+                  <div class="example">
+                    <div id="exampleC3Subchart"></div>
+                  </div>
+                </div>
+                <!-- End Example C3 Sub Chart -->
+              </div>
+
+              <div class="col-md-6">
+                <!-- Example C3 Zoom -->
+                <div class="example-wrap">
+                  <h4 class="example-title">Zoom</h4>
+                  <p>Zoom by mouse wheel event and slide by drag.</p>
+                  <div class="example">
+                    <div id="exampleC3Zoom"></div>
+                  </div>
+                </div>
+                <!-- End Example C3 Zoom -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Panel Interaction -->
+      </div>
+    </div>
+    <!-- End Page -->
+
+  {{/content}}
+{{/extend}}

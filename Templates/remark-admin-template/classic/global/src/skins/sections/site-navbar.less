@@ -1,0 +1,34 @@
+
+.site-navbar {
+  background-color: @site-navbar-header-bg;
+  
+  .navbar-header {
+    background-color: transparent;
+    color: @site-navbar-header-color;
+
+    .navbar-toggle {
+      color: @site-navbar-header-color;
+    }
+
+    .hamburger {
+      &:before,
+      &:after,
+      .hamburger-bar {
+        background-color: @site-navbar-header-color;
+      }
+    }
+
+    .navbar-brand {
+      color: @site-navbar-brand-color;
+    }
+  }
+  .container-fluid {
+    background-color: @inverse;
+  }
+  
+  &.navbar-inverse {
+    .container-fluid {
+      background-color: transparent;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<!-- Core  -->
+<script src="{{global}}/vendor/jquery/jquery.js"></script>
+<script src="{{global}}/vendor/bootstrap/bootstrap.js"></script>
+<script src="{{global}}/vendor/animsition/animsition.js"></script>
+<script src="{{global}}/vendor/asscroll/jquery-asScroll.js"></script>
+<script src="{{global}}/vendor/mousewheel/jquery.mousewheel.js"></script>
+<script src="{{global}}/vendor/asscrollable/jquery.asScrollable.all.js"></script>
+<script src="{{global}}/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
+
+<!-- Plugins -->
+{{#block "js_vendor"}}
+<script src="{{global}}/vendor/switchery/switchery.min.js"></script>
+<script src="{{global}}/vendor/intro-js/intro.js"></script>
+<script src="{{global}}/vendor/screenfull/screenfull.js"></script>
+<script src="{{global}}/vendor/slidepanel/jquery-slidePanel.js"></script>
+{{/block}}
+
+<!-- Scripts -->
+{{#block "js"}}
+<script src="{{global}}/js/core.js"></script>
+<script src="{{assets}}/js/site.js"></script>
+
+<script src="{{assets}}/js/sections/menu.js"></script>
+<script src="{{assets}}/js/sections/menubar.js"></script>
+<script src="{{assets}}/js/sections/sidebar.js"></script>
+
+<script src="{{global}}/js/configs/config-colors.js"></script>
+<script src="{{assets}}/js/configs/config-tour.js"></script>
+
+<script src="{{global}}/js/components/asscrollable.js"></script>
+<script src="{{global}}/js/components/animsition.js"></script>
+<script src="{{global}}/js/components/slidepanel.js"></script>
+<script src="{{global}}/js/components/switchery.js"></script>
+{{/block}}
+
+{{#block "scripts"}}
+<script>
+  (function(document, window, $){
+    'use strict';
+
+    var Site = window.Site;
+    $(document).ready(function(){
+      Site.run();
+    });
+  })(document, window, jQuery);
+</script>
+{{/block}}
+

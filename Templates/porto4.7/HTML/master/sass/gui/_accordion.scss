@@ -1,0 +1,72 @@
+/* Accordion */
+.panel-group {
+	.panel-heading {
+		padding: 0;
+		border-radius: 3px;
+		a {
+			display: block;
+			padding: 10px 15px;
+			&:hover, &:focus {
+				text-decoration: none;
+			}
+			[class^="icon-"] {
+				margin-#{$right}: 4px;
+				position: relative;
+				top: 1px;
+			}
+			.fa, .icons {
+				display: inline-block;
+				margin-right: 5px;
+				position: relative;
+				top: -1px;
+			}
+		}
+	}
+	&.panel-group-sm {
+		.panel-heading {
+			a {
+				padding: 5px 15px;
+				font-size: 0.9em;
+			}
+		}
+		.panel-body {
+			font-size: 0.9em;
+		}
+	}
+	&.panel-group-lg {
+		.panel-heading {
+			a {
+				padding: 15px 15px;
+				font-size: 1em;
+				font-weight: 600;
+			}
+		}
+	}
+	&.without-bg {
+		.panel-default {
+			background: transparent !important;
+			> .panel-heading {
+				background: transparent !important;
+			}
+		}
+		.panel-body {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+	&.without-borders {
+		.panel {
+			border: 0;
+			box-shadow: none;
+			border-bottom: 1px solid #DDD;
+			border-radius: 0;
+		}
+		.panel-heading a {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.panel-body {
+			padding: 0;
+		}
+	}
+}
